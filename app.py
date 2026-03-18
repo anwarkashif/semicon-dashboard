@@ -5,13 +5,13 @@ import glob
 import json
 import re
 import time
-import streamlit.components.v1 as components 
+import streamlit.components.v1 as components
 from io import BytesIO
 from PIL import Image, ImageDraw
 from datetime import datetime, timezone
 import plotly.express as px
 import plotly.graph_objects as go
-import pydeck as pdk 
+import pydeck as pdk
 from google import genai
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
@@ -20,28 +20,34 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.opc.constants import RELATIONSHIP_TYPE 
+from docx.opc.constants import RELATIONSHIP_TYPE
 
 st.set_page_config(page_title="SemicoN Dashboard", page_icon="logo.jpg", layout="wide", initial_sidebar_state="expanded")
 
-MAINTENANCE_MODE = False 
+MAINTENANCE_MODE = False
 if MAINTENANCE_MODE:
     st.markdown("""<style>[data-testid="collapsedControl"], [data-testid="stSidebar"] { display: none; }</style>""", unsafe_allow_html=True)
-    st.markdown("<div style='margin-top: 15vh;'></div>", unsafe_allow_html=True) 
+    st.markdown("<div style='margin-top: 15vh;'></div>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         try:
             st.image("logo.jpg", width=300)
-        except: 
-            pass 
+        except:
+            pass
         st.warning("⚠️ **Warning: Work in Progress.** Please wait, the Dashboard will be live soon.")
     st.stop()
 
 # --- App Initialization & Folder Setup ---
 os.makedirs('data', exist_ok=True)
-os.makedirs('trash', exist_ok=True) 
+os.makedirs('trash', exist_ok=True)
 
-# --- Gemini API Setup for RAG ---
+# ==========================================
+# 🛑 MAPBOX TOKEN REQUIRED HERE 🛑
+# Replace "YOUR_MAPBOX_TOKEN_HERE" with your actual token starting with pk.
+# ==========================================
+MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
+
+# --- API Setup ---
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 model_name = 'gemini-2.5-flash'
@@ -50,28 +56,28 @@ model_name = 'gemini-2.5-flash'
 COUNTRY_INFO = {
     # Americas
     "United States": ("USA", "Americas"), "USA": ("USA", "Americas"), "US": ("USA", "Americas"), "U.S.": ("USA", "Americas"),
-    "Canada": ("CAN", "Americas"), "Mexico": ("MEX", "Americas"), "Brazil": ("BRA", "Americas"), "Argentina": ("ARG", "Americas"), 
+    "Canada": ("CAN", "Americas"), "Mexico": ("MEX", "Americas"), "Brazil": ("BRA", "Americas"), "Argentina": ("ARG", "Americas"),
     "Chile": ("CHL", "Americas"), "Colombia": ("COL", "Americas"), "Peru": ("PER", "Americas"), "Venezuela": ("VEN", "Americas"), "Cuba": ("CUB", "Americas"),
     # Europe
     "United Kingdom": ("GBR", "Europe"), "UK": ("GBR", "Europe"), "U.K.": ("GBR", "Europe"), "Britain": ("GBR", "Europe"),
     "Germany": ("DEU", "Europe"), "France": ("FRA", "Europe"), "Italy": ("ITA", "Europe"), "Spain": ("ESP", "Europe"),
-    "Netherlands": ("NLD", "Europe"), "Belgium": ("BEL", "Europe"), "Switzerland": ("CHE", "Europe"), "Poland": ("POL", "Europe"), 
-    "Sweden": ("SWE", "Europe"), "Norway": ("NOR", "Europe"), "Denmark": ("DNK", "Europe"), "Finland": ("FIN", "Europe"), 
+    "Netherlands": ("NLD", "Europe"), "Belgium": ("BEL", "Europe"), "Switzerland": ("CHE", "Europe"), "Poland": ("POL", "Europe"),
+    "Sweden": ("SWE", "Europe"), "Norway": ("NOR", "Europe"), "Denmark": ("DNK", "Europe"), "Finland": ("FIN", "Europe"),
     "Ireland": ("IRL", "Europe"), "Russia": ("RUS", "Europe"), "Ukraine": ("UKR", "Europe"), "European Union": ("EU", "Europe"), "EU": ("EU", "Europe"),
     # West Asia / Middle East
     "Iran": ("IRN", "West Asia/Middle East"), "Israel": ("ISR", "West Asia/Middle East"), "Saudi Arabia": ("SAU", "West Asia/Middle East"),
-    "United Arab Emirates": ("ARE", "West Asia/Middle East"), "UAE": ("ARE", "West Asia/Middle East"), "Qatar": ("QAT", "West Asia/Middle East"), 
-    "Oman": ("OMN", "West Asia/Middle East"), "Kuwait": ("KWT", "West Asia/Middle East"), "Bahrain": ("BHR", "West Asia/Middle East"), 
-    "Syria": ("SYR", "West Asia/Middle East"), "Iraq": ("IRQ", "West Asia/Middle East"), "Jordan": ("JOR", "West Asia/Middle East"), 
+    "United Arab Emirates": ("ARE", "West Asia/Middle East"), "UAE": ("ARE", "West Asia/Middle East"), "Qatar": ("QAT", "West Asia/Middle East"),
+    "Oman": ("OMN", "West Asia/Middle East"), "Kuwait": ("KWT", "West Asia/Middle East"), "Bahrain": ("BHR", "West Asia/Middle East"),
+    "Syria": ("SYR", "West Asia/Middle East"), "Iraq": ("IRQ", "West Asia/Middle East"), "Jordan": ("JOR", "West Asia/Middle East"),
     "Lebanon": ("LBN", "West Asia/Middle East"), "Yemen": ("YEM", "West Asia/Middle East"), "Turkey": ("TUR", "West Asia/Middle East"),
     # Asia
     "China": ("CHN", "Asia"), "Taiwan": ("TWN", "Asia"), "Japan": ("JPN", "Asia"), "South Korea": ("KOR", "Asia"), "North Korea": ("PRK", "Asia"),
     "India": ("IND", "Asia"), "Pakistan": ("PAK", "Asia"), "Bangladesh": ("BGD", "Asia"), "Sri Lanka": ("LKA", "Asia"),
-    "Vietnam": ("VNM", "Asia"), "Malaysia": ("MYS", "Asia"), "Singapore": ("SGP", "Asia"), "Indonesia": ("IDN", "Asia"), 
+    "Vietnam": ("VNM", "Asia"), "Malaysia": ("MYS", "Asia"), "Singapore": ("SGP", "Asia"), "Indonesia": ("IDN", "Asia"),
     "Philippines": ("PHL", "Asia"), "Thailand": ("THA", "Asia"), "Myanmar": ("MMR", "Asia"), "Cambodia": ("KHM", "Asia"),
     # Africa
-    "South Africa": ("ZAF", "Africa"), "Egypt": ("EGY", "Africa"), "Nigeria": ("NGA", "Africa"), "Kenya": ("KEN", "Africa"), 
-    "Ethiopia": ("ETH", "Africa"), "Morocco": ("MAR", "Africa"), "Algeria": ("DZA", "Africa"), "Sudan": ("SDN", "Africa"), 
+    "South Africa": ("ZAF", "Africa"), "Egypt": ("EGY", "Africa"), "Nigeria": ("NGA", "Africa"), "Kenya": ("KEN", "Africa"),
+    "Ethiopia": ("ETH", "Africa"), "Morocco": ("MAR", "Africa"), "Algeria": ("DZA", "Africa"), "Sudan": ("SDN", "Africa"),
     "Congo": ("COD", "Africa"), "Democratic Republic of the Congo": ("COD", "Africa"), "Angola": ("AGO", "Africa"), "Ghana": ("GHA", "Africa"),
     "Mali": ("MLI", "Africa"), "Niger": ("NER", "Africa"), "Chad": ("TCD", "Africa"), "Somalia": ("SOM", "Africa"),
     # Oceania
@@ -557,8 +563,6 @@ def parse_rss_txt_file():
                 except Exception: pass
     return rss_dict
 
-
-
 def extract_tag(tag, text):
     match = re.search(rf'<{tag}>(.*?)</{tag}>', text, re.DOTALL | re.IGNORECASE)
     if match:
@@ -637,10 +641,9 @@ def check_early_warnings():
             except:
                 start_timestamp_ms = int(time.time() * 1000)
             
-            # --- CSS FIX FOR VISIBILITY AND MAGNIFY MODAL ---
             html_code = f"""
             <style>
-                body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: #0e1117; }}
+                body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: transparent; overflow: hidden; }}
                 .defcon-box {{
                     background: linear-gradient(90deg, #8b0000 0%, #ff0000 50%, #8b0000 100%); 
                     background-size: 200% 200%; 
@@ -650,8 +653,9 @@ def check_early_warnings():
                     border-radius: 8px; 
                     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
                     color: #ffffff;
-                    max-height: 150px; 
-                    overflow-y: auto; 
+                    height: 185px; /* Locked height */
+                    box-sizing: border-box; /* Forces padding inward */
+                    overflow-y: auto; /* Internal scrollbar if text is long */
                 }}
                 /* Fullscreen styling for Magnify mode */
                 :fullscreen {{
@@ -663,6 +667,7 @@ def check_early_warnings():
                 :fullscreen .defcon-box {{
                     width: 90vw;
                     max-height: 90vh;
+                    height: auto;
                     padding: 40px;
                     border-width: 4px;
                 }}
@@ -751,8 +756,7 @@ def check_early_warnings():
                 update();
             </script>
             """
-            # Height perfectly tuned for 4-5 lines. Will not show massive whitespace.
-            components.html(html_code, height=190) 
+            components.html(html_code, height=185) 
             
         else:
             latest_time = 0
@@ -769,7 +773,7 @@ def check_early_warnings():
 
             html_code = f"""
             <style>
-                body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: #0e1117; color: #f8f9fa; }}
+                body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: transparent; }}
                 .nominal-box {{
                     background-color: rgba(0, 191, 255, 0.05); 
                     border-left: 5px solid #00bfff; 
@@ -826,16 +830,19 @@ if st.session_state['role'] is None:
         st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: -15px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; color: #888; font-weight: bold; letter-spacing: 2px; font-size: 12px; margin-bottom: 5px;'>SYSTEM ACCESS</p>", unsafe_allow_html=True)
         
-        AUTHORIZED_EMAIL = "anwarkashif@outlook.com"   
-        AUTHORIZED_PASSWORD = "NeverEstimateTheRahmat0fAllahSWT"   
-        email_input = st.text_input("EMAIL ID", placeholder="analyst@agency.gov")
-        password_input = st.text_input("PASSWORD", type="password", placeholder="Enter Secure Key")
-        
-        if st.button("LOGIN", type="primary"):
-            if email_input == AUTHORIZED_EMAIL and password_input == AUTHORIZED_PASSWORD:
-                st.session_state['role'] = 'admin'
-                st.rerun()
-            else: st.error("Incorrect Email ID or Password.")
+        with st.form("login_form"):
+            AUTHORIZED_EMAIL = "anwarkashif@outlook.com"   
+            AUTHORIZED_PASSWORD = "NeverEstimateTheRahmat0fAllahSWT"   
+            email_input = st.text_input("EMAIL ID", placeholder="analyst@agency.gov")
+            password_input = st.text_input("PASSWORD", type="password", placeholder="Enter Secure Key")
+            submit_login = st.form_submit_button("LOGIN", type="primary")
+
+            if submit_login:
+                if email_input == AUTHORIZED_EMAIL and password_input == AUTHORIZED_PASSWORD:
+                    st.session_state['role'] = 'admin'
+                    st.rerun()
+                else: st.error("Incorrect Email ID or Password.")
+                
         if st.button("VIEW AS GUEST", type="secondary"):
             st.session_state['role'] = 'guest'
             st.rerun()
@@ -1098,7 +1105,6 @@ else:
             st.title(f"SemicoN Weekly Brief - {brief_date}") 
             st.markdown("---")
             
-            # --- EWS REPOSITIONED HERE WITH CLEAR TITLES ---
             current_day = datetime.now(timezone.utc).astimezone().strftime('%B %d, %Y')
             st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 10px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
             
@@ -1142,7 +1148,6 @@ else:
                 st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Global Foundry Market & Geopolitical Positioning</h3>", unsafe_allow_html=True)
                 if text_section_1: render_highlighted_text(text_section_1, selected_actor)
                 
-                # FIXED TABLE RENDER (st.table forces full width, wraps text properly)
                 if not df_fund.empty and not (len(df_fund) == 1 and "No " in str(df_fund.iloc[0].values[0])):
                     st.markdown("##### Strategic Investments & Funding")
                     st.table(df_fund.set_index(df_fund.columns[0]))
@@ -1214,7 +1219,7 @@ else:
                     if map_data:
                         st.markdown("##### Geopolitical Threat Actions (2D Heatmap)")
                         df_map = pd.DataFrame(map_data)
-                        px.set_mapbox_access_token("sk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21tYXFtYmVvMGR2bzJvczdrYTlzYm16eSJ9.akP5-2AoKzIb66GG2KxwCg")
+                        px.set_mapbox_access_token(MAPBOX_PUBLIC_TOKEN)
                         
                         fig = px.choropleth_mapbox(
                             df_map, 
@@ -1275,7 +1280,9 @@ else:
                             })
 
                     map_data_json = json.dumps(map_features)
-                    mapbox_token = "sk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21tYXFtYmVvMGR2bzJvczdrYTlzYm16eSJ9.akP5-2AoKzIb66GG2KxwCg"
+                    
+                    # FETCH HARDCODED TOKEN INSTEAD OF ENV
+                    mapbox_token = MAPBOX_PUBLIC_TOKEN
 
                     html_code = f"""
                     <!DOCTYPE html>
@@ -1285,7 +1292,7 @@ else:
                     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
                     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
                     <style>
-                    body {{ margin:0; padding:0; background-color: #0e1117; }}
+                    body {{ margin:0; padding:0; background-color: #0e1117; }} /* Forced dark background */
                     #map {{ position:absolute; top:0; bottom:0; width:100%; border-radius: 8px; }}
                     .mapboxgl-popup-content {{
                         background-color: #1e1e1e;
@@ -1304,95 +1311,95 @@ else:
                     <script>
                     mapboxgl.accessToken = '{mapbox_token}';
 
-                    const map = new mapboxgl.Map({{
-                        container: 'map',
-                        style: 'mapbox://styles/mapbox/dark-v11',
-                        projection: 'globe', // 🔴 THE TRUE 3D SPHERE 
-                        zoom: 1.2,
-                        center: [30, 20],
-                        pitch: 45
-                    }});
-
-                    // Add Deep Space Atmosphere (Fog)
-                    map.on('style.load', () => {{
-                        map.setFog({{
-                            'color': 'rgb(10, 20, 30)', 
-                            'high-color': 'rgb(0, 0, 0)', 
-                            'horizon-blend': 0.1,
-                            'space-color': 'rgb(5, 5, 5)',
-                            'star-intensity': 0.8
+                    if (!mapboxgl.accessToken.startsWith('pk.')) {{
+                        document.getElementById('map').innerHTML = '<div style="display:flex; justify-content:center; align-items:center; height:100%; color:#00bfff; font-family:monospace; text-align:center; background:#1e1e1e; border:1px solid #00bfff; border-radius:8px; padding:20px;"><div><h2>⚠️ Mapbox Token Required</h2><p>Please paste your actual Mapbox public token (starts with pk.eyJ...) into the <b>MAPBOX_PUBLIC_TOKEN</b> variable at the top of your app.py file.</p></div></div>';
+                    }} else {{
+                        const map = new mapboxgl.Map({{
+                            container: 'map',
+                            style: 'mapbox://styles/mapbox/dark-v11',
+                            projection: 'globe', 
+                            zoom: 1.2,
+                            center: [30, 20],
+                            pitch: 45
                         }});
-                    }});
 
-                    map.addControl(new mapboxgl.NavigationControl());
+                        map.on('style.load', () => {{
+                            map.setFog({{
+                                'color': 'rgb(10, 20, 30)', 
+                                'high-color': 'rgb(0, 0, 0)', 
+                                'horizon-blend': 0.1,
+                                'space-color': 'rgb(5, 5, 5)',
+                                'star-intensity': 0.8
+                            }});
+                        }});
 
-                    const rawData = {map_data_json};
+                        map.addControl(new mapboxgl.NavigationControl());
 
-                    // Helper function to draw a circle polygon around a point so we can extrude it into a 3D pillar
-                    function createPolygon(lon, lat, radiusDegrees = 1.0) {{
-                        const pts = [];
-                        const sides = 16;
-                        for (let i = 0; i < sides; i++) {{
-                            const angle = (i / sides) * 2 * Math.PI;
-                            const lonOffset = (radiusDegrees / Math.cos(lat * Math.PI / 180)) * Math.cos(angle);
-                            const latOffset = radiusDegrees * Math.sin(angle);
-                            pts.push([lon + lonOffset, lat + latOffset]);
+                        const rawData = {map_data_json};
+
+                        function createPolygon(lon, lat, radiusDegrees = 1.0) {{
+                            const pts = [];
+                            const sides = 16;
+                            for (let i = 0; i < sides; i++) {{
+                                const angle = (i / sides) * 2 * Math.PI;
+                                const lonOffset = (radiusDegrees / Math.cos(lat * Math.PI / 180)) * Math.cos(angle);
+                                const latOffset = radiusDegrees * Math.sin(angle);
+                                pts.push([lon + lonOffset, lat + latOffset]);
+                            }}
+                            pts.push(pts[0]); 
+                            return [pts];
                         }}
-                        pts.push(pts[0]); 
-                        return [pts];
+
+                        map.on('load', () => {{
+                            const features = rawData.map(item => ({{
+                                type: 'Feature',
+                                geometry: {{
+                                    type: 'Polygon',
+                                    coordinates: createPolygon(item.lon, item.lat, 0.8) 
+                                }},
+                                properties: {{
+                                    name: item.name,
+                                    color: item.color,
+                                    height: 500000 
+                                }}
+                            }}));
+
+                            map.addSource('infrastructure', {{
+                                type: 'geojson',
+                                data: {{
+                                    type: 'FeatureCollection',
+                                    features: features
+                                }}
+                            }});
+
+                            map.addLayer({{
+                                'id': 'infrastructure-pillars',
+                                'type': 'fill-extrusion',
+                                'source': 'infrastructure',
+                                'paint': {{
+                                    'fill-extrusion-color': ['get', 'color'],
+                                    'fill-extrusion-height': ['get', 'height'],
+                                    'fill-extrusion-base': 0,
+                                    'fill-extrusion-opacity': 0.8
+                                }}
+                            }});
+
+                            map.on('click', 'infrastructure-pillars', (e) => {{
+                                const props = e.features[0].properties;
+                                new mapboxgl.Popup()
+                                    .setLngLat(e.lngLat)
+                                    .setHTML('<strong>' + props.name + '</strong>')
+                                    .addTo(map);
+                            }});
+
+                            map.on('mouseenter', 'infrastructure-pillars', () => {{
+                                map.getCanvas().style.cursor = 'pointer';
+                            }});
+                            map.on('mouseleave', 'infrastructure-pillars', () => {{
+                                map.getCanvas().style.cursor = '';
+                            }});
+                        }});
                     }}
-
-                    map.on('load', () => {{
-                        const features = rawData.map(item => ({{
-                            type: 'Feature',
-                            geometry: {{
-                                type: 'Polygon',
-                                coordinates: createPolygon(item.lon, item.lat, 0.8) // Pillar thickness
-                            }},
-                            properties: {{
-                                name: item.name,
-                                color: item.color,
-                                height: 500000 // Pillar height (500km)
-                            }}
-                        }}));
-
-                        map.addSource('infrastructure', {{
-                            type: 'geojson',
-                            data: {{
-                                type: 'FeatureCollection',
-                                features: features
-                            }}
-                        }});
-
-                        // Draw the 3D Pillars
-                        map.addLayer({{
-                            'id': 'infrastructure-pillars',
-                            'type': 'fill-extrusion',
-                            'source': 'infrastructure',
-                            'paint': {{
-                                'fill-extrusion-color': ['get', 'color'],
-                                'fill-extrusion-height': ['get', 'height'],
-                                'fill-extrusion-base': 0,
-                                'fill-extrusion-opacity': 0.8
-                            }}
-                        }});
-
-                        // Interactivity: Popups on click
-                        map.on('click', 'infrastructure-pillars', (e) => {{
-                            const props = e.features[0].properties;
-                            new mapboxgl.Popup()
-                                .setLngLat(e.lngLat)
-                                .setHTML('<strong>' + props.name + '</strong>')
-                                .addTo(map);
-                        }});
-
-                        map.on('mouseenter', 'infrastructure-pillars', () => {{
-                            map.getCanvas().style.cursor = 'pointer';
-                        }});
-                        map.on('mouseleave', 'infrastructure-pillars', () => {{
-                            map.getCanvas().style.cursor = '';
-                        }});
-                    }});
                     </script>
                     </body>
                     </html>
@@ -1418,7 +1425,6 @@ else:
                 st.markdown("<h2 style='text-align: center; color: #00bfff; margin-top: 50px; margin-bottom: 10px;'>Live Global Telemetry</h2>", unsafe_allow_html=True)
                 st.markdown("---")
                 
-                # --- CALCULATE LIVE TELEMETRY TIMESTAMP ---
                 last_updated_str = "Unknown"
                 latest_time = 0
                 
@@ -1565,7 +1571,6 @@ else:
                 st.markdown("**🔗 Share Dashboard Link:**")
                 st.code("https://www.semirare.in/", language="text")
 
-    # --- FEATURE 4: TREND Timelines ---
     elif view_selection == "Trend Timelines":
         st.title("Macro Trends & Timelines")
         st.markdown("Tracking the volume of Geopolitical Actions and Supply Chain Risks across historical briefs.")
