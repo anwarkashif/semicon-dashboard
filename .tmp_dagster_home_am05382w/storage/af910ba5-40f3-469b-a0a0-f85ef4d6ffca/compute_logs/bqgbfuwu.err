@@ -1,0 +1,31 @@
+[32m2026-03-16 22:13:40 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af910ba5-40f3-469b-a0a0-f85ef4d6ffca - 6857 - LOGS_CAPTURED - Started capturing logs in process (pid: 6857).
+[32m2026-03-16 22:13:40 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af910ba5-40f3-469b-a0a0-f85ef4d6ffca - 6857 - inject_to_motherduck - STEP_START - Started execution of step "inject_to_motherduck".
+[32m2026-03-16 22:13:40 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af910ba5-40f3-469b-a0a0-f85ef4d6ffca - inject_to_motherduck - Loading file from: /Users/shefu/semicon_env/SemicoN_Project/.tmp_dagster_home_am05382w/storage/live_threat_scan using PickledObjectFilesystemIOManager...
+[32m2026-03-16 22:13:40 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af910ba5-40f3-469b-a0a0-f85ef4d6ffca - 6857 - inject_to_motherduck - LOADED_INPUT - Loaded input "live_threat_scan" using input manager "io_manager", from output "result" of step "live_threat_scan"
+[32m2026-03-16 22:13:40 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af910ba5-40f3-469b-a0a0-f85ef4d6ffca - 6857 - inject_to_motherduck - STEP_INPUT - Got input "live_threat_scan" of type "Any". (Type check passed).
+[32m2026-03-16 22:13:40 +0530[0m - dagster - [34mINFO[0m - __ASSET_JOB - af910ba5-40f3-469b-a0a0-f85ef4d6ffca - inject_to_motherduck - Connecting to MotherDuck Cloud Brain...
+[32m2026-03-16 22:13:51 +0530[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - af910ba5-40f3-469b-a0a0-f85ef4d6ffca - 6857 - inject_to_motherduck - STEP_FAILURE - Execution of step "inject_to_motherduck" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "inject_to_motherduck"::
+
+_duckdb.InvalidInputException: Invalid Input Error: Initialization function "motherduck_duckdb_cpp_init" from file "/Users/shefu/.duckdb/extensions/v1.5.0/osx_amd64/motherduck.duckdb_extension" threw an exception: "Extension "/Users/shefu/.duckdb/extensions/v1.5.0/osx_amd64/motherduck_impl.v1.5.0-2026-03-259.duckdb_extension" could not be loaded: dlopen(/Users/shefu/.duckdb/extensions/v1.5.0/osx_amd64/motherduck_impl.v1.5.0-2026-03-259.duckdb_extension, 6): Symbol not found: __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE4openEPKcj
+  Referenced from: /Users/shefu/.duckdb/extensions/v1.5.0/osx_amd64/motherduck_impl.v1.5.0-2026-03-259.duckdb_extension
+  Expected in: /usr/lib/libc++.1.dylib
+ in /Users/shefu/.duckdb/extensions/v1.5.0/osx_amd64/motherduck_impl.v1.5.0-2026-03-259.duckdb_extension"
+
+Stack Trace:
+  File "/Users/shefu/semicon_env/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/Users/shefu/semicon_env/lib/python3.12/site-packages/dagster/_utils/__init__.py", line 394, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/Users/shefu/semicon_env/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 135, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/shefu/semicon_env/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 115, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/Users/shefu/semicon_env/SemicoN_Project/semicon_pipeline.py", line 29, in inject_to_motherduck
+    con = duckdb.connect(f'md:semicon_intel?motherduck_token={token}')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0m

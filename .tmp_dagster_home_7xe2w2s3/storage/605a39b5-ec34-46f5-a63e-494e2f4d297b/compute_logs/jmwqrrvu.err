@@ -1,0 +1,8 @@
+[32m2026-03-16 22:26:43 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 605a39b5-ec34-46f5-a63e-494e2f4d297b - 7046 - LOGS_CAPTURED - Started capturing logs in process (pid: 7046).
+[32m2026-03-16 22:26:43 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 605a39b5-ec34-46f5-a63e-494e2f4d297b - 7046 - live_threat_scan - STEP_START - Started execution of step "live_threat_scan".
+[32m2026-03-16 22:26:43 +0530[0m - dagster - [34mINFO[0m - __ASSET_JOB - 605a39b5-ec34-46f5-a63e-494e2f4d297b - live_threat_scan - Scanning global feeds for emerging threats...
+[32m2026-03-16 22:26:43 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 605a39b5-ec34-46f5-a63e-494e2f4d297b - 7046 - live_threat_scan - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2026-03-16 22:26:43 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 605a39b5-ec34-46f5-a63e-494e2f4d297b - live_threat_scan - Writing file at: /Users/shefu/semicon_env/SemicoN_Project/.tmp_dagster_home_7xe2w2s3/storage/live_threat_scan using PickledObjectFilesystemIOManager...
+[32m2026-03-16 22:26:44 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 605a39b5-ec34-46f5-a63e-494e2f4d297b - 7046 - live_threat_scan - ASSET_MATERIALIZATION - Materialized value live_threat_scan.
+[32m2026-03-16 22:26:44 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 605a39b5-ec34-46f5-a63e-494e2f4d297b - 7046 - live_threat_scan - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2026-03-16 22:26:44 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 605a39b5-ec34-46f5-a63e-494e2f4d297b - 7046 - live_threat_scan - STEP_SUCCESS - Finished execution of step "live_threat_scan" in 142ms.
