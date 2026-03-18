@@ -1283,8 +1283,8 @@ else:
                                 data=df_sites,
                                 get_position='[lon, lat]',
                                 get_elevation='elevation',
-                                elevation_scale=2000,
-                                radius=100000, 
+                                elevation_scale=4000, # Increased massively for Globe scale
+                                radius=150000, # Thickened radius so they appear on a zoomed-out globe
                                 get_fill_color='color',
                                 pickable=True,
                                 auto_highlight=True,
@@ -1292,10 +1292,14 @@ else:
                             )
                             pydeck_layers.append(layer)
 
-                        # Pitch=60 creates the deep 3D effect
-                        view_state = pdk.ViewState(latitude=20.0, longitude=30.0, zoom=1.5, pitch=60, bearing=15)
+                        # Explicitly command PyDeck to wrap the map around a 3D Sphere
+                        view = pdk.View(type="_GlobeView")
+                        
+                        # Pulled the zoom back to 0.5 so you can see the curved Earth
+                        view_state = pdk.ViewState(latitude=20.0, longitude=30.0, zoom=0.5, pitch=45)
                         
                         st.pydeck_chart(pdk.Deck(
+                            views=[view],
                             layers=pydeck_layers,
                             initial_view_state=view_state,
                             map_style="mapbox://styles/mapbox/dark-v11",
