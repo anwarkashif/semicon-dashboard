@@ -46,8 +46,6 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 model_name = 'gemini-2.5-flash'
 
-# (MOTHERDUCK SETUP REMOVED ENTIRELY)
-
 # --- Comprehensive Global ISO-3 & Regional Dictionary ---
 COUNTRY_INFO = {
     # Americas
@@ -1235,77 +1233,172 @@ else:
                         fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0}, paper_bgcolor="rgba(0,0,0,0)", showlegend=False)
                         st.plotly_chart(fig, use_container_width=True)
 
-                        # ==========================================
-                        # NEW FEATURE: PYDECK 3D TACTICAL INFRASTRUCTURE MAP
-                        # ==========================================
-                        st.markdown("##### 3D Tactical Infrastructure Globe")
-                        st.markdown("<p style='font-size: 13px; color: #888;'>Use <b>Right-Click + Drag</b> to rotate the 3D map pitch and bearing.</p>", unsafe_allow_html=True)
-                        
-                        selected_infra = st.multiselect(
-                            "📍 Toggle Physical Infrastructure Layers:", 
-                            [
-                                "Semiconductor Fabs", 
-                                "Critical Mineral Sites", 
-                                "Maritime Chokepoints", 
-                                "Gulf FDI & Capital Diplomacy", 
-                                "Naval Order of Battle & Strategic Bases",
-                                "Aerospace & Space Force Installations" 
-                            ], 
-                            default=["Semiconductor Fabs", "Maritime Chokepoints"]
-                        )
-                        
-                        infra_colors_hex = {
-                            "Semiconductor Fabs": "#00ffff", 
-                            "Critical Mineral Sites": "#ff00ff", 
-                            "Maritime Chokepoints": "#ffff00",
-                            "Gulf FDI & Capital Diplomacy": "#39ff14",
-                            "Naval Order of Battle & Strategic Bases": "#ff4500", 
-                            "Aerospace & Space Force Installations": "#ffffff" 
-                        }
+                    # ==========================================
+                    # NEW FEATURE: TRUE 3D MAPBOX GLOBE
+                    # ==========================================
+                    st.markdown("##### 3D Tactical Infrastructure Globe")
+                    st.markdown("<p style='font-size: 13px; color: #888;'>Use <b>Right-Click + Drag</b> to rotate the 3D globe. Scroll to zoom.</p>", unsafe_allow_html=True)
+                    
+                    selected_infra = st.multiselect(
+                        "📍 Toggle Physical Infrastructure Layers:", 
+                        [
+                            "Semiconductor Fabs", 
+                            "Critical Mineral Sites", 
+                            "Maritime Chokepoints", 
+                            "Gulf FDI & Capital Diplomacy", 
+                            "Naval Order of Battle & Strategic Bases",
+                            "Aerospace & Space Force Installations" 
+                        ], 
+                        default=["Semiconductor Fabs", "Maritime Chokepoints"]
+                    )
+                    
+                    infra_colors_hex = {
+                        "Semiconductor Fabs": "#00ffff", 
+                        "Critical Mineral Sites": "#ff00ff", 
+                        "Maritime Chokepoints": "#ffff00",
+                        "Gulf FDI & Capital Diplomacy": "#39ff14",
+                        "Naval Order of Battle & Strategic Bases": "#ff4500", 
+                        "Aerospace & Space Force Installations": "#ffffff" 
+                    }
 
-                        def hex_to_rgb(h):
-                            h = h.lstrip('#')
-                            return [int(h[i:i+2], 16) for i in (0, 2, 4)] + [200]
+                    # Prepare data to send to JavaScript
+                    map_features = []
+                    for infra_type in selected_infra:
+                        sites = INFRASTRUCTURE_DATA.get(infra_type, [])
+                        color = infra_colors_hex[infra_type]
+                        for site in sites:
+                            map_features.append({
+                                "name": site["name"],
+                                "lat": site["lat"],
+                                "lon": site["lon"],
+                                "color": color
+                            })
 
-                        pydeck_layers = []
-                        for infra_type in selected_infra:
-                            sites = INFRASTRUCTURE_DATA[infra_type]
-                            df_sites = pd.DataFrame(sites)
-                            rgb_color = hex_to_rgb(infra_colors_hex[infra_type])
-                            df_sites['color'] = [rgb_color] * len(df_sites)
-                            
-                            # Base elevation value
-                            df_sites['elevation'] = 500 
+                    map_data_json = json.dumps(map_features)
+                    mapbox_token = "sk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21tYXFtYmVvMGR2bzJvczdrYTlzYm16eSJ9.akP5-2AoKzIb66GG2KxwCg"
 
-                            # 3D Glowing Nodes (ColumnLayer)
-                            layer = pdk.Layer(
-                                'ColumnLayer',
-                                data=df_sites,
-                                get_position='[lon, lat]',
-                                get_elevation='elevation',
-                                elevation_scale=4000, # Increased massively for Globe scale
-                                radius=150000, # Thickened radius so they appear on a zoomed-out globe
-                                get_fill_color='color',
-                                pickable=True,
-                                auto_highlight=True,
-                                extruded=True,
-                            )
-                            pydeck_layers.append(layer)
+                    html_code = f"""
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta charset="utf-8" />
+                    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+                    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+                    <style>
+                    body {{ margin:0; padding:0; background-color: #0e1117; }}
+                    #map {{ position:absolute; top:0; bottom:0; width:100%; border-radius: 8px; }}
+                    .mapboxgl-popup-content {{
+                        background-color: #1e1e1e;
+                        color: #ffffff;
+                        border: 1px solid #00bfff;
+                        border-radius: 5px;
+                        font-family: monospace;
+                        padding: 10px;
+                        box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+                    }}
+                    .mapboxgl-popup-close-button {{ color: #ffffff; }}
+                    </style>
+                    </head>
+                    <body>
+                    <div id="map"></div>
+                    <script>
+                    mapboxgl.accessToken = '{mapbox_token}';
 
-                        # Explicitly command PyDeck to wrap the map around a 3D Sphere
-                        view = pdk.View(type="_GlobeView")
-                        
-                        # Pulled the zoom back to 0.5 so you can see the curved Earth
-                        view_state = pdk.ViewState(latitude=20.0, longitude=30.0, zoom=0.5, pitch=45)
-                        
-                        st.pydeck_chart(pdk.Deck(
-                            views=[view],
-                            layers=pydeck_layers,
-                            initial_view_state=view_state,
-                            map_style="mapbox://styles/mapbox/dark-v11",
-                            api_keys={"mapbox": "sk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21tYXFtYmVvMGR2bzJvczdrYTlzYm16eSJ9.akP5-2AoKzIb66GG2KxwCg"},
-                            tooltip={"html": "<b>{name}</b>"}
-                        ))
+                    const map = new mapboxgl.Map({{
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/dark-v11',
+                        projection: 'globe', // 🔴 THE TRUE 3D SPHERE 
+                        zoom: 1.2,
+                        center: [30, 20],
+                        pitch: 45
+                    }});
+
+                    // Add Deep Space Atmosphere (Fog)
+                    map.on('style.load', () => {{
+                        map.setFog({{
+                            'color': 'rgb(10, 20, 30)', 
+                            'high-color': 'rgb(0, 0, 0)', 
+                            'horizon-blend': 0.1,
+                            'space-color': 'rgb(5, 5, 5)',
+                            'star-intensity': 0.8
+                        }});
+                    }});
+
+                    map.addControl(new mapboxgl.NavigationControl());
+
+                    const rawData = {map_data_json};
+
+                    // Helper function to draw a circle polygon around a point so we can extrude it into a 3D pillar
+                    function createPolygon(lon, lat, radiusDegrees = 1.0) {{
+                        const pts = [];
+                        const sides = 16;
+                        for (let i = 0; i < sides; i++) {{
+                            const angle = (i / sides) * 2 * Math.PI;
+                            const lonOffset = (radiusDegrees / Math.cos(lat * Math.PI / 180)) * Math.cos(angle);
+                            const latOffset = radiusDegrees * Math.sin(angle);
+                            pts.push([lon + lonOffset, lat + latOffset]);
+                        }}
+                        pts.push(pts[0]); 
+                        return [pts];
+                    }}
+
+                    map.on('load', () => {{
+                        const features = rawData.map(item => ({{
+                            type: 'Feature',
+                            geometry: {{
+                                type: 'Polygon',
+                                coordinates: createPolygon(item.lon, item.lat, 0.8) // Pillar thickness
+                            }},
+                            properties: {{
+                                name: item.name,
+                                color: item.color,
+                                height: 500000 // Pillar height (500km)
+                            }}
+                        }}));
+
+                        map.addSource('infrastructure', {{
+                            type: 'geojson',
+                            data: {{
+                                type: 'FeatureCollection',
+                                features: features
+                            }}
+                        }});
+
+                        // Draw the 3D Pillars
+                        map.addLayer({{
+                            'id': 'infrastructure-pillars',
+                            'type': 'fill-extrusion',
+                            'source': 'infrastructure',
+                            'paint': {{
+                                'fill-extrusion-color': ['get', 'color'],
+                                'fill-extrusion-height': ['get', 'height'],
+                                'fill-extrusion-base': 0,
+                                'fill-extrusion-opacity': 0.8
+                            }}
+                        }});
+
+                        // Interactivity: Popups on click
+                        map.on('click', 'infrastructure-pillars', (e) => {{
+                            const props = e.features[0].properties;
+                            new mapboxgl.Popup()
+                                .setLngLat(e.lngLat)
+                                .setHTML('<strong>' + props.name + '</strong>')
+                                .addTo(map);
+                        }});
+
+                        map.on('mouseenter', 'infrastructure-pillars', () => {{
+                            map.getCanvas().style.cursor = 'pointer';
+                        }});
+                        map.on('mouseleave', 'infrastructure-pillars', () => {{
+                            map.getCanvas().style.cursor = '';
+                        }});
+                    }});
+                    </script>
+                    </body>
+                    </html>
+                    """
+
+                    components.html(html_code, height=600)
 
                 if not df_actions.empty:
                     st.markdown("##### Recent State Actions")
