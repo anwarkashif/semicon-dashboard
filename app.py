@@ -5,6 +5,7 @@ import glob
 import json
 import re
 import time
+import sys
 import streamlit.components.v1 as components
 from io import BytesIO
 from PIL import Image, ImageDraw
@@ -24,6 +25,13 @@ from docx.opc.constants import RELATIONSHIP_TYPE
 
 st.set_page_config(page_title="SemicoN Dashboard", page_icon="logo.jpg", layout="wide", initial_sidebar_state="expanded")
 
+# --- KOYEB HEALTH PROBE BYPASS ---
+try:
+    if 'light_mode' not in st.session_state:
+        st.session_state['light_mode'] = False
+except Exception:
+    sys.exit(0)
+
 MAINTENANCE_MODE = False
 if MAINTENANCE_MODE:
     st.markdown("""<style>[data-testid="collapsedControl"], [data-testid="stSidebar"] { display: none; }</style>""", unsafe_allow_html=True)
@@ -42,10 +50,8 @@ os.makedirs('data', exist_ok=True)
 os.makedirs('trash', exist_ok=True)
 
 # ==========================================
-# 🛑 MAPBOX TOKEN REQUIRED HERE 🛑
-# Replace "YOUR_MAPBOX_TOKEN_HERE" with your actual token starting with pk.
+MAPBOX_PUBLIC_TOKEN = "3uoyqjxd01sqir2n0q7sv9zn89lajdg05tljj26pe0swwdvowd5qw5py7th22nm9"
 # ==========================================
-MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
 
 # --- API Setup ---
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -54,33 +60,27 @@ model_name = 'gemini-2.5-flash'
 
 # --- Comprehensive Global ISO-3 & Regional Dictionary ---
 COUNTRY_INFO = {
-    # Americas
     "United States": ("USA", "Americas"), "USA": ("USA", "Americas"), "US": ("USA", "Americas"), "U.S.": ("USA", "Americas"),
     "Canada": ("CAN", "Americas"), "Mexico": ("MEX", "Americas"), "Brazil": ("BRA", "Americas"), "Argentina": ("ARG", "Americas"),
     "Chile": ("CHL", "Americas"), "Colombia": ("COL", "Americas"), "Peru": ("PER", "Americas"), "Venezuela": ("VEN", "Americas"), "Cuba": ("CUB", "Americas"),
-    # Europe
     "United Kingdom": ("GBR", "Europe"), "UK": ("GBR", "Europe"), "U.K.": ("GBR", "Europe"), "Britain": ("GBR", "Europe"),
     "Germany": ("DEU", "Europe"), "France": ("FRA", "Europe"), "Italy": ("ITA", "Europe"), "Spain": ("ESP", "Europe"),
     "Netherlands": ("NLD", "Europe"), "Belgium": ("BEL", "Europe"), "Switzerland": ("CHE", "Europe"), "Poland": ("POL", "Europe"),
     "Sweden": ("SWE", "Europe"), "Norway": ("NOR", "Europe"), "Denmark": ("DNK", "Europe"), "Finland": ("FIN", "Europe"),
     "Ireland": ("IRL", "Europe"), "Russia": ("RUS", "Europe"), "Ukraine": ("UKR", "Europe"), "European Union": ("EU", "Europe"), "EU": ("EU", "Europe"),
-    # West Asia / Middle East
     "Iran": ("IRN", "West Asia/Middle East"), "Israel": ("ISR", "West Asia/Middle East"), "Saudi Arabia": ("SAU", "West Asia/Middle East"),
     "United Arab Emirates": ("ARE", "West Asia/Middle East"), "UAE": ("ARE", "West Asia/Middle East"), "Qatar": ("QAT", "West Asia/Middle East"),
     "Oman": ("OMN", "West Asia/Middle East"), "Kuwait": ("KWT", "West Asia/Middle East"), "Bahrain": ("BHR", "West Asia/Middle East"),
     "Syria": ("SYR", "West Asia/Middle East"), "Iraq": ("IRQ", "West Asia/Middle East"), "Jordan": ("JOR", "West Asia/Middle East"),
     "Lebanon": ("LBN", "West Asia/Middle East"), "Yemen": ("YEM", "West Asia/Middle East"), "Turkey": ("TUR", "West Asia/Middle East"),
-    # Asia
     "China": ("CHN", "Asia"), "Taiwan": ("TWN", "Asia"), "Japan": ("JPN", "Asia"), "South Korea": ("KOR", "Asia"), "North Korea": ("PRK", "Asia"),
     "India": ("IND", "Asia"), "Pakistan": ("PAK", "Asia"), "Bangladesh": ("BGD", "Asia"), "Sri Lanka": ("LKA", "Asia"),
     "Vietnam": ("VNM", "Asia"), "Malaysia": ("MYS", "Asia"), "Singapore": ("SGP", "Asia"), "Indonesia": ("IDN", "Asia"),
     "Philippines": ("PHL", "Asia"), "Thailand": ("THA", "Asia"), "Myanmar": ("MMR", "Asia"), "Cambodia": ("KHM", "Asia"),
-    # Africa
     "South Africa": ("ZAF", "Africa"), "Egypt": ("EGY", "Africa"), "Nigeria": ("NGA", "Africa"), "Kenya": ("KEN", "Africa"),
     "Ethiopia": ("ETH", "Africa"), "Morocco": ("MAR", "Africa"), "Algeria": ("DZA", "Africa"), "Sudan": ("SDN", "Africa"),
     "Congo": ("COD", "Africa"), "Democratic Republic of the Congo": ("COD", "Africa"), "Angola": ("AGO", "Africa"), "Ghana": ("GHA", "Africa"),
     "Mali": ("MLI", "Africa"), "Niger": ("NER", "Africa"), "Chad": ("TCD", "Africa"), "Somalia": ("SOM", "Africa"),
-    # Oceania
     "Australia": ("AUS", "Oceania"), "New Zealand": ("NZL", "Oceania"), "Fiji": ("FJI", "Oceania"), "Papua New Guinea": ("PNG", "Oceania")
 }
 
@@ -167,9 +167,6 @@ st.markdown("""
     .stMarkdown p { margin-top: 5px !important; }
 </style>
 """, unsafe_allow_html=True)
-
-if 'light_mode' not in st.session_state:
-    st.session_state['light_mode'] = False
 
 if st.session_state['light_mode']:
     st.markdown("""
@@ -422,14 +419,13 @@ def create_landscape_word(text_sections, final_text, actions_data, brief_date, f
             
         if not text_data or text_data.strip() == "": continue
 
-        # Insert Header Title
         p_head = doc.add_paragraph()
         p_head.paragraph_format.space_before = Pt(18)
         r_head = p_head.add_run(section_titles[i])
         r_head.bold = True
         r_head.font.name = 'Times New Roman'
         r_head.font.size = Pt(14)
-        r_head.font.color.rgb = RGBColor(0, 102, 204) # Dashboard Blue
+        r_head.font.color.rgb = RGBColor(0, 102, 204)
 
         for line in text_data.split('\n'):
             line = line.strip()
@@ -634,6 +630,10 @@ def check_early_warnings():
         alert = get_active_live_alert()
         is_light = st.session_state.get('light_mode', False)
         
+        # Hardcode box background to pure black in dark mode to seamlessly transition and fix the white bar
+        box_bg_color = "#f8f9fc" if is_light else "#000000"
+        nominal_text_color = "#212529" if is_light else "#d1d5db"
+        
         if alert:  
             try:
                 dt = datetime.fromisoformat(alert.get('timestamp', datetime.now(timezone.utc).isoformat()).replace("Z", "+00:00"))
@@ -643,7 +643,7 @@ def check_early_warnings():
             
             html_code = f"""
             <style>
-                body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: transparent; overflow: hidden; }}
+                body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
                 .defcon-box {{
                     background: linear-gradient(90deg, #8b0000 0%, #ff0000 50%, #8b0000 100%); 
                     background-size: 200% 200%; 
@@ -653,24 +653,17 @@ def check_early_warnings():
                     border-radius: 8px; 
                     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
                     color: #ffffff;
-                    height: 185px; /* Locked height */
-                    box-sizing: border-box; /* Forces padding inward */
-                    overflow-y: auto; /* Internal scrollbar if text is long */
+                    height: 185px;
+                    box-sizing: border-box;
+                    overflow-y: auto; 
                 }}
-                /* Fullscreen styling for Magnify mode */
                 :fullscreen {{
                     background-color: rgba(20, 20, 20, 0.95);
                     display: flex;
                     align-items: center;
                     justify-content: center;
                 }}
-                :fullscreen .defcon-box {{
-                    width: 90vw;
-                    max-height: 90vh;
-                    height: auto;
-                    padding: 40px;
-                    border-width: 4px;
-                }}
+                :fullscreen .defcon-box {{ width: 90vw; max-height: 90vh; height: auto; padding: 40px; border-width: 4px; }}
                 :fullscreen .title {{ font-size: 2.5em; }}
                 :fullscreen .timer {{ font-size: 1.5em; }}
                 :fullscreen .headline {{ font-size: 2em; line-height: 1.2; margin-top: 20px; }}
@@ -684,32 +677,11 @@ def check_early_warnings():
                 .headline {{ font-weight: 800; font-size: 16px; margin-bottom: 8px; margin-top:0; }}
                 .summary {{ font-size: 14px; color: #f8f8f8; margin-bottom: 0px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 10px; }}
                 
-                .magnify-btn {{
-                    background: rgba(0,0,0,0.6);
-                    color: white;
-                    border: 1px solid white;
-                    padding: 4px 8px;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    font-size: 12px;
-                    font-weight: bold;
-                    margin-left: 10px;
-                }}
+                .magnify-btn {{ background: rgba(0,0,0,0.6); color: white; border: 1px solid white; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; margin-left: 10px; }}
                 .magnify-btn:hover {{ background: rgba(255,255,255,0.2); }}
                 :fullscreen .magnify-btn {{ display: none; }} 
-                
                 .close-btn {{ display: none; }}
-                :fullscreen .close-btn {{
-                    display: inline-block;
-                    background: transparent;
-                    color: white;
-                    border: 1px solid white;
-                    padding: 8px 16px;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    font-size: 18px;
-                    margin-top: 20px;
-                }}
+                :fullscreen .close-btn {{ display: inline-block; background: transparent; color: white; border: 1px solid white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 18px; margin-top: 20px; }}
             </style>
             
             <div class="defcon-box" id="defcon-container">
@@ -731,14 +703,9 @@ def check_early_warnings():
                 function toggleFullscreen() {{
                     let elem = document.documentElement;
                     if (!document.fullscreenElement) {{
-                        elem.requestFullscreen().catch(err => {{
-                            alert(`Error attempting to enable fullscreen mode: ${{err.message}} (${{err.name}})`);
-                        }});
-                    }} else {{
-                        document.exitFullscreen();
-                    }}
+                        elem.requestFullscreen().catch(err => {{ alert(`Error: ${{err.message}}`); }});
+                    }} else {{ document.exitFullscreen(); }}
                 }}
-
                 const start = {start_timestamp_ms};
                 function update() {{
                     const now = new Date().getTime();
@@ -747,13 +714,9 @@ def check_early_warnings():
                     let h = Math.floor(diff / (1000 * 60 * 60));
                     let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
                     let s = Math.floor((diff % (1000 * 60)) / 1000);
-                    document.getElementById('clock').innerText = 
-                        String(h).padStart(2, '0') + ':' + 
-                        String(m).padStart(2, '0') + ':' + 
-                        String(s).padStart(2, '0');
+                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
                 }}
-                setInterval(update, 1000);
-                update();
+                setInterval(update, 1000); update();
             </script>
             """
             components.html(html_code, height=185) 
@@ -773,23 +736,16 @@ def check_early_warnings():
 
             html_code = f"""
             <style>
-                body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: transparent; }}
-                .nominal-box {{
-                    background-color: rgba(0, 191, 255, 0.05); 
-                    border-left: 5px solid #00bfff; 
-                    padding: 15px; 
-                    border-radius: 5px; 
-                }}
+                body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
+                .nominal-box {{ background-color: rgba(0, 191, 255, 0.05); border-left: 5px solid #00bfff; padding: 15px; border-radius: 5px; }}
                 .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }}
                 .title {{ color: #00bfff; margin: 0; font-size: 1.1em; font-weight: bold; display: flex; align-items: center; }}
                 .timer {{ font-size: 13px; font-weight: bold; color: #00bfff; background: rgba(0, 191, 255, 0.1); padding: 5px 10px; border-radius: 4px; border: 1px solid rgba(0, 191, 255, 0.3); font-family: monospace; }}
-                .desc {{ font-size: 14px; margin: 0; color: #d1d5db; }}
+                .desc {{ font-size: 14px; margin: 0; color: {nominal_text_color}; }}
             </style>
             <div class="nominal-box">
                 <div class="header-flex">
-                    <h4 class="title">
-                        <span>🟢 System Nominal</span>
-                    </h4>
+                    <h4 class="title"><span>🟢 System Nominal</span></h4>
                     <div class="timer">Status Verified: <span id="clock">00:00:00</span> ago</div>
                 </div>
                 <p class="desc">Current Warning System doesn't see an early warning situation. Watch out for further updates.</p>
@@ -803,13 +759,9 @@ def check_early_warnings():
                     let h = Math.floor(diff / (1000 * 60 * 60));
                     let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
                     let s = Math.floor((diff % (1000 * 60)) / 1000);
-                    document.getElementById('clock').innerText = 
-                        String(h).padStart(2, '0') + ':' + 
-                        String(m).padStart(2, '0') + ':' + 
-                        String(s).padStart(2, '0');
+                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
                 }}
-                setInterval(update, 1000);
-                update();
+                setInterval(update, 1000); update();
             </script>
             """
             components.html(html_code, height=90)
@@ -972,7 +924,6 @@ else:
                     
                 score_df["Calculated Threat Level"] = score_df["Instability Actions Logged"].apply(assign_threat)
                 
-                # FIXED TABLE RENDER
                 st.table(score_df.set_index(score_df.columns[0]))
             else:
                 st.warning("Not enough historical data to generate scores yet.")
@@ -1280,10 +1231,9 @@ else:
                             })
 
                     map_data_json = json.dumps(map_features)
-                    
-                    # FETCH HARDCODED TOKEN INSTEAD OF ENV
                     mapbox_token = MAPBOX_PUBLIC_TOKEN
-
+                    map_bg_color = "#f8f9fc" if st.session_state.get('light_mode', False) else "#0e1117"
+                    
                     html_code = f"""
                     <!DOCTYPE html>
                     <html>
@@ -1292,17 +1242,9 @@ else:
                     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
                     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
                     <style>
-                    body {{ margin:0; padding:0; background-color: #0e1117; }} /* Forced dark background */
-                    #map {{ position:absolute; top:0; bottom:0; width:100%; border-radius: 8px; }}
-                    .mapboxgl-popup-content {{
-                        background-color: #1e1e1e;
-                        color: #ffffff;
-                        border: 1px solid #00bfff;
-                        border-radius: 5px;
-                        font-family: monospace;
-                        padding: 10px;
-                        box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-                    }}
+                    html, body {{ height: 100%; width: 100%; margin: 0; padding: 0; background-color: {map_bg_color}; overflow: hidden; }}
+                    #map {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }}
+                    .mapboxgl-popup-content {{ background-color: #1e1e1e; color: #ffffff; border: 1px solid #00bfff; border-radius: 5px; font-family: monospace; padding: 10px; box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); }}
                     .mapboxgl-popup-close-button {{ color: #ffffff; }}
                     </style>
                     </head>
@@ -1312,7 +1254,7 @@ else:
                     mapboxgl.accessToken = '{mapbox_token}';
 
                     if (!mapboxgl.accessToken.startsWith('pk.')) {{
-                        document.getElementById('map').innerHTML = '<div style="display:flex; justify-content:center; align-items:center; height:100%; color:#00bfff; font-family:monospace; text-align:center; background:#1e1e1e; border:1px solid #00bfff; border-radius:8px; padding:20px;"><div><h2>⚠️ Mapbox Token Required</h2><p>Please paste your actual Mapbox public token (starts with pk.eyJ...) into the <b>MAPBOX_PUBLIC_TOKEN</b> variable at the top of your app.py file.</p></div></div>';
+                        document.getElementById('map').innerHTML = '<div style="display:flex; justify-content:center; align-items:center; height:100%; color:#00bfff; font-family:monospace; text-align:center; background:#1e1e1e; border:1px solid #00bfff; border-radius:8px; padding:20px;"><div><h2>⚠️ Mapbox Token Required</h2></div></div>';
                     }} else {{
                         const map = new mapboxgl.Map({{
                             container: 'map',
@@ -1324,13 +1266,7 @@ else:
                         }});
 
                         map.on('style.load', () => {{
-                            map.setFog({{
-                                'color': 'rgb(10, 20, 30)', 
-                                'high-color': 'rgb(0, 0, 0)', 
-                                'horizon-blend': 0.1,
-                                'space-color': 'rgb(5, 5, 5)',
-                                'star-intensity': 0.8
-                            }});
+                            map.setFog({{ 'color': 'rgb(10, 20, 30)', 'high-color': 'rgb(0, 0, 0)', 'horizon-blend': 0.1, 'space-color': 'rgb(5, 5, 5)', 'star-intensity': 0.8 }});
                         }});
 
                         map.addControl(new mapboxgl.NavigationControl());
@@ -1351,53 +1287,30 @@ else:
                         }}
 
                         map.on('load', () => {{
+                            // FORCE RESIZE ON LOAD TO PREVENT CUT-OFF BUG
+                            map.resize();
+                            
                             const features = rawData.map(item => ({{
                                 type: 'Feature',
-                                geometry: {{
-                                    type: 'Polygon',
-                                    coordinates: createPolygon(item.lon, item.lat, 0.8) 
-                                }},
-                                properties: {{
-                                    name: item.name,
-                                    color: item.color,
-                                    height: 500000 
-                                }}
+                                geometry: {{ type: 'Polygon', coordinates: createPolygon(item.lon, item.lat, 0.8) }},
+                                properties: {{ name: item.name, color: item.color, height: 500000 }}
                             }}));
 
-                            map.addSource('infrastructure', {{
-                                type: 'geojson',
-                                data: {{
-                                    type: 'FeatureCollection',
-                                    features: features
-                                }}
-                            }});
-
+                            map.addSource('infrastructure', {{ type: 'geojson', data: {{ type: 'FeatureCollection', features: features }} }});
                             map.addLayer({{
                                 'id': 'infrastructure-pillars',
                                 'type': 'fill-extrusion',
                                 'source': 'infrastructure',
-                                'paint': {{
-                                    'fill-extrusion-color': ['get', 'color'],
-                                    'fill-extrusion-height': ['get', 'height'],
-                                    'fill-extrusion-base': 0,
-                                    'fill-extrusion-opacity': 0.8
-                                }}
+                                'paint': {{ 'fill-extrusion-color': ['get', 'color'], 'fill-extrusion-height': ['get', 'height'], 'fill-extrusion-base': 0, 'fill-extrusion-opacity': 0.8 }}
                             }});
 
                             map.on('click', 'infrastructure-pillars', (e) => {{
                                 const props = e.features[0].properties;
-                                new mapboxgl.Popup()
-                                    .setLngLat(e.lngLat)
-                                    .setHTML('<strong>' + props.name + '</strong>')
-                                    .addTo(map);
+                                new mapboxgl.Popup().setLngLat(e.lngLat).setHTML('<strong>' + props.name + '</strong>').addTo(map);
                             }});
 
-                            map.on('mouseenter', 'infrastructure-pillars', () => {{
-                                map.getCanvas().style.cursor = 'pointer';
-                            }});
-                            map.on('mouseleave', 'infrastructure-pillars', () => {{
-                                map.getCanvas().style.cursor = '';
-                            }});
+                            map.on('mouseenter', 'infrastructure-pillars', () => {{ map.getCanvas().style.cursor = 'pointer'; }});
+                            map.on('mouseleave', 'infrastructure-pillars', () => {{ map.getCanvas().style.cursor = ''; }});
                         }});
                     }}
                     </script>
@@ -1405,7 +1318,7 @@ else:
                     </html>
                     """
 
-                    components.html(html_code, height=600)
+                    components.html(html_code, height=850, scrolling=False) 
 
                 if not df_actions.empty:
                     st.markdown("##### Recent State Actions")
