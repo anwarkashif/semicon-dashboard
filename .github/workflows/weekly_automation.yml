@@ -2,7 +2,12 @@ name: Generate SemicoN Weekly Brief
 
 on:
   schedule:
+    # 1. The Main Loop (Every 2 hours - includes 5:30 AM IST)
     - cron: '0 */2 * * *'
+    # 2. Fallback Window 1: Fridays at 00:30 UTC (6:00 AM IST)
+    - cron: '30 0 * * 5'
+    # 3. Fallback Window 2: Fridays at 01:00 UTC (6:30 AM IST)
+    - cron: '0 1 * * 5'
   workflow_dispatch: 
 
 jobs:
