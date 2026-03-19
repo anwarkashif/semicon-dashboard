@@ -50,7 +50,7 @@ os.makedirs('data', exist_ok=True)
 os.makedirs('trash', exist_ok=True)
 
 # ==========================================
-MAPBOX_PUBLIC_TOKEN = "3uoyqjxd01sqir2n0q7sv9zn89lajdg05tljj26pe0swwdvowd5qw5py7th22nm9"
+MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
 # ==========================================
 
 # --- API Setup ---
