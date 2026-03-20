@@ -53,7 +53,7 @@ def fetch_live_rss_feed():
 
     regional_queries = {
         "Asia": f'{Q_A} AND ("China" OR "Japan" OR "Taiwan" OR "South Korea" OR "India" OR site:.cn OR site:.jp OR site:.tw OR site:.in)',
-        "West Asia/Middle East": f'{Q_E} AND ("UAE" OR "Saudi" OR "Israel" OR "Iran" OR "Qatar" OR site:.ae OR site:.sa OR site:.il)',
+        "West Asia/Middle East": '("UAE" OR "Saudi Arabia" OR "Israel" OR "Iran" OR "Middle East") AND ("geopolitics" OR "energy" OR "AI" OR "chips")',
         "Americas": f'{Q_B} AND ("US" OR "USA" OR "Canada" OR "Brazil" OR "Mexico")',
         "Africa": f'{Q_C} AND ("Africa" OR "South Africa" OR "Congo" OR "Nigeria" OR site:.za OR site:.ng)',
         "Europe": f'{Q_B} AND ("Europe" OR "EU" OR "UK" OR "Germany" OR "France" OR "Netherlands" OR site:.uk OR site:.de)',

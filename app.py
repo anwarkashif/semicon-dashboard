@@ -722,14 +722,14 @@ def check_early_warnings():
             components.html(html_code, height=185) 
             
         else:
-            latest_time = 0
-            for f in glob.glob("data/*"):
-                try:
-                    mtime = os.path.getmtime(f)
-                    if mtime > latest_time:
-                        latest_time = mtime
-                except: pass
-            if latest_time == 0:
+            # Fix for 1970 Epoch bug: explicitly check the cache file time
+            try:
+                latest_time = os.path.getmtime("data/rss_accumulator.txt")
+            except:
+                latest_time = time.time()
+                
+            # Failsafe: if the time is somehow 0 or from 1970, reset to now
+            if latest_time < 1000000000: 
                 latest_time = time.time()
                 
             start_timestamp_ms = int(latest_time * 1000)
