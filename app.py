@@ -25,13 +25,6 @@ from docx.opc.constants import RELATIONSHIP_TYPE
 
 st.set_page_config(page_title="SemicoN Dashboard", page_icon="logo.jpg", layout="wide", initial_sidebar_state="expanded")
 
-# --- KOYEB HEALTH PROBE BYPASS ---
-try:
-    if 'light_mode' not in st.session_state:
-        st.session_state['light_mode'] = False
-except Exception:
-    sys.exit(0)
-
 MAINTENANCE_MODE = False
 if MAINTENANCE_MODE:
     st.markdown("""<style>[data-testid="collapsedControl"], [data-testid="stSidebar"] { display: none; }</style>""", unsafe_allow_html=True)
@@ -153,33 +146,25 @@ INFRASTRUCTURE_DATA = {
     ]
 }
 
-# --- CSS SPACING AND UI FIXES ---
+# --- PURE PITCH BLACK CSS FIXES ---
 st.markdown("""
 <style>
+    /* Force main app background to pure black */
+    .stApp, .stApp > header, .stAppViewContainer, .main .block-container { 
+        background-color: #000000 !important; 
+    }
     header[data-testid="stHeader"] { display: none !important; }
     .block-container { padding-top: 1rem !important; margin-top: 0rem !important; }
     [data-testid="stSidebar"] > div:first-child { padding-top: 0rem !important; }
-    [data-testid="stSidebar"] { background-color: #000000 !important; } /* FORCES PURE BLACK SIDEBAR */
-    [data-testid="stMetricValue"] { font-size: 1.8rem !important; font-weight: bold !important; }
-    [data-testid="stMetricLabel"] { font-size: 1.0rem !important; white-space: normal !important; overflow: visible !important; height: auto !important; }
+    [data-testid="stSidebar"] { background-color: #000000 !important; border-right: 1px solid #222222 !important; } 
+    [data-testid="stMetricValue"] { font-size: 1.8rem !important; font-weight: bold !important; color: #ffffff !important; }
+    [data-testid="stMetricLabel"] { font-size: 1.0rem !important; white-space: normal !important; overflow: visible !important; height: auto !important; color: #aaaaaa !important; }
     footer { visibility: hidden; height: 0%; }
     h3 { margin-bottom: 0px !important; padding-bottom: 0px !important; }
     h4, h5 { margin-top: 0em !important; margin-bottom: 0.5em !important; }
     .stMarkdown p { margin-top: 5px !important; }
 </style>
 """, unsafe_allow_html=True)
-
-if st.session_state['light_mode']:
-    st.markdown("""
-    <style>
-        .stApp { background-color: #f8f9fc !important; }
-        [data-testid="stSidebar"] { background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%) !important; border-right: 2px solid #90caf9 !important; }
-        h1 { color: #d81b60 !important; font-weight: 800 !important; } 
-        h2, h3, h4, h5 { color: #1565c0 !important; font-weight: 700 !important; } 
-        .stMarkdown p, .stMarkdown li { color: #212529 !important; font-weight: 400 !important; }
-        [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] label { color: #0d47a1 !important; font-weight: 600 !important; }
-    </style>
-    """, unsafe_allow_html=True)
 
 def get_brief_mappings(directory):
     files = glob.glob(f'{directory}/brief_*.json')
@@ -629,11 +614,9 @@ def check_early_warnings():
                     st.error(f"Failed to clear: {e}")
 
         alert = get_active_live_alert()
-        is_light = st.session_state.get('light_mode', False)
         
-        # Hardcode box background to pure black in dark mode to seamlessly transition and fix the white bar
-        box_bg_color = "#f8f9fc" if is_light else "#000000"
-        nominal_text_color = "#212529" if is_light else "#d1d5db"
+        box_bg_color = "#000000"
+        nominal_text_color = "#d1d5db"
         
         if alert:  
             try:
@@ -723,13 +706,11 @@ def check_early_warnings():
             components.html(html_code, height=185) 
             
         else:
-            # Fix for 1970 Epoch bug: explicitly check the cache file time
             try:
                 latest_time = os.path.getmtime("data/rss_accumulator.txt")
             except:
                 latest_time = time.time()
                 
-            # Failsafe: if the time is somehow 0 or from 1970, reset to now
             if latest_time < 1000000000: 
                 latest_time = time.time()
                 
@@ -833,10 +814,6 @@ else:
         ["None (View Main Dashboard)", "Quantitative Threat Scoring", "Intelligence Interrogation (RAG)"], 
         index=0
     )
-    st.sidebar.markdown("---")
-
-    st.sidebar.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>Display Settings</p>", unsafe_allow_html=True)
-    st.sidebar.toggle("🌈 Vibrant Light Theme", key="light_mode")
     st.sidebar.markdown("---")
 
     st.sidebar.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>Regions Covered</p>", unsafe_allow_html=True)
@@ -1063,9 +1040,10 @@ else:
             check_early_warnings()
 
             # ==========================================
-            # NEW: 24h Aggregated Geopolitical Outlook
+            # TRUE DYNAMIC PLOTLY OUTLOOK (No Static Image)
             # ==========================================
-            st.markdown("<h3 style='color:#00bfff; margin-top: 20px; margin-bottom: 0px;'>Semicon, rare earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
+            st.markdown("<h3 style='color:#00bfff; margin-top: 25px; margin-bottom: 0px;'>Semicon, rare earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
+            st.markdown("<p style='color: grey; font-size: 14px;'>24h Aggregated Geopolitical Synthesis: Last 12 checks visualized.</p>", unsafe_allow_html=True)
             
             aggregated_sitreps = []
             if os.path.exists('data/sitrep_history.json'):
@@ -1078,25 +1056,39 @@ else:
             elevated_events = [s for s in aggregated_sitreps if s.get('threat_level') == 'ELEVATED']
             elevated_count = len(elevated_events)
             
-            with st.container():
-                outlook_cols = st.columns([1, 2])
-                with outlook_cols[0]:
-                    st.markdown(f"""
-                        <div style='text-align: center; background: rgba(0, 191, 255, 0.05); padding: 15px; border-radius: 8px; border: 1px solid #00bfff;'>
-                            <p style='font-size: 14px; color: #888; margin: 0;'>Aggregated 24h Checks</p>
-                            <p style='font-size: 40px; font-weight: bold; color: #00bfff; margin: 0;'>{elevated_count} <span style='font-size: 20px; color: grey;'> / {total_checks if total_checks > 0 else 12}</span></p>
-                            <p style='font-size: 14px; color: grey; margin: 0;'>Elevated Threat Events Detected</p>
-                        </div>
-                    """, unsafe_allow_html=True)
+            # Default to 12 if missing data for a clean donut look
+            display_total = total_checks if total_checks > 0 else 12
+            nominal_count = display_total - elevated_count
+            
+            outlook_cols = st.columns([1, 2.5])
+            
+            with outlook_cols[0]:
+                fig = go.Figure(data=[go.Pie(
+                    labels=['Elevated Threat', 'Nominal'],
+                    values=[elevated_count, nominal_count],
+                    hole=.75,
+                    marker_colors=['#ff4b4b', '#00bfff'],
+                    textinfo='none',
+                    hoverinfo='label+value'
+                )])
+                fig.update_layout(
+                    showlegend=False,
+                    margin=dict(t=10, b=10, l=10, r=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    height=200,
+                    annotations=[dict(text=f"{elevated_count} / {display_total}", x=0.5, y=0.5, font_size=24, font_color="white", showarrow=False)]
+                )
+                st.plotly_chart(fig, use_container_width=True)
+                
+            with outlook_cols[1]:
+                st.markdown("<h5 style='color: #ffffff; margin-top: 15px;'>AI Geopolitical Synthesis</h5>", unsafe_allow_html=True)
+                if elevated_events:
+                    summary_text = f"Over the past 24 hours, **{elevated_count} out of {display_total} automated checks** flagged elevated geopolitical threats. Key escalations involve: *{', '.join([e['headline'] for e in elevated_events[:3]])}*. Continuous monitoring remains active."
+                    render_highlighted_text(summary_text, selected_actor)
+                else:
+                    st.info("🟢 System nominal. No elevated threats detected in the past 24 hours across global semiconductor, rare earth, and AI supply chains.")
                     
-                with outlook_cols[1]:
-                    st.markdown("<h5 style='color: grey; margin-top: 0px;'>24h SITREP Synthesis</h5>", unsafe_allow_html=True)
-                    if elevated_events:
-                        summary_text = f"Over the last {total_checks} checks (24 hours), **{elevated_count} elevated threat situations** were identified. Key developments focused on: *{', '.join([e['headline'] for e in elevated_events[:3]])}...*"
-                        render_highlighted_text(summary_text, selected_actor)
-                    else:
-                        st.info("🟢 No elevated threat events detected in the last 24 hours of standard 2h syncs.")
-                        
             st.markdown("<br>", unsafe_allow_html=True)
             # ==========================================
 
@@ -1127,7 +1119,7 @@ else:
                                     st.markdown(f"""
                                         <div style="margin-bottom: 20px; border-left: 4px solid #00bfff; padding-left: 15px;">
                                             <p style="font-size: 13px; font-weight: 600; color: #888; margin-bottom: 0px; line-height: 1.2;">{label_val}</p>
-                                            <p style="font-size: 26px; font-weight: bold; margin-top: 0px; line-height: 1.2;">{metric_val}</p>
+                                            <p style="font-size: 26px; font-weight: bold; margin-top: 0px; line-height: 1.2; color: white;">{metric_val}</p>
                                         </div>
                                     """, unsafe_allow_html=True)
                     st.markdown("---")
@@ -1271,7 +1263,7 @@ else:
 
                     map_data_json = json.dumps(map_features)
                     mapbox_token = MAPBOX_PUBLIC_TOKEN
-                    map_bg_color = "#f8f9fc" if st.session_state.get('light_mode', False) else "#0e1117"
+                    map_bg_color = "#000000"
                     
                     html_code = f"""
                     <!DOCTYPE html>
@@ -1326,7 +1318,6 @@ else:
                         }}
 
                         map.on('load', () => {{
-                            // FORCE RESIZE ON LOAD TO PREVENT CUT-OFF BUG
                             map.resize();
                             
                             const features = rawData.map(item => ({{
