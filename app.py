@@ -159,6 +159,7 @@ st.markdown("""
     header[data-testid="stHeader"] { display: none !important; }
     .block-container { padding-top: 1rem !important; margin-top: 0rem !important; }
     [data-testid="stSidebar"] > div:first-child { padding-top: 0rem !important; }
+    [data-testid="stSidebar"] { background-color: #000000 !important; } /* FORCES PURE BLACK SIDEBAR */
     [data-testid="stMetricValue"] { font-size: 1.8rem !important; font-weight: bold !important; }
     [data-testid="stMetricLabel"] { font-size: 1.0rem !important; white-space: normal !important; overflow: visible !important; height: auto !important; }
     footer { visibility: hidden; height: 0%; }
@@ -778,7 +779,7 @@ if st.session_state['role'] is None:
     col1, outer_col, col3 = st.columns([1, 2.2, 1]) 
     with outer_col:
         logo_left, logo_center, logo_right = st.columns([1, 1, 1])
-        with logo_center: st.image("logo.jpg", use_column_width=True) 
+        with logo_center: st.image("logo.jpg", use_container_width=True) 
         st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: -15px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; color: #888; font-weight: bold; letter-spacing: 2px; font-size: 12px; margin-bottom: 5px;'>SYSTEM ACCESS</p>", unsafe_allow_html=True)
         
@@ -805,7 +806,7 @@ if st.session_state['role'] is None:
 else:
     st.markdown("""<style>[data-testid="collapsedControl"], [data-testid="stSidebar"] { display: block; }</style>""", unsafe_allow_html=True)
 
-    st.sidebar.image("logo.jpg", use_column_width=True)
+    st.sidebar.image("logo.jpg", use_container_width=True)
     st.sidebar.markdown("""
     <div style='text-align: center; margin-top: -10px;'>
         <p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>A Semicon News Dashboard.</p>
@@ -1076,11 +1077,6 @@ else:
             total_checks = len(aggregated_sitreps)
             elevated_events = [s for s in aggregated_sitreps if s.get('threat_level') == 'ELEVATED']
             elevated_count = len(elevated_events)
-
-            try:
-                st.image("images/daily_outlook_visual.jpg", use_column_width=True, caption="24h Aggregated Geopolitical Synthesis: Last 12 checks visualized.")
-            except Exception as e:
-                pass
             
             with st.container():
                 outlook_cols = st.columns([1, 2])
