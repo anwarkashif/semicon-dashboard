@@ -10,6 +10,9 @@ from datetime import datetime, timedelta, timezone
 import feedparser
 from email.utils import parsedate_to_datetime
 
+SITREP_HISTORY_FILE = "data/sitrep_history.json"
+MAX_SITREP_HISTORY = 12
+
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 # Gather all potential News API keys from the environment
@@ -354,6 +357,28 @@ if __name__ == "__main__":
     
     # 1.5 RUN EARLY WARNING SYSTEM (EWS) MICRO-SWEEP
     alert_data = evaluate_daily_threat(daily_rss_text)
+    
+    # --- NEW: Aggregated 24h SITREP Logging ---
+    sitrep_history = []
+    if os.path.exists(SITREP_HISTORY_FILE):
+        try:
+            with open(SITREP_HISTORY_FILE, 'r', encoding="utf-8") as f:
+                sitrep_history = json.load(f)
+        except: pass
+
+    history_entry = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "threat_level": alert_data['threat_level'] if alert_data else "STANDARD",
+        "headline": alert_data['headline'] if alert_data else "Nominal 2h Sync",
+        "summary": alert_data['summary'] if alert_data else ""
+    }
+    sitrep_history.insert(0, history_entry)
+    sitrep_history = sitrep_history[:MAX_SITREP_HISTORY] # Maintain last 12 checks
+    
+    with open(SITREP_HISTORY_FILE, 'w', encoding="utf-8") as f:
+        json.dump(sitrep_history, f)
+    # --- End Log Logic ---
+
     if alert_data:
         with open("data/live_alert.json", "w", encoding="utf-8") as f:
             json.dump(alert_data, f)

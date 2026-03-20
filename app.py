@@ -1061,6 +1061,49 @@ else:
             
             check_early_warnings()
 
+            # ==========================================
+            # NEW: 24h Aggregated Geopolitical Outlook
+            # ==========================================
+            st.markdown("<h3 style='color:#00bfff; margin-top: 20px; margin-bottom: 0px;'>Semicon, rare earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
+            
+            aggregated_sitreps = []
+            if os.path.exists('data/sitrep_history.json'):
+                try:
+                    with open('data/sitrep_history.json', 'r', encoding="utf-8") as f:
+                        aggregated_sitreps = json.load(f)
+                except: pass
+            
+            total_checks = len(aggregated_sitreps)
+            elevated_events = [s for s in aggregated_sitreps if s.get('threat_level') == 'ELEVATED']
+            elevated_count = len(elevated_events)
+
+            try:
+                st.image("images/daily_outlook_visual.jpg", use_column_width=True, caption="24h Aggregated Geopolitical Synthesis: Last 12 checks visualized.")
+            except Exception as e:
+                pass
+            
+            with st.container():
+                outlook_cols = st.columns([1, 2])
+                with outlook_cols[0]:
+                    st.markdown(f"""
+                        <div style='text-align: center; background: rgba(0, 191, 255, 0.05); padding: 15px; border-radius: 8px; border: 1px solid #00bfff;'>
+                            <p style='font-size: 14px; color: #888; margin: 0;'>Aggregated 24h Checks</p>
+                            <p style='font-size: 40px; font-weight: bold; color: #00bfff; margin: 0;'>{elevated_count} <span style='font-size: 20px; color: grey;'> / {total_checks if total_checks > 0 else 12}</span></p>
+                            <p style='font-size: 14px; color: grey; margin: 0;'>Elevated Threat Events Detected</p>
+                        </div>
+                    """, unsafe_allow_html=True)
+                    
+                with outlook_cols[1]:
+                    st.markdown("<h5 style='color: grey; margin-top: 0px;'>24h SITREP Synthesis</h5>", unsafe_allow_html=True)
+                    if elevated_events:
+                        summary_text = f"Over the last {total_checks} checks (24 hours), **{elevated_count} elevated threat situations** were identified. Key developments focused on: *{', '.join([e['headline'] for e in elevated_events[:3]])}...*"
+                        render_highlighted_text(summary_text, selected_actor)
+                    else:
+                        st.info("🟢 No elevated threat events detected in the last 24 hours of standard 2h syncs.")
+                        
+            st.markdown("<br>", unsafe_allow_html=True)
+            # ==========================================
+
             if text_ews and text_ews.strip() != "":
                 st.markdown("<h5 style='color:#ff4b4b; margin-top: 0px; margin-bottom: 5px;'>🚨 Weekly EWS Synthesis</h5>", unsafe_allow_html=True)
                 render_highlighted_text(text_ews, selected_actor)
