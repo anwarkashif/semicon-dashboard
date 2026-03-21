@@ -1,1 +1,1 @@
-web: uvicorn main:app --host=0.0.0.0 --port=$PORT
+web: streamlit run app.py --server.port 8000 --server.address 0.0.0.0
