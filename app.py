@@ -6,6 +6,7 @@ import json
 import re
 import time
 import sys
+import math
 import streamlit.components.v1 as components
 from io import BytesIO
 from PIL import Image, ImageDraw
@@ -1107,7 +1108,7 @@ else:
 
             st.markdown("<hr style='border-color: #333; margin-top: 25px; margin-bottom: 0px;'>", unsafe_allow_html=True)
 
-            # --- SCV SCORE LOGIC (DYNAMIC DOUGHNUT & BAR CHART) ---
+            # --- TRUE SVG PROGRESSING WHEEL IMPLEMENTATION ---
             scv_categories = [
                 ("Global Foundry Market", text_section_1, "#00bfff"),
                 ("AI Chip Demand", text_section_2, "#ff00ff"),
@@ -1120,58 +1121,129 @@ else:
 
             active_cats = []
             for name, txt, col in scv_categories:
-                if len(txt.strip()) > 20: # Checks if the category actually has intelligence in it
-                    # Generates a dynamic score based on text density to simulate a 0-100 gauge (capped at 100)
+                if len(txt.strip()) > 20: 
+                    # Generates a dynamic score based on text density to simulate a 0-100 gauge
                     dynamic_score = min(100, max(50, int(len(txt.strip()) / 8)))
                     active_cats.append({"name": name, "score": dynamic_score, "color": col})
 
-            # Generate Doughnut Wheel (Progress Segmented)
-            fig_wheel = go.Figure(go.Pie(
-                labels=[c["name"] for c in active_cats],
-                values=[1]*len(active_cats), # Equal pie slice width for aesthetics
-                marker=dict(colors=[c["color"] for c in active_cats], line=dict(color='#000000', width=2)),
-                hole=0.75,
-                textinfo='none',
-                hoverinfo='label'
-            ))
-            
-            fig_wheel.update_layout(
-                showlegend=False,
-                margin=dict(t=10, b=10, l=10, r=10),
-                paper_bgcolor="rgba(0,0,0,0)",
-                plot_bgcolor="rgba(0,0,0,0)",
-                height=250,
-                annotations=[dict(text=f"{len(active_cats)}<br>Active", x=0.5, y=0.5, font_size=20, font_color="white", showarrow=False)]
-            )
-            
-            # Generate Horizontal Bar Graph (Score to 100)
-            fig_bar = go.Figure(go.Bar(
-                x=[c["score"] for c in active_cats],
-                y=[c["name"] for c in active_cats],
-                orientation='h',
-                marker=dict(color=[c["color"] for c in active_cats]),
-                width=0.4
-            ))
-            
-            fig_bar.update_layout(
-                xaxis=dict(range=[0, 100], showgrid=True, gridcolor='#333', title="Threat Volume (0-100)"),
-                yaxis=dict(autorange="reversed"),
-                margin=dict(t=10, b=30, l=10, r=10),
-                paper_bgcolor="rgba(0,0,0,0)",
-                plot_bgcolor="rgba(0,0,0,0)",
-                height=250
-            )
+            # SVG Calculation Functions
+            def degrees_to_radians(degrees):
+                return degrees * (math.pi / 180)
 
-            scv_cols = st.columns([1, 1.5])
+            def describe_arc(x, y, radius, start_angle, end_angle):
+                start = polar_to_cartesian(x, y, radius, end_angle)
+                end = polar_to_cartesian(x, y, radius, start_angle)
+                large_arc_flag = "0" if end_angle - start_angle <= 180 else "1"
+                return f"M {start['x']} {start['y']} A {radius} {radius} 0 {large_arc_flag} 0 {end['x']} {end['y']}"
+
+            def polar_to_cartesian(centerX, centerY, radius, angleInDegrees):
+                angleInRadians = (angleInDegrees - 90) * math.pi / 180.0
+                return {
+                    'x': centerX + (radius * math.cos(angleInRadians)),
+                    'y': centerY + (radius * math.sin(angleInRadians))
+                }
+
+            scv_cols = st.columns([1.5, 1])
+
             with scv_cols[0]:
                 st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
                 st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel</p>", unsafe_allow_html=True)
-                st.plotly_chart(fig_wheel, use_container_width=True)
+
+                if active_cats:
+                    svg_size = 450
+                    viewbox_size = 1000
+                    cx, cy = 500, 500
+                    base_radius = 280
+                    stroke_width = 70
+                    num_segments = len(active_cats)
+                    label_radii = [370, 420, 470] 
+
+                    current_time = datetime.now(timezone.utc).strftime("%H:%M")
+                    
+                    svg_content = f"""<svg width="100%" height="100%" viewBox="0 0 {viewbox_size} {viewbox_size}" xmlns="http://www.w3.org/2000/svg" style="background:transparent;">
+                      <defs>
+                        <filter id="neon_glow" x="-50%" y="-50%" width="200%" height="200%">
+                          <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                          <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                      </defs>
+                      
+                      <circle cx="{cx}" cy="{cy}" r="220" fill="#050505" stroke="#222" stroke-width="2"/>
+                    """
+                    
+                    svg_content += f"""
+                      <text x="{cx}" y="{cy-30}" text-anchor="middle" font-size="20" fill="#aaaaaa" font-family="Arial">ELEVATED</text>
+                      <text x="{cx}" y="{cy+40}" text-anchor="middle" font-size="80" fill="white" font-weight="bold" font-family="Arial">{elevated_count}</text>
+                      <text x="{cx}" y="{cy+80}" text-anchor="middle" font-size="18" fill="#aaaaaa" font-family="Courier New">UTC {current_time} sync</text>
+                    """
+
+                    angle_per_segment = 360 / num_segments
+                    gap = 4 
+
+                    for i, cat in enumerate(active_cats):
+                        start_angle = i * angle_per_segment + gap / 2
+                        end_angle = (i + 1) * angle_per_segment - gap / 2
+                        
+                        # 1. Background Arc (Empty track)
+                        arc_path_bg = describe_arc(cx, cy, base_radius, start_angle, end_angle)
+                        svg_content += f"""<path d="{arc_path_bg}" fill="none" stroke="#2a2a2a" stroke-width="{stroke_width}" stroke-linecap="butt"/>"""
+                        
+                        # 2. Progress Fill (Score)
+                        score = cat["score"]
+                        progress_end_angle = start_angle + ((end_angle - start_angle) * (score / 100))
+                        arc_path_fill = describe_arc(cx, cy, base_radius, start_angle, progress_end_angle)
+                        svg_content += f"""<path d="{arc_path_fill}" fill="none" stroke="{cat['color']}" stroke-width="{stroke_width}" stroke-linecap="butt" filter="url(#neon_glow)"/>"""
+                        
+                        # 3. Inside text
+                        mid_angle = start_angle + (end_angle - start_angle) / 2
+                        text_coords = polar_to_cartesian(cx, cy, base_radius, mid_angle)
+                        svg_content += f"""<text x="{text_coords['x']}" y="{text_coords['y']+8}" text-anchor="middle" font-size="24" fill="white" font-weight="bold" font-family="Arial">{score}%</text>"""
+                        
+                        # 4. Outside Label Rings
+                        words = cat["name"].replace(':','').replace('&','and').split(' ')
+                        for w_idx, word in enumerate(words):
+                            if w_idx < len(label_radii):
+                                r = label_radii[w_idx]
+                                needs_flip = 110 < mid_angle < 250
+                                rotation = mid_angle
+                                label_coords = polar_to_cartesian(cx, cy, r, mid_angle)
+                                text_transform = f"rotate({rotation}, {label_coords['x']}, {label_coords['y']})"
+                                if needs_flip:
+                                    text_transform += f" rotate(180, {label_coords['x']}, {label_coords['y']})"
+
+                                svg_content += f"""<text x="{label_coords['x']}" y="{label_coords['y']}" text-anchor="middle" font-size="14" fill="#dddddd" font-family="Arial" font-weight="bold" text-transform="uppercase" transform="{text_transform}">{word.strip()}</text>"""
+
+                    svg_content += "</svg>"
+                    components.html(f'<div style="width:100%; height:{svg_size}px; display:flex; justify-content:center; background:transparent;">{svg_content}</div>', height=svg_size)
+                else:
+                    st.warning("Not enough data to render the wheel.")
 
             with scv_cols[1]:
                 st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
                 st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px;'>SCV Threat Matrix (Active Domains)</p>", unsafe_allow_html=True)
-                st.plotly_chart(fig_bar, use_container_width=True)
+                
+                if active_cats:
+                    fig_bar = go.Figure(go.Bar(
+                        x=[c["score"] for c in active_cats],
+                        y=[c["name"] for c in active_cats],
+                        orientation='h',
+                        marker=dict(color=[c["color"] for c in active_cats]),
+                        width=0.4
+                    ))
+                    
+                    fig_bar.update_layout(
+                        xaxis=dict(range=[0, 100], showgrid=True, gridcolor='#333', title="Threat Volume (0-100)"),
+                        yaxis=dict(autorange="reversed"),
+                        margin=dict(t=10, b=30, l=10, r=10),
+                        paper_bgcolor="rgba(0,0,0,0)",
+                        plot_bgcolor="rgba(0,0,0,0)",
+                        height=400
+                    )
+                    st.plotly_chart(fig_bar, use_container_width=True)
 
             st.markdown("</div>", unsafe_allow_html=True)
             # ==========================================
