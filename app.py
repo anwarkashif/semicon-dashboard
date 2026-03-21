@@ -1040,10 +1040,9 @@ else:
             check_early_warnings()
 
             # ==========================================
-            # TRUE DYNAMIC PLOTLY OUTLOOK (No Static Image)
+            # TRUE DYNAMIC 3-CARD TACTICAL OUTLOOK
             # ==========================================
-            st.markdown("<h3 style='color:#00bfff; margin-top: 25px; margin-bottom: 0px;'>Semicon, rare earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
-            st.markdown("<p style='color: grey; font-size: 14px;'>24h Aggregated Geopolitical Synthesis: Last 12 checks visualized.</p>", unsafe_allow_html=True)
+            st.markdown("<h3 style='color:#00bfff; margin-top: 25px; margin-bottom: 15px;'>Semicon, rare earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
             
             aggregated_sitreps = []
             if os.path.exists('data/sitrep_history.json'):
@@ -1056,39 +1055,53 @@ else:
             elevated_events = [s for s in aggregated_sitreps if s.get('threat_level') == 'ELEVATED']
             elevated_count = len(elevated_events)
             
-            # Default to 12 if missing data for a clean donut look
             display_total = total_checks if total_checks > 0 else 12
             nominal_count = display_total - elevated_count
             
-            outlook_cols = st.columns([1, 2.5])
+            # Determine status for Card 1
+            if elevated_count > 0:
+                status_text = "ELEVATED"
+                status_color = "#ff4b4b" # Red
+            else:
+                status_text = "NOMINAL"
+                status_color = "#00ff00" # Green
+
+            # Determine Summary for Card 3
+            if elevated_events:
+                summary_text = f"Over the past 24 hours, {elevated_count} out of {display_total} automated checks flagged elevated threats. Escalations involve: {', '.join([e['headline'] for e in elevated_events[:3]])}."
+            else:
+                summary_text = "System nominal. No elevated threats detected in the past 24 hours across global semiconductor, rare earth, and AI supply chains."
+
+            card_style = "background-color: #0a0a0a; border: 1px solid #333; padding: 20px; border-radius: 8px; height: 170px; box-shadow: 0 4px 6px rgba(0,0,0,0.5);"
+            
+            outlook_cols = st.columns(3)
             
             with outlook_cols[0]:
-                fig = go.Figure(data=[go.Pie(
-                    labels=['Elevated Threat', 'Nominal'],
-                    values=[elevated_count, nominal_count],
-                    hole=.75,
-                    marker_colors=['#ff4b4b', '#00bfff'],
-                    textinfo='none',
-                    hoverinfo='label+value'
-                )])
-                fig.update_layout(
-                    showlegend=False,
-                    margin=dict(t=10, b=10, l=10, r=10),
-                    paper_bgcolor='rgba(0,0,0,0)',
-                    plot_bgcolor='rgba(0,0,0,0)',
-                    height=200,
-                    annotations=[dict(text=f"{elevated_count} / {display_total}", x=0.5, y=0.5, font_size=24, font_color="white", showarrow=False)]
-                )
-                st.plotly_chart(fig, use_container_width=True)
+                st.markdown(f"""
+                <div style="{card_style}">
+                    <p style="color: #888; font-size: 12px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Threat Velocity</p>
+                    <h2 style="color: {status_color}; font-size: 32px; font-weight: 800; margin-top: 0px; margin-bottom: 10px; letter-spacing: 1px;">{status_text}</h2>
+                    <p style="color: #666; font-size: 13px; margin: 0px; font-weight: 600;">{elevated_count} CRITICAL | {nominal_count} NOMINAL</p>
+                </div>
+                """, unsafe_allow_html=True)
                 
             with outlook_cols[1]:
-                st.markdown("<h5 style='color: #ffffff; margin-top: 15px;'>AI Geopolitical Synthesis</h5>", unsafe_allow_html=True)
-                if elevated_events:
-                    summary_text = f"Over the past 24 hours, **{elevated_count} out of {display_total} automated checks** flagged elevated geopolitical threats. Key escalations involve: *{', '.join([e['headline'] for e in elevated_events[:3]])}*. Continuous monitoring remains active."
-                    render_highlighted_text(summary_text, selected_actor)
-                else:
-                    st.info("🟢 System nominal. No elevated threats detected in the past 24 hours across global semiconductor, rare earth, and AI supply chains.")
-                    
+                st.markdown(f"""
+                <div style="{card_style}">
+                    <p style="color: #888; font-size: 12px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Active Escalations</p>
+                    <h2 style="color: #00bfff; font-size: 42px; font-weight: 800; margin-top: -5px; margin-bottom: 0px;">{elevated_count}</h2>
+                    <p style="color: #666; font-size: 13px; margin-top: 5px; font-weight: 600;">EVENTS DETECTED (24H)</p>
+                </div>
+                """, unsafe_allow_html=True)
+                
+            with outlook_cols[2]:
+                st.markdown(f"""
+                <div style="{card_style}">
+                    <p style="color: #888; font-size: 12px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">24h SITREP Synthesis</p>
+                    <p style="color: #d1d5db; font-size: 13px; line-height: 1.5; margin-top: 0px;">{summary_text}</p>
+                </div>
+                """, unsafe_allow_html=True)
+                
             st.markdown("<br>", unsafe_allow_html=True)
             # ==========================================
 
