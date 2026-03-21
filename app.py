@@ -1040,9 +1040,12 @@ else:
             check_early_warnings()
 
             # ==========================================
-            # TRUE DYNAMIC 3-CARD TACTICAL OUTLOOK
+            # TRUE DYNAMIC 3-CARD TACTICAL OUTLOOK + SCV SCORE
             # ==========================================
-            st.markdown("<h3 style='color:#00bfff; margin-top: 25px; margin-bottom: 15px;'>Semicon, rare earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
+            st.markdown("<div style='min-height: 450px;'>", unsafe_allow_html=True)
+            st.markdown("<h3 style='color:#00bfff; margin-top: 30px; margin-bottom: 20px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
+            
+            st.markdown("<div style='background-color: #050505; border: 1px solid #1a1a1a; padding: 20px; border-radius: 10px; margin-bottom: 20px;'>", unsafe_allow_html=True)
             
             aggregated_sitreps = []
             if os.path.exists('data/sitrep_history.json'):
@@ -1072,7 +1075,8 @@ else:
             else:
                 summary_text = "System nominal. No elevated threats detected in the past 24 hours across global semiconductor, rare earth, and AI supply chains."
 
-            card_style = "background-color: #0a0a0a; border: 1px solid #333; padding: 20px; border-radius: 8px; height: 170px; box-shadow: 0 4px 6px rgba(0,0,0,0.5);"
+            card_style = "background-color: #0a0a0a; border: 1px solid #333; padding: 20px; border-radius: 8px; height: 185px; box-shadow: 0 4px 6px rgba(0,0,0,0.5);"
+            card3_style = "background-color: #0a0a0a; border: 1px solid #333; padding: 20px; border-radius: 8px; height: 185px; box-shadow: 0 4px 6px rgba(0,0,0,0.5); overflow-y: auto;"
             
             outlook_cols = st.columns(3)
             
@@ -1096,13 +1100,91 @@ else:
                 
             with outlook_cols[2]:
                 st.markdown(f"""
-                <div style="{card_style}">
+                <div style="{card3_style}">
                     <p style="color: #888; font-size: 12px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">24h SITREP Synthesis</p>
                     <p style="color: #d1d5db; font-size: 13px; line-height: 1.5; margin-top: 0px;">{summary_text}</p>
                 </div>
                 """, unsafe_allow_html=True)
+
+            st.markdown("<hr style='border-color: #333; margin-top: 25px; margin-bottom: 25px;'>", unsafe_allow_html=True)
+
+            # --- SCV SCORE LOGIC ---
+            scv_categories = [
+                ("Global Foundry Market & Geopolitical Positioning", text_section_1, "#00bfff"),
+                ("AI Chip Demand, Manufacturing & Processing", text_section_2, "#ff00ff"),
+                ("Critical Minerals: Rare Earth Reserves & Supply Chains", text_section_3, "#00ff00"),
+                ("Export Controls & Geopolitical Impact", text_section_4, "#ff4b4b"),
+                ("AI, Chips and Rare Earth in Military and Outer Space Domain", text_military, "#ffd166"),
+                ("India: Domestic & Strategic Developments", text_india, "#ff8c00"),
+                ("West Asia/Middle East: Domestic & Strategic Developments", text_wa, "#9400d3")
+            ]
+
+            active_count = 0
+            wheel_labels = ["Foundry", "AI Chips", "Minerals", "Export", "Military", "India", "West Asia"]
+            wheel_values = []
+            wheel_colors = []
+
+            for i, (name, txt, col) in enumerate(scv_categories):
+                is_active = len(txt.strip()) > 20
+                if is_active:
+                    active_count += 1
+                    wheel_values.append(100) # Full bar if active
+                else:
+                    wheel_values.append(2) # Tiny sliver to maintain the visual shape of the wheel
+                wheel_colors.append(col)
+
+            vuln_level = "CRITICAL" if active_count >= 5 else ("HIGH" if active_count >= 3 else "MODERATE")
+            vuln_color = "#ff4b4b" if active_count >= 5 else ("#ff8c00" if active_count >= 3 else "#ffd166")
+
+            tension_level = "ELEVATED" if elevated_count > 0 else "NOMINAL"
+            tension_color = "#ff4b4b" if elevated_count > 0 else "#00ff00"
+
+            fig_scv = go.Figure(go.Barpolar(
+                r=wheel_values,
+                theta=wheel_labels,
+                marker_color=wheel_colors,
+                opacity=0.8,
+                width=0.8,
+                hoverinfo="text",
+                hovertext=[f"{n}<br>Status: {'Active Threat' if v > 5 else 'Nominal (Inactive)'}" for n, v in zip([x[0] for x in scv_categories], wheel_values)]
+            ))
+            fig_scv.update_layout(
+                polar=dict(
+                    radialaxis=dict(visible=False, range=[0, 100]),
+                    angularaxis=dict(tickfont=dict(color="white", size=11), direction="clockwise", gridcolor="#333")
+                ),
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                margin=dict(t=20, b=20, l=20, r=20),
+                height=300
+            )
+
+            scv_cols = st.columns([1.2, 2])
+            with scv_cols[0]:
+                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: -10px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel</p>", unsafe_allow_html=True)
+                st.plotly_chart(fig_scv, use_container_width=True)
+
+            with scv_cols[1]:
+                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;'>SCV Threat Matrix & Domains</p>", unsafe_allow_html=True)
+
+                metrics_col1, metrics_col2 = st.columns(2)
+                with metrics_col1:
+                    st.markdown(f"<div style='background-color: #111; padding: 10px; border-left: 4px solid {vuln_color}; border-radius: 4px; margin-bottom: 15px;'><p style='margin:0; font-size: 12px; color: #888;'>Vulnerability Level</p><p style='margin:0; font-size: 18px; font-weight: bold; color: {vuln_color};'>{vuln_level}</p></div>", unsafe_allow_html=True)
+                with metrics_col2:
+                    st.markdown(f"<div style='background-color: #111; padding: 10px; border-left: 4px solid {tension_color}; border-radius: 4px; margin-bottom: 15px;'><p style='margin:0; font-size: 12px; color: #888;'>Geopolitical Tension</p><p style='margin:0; font-size: 18px; font-weight: bold; color: {tension_color};'>{tension_level}</p></div>", unsafe_allow_html=True)
+
+                html_legends = "<div style='display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;'>"
+                for name, txt, col in scv_categories:
+                    is_active = len(txt.strip()) > 20
+                    opacity = "1.0" if is_active else "0.4"
+                    icon = "🔴" if is_active else "⚪"
+                    html_legends += f"<div style='font-size: 11px; color: #ddd; opacity: {opacity}; line-height: 1.3;'><span style='color: {col};'>█</span> {icon} {name}</div>"
+                html_legends += "</div>"
                 
-            st.markdown("<br>", unsafe_allow_html=True)
+                st.markdown(html_legends, unsafe_allow_html=True)
+
+            st.markdown("</div>", unsafe_allow_html=True)
+            st.markdown("</div>", unsafe_allow_html=True)
             # ==========================================
 
             if text_ews and text_ews.strip() != "":
