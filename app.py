@@ -1042,8 +1042,7 @@ else:
             # ==========================================
             # TRUE DYNAMIC 3-CARD TACTICAL OUTLOOK + SCV SCORE
             # ==========================================
-            st.markdown("<div style='min-height: 450px;'>", unsafe_allow_html=True)
-            st.markdown("<h3 style='color:#00bfff; margin-top: 30px; margin-bottom: 20px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
+            st.markdown("<h3 style='color:#00bfff; margin-top: 10px; margin-bottom: 20px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
             
             st.markdown("<div style='background-color: #050505; border: 1px solid #1a1a1a; padding: 20px; border-radius: 10px; margin-bottom: 20px;'>", unsafe_allow_html=True)
             
@@ -1106,84 +1105,74 @@ else:
                 </div>
                 """, unsafe_allow_html=True)
 
-            st.markdown("<hr style='border-color: #333; margin-top: 25px; margin-bottom: 25px;'>", unsafe_allow_html=True)
+            st.markdown("<hr style='border-color: #333; margin-top: 25px; margin-bottom: 0px;'>", unsafe_allow_html=True)
 
-            # --- SCV SCORE LOGIC ---
+            # --- SCV SCORE LOGIC (DYNAMIC DOUGHNUT & BAR CHART) ---
             scv_categories = [
-                ("Global Foundry Market & Geopolitical Positioning", text_section_1, "#00bfff"),
-                ("AI Chip Demand, Manufacturing & Processing", text_section_2, "#ff00ff"),
-                ("Critical Minerals: Rare Earth Reserves & Supply Chains", text_section_3, "#00ff00"),
-                ("Export Controls & Geopolitical Impact", text_section_4, "#ff4b4b"),
-                ("AI, Chips and Rare Earth in Military and Outer Space Domain", text_military, "#ffd166"),
-                ("India: Domestic & Strategic Developments", text_india, "#ff8c00"),
-                ("West Asia/Middle East: Domestic & Strategic Developments", text_wa, "#9400d3")
+                ("Global Foundry Market", text_section_1, "#00bfff"),
+                ("AI Chip Demand", text_section_2, "#ff00ff"),
+                ("Critical Minerals (REE)", text_section_3, "#00ff00"),
+                ("Export Controls", text_section_4, "#ff4b4b"),
+                ("Military & Outer Space", text_military, "#ffd166"),
+                ("India Developments", text_india, "#ff8c00"),
+                ("West Asia / Middle East", text_wa, "#9400d3")
             ]
 
-            active_count = 0
-            wheel_labels = ["Foundry", "AI Chips", "Minerals", "Export", "Military", "India", "West Asia"]
-            wheel_values = []
-            wheel_colors = []
+            active_cats = []
+            for name, txt, col in scv_categories:
+                if len(txt.strip()) > 20: # Checks if the category actually has intelligence in it
+                    # Generates a dynamic score based on text density to simulate a 0-100 gauge (capped at 100)
+                    dynamic_score = min(100, max(50, int(len(txt.strip()) / 8)))
+                    active_cats.append({"name": name, "score": dynamic_score, "color": col})
 
-            for i, (name, txt, col) in enumerate(scv_categories):
-                is_active = len(txt.strip()) > 20
-                if is_active:
-                    active_count += 1
-                    wheel_values.append(100) # Full bar if active
-                else:
-                    wheel_values.append(2) # Tiny sliver to maintain the visual shape of the wheel
-                wheel_colors.append(col)
-
-            vuln_level = "CRITICAL" if active_count >= 5 else ("HIGH" if active_count >= 3 else "MODERATE")
-            vuln_color = "#ff4b4b" if active_count >= 5 else ("#ff8c00" if active_count >= 3 else "#ffd166")
-
-            tension_level = "ELEVATED" if elevated_count > 0 else "NOMINAL"
-            tension_color = "#ff4b4b" if elevated_count > 0 else "#00ff00"
-
-            fig_scv = go.Figure(go.Barpolar(
-                r=wheel_values,
-                theta=wheel_labels,
-                marker_color=wheel_colors,
-                opacity=0.8,
-                width=0.8,
-                hoverinfo="text",
-                hovertext=[f"{n}<br>Status: {'Active Threat' if v > 5 else 'Nominal (Inactive)'}" for n, v in zip([x[0] for x in scv_categories], wheel_values)]
+            # Generate Doughnut Wheel (Progress Segmented)
+            fig_wheel = go.Figure(go.Pie(
+                labels=[c["name"] for c in active_cats],
+                values=[1]*len(active_cats), # Equal pie slice width for aesthetics
+                marker=dict(colors=[c["color"] for c in active_cats], line=dict(color='#000000', width=2)),
+                hole=0.75,
+                textinfo='none',
+                hoverinfo='label'
             ))
-            fig_scv.update_layout(
-                polar=dict(
-                    radialaxis=dict(visible=False, range=[0, 100]),
-                    angularaxis=dict(tickfont=dict(color="white", size=11), direction="clockwise", gridcolor="#333")
-                ),
+            
+            fig_wheel.update_layout(
+                showlegend=False,
+                margin=dict(t=10, b=10, l=10, r=10),
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(0,0,0,0)",
-                margin=dict(t=20, b=20, l=20, r=20),
-                height=300
+                height=250,
+                annotations=[dict(text=f"{len(active_cats)}<br>Active", x=0.5, y=0.5, font_size=20, font_color="white", showarrow=False)]
+            )
+            
+            # Generate Horizontal Bar Graph (Score to 100)
+            fig_bar = go.Figure(go.Bar(
+                x=[c["score"] for c in active_cats],
+                y=[c["name"] for c in active_cats],
+                orientation='h',
+                marker=dict(color=[c["color"] for c in active_cats]),
+                width=0.4
+            ))
+            
+            fig_bar.update_layout(
+                xaxis=dict(range=[0, 100], showgrid=True, gridcolor='#333', title="Threat Volume (0-100)"),
+                yaxis=dict(autorange="reversed"),
+                margin=dict(t=10, b=30, l=10, r=10),
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                height=250
             )
 
-            scv_cols = st.columns([1.2, 2])
+            scv_cols = st.columns([1, 1.5])
             with scv_cols[0]:
-                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: -10px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel</p>", unsafe_allow_html=True)
-                st.plotly_chart(fig_scv, use_container_width=True)
+                st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
+                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel</p>", unsafe_allow_html=True)
+                st.plotly_chart(fig_wheel, use_container_width=True)
 
             with scv_cols[1]:
-                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;'>SCV Threat Matrix & Domains</p>", unsafe_allow_html=True)
+                st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
+                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px;'>SCV Threat Matrix (Active Domains)</p>", unsafe_allow_html=True)
+                st.plotly_chart(fig_bar, use_container_width=True)
 
-                metrics_col1, metrics_col2 = st.columns(2)
-                with metrics_col1:
-                    st.markdown(f"<div style='background-color: #111; padding: 10px; border-left: 4px solid {vuln_color}; border-radius: 4px; margin-bottom: 15px;'><p style='margin:0; font-size: 12px; color: #888;'>Vulnerability Level</p><p style='margin:0; font-size: 18px; font-weight: bold; color: {vuln_color};'>{vuln_level}</p></div>", unsafe_allow_html=True)
-                with metrics_col2:
-                    st.markdown(f"<div style='background-color: #111; padding: 10px; border-left: 4px solid {tension_color}; border-radius: 4px; margin-bottom: 15px;'><p style='margin:0; font-size: 12px; color: #888;'>Geopolitical Tension</p><p style='margin:0; font-size: 18px; font-weight: bold; color: {tension_color};'>{tension_level}</p></div>", unsafe_allow_html=True)
-
-                html_legends = "<div style='display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;'>"
-                for name, txt, col in scv_categories:
-                    is_active = len(txt.strip()) > 20
-                    opacity = "1.0" if is_active else "0.4"
-                    icon = "🔴" if is_active else "⚪"
-                    html_legends += f"<div style='font-size: 11px; color: #ddd; opacity: {opacity}; line-height: 1.3;'><span style='color: {col};'>█</span> {icon} {name}</div>"
-                html_legends += "</div>"
-                
-                st.markdown(html_legends, unsafe_allow_html=True)
-
-            st.markdown("</div>", unsafe_allow_html=True)
             st.markdown("</div>", unsafe_allow_html=True)
             # ==========================================
 
