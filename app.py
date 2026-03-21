@@ -1040,75 +1040,7 @@ else:
             
             check_early_warnings()
 
-            # ==========================================
-            # TRUE DYNAMIC 3-CARD TACTICAL OUTLOOK + SCV SCORE
-            # ==========================================
-            st.markdown("<h3 style='color:#00bfff; margin-top: 10px; margin-bottom: 20px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
-            
-            st.markdown("<div style='background-color: #050505; border: 1px solid #1a1a1a; padding: 20px; border-radius: 10px; margin-bottom: 20px;'>", unsafe_allow_html=True)
-            
-            aggregated_sitreps = []
-            if os.path.exists('data/sitrep_history.json'):
-                try:
-                    with open('data/sitrep_history.json', 'r', encoding="utf-8") as f:
-                        aggregated_sitreps = json.load(f)
-                except: pass
-            
-            total_checks = len(aggregated_sitreps)
-            elevated_events = [s for s in aggregated_sitreps if s.get('threat_level') == 'ELEVATED']
-            elevated_count = len(elevated_events)
-            
-            display_total = total_checks if total_checks > 0 else 12
-            nominal_count = display_total - elevated_count
-            
-            # Determine status for Card 1
-            if elevated_count > 0:
-                status_text = "ELEVATED"
-                status_color = "#ff4b4b" # Red
-            else:
-                status_text = "NOMINAL"
-                status_color = "#00ff00" # Green
-
-            # Determine Summary for Card 3
-            if elevated_events:
-                summary_text = f"Over the past 24 hours, {elevated_count} out of {display_total} automated checks flagged elevated threats. Escalations involve: {', '.join([e['headline'] for e in elevated_events[:3]])}."
-            else:
-                summary_text = "System nominal. No elevated threats detected in the past 24 hours across global semiconductor, rare earth, and AI supply chains."
-
-            card_style = "background-color: #0a0a0a; border: 1px solid #333; padding: 20px; border-radius: 8px; height: 185px; box-shadow: 0 4px 6px rgba(0,0,0,0.5);"
-            card3_style = "background-color: #0a0a0a; border: 1px solid #333; padding: 20px; border-radius: 8px; height: 185px; box-shadow: 0 4px 6px rgba(0,0,0,0.5); overflow-y: auto;"
-            
-            outlook_cols = st.columns(3)
-            
-            with outlook_cols[0]:
-                st.markdown(f"""
-                <div style="{card_style}">
-                    <p style="color: #888; font-size: 12px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Threat Velocity</p>
-                    <h2 style="color: {status_color}; font-size: 32px; font-weight: 800; margin-top: 0px; margin-bottom: 10px; letter-spacing: 1px;">{status_text}</h2>
-                    <p style="color: #666; font-size: 13px; margin: 0px; font-weight: 600;">{elevated_count} CRITICAL | {nominal_count} NOMINAL</p>
-                </div>
-                """, unsafe_allow_html=True)
-                
-            with outlook_cols[1]:
-                st.markdown(f"""
-                <div style="{card_style}">
-                    <p style="color: #888; font-size: 12px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Active Escalations</p>
-                    <h2 style="color: #00bfff; font-size: 42px; font-weight: 800; margin-top: -5px; margin-bottom: 0px;">{elevated_count}</h2>
-                    <p style="color: #666; font-size: 13px; margin-top: 5px; font-weight: 600;">EVENTS DETECTED (24H)</p>
-                </div>
-                """, unsafe_allow_html=True)
-                
-            with outlook_cols[2]:
-                st.markdown(f"""
-                <div style="{card3_style}">
-                    <p style="color: #888; font-size: 12px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">24h SITREP Synthesis</p>
-                    <p style="color: #d1d5db; font-size: 13px; line-height: 1.5; margin-top: 0px;">{summary_text}</p>
-                </div>
-                """, unsafe_allow_html=True)
-
-            st.markdown("<hr style='border-color: #333; margin-top: 25px; margin-bottom: 0px;'>", unsafe_allow_html=True)
-
-            # --- TRUE SVG PROGRESSING WHEEL IMPLEMENTATION ---
+           # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
             scv_categories = [
                 ("Global Foundry Market", text_section_1, "#00bfff"),
                 ("AI Chip Demand", text_section_2, "#ff00ff"),
@@ -1121,110 +1053,89 @@ else:
 
             active_cats = []
             for name, txt, col in scv_categories:
-                if len(txt.strip()) > 20: 
+                if len(txt.strip()) > 20:
                     # Generates a dynamic score based on text density to simulate a 0-100 gauge
                     dynamic_score = min(100, max(50, int(len(txt.strip()) / 8)))
                     active_cats.append({"name": name, "score": dynamic_score, "color": col})
 
-            # SVG Calculation Functions
-            def degrees_to_radians(degrees):
-                return degrees * (math.pi / 180)
+            # Sort categories by score descending for better visual stacking in the rings
+            active_cats = sorted(active_cats, key=lambda x: x["score"], reverse=True)
 
-            def describe_arc(x, y, radius, start_angle, end_angle):
-                start = polar_to_cartesian(x, y, radius, end_angle)
-                end = polar_to_cartesian(x, y, radius, start_angle)
-                large_arc_flag = "0" if end_angle - start_angle <= 180 else "1"
-                return f"M {start['x']} {start['y']} A {radius} {radius} 0 {large_arc_flag} 0 {end['x']} {end['y']}"
-
-            def polar_to_cartesian(centerX, centerY, radius, angleInDegrees):
-                angleInRadians = (angleInDegrees - 90) * math.pi / 180.0
-                return {
-                    'x': centerX + (radius * math.cos(angleInRadians)),
-                    'y': centerY + (radius * math.sin(angleInRadians))
-                }
-
-            scv_cols = st.columns([1.5, 1])
+            scv_cols = st.columns([1.2, 1])
 
             with scv_cols[0]:
-                st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
+                st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
                 st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel</p>", unsafe_allow_html=True)
 
                 if active_cats:
-                    svg_size = 450
-                    viewbox_size = 1000
-                    cx, cy = 500, 500
-                    base_radius = 280
-                    stroke_width = 70
-                    num_segments = len(active_cats)
-                    label_radii = [370, 420, 470] 
-
-                    current_time = datetime.now(timezone.utc).strftime("%H:%M")
-                    
-                    svg_content = f"""<svg width="100%" height="100%" viewBox="0 0 {viewbox_size} {viewbox_size}" xmlns="http://www.w3.org/2000/svg" style="background:transparent;">
-                      <defs>
-                        <filter id="neon_glow" x="-50%" y="-50%" width="200%" height="200%">
-                          <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-                          <feMerge>
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                          </feMerge>
-                        </filter>
-                      </defs>
-                      
-                      <circle cx="{cx}" cy="{cy}" r="220" fill="#050505" stroke="#222" stroke-width="2"/>
-                    """
-                    
-                    svg_content += f"""
-                      <text x="{cx}" y="{cy-30}" text-anchor="middle" font-size="20" fill="#aaaaaa" font-family="Arial">ELEVATED</text>
-                      <text x="{cx}" y="{cy+40}" text-anchor="middle" font-size="80" fill="white" font-weight="bold" font-family="Arial">{elevated_count}</text>
-                      <text x="{cx}" y="{cy+80}" text-anchor="middle" font-size="18" fill="#aaaaaa" font-family="Courier New">UTC {current_time} sync</text>
-                    """
-
-                    angle_per_segment = 360 / num_segments
-                    gap = 4 
-
+                    fig = go.Figure()
                     for i, cat in enumerate(active_cats):
-                        start_angle = i * angle_per_segment + gap / 2
-                        end_angle = (i + 1) * angle_per_segment - gap / 2
-                        
-                        # 1. Background Arc (Empty track)
-                        arc_path_bg = describe_arc(cx, cy, base_radius, start_angle, end_angle)
-                        svg_content += f"""<path d="{arc_path_bg}" fill="none" stroke="#2a2a2a" stroke-width="{stroke_width}" stroke-linecap="butt"/>"""
-                        
-                        # 2. Progress Fill (Score)
-                        score = cat["score"]
-                        progress_end_angle = start_angle + ((end_angle - start_angle) * (score / 100))
-                        arc_path_fill = describe_arc(cx, cy, base_radius, start_angle, progress_end_angle)
-                        svg_content += f"""<path d="{arc_path_fill}" fill="none" stroke="{cat['color']}" stroke-width="{stroke_width}" stroke-linecap="butt" filter="url(#neon_glow)"/>"""
-                        
-                        # 3. Inside text
-                        mid_angle = start_angle + (end_angle - start_angle) / 2
-                        text_coords = polar_to_cartesian(cx, cy, base_radius, mid_angle)
-                        svg_content += f"""<text x="{text_coords['x']}" y="{text_coords['y']+8}" text-anchor="middle" font-size="24" fill="white" font-weight="bold" font-family="Arial">{score}%</text>"""
-                        
-                        # 4. Outside Label Rings
-                        words = cat["name"].replace(':','').replace('&','and').split(' ')
-                        for w_idx, word in enumerate(words):
-                            if w_idx < len(label_radii):
-                                r = label_radii[w_idx]
-                                needs_flip = 110 < mid_angle < 250
-                                rotation = mid_angle
-                                label_coords = polar_to_cartesian(cx, cy, r, mid_angle)
-                                text_transform = f"rotate({rotation}, {label_coords['x']}, {label_coords['y']})"
-                                if needs_flip:
-                                    text_transform += f" rotate(180, {label_coords['x']}, {label_coords['y']})"
+                        val = cat["score"]
+                        color = cat["color"]
+                        fig.add_trace(go.Pie(
+                            values=[val, 100 - val],
+                            radius=1 - (i * 0.12), # Scales down radius for each consecutive ring
+                            hole=0.75,
+                            marker_colors=[color, "#1f2937"],
+                            textinfo='none',
+                            sort=False,
+                            direction='clockwise',
+                            hoverinfo='text',
+                            hovertext=[f"{cat['name']}: {val}%", ""]
+                        ))
 
-                                svg_content += f"""<text x="{label_coords['x']}" y="{label_coords['y']}" text-anchor="middle" font-size="14" fill="#dddddd" font-family="Arial" font-weight="bold" text-transform="uppercase" transform="{text_transform}">{word.strip()}</text>"""
+                    overall_score = int(sum(c["score"] for c in active_cats) / len(active_cats)) if active_cats else 0
 
-                    svg_content += "</svg>"
-                    components.html(f'<div style="width:100%; height:{svg_size}px; display:flex; justify-content:center; background:transparent;">{svg_content}</div>', height=svg_size)
+                    fig.update_layout(
+                        showlegend=False,
+                        paper_bgcolor='rgba(0,0,0,0)',
+                        plot_bgcolor='rgba(0,0,0,0)',
+                        margin=dict(t=20, b=20, l=20, r=20),
+                        height=400,
+                        annotations=[dict(
+                            text=f"<b style='font-size:42px; color:white;'>{overall_score}</b><br><span style='color:#aaaaaa; font-size:12px; font-weight:bold;'>AVG SCV SCORE</span>",
+                            x=0.5, y=0.5,
+                            showarrow=False
+                        )]
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                    
+                    # Custom Sub-legend
+                    legend_html = "<div style='display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:-30px; margin-bottom:20px;'>"
+                    for cat in active_cats:
+                        legend_html += f"<div style='font-size:10px; font-weight:bold; color:#a3a3a3;'><span style='color:{cat['color']};'>●</span> {cat['name'].upper()}</div>"
+                    legend_html += "</div>"
+                    st.markdown(legend_html, unsafe_allow_html=True)
                 else:
                     st.warning("Not enough data to render the wheel.")
 
             with scv_cols[1]:
-                st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
-                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px;'>SCV Threat Matrix (Active Domains)</p>", unsafe_allow_html=True)
+                st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
+                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;'>SCV Threat Matrix (Active Domains)</p>", unsafe_allow_html=True)
+                
+                if active_cats:
+                    for cat in active_cats:
+                        label = cat["name"].upper()
+                        value = cat["score"]
+                        color = cat["color"]
+                        
+                        # High-end HTML/CSS Progress Bars
+                        st.markdown(f"""
+                        <div style="margin-bottom: 15px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <span style="font-size: 12px; font-weight: 600; color: #d1d5db; letter-spacing: 0.5px;">{label}</span>
+                                <span style="font-size: 13px; font-weight: bold; color: {color};">{value}%</span>
+                            </div>
+                            <div style="width: 100%; background-color: #1f2937; border-radius: 4px; height: 6px;">
+                                <div style="width: {value}%; background-color: {color}; height: 6px; border-radius: 4px; box-shadow: 0 0 8px {color}80;"></div>
+                            </div>
+                        </div>
+                        """, unsafe_allow_html=True)
+                else:
+                    st.info("No domain data available to calculate threat matrix.")
+                    
+            st.markdown("</div>", unsafe_allow_html=True)
+            # ==========================================
                 
                 if active_cats:
                     fig_bar = go.Figure(go.Bar(
