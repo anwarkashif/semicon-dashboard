@@ -1073,9 +1073,9 @@ else:
                         val = cat["score"]
                         color = cat["color"]
                         fig.add_trace(go.Pie(
-                            values=[val, 100 - val],
-                            radius=1 - (i * 0.12), # Scales down radius for each consecutive ring
-                            hole=0.75,
+                        values=[val, 100 - val],
+                        domain=dict(x=[i * 0.06, 1 - (i * 0.06)], y=[i * 0.06, 1 - (i * 0.06)]), # Correctly scales consecutive rings
+                        hole=0.75,
                             marker_colors=[color, "#1f2937"],
                             textinfo='none',
                             sort=False,
