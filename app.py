@@ -1040,7 +1040,7 @@ else:
             
             check_early_warnings()
 
-           # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
+            # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
             scv_categories = [
                 ("Global Foundry Market", text_section_1, "#00bfff"),
                 ("AI Chip Demand", text_section_2, "#ff00ff"),
@@ -1137,24 +1137,24 @@ else:
             st.markdown("</div>", unsafe_allow_html=True)
             # ==========================================
                 
-                if active_cats:
-                    fig_bar = go.Figure(go.Bar(
-                        x=[c["score"] for c in active_cats],
-                        y=[c["name"] for c in active_cats],
-                        orientation='h',
-                        marker=dict(color=[c["color"] for c in active_cats]),
-                        width=0.4
-                    ))
-                    
-                    fig_bar.update_layout(
-                        xaxis=dict(range=[0, 100], showgrid=True, gridcolor='#333', title="Threat Volume (0-100)"),
-                        yaxis=dict(autorange="reversed"),
-                        margin=dict(t=10, b=30, l=10, r=10),
-                        paper_bgcolor="rgba(0,0,0,0)",
-                        plot_bgcolor="rgba(0,0,0,0)",
-                        height=400
-                    )
-                    st.plotly_chart(fig_bar, use_container_width=True)
+            if active_cats:
+                fig_bar = go.Figure(go.Bar(
+                    x=[c["score"] for c in active_cats],
+                    y=[c["name"] for c in active_cats],
+                    orientation='h',
+                    marker=dict(color=[c["color"] for c in active_cats]),
+                    width=0.4
+                ))
+                
+                fig_bar.update_layout(
+                    xaxis=dict(range=[0, 100], showgrid=True, gridcolor='#333', title="Threat Volume (0-100)"),
+                    yaxis=dict(autorange="reversed"),
+                    margin=dict(t=10, b=30, l=10, r=10),
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    height=400
+                )
+                st.plotly_chart(fig_bar, use_container_width=True)
 
             st.markdown("</div>", unsafe_allow_html=True)
             # ==========================================
