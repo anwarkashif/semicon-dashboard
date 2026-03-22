@@ -1041,6 +1041,8 @@ else:
             check_early_warnings()
 
             # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
+            st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 30px; margin-bottom: 10px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
+
             scv_categories = [
                 ("Global Foundry Market", text_section_1, "#00bfff"),
                 ("AI Chip Demand", text_section_2, "#ff00ff"),
@@ -1133,31 +1135,18 @@ else:
                         """, unsafe_allow_html=True)
                 else:
                     st.info("No domain data available to calculate threat matrix.")
-                    
-            st.markdown("</div>", unsafe_allow_html=True)
+            
             # ==========================================
-                
-            if active_cats:
-                fig_bar = go.Figure(go.Bar(
-                    x=[c["score"] for c in active_cats],
-                    y=[c["name"] for c in active_cats],
-                    orientation='h',
-                    marker=dict(color=[c["color"] for c in active_cats]),
-                    width=0.4
-                ))
-                
-                fig_bar.update_layout(
-                    xaxis=dict(range=[0, 100], showgrid=True, gridcolor='#333', title="Threat Volume (0-100)"),
-                    yaxis=dict(autorange="reversed"),
-                    margin=dict(t=10, b=30, l=10, r=10),
-                    paper_bgcolor="rgba(0,0,0,0)",
-                    plot_bgcolor="rgba(0,0,0,0)",
-                    height=400
-                )
-                st.plotly_chart(fig_bar, use_container_width=True)
-
-            st.markdown("</div>", unsafe_allow_html=True)
+            # AI GEOPOLITICAL SYNTHESIS
             # ==========================================
+            st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px; margin-bottom: 10px;'>AI Geopolitical Synthesis</p>", unsafe_allow_html=True)
+            if text_summary and text_summary.strip() != "":
+                with st.container(height=160):
+                    render_highlighted_text(text_summary, selected_actor)
+            else:
+                st.info("No synthesis data available.")
+                
+            st.markdown("---")
 
             if text_ews and text_ews.strip() != "":
                 st.markdown("<h5 style='color:#ff4b4b; margin-top: 0px; margin-bottom: 5px;'>🚨 Weekly EWS Synthesis</h5>", unsafe_allow_html=True)
@@ -1190,9 +1179,6 @@ else:
                                         </div>
                                     """, unsafe_allow_html=True)
                     st.markdown("---")
-
-                st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Executive Summary</h3>", unsafe_allow_html=True)
-                if text_summary: render_highlighted_text(text_summary, selected_actor)
                 
                 st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Global Foundry Market & Geopolitical Positioning</h3>", unsafe_allow_html=True)
                 if text_section_1: render_highlighted_text(text_section_1, selected_actor)
