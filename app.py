@@ -1071,25 +1071,38 @@ else:
 
                 if active_cats:
                     fig = go.Figure()
+
+                    # --- CONTROL PARAMETERS ---
+                    base_hole = 0.50      # inner empty space
+                    ring_width = 0.05     # thickness of each ring
+                    gap = 0.05            # spacing between rings
+
                     for i, cat in enumerate(active_cats):
                         val = cat["score"]
                         color = cat["color"]
+
+                        # Dynamic hole calculation
+                        hole_size = base_hole + i * (ring_width + gap)
+
                         fig.add_trace(go.Pie(
-                        values=[val, 100 - val],
-                        domain=dict(x=[i * 0.06, 1 - (i * 0.06)], y=[i * 0.06, 1 - (i * 0.06)]), # Correctly scales consecutive rings
-                        hole=0.75,
-                            marker_colors=[color, "#1f2937"],
+                            values=[val, 100 - val],
+                            hole=hole_size,
+                            domain=dict(x=[0, 1], y=[0, 1]),  # IMPORTANT: keeps the wheel from shrinking
+                            marker=dict(
+                                colors=[color, "black"],     # black creates the visual gap
+                                line=dict(width=2, color="black")
+                            ),
                             textinfo='none',
                             sort=False,
                             direction='clockwise',
                             hoverinfo='text',
-                            hovertext=[f"{cat['name']}: {val}%", ""]
+                            hovertext=[f"{cat['name']}: {val}%", ""],
+                            showlegend=False
                         ))
 
                     overall_score = int(sum(c["score"] for c in active_cats) / len(active_cats)) if active_cats else 0
 
                     fig.update_layout(
-                        showlegend=False,
                         paper_bgcolor='rgba(0,0,0,0)',
                         plot_bgcolor='rgba(0,0,0,0)',
                         margin=dict(t=20, b=20, l=20, r=20),
@@ -1100,6 +1113,7 @@ else:
                             showarrow=False
                         )]
                     )
+
                     st.plotly_chart(fig, use_container_width=True)
                     
                     # Custom Sub-legend
