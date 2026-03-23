@@ -1065,7 +1065,7 @@ else:
 
             scv_cols = st.columns([1.2, 1])
 
-with scv_cols[0]:
+            with scv_cols[0]:
                 st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
                 st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel</p>", unsafe_allow_html=True)
 
@@ -1141,15 +1141,6 @@ with scv_cols[0]:
                     )
 
                     st.plotly_chart(fig, use_container_width=True)
-                    
-                    # Custom Sub-legend
-                    legend_html = "<div style='display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:-30px; margin-bottom:20px;'>"
-                    for cat in active_cats:
-                        legend_html += f"<div style='font-size:10px; font-weight:bold; color:#a3a3a3;'><span style='color:{cat['color']};'>●</span> {cat['name'].upper()}</div>"
-                    legend_html += "</div>"
-                    st.markdown(legend_html, unsafe_allow_html=True)
-                else:
-                    st.warning("Not enough data to render the wheel.")
                     
                     # Custom Sub-legend
                     legend_html = "<div style='display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:-30px; margin-bottom:20px;'>"
