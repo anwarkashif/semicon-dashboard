@@ -1073,30 +1073,42 @@ else:
                     fig = go.Figure()
 
                     # --- CONTROL PARAMETERS ---
-                    base_hole = 0.25      # inner empty space
-                    ring_width = 0.04     # thickness of each ring
-                    gap = 0.06            # spacing between rings
+                    base_hole = 0.35      # Keeps the center open
+                    ring_width = 0.015    # ULTRA-NARROW colored rings
+                    gap = 0.075           # MASSIVE black spacing between rings
 
                     for i, cat in enumerate(active_cats):
                         val = cat["score"]
                         color = cat["color"]
 
-                        # Dynamic hole calculation
-                        hole_size = base_hole + i * (ring_width + gap)
-
+                        # 1. Draw the actual data ring
+                        data_hole = base_hole + i * (ring_width + gap)
                         fig.add_trace(go.Pie(
                             values=[val, 100 - val],
-                            hole=hole_size,
-                            domain=dict(x=[0, 1], y=[0, 1]),  # IMPORTANT: keeps the wheel from shrinking
+                            hole=data_hole,
+                            domain=dict(x=[0, 1], y=[0, 1]),
                             marker=dict(
-                                colors=[color, "black"],     # black creates the visual gap
-                                line=dict(width=2, color="black")
+                                colors=[color, "black"], 
+                                line=dict(width=0) # Removed lines for a flat, digital look
                             ),
                             textinfo='none',
                             sort=False,
                             direction='clockwise',
                             hoverinfo='text',
                             hovertext=[f"{cat['name']}: {val}%", ""],
+                            showlegend=False
+                        ))
+
+                        # 2. Inject a pure black "spacer" ring to force the gap
+                        gap_hole = data_hole + ring_width
+                        fig.add_trace(go.Pie(
+                            values=[100], 
+                            hole=gap_hole,
+                            domain=dict(x=[0, 1], y=[0, 1]),
+                            marker=dict(colors=["#000000"], line=dict(width=0)), 
+                            textinfo='none',
+                            sort=False,
+                            hoverinfo='none',
                             showlegend=False
                         ))
 
