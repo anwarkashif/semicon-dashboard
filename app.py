@@ -977,28 +977,60 @@ else:
 
             with st.chat_message("assistant"):
                 message_placeholder = st.empty()
-                message_placeholder.markdown("Scanning intelligence archives... 🕵️‍♂️")
+                message_placeholder.markdown("Scanning intelligence archives & calculating threat models... 🕵️‍♂️")
 
                 archive_mapping = get_brief_mappings('data')
                 context_data = ""
+                
+                # --- RAG 2.0 CONTEXT BUILDER ---
                 for f_path in list(archive_mapping.values())[:10]:
                     try:
                         with open(f_path, 'r') as file:
                             d = json.load(file)
+                            r_text = d.get('brief_raw', '')
+                            
+                            # Re-extract categories purely to feed the algorithm for the LLM context
+                            categories = [
+                                ("Global Foundry Market", extract_tag('EXEC', r_text) or ""),
+                                ("AI Chip Demand", extract_tag('LITHO', r_text) or ""),
+                                ("Critical Minerals (REE)", extract_tag('REE', r_text) or ""),
+                                ("Export Controls", extract_tag('GEO', r_text) or ""),
+                                ("Military & Outer Space", extract_tag('MILITARY', r_text) or ""),
+                                ("India Developments", extract_tag('INDIA', r_text) or ""),
+                                ("West Asia / Middle East", extract_tag('WEST_ASIA', r_text) or "")
+                            ]
+                            
                             context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
-                            context_data += d.get('brief_raw', '')
-                            context_data += f"\nState Actions: {json.dumps(d.get('recent_actions', []))}"
+                            context_data += "ALGORITHMIC THREAT SCORES (0-100% Volatility):\n"
+                            
+                            for name, txt in categories:
+                                if len(txt.strip()) > 20:
+                                    # We run the algorithm and explicitly write the score into the LLM's brain
+                                    score = calculate_domain_threat(name, txt, d)
+                                    context_data += f"- {name}: {score}%\n"
+                                    
+                            context_data += "\nRAW INTELLIGENCE TEXT:\n"
+                            context_data += r_text
+                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', []))}"
                     except: pass
 
+                # --- RAG 2.0 SYSTEM PROMPT ---
                 sys_prompt = f"""
                 You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
                 Your primary directive is to answer the user's question using ONLY the provided historical intelligence archives below.
+                
+                CRITICAL RAG 2.0 DIRECTIVE: You now have access to the "Algorithmic Threat Scores" (0-100%) calculated for each domain.
+                - Scores > 60% indicate High Volatility/Threat environments.
+                - Scores < 40% indicate standard baseline risk.
+                When analyzing threats, vulnerabilities, or risks, explicitly cite these Algorithmic Threat Scores to ground your reasoning in the quantitative data model.
+                
                 If the answer is not present in the context, explicitly state: "I cannot find this information in the vetted intelligence archives."
                 Format your responses in a structured, highly analytical style. Use structured comparative tables if you are summarizing multiple actors, dates, or data points. Do NOT invent or hallucinate external information.
                 
                 ARCHIVES CONTEXT:
                 {context_data}
                 """
+                
                 try:
                     response = client.models.generate_content(
                         model=model_name,
