@@ -1073,9 +1073,9 @@ else:
                     fig = go.Figure()
 
                     # --- CONTROL PARAMETERS ---
-                    base_hole = 0.50      # inner empty space
-                    ring_width = 0.05     # thickness of each ring
-                    gap = 0.08            # spacing between rings
+                    base_hole = 0.25      # inner empty space
+                    ring_width = 0.04     # thickness of each ring
+                    gap = 0.06            # spacing between rings
 
                     for i, cat in enumerate(active_cats):
                         val = cat["score"]
