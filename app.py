@@ -1148,8 +1148,6 @@ with scv_cols[0]:
                         legend_html += f"<div style='font-size:10px; font-weight:bold; color:#a3a3a3;'><span style='color:{cat['color']};'>●</span> {cat['name'].upper()}</div>"
                     legend_html += "</div>"
                     st.markdown(legend_html, unsafe_allow_html=True)
-                
-                # Notice how "else" is pushed back to align with the "if"
                 else:
                     st.warning("Not enough data to render the wheel.")
                     
