@@ -1065,7 +1065,7 @@ else:
 
             scv_cols = st.columns([1.2, 1])
 
-            with scv_cols[0]:
+with scv_cols[0]:
                 st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
                 st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel</p>", unsafe_allow_html=True)
 
@@ -1088,8 +1088,8 @@ else:
                             hole=data_hole,
                             domain=dict(x=[0, 1], y=[0, 1]),
                             marker=dict(
-                                colors=[color, "black"], 
-                                line=dict(width=0) # Removed lines for a flat, digital look
+                                colors=[color, "#000000"], # Explicit pitch black hex
+                                line=dict(width=0) 
                             ),
                             textinfo='none',
                             sort=False,
@@ -1105,12 +1105,26 @@ else:
                             values=[100], 
                             hole=gap_hole,
                             domain=dict(x=[0, 1], y=[0, 1]),
-                            marker=dict(colors=["#000000"], line=dict(width=0)), 
+                            marker=dict(
+                                colors=["#000000"], 
+                                line=dict(width=2, color="#000000") # Black stroke covers inner bleed
+                            ), 
                             textinfo='none',
                             sort=False,
                             hoverinfo='none',
                             showlegend=False
                         ))
+                    
+                    # 3. THE EDGE ERASER: A final boundary mask to swallow the 1px SVG artifact at the edge
+                    fig.add_trace(go.Pie(
+                        values=[100],
+                        hole=0.98,
+                        domain=dict(x=[0, 1], y=[0, 1]),
+                        marker=dict(colors=["#000000"], line=dict(width=4, color="#000000")),
+                        textinfo='none',
+                        hoverinfo='none',
+                        showlegend=False
+                    ))
 
                     overall_score = int(sum(c["score"] for c in active_cats) / len(active_cats)) if active_cats else 0
 
@@ -1127,6 +1141,15 @@ else:
                     )
 
                     st.plotly_chart(fig, use_container_width=True)
+                    
+                    # Custom Sub-legend
+                    legend_html = "<div style='display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:-30px; margin-bottom:20px;'>"
+                    for cat in active_cats:
+                        legend_html += f"<div style='font-size:10px; font-weight:bold; color:#a3a3a3;'><span style='color:{cat['color']};'>●</span> {cat['name'].upper()}</div>"
+                    legend_html += "</div>"
+                    st.markdown(legend_html, unsafe_allow_html=True)
+                else:
+                    st.warning("Not enough data to render the wheel.")
                     
                     # Custom Sub-legend
                     legend_html = "<div style='display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:-30px; margin-bottom:20px;'>"
