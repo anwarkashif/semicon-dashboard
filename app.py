@@ -1088,7 +1088,7 @@ with scv_cols[0]:
                             hole=data_hole,
                             domain=dict(x=[0, 1], y=[0, 1]),
                             marker=dict(
-                                colors=[color, "#000000"], # Explicit pitch black hex
+                                colors=[color, "#000000"],
                                 line=dict(width=0) 
                             ),
                             textinfo='none',
@@ -1107,7 +1107,7 @@ with scv_cols[0]:
                             domain=dict(x=[0, 1], y=[0, 1]),
                             marker=dict(
                                 colors=["#000000"], 
-                                line=dict(width=2, color="#000000") # Black stroke covers inner bleed
+                                line=dict(width=2, color="#000000")
                             ), 
                             textinfo='none',
                             sort=False,
@@ -1115,7 +1115,7 @@ with scv_cols[0]:
                             showlegend=False
                         ))
                     
-                    # 3. THE EDGE ERASER: A final boundary mask to swallow the 1px SVG artifact at the edge
+                    # 3. THE EDGE ERASER: Hides the faint outer boundary line
                     fig.add_trace(go.Pie(
                         values=[100],
                         hole=0.98,
