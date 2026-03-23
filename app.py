@@ -586,6 +586,50 @@ else:
     text_summary = text_ews = text_section_1 = text_section_2 = text_section_3 = text_section_4 = text_military = text_section_5 = text_india = text_wa = text_final = "Awaiting deployment of new intelligence brief."
     dashboard_data = {"supply_chain_risk": [{"Risk Factor": "No data"}], "recent_actions": [], "funding_data": [{"Entity": "No data"}], "market_impact": [{"Entity": "No data"}]}
 
+# ==========================================
+# NEW ALGORITHMIC THREAT SCORING FUNCTION
+# ==========================================
+def calculate_domain_threat(domain_name, text_content, dash_data):
+    """
+    Dynamically calculates a threat score (0-100) based on textual severity 
+    and cross-referencing json data (risks & actions) without hardcoding values.
+    """
+    if not text_content or len(text_content.strip()) < 20:
+        return 0
+    
+    # 1. Base systemic risk (the industry is always inherently volatile)
+    score = 35 
+
+    # 2. Textual Intelligence Analysis (Keyword Severity)
+    text_lower = text_content.lower()
+    critical_keywords = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
+    high_keywords = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension', 'export control', 'embargo', 'risk']
+    medium_keywords = ['delay', 'subsidy', 'compete', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'concern', 'geopolitical']
+
+    score += sum(text_lower.count(kw) for kw in critical_keywords) * 8
+    score += sum(text_lower.count(kw) for kw in high_keywords) * 5
+    score += sum(text_lower.count(kw) for kw in medium_keywords) * 2
+
+    domain_parts = [p.lower() for p in domain_name.replace(" / ", " ").split() if len(p) > 3]
+
+    # 3. Hard Data Cross-Reference (Supply Chain Risks)
+    risks = dash_data.get('supply_chain_risk', [])
+    for risk in risks:
+        risk_text = str(risk).lower()
+        if any(part in risk_text for part in domain_parts):
+            score += 10 # Add 10 points for every logged risk that specifically overlaps with this domain
+    
+    # 4. Hard Data Cross-Reference (Recent Actions)
+    actions = dash_data.get('recent_actions', [])
+    for action in actions:
+        action_text = str(action).lower()
+        if any(part in action_text for part in domain_parts):
+            score += 5 # Add 5 points for every logged state action that overlaps with this domain
+
+    # Cap at 100%, Floor at 20% so active domains always show on the visual wheel
+    return min(100, max(20, score))
+
+
 # --- NEW CENTRALIZED LIVE ALERT FETCH FUNCTION ---
 def get_active_live_alert():
     if not os.path.exists('data/live_alert.json'): 
@@ -1056,8 +1100,8 @@ else:
             active_cats = []
             for name, txt, col in scv_categories:
                 if len(txt.strip()) > 20:
-                    # Generates a dynamic score based on text density to simulate a 0-100 gauge
-                    dynamic_score = min(100, max(50, int(len(txt.strip()) / 8)))
+                    # IMPLEMENTS NEW ALGORITHMIC SCORING FUNCTION
+                    dynamic_score = calculate_domain_threat(name, txt, dashboard_data)
                     active_cats.append({"name": name, "score": dynamic_score, "color": col})
 
             # Sort categories by score descending for better visual stacking in the rings
