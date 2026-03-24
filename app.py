@@ -982,14 +982,33 @@ else:
                 archive_mapping = get_brief_mappings('data')
                 context_data = ""
                 
-                # --- RAG 2.0 CONTEXT BUILDER ---
-                for f_path in list(archive_mapping.values())[:10]:
+                # --- RAG 2.0 CONTEXT BUILDER (OPTIMIZED FOR SPEED & ACCURACY) ---
+                user_keywords = [w.lower() for w in re.findall(r'\b\w+\b', prompt) if len(w) > 2 and w.lower() not in ['what', 'when', 'where', 'which', 'who', 'why', 'how', 'were', 'was', 'this', 'that', 'with', 'from', 'about', 'the', 'and', 'for', 'are', 'did', 'have', 'has']]
+
+                file_scores = []
+                for f_path in archive_mapping.values():
+                    try:
+                        with open(f_path, 'r') as file:
+                            d = json.load(file)
+                            content = d.get('brief_raw', '').lower() + json.dumps(d.get('recent_actions', [])).lower()
+                            score = sum(content.count(kw) for kw in user_keywords)
+                            file_scores.append((score, f_path))
+                    except: pass
+
+                # Sort files by relevance score
+                file_scores.sort(key=lambda x: x[0], reverse=True)
+
+                # Pick top 3 most relevant files, fallback to latest 2 if no keywords match
+                top_files = [fs[1] for fs in file_scores if fs[0] > 0][:3]
+                if not top_files:
+                    top_files = list(archive_mapping.values())[:2]
+                
+                for f_path in top_files:
                     try:
                         with open(f_path, 'r') as file:
                             d = json.load(file)
                             r_text = d.get('brief_raw', '')
                             
-                            # Re-extract categories purely to feed the algorithm for the LLM context
                             categories = [
                                 ("Global Foundry Market", extract_tag('EXEC', r_text) or ""),
                                 ("AI Chip Demand", extract_tag('LITHO', r_text) or ""),
@@ -1001,11 +1020,10 @@ else:
                             ]
                             
                             context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
-                            context_data += "ALGORITHMIC THREAT SCORES (0-100% Volatility):\n"
+                            context_data += "ALGORITHMIC THREAT SCORES:\n"
                             
                             for name, txt in categories:
                                 if len(txt.strip()) > 20:
-                                    # We run the algorithm and explicitly write the score into the LLM's brain
                                     score = calculate_domain_threat(name, txt, d)
                                     context_data += f"- {name}: {score}%\n"
                                     
@@ -1296,6 +1314,10 @@ else:
                                     """, unsafe_allow_html=True)
                     st.markdown("---")
                 
+                # RE-INSERTED EXECUTIVE SUMMARY SECTION
+                st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Executive Summary</h3>", unsafe_allow_html=True)
+                if text_summary: render_highlighted_text(text_summary, selected_actor)
+
                 st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Global Foundry Market & Geopolitical Positioning</h3>", unsafe_allow_html=True)
                 if text_section_1: render_highlighted_text(text_section_1, selected_actor)
                 
