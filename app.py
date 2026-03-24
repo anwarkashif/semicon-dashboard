@@ -1050,15 +1050,23 @@ else:
                 """
                 
                 try:
-                    response = client.models.generate_content(
+                    full_response = ""
+                    # We use generate_content_stream instead of generate_content
+                    response = client.models.generate_content_stream(
                         model=model_name,
                         contents=[sys_prompt, prompt]
                     )
-                    full_response = response.text
+                    # Stream the chunks live to the UI to prevent server timeouts
+                    for chunk in response:
+                        if chunk.text:
+                            full_response += chunk.text
+                            message_placeholder.markdown(full_response + "▌") # Adds a cool typing cursor
+                            
+                    # Remove the cursor when finished
+                    message_placeholder.markdown(full_response)
                 except Exception as e:
                     full_response = f"⚠️ Error querying the intelligence database: {e}"
-
-                message_placeholder.markdown(full_response)
+                    message_placeholder.markdown(full_response)
             st.session_state.rag_messages.append({"role": "assistant", "content": full_response})
             
         st.stop() 
