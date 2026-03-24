@@ -147,14 +147,23 @@ INFRASTRUCTURE_DATA = {
     ]
 }
 
-# --- PURE PITCH BLACK CSS FIXES ---
+# --- PURE PITCH BLACK CSS FIXES & MOBILE RESPONSIVENESS ---
 st.markdown("""
 <style>
     /* Force main app background to pure black */
-    .stApp, .stApp > header, .stAppViewContainer, .main .block-container { 
+    .stApp, .stAppViewContainer, .main .block-container { 
         background-color: #000000 !important; 
     }
-    header[data-testid="stHeader"] { display: none !important; }
+    
+    /* Ensure Header is transparent so Mobile Hamburger remains visible on black */
+    header[data-testid="stHeader"] { 
+        background-color: transparent !important; 
+    }
+    /* Force Hamburger icon to be white */
+    [data-testid="collapsedControl"] svg { 
+        color: #ffffff !important; 
+    }
+    
     .block-container { padding-top: 1rem !important; margin-top: 0rem !important; }
     [data-testid="stSidebar"] > div:first-child { padding-top: 0rem !important; }
     [data-testid="stSidebar"] { background-color: #000000 !important; border-right: 1px solid #222222 !important; } 
@@ -597,10 +606,8 @@ def calculate_domain_threat(domain_name, text_content, dash_data):
     if not text_content or len(text_content.strip()) < 20:
         return 0
     
-    # 1. Base systemic risk (the industry is always inherently volatile)
     score = 35 
 
-    # 2. Textual Intelligence Analysis (Keyword Severity)
     text_lower = text_content.lower()
     critical_keywords = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
     high_keywords = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension', 'export control', 'embargo', 'risk']
@@ -612,21 +619,18 @@ def calculate_domain_threat(domain_name, text_content, dash_data):
 
     domain_parts = [p.lower() for p in domain_name.replace(" / ", " ").split() if len(p) > 3]
 
-    # 3. Hard Data Cross-Reference (Supply Chain Risks)
     risks = dash_data.get('supply_chain_risk', [])
     for risk in risks:
         risk_text = str(risk).lower()
         if any(part in risk_text for part in domain_parts):
-            score += 10 # Add 10 points for every logged risk that specifically overlaps with this domain
+            score += 10 
     
-    # 4. Hard Data Cross-Reference (Recent Actions)
     actions = dash_data.get('recent_actions', [])
     for action in actions:
         action_text = str(action).lower()
         if any(part in action_text for part in domain_parts):
-            score += 5 # Add 5 points for every logged state action that overlaps with this domain
+            score += 5 
 
-    # Cap at 100%, Floor at 20% so active domains always show on the visual wheel
     return min(100, max(20, score))
 
 
@@ -670,6 +674,7 @@ def check_early_warnings():
             except:
                 start_timestamp_ms = int(time.time() * 1000)
             
+            # --- RESPONSIVE DEFCON CSS FIX ---
             html_code = f"""
             <style>
                 body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -682,7 +687,8 @@ def check_early_warnings():
                     border-radius: 8px; 
                     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
                     color: #ffffff;
-                    height: 185px;
+                    min-height: 185px;
+                    height: auto;
                     box-sizing: border-box;
                     overflow-y: auto; 
                 }}
@@ -700,8 +706,17 @@ def check_early_warnings():
                 
                 @keyframes pulseBackground {{ 0% {{ background-position: 0% 50%; }} 50% {{ background-position: 100% 50%; }} 100% {{ background-position: 0% 50%; }} }}
                 @keyframes blinkText {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
-                .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-top: 0px; margin-bottom: 8px; }}
-                .title {{ font-size: 1.17em; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin:0; display:flex; align-items:center; }}
+                
+                /* Responsive Flex Wrap Fix */
+                .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-top: 0px; margin-bottom: 8px; flex-wrap: wrap; gap: 10px; }}
+                .title {{ font-size: 1.17em; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin:0; display:flex; align-items:center; flex: 1 1 100%; }}
+                .timer-container {{ display: flex; align-items: center; flex: 1 1 100%; justify-content: flex-start; margin-bottom: 5px; }}
+                
+                @media (min-width: 600px) {{
+                    .title {{ flex: 1; }}
+                    .timer-container {{ flex: 1; justify-content: flex-end; margin-bottom: 0px; }}
+                }}
+                
                 .timer {{ font-size: 15px; font-weight: bold; background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; border: 1px solid rgba(255,255,255,0.4); }}
                 .headline {{ font-weight: 800; font-size: 16px; margin-bottom: 8px; margin-top:0; }}
                 .summary {{ font-size: 14px; color: #f8f8f8; margin-bottom: 0px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 10px; }}
@@ -718,7 +733,7 @@ def check_early_warnings():
                     <h3 class="title">
                         <span style="animation: blinkText 1s infinite; margin-right: 15px;">⚠️ DEFCON-LEVEL THREAT</span> 
                     </h3>
-                    <div style="display: flex; align-items: center;">
+                    <div class="timer-container">
                         <div class="timer">Live Since: <span id="clock">00:00:00</span></div>
                         <button class="magnify-btn" onclick="toggleFullscreen()">🔍 MAGNIFY</button>
                     </div>
@@ -748,7 +763,8 @@ def check_early_warnings():
                 setInterval(update, 1000); update();
             </script>
             """
-            components.html(html_code, height=185) 
+            # Height increased slightly to prevent scrolling inside the iframe when elements stack on mobile
+            components.html(html_code, height=260) 
             
         else:
             try:
@@ -761,11 +777,12 @@ def check_early_warnings():
                 
             start_timestamp_ms = int(latest_time * 1000)
 
+            # --- RESPONSIVE NOMINAL CSS FIX ---
             html_code = f"""
             <style>
                 body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
-                .nominal-box {{ background-color: rgba(0, 191, 255, 0.05); border-left: 5px solid #00bfff; padding: 15px; border-radius: 5px; }}
-                .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }}
+                .nominal-box {{ background-color: rgba(0, 191, 255, 0.05); border-left: 5px solid #00bfff; padding: 15px; border-radius: 5px; min-height: 90px; height: auto; }}
+                .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }}
                 .title {{ color: #00bfff; margin: 0; font-size: 1.1em; font-weight: bold; display: flex; align-items: center; }}
                 .timer {{ font-size: 13px; font-weight: bold; color: #00bfff; background: rgba(0, 191, 255, 0.1); padding: 5px 10px; border-radius: 4px; border: 1px solid rgba(0, 191, 255, 0.3); font-family: monospace; }}
                 .desc {{ font-size: 14px; margin: 0; color: {nominal_text_color}; }}
@@ -791,7 +808,7 @@ def check_early_warnings():
                 setInterval(update, 1000); update();
             </script>
             """
-            components.html(html_code, height=90)
+            components.html(html_code, height=130)
     except Exception as e:
         pass 
 
@@ -801,13 +818,17 @@ def check_early_warnings():
 if 'role' not in st.session_state: st.session_state['role'] = None
 
 if st.session_state['role'] is None:
-    st.markdown("""<style>[data-testid="collapsedControl"], [data-testid="stSidebar"] { display: none; } .stButton > button { width: 100%; font-weight: bold; margin-top: 5px; } .block-container { padding-top: 2rem !important; }</style>""", unsafe_allow_html=True)
-    col1, outer_col, col3 = st.columns([1, 2.2, 1]) 
+    # --- LOGIN MOBILE CSS FIX ---
+    # We remove the hardcoded display:none for sidebar here so it aligns globally
+    st.markdown("""<style>[data-testid="collapsedControl"] { display: none !important; } [data-testid="stSidebar"] { display: none !important; } .stButton > button { width: 100%; font-weight: bold; margin-top: 5px; } .block-container { padding-top: 2rem !important; }</style>""", unsafe_allow_html=True)
+    
+    # We use a 1:8:1 ratio. This prevents the severe "Zoom Out" squeezing effect on mobile devices 
+    col1, outer_col, col3 = st.columns([1, 8, 1]) 
     with outer_col:
         logo_left, logo_center, logo_right = st.columns([1, 1, 1])
         with logo_center: st.image("logo.jpg", use_container_width=True) 
-        st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: -15px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center; color: #888; font-weight: bold; letter-spacing: 2px; font-size: 12px; margin-bottom: 5px;'>SYSTEM ACCESS</p>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: 0px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center; color: #888; font-weight: bold; letter-spacing: 2px; font-size: 12px; margin-bottom: 15px;'>SYSTEM ACCESS</p>", unsafe_allow_html=True)
         
         with st.form("login_form"):
             AUTHORIZED_EMAIL = "anwarkashif@outlook.com"   
@@ -830,7 +851,8 @@ if st.session_state['role'] is None:
 # MAIN DASHBOARD 
 # ==========================================
 else:
-    st.markdown("""<style>[data-testid="collapsedControl"], [data-testid="stSidebar"] { display: block; }</style>""", unsafe_allow_html=True)
+    # --- MOBILE SIDEBAR RESTORE FIX ---
+    st.markdown("""<style>[data-testid="collapsedControl"] { display: block !important; } [data-testid="stSidebar"] { display: block !important; }</style>""", unsafe_allow_html=True)
 
     st.sidebar.image("logo.jpg", use_container_width=True)
     st.sidebar.markdown("""
