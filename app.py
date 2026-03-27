@@ -164,7 +164,25 @@ st.markdown("""
         color: #ffffff !important; 
     }
     
-    .block-container { padding-top: 1rem !important; margin-top: 0rem !important; }
+    /* NEW: Hide the Streamlit Running/Stop execution indicator */
+    [data-testid="stStatusWidget"] {
+        display: none !important;
+    }
+
+    /* NEW: Automatically handle iOS Notches and Android Punch Holes */
+    .block-container {
+        padding-top: max(1rem, env(safe-area-inset-top)) !important;
+        padding-left: max(1rem, env(safe-area-inset-left)) !important;
+        padding-right: max(1rem, env(safe-area-inset-right)) !important;
+        margin-top: 0rem !important;
+    }
+
+    /* NEW: Make text adapt to small mobile screens (under 768px wide) */
+    @media (max-width: 768px) {
+        [data-testid="stMetricValue"] { font-size: 1.4rem !important; }
+        h3 { font-size: 18px !important; }
+    }
+    
     [data-testid="stSidebar"] > div:first-child { padding-top: 0rem !important; }
     [data-testid="stSidebar"] { background-color: #000000 !important; border-right: 1px solid #222222 !important; } 
     [data-testid="stMetricValue"] { font-size: 1.8rem !important; font-weight: bold !important; color: #ffffff !important; }
