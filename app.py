@@ -836,34 +836,118 @@ def check_early_warnings():
 if 'role' not in st.session_state: st.session_state['role'] = None
 
 if st.session_state['role'] is None:
-    # --- LOGIN MOBILE CSS FIX ---
-    # We remove the hardcoded display:none for sidebar here so it aligns globally
-    st.markdown("""<style>[data-testid="collapsedControl"] { display: none !important; } [data-testid="stSidebar"] { display: none !important; } .stButton > button { width: 100%; font-weight: bold; margin-top: 5px; } .block-container { padding-top: 2rem !important; }</style>""", unsafe_allow_html=True)
-    
-    # We use a 1:8:1 ratio. This prevents the severe "Zoom Out" squeezing effect on mobile devices 
-    col1, outer_col, col3 = st.columns([1, 8, 1]) 
-    with outer_col:
-        logo_left, logo_center, logo_right = st.columns([1, 1, 1])
-        with logo_center: st.image("logo.jpg", use_container_width=True) 
-        st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: 0px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center; color: #888; font-weight: bold; letter-spacing: 2px; font-size: 12px; margin-bottom: 15px;'>SYSTEM ACCESS</p>", unsafe_allow_html=True)
+    # --- ADVANCED RESPONSIVE DEVICE DETECTION CSS (METHOD 2) ---
+    st.markdown("""
+    <style>
+        /* Hide sidebar/header completely on login */
+        [data-testid="collapsedControl"] { display: none !important; }
+        [data-testid="stSidebar"] { display: none !important; }
+        .block-container { padding-top: 2rem !important; }
         
-        with st.form("login_form"):
-            AUTHORIZED_EMAIL = "anwarkashif@outlook.com"   
-            AUTHORIZED_PASSWORD = "NeverEstimateTheRahmat0fAllahSWT"   
-            email_input = st.text_input("EMAIL ID", placeholder="analyst@agency.gov")
-            password_input = st.text_input("PASSWORD", type="password", placeholder="Enter Secure Key")
-            submit_login = st.form_submit_button("LOGIN", type="primary")
+        /* Standardize all buttons */
+        .stButton > button { width: 100%; font-weight: bold; margin-top: 5px; }
 
-            if submit_login:
-                if email_input == AUTHORIZED_EMAIL and password_input == AUTHORIZED_PASSWORD:
+        /* ----------------------------------------------------
+           THE ILLUSION: CSS Column Toggling
+           Column 1 = MOBILE UI
+           Column 2 = DESKTOP UI
+           ---------------------------------------------------- */
+        
+        /* MOBILE LAYOUT */
+        @media (max-width: 768px) {
+            [data-testid="column"]:nth-of-type(1) { display: block !important; width: 100% !important; }
+            [data-testid="column"]:nth-of-type(2) { display: none !important; }
+        }
+
+        /* DESKTOP LAYOUT */
+        @media (min-width: 769px) {
+            [data-testid="column"]:nth-of-type(1) { display: none !important; }
+            [data-testid="column"]:nth-of-type(2) { display: block !important; width: 45% !important; margin: 0 auto !important; }
+            
+            /* Center the block on desktop */
+            div[data-testid="stHorizontalBlock"] { justify-content: center !important; }
+        }
+        
+        /* DESKTOP LOGO ANCHOR (Top Left) */
+        .desktop-logo-anchored {
+            position: absolute;
+            top: -50px;
+            left: -20px;
+            width: 90px;
+            z-index: 9999;
+            border-radius: 5px;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # We create exactly two parent columns for the CSS to target
+    col_mobile, col_desktop = st.columns(2)
+
+    # ==========================================
+    # 1. MOBILE LOGIN SETUP
+    # ==========================================
+    with col_mobile:
+        # Prevent extreme zoom-out by adding sub-columns
+        m_spacer1, m_content, m_spacer3 = st.columns([1, 8, 1])
+        with m_content:
+            # Small logo center
+            logo_left, logo_center, logo_right = st.columns([1, 1, 1])
+            with logo_center: 
+                st.image("logo.jpg", use_container_width=True) 
+            
+            # Title without "SYSTEM ACCESS"
+            st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: 25px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
+            
+            with st.form("mobile_login_form"):
+                email_input_m = st.text_input("EMAIL ID", placeholder="analyst@agency.gov", key="m_email")
+                password_input_m = st.text_input("PASSWORD", type="password", placeholder="Enter Secure Key", key="m_pass")
+                submit_login_m = st.form_submit_button("LOGIN", type="primary")
+
+                if submit_login_m:
+                    if email_input_m == "anwarkashif@outlook.com" and password_input_m == "NeverEstimateTheRahmat0fAllahSWT":
+                        st.session_state['role'] = 'admin'
+                        st.rerun()
+                    else: 
+                        st.error("Incorrect Email ID or Password.")
+            
+            # View as guest directly below
+            if st.button("VIEW AS GUEST", key="m_guest", type="secondary"):
+                st.session_state['role'] = 'guest'
+                st.rerun()
+
+    # ==========================================
+    # 2. DESKTOP / IPAD LOGIN SETUP
+    # ==========================================
+    with col_desktop:
+        # Top-Left Logo using Base64 so it renders perfectly anchored on Desktop
+        import base64
+        try:
+            with open("logo.jpg", "rb") as image_file:
+                encoded_string = base64.b64encode(image_file.read()).decode()
+                st.markdown(f'<img src="data:image/jpeg;base64,{encoded_string}" class="desktop-logo-anchored">', unsafe_allow_html=True)
+        except:
+            pass # Failsafe if logo is missing
+
+        st.markdown("<div style='margin-top: 15vh;'></div>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: left; margin-bottom: 30px; font-size: 38px;'>SEMICON DASHBOARD</h1>", unsafe_allow_html=True)
+        
+        with st.form("desktop_login_form"):
+            email_input_d = st.text_input("EMAIL ID", placeholder="analyst@agency.gov", key="d_email")
+            password_input_d = st.text_input("PASSWORD", type="password", placeholder="Enter Secure Key", key="d_pass")
+            submit_login_d = st.form_submit_button("LOGIN", type="primary")
+
+            if submit_login_d:
+                if email_input_d == "anwarkashif@outlook.com" and password_input_d == "NeverEstimateTheRahmat0fAllahSWT":
                     st.session_state['role'] = 'admin'
                     st.rerun()
-                else: st.error("Incorrect Email ID or Password.")
-                
-        if st.button("VIEW AS GUEST", type="secondary"):
+                else: 
+                    st.error("Incorrect Email ID or Password.")
+        
+        # View as guest instead of "Not a member"
+        if st.button("VIEW AS GUEST", key="d_guest", type="secondary"):
             st.session_state['role'] = 'guest'
             st.rerun()
+
 
 # ==========================================
 # MAIN DASHBOARD 
