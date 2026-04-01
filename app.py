@@ -24,6 +24,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.opc.constants import RELATIONSHIP_TYPE
 
+# --- App Configuration ---
 st.set_page_config(page_title="SemicoN Dashboard", page_icon="logo.jpg", layout="wide", initial_sidebar_state="expanded")
 
 MAINTENANCE_MODE = False
@@ -44,6 +45,7 @@ os.makedirs('data', exist_ok=True)
 os.makedirs('trash', exist_ok=True)
 
 # ==========================================
+# Consider moving this to an environment variable in the future: os.environ.get("MAPBOX_TOKEN")
 MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
 # ==========================================
 
@@ -781,7 +783,6 @@ def check_early_warnings():
                 setInterval(update, 1000); update();
             </script>
             """
-            # Height increased slightly to prevent scrolling inside the iframe when elements stack on mobile
             components.html(html_code, height=260) 
             
         else:
@@ -887,15 +888,12 @@ if st.session_state['role'] is None:
     # 1. MOBILE LOGIN SETUP
     # ==========================================
     with col_mobile:
-        # Prevent extreme zoom-out by adding sub-columns
         m_spacer1, m_content, m_spacer3 = st.columns([1, 8, 1])
         with m_content:
-            # Small logo center
             logo_left, logo_center, logo_right = st.columns([1, 1, 1])
             with logo_center: 
                 st.image("logo.jpg", use_container_width=True) 
             
-            # Title without "SYSTEM ACCESS"
             st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: 25px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
             
             with st.form("mobile_login_form"):
@@ -910,7 +908,6 @@ if st.session_state['role'] is None:
                     else: 
                         st.error("Incorrect Email ID or Password.")
             
-            # View as guest directly below
             if st.button("VIEW AS GUEST", key="m_guest", type="secondary"):
                 st.session_state['role'] = 'guest'
                 st.rerun()
@@ -919,14 +916,13 @@ if st.session_state['role'] is None:
     # 2. DESKTOP / IPAD LOGIN SETUP
     # ==========================================
     with col_desktop:
-        # Top-Left Logo using Base64 so it renders perfectly anchored on Desktop
         import base64
         try:
             with open("logo.jpg", "rb") as image_file:
                 encoded_string = base64.b64encode(image_file.read()).decode()
                 st.markdown(f'<img src="data:image/jpeg;base64,{encoded_string}" class="desktop-logo-anchored">', unsafe_allow_html=True)
         except:
-            pass # Failsafe if logo is missing
+            pass 
 
         st.markdown("<div style='margin-top: 15vh;'></div>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: left; margin-bottom: 30px; font-size: 38px;'>SEMICON DASHBOARD</h1>", unsafe_allow_html=True)
@@ -943,11 +939,9 @@ if st.session_state['role'] is None:
                 else: 
                     st.error("Incorrect Email ID or Password.")
         
-        # View as guest instead of "Not a member"
         if st.button("VIEW AS GUEST", key="d_guest", type="secondary"):
             st.session_state['role'] = 'guest'
             st.rerun()
-
 
 # ==========================================
 # MAIN DASHBOARD 
@@ -1175,18 +1169,15 @@ else:
                 
                 try:
                     full_response = ""
-                    # We use generate_content_stream instead of generate_content
                     response = client.models.generate_content_stream(
                         model=model_name,
                         contents=[sys_prompt, prompt]
                     )
-                    # Stream the chunks live to the UI to prevent server timeouts
                     for chunk in response:
                         if chunk.text:
                             full_response += chunk.text
-                            message_placeholder.markdown(full_response + "▌") # Adds a cool typing cursor
+                            message_placeholder.markdown(full_response + "▌") 
                             
-                    # Remove the cursor when finished
                     message_placeholder.markdown(full_response)
                 except Exception as e:
                     full_response = f"⚠️ Error querying the intelligence database: {e}"
@@ -1282,11 +1273,9 @@ else:
             active_cats = []
             for name, txt, col in scv_categories:
                 if len(txt.strip()) > 20:
-                    # IMPLEMENTS NEW ALGORITHMIC SCORING FUNCTION
                     dynamic_score = calculate_domain_threat(name, txt, dashboard_data)
                     active_cats.append({"name": name, "score": dynamic_score, "color": col})
 
-            # Sort categories by score descending for better visual stacking in the rings
             active_cats = sorted(active_cats, key=lambda x: x["score"], reverse=True)
 
             scv_cols = st.columns([1.2, 1])
@@ -1298,16 +1287,14 @@ else:
                 if active_cats:
                     fig = go.Figure()
 
-                    # --- CONTROL PARAMETERS ---
-                    base_hole = 0.35      # Keeps the center open
-                    ring_width = 0.015    # ULTRA-NARROW colored rings
-                    gap = 0.075           # MASSIVE black spacing between rings
+                    base_hole = 0.35      
+                    ring_width = 0.015    
+                    gap = 0.075           
 
                     for i, cat in enumerate(active_cats):
                         val = cat["score"]
                         color = cat["color"]
 
-                        # 1. Draw the actual data ring
                         data_hole = base_hole + i * (ring_width + gap)
                         fig.add_trace(go.Pie(
                             values=[val, 100 - val],
@@ -1325,7 +1312,6 @@ else:
                             showlegend=False
                         ))
 
-                        # 2. Inject a pure black "spacer" ring to force the gap
                         gap_hole = data_hole + ring_width
                         fig.add_trace(go.Pie(
                             values=[100], 
@@ -1341,7 +1327,6 @@ else:
                             showlegend=False
                         ))
                     
-                    # 3. THE EDGE ERASER: Hides the faint outer boundary line
                     fig.add_trace(go.Pie(
                         values=[100],
                         hole=0.98,
@@ -1368,7 +1353,6 @@ else:
 
                     st.plotly_chart(fig, use_container_width=True)
                     
-                    # Custom Sub-legend
                     legend_html = "<div style='display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:-30px; margin-bottom:20px;'>"
                     for cat in active_cats:
                         legend_html += f"<div style='font-size:10px; font-weight:bold; color:#a3a3a3;'><span style='color:{cat['color']};'>●</span> {cat['name'].upper()}</div>"
@@ -1387,7 +1371,6 @@ else:
                         value = cat["score"]
                         color = cat["color"]
                         
-                        # High-end HTML/CSS Progress Bars
                         st.markdown(f"""
                         <div style="margin-bottom: 15px;">
                             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
@@ -1446,7 +1429,6 @@ else:
                                     """, unsafe_allow_html=True)
                     st.markdown("---")
                 
-                # RE-INSERTED EXECUTIVE SUMMARY SECTION
                 st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Executive Summary</h3>", unsafe_allow_html=True)
                 if text_summary: render_highlighted_text(text_summary, selected_actor)
 
