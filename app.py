@@ -886,15 +886,20 @@ if st.session_state['role'] is None:
             justify-content: center !important;
         }
 
-        /* Center the Logo globally and ensure it takes full width for flex to work */
-        [data-testid="stImage"] {
-            width: 100% !important;
+        /* ---> HIGHLIGHT: LOGO CENTERING CSS ADJUSTMENT <--- */
+        /* Aggressively target all layers of Streamlit's image wrapper to force centering */
+        div[data-testid="element-container"]:has(div[data-testid="stImage"]),
+        div[data-testid="stImage"], 
+        div[data-testid="stImage"] > div {
             display: flex !important;
             justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important;
             margin-bottom: 0px !important;
         }
-        [data-testid="stImage"] > img {
-            margin: 0 auto !important; /* Hard-centers the image inside its wrapper */
+        div[data-testid="stImage"] img {
+            margin: 0 auto !important;
+            display: block !important;
         }
 
         /* Style the login button */
@@ -938,9 +943,11 @@ if st.session_state['role'] is None:
     """, unsafe_allow_html=True)
 
     # --- RIGHT PANEL CONTENT (Streamlit native) ---
-    # Logo explicitly sized to 160px and centered via CSS
+    
+    # ---> HIGHLIGHT: LOGO SIZE ADJUSTMENT <---
+    # Logo explicitly sized to 240px and placed directly above the text.
     try:
-        st.image("logo.jpg", width=160)
+        st.image("logo.jpg", width=240)
     except:
         pass
         
