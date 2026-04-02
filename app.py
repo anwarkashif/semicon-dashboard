@@ -837,34 +837,65 @@ def check_early_warnings():
 if 'role' not in st.session_state: st.session_state['role'] = None
 
 if st.session_state['role'] is None:
-    # --- BULLETPROOF RESPONSIVE SPLIT-SCREEN CSS ---
+    # --- TRUE FULL-SCREEN SPLIT CSS ---
     st.markdown("""
     <style>
-        /* Hide default Streamlit navigation */
-        [data-testid="collapsedControl"], [data-testid="stSidebar"], header { display: none !important; }
-        
-        /* Widen the container for the split view on desktop */
+        /* Remove ALL Streamlit width constraints */
         .block-container {
-            padding-top: 5vh !important;
-            max-width: 1100px !important;
+            max-width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
         }
 
-        /* Left Panel Styling */
-        .left-panel-wrapper {
-            background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
-            padding: 40px;
-            border-radius: 12px;
-            color: white;
-            height: 100%;
-            min-height: 480px;
+        /* Kill header/sidebar */
+        header, [data-testid="stSidebar"], [data-testid="collapsedControl"] {
+            display: none !important;
+        }
+
+        /* Make main app full height and prevent scrolling on login */
+        html, body, .stApp {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Force full-width horizontal layout */
+        [data-testid="stHorizontalBlock"] {
+            display: flex !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            margin: 0 !important;
+            gap: 0 !important;
+        }
+
+        /* Each column = exact 50% */
+        [data-testid="stColumn"] {
+            flex: 0 0 50% !important;
+            max-width: 50% !important;
+            height: 100vh !important;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        .left-panel-wrapper h1 { font-size: 2.8rem; font-weight: 300; line-height: 1.2; margin-bottom: 10px; }
+
+        /* LEFT PANEL */
+        .left-panel-wrapper {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
+            color: white;
+            margin: 0;
+        }
+        .left-panel-wrapper h1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; margin-bottom: 10px; }
         .left-panel-wrapper span { font-weight: 700; color: #facc15; }
-        .left-panel-wrapper p { color: #94a3b8; font-size: 1.1rem; }
+        .left-panel-wrapper p { color: #94a3b8; font-size: 1.2rem; margin-top: 10px; }
+
+        /* RIGHT PANEL ALIGNMENT */
+        [data-testid="stColumn"]:nth-child(2) {
+            padding: 0 10% !important; /* Squeezes the form inwards for better desktop aesthetics */
+        }
 
         /* Style the login button to match the yellow theme */
         .stButton>button[kind="primary"] { 
@@ -879,41 +910,37 @@ if st.session_state['role'] is None:
         .stButton>button[kind="primary"]:hover { background-color: #eab308; color: black; }
         .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
 
-        /* --- DESKTOP RULES: FORCE 50/50 SIDE-BY-SIDE --- */
-        @media screen and (min-width: 901px) {
-            [data-testid="stHorizontalBlock"] {
-                flex-wrap: nowrap !important; /* Absolutely prevents columns from stacking vertically */
-                align-items: center !important; /* Vertically centers the right column */
-            }
-            [data-testid="stColumn"] {
-                width: 50% !important;
-                min-width: 50% !important;
-            }
-            [data-testid="stColumn"]:nth-child(2) {
-                padding-left: 3rem !important; /* Breathing room between panels */
-            }
-        }
-
-        /* --- MOBILE RULES: ZOOM IN AND HIDE LEFT PANEL --- */
+        /* MOBILE FIX */
         @media screen and (max-width: 900px) {
-            div[data-testid="stColumn"]:nth-child(1) {
+            html, body, .stApp { overflow: auto; } /* Allow scrolling on mobile */
+            
+            [data-testid="stHorizontalBlock"] {
+                flex-direction: column !important;
+                height: auto !important;
+            }
+
+            [data-testid="stColumn"] {
+                max-width: 100% !important;
+                flex: 100% !important;
+                height: auto !important;
+            }
+
+            /* Hide left panel */
+            [data-testid="stColumn"]:nth-child(1) {
                 display: none !important;
             }
-            /* Remove width restrictions to zoom in the form on mobile */
-            .block-container { 
-                max-width: 100% !important; 
-                padding: 1.5rem !important; 
-                padding-top: 5vh !important; 
-            }
-            .left-panel-wrapper {
-                display: none !important;
+
+            /* Adjust right panel padding for mobile */
+            [data-testid="stColumn"]:nth-child(2) {
+                padding: 20px 8% !important;
+                margin-top: 10vh !important;
             }
         }
     </style>
     """, unsafe_allow_html=True)
 
     # Use native Streamlit columns
-    col_left, col_right = st.columns(2, gap="large")
+    col_left, col_right = st.columns(2)
 
     with col_left:
         # The visual gradient panel
@@ -925,8 +952,8 @@ if st.session_state['role'] is None:
         """, unsafe_allow_html=True)
 
     with col_right:
-        # Centering a MUCH LARGER logo natively so it stays crisp
-        logo_col1, logo_col2, logo_col3 = st.columns([1, 1.5, 1])
+        # Centering a larger logo natively
+        logo_col1, logo_col2, logo_col3 = st.columns([1, 1.2, 1])
         with logo_col2:
             try:
                 st.image("logo.jpg", use_container_width=True)
@@ -934,7 +961,7 @@ if st.session_state['role'] is None:
                 pass
             
         # The secure Python-backed login form, centered to match logo
-        st.markdown("<h2 style='text-align: center; margin-bottom: 5px; margin-top: 0px;'>Login</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center; margin-bottom: 5px; margin-top: 10px;'>Login</h2>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
         
         with st.form("split_login_form"):
