@@ -886,20 +886,19 @@ if st.session_state['role'] is None:
             justify-content: center !important;
         }
 
-        /* ---> HIGHLIGHT: LOGO CENTERING CSS ADJUSTMENT <--- */
-        /* Aggressively target all layers of Streamlit's image wrapper to force centering */
-        div[data-testid="element-container"]:has(div[data-testid="stImage"]),
-        div[data-testid="stImage"], 
-        div[data-testid="stImage"] > div {
+        /* ---> HIGHLIGHT: UNIVERSAL LOGO CENTERING & SPACING <--- */
+        [data-testid="stImage"] {
             display: flex !important;
             justify-content: center !important;
-            align-items: center !important;
             width: 100% !important;
-            margin-bottom: 0px !important;
+            margin-bottom: -15px !important; /* Sucks the Login text right up to the logo */
+            text-align: center !important;
         }
-        div[data-testid="stImage"] img {
-            margin: 0 auto !important;
+        [data-testid="stImage"] img {
+            margin-left: auto !important;
+            margin-right: auto !important;
             display: block !important;
+            image-rendering: crisp-edges; /* Helps slightly with blurry scaling */
         }
 
         /* Style the login button */
@@ -944,14 +943,14 @@ if st.session_state['role'] is None:
 
     # --- RIGHT PANEL CONTENT (Streamlit native) ---
     
-    # ---> HIGHLIGHT: LOGO SIZE ADJUSTMENT <---
-    # Logo explicitly sized to 240px and placed directly above the text.
+    # ---> HIGHLIGHT: LOGO SIZE INCREASED TO 300 <---
     try:
-        st.image("logo.jpg", width=240)
+        st.image("logo.jpg", width=300)
     except:
         pass
         
-    st.markdown("<h2 style='text-align: center; margin-bottom: 0px; margin-top: 5px;'>Login</h2>", unsafe_allow_html=True)
+    # Margin-top set to 0px to ensure it hugs the bottom of the logo
+    st.markdown("<h2 style='text-align: center; margin-bottom: 0px; margin-top: 0px;'>Login</h2>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
     
     with st.form("split_login_form"):
