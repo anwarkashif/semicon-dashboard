@@ -837,67 +837,63 @@ def check_early_warnings():
 if 'role' not in st.session_state: st.session_state['role'] = None
 
 if st.session_state['role'] is None:
-    # --- TRUE FULL-SCREEN SPLIT CSS ---
+    # --- NEW PARADIGM: FIXED LEFT PANEL + CENTERED RIGHT CONTAINER ---
     st.markdown("""
     <style>
-        /* Remove ALL Streamlit width constraints */
-        .block-container {
-            max-width: 100% !important;
-            padding: 0 !important;
-            margin: 0 !important;
-        }
-
-        /* Kill header/sidebar */
-        header, [data-testid="stSidebar"], [data-testid="collapsedControl"] {
-            display: none !important;
-        }
-
-        /* Make main app full height and prevent scrolling on login */
+        /* Hide default Streamlit navigation */
+        [data-testid="collapsedControl"], [data-testid="stSidebar"], header { display: none !important; }
+        
+        /* Prevent scrolling on desktop for a clean app feel */
         html, body, .stApp {
             height: 100vh;
-            overflow: hidden;
-        }
-
-        /* Force full-width horizontal layout */
-        [data-testid="stHorizontalBlock"] {
-            display: flex !important;
-            width: 100vw !important;
-            height: 100vh !important;
-            margin: 0 !important;
-            gap: 0 !important;
-        }
-
-        /* Each column = exact 50% */
-        [data-testid="stColumn"] {
-            flex: 0 0 50% !important;
-            max-width: 50% !important;
-            height: 100vh !important;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        /* LEFT PANEL */
-        .left-panel-wrapper {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 80px;
-            background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
-            color: white;
             margin: 0;
-        }
-        .left-panel-wrapper h1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; margin-bottom: 10px; }
-        .left-panel-wrapper span { font-weight: 700; color: #facc15; }
-        .left-panel-wrapper p { color: #94a3b8; font-size: 1.2rem; margin-top: 10px; }
-
-        /* RIGHT PANEL ALIGNMENT */
-        [data-testid="stColumn"]:nth-child(2) {
-            padding: 0 10% !important; /* Squeezes the form inwards for better desktop aesthetics */
+            overflow: hidden;
+            background-color: #000000;
         }
 
-        /* Style the login button to match the yellow theme */
+        /* --- 1. THE PURE CSS LEFT PANEL --- */
+        .fixed-left-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 100;
+            box-sizing: border-box;
+            border-right: 1px solid #222;
+        }
+        .fixed-left-panel h1 { font-size: 3.2rem; font-weight: 300; line-height: 1.2; margin-bottom: 10px; color: white;}
+        .fixed-left-panel span { font-weight: 700; color: #facc15; }
+        .fixed-left-panel p { color: #94a3b8; font-size: 1.2rem; margin-top: 10px; }
+
+        /* --- 2. THE RIGHT PANEL (STREAMLIT NATIVE CONTAINER) --- */
+        /* We force Streamlit's container to only occupy the right 50% */
+        .block-container {
+            position: absolute !important;
+            right: 0 !important;
+            top: 0 !important;
+            width: 50vw !important;
+            max-width: 50vw !important;
+            height: 100vh !important;
+            padding: 0 10% !important; /* Breathing room */
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+        }
+
+        /* Center the Logo globally without using broken nested columns */
+        [data-testid="stImage"] {
+            display: flex;
+            justify-content: center;
+            margin-bottom: -10px;
+        }
+
+        /* Style the login button */
         .stButton>button[kind="primary"] { 
             width: 100%; 
             background-color: #facc15; 
@@ -910,75 +906,58 @@ if st.session_state['role'] is None:
         .stButton>button[kind="primary"]:hover { background-color: #eab308; color: black; }
         .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
 
-        /* MOBILE FIX */
+        /* --- 3. MOBILE OVERRIDES --- */
         @media screen and (max-width: 900px) {
-            html, body, .stApp { overflow: auto; } /* Allow scrolling on mobile */
+            html, body, .stApp { overflow: auto; } /* Allow scroll */
             
-            [data-testid="stHorizontalBlock"] {
-                flex-direction: column !important;
-                height: auto !important;
-            }
-
-            [data-testid="stColumn"] {
-                max-width: 100% !important;
-                flex: 100% !important;
-                height: auto !important;
-            }
-
-            /* Hide left panel */
-            [data-testid="stColumn"]:nth-child(1) {
+            /* Kill the left panel entirely */
+            .fixed-left-panel {
                 display: none !important;
             }
-
-            /* Adjust right panel padding for mobile */
-            [data-testid="stColumn"]:nth-child(2) {
-                padding: 20px 8% !important;
-                margin-top: 10vh !important;
+            
+            /* Make the Streamlit container take 100% width */
+            .block-container {
+                width: 100vw !important;
+                max-width: 100vw !important;
+                padding: 2rem !important;
+                position: relative !important;
+                height: auto !important;
+                min-height: 100vh !important;
             }
         }
     </style>
+    
+    <div class="fixed-left-panel">
+        <h1>Be a Part of<br>Something <span>Beautiful</span></h1>
+        <p>Access the geopolitical and semiconductor geopolitical intelligence dashboard.</p>
+    </div>
     """, unsafe_allow_html=True)
 
-    # Use native Streamlit columns
-    col_left, col_right = st.columns(2)
-
-    with col_left:
-        # The visual gradient panel
-        st.markdown("""
-        <div class="left-panel-wrapper">
-            <h1>Be a Part of<br>Something <span>Beautiful</span></h1>
-            <p>Access the geopolitical and semiconductor geopolitical intelligence dashboard.</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col_right:
-        # Centering a larger logo natively
-        logo_col1, logo_col2, logo_col3 = st.columns([1, 1.2, 1])
-        with logo_col2:
-            try:
-                st.image("logo.jpg", use_container_width=True)
-            except:
-                pass
-            
-        # The secure Python-backed login form, centered to match logo
-        st.markdown("<h2 style='text-align: center; margin-bottom: 5px; margin-top: 10px;'>Login</h2>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center; color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
+    # --- RIGHT PANEL CONTENT (Streamlit native) ---
+    # Logo explicitly sized and centered via CSS
+    try:
+        st.image("logo.jpg", width=120)
+    except:
+        pass
         
-        with st.form("split_login_form"):
-            email_input = st.text_input("Email", placeholder="analyst@agency.gov")
-            password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
-            submit_login = st.form_submit_button("Login", type="primary")
+    st.markdown("<h2 style='text-align: center; margin-bottom: 0px; margin-top: 5px;'>Login</h2>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
+    
+    with st.form("split_login_form"):
+        email_input = st.text_input("Email", placeholder="analyst@agency.gov")
+        password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
+        submit_login = st.form_submit_button("Login", type="primary")
 
-            if submit_login:
-                if email_input == "anwarkashif@outlook.com" and password_input == "NeverEstimateTheRahmat0fAllahSWT":
-                    st.session_state['role'] = 'admin'
-                    st.rerun()
-                else: 
-                    st.error("Invalid credentials.")
-        
-        if st.button("View as Guest", type="secondary"):
-            st.session_state['role'] = 'guest'
-            st.rerun()
+        if submit_login:
+            if email_input == "anwarkashif@outlook.com" and password_input == "NeverEstimateTheRahmat0fAllahSWT":
+                st.session_state['role'] = 'admin'
+                st.rerun()
+            else: 
+                st.error("Invalid credentials.")
+    
+    if st.button("View as Guest", type="secondary"):
+        st.session_state['role'] = 'guest'
+        st.rerun()
 
 # ==========================================
 # MAIN DASHBOARD 
