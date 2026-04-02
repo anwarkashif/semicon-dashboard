@@ -845,8 +845,8 @@ if st.session_state['role'] is None:
         
         /* Widen the container for the split view on desktop */
         .block-container {
-            padding-top: 8vh !important;
-            max-width: 1000px !important;
+            padding-top: 5vh !important;
+            max-width: 1100px !important;
         }
 
         /* Left Panel Styling */
@@ -879,21 +879,25 @@ if st.session_state['role'] is None:
         .stButton>button[kind="primary"]:hover { background-color: #eab308; color: black; }
         .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
 
-        /* Desktop Fix: Vertically center the login form contents without breaking flex row */
-        div[data-testid="stColumn"]:nth-child(2) > div {
-            margin-top: auto;
-            margin-bottom: auto;
-            padding-left: 1.5rem;
+        /* --- DESKTOP RULES: FORCE 50/50 SIDE-BY-SIDE --- */
+        @media screen and (min-width: 901px) {
+            [data-testid="stHorizontalBlock"] {
+                flex-wrap: nowrap !important; /* Absolutely prevents columns from stacking vertically */
+                align-items: center !important; /* Vertically centers the right column */
+            }
+            [data-testid="stColumn"] {
+                width: 50% !important;
+                min-width: 50% !important;
+            }
+            [data-testid="stColumn"]:nth-child(2) {
+                padding-left: 3rem !important; /* Breathing room between panels */
+            }
         }
 
-        /* Mobile Rules */
+        /* --- MOBILE RULES: ZOOM IN AND HIDE LEFT PANEL --- */
         @media screen and (max-width: 900px) {
             div[data-testid="stColumn"]:nth-child(1) {
                 display: none !important;
-            }
-            div[data-testid="stColumn"]:nth-child(2) > div {
-                padding-left: 0 !important;
-                margin-top: 0 !important;
             }
             /* Remove width restrictions to zoom in the form on mobile */
             .block-container { 
@@ -908,7 +912,7 @@ if st.session_state['role'] is None:
     </style>
     """, unsafe_allow_html=True)
 
-    # Use native Streamlit columns to guarantee side-by-side rendering
+    # Use native Streamlit columns
     col_left, col_right = st.columns(2, gap="large")
 
     with col_left:
@@ -921,13 +925,13 @@ if st.session_state['role'] is None:
         """, unsafe_allow_html=True)
 
     with col_right:
-        # Logo inside a centered div
-        st.markdown("<div style='display: flex; justify-content: center; margin-bottom: 5px;'>", unsafe_allow_html=True)
-        try:
-            st.image("logo.jpg", width=90)
-        except:
-            pass
-        st.markdown("</div>", unsafe_allow_html=True)
+        # Centering a MUCH LARGER logo natively so it stays crisp
+        logo_col1, logo_col2, logo_col3 = st.columns([1, 1.5, 1])
+        with logo_col2:
+            try:
+                st.image("logo.jpg", use_container_width=True)
+            except:
+                pass
             
         # The secure Python-backed login form, centered to match logo
         st.markdown("<h2 style='text-align: center; margin-bottom: 5px; margin-top: 0px;'>Login</h2>", unsafe_allow_html=True)
