@@ -879,15 +879,24 @@ if st.session_state['role'] is None:
         .stButton>button[kind="primary"]:hover { background-color: #eab308; color: black; }
         .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
 
-        /* Desktop Fix: Vertically center the login form to balance the 50/50 split */
+        /* Desktop Fix: Force 50/50 flex width and vertically center the login form */
+        div[data-testid="stColumn"] {
+            width: 50% !important;
+            flex: 1 1 50% !important;
+        }
         div[data-testid="stColumn"]:nth-child(2) {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding-left: 2rem !important; /* Adds breathing room between the panels */
         }
 
         /* Mobile Rules: Aggressively override Streamlit's inline JS styles */
         @media screen and (max-width: 900px) {
+            div[data-testid="stColumn"] {
+                width: 100% !important;
+                flex: 1 1 100% !important;
+            }
             div[data-testid="stColumn"]:nth-child(1) {
                 display: none !important;
                 width: 0 !important;
@@ -897,8 +906,7 @@ if st.session_state['role'] is None:
                 overflow: hidden !important;
             }
             div[data-testid="stColumn"]:nth-child(2) {
-                width: 100% !important;
-                min-width: 100% !important;
+                padding-left: 0 !important;
             }
             .block-container { 
                 max-width: 450px !important; 
@@ -911,8 +919,8 @@ if st.session_state['role'] is None:
     </style>
     """, unsafe_allow_html=True)
 
-    # Use a pure integer 2 for a mathematically perfect 50/50 split
-    col_left, col_right = st.columns(2, gap="large")
+    # Use native Streamlit columns
+    col_left, col_right = st.columns(2)
 
     with col_left:
         # The visual gradient panel
@@ -924,8 +932,14 @@ if st.session_state['role'] is None:
         """, unsafe_allow_html=True)
 
     with col_right:
+        # Add the logo image safely
+        try:
+            st.image("logo.jpg", width=70)
+        except:
+            pass
+            
         # The secure Python-backed login form
-        st.markdown("<h2 style='margin-bottom: 5px; margin-top: 0px;'>Login</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='margin-bottom: 5px; margin-top: 10px;'>Login</h2>", unsafe_allow_html=True)
         st.markdown("<p style='color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
         
         with st.form("split_login_form"):
