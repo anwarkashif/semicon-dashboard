@@ -837,111 +837,51 @@ def check_early_warnings():
 if 'role' not in st.session_state: st.session_state['role'] = None
 
 if st.session_state['role'] is None:
-    # --- ADVANCED RESPONSIVE DEVICE DETECTION CSS (METHOD 2) ---
+    # --- UNIFIED, STABLE LOGIN UI ---
     st.markdown("""
     <style>
         /* Hide sidebar/header completely on login */
         [data-testid="collapsedControl"] { display: none !important; }
         [data-testid="stSidebar"] { display: none !important; }
-        .block-container { padding-top: 2rem !important; }
+        
+        /* Center the login box on desktop, full width on mobile */
+        .block-container { 
+            padding-top: 5rem !important; 
+            max-width: 400px !important; 
+            margin: 0 auto !important;
+        }
         
         /* Standardize all buttons */
         .stButton > button { width: 100%; font-weight: bold; margin-top: 5px; }
-
-        /* ----------------------------------------------------
-           THE ILLUSION: CSS Column Toggling
-           Column 1 = MOBILE UI
-           Column 2 = DESKTOP UI
-           ---------------------------------------------------- */
-        
-        /* MOBILE LAYOUT */
-        @media (max-width: 768px) {
-            [data-testid="column"]:nth-of-type(1) { display: block !important; width: 100% !important; }
-            [data-testid="column"]:nth-of-type(2) { display: none !important; }
-        }
-
-        /* DESKTOP LAYOUT */
-        @media (min-width: 769px) {
-            [data-testid="column"]:nth-of-type(1) { display: none !important; }
-            [data-testid="column"]:nth-of-type(2) { display: block !important; width: 45% !important; margin: 0 auto !important; }
-            
-            /* Center the block on desktop */
-            div[data-testid="stHorizontalBlock"] { justify-content: center !important; }
-        }
-        
-        /* DESKTOP LOGO ANCHOR (Top Left) */
-        .desktop-logo-anchored {
-            position: absolute;
-            top: -50px;
-            left: -20px;
-            width: 90px;
-            z-index: 9999;
-            border-radius: 5px;
-        }
     </style>
     """, unsafe_allow_html=True)
 
-    # We create exactly two parent columns for the CSS to target
-    col_mobile, col_desktop = st.columns(2)
-
-    # ==========================================
-    # 1. MOBILE LOGIN SETUP
-    # ==========================================
-    with col_mobile:
-        m_spacer1, m_content, m_spacer3 = st.columns([1, 8, 1])
-        with m_content:
-            logo_left, logo_center, logo_right = st.columns([1, 1, 1])
-            with logo_center: 
-                st.image("logo.jpg", use_container_width=True) 
-            
-            st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: 25px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
-            
-            with st.form("mobile_login_form"):
-                email_input_m = st.text_input("EMAIL ID", placeholder="analyst@agency.gov", key="m_email")
-                password_input_m = st.text_input("PASSWORD", type="password", placeholder="Enter Secure Key", key="m_pass")
-                submit_login_m = st.form_submit_button("LOGIN", type="primary")
-
-                if submit_login_m:
-                    if email_input_m == "anwarkashif@outlook.com" and password_input_m == "NeverEstimateTheRahmat0fAllahSWT":
-                        st.session_state['role'] = 'admin'
-                        st.rerun()
-                    else: 
-                        st.error("Incorrect Email ID or Password.")
-            
-            if st.button("VIEW AS GUEST", key="m_guest", type="secondary"):
-                st.session_state['role'] = 'guest'
-                st.rerun()
-
-    # ==========================================
-    # 2. DESKTOP / IPAD LOGIN SETUP
-    # ==========================================
-    with col_desktop:
-        import base64
+    # Small Logo Centered
+    col_spacer1, col_logo, col_spacer2 = st.columns([1, 1.5, 1])
+    with col_logo:
         try:
-            with open("logo.jpg", "rb") as image_file:
-                encoded_string = base64.b64encode(image_file.read()).decode()
-                st.markdown(f'<img src="data:image/jpeg;base64,{encoded_string}" class="desktop-logo-anchored">', unsafe_allow_html=True)
+            st.image("logo.jpg", use_container_width=True)
         except:
             pass 
 
-        st.markdown("<div style='margin-top: 15vh;'></div>", unsafe_allow_html=True)
-        st.markdown("<h1 style='text-align: left; margin-bottom: 30px; font-size: 38px;'>SEMICON DASHBOARD</h1>", unsafe_allow_html=True)
-        
-        with st.form("desktop_login_form"):
-            email_input_d = st.text_input("EMAIL ID", placeholder="analyst@agency.gov", key="d_email")
-            password_input_d = st.text_input("PASSWORD", type="password", placeholder="Enter Secure Key", key="d_pass")
-            submit_login_d = st.form_submit_button("LOGIN", type="primary")
+    st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: 25px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
+    
+    with st.form("universal_login_form"):
+        email_input = st.text_input("EMAIL ID", placeholder="analyst@agency.gov")
+        password_input = st.text_input("PASSWORD", type="password", placeholder="Enter Secure Key")
+        submit_login = st.form_submit_button("LOGIN", type="primary")
 
-            if submit_login_d:
-                if email_input_d == "anwarkashif@outlook.com" and password_input_d == "NeverEstimateTheRahmat0fAllahSWT":
-                    st.session_state['role'] = 'admin'
-                    st.rerun()
-                else: 
-                    st.error("Incorrect Email ID or Password.")
-        
-        if st.button("VIEW AS GUEST", key="d_guest", type="secondary"):
-            st.session_state['role'] = 'guest'
-            st.rerun()
+        if submit_login:
+            if email_input == "anwarkashif@outlook.com" and password_input == "NeverEstimateTheRahmat0fAllahSWT":
+                st.session_state['role'] = 'admin'
+                st.rerun()
+            else: 
+                st.error("Incorrect Email ID or Password.")
+    
+    # Guest Button exactly below the login form
+    if st.button("VIEW AS GUEST", type="secondary"):
+        st.session_state['role'] = 'guest'
+        st.rerun()
 
 # ==========================================
 # MAIN DASHBOARD 
