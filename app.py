@@ -837,33 +837,34 @@ def check_early_warnings():
 if 'role' not in st.session_state: st.session_state['role'] = None
 
 if st.session_state['role'] is None:
-    # --- RESPONSIVE SPLIT-SCREEN CSS ---
+    # --- BULLETPROOF RESPONSIVE SPLIT-SCREEN CSS ---
     st.markdown("""
     <style>
         /* Hide default Streamlit navigation */
-        [data-testid="collapsedControl"], [data-testid="stSidebar"] { display: none !important; }
+        [data-testid="collapsedControl"], [data-testid="stSidebar"], header { display: none !important; }
         
         /* Widen the container for the split view on desktop */
         .block-container {
-            padding-top: 3rem !important;
-            max-width: 900px !important;
+            padding-top: 5vh !important;
+            max-width: 1000px !important;
         }
 
         /* Left Panel Styling */
-        .left-panel {
+        .left-panel-wrapper {
             background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
             padding: 40px;
             border-radius: 12px;
             color: white;
             height: 100%;
-            min-height: 450px;
+            min-height: 480px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        .left-panel h1 { font-size: 2.8rem; font-weight: 300; line-height: 1.2; margin-bottom: 10px; }
-        .left-panel span { font-weight: 700; color: #facc15; }
-        .left-panel p { color: #94a3b8; font-size: 1.1rem; }
+        .left-panel-wrapper h1 { font-size: 2.8rem; font-weight: 300; line-height: 1.2; margin-bottom: 10px; }
+        .left-panel-wrapper span { font-weight: 700; color: #facc15; }
+        .left-panel-wrapper p { color: #94a3b8; font-size: 1.1rem; }
 
         /* Style the login button to match the yellow theme */
         .stButton>button[kind="primary"] { 
@@ -873,31 +874,50 @@ if st.session_state['role'] is None:
             font-weight: bold; 
             border: none; 
             margin-top: 10px;
+            height: 45px;
         }
         .stButton>button[kind="primary"]:hover { background-color: #eab308; color: black; }
-        
-        .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; }
+        .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
 
-        /* Mobile Rules: Hide Left Column entirely on small screens */
-        @media (max-width: 768px) {
-            /* Bulletproof target for old AND new Streamlit versions */
-            [data-testid="column"]:first-of-type, 
-            [data-testid="stColumn"]:first-of-type,
-            .left-panel { 
-                display: none !important; 
+        /* Desktop Fix: Vertically center the login form to balance the 50/50 split */
+        div[data-testid="stColumn"]:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Mobile Rules: Aggressively override Streamlit's inline JS styles */
+        @media screen and (max-width: 900px) {
+            div[data-testid="stColumn"]:nth-child(1) {
+                display: none !important;
+                width: 0 !important;
+                flex: 0 !important;
+                height: 0 !important;
+                opacity: 0 !important;
+                overflow: hidden !important;
             }
-            .block-container { max-width: 400px !important; padding-top: 2rem !important; }
+            div[data-testid="stColumn"]:nth-child(2) {
+                width: 100% !important;
+                min-width: 100% !important;
+            }
+            .block-container { 
+                max-width: 450px !important; 
+                padding-top: 10vh !important; 
+            }
+            .left-panel-wrapper {
+                display: none !important;
+            }
         }
     </style>
     """, unsafe_allow_html=True)
 
-    # Changed to [1, 1] for a perfect 50/50 split on desktop
-    col_left, col_right = st.columns([1, 1], gap="large")
+    # Use a pure integer 2 for a mathematically perfect 50/50 split
+    col_left, col_right = st.columns(2, gap="large")
 
     with col_left:
-        # The visual gradient panel with updated text
+        # The visual gradient panel
         st.markdown("""
-        <div class="left-panel">
+        <div class="left-panel-wrapper">
             <h1>Be a Part of<br>Something <span>Beautiful</span></h1>
             <p>Access the geopolitical and semiconductor geopolitical intelligence dashboard.</p>
         </div>
@@ -905,7 +925,7 @@ if st.session_state['role'] is None:
 
     with col_right:
         # The secure Python-backed login form
-        st.markdown("<h2 style='margin-bottom: 5px; margin-top: 20px;'>Login</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='margin-bottom: 5px; margin-top: 0px;'>Login</h2>", unsafe_allow_html=True)
         st.markdown("<p style='color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
         
         with st.form("split_login_form"):
@@ -913,7 +933,6 @@ if st.session_state['role'] is None:
             password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
             submit_login = st.form_submit_button("Login", type="primary")
 
-            # Authentication happens securely on the server side
             if submit_login:
                 if email_input == "anwarkashif@outlook.com" and password_input == "NeverEstimateTheRahmat0fAllahSWT":
                     st.session_state['role'] = 'admin'
