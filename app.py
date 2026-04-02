@@ -880,21 +880,26 @@ if st.session_state['role'] is None:
 
         /* Mobile Rules: Hide Left Column entirely on small screens */
         @media (max-width: 768px) {
-            [data-testid="column"]:nth-of-type(1) { display: none !important; }
+            /* Bulletproof target for old AND new Streamlit versions */
+            [data-testid="column"]:first-of-type, 
+            [data-testid="stColumn"]:first-of-type,
+            .left-panel { 
+                display: none !important; 
+            }
             .block-container { max-width: 400px !important; padding-top: 2rem !important; }
         }
     </style>
     """, unsafe_allow_html=True)
 
-    # Use native Streamlit columns. Gap="large" creates nice spacing.
-    col_left, col_right = st.columns([1.2, 1], gap="large")
+    # Changed to [1, 1] for a perfect 50/50 split on desktop
+    col_left, col_right = st.columns([1, 1], gap="large")
 
     with col_left:
-        # The visual gradient panel
+        # The visual gradient panel with updated text
         st.markdown("""
         <div class="left-panel">
             <h1>Be a Part of<br>Something <span>Beautiful</span></h1>
-            <p>Access the geopolitical and semiconductor intelligence dashboard.</p>
+            <p>Access the geopolitical and semiconductor geopolitical intelligence dashboard.</p>
         </div>
         """, unsafe_allow_html=True)
 
