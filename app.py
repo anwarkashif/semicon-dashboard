@@ -837,51 +837,88 @@ def check_early_warnings():
 if 'role' not in st.session_state: st.session_state['role'] = None
 
 if st.session_state['role'] is None:
-    # --- UNIFIED, STABLE LOGIN UI ---
+    # --- RESPONSIVE SPLIT-SCREEN CSS ---
     st.markdown("""
     <style>
-        /* Hide sidebar/header completely on login */
-        [data-testid="collapsedControl"] { display: none !important; }
-        [data-testid="stSidebar"] { display: none !important; }
+        /* Hide default Streamlit navigation */
+        [data-testid="collapsedControl"], [data-testid="stSidebar"] { display: none !important; }
         
-        /* Center the login box on desktop, full width on mobile */
-        .block-container { 
-            padding-top: 5rem !important; 
-            max-width: 400px !important; 
-            margin: 0 auto !important;
+        /* Widen the container for the split view on desktop */
+        .block-container {
+            padding-top: 3rem !important;
+            max-width: 900px !important;
         }
+
+        /* Left Panel Styling */
+        .left-panel {
+            background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
+            padding: 40px;
+            border-radius: 12px;
+            color: white;
+            height: 100%;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .left-panel h1 { font-size: 2.8rem; font-weight: 300; line-height: 1.2; margin-bottom: 10px; }
+        .left-panel span { font-weight: 700; color: #facc15; }
+        .left-panel p { color: #94a3b8; font-size: 1.1rem; }
+
+        /* Style the login button to match the yellow theme */
+        .stButton>button[kind="primary"] { 
+            width: 100%; 
+            background-color: #facc15; 
+            color: black; 
+            font-weight: bold; 
+            border: none; 
+            margin-top: 10px;
+        }
+        .stButton>button[kind="primary"]:hover { background-color: #eab308; color: black; }
         
-        /* Standardize all buttons */
-        .stButton > button { width: 100%; font-weight: bold; margin-top: 5px; }
+        .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; }
+
+        /* Mobile Rules: Hide Left Column entirely on small screens */
+        @media (max-width: 768px) {
+            [data-testid="column"]:nth-of-type(1) { display: none !important; }
+            .block-container { max-width: 400px !important; padding-top: 2rem !important; }
+        }
     </style>
     """, unsafe_allow_html=True)
 
-    # Small Logo Centered
-    col_spacer1, col_logo, col_spacer2 = st.columns([1, 1.5, 1])
-    with col_logo:
-        try:
-            st.image("logo.jpg", use_container_width=True)
-        except:
-            pass 
+    # Use native Streamlit columns. Gap="large" creates nice spacing.
+    col_left, col_right = st.columns([1.2, 1], gap="large")
 
-    st.markdown("<h2 style='text-align: center; margin-top: 10px; margin-bottom: 25px;'>SEMICON DASHBOARD</h2>", unsafe_allow_html=True)
-    
-    with st.form("universal_login_form"):
-        email_input = st.text_input("EMAIL ID", placeholder="analyst@agency.gov")
-        password_input = st.text_input("PASSWORD", type="password", placeholder="Enter Secure Key")
-        submit_login = st.form_submit_button("LOGIN", type="primary")
+    with col_left:
+        # The visual gradient panel
+        st.markdown("""
+        <div class="left-panel">
+            <h1>Be a Part of<br>Something <span>Beautiful</span></h1>
+            <p>Access the geopolitical and semiconductor intelligence dashboard.</p>
+        </div>
+        """, unsafe_allow_html=True)
 
-        if submit_login:
-            if email_input == "anwarkashif@outlook.com" and password_input == "NeverEstimateTheRahmat0fAllahSWT":
-                st.session_state['role'] = 'admin'
-                st.rerun()
-            else: 
-                st.error("Incorrect Email ID or Password.")
-    
-    # Guest Button exactly below the login form
-    if st.button("VIEW AS GUEST", type="secondary"):
-        st.session_state['role'] = 'guest'
-        st.rerun()
+    with col_right:
+        # The secure Python-backed login form
+        st.markdown("<h2 style='margin-bottom: 5px; margin-top: 20px;'>Login</h2>", unsafe_allow_html=True)
+        st.markdown("<p style='color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
+        
+        with st.form("split_login_form"):
+            email_input = st.text_input("Email", placeholder="analyst@agency.gov")
+            password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
+            submit_login = st.form_submit_button("Login", type="primary")
+
+            # Authentication happens securely on the server side
+            if submit_login:
+                if email_input == "anwarkashif@outlook.com" and password_input == "NeverEstimateTheRahmat0fAllahSWT":
+                    st.session_state['role'] = 'admin'
+                    st.rerun()
+                else: 
+                    st.error("Invalid credentials.")
+        
+        if st.button("View as Guest", type="secondary"):
+            st.session_state['role'] = 'guest'
+            st.rerun()
 
 # ==========================================
 # MAIN DASHBOARD 
