@@ -886,11 +886,15 @@ if st.session_state['role'] is None:
             justify-content: center !important;
         }
 
-        /* Center the Logo globally without using broken nested columns */
+        /* Center the Logo globally and ensure it takes full width for flex to work */
         [data-testid="stImage"] {
-            display: flex;
-            justify-content: center;
-            margin-bottom: -10px;
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
+            margin-bottom: 0px !important;
+        }
+        [data-testid="stImage"] > img {
+            margin: 0 auto !important; /* Hard-centers the image inside its wrapper */
         }
 
         /* Style the login button */
@@ -934,9 +938,9 @@ if st.session_state['role'] is None:
     """, unsafe_allow_html=True)
 
     # --- RIGHT PANEL CONTENT (Streamlit native) ---
-    # Logo explicitly sized and centered via CSS
+    # Logo explicitly sized to 160px and centered via CSS
     try:
-        st.image("logo.jpg", width=120)
+        st.image("logo.jpg", width=160)
     except:
         pass
         
