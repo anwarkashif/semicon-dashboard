@@ -845,7 +845,7 @@ if st.session_state['role'] is None:
         
         /* Widen the container for the split view on desktop */
         .block-container {
-            padding-top: 5vh !important;
+            padding-top: 8vh !important;
             max-width: 1000px !important;
         }
 
@@ -879,38 +879,27 @@ if st.session_state['role'] is None:
         .stButton>button[kind="primary"]:hover { background-color: #eab308; color: black; }
         .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
 
-        /* Desktop Fix: Force 50/50 flex width and vertically center the login form */
-        div[data-testid="stColumn"] {
-            width: 50% !important;
-            flex: 1 1 50% !important;
-        }
-        div[data-testid="stColumn"]:nth-child(2) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 2rem !important; /* Adds breathing room between the panels */
+        /* Desktop Fix: Vertically center the login form contents without breaking flex row */
+        div[data-testid="stColumn"]:nth-child(2) > div {
+            margin-top: auto;
+            margin-bottom: auto;
+            padding-left: 1.5rem;
         }
 
-        /* Mobile Rules: Aggressively override Streamlit's inline JS styles */
+        /* Mobile Rules */
         @media screen and (max-width: 900px) {
-            div[data-testid="stColumn"] {
-                width: 100% !important;
-                flex: 1 1 100% !important;
-            }
             div[data-testid="stColumn"]:nth-child(1) {
                 display: none !important;
-                width: 0 !important;
-                flex: 0 !important;
-                height: 0 !important;
-                opacity: 0 !important;
-                overflow: hidden !important;
             }
-            div[data-testid="stColumn"]:nth-child(2) {
+            div[data-testid="stColumn"]:nth-child(2) > div {
                 padding-left: 0 !important;
+                margin-top: 0 !important;
             }
+            /* Remove width restrictions to zoom in the form on mobile */
             .block-container { 
-                max-width: 450px !important; 
-                padding-top: 10vh !important; 
+                max-width: 100% !important; 
+                padding: 1.5rem !important; 
+                padding-top: 5vh !important; 
             }
             .left-panel-wrapper {
                 display: none !important;
@@ -919,8 +908,8 @@ if st.session_state['role'] is None:
     </style>
     """, unsafe_allow_html=True)
 
-    # Use native Streamlit columns
-    col_left, col_right = st.columns(2)
+    # Use native Streamlit columns to guarantee side-by-side rendering
+    col_left, col_right = st.columns(2, gap="large")
 
     with col_left:
         # The visual gradient panel
@@ -932,15 +921,17 @@ if st.session_state['role'] is None:
         """, unsafe_allow_html=True)
 
     with col_right:
-        # Add the logo image safely
+        # Logo inside a centered div
+        st.markdown("<div style='display: flex; justify-content: center; margin-bottom: 5px;'>", unsafe_allow_html=True)
         try:
-            st.image("logo.jpg", width=70)
+            st.image("logo.jpg", width=90)
         except:
             pass
+        st.markdown("</div>", unsafe_allow_html=True)
             
-        # The secure Python-backed login form
-        st.markdown("<h2 style='margin-bottom: 5px; margin-top: 10px;'>Login</h2>", unsafe_allow_html=True)
-        st.markdown("<p style='color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
+        # The secure Python-backed login form, centered to match logo
+        st.markdown("<h2 style='text-align: center; margin-bottom: 5px; margin-top: 0px;'>Login</h2>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center; color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
         
         with st.form("split_login_form"):
             email_input = st.text_input("Email", placeholder="analyst@agency.gov")
