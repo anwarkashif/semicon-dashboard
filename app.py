@@ -670,6 +670,15 @@ def get_active_live_alert():
         pass 
     return None
 
+# --- NEW ROCK-SOLID CLOCK CACHE ---
+@st.cache_data
+def get_deployment_timestamp():
+    """Anchors the clock to the exact moment the server deployed the update."""
+    try:
+        return int(os.path.getmtime("data/rss_accumulator.txt") * 1000)
+    except:
+        return int(time.time() * 1000)
+
 def check_early_warnings():
     try:
         if st.session_state.get('role') == 'admin' and os.path.exists('data/live_alert.json'):
@@ -687,15 +696,24 @@ def check_early_warnings():
         box_bg_color = "#000000"
         nominal_text_color = "#d1d5db"
         
-        if alert:  
+        # Guarantee the fallback time never shifts during navigation or refresh
+        fallback_time_ms = get_deployment_timestamp()
+        
+        if alert:   
             try:
-                dt = datetime.fromisoformat(alert.get('timestamp', datetime.now(timezone.utc).isoformat()).replace("Z", "+00:00"))
-                start_timestamp_ms = int(dt.timestamp() * 1000)
+                # Safely check for timestamp without triggering datetime.now() execution
+                if 'timestamp' in alert:
+                    dt = datetime.fromisoformat(alert['timestamp'].replace("Z", "+00:00"))
+                    start_timestamp_ms = int(dt.timestamp() * 1000)
+                else:
+                    start_timestamp_ms = fallback_time_ms
             except:
-                # ---> REAL CLOCK FIX: LOCK DEFCON STATE <---
-                if 'defcon_fallback' not in st.session_state:
-                    st.session_state['defcon_fallback'] = int(time.time() * 1000)
-                start_timestamp_ms = st.session_state['defcon_fallback']
+                start_timestamp_ms = fallback_time_ms
+            
+            # Pre-calculate the elapsed time in Python to eliminate the 00:00:00 visual flash
+            elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
+            h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
+            initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
             
             # --- RESPONSIVE DEFCON CSS FIX ---
             html_code = f"""
@@ -757,7 +775,7 @@ def check_early_warnings():
                         <span style="animation: blinkText 1s infinite; margin-right: 15px;">⚠️ DEFCON-LEVEL THREAT</span> 
                     </h3>
                     <div class="timer-container">
-                        <div class="timer">Live Since: <span id="clock">00:00:00</span></div>
+                        <div class="timer">Live Since: <span id="clock">{initial_clock}</span></div>
                         <button class="magnify-btn" onclick="toggleFullscreen()">🔍 MAGNIFY</button>
                     </div>
                 </div>
@@ -789,16 +807,12 @@ def check_early_warnings():
             components.html(html_code, height=260) 
             
         else:
-            try:
-                latest_time = os.path.getmtime("data/rss_accumulator.txt")
-                if latest_time < 1000000000:
-                    raise ValueError("Invalid time")
-                start_timestamp_ms = int(latest_time * 1000)
-            except:
-                # ---> REAL CLOCK FIX: LOCK NOMINAL STATE <---
-                if 'nominal_fallback' not in st.session_state:
-                    st.session_state['nominal_fallback'] = int(time.time() * 1000)
-                start_timestamp_ms = st.session_state['nominal_fallback']
+            start_timestamp_ms = fallback_time_ms
+            
+            # Pre-calculate to eliminate 00:00:00 flash
+            elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
+            h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
+            initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
 
             # --- RESPONSIVE NOMINAL CSS FIX ---
             html_code = f"""
@@ -813,7 +827,7 @@ def check_early_warnings():
             <div class="nominal-box">
                 <div class="header-flex">
                     <h4 class="title"><span>🟢 System Nominal</span></h4>
-                    <div class="timer">Status Verified: <span id="clock">00:00:00</span> ago</div>
+                    <div class="timer">Status Verified: <span id="clock">{initial_clock}</span> ago</div>
                 </div>
                 <p class="desc">Current Warning System doesn't see an early warning situation. Watch out for further updates.</p>
             </div>
