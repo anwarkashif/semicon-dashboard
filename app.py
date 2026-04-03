@@ -953,7 +953,7 @@ if st.session_state['role'] is None:
     
     <div class="fixed-left-panel">
         <h1>Be a Part of<br>Something <span>Beautiful</span></h1>
-        <p>Access the geopolitical and semiconductor geopolitical intelligence dashboard.</p>
+        <p>Access high-fidelity insights at the intersection of global policy and the semiconductor industry.</p>
     </div>
     """, unsafe_allow_html=True)
 
