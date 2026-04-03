@@ -671,13 +671,10 @@ def get_active_live_alert():
     return None
 
 # --- NEW ROCK-SOLID CLOCK CACHE ---
-@st.cache_data
+@st.cache_resource
 def get_deployment_timestamp():
-    """Anchors the clock to the exact moment the server deployed the update."""
-    try:
-        return int(os.path.getmtime("data/rss_accumulator.txt") * 1000)
-    except:
-        return int(time.time() * 1000)
+    """Anchors the clock to the exact moment the Koyeb server booted up."""
+    return int(time.time() * 1000)
 
 def check_early_warnings():
     try:

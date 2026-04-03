@@ -57,4 +57,4 @@ jobs:
 
     - name: Trigger Koyeb Redeploy
       # Indentation is now fixed!
-      run: koyeb service redeploy kashifanwar-semcon-dashboard/semicon-dashboard
+      run: koyeb service redeploy semicon-dashboard/semicon-dashboard
