@@ -977,7 +977,7 @@ if st.session_state['role'] is None:
     try:
         with open("logo.jpg", "rb") as image_file:
             encoded_string = base64.b64encode(image_file.read()).decode()
-            img_html = f'<img src="data:image/jpeg;base64,{encoded_string}" class="login-logo"/>'
+            img_html = f'<img src="data:image/jpeg;base64,{encoded_string}" class="login-logo" style="width: 300px; max-width: 100%;"/>'
     except FileNotFoundError:
         img_html = '' 
 
@@ -1011,7 +1011,15 @@ if st.session_state['role'] is None:
 # ==========================================
 else:
     # --- MOBILE SIDEBAR RESTORE FIX ---
-    st.markdown("""<style>[data-testid="collapsedControl"] { display: block !important; } [data-testid="stSidebar"] { display: block !important; }</style>""", unsafe_allow_html=True)
+    st.markdown("""
+<style>
+    [data-testid="collapsedControl"] { display: block !important; } 
+    [data-testid="stSidebar"] { display: block !important; } 
+    header { display: flex !important; }
+    /* Prevent sidebar logo from flashing full size */
+    [data-testid="stSidebar"] img { max-width: 100% !important; }
+</style>
+""", unsafe_allow_html=True)
 
     st.sidebar.image("logo.jpg", use_container_width=True)
     st.sidebar.markdown("""
