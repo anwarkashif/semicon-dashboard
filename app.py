@@ -831,6 +831,8 @@ def check_early_warnings():
     except Exception as e:
         pass 
 
+import base64
+
 # ==========================================
 # LOGIN SCREEN 
 # ==========================================
@@ -872,7 +874,6 @@ if st.session_state['role'] is None:
         .fixed-left-panel p { color: #94a3b8; font-size: 1.2rem; margin-top: 10px; }
 
         /* --- 2. THE RIGHT PANEL (STREAMLIT NATIVE CONTAINER) --- */
-        /* We force Streamlit's container to only occupy the right 50% */
         .block-container {
             position: absolute !important;
             right: 0 !important;
@@ -886,19 +887,34 @@ if st.session_state['role'] is None:
             justify-content: center !important;
         }
 
-        /* ---> HIGHLIGHT: UNIVERSAL LOGO CENTERING & SPACING <--- */
-        [data-testid="stImage"] {
-            display: flex !important;
-            justify-content: center !important;
-            width: 100% !important;
-            margin-bottom: -15px !important; /* Sucks the Login text right up to the logo */
-            text-align: center !important;
+        /* --- 3. LOGIN HEADER (LOGO + TEXT PERFECT STACK) --- */
+        .login-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            text-align: center;
         }
-        [data-testid="stImage"] img {
-            margin-left: auto !important;
-            margin-right: auto !important;
-            display: block !important;
-            image-rendering: crisp-edges; /* Helps slightly with blurry scaling */
+
+        .login-logo {
+            width: 300px; /* HIGHLIGHT: EXACT 300PX SIZE */
+            max-width: 100%;
+            margin-bottom: 5px; /* Pulls the Login text tight against the logo */
+            image-rendering: crisp-edges;
+        }
+
+        /* Login title */
+        .login-header h2 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        /* Subtitle */
+        .login-header p {
+            margin-top: 5px;
+            color: #aaa;
+            font-size: 14px;
         }
 
         /* Style the login button */
@@ -914,16 +930,12 @@ if st.session_state['role'] is None:
         .stButton>button[kind="primary"]:hover { background-color: #eab308; color: black; }
         .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
 
-        /* --- 3. MOBILE OVERRIDES --- */
+        /* --- 4. MOBILE OVERRIDES --- */
         @media screen and (max-width: 900px) {
             html, body, .stApp { overflow: auto; } /* Allow scroll */
             
-            /* Kill the left panel entirely */
-            .fixed-left-panel {
-                display: none !important;
-            }
+            .fixed-left-panel { display: none !important; }
             
-            /* Make the Streamlit container take 100% width */
             .block-container {
                 width: 100vw !important;
                 max-width: 100vw !important;
@@ -941,17 +953,24 @@ if st.session_state['role'] is None:
     </div>
     """, unsafe_allow_html=True)
 
-    # --- RIGHT PANEL CONTENT (Streamlit native) ---
+    # --- RIGHT PANEL CONTENT ---
     
-    # ---> HIGHLIGHT: LOGO SIZE INCREASED TO 300 <---
+    # Safely convert logo to base64 so it securely renders inside HTML
     try:
-        st.image("logo.jpg", width=300)
-    except:
-        pass
-        
-    # Margin-top set to 0px to ensure it hugs the bottom of the logo
-    st.markdown("<h2 style='text-align: center; margin-bottom: 0px; margin-top: 0px;'>Login</h2>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; color: #aaa; font-size: 14px; margin-bottom: 20px;'>Enter your credentials</p>", unsafe_allow_html=True)
+        with open("logo.jpg", "rb") as image_file:
+            encoded_string = base64.b64encode(image_file.read()).decode()
+            img_html = f'<img src="data:image/jpeg;base64,{encoded_string}" class="login-logo"/>'
+    except FileNotFoundError:
+        img_html = '' 
+
+    # Inject the Single Unified Block ensuring the logo and text are permanently attached
+    st.markdown(f"""
+    <div class="login-header">
+        {img_html}
+        <h2>Login</h2>
+        <p>Enter your credentials</p>
+    </div>
+    """, unsafe_allow_html=True)
     
     with st.form("split_login_form"):
         email_input = st.text_input("Email", placeholder="analyst@agency.gov")
