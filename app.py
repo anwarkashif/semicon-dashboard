@@ -692,7 +692,10 @@ def check_early_warnings():
                 dt = datetime.fromisoformat(alert.get('timestamp', datetime.now(timezone.utc).isoformat()).replace("Z", "+00:00"))
                 start_timestamp_ms = int(dt.timestamp() * 1000)
             except:
-                start_timestamp_ms = int(time.time() * 1000)
+                # ---> REAL CLOCK FIX: LOCK DEFCON STATE <---
+                if 'defcon_fallback' not in st.session_state:
+                    st.session_state['defcon_fallback'] = int(time.time() * 1000)
+                start_timestamp_ms = st.session_state['defcon_fallback']
             
             # --- RESPONSIVE DEFCON CSS FIX ---
             html_code = f"""
@@ -788,13 +791,14 @@ def check_early_warnings():
         else:
             try:
                 latest_time = os.path.getmtime("data/rss_accumulator.txt")
+                if latest_time < 1000000000:
+                    raise ValueError("Invalid time")
+                start_timestamp_ms = int(latest_time * 1000)
             except:
-                latest_time = time.time()
-                
-            if latest_time < 1000000000: 
-                latest_time = time.time()
-                
-            start_timestamp_ms = int(latest_time * 1000)
+                # ---> REAL CLOCK FIX: LOCK NOMINAL STATE <---
+                if 'nominal_fallback' not in st.session_state:
+                    st.session_state['nominal_fallback'] = int(time.time() * 1000)
+                start_timestamp_ms = st.session_state['nominal_fallback']
 
             # --- RESPONSIVE NOMINAL CSS FIX ---
             html_code = f"""
@@ -829,7 +833,7 @@ def check_early_warnings():
             """
             components.html(html_code, height=130)
     except Exception as e:
-        pass 
+        pass
 
 import base64
 

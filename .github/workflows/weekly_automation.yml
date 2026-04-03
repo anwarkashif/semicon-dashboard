@@ -56,4 +56,5 @@ jobs:
         github_token: "${{ secrets.GITHUB_TOKEN }}"
 
     - name: Trigger Koyeb Redeploy
-      run: koyeb service redeploy semi/web
+      # Indentation is now fixed!
+      run: koyeb service redeploy kashifanwar-semcon-dashboard/semicon-dashboard
