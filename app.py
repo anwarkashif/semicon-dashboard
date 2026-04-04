@@ -846,6 +846,135 @@ def check_early_warnings():
     except Exception as e:
         pass
 
+# --- NEW: STRATEGIC INTELLIGENCE TICKER TAPE ---
+def render_ticker_tape():
+    ticker_items = []
+    
+    try:
+        # Automatically grab the 2-hour data using your existing parser!
+        live_rss = parse_rss_txt_file()
+        if not live_rss: return
+        
+        # Flatten the region dictionary into a single list of unique news items
+        seen_titles = set()
+        unique_news = []
+        for region, articles in live_rss.items():
+            for art in articles:
+                if art['title'] not in seen_titles:
+                    seen_titles.add(art['title'])
+                    unique_news.append(art)
+
+        # Dynamic 1-10 Threat Scoring based on your established keywords
+        critical = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
+        high = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension', 'export control', 'embargo', 'risk']
+        med = ['delay', 'subsidy', 'compete', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'concern', 'geopolitical']
+
+        for item in unique_news:
+            title_lower = item['title'].lower()
+            score = 3  # Base score
+            
+            score += sum(1 for kw in critical if kw in title_lower) * 5
+            score += sum(1 for kw in high if kw in title_lower) * 3
+            score += sum(1 for kw in med if kw in title_lower) * 2
+            
+            score = min(10, score) # Cap the maximum score at 10
+            
+            # Only render Yellow, Orange, and Red threats (Score >= 5)
+            if score >= 5:
+                if score >= 9:
+                    color_class = "color-red"
+                    prefix = "🔴 CRITICAL:"
+                elif score >= 7:
+                    color_class = "color-orange"
+                    prefix = "🟠 ELEVATED:"
+                else:
+                    color_class = "color-yellow"
+                    prefix = "🟡 WATCH:"
+                
+                clean_title = item.get("title", "").replace('"', '&quot;').replace("'", "&#39;")
+                ticker_html = f'<div class="ticker-item {color_class}"><a href="{item.get("link", "#")}" target="_blank" class="{color_class}">{prefix} {clean_title}</a></div>'
+                ticker_items.append(ticker_html)
+                
+    except Exception as e:
+        pass
+
+    # If no threats are level 5 or above, do not render the bar
+    if not ticker_items: return
+
+    # Combine all items into one continuous string
+    all_items_html = "".join(ticker_items)
+
+    # Inject the CSS and HTML into Streamlit
+    ticker_code = f"""
+    <style>
+        /* Hide Streamlit Header & Top Right Dots completely */
+        [data-testid="stHeader"] {{ display: none !important; }}
+        
+        /* Push main Streamlit content down slightly so ticker doesn't overlap */
+        .block-container {{ padding-top: 3.5rem !important; }}
+
+        /* The Ticker Bar Container */
+        .ticker-wrap {{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 42px;
+            background-color: #050505; /* Sleek Black */
+            border-bottom: 1px solid #333;
+            z-index: 999999;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }}
+
+        /* The Scrolling Text Animation */
+        .ticker-move {{
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100vw;
+            animation: ticker 40s linear infinite; /* Speed Control */
+        }}
+
+        /* Pause on Hover */
+        .ticker-move:hover {{ animation-play-state: paused; }}
+
+        @keyframes ticker {{
+            0% {{ transform: translate3d(0, 0, 0); }}
+            100% {{ transform: translate3d(-100%, 0, 0); }}
+        }}
+
+        /* Individual News Items */
+        .ticker-item {{
+            display: inline-block;
+            margin-right: 60px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }}
+        
+        /* Link Styling */
+        .ticker-item a {{ text-decoration: none; transition: opacity 0.2s; }}
+        .ticker-item a:hover {{ text-decoration: underline; opacity: 0.8; cursor: pointer; }}
+        
+        /* Color Coding */
+        .color-yellow {{ color: #facc15 !important; }}
+        .color-orange {{ color: #f97316 !important; }}
+        .color-red {{ color: #ef4444 !important; text-shadow: 0 0 5px rgba(239, 68, 68, 0.4); }}
+    </style>
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            {all_items_html}
+        </div>
+    </div>
+    """
+    
+    st.markdown(ticker_code, unsafe_allow_html=True)
+
+
 import base64
 
 # ==========================================
@@ -1012,6 +1141,9 @@ if st.session_state['role'] is None:
 # MAIN DASHBOARD 
 # ==========================================
 else:
+    # --- RENDER THE NEW TICKER TAPE FIRST ---
+    render_ticker_tape()
+
     # --- MOBILE SIDEBAR RESTORE FIX ---
     st.markdown("""
 <style>
