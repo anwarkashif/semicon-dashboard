@@ -993,7 +993,12 @@ if st.session_state['role'] is None:
         submit_login = st.form_submit_button("Login", type="primary")
 
         if submit_login:
-            if email_input == "anwarkashif@outlook.com" and password_input == "NeverEstimateTheRahmat0fAllahSWT":
+            # Securely fetch credentials from Koyeb's hidden environment variables
+            ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "anwarkashif@semicon.com")
+            ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
+
+            # Check against the secure variables instead of hardcoded text
+            if email_input == ADMIN_EMAIL and password_input == ADMIN_PASSWORD:
                 st.session_state['role'] = 'admin'
                 st.rerun()
             else: 
