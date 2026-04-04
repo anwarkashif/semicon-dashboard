@@ -550,6 +550,8 @@ dashboard_data = load_data(latest_filepath)
 # TEXT PARSER FOR RSS ACCUMULATOR FIX
 # ==========================================
 def parse_rss_txt_file():
+    import urllib.parse # Required for URL encoding
+    
     rss_dict = {}
     filepath = 'data/rss_accumulator.txt'
     if not os.path.exists(filepath): return rss_dict
@@ -570,8 +572,12 @@ def parse_rss_txt_file():
                     date_str = line[3:d_end]
                     title_str = line[d_end+1:].strip()
                     
+                    # --- NEW LINK FIX: Dynamically generate a Google News search URL ---
+                    search_query = urllib.parse.quote_plus(title_str)
+                    news_link = f"https://news.google.com/search?q={search_query}"
+                    
                     if not any(x['title'] == title_str for x in rss_dict[current_reg]):
-                        rss_dict[current_reg].append({"title": title_str, "published": date_str, "link": "#"})
+                        rss_dict[current_reg].append({"title": title_str, "published": date_str, "link": news_link})
                 except Exception: pass
     return rss_dict
 
