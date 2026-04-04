@@ -550,7 +550,7 @@ dashboard_data = load_data(latest_filepath)
 # TEXT PARSER FOR RSS ACCUMULATOR FIX
 # ==========================================
 def parse_rss_txt_file():
-    import urllib.parse # Required for URL encoding
+    import urllib.parse 
     
     rss_dict = {}
     filepath = 'data/rss_accumulator.txt'
@@ -572,8 +572,11 @@ def parse_rss_txt_file():
                     date_str = line[3:d_end]
                     title_str = line[d_end+1:].strip()
                     
-                    # --- NEW LINK FIX: Dynamically generate a Google News search URL ---
-                    search_query = urllib.parse.quote_plus(title_str)
+                    # --- NEW FIX: Clean the string before searching ---
+                    # Remove emojis and prefixes that confuse Google News
+                    clean_search = title_str.replace("🔴", "").replace("🟠", "").replace("🟡", "").replace("CRITICAL:", "").replace("ELEVATED:", "").replace("WATCH:", "").replace("LIVE WARNING:", "").strip()
+                    
+                    search_query = urllib.parse.quote_plus(clean_search)
                     news_link = f"https://news.google.com/search?q={search_query}"
                     
                     if not any(x['title'] == title_str for x in rss_dict[current_reg]):
@@ -1935,10 +1938,14 @@ else:
                         if target_reg not in live_rss:
                             live_rss[target_reg] = []
                             
+                        import urllib.parse
+                        # Search ONLY the headline, ignoring the red emoji and warning text
+                        alert_query = urllib.parse.quote_plus(alert_headline)
+                        
                         live_rss[target_reg].append({
                             "title": f"🔴 LIVE WARNING: {alert_headline}",
                             "published": "JUST IN - ACTIVE ALERT",
-                            "link": "#"
+                            "link": f"https://news.google.com/search?q={alert_query}"
                         })
                 
                 if live_rss and isinstance(live_rss, dict):
