@@ -23,6 +23,7 @@ from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.opc.constants import RELATIONSHIP_TYPE
+import base64
 
 # --- App Configuration ---
 st.set_page_config(page_title="SemicoN Dashboard", page_icon="logo.jpg", layout="wide", initial_sidebar_state="expanded")
@@ -735,9 +736,11 @@ def check_early_warnings():
                     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
                     color: #ffffff;
                     min-height: 185px;
+                    max-height: 240px; /* NEW: Forces the box to stop expanding and trigger the scrollbar */
                     height: auto;
                     box-sizing: border-box;
                     overflow-y: auto; 
+                    -webkit-overflow-scrolling: touch; /* NEW: Forces smooth scroll support on Android/iOS non-Safari browsers */
                 }}
                 :fullscreen {{
                     background-color: rgba(20, 20, 20, 0.95);
@@ -987,8 +990,6 @@ def render_ticker_tape():
     
     st.markdown(ticker_code, unsafe_allow_html=True)
 
-
-import base64
 
 # ==========================================
 # LOGIN SCREEN 
@@ -1471,7 +1472,9 @@ else:
             st.markdown("---")
             
             current_day = datetime.now(timezone.utc).astimezone().strftime('%B %d, %Y')
-            st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 10px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
+
+            # Change margin-bottom: 10px; to margin-bottom: 30px;
+            st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 30px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
             
             check_early_warnings()
 
@@ -1507,7 +1510,7 @@ else:
 
                     base_hole = 0.35      
                     ring_width = 0.015    
-                    gap = 0.075           
+                    gap = 0.075          
 
                     for i, cat in enumerate(active_cats):
                         val = cat["score"]
