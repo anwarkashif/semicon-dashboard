@@ -919,17 +919,29 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* Make header transparent and ensure it sits above the ticker */
+        /* Make header transparent */
         [data-testid="stHeader"] {{ 
             z-index: 1000 !important;
             background-color: transparent !important;
         }}
         
-        /* EXPLICITLY PROTECT AND SHOW the sidebar toggle button (Crucial for Mobile) */
+        /* PIN THE SIDEBAR TOGGLE TO THE TOP LEFT (Bulletproof for Mobile) */
         [data-testid="collapsedControl"] {{
             display: flex !important;
             visibility: visible !important;
-            z-index: 1001 !important;
+            position: fixed !important;  /* Takes it out of Streamlit's collapsing grid */
+            top: 10px !important;
+            left: 10px !important;
+            z-index: 9999 !important;    /* Highest priority */
+            background-color: rgba(20, 20, 20, 0.7) !important; /* Slight dark background pill */
+            border-radius: 6px !important;
+            padding: 4px !important;
+        }}
+        
+        /* Force the SVG icon to be white so it doesn't vanish into the dark background */
+        [data-testid="collapsedControl"] svg {{
+            fill: #ffffff !important;
+            color: #ffffff !important;
         }}
         
         /* Target ONLY the 3-dot menu wrapper and action buttons on the top right */
@@ -941,21 +953,30 @@ def render_ticker_tape():
         /* Push main Streamlit content down slightly so ticker doesn't overlap */
         .block-container {{ padding-top: 5rem !important; }}
 
-        /* The Ticker Bar Container - Moved down slightly */
+        /* The Ticker Bar Container */
         .ticker-wrap {{
             position: fixed;
-            top: 40px; /* Moved down to reveal the sidebar toggle */
+            top: 40px; 
             left: 0;
             width: 100vw;
             height: 42px;
-            background-color: #050505; /* Sleek Black */
+            background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 999; /* Lowered so header stays on top */
+            z-index: 999; 
             overflow: hidden;
             display: flex;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
+
+        /* The Scrolling Text Animation */
+        .ticker-move {{
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100vw;
+            animation: ticker 260s linear infinite; 
+        }}
+    </style>
 
         /* The Scrolling Text Animation */
         .ticker-move {{
