@@ -860,7 +860,7 @@ def render_ticker_tape():
     ticker_items = []
     
     try:
-        # Automatically grab the 2-hour data using your existing parser!
+        # Automatically grab the data
         live_rss = parse_rss_txt_file()
         if not live_rss: return
         
@@ -873,7 +873,7 @@ def render_ticker_tape():
                     seen_titles.add(art['title'])
                     unique_news.append(art)
 
-        # Dynamic 1-10 Threat Scoring based on your established keywords
+        # Dynamic 1-10 Threat Scoring
         critical = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
         high = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension', 'export control', 'embargo', 'risk']
         med = ['delay', 'subsidy', 'compete', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'concern', 'geopolitical']
@@ -916,22 +916,26 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* Hide Streamlit Header & Top Right Dots completely */
-        [data-testid="stHeader"] {{ display: none !important; }}
+        /* Bring back the Header so the sidebar toggle is visible */
+        [data-testid="stHeader"] {{ 
+            display: flex !important; 
+            z-index: 1000 !important;
+            background-color: transparent !important;
+        }}
         
         /* Push main Streamlit content down slightly so ticker doesn't overlap */
-        .block-container {{ padding-top: 3.5rem !important; }}
+        .block-container {{ padding-top: 5rem !important; }}
 
-        /* The Ticker Bar Container */
+        /* The Ticker Bar Container - Moved down slightly */
         .ticker-wrap {{
             position: fixed;
-            top: 0;
+            top: 40px; /* Moved down to reveal the sidebar toggle */
             left: 0;
             width: 100vw;
             height: 42px;
             background-color: #050505; /* Sleek Black */
             border-bottom: 1px solid #333;
-            z-index: 999999;
+            z-index: 999; /* Lowered so header stays on top */
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -943,7 +947,7 @@ def render_ticker_tape():
             display: inline-block;
             white-space: nowrap;
             padding-left: 100vw;
-            animation: ticker 220s linear infinite; /* Speed Control */
+            animation: ticker 120s linear infinite; /* Speed Control */
         }}
 
         /* Pause on Hover */
