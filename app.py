@@ -947,7 +947,7 @@ def render_ticker_tape():
             display: inline-block;
             white-space: nowrap;
             padding-left: 100vw;
-            animation: ticker 120s linear infinite; /* Speed Control */
+            animation: ticker 220s linear infinite; /* Speed Control */
         }}
 
         /* Pause on Hover */
