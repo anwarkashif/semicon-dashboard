@@ -919,15 +919,21 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* Bring back the Header so the sidebar toggle is visible */
+        /* Make header transparent and ensure it sits above the ticker */
         [data-testid="stHeader"] {{ 
-            display: flex !important; 
             z-index: 1000 !important;
             background-color: transparent !important;
         }}
         
-        /* Hide ONLY the 3 vertical dots menu on the top right */
-        [data-testid="stToolbar"], #MainMenu, [data-testid="stActions"] {{ 
+        /* EXPLICITLY PROTECT AND SHOW the sidebar toggle button (Crucial for Mobile) */
+        [data-testid="collapsedControl"] {{
+            display: flex !important;
+            visibility: visible !important;
+            z-index: 1001 !important;
+        }}
+        
+        /* Target ONLY the 3-dot menu wrapper and action buttons on the top right */
+        [data-testid="stHeaderActionElements"], [data-testid="stToolbar"], #MainMenu {{ 
             display: none !important; 
             visibility: hidden !important; 
         }}
