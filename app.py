@@ -926,6 +926,12 @@ def render_ticker_tape():
             background-color: transparent !important;
         }}
         
+        /* Hide ONLY the 3 vertical dots menu on the top right */
+        [data-testid="stToolbar"], #MainMenu, [data-testid="stActions"] {{ 
+            display: none !important; 
+            visibility: hidden !important; 
+        }}
+        
         /* Push main Streamlit content down slightly so ticker doesn't overlap */
         .block-container {{ padding-top: 5rem !important; }}
 
@@ -950,7 +956,7 @@ def render_ticker_tape():
             display: inline-block;
             white-space: nowrap;
             padding-left: 100vw;
-            animation: ticker 220s linear infinite; /* Speed Control */
+            animation: ticker 260s linear infinite; /* Speed Control */
         }}
 
         /* Pause on Hover */
