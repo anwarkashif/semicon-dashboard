@@ -932,7 +932,7 @@ def render_ticker_tape():
         /* 3. FLOAT THE NATIVE SIDEBAR TOGGLE BUTTON SAFELY BELOW THE TICKER */
         [data-testid="collapsedControl"] {{
             position: fixed !important;
-            top: 70px !important; /* Safely below the 42px ticker */
+            top: 100px !important; /* Safely below the 42px ticker */
             left: 15px !important;
             z-index: 999999 !important; /* Force to top layer */
             background-color: rgba(25, 25, 25, 0.95) !important;
