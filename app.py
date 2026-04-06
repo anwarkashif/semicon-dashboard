@@ -919,25 +919,38 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* 1. Target EXACTLY the 3-dot menu and nothing else (leaves header intact) */
+        /* 1. BRING BACK THE OLD WORKING HEADER LOGIC */
+        [data-testid="stHeader"] {{ 
+            display: flex !important; 
+            background-color: transparent !important;
+            z-index: 1000 !important; /* High Z-Index keeps the toggle button on top */
+        }}
+        
+        /* Ensure the toggle icon is always white against dark backgrounds */
+        [data-testid="collapsedControl"] svg {{
+            fill: #ffffff !important;
+            color: #ffffff !important;
+        }}
+        
+        /* 2. Target EXACTLY the 3-dot menu and nothing else */
         [data-testid="stToolbar"] {{ 
             display: none !important; 
             visibility: hidden !important; 
         }}
         
-        /* 2. Push main Streamlit content down so it clears the native header AND our ticker */
-        .block-container {{ padding-top: 6rem !important; }}
+        /* 3. Push main Streamlit content down slightly so ticker doesn't overlap text */
+        .block-container {{ padding-top: 5rem !important; }}
 
-        /* 3. The Ticker Bar Container - Positioned BELOW Streamlit's default 60px header */
+        /* 4. The Ticker Bar Container */
         .ticker-wrap {{
             position: fixed;
-            top: 60px; /* Sits completely below the native UI */
+            top: 40px; /* Back to the original working position */
             left: 0;
             width: 100vw;
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 999; 
+            z-index: 990; /* 990 is lower than 1000, so it slides neatly UNDER the header/button */
             overflow: hidden;
             display: flex;
             align-items: center;
