@@ -922,35 +922,12 @@ def render_ticker_tape():
         /* 1. Transparent Header so it doesn't block the screen */
         [data-testid="stHeader"] {{ 
             background-color: transparent !important;
-            z-index: 1000 !important;
         }}
         
-        /* 2. FLOATING SIDEBAR BUTTON: Moved further down safely below the news ticker */
-        [data-testid="collapsedControl"] {{
-            display: flex !important;
-            visibility: visible !important;
-            position: fixed !important;
-            top: 120px !important; /* Increased from 100px to ensure total clearance */
-            left: 15px !important;
-            z-index: 99999 !important;
-            background-color: rgba(20, 20, 20, 0.9) !important;
-            border: 1px solid #333 !important;
-            border-radius: 8px !important;
-            padding: 6px !important;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.8) !important;
-            transition: all 0.2s ease !important;
-        }}
-        
-        [data-testid="collapsedControl"]:hover {{
-            background-color: rgba(40, 40, 40, 0.95) !important;
-            border-color: #00bfff !important;
-        }}
-        
+        /* 2. MAKE NATIVE ICON WHITE: Do NOT move the button, just change its color */
         [data-testid="collapsedControl"] svg {{
             fill: #ffffff !important;
             color: #ffffff !important;
-            width: 22px !important;
-            height: 22px !important;
         }}
         
         /* 3. Target EXACTLY the 3-dot menu and nothing else */
@@ -959,8 +936,8 @@ def render_ticker_tape():
             visibility: hidden !important; 
         }}
         
-        /* 4. Push main Streamlit content down slightly so ticker and button don't overlap text */
-        .block-container {{ padding-top: 7.5rem !important; /* Increased to account for the button */ }}
+        /* 4. Push main Streamlit content down slightly so ticker doesn't overlap text */
+        .block-container {{ padding-top: 5.5rem !important; }}
 
         /* 5. The Ticker Bar Container */
         .ticker-wrap {{
@@ -971,7 +948,7 @@ def render_ticker_tape():
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 990; 
+            z-index: 10; /* LOW Z-INDEX: Streamlit's native button and sidebar will render safely ON TOP of this */
             overflow: hidden;
             display: flex;
             align-items: center;
