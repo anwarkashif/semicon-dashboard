@@ -919,43 +919,50 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* 1. BRING BACK THE OLD WORKING HEADER LOGIC + STABILITY FIX */
+        /* 1. Header completely transparent, NO layout modifications to avoid breaking React remounts */
         [data-testid="stHeader"] {{ 
-            display: flex !important; 
             background-color: transparent !important;
-            position: relative !important;
-            z-index: 1001 !important; /* Always above ticker */
         }}
         
-        /* Safari + Streamlit stability fix for collapsing sidebar */
-        section[data-testid="stSidebar"] {{
-            z-index: 1002 !important;
+        /* 2. Hide right-side toolbar (3 dots) using visibility to preserve DOM integrity */
+        [data-testid="stToolbar"] {{ 
+            visibility: hidden !important; 
         }}
         
-        /* Ensure the toggle icon is always white against dark backgrounds */
+        /* 3. FLOAT THE NATIVE SIDEBAR TOGGLE BUTTON SAFELY BELOW THE TICKER */
+        [data-testid="collapsedControl"] {{
+            position: fixed !important;
+            top: 55px !important; /* Safely below the 42px ticker */
+            left: 15px !important;
+            z-index: 999999 !important; /* Force to top layer */
+            background-color: rgba(25, 25, 25, 0.95) !important;
+            border: 1px solid #444 !important;
+            border-radius: 8px !important;
+            padding: 5px !important;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+        }}
+        
+        /* Force toggle icon to be white */
         [data-testid="collapsedControl"] svg {{
             fill: #ffffff !important;
             color: #ffffff !important;
         }}
-        
-        /* 2. Target EXACTLY the 3-dot menu buttons, NOT the whole toolbar */
-        [data-testid="stToolbar"] button {{ 
-            display: none !important; 
-        }}
-        
-        /* 3. Push main Streamlit content down slightly so ticker doesn't overlap text */
-        .block-container {{ padding-top: 5rem !important; }}
 
-        /* 4. The Ticker Bar Container */
+        /* 4. Push main Streamlit content down so it clears the ticker and the floating button */
+        .block-container {{ 
+            padding-top: 6rem !important; 
+        }}
+
+        /* 5. The Ticker Bar Container - Anchored to the very top */
         .ticker-wrap {{
             position: fixed;
-            top: 40px; 
+            top: 0px; 
             left: 0;
             width: 100vw;
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 990; /* 990 is lower than 1001, so it slides neatly UNDER the header/button */
+            z-index: 99998; /* One layer below the toggle button */
             overflow: hidden;
             display: flex;
             align-items: center;
