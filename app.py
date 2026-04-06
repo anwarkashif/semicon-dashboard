@@ -922,18 +922,15 @@ def render_ticker_tape():
         /* 1. Transparent Header so it doesn't block the screen */
         [data-testid="stHeader"] {{ 
             background-color: transparent !important;
-            z-index: 99999 !important; /* Force to very top */
+            z-index: 1000 !important;
         }}
         
-        /* 2. PROTECT THE SIDEBAR TOGGLE: Make it white and clickable */
+        /* 2. PROTECT THE SIDEBAR TOGGLE: Restore native layout but force white color */
         [data-testid="collapsedControl"] {{
-            display: flex !important;
             visibility: visible !important;
             z-index: 99999 !important;
-            background-color: rgba(20, 20, 20, 0.7) !important;
-            border-radius: 6px !important;
-            padding: 4px !important;
         }}
+        
         [data-testid="collapsedControl"] svg {{
             fill: #ffffff !important;
             color: #ffffff !important;
