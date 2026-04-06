@@ -919,50 +919,45 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* Make header transparent */
+        /* 1. Transparent Header so it doesn't block the screen */
         [data-testid="stHeader"] {{ 
-            z-index: 1000 !important;
             background-color: transparent !important;
+            z-index: 99999 !important; /* Force to very top */
         }}
         
-        /* PIN THE SIDEBAR TOGGLE TO THE TOP LEFT (Bulletproof for Mobile) */
+        /* 2. PROTECT THE SIDEBAR TOGGLE: Make it white and clickable */
         [data-testid="collapsedControl"] {{
             display: flex !important;
             visibility: visible !important;
-            position: fixed !important;  /* Takes it out of Streamlit's collapsing grid */
-            top: 10px !important;
-            left: 10px !important;
-            z-index: 9999 !important;    /* Highest priority */
-            background-color: rgba(20, 20, 20, 0.7) !important; /* Slight dark background pill */
+            z-index: 99999 !important;
+            background-color: rgba(20, 20, 20, 0.7) !important;
             border-radius: 6px !important;
             padding: 4px !important;
         }}
-        
-        /* Force the SVG icon to be white so it doesn't vanish into the dark background */
         [data-testid="collapsedControl"] svg {{
             fill: #ffffff !important;
             color: #ffffff !important;
         }}
         
-        /* Target ONLY the 3-dot menu wrapper and action buttons on the top right */
-        [data-testid="stHeaderActionElements"], [data-testid="stToolbar"], #MainMenu {{ 
+        /* 3. Target EXACTLY the 3-dot menu and nothing else */
+        [data-testid="stToolbar"] {{ 
             display: none !important; 
             visibility: hidden !important; 
         }}
         
-        /* Push main Streamlit content down slightly so ticker doesn't overlap */
+        /* 4. Push main Streamlit content down slightly so ticker doesn't overlap */
         .block-container {{ padding-top: 5rem !important; }}
 
-        /* The Ticker Bar Container */
+        /* 5. The Ticker Bar Container */
         .ticker-wrap {{
             position: fixed;
-            top: 40px; 
+            top: 45px; /* Sits just below the native hamburger menu */
             left: 0;
             width: 100vw;
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 999; 
+            z-index: 990; /* Sits underneath the header so buttons stay clickable */
             overflow: hidden;
             display: flex;
             align-items: center;
