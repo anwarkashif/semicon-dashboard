@@ -919,36 +919,25 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* 1. Transparent Header so it doesn't block the screen */
-        [data-testid="stHeader"] {{ 
-            background-color: transparent !important;
-        }}
-        
-        /* 2. MAKE NATIVE ICON WHITE: Do NOT move the button, just change its color */
-        [data-testid="collapsedControl"] svg {{
-            fill: #ffffff !important;
-            color: #ffffff !important;
-        }}
-        
-        /* 3. Target EXACTLY the 3-dot menu and nothing else */
+        /* 1. Target EXACTLY the 3-dot menu and nothing else (leaves header intact) */
         [data-testid="stToolbar"] {{ 
             display: none !important; 
             visibility: hidden !important; 
         }}
         
-        /* 4. Push main Streamlit content down slightly so ticker doesn't overlap text */
-        .block-container {{ padding-top: 5.5rem !important; }}
+        /* 2. Push main Streamlit content down so it clears the native header AND our ticker */
+        .block-container {{ padding-top: 6rem !important; }}
 
-        /* 5. The Ticker Bar Container */
+        /* 3. The Ticker Bar Container - Positioned BELOW Streamlit's default 60px header */
         .ticker-wrap {{
             position: fixed;
-            top: 45px; 
+            top: 60px; /* Sits completely below the native UI */
             left: 0;
             width: 100vw;
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 10; /* LOW Z-INDEX: Streamlit's native button and sidebar will render safely ON TOP of this */
+            z-index: 999; 
             overflow: hidden;
             display: flex;
             align-items: center;
