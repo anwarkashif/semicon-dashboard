@@ -925,15 +925,32 @@ def render_ticker_tape():
             z-index: 1000 !important;
         }}
         
-        /* 2. PROTECT THE SIDEBAR TOGGLE: Restore native layout but force white color */
+        /* 2. FLOATING SIDEBAR BUTTON: Moved safely below the news ticker */
         [data-testid="collapsedControl"] {{
+            display: flex !important;
             visibility: visible !important;
+            position: fixed !important;
+            top: 100px !important; /* Sits completely below the ticker */
+            left: 15px !important;
             z-index: 99999 !important;
+            background-color: rgba(20, 20, 20, 0.9) !important;
+            border: 1px solid #333 !important;
+            border-radius: 8px !important;
+            padding: 6px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.8) !important;
+            transition: all 0.2s ease !important;
+        }}
+        
+        [data-testid="collapsedControl"]:hover {{
+            background-color: rgba(40, 40, 40, 0.95) !important;
+            border-color: #00bfff !important;
         }}
         
         [data-testid="collapsedControl"] svg {{
             fill: #ffffff !important;
             color: #ffffff !important;
+            width: 22px !important;
+            height: 22px !important;
         }}
         
         /* 3. Target EXACTLY the 3-dot menu and nothing else */
@@ -942,19 +959,19 @@ def render_ticker_tape():
             visibility: hidden !important; 
         }}
         
-        /* 4. Push main Streamlit content down slightly so ticker doesn't overlap */
-        .block-container {{ padding-top: 5rem !important; }}
+        /* 4. Push main Streamlit content down slightly so ticker and button don't overlap text */
+        .block-container {{ padding-top: 6.5rem !important; }}
 
         /* 5. The Ticker Bar Container */
         .ticker-wrap {{
             position: fixed;
-            top: 45px; /* Sits just below the native hamburger menu */
+            top: 45px; 
             left: 0;
             width: 100vw;
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 990; /* Sits underneath the header so buttons stay clickable */
+            z-index: 990; 
             overflow: hidden;
             display: flex;
             align-items: center;
