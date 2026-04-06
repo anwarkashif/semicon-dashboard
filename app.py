@@ -974,15 +974,6 @@ def render_ticker_tape():
             display: inline-block;
             white-space: nowrap;
             padding-left: 100vw;
-            animation: ticker 260s linear infinite; 
-        }}
-    </style>
-
-        /* The Scrolling Text Animation */
-        .ticker-move {{
-            display: inline-block;
-            white-space: nowrap;
-            padding-left: 100vw;
             animation: ticker 260s linear infinite; /* Speed Control */
         }}
 
