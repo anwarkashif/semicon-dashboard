@@ -919,11 +919,17 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* 1. BRING BACK THE OLD WORKING HEADER LOGIC */
+        /* 1. BRING BACK THE OLD WORKING HEADER LOGIC + STABILITY FIX */
         [data-testid="stHeader"] {{ 
             display: flex !important; 
             background-color: transparent !important;
-            z-index: 1000 !important; /* High Z-Index keeps the toggle button on top */
+            position: relative !important;
+            z-index: 1001 !important; /* Always above ticker */
+        }}
+        
+        /* Safari + Streamlit stability fix for collapsing sidebar */
+        section[data-testid="stSidebar"] {{
+            z-index: 1002 !important;
         }}
         
         /* Ensure the toggle icon is always white against dark backgrounds */
@@ -932,10 +938,9 @@ def render_ticker_tape():
             color: #ffffff !important;
         }}
         
-        /* 2. Target EXACTLY the 3-dot menu and nothing else */
-        [data-testid="stToolbar"] {{ 
+        /* 2. Target EXACTLY the 3-dot menu buttons, NOT the whole toolbar */
+        [data-testid="stToolbar"] button {{ 
             display: none !important; 
-            visibility: hidden !important; 
         }}
         
         /* 3. Push main Streamlit content down slightly so ticker doesn't overlap text */
@@ -944,13 +949,13 @@ def render_ticker_tape():
         /* 4. The Ticker Bar Container */
         .ticker-wrap {{
             position: fixed;
-            top: 40px; /* Back to the original working position */
+            top: 40px; 
             left: 0;
             width: 100vw;
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 990; /* 990 is lower than 1000, so it slides neatly UNDER the header/button */
+            z-index: 990; /* 990 is lower than 1001, so it slides neatly UNDER the header/button */
             overflow: hidden;
             display: flex;
             align-items: center;
