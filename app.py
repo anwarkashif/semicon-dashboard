@@ -925,12 +925,12 @@ def render_ticker_tape():
             z-index: 1000 !important;
         }}
         
-        /* 2. FLOATING SIDEBAR BUTTON: Moved safely below the news ticker */
+        /* 2. FLOATING SIDEBAR BUTTON: Moved further down safely below the news ticker */
         [data-testid="collapsedControl"] {{
             display: flex !important;
             visibility: visible !important;
             position: fixed !important;
-            top: 100px !important; /* Sits completely below the ticker */
+            top: 120px !important; /* Increased from 100px to ensure total clearance */
             left: 15px !important;
             z-index: 99999 !important;
             background-color: rgba(20, 20, 20, 0.9) !important;
@@ -960,7 +960,7 @@ def render_ticker_tape():
         }}
         
         /* 4. Push main Streamlit content down slightly so ticker and button don't overlap text */
-        .block-container {{ padding-top: 6.5rem !important; }}
+        .block-container {{ padding-top: 7.5rem !important; /* Increased to account for the button */ }}
 
         /* 5. The Ticker Bar Container */
         .ticker-wrap {{
