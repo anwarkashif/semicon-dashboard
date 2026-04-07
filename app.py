@@ -935,16 +935,31 @@ def render_ticker_tape():
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. THE SILVER BULLET: Push the entire native Streamlit header down below the ticker */
+        /* 2. GEMINI-STYLE LEFT VERTICAL BAR: Repurpose Streamlit's native header */
         [data-testid="stHeader"] {{ 
-            top: 42px !important; /* Matches the ticker height exactly */
-            background-color: transparent !important;
-            z-index: 99998 !important; /* Just below ticker layer */
+            position: fixed !important;
+            top: 42px !important; /* Starts exactly below the 42px ticker */
+            left: 0 !important;
+            width: 60px !important; /* Narrow vertical bar */
+            height: calc(100vh - 42px) !important; /* Stretches to the bottom of the screen */
+            background-color: #181818 !important; /* Sleek dark grey tone */
+            border-right: 1px solid #333 !important;
+            z-index: 99998 !important; /* Safely underneath the ticker */
+            padding: 0 !important;
         }}
         
-        /* 3. Hide right-side toolbar (3 dots) using visibility */
+        /* Center the toggle icon inside the new vertical bar */
+        [data-testid="collapsedControl"] {{
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important;
+            margin-top: 15px !important; /* Breathes a bit of space from the top */
+        }}
+
+        /* 3. Hide right-side toolbar (3 dots) entirely */
         [data-testid="stToolbar"] {{ 
-            visibility: hidden !important; 
+            display: none !important; 
         }}
         
         /* 4. Target BOTH the open and close icons to ensure they are white */
@@ -954,9 +969,10 @@ def render_ticker_tape():
             color: #ffffff !important;
         }}
 
-        /* 5. Push main Streamlit content down so it clears both the ticker and header */
+        /* 5. Push main Streamlit content down to clear ticker, and right to clear the vertical bar */
         .block-container {{ 
             padding-top: 5rem !important; 
+            padding-left: 5rem !important; /* Prevents text from hiding under the left bar */
         }}
 
         /* The Scrolling Text Animation */
