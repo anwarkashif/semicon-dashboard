@@ -919,41 +919,7 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* 1. Header completely transparent, NO layout modifications to avoid breaking React remounts */
-        [data-testid="stHeader"] {{ 
-            background-color: transparent !important;
-        }}
-        
-        /* 2. Hide right-side toolbar (3 dots) using visibility to preserve DOM integrity */
-        [data-testid="stToolbar"] {{ 
-            visibility: hidden !important; 
-        }}
-        
-        /* 3. FLOAT THE NATIVE SIDEBAR TOGGLE BUTTON SAFELY BELOW THE TICKER */
-        [data-testid="collapsedControl"] {{
-            position: fixed !important;
-            top: 95px !important; /* Safely pushed down to avoid Streamlit/Safari top-boundary repaints */
-            left: 15px !important;
-            z-index: 999999 !important; /* Force to top layer */
-            background-color: rgba(25, 25, 25, 0.95) !important;
-            border: 1px solid #444 !important;
-            border-radius: 8px !important;
-            padding: 5px !important;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
-        }}
-        
-        /* Force toggle icon to be white */
-        [data-testid="collapsedControl"] svg {{
-            fill: #ffffff !important;
-            color: #ffffff !important;
-        }}
-
-        /* 4. Push main Streamlit content down so it clears the ticker and the floating button */
-        .block-container {{ 
-            padding-top: 6rem !important; 
-        }}
-
-        /* 5. The Ticker Bar Container - Anchored to the very top */
+        /* 1. The Ticker Bar Container - Anchored to the very top */
         .ticker-wrap {{
             position: fixed;
             top: 0px; 
@@ -962,11 +928,35 @@ def render_ticker_tape():
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 99998; /* One layer below the toggle button */
+            z-index: 99999; /* Highest layer */
             overflow: hidden;
             display: flex;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }}
+
+        /* 2. THE SILVER BULLET: Push the entire native Streamlit header down below the ticker */
+        [data-testid="stHeader"] {{ 
+            top: 42px !important; /* Matches the ticker height exactly */
+            background-color: transparent !important;
+            z-index: 99998 !important; /* Just below ticker layer */
+        }}
+        
+        /* 3. Hide right-side toolbar (3 dots) using visibility */
+        [data-testid="stToolbar"] {{ 
+            visibility: hidden !important; 
+        }}
+        
+        /* 4. Target BOTH the open and close icons to ensure they are white */
+        [data-testid="collapsedControl"] svg,
+        [data-testid="stSidebarCollapseButton"] svg {{
+            fill: #ffffff !important;
+            color: #ffffff !important;
+        }}
+
+        /* 5. Push main Streamlit content down so it clears both the ticker and header */
+        .block-container {{ 
+            padding-top: 5rem !important; 
         }}
 
         /* The Scrolling Text Animation */
