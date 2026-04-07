@@ -935,21 +935,26 @@ def render_ticker_tape():
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. THE FIX: Force the header to stay alive to prevent vanishing buttons */
+        /* 2. Force the header to stay alive */
         [data-testid="stHeader"] {{ 
-            display: flex !important; /* This stops the React unmount bug */
+            display: flex !important; 
             background-color: transparent !important;
             z-index: 99995 !important;
             pointer-events: none !important; /* Lets you click the ticker links through the invisible header */
         }}
 
-        /* 3. YOUR SUGGESTION: Push the toggle button down to align with the title text */
+        /* 3. YOUR SUGGESTION + THE FIX: Push the toggle button down using Transform */
         [data-testid="collapsedControl"] {{
             pointer-events: auto !important; /* Re-enables clicking for the button */
-            margin-top: 55px !important; /* Drops it down perfectly next to the text */
+            transform: translateY(55px) !important; /* Forces the button down without breaking Streamlit's layout engine */
             background-color: rgba(20, 20, 20, 0.8) !important;
             border-radius: 6px !important;
             padding: 4px !important;
+        }}
+        
+        /* Eliminate the random flashing text on mobile */
+        [data-testid="collapsedControl"] span {{
+            display: none !important;
         }}
         
         /* 4. Target BOTH the open and close icons to ensure they are white */
