@@ -928,38 +928,28 @@ def render_ticker_tape():
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 99999; /* Highest layer */
+            z-index: 99990; /* High layer, but lower than the sidebar */
             overflow: hidden;
             display: flex;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. GEMINI-STYLE LEFT VERTICAL BAR: Repurpose Streamlit's native header */
+        /* 2. THE FIX: Force the header to stay alive to prevent vanishing buttons */
         [data-testid="stHeader"] {{ 
-            position: fixed !important;
-            top: 42px !important; /* Starts exactly below the 42px ticker */
-            left: 0 !important;
-            width: 60px !important; /* Narrow vertical bar */
-            height: calc(100vh - 42px) !important; /* Stretches to the bottom of the screen */
-            background-color: #181818 !important; /* Sleek dark grey tone */
-            border-right: 1px solid #333 !important;
-            z-index: 99998 !important; /* Safely underneath the ticker */
-            padding: 0 !important;
-        }}
-        
-        /* Center the toggle icon inside the new vertical bar */
-        [data-testid="collapsedControl"] {{
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            width: 100% !important;
-            margin-top: 15px !important; /* Breathes a bit of space from the top */
+            display: flex !important; /* This stops the React unmount bug */
+            background-color: transparent !important;
+            z-index: 99995 !important;
+            pointer-events: none !important; /* Lets you click the ticker links through the invisible header */
         }}
 
-        /* 3. Hide right-side toolbar (3 dots) entirely */
-        [data-testid="stToolbar"] {{ 
-            display: none !important; 
+        /* 3. YOUR SUGGESTION: Push the toggle button down to align with the title text */
+        [data-testid="collapsedControl"] {{
+            pointer-events: auto !important; /* Re-enables clicking for the button */
+            margin-top: 55px !important; /* Drops it down perfectly next to the text */
+            background-color: rgba(20, 20, 20, 0.8) !important;
+            border-radius: 6px !important;
+            padding: 4px !important;
         }}
         
         /* 4. Target BOTH the open and close icons to ensure they are white */
@@ -969,10 +959,19 @@ def render_ticker_tape():
             color: #ffffff !important;
         }}
 
-        /* 5. Push main Streamlit content down to clear ticker, and right to clear the vertical bar */
+        /* 5. Ensure the sidebar opens ON TOP of the ticker so the close button works */
+        [data-testid="stSidebar"] {{
+            z-index: 99999 !important; 
+        }}
+
+        /* 6. Hide right-side toolbar (3 dots) entirely */
+        [data-testid="stToolbar"] {{ 
+            display: none !important; 
+        }}
+
+        /* 7. Push main Streamlit content down to clear ticker */
         .block-container {{ 
-            padding-top: 5rem !important; 
-            padding-left: 5rem !important; /* Prevents text from hiding under the left bar */
+            padding-top: 6.5rem !important; 
         }}
 
         /* The Scrolling Text Animation */
