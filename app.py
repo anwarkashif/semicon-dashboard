@@ -919,70 +919,57 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* 1. The Ticker Bar - Lower Z-Index so it doesn't block UI */
+        /* 1. Ticker at the absolute top, highest z-index so nothing covers it */
         .ticker-wrap {{
             position: fixed;
-            top: 0; 
+            top: 0px; 
             left: 0;
-            width: 100%;
+            width: 100vw;
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 99; /* Lowered significantly so Streamlit UI stays on top */
+            z-index: 999999 !important; 
             overflow: hidden;
             display: flex;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. THE FIX: Ensure the Header is ABOVE the ticker */
+        /* 2. Push Streamlit's native header (containing the OPEN button) down by exactly 42px */
         [data-testid="stHeader"] {{ 
-            z-index: 999 !important;
-            background: transparent !important;
+            top: 42px !important; 
+            background-color: transparent !important;
         }}
 
-        /* 3. Force Sidebar Toggle to be visible, clickable, and below the ticker */
-        [data-testid="collapsedControl"] {{
-            top: 50px !important; /* Move it safely BELOW the 42px ticker */
-            z-index: 1000 !important;
-            background-color: rgba(30, 30, 30, 0.9) !important;
-            border-radius: 5px !important;
-            padding: 5px !important;
-            display: flex !important;
+        /* 3. Push the entire Sidebar (containing the CLOSE button) down by exactly 42px */
+        [data-testid="stSidebar"] {{
+            top: 42px !important;
+            height: calc(100vh - 42px) !important;
         }}
-        
-        /* Eliminate any random flashing text spans on mobile */
-        [data-testid="collapsedControl"] span {{
-            display: none !important;
-        }}
-        
-        /* Keep the toggle icons white */
+
+        /* 4. Ensure toggle icons are explicitly white, but DO NOT touch their layout/positioning */
         [data-testid="collapsedControl"] svg,
         [data-testid="stSidebarCollapseButton"] svg {{
             fill: #ffffff !important;
             color: #ffffff !important;
         }}
 
-        /* 4. Ensure the Sidebar itself covers the ticker when open */
-        [data-testid="stSidebar"] {{
-            z-index: 10000 !important; 
-        }}
-        
-        /* Hide right-side toolbar (3 dots) */
+        /* 5. Hide the 3-dot menu cleanly as per your research */
         [data-testid="stToolbar"] {{ 
             display: none !important; 
         }}
 
-        /* 5. Space out the main content so it clears the ticker and button */
+        /* 6. Push main content down so it clears both the ticker and the shifted header */
         .block-container {{ 
-            padding-top: 6.5rem !important; 
+            padding-top: 5rem !important; 
         }}
 
-        /* --- Animation & Styling --- */
+        /* The Scrolling Text Animation */
         .ticker-move {{
             display: inline-block;
             white-space: nowrap;
             padding-left: 100vw;
-            animation: ticker 260s linear infinite; /* Kept your specific speed */
+            animation: ticker 260s linear infinite;
         }}
 
         .ticker-move:hover {{ animation-play-state: paused; }}
