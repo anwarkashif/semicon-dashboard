@@ -919,47 +919,40 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* 1. Ticker at the absolute top, highest z-index so nothing covers it */
+        /* 1. Ticker Bar - Starts 50px from left to NEVER overlap the native hamburger button! */
         .ticker-wrap {{
             position: fixed;
             top: 0px; 
-            left: 0;
-            width: 100vw;
+            left: 50px; /* CRITICAL FIX: Leaves the top-left corner completely empty */
+            width: calc(100vw - 50px);
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 999999 !important; 
+            border-left: 1px solid #333;
+            z-index: 990; /* High enough to overlay content, but lower than the sidebar */
             overflow: hidden;
             display: flex;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. Push Streamlit's native header (containing the OPEN button) down by exactly 42px */
+        /* 2. Keep the native header transparent so the button looks natural */
         [data-testid="stHeader"] {{ 
-            top: 42px !important; 
             background-color: transparent !important;
+            z-index: 1000 !important; /* Header (and its button) stays firmly above the ticker */
         }}
 
-        /* 3. Push the entire Sidebar (containing the CLOSE button) down by exactly 42px */
-        [data-testid="stSidebar"] {{
-            top: 42px !important;
-            height: calc(100vh - 42px) !important;
-        }}
-
-        /* 4. Ensure toggle icons are explicitly white, but DO NOT touch their layout/positioning */
-        [data-testid="collapsedControl"] svg,
-        [data-testid="stSidebarCollapseButton"] svg {{
-            fill: #ffffff !important;
-            color: #ffffff !important;
-        }}
-
-        /* 5. Hide the 3-dot menu cleanly as per your research */
+        /* 3. Hide right-side toolbar (3 dots) */
         [data-testid="stToolbar"] {{ 
             display: none !important; 
         }}
+        
+        /* 4. Prevent sidebar logo from flashing full size (Saved from your old fix) */
+        [data-testid="stSidebar"] img {{ 
+            max-width: 100% !important; 
+        }}
 
-        /* 6. Push main content down so it clears both the ticker and the shifted header */
+        /* 5. Push main content down so it clears the ticker */
         .block-container {{ 
             padding-top: 5rem !important; 
         }}
@@ -1175,17 +1168,6 @@ if st.session_state['role'] is None:
 else:
     # --- RENDER THE NEW TICKER TAPE FIRST ---
     render_ticker_tape()
-
-    # --- MOBILE SIDEBAR RESTORE FIX ---
-    st.markdown("""
-<style>
-    [data-testid="collapsedControl"] { display: block !important; } 
-    [data-testid="stSidebar"] { display: block !important; } 
-    header { display: flex !important; }
-    /* Prevent sidebar logo from flashing full size */
-    [data-testid="stSidebar"] img { max-width: 100% !important; }
-</style>
-""", unsafe_allow_html=True)
 
     st.sidebar.image("logo.jpg", use_container_width=True)
     st.sidebar.markdown("""
