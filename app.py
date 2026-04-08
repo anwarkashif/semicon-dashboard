@@ -923,23 +923,31 @@ def render_ticker_tape():
         .ticker-wrap {{
             position: fixed;
             top: 0px; 
-            left: 50px; /* CRITICAL FIX: Leaves the top-left corner completely empty */
+            left: 50px; 
             width: calc(100vw - 50px);
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
             border-left: 1px solid #333;
-            z-index: 990; /* High enough to overlay content, but lower than the sidebar */
+            z-index: 990; 
             overflow: hidden;
             display: flex;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. Keep the native header transparent so the button looks natural */
-        [data-testid="stHeader"] {{ 
+        /* 2. CRITICAL FIX: Counter-attack the Login CSS to unhide the header & button */
+        header, [data-testid="stHeader"] {{ 
+            display: flex !important;
+            visibility: visible !important;
             background-color: transparent !important;
-            z-index: 1000 !important; /* Header (and its button) stays firmly above the ticker */
+            z-index: 1000 !important; 
+        }}
+        
+        [data-testid="collapsedControl"] {{
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
         }}
 
         /* 3. Hide right-side toolbar (3 dots) */
@@ -947,7 +955,7 @@ def render_ticker_tape():
             display: none !important; 
         }}
         
-        /* 4. Prevent sidebar logo from flashing full size (Saved from your old fix) */
+        /* 4. Prevent sidebar logo from flashing full size */
         [data-testid="stSidebar"] img {{ 
             max-width: 100% !important; 
         }}
