@@ -936,7 +936,7 @@ def render_ticker_tape():
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. CRITICAL FIX: Counter-attack the Login CSS to unhide the header & button */
+        /* 2. CRITICAL FIX: Defeat background camouflage and unhide header */
         header, [data-testid="stHeader"] {{ 
             display: flex !important;
             visibility: visible !important;
@@ -948,6 +948,16 @@ def render_ticker_tape():
             display: flex !important;
             visibility: visible !important;
             opacity: 1 !important;
+            z-index: 1001 !important; /* Force it above everything */
+            color: #ffffff !important;
+        }}
+
+        /* Force the SVG icon itself to be brilliant white */
+        [data-testid="collapsedControl"] svg, 
+        [data-testid="stSidebarCollapseButton"] svg {{
+            fill: #ffffff !important;
+            color: #ffffff !important;
+            stroke: #ffffff !important;
         }}
 
         /* 3. Hide right-side toolbar (3 dots) */
