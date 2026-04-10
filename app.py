@@ -919,7 +919,7 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* 1. Ticker Bar - Starts 50px from left to NEVER overlap the native hamburger button! */
+        /* 1. Ticker Bar - Starts 50px from left to NEVER overlap the button box! */
         .ticker-wrap {{
             position: fixed;
             top: 0px; 
@@ -936,11 +936,14 @@ def render_ticker_tape():
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. CRITICAL FIX: Defeat background camouflage and unhide header */
-        header, [data-testid="stHeader"] {{ 
+        /* 2. HAMBURGER PROTECTOR BOX: A perfectly sized dark square in the top left */
+        [data-testid="stHeader"] {{ 
             display: flex !important;
             visibility: visible !important;
-            background-color: transparent !important;
+            background-color: #050505 !important; /* Dark background so the white icon pops */
+            width: 50px !important; /* Locks it to the exact 50px gap */
+            height: 42px !important;
+            border-bottom: 1px solid #333;
             z-index: 1000 !important; 
         }}
         
@@ -948,11 +951,10 @@ def render_ticker_tape():
             display: flex !important;
             visibility: visible !important;
             opacity: 1 !important;
-            z-index: 1001 !important; /* Force it above everything */
-            color: #ffffff !important;
+            z-index: 1001 !important; 
         }}
 
-        /* Force the SVG icon itself to be brilliant white */
+        /* Force the SVG icon to be white */
         [data-testid="collapsedControl"] svg, 
         [data-testid="stSidebarCollapseButton"] svg {{
             fill: #ffffff !important;
@@ -960,17 +962,23 @@ def render_ticker_tape():
             stroke: #ffffff !important;
         }}
 
-        /* 3. Hide right-side toolbar (3 dots) */
+        /* 3. RESURRECT SIDEBAR: Unset the Login Screen's hiding spell cleanly */
+        [data-testid="stSidebar"] {{
+            display: unset !important;
+            visibility: visible !important;
+        }}
+
+        /* 4. Hide right-side toolbar (3 dots) */
         [data-testid="stToolbar"] {{ 
             display: none !important; 
         }}
         
-        /* 4. Prevent sidebar logo from flashing full size */
+        /* 5. Prevent sidebar logo from flashing full size */
         [data-testid="stSidebar"] img {{ 
             max-width: 100% !important; 
         }}
 
-        /* 5. Push main content down so it clears the ticker */
+        /* 6. Push main content down so it clears the ticker */
         .block-container {{ 
             padding-top: 5rem !important; 
         }}
@@ -1029,8 +1037,8 @@ if st.session_state['role'] is None:
     # --- NEW PARADIGM: FIXED LEFT PANEL + CENTERED RIGHT CONTAINER ---
     st.markdown("""
     <style>
-        /* Hide default Streamlit navigation */
-        [data-testid="collapsedControl"], [data-testid="stSidebar"], header { display: none !important; }
+        /* Hide default Streamlit navigation safely */
+        [data-testid="collapsedControl"], [data-testid="stSidebar"], [data-testid="stHeader"] { display: none !important; }
         
         /* Prevent scrolling on desktop for a clean app feel */
         html, body, .stApp {
