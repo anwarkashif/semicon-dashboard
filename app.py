@@ -929,7 +929,7 @@ def render_ticker_tape():
             background-color: #050505; 
             border-bottom: 1px solid #333;
             z-index: 998; /* Lower than native controls */
-            pointer-events: auto;
+            pointer-events: none; /* CRITICAL FIX: Lets clicks pass through */
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -973,6 +973,7 @@ def render_ticker_tape():
             cursor: pointer;
             box-shadow: 0 0 12px rgba(0,0,0,0.6);
             transition: transform 0.2s ease;
+            pointer-events: auto; /* Ensure the button itself is clickable */
         }}
         .floating-btn:hover {{ transform: scale(1.1); }}
         .floating-btn span {{ font-size: 22px; color: white; }}
@@ -985,10 +986,13 @@ def render_ticker_tape():
     </div>
 
     <div class="floating-btn" onclick="
-        const btn = window.parent.document.querySelector('[data-testid=\\'collapsedControl\\']');
-        if (btn) {{ btn.click(); }} else {{
-            const btn2 = window.parent.document.querySelector('[data-testid=\\'stSidebarCollapseButton\\']');
-            if (btn2) {{ btn2.click(); }}
+        const doc = window.document;
+        let btn = doc.querySelector('[data-testid=\\'collapsedControl\\']');
+        if (!btn) {{
+            btn = doc.querySelector('[data-testid=\\'stSidebarCollapseButton\\']');
+        }}
+        if (btn) {{
+            btn.click();
         }}
     ">
         <span>☰</span>
