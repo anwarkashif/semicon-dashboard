@@ -928,43 +928,56 @@ def render_ticker_tape():
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            z-index: 9999; 
+            z-index: 998; /* Lower than native controls */
+            pointer-events: none; /* CRITICAL: Lets clicks pass through */
             overflow: hidden;
             display: flex;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. Push Streamlit header down below ticker */
-        [data-testid="stHeader"] {{ 
-            top: 42px !important;
-            background-color: transparent !important;
-            z-index: 9990 !important; 
-        }}
-        
-        /* 3. Global Toggle Safety Net */
+        /* 2. THE MAGIC HACK: Turn Streamlit's native toggle into an Apple-style floating button */
         [data-testid="collapsedControl"] {{
+            position: fixed !important;
+            top: auto !important; /* Disconnect from top header */
+            bottom: 40px !important; /* Move to bottom left */
+            left: 20px !important;
+            width: 55px !important;
+            height: 55px !important;
+            border-radius: 50% !important;
+            background: rgba(20,20,20,0.85) !important;
+            backdrop-filter: blur(10px) !important;
+            border: 1px solid #444 !important;
             display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 10001 !important; /* Keep it above everything */
+            box-shadow: 0 0 15px rgba(0,0,0,0.6) !important;
+            transition: transform 0.2s ease !important;
             visibility: visible !important;
             opacity: 1 !important;
-            z-index: 10000 !important; 
         }}
 
-        /* Force icon to be white */
-        [data-testid="collapsedControl"] svg, 
-        [data-testid="stSidebarCollapseButton"] svg {{
+        [data-testid="collapsedControl"]:hover {{
+            transform: scale(1.1) !important;
+        }}
+
+        /* Make the SVG icon inside the button brilliant white and slightly larger */
+        [data-testid="collapsedControl"] svg {{
             fill: #ffffff !important;
             color: #ffffff !important;
+            width: 28px !important;
+            height: 28px !important;
         }}
 
-        /* 4. Hide right-side toolbar */
+        /* 3. Global Safety Nets & UI Hiding */
+        #MainMenu {{ visibility: hidden; }}
+        footer {{ visibility: hidden; }}
         [data-testid="stToolbar"] {{ display: none !important; }}
+        [data-testid="stHeader"] {{ background-color: transparent !important; z-index: 990 !important; }}
         
-        /* 5. Prevent sidebar logo from flashing full size */
-        [data-testid="stSidebar"] img {{ max-width: 100% !important; }}
-
-        /* 6. Push main content down to clear ticker */
-        .block-container {{ padding-top: 5rem !important; }}
+        /* 4. Push main content down to clear ticker */
+        .block-container {{ padding-top: 60px !important; }}
 
         /* Ticker Animations & Styling */
         .ticker-move {{ display: inline-block; white-space: nowrap; padding-left: 100vw; animation: ticker 260s linear infinite; }}
