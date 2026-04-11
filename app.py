@@ -929,54 +929,20 @@ def render_ticker_tape():
             background-color: #050505; 
             border-bottom: 1px solid #333;
             z-index: 998; /* Lower than native controls */
-            pointer-events: auto; /* CRITICAL: Lets clicks pass through */
+            pointer-events: auto;
             overflow: hidden;
             display: flex;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. THE MAGIC HACK: Turn Streamlit's native toggle into an Apple-style floating button */
-        [data-testid="collapsedControl"] {{
-            position: fixed !important;
-            top: auto !important; /* Disconnect from top header */
-            bottom: 40px !important; /* Move to bottom left */
-            left: 20px !important;
-            width: 55px !important;
-            height: 55px !important;
-            border-radius: 50% !important;
-            background: rgba(20,20,20,0.85) !important;
-            backdrop-filter: blur(10px) !important;
-            border: 1px solid #444 !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            z-index: 10001 !important; /* Keep it above everything */
-            box-shadow: 0 0 15px rgba(0,0,0,0.6) !important;
-            transition: transform 0.2s ease !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-        }}
-
-        [data-testid="collapsedControl"]:hover {{
-            transform: scale(1.1) !important;
-        }}
-
-        /* Make the SVG icon inside the button brilliant white and slightly larger */
-        [data-testid="collapsedControl"] svg {{
-            fill: #ffffff !important;
-            color: #ffffff !important;
-            width: 28px !important;
-            height: 28px !important;
-        }}
-
-        /* 3. Global Safety Nets & UI Hiding */
+        /* 2. Global Safety Nets & UI Hiding */
         #MainMenu {{ visibility: hidden; }}
         footer {{ visibility: hidden; }}
         [data-testid="stToolbar"] {{ display: none !important; }}
         [data-testid="stHeader"] {{ background-color: transparent !important; z-index: 990 !important; }}
         
-        /* 4. Push main content down to clear ticker */
+        /* 3. Push main content down to clear ticker */
         .block-container {{ padding-top: 60px !important; }}
 
         /* Ticker Animations & Styling */
@@ -989,12 +955,43 @@ def render_ticker_tape():
         .color-yellow {{ color: #facc15 !important; }}
         .color-orange {{ color: #f97316 !important; }}
         .color-red {{ color: #ef4444 !important; text-shadow: 0 0 5px rgba(239, 68, 68, 0.4); }}
+
+        /* 4. REAL Floating Assistive Button */
+        .floating-btn {{
+            position: fixed;
+            bottom: 40px;
+            left: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(20,20,20,0.9);
+            border: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10002;
+            cursor: pointer;
+            box-shadow: 0 0 12px rgba(0,0,0,0.6);
+            transition: transform 0.2s ease;
+        }}
+        .floating-btn:hover {{ transform: scale(1.1); }}
+        .floating-btn span {{ font-size: 22px; color: white; }}
     </style>
 
     <div class="ticker-wrap">
         <div class="ticker-move">
             {all_items_html}
         </div>
+    </div>
+
+    <div class="floating-btn" onclick="
+        const btn = window.parent.document.querySelector('[data-testid=\\'collapsedControl\\']');
+        if (btn) {{ btn.click(); }} else {{
+            const btn2 = window.parent.document.querySelector('[data-testid=\\'stSidebarCollapseButton\\']');
+            if (btn2) {{ btn2.click(); }}
+        }}
+    ">
+        <span>☰</span>
     </div>
     """
     
@@ -1010,12 +1007,12 @@ if st.session_state['role'] is None:
     # --- NEW PARADIGM: FIXED LEFT PANEL + CENTERED RIGHT CONTAINER ---
     st.markdown("""
     <style>
-        /* SAFE UI HIDING - NEVER hide stSidebar or collapsedControl here! */
+        /* SAFE UI HIDING */
         #MainMenu { visibility: hidden; }
         [data-testid="stToolbar"] { display: none !important; }
         footer { visibility: hidden; }
         
-        /* Clean app background - DELETED destructive overflow rule */
+        /* Clean app background */
         html, body, .stApp {
             height: 100vh;
             margin: 0;
@@ -1044,19 +1041,18 @@ if st.session_state['role'] is None:
 
         /* --- 2. THE RIGHT PANEL (STREAMLIT NATIVE CONTAINER) --- */
         .block-container {
-            padding: 2rm !important;
-            right: 0 !important;
-            top: 0 !important;
+            /* DELETED position: absolute !important; */
+            margin-left: 50vw !important; /* Pushes content to the right safely */
             width: 50vw !important;
             max-width: 50vw !important;
             height: 100vh !important;
-            padding: 0 10% !important; /* Breathing room */
+            padding: 0 10% !important;
             display: flex !important;
             flex-direction: column !important;
             justify-content: center !important;
         }
 
-        /* --- 3. LOGIN HEADER (LOGO + TEXT PERFECT STACK) --- */
+        /* --- 3. LOGIN HEADER --- */
         .login-header {
             display: flex;
             flex-direction: column;
@@ -1065,26 +1061,14 @@ if st.session_state['role'] is None:
             margin-bottom: 15px;
             text-align: center;
         }
-
         .login-logo {
-            width: 300px; /* HIGHLIGHT: EXACT 300PX SIZE */
+            width: 300px;
             max-width: 100%;
-            margin-bottom: 5px; /* Pulls the Login text tight against the logo */
+            margin-bottom: 5px;
             image-rendering: crisp-edges;
         }
-
-        /* Login title */
-        .login-header h2 {
-            margin: 0;
-            font-size: 32px;
-        }
-
-        /* Subtitle */
-        .login-header p {
-            margin-top: 5px;
-            color: #aaa;
-            font-size: 14px;
-        }
+        .login-header h2 { margin: 0; font-size: 32px; }
+        .login-header p { margin-top: 5px; color: #aaa; font-size: 14px; }
 
         /* Style the login button */
         .stButton>button[kind="primary"] { 
@@ -1101,11 +1085,11 @@ if st.session_state['role'] is None:
 
         /* --- 4. MOBILE OVERRIDES --- */
         @media screen and (max-width: 900px) {
-            html, body, .stApp { overflow: auto; } /* Allow scroll */
-            
+            html, body, .stApp { overflow: auto; }
             .fixed-left-panel { display: none !important; }
             
             .block-container {
+                margin-left: 0 !important; /* Resets the split-screen on mobile */
                 width: 100vw !important;
                 max-width: 100vw !important;
                 padding: 2rem !important;
