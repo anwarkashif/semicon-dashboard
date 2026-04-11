@@ -929,7 +929,7 @@ def render_ticker_tape():
             background-color: #050505; 
             border-bottom: 1px solid #333;
             z-index: 998; /* Lower than native controls */
-            pointer-events: none; /* CRITICAL: Lets clicks pass through */
+            pointer-events: auto; /* CRITICAL: Lets clicks pass through */
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -1044,7 +1044,7 @@ if st.session_state['role'] is None:
 
         /* --- 2. THE RIGHT PANEL (STREAMLIT NATIVE CONTAINER) --- */
         .block-container {
-            position: absolute !important;
+            padding: 2rm !important;
             right: 0 !important;
             top: 0 !important;
             width: 50vw !important;
