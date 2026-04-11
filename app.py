@@ -25,9 +25,20 @@ from docx.oxml.ns import qn
 from docx.opc.constants import RELATIONSHIP_TYPE
 import base64
 
-# --- App Configuration ---
-st.set_page_config(page_title="SemicoN Dashboard", page_icon="logo.jpg", layout="wide", initial_sidebar_state="expanded")
+# ==========================================
+# 1. SIDEBAR STATE CONTROL (MUST BE AT VERY TOP)
+# ==========================================
+if "sidebar_open" not in st.session_state:
+    st.session_state.sidebar_open = False  # default closed
 
+st.set_page_config(
+    page_title="SemicoN Dashboard", 
+    page_icon="logo.jpg", 
+    layout="wide", 
+    initial_sidebar_state="expanded" if st.session_state.sidebar_open else "collapsed"
+)
+
+# --- App Configuration ---
 MAINTENANCE_MODE = False
 if MAINTENANCE_MODE:
     st.markdown("""<style>[data-testid="collapsedControl"], [data-testid="stSidebar"] { display: none; }</style>""", unsafe_allow_html=True)
@@ -161,10 +172,6 @@ st.markdown("""
     /* Ensure Header is transparent so Mobile Hamburger remains visible on black */
     header[data-testid="stHeader"] { 
         background-color: transparent !important; 
-    }
-    /* Force Hamburger icon to be white */
-    [data-testid="collapsedControl"] svg { 
-        color: #ffffff !important; 
     }
     
     /* NEW: Hide the Streamlit Running/Stop execution indicator */
@@ -858,7 +865,9 @@ def check_early_warnings():
     except Exception as e:
         pass
 
-# --- NEW: STRATEGIC INTELLIGENCE TICKER TAPE ---
+# ==========================================
+# 2. TICKER TAPE (JS & HTML HACKS REMOVED)
+# ==========================================
 def render_ticker_tape():
     ticker_items = []
     
@@ -876,22 +885,19 @@ def render_ticker_tape():
                     seen_titles.add(art['title'])
                     unique_news.append(art)
 
-        # Dynamic 1-10 Threat Scoring
+        # Dynamic Threat Scoring ...
         critical = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
         high = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension', 'export control', 'embargo', 'risk']
         med = ['delay', 'subsidy', 'compete', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'concern', 'geopolitical']
 
         for item in unique_news:
             title_lower = item['title'].lower()
-            score = 3  # Base score
-            
+            score = 3
             score += sum(1 for kw in critical if kw in title_lower) * 5
             score += sum(1 for kw in high if kw in title_lower) * 3
             score += sum(1 for kw in med if kw in title_lower) * 2
+            score = min(10, score)
             
-            score = min(10, score) # Cap the maximum score at 10
-            
-            # Only render Yellow, Orange, and Red threats (Score >= 5)
             if score >= 5:
                 if score >= 9:
                     color_class = "color-red"
@@ -910,42 +916,28 @@ def render_ticker_tape():
     except Exception as e:
         pass
 
-    # If no threats are level 5 or above, do not render the bar
     if not ticker_items: return
-
-    # Combine all items into one continuous string
     all_items_html = "".join(ticker_items)
 
-    # Inject the CSS and HTML into Streamlit
+    # Inject CSS (Native toggle hidden, custom HTML button deleted)
     ticker_code = f"""
     <style>
-        /* 1. Ticker Bar - Full width, top of screen */
         .ticker-wrap {{
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 42px;
-            background-color: #050505; 
-            border-bottom: 1px solid #333;
-            z-index: 998; /* Lower than native controls */
-            pointer-events: none; /* CRITICAL FIX: Lets clicks pass through */
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            top: 0; left: 0; width: 100vw; height: 42px;
+            background-color: #050505; border-bottom: 1px solid #333;
+            z-index: 998; pointer-events: none; overflow: hidden;
+            display: flex; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
-
-        /* 2. Global Safety Nets & UI Hiding */
         #MainMenu {{ visibility: hidden; }}
         footer {{ visibility: hidden; }}
         [data-testid="stToolbar"] {{ display: none !important; }}
         [data-testid="stHeader"] {{ background-color: transparent !important; z-index: 990 !important; }}
-        
-        /* 3. Push main content down to clear ticker */
         .block-container {{ padding-top: 60px !important; }}
 
-        /* Ticker Animations & Styling */
+        /* HIDE STREAMLIT'S BROKEN NATIVE TOGGLE */
+        [data-testid="collapsedControl"] {{ display: none !important; }}
+
         .ticker-move {{ display: inline-block; white-space: nowrap; padding-left: 100vw; animation: ticker 260s linear infinite; }}
         .ticker-move:hover {{ animation-play-state: paused; }}
         @keyframes ticker {{ 0% {{ transform: translate3d(0, 0, 0); }} 100% {{ transform: translate3d(-100%, 0, 0); }} }}
@@ -955,105 +947,10 @@ def render_ticker_tape():
         .color-yellow {{ color: #facc15 !important; }}
         .color-orange {{ color: #f97316 !important; }}
         .color-red {{ color: #ef4444 !important; text-shadow: 0 0 5px rgba(239, 68, 68, 0.4); }}
-
-        /* 4. REAL Floating Assistive Button */
-        .floating-btn {{
-            position: fixed;
-            bottom: 40px;
-            left: 20px;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: rgba(20,20,20,0.9);
-            border: 1px solid #444;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10002;
-            cursor: pointer;
-            box-shadow: 0 0 12px rgba(0,0,0,0.6);
-            transition: transform 0.2s ease;
-            pointer-events: auto; /* Ensure the button itself is clickable */
-        }}
-        .floating-btn:hover {{ transform: scale(1.1); }}
-        .floating-btn span {{ font-size: 22px; color: white; }}
     </style>
-
-    <div class="ticker-wrap">
-        <div class="ticker-move">
-            {all_items_html}
-        </div>
-    </div>
-
-    <div class="floating-btn" id="assistive-toggle">
-        <span>☰</span>
-    </div>
-
-    <script>
-    (function() {{
-        function clickSidebarToggle() {{
-            const selectors = [
-                '[data-testid="collapsedControl"]',
-                '[data-testid="stSidebarCollapseButton"]',
-                'button[aria-label="Toggle sidebar"]',
-                'button[kind="header"]'
-            ];
-
-            // Safely check parent window (Streamlit root) first, then fallback to current iframe
-            let doc = null;
-            try {{ doc = window.parent.document; }} catch(e) {{ doc = document; }}
-            if (!doc) doc = document;
-
-            for (let sel of selectors) {{
-                let btn = doc.querySelector(sel) || document.querySelector(sel);
-                if (btn) {{
-                    btn.click();
-                    return true;
-                }}
-            }}
-            return false;
-        }}
-
-        // Attach click handler safely
-        let toggleBtn = document.getElementById("assistive-toggle");
-        if (toggleBtn) {{
-            toggleBtn.onclick = function() {{
-                let success = clickSidebarToggle();
-
-                // Retry if Streamlit hasn't rendered yet
-                if (!success) {{
-                    let retries = 10;
-                    let interval = setInterval(() => {{
-                        if (clickSidebarToggle() || retries-- <= 0) {{
-                            clearInterval(interval);
-                        }}
-                    }}, 300);
-                }}
-            }};
-        }}
-
-        // Mobile Fix: Force sidebar closed on load if screen is narrow
-        window.addEventListener("load", () => {{
-            if (window.innerWidth < 768) {{
-                setTimeout(() => {{
-                    let doc = null;
-                    try {{ doc = window.parent.document; }} catch(e) {{ doc = document; }}
-                    if (!doc) doc = document;
-                    
-                    // Only click if the close button is explicitly visible (meaning it's open)
-                    let closeBtn = doc.querySelector('[data-testid="stSidebarCollapseButton"]') || document.querySelector('[data-testid="stSidebarCollapseButton"]');
-                    if (closeBtn) {{
-                        closeBtn.click();
-                    }}
-                }}, 800);
-            }}
-        }});
-    }})();
-    </script>
+    <div class="ticker-wrap"><div class="ticker-move">{all_items_html}</div></div>
     """
-    
     st.markdown(ticker_code, unsafe_allow_html=True)
-
 
 # ==========================================
 # LOGIN SCREEN 
@@ -1210,6 +1107,45 @@ else:
     # --- RENDER THE NEW TICKER TAPE FIRST ---
     render_ticker_tape()
 
+    # --- NEW: NATIVE STREAMLIT FLOATING TOGGLE ---
+    st.markdown("""
+    <style>
+        /* This magic selector targets the Streamlit button via its key ("sidebar_toggle") */
+        div.st-key-sidebar_toggle {
+            position: fixed;
+            bottom: 40px;
+            left: 20px;
+            z-index: 10002;
+        }
+        div.st-key-sidebar_toggle button {
+            width: 55px !important;
+            height: 55px !important;
+            border-radius: 50% !important;
+            background: rgba(20,20,20,0.9) !important;
+            border: 1px solid #444 !important;
+            color: white !important;
+            font-size: 22px !important;
+            box-shadow: 0 0 12px rgba(0,0,0,0.6) !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 !important;
+        }
+        div.st-key-sidebar_toggle button:hover {
+            border-color: #facc15 !important;
+            color: #facc15 !important;
+            transform: scale(1.1);
+            transition: all 0.2s ease;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # The actual native Streamlit button
+    if st.button("☰", key="sidebar_toggle"):
+        st.session_state.sidebar_open = not st.session_state.sidebar_open
+        st.rerun()
+
+    # --- SIDEBAR CONTENT ---
     st.sidebar.image("logo.jpg", use_container_width=True)
     st.sidebar.markdown("""
     <div style='text-align: center; margin-top: -10px;'>
@@ -1736,9 +1672,9 @@ else:
                     "Asia": "#00bfff",                
                     "West Asia/Middle East": "#00ff00",
                     "Americas": "#ff4b4b",            
-                    "Africa": "#ffd166",               
-                    "Europe": "#ff69b4",               
-                    "Oceania": "#ffa500"               
+                    "Africa": "#ffd166",                
+                    "Europe": "#ff69b4",                
+                    "Oceania": "#ffa500"                
                 }
 
                 if not df_actions.empty:
