@@ -919,100 +919,60 @@ def render_ticker_tape():
     # Inject the CSS and HTML into Streamlit
     ticker_code = f"""
     <style>
-        /* 1. Ticker Bar - Starts 50px from left to NEVER overlap the button box! */
+        /* 1. Ticker Bar - Full width, top of screen */
         .ticker-wrap {{
             position: fixed;
-            top: 0px; 
-            left: 50px; 
-            width: calc(100vw - 50px);
+            top: 0;
+            left: 0;
+            width: 100vw;
             height: 42px;
             background-color: #050505; 
             border-bottom: 1px solid #333;
-            border-left: 1px solid #333;
-            z-index: 990; 
+            z-index: 9999; 
             overflow: hidden;
             display: flex;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
 
-        /* 2. HAMBURGER PROTECTOR BOX: A perfectly sized dark square in the top left */
+        /* 2. Push Streamlit header down below ticker */
         [data-testid="stHeader"] {{ 
-            display: flex !important;
-            visibility: visible !important;
-            background-color: #050505 !important; /* Dark background so the white icon pops */
-            width: 50px !important; /* Locks it to the exact 50px gap */
-            height: 42px !important;
-            border-bottom: 1px solid #333;
-            z-index: 1000 !important; 
+            top: 42px !important;
+            background-color: transparent !important;
+            z-index: 9990 !important; 
         }}
         
+        /* 3. Global Toggle Safety Net */
         [data-testid="collapsedControl"] {{
             display: flex !important;
             visibility: visible !important;
             opacity: 1 !important;
-            z-index: 1001 !important; 
+            z-index: 10000 !important; 
         }}
 
-        /* Force the SVG icon to be white */
+        /* Force icon to be white */
         [data-testid="collapsedControl"] svg, 
         [data-testid="stSidebarCollapseButton"] svg {{
             fill: #ffffff !important;
             color: #ffffff !important;
-            stroke: #ffffff !important;
         }}
 
-        /* 3. RESURRECT SIDEBAR: Unset the Login Screen's hiding spell cleanly */
-        [data-testid="stSidebar"] {{
-            display: unset !important;
-            visibility: visible !important;
-        }}
-
-        /* 4. Hide right-side toolbar (3 dots) */
-        [data-testid="stToolbar"] {{ 
-            display: none !important; 
-        }}
+        /* 4. Hide right-side toolbar */
+        [data-testid="stToolbar"] {{ display: none !important; }}
         
         /* 5. Prevent sidebar logo from flashing full size */
-        [data-testid="stSidebar"] img {{ 
-            max-width: 100% !important; 
-        }}
+        [data-testid="stSidebar"] img {{ max-width: 100% !important; }}
 
-        /* 6. Push main content down so it clears the ticker */
-        .block-container {{ 
-            padding-top: 5rem !important; 
-        }}
+        /* 6. Push main content down to clear ticker */
+        .block-container {{ padding-top: 5rem !important; }}
 
-        /* The Scrolling Text Animation */
-        .ticker-move {{
-            display: inline-block;
-            white-space: nowrap;
-            padding-left: 100vw;
-            animation: ticker 260s linear infinite;
-        }}
-
+        /* Ticker Animations & Styling */
+        .ticker-move {{ display: inline-block; white-space: nowrap; padding-left: 100vw; animation: ticker 260s linear infinite; }}
         .ticker-move:hover {{ animation-play-state: paused; }}
-
-        @keyframes ticker {{
-            0% {{ transform: translate3d(0, 0, 0); }}
-            100% {{ transform: translate3d(-100%, 0, 0); }}
-        }}
-
-        /* Individual News Items */
-        .ticker-item {{
-            display: inline-block;
-            margin-right: 60px;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }}
-        
-        /* Link Styling */
+        @keyframes ticker {{ 0% {{ transform: translate3d(0, 0, 0); }} 100% {{ transform: translate3d(-100%, 0, 0); }} }}
+        .ticker-item {{ display: inline-block; margin-right: 60px; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 14px; letter-spacing: 0.5px; }}
         .ticker-item a {{ text-decoration: none; transition: opacity 0.2s; }}
         .ticker-item a:hover {{ text-decoration: underline; opacity: 0.8; cursor: pointer; }}
-        
-        /* Color Coding */
         .color-yellow {{ color: #facc15 !important; }}
         .color-orange {{ color: #f97316 !important; }}
         .color-red {{ color: #ef4444 !important; text-shadow: 0 0 5px rgba(239, 68, 68, 0.4); }}
@@ -1037,14 +997,15 @@ if st.session_state['role'] is None:
     # --- NEW PARADIGM: FIXED LEFT PANEL + CENTERED RIGHT CONTAINER ---
     st.markdown("""
     <style>
-        /* Hide default Streamlit navigation safely */
-        [data-testid="collapsedControl"], [data-testid="stSidebar"], [data-testid="stHeader"] { display: none !important; }
+        /* SAFE UI HIDING - NEVER hide stSidebar or collapsedControl here! */
+        #MainMenu { visibility: hidden; }
+        [data-testid="stToolbar"] { display: none !important; }
+        footer { visibility: hidden; }
         
-        /* Prevent scrolling on desktop for a clean app feel */
+        /* Clean app background - DELETED destructive overflow rule */
         html, body, .stApp {
             height: 100vh;
             margin: 0;
-            overflow: hidden;
             background-color: #000000;
         }
 
