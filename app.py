@@ -985,18 +985,71 @@ def render_ticker_tape():
         </div>
     </div>
 
-    <div class="floating-btn" onclick="
-        const doc = window.document;
-        let btn = doc.querySelector('[data-testid=\\'collapsedControl\\']');
-        if (!btn) {{
-            btn = doc.querySelector('[data-testid=\\'stSidebarCollapseButton\\']');
-        }}
-        if (btn) {{
-            btn.click();
-        }}
-    ">
+    <div class="floating-btn" id="assistive-toggle">
         <span>☰</span>
     </div>
+
+    <script>
+    (function() {{
+        function clickSidebarToggle() {{
+            const selectors = [
+                '[data-testid="collapsedControl"]',
+                '[data-testid="stSidebarCollapseButton"]',
+                'button[aria-label="Toggle sidebar"]',
+                'button[kind="header"]'
+            ];
+
+            // Safely check parent window (Streamlit root) first, then fallback to current iframe
+            let doc = null;
+            try {{ doc = window.parent.document; }} catch(e) {{ doc = document; }}
+            if (!doc) doc = document;
+
+            for (let sel of selectors) {{
+                let btn = doc.querySelector(sel) || document.querySelector(sel);
+                if (btn) {{
+                    btn.click();
+                    return true;
+                }}
+            }}
+            return false;
+        }}
+
+        // Attach click handler safely
+        let toggleBtn = document.getElementById("assistive-toggle");
+        if (toggleBtn) {{
+            toggleBtn.onclick = function() {{
+                let success = clickSidebarToggle();
+
+                // Retry if Streamlit hasn't rendered yet
+                if (!success) {{
+                    let retries = 10;
+                    let interval = setInterval(() => {{
+                        if (clickSidebarToggle() || retries-- <= 0) {{
+                            clearInterval(interval);
+                        }}
+                    }}, 300);
+                }}
+            }};
+        }}
+
+        // Mobile Fix: Force sidebar closed on load if screen is narrow
+        window.addEventListener("load", () => {{
+            if (window.innerWidth < 768) {{
+                setTimeout(() => {{
+                    let doc = null;
+                    try {{ doc = window.parent.document; }} catch(e) {{ doc = document; }}
+                    if (!doc) doc = document;
+                    
+                    // Only click if the close button is explicitly visible (meaning it's open)
+                    let closeBtn = doc.querySelector('[data-testid="stSidebarCollapseButton"]') || document.querySelector('[data-testid="stSidebarCollapseButton"]');
+                    if (closeBtn) {{
+                        closeBtn.click();
+                    }}
+                }}, 800);
+            }}
+        }});
+    }})();
+    </script>
     """
     
     st.markdown(ticker_code, unsafe_allow_html=True)
