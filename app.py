@@ -26,16 +26,13 @@ from docx.opc.constants import RELATIONSHIP_TYPE
 import base64
 
 # ==========================================
-# 1. SIDEBAR STATE CONTROL (MUST BE AT VERY TOP)
+# 1. PAGE CONFIGURATION (MUST BE AT VERY TOP)
 # ==========================================
-if "sidebar_open" not in st.session_state:
-    st.session_state.sidebar_open = False  # default closed
-
 st.set_page_config(
     page_title="SemicoN Dashboard", 
     page_icon="logo.jpg", 
     layout="wide", 
-    initial_sidebar_state="expanded" if st.session_state.sidebar_open else "collapsed"
+    initial_sidebar_state="collapsed" # Start closed natively, let CSS handle the rest
 )
 
 # --- App Configuration ---
@@ -866,7 +863,7 @@ def check_early_warnings():
         pass
 
 # ==========================================
-# 2. TICKER TAPE (JS & HTML HACKS REMOVED)
+# 2. TICKER TAPE & CSS INJECTIONS
 # ==========================================
 def render_ticker_tape():
     ticker_items = []
@@ -919,7 +916,7 @@ def render_ticker_tape():
     if not ticker_items: return
     all_items_html = "".join(ticker_items)
 
-    # Inject CSS (Native toggle hidden, custom HTML button deleted)
+    # Inject CSS
     ticker_code = f"""
     <style>
         .ticker-wrap {{
@@ -935,8 +932,46 @@ def render_ticker_tape():
         [data-testid="stHeader"] {{ background-color: transparent !important; z-index: 990 !important; }}
         .block-container {{ padding-top: 60px !important; }}
 
-        /* HIDE STREAMLIT'S BROKEN NATIVE TOGGLE */
-        [data-testid="collapsedControl"] {{ display: none !important; }}
+        /* --------------------------------------------------------
+           THE MASTERSTROKE: HIJACK STREAMLIT'S NATIVE TOGGLE
+           Instead of creating a fake button, we physically move 
+           Streamlit's real native button to the bottom left. 
+           This bypasses all state bugs completely!
+        -------------------------------------------------------- */
+        [data-testid="collapsedControl"] {{
+            display: flex !important;
+            position: fixed !important;
+            bottom: 40px !important;
+            left: 20px !important;
+            top: auto !important;
+            width: 55px !important;
+            height: 55px !important;
+            border-radius: 50% !important;
+            background: rgba(20,20,20,0.9) !important;
+            border: 1px solid #444 !important;
+            color: white !important;
+            box-shadow: 0 0 12px rgba(0,0,0,0.6) !important;
+            z-index: 10002 !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding: 0 !important;
+            transition: all 0.2s ease !important;
+        }}
+        [data-testid="collapsedControl"]:hover {{
+            border-color: #facc15 !important;
+            transform: scale(1.1) !important;
+        }}
+        /* Color the native SVG icon white, then yellow on hover */
+        [data-testid="collapsedControl"] svg {{
+            width: 25px !important;
+            height: 25px !important;
+            fill: white !important;
+            color: white !important;
+        }}
+        [data-testid="collapsedControl"]:hover svg {{
+            fill: #facc15 !important;
+            color: #facc15 !important;
+        }}
 
         .ticker-move {{ display: inline-block; white-space: nowrap; padding-left: 100vw; animation: ticker 260s linear infinite; }}
         .ticker-move:hover {{ animation-play-state: paused; }}
@@ -1101,44 +1136,26 @@ if st.session_state['role'] is None:
         st.rerun()
 
 # ==========================================
-# MAIN DASHBOARD 
+# 4. MAIN DASHBOARD
 # ==========================================
 else:
     # --- RENDER THE NEW TICKER TAPE FIRST ---
+    # (The CSS inside this function safely positions the native Streamlit toggle)
     render_ticker_tape()
 
-    # --- NEW: NATIVE STREAMLIT FLOATING TOGGLE ---
-    st.markdown("""
-    <style>
-        /* This magic selector targets the Streamlit button via its key ("sidebar_toggle") */
-        div.st-key-sidebar_toggle {
-            position: fixed;
-            bottom: 40px;
-            left: 20px;
-            z-index: 10002;
-        }
-        div.st-key-sidebar_toggle button {
-            width: 55px !important;
-            height: 55px !important;
-            border-radius: 50% !important;
-            background: rgba(20,20,20,0.9) !important;
-            border: 1px solid #444 !important;
-            color: white !important;
-            font-size: 22px !important;
-            box-shadow: 0 0 12px rgba(0,0,0,0.6) !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 !important;
-        }
-        div.st-key-sidebar_toggle button:hover {
-            border-color: #facc15 !important;
-            color: #facc15 !important;
-            transform: scale(1.1);
-            transition: all 0.2s ease;
-        }
-    </style>
+    # --- SIDEBAR CONTENT ---
+    # Because we hijacked the native button, Streamlit manages opening/closing natively!
+    st.sidebar.image("logo.jpg", use_container_width=True)
+    st.sidebar.markdown("""
+    <div style='text-align: center; margin-top: -10px;'>
+        <p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>A Semicon News Dashboard.</p>
+        <p style='font-size: 14px; margin-bottom: 5px;'>Prepared by: Kashif Anwar</p>
+        <p style='font-size: 13px; color: #00bfff; font-weight: bold; font-style: italic; margin-bottom: 0px;'>A Human-AI Vetted Dashboard</p>
+    </div>
     """, unsafe_allow_html=True)
+    st.sidebar.markdown("---")
+    
+    st.sidebar.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>Global Filter</p>", unsafe_allow_html=True)
 
     # The actual native Streamlit button
     if st.button("☰", key="sidebar_toggle"):
