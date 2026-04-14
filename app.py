@@ -1156,24 +1156,7 @@ else:
     st.sidebar.markdown("---")
     
     st.sidebar.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>Global Filter</p>", unsafe_allow_html=True)
-
-    # The actual native Streamlit button
-    if st.button("☰", key="sidebar_toggle"):
-        st.session_state.sidebar_open = not st.session_state.sidebar_open
-        st.rerun()
-
-    # --- SIDEBAR CONTENT ---
-    st.sidebar.image("logo.jpg", use_container_width=True)
-    st.sidebar.markdown("""
-    <div style='text-align: center; margin-top: -10px;'>
-        <p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>A Semicon News Dashboard.</p>
-        <p style='font-size: 14px; margin-bottom: 5px;'>Prepared by: Kashif Anwar</p>
-        <p style='font-size: 13px; color: #00bfff; font-weight: bold; font-style: italic; margin-bottom: 0px;'>A Human-AI Vetted Dashboard</p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.sidebar.markdown("---")
     
-    st.sidebar.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>Global Filter</p>", unsafe_allow_html=True)
     actor_list = []
     
     df_actions = clean_dataframe(pd.DataFrame(dashboard_data.get('recent_actions', [])))
