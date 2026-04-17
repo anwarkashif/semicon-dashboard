@@ -937,9 +937,7 @@ SEMICON INTELLIGENCE TICKER
     display: flex;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.8);
-}}
-
-/* push dashboard below ticker without breaking sidebar */
+}
 
 [data-testid="stAppViewContainer"] > .main {{
     padding-top: 60px;
@@ -978,8 +976,6 @@ SEMICON INTELLIGENCE TICKER
     text-decoration: underline;
     opacity: 0.8;
 }}
-
-/* Threat levels */
 
 .color-yellow {{ color:#facc15; }}
 .color-orange {{ color:#f97316; }}
