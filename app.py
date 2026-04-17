@@ -937,7 +937,7 @@ SEMICON INTELLIGENCE TICKER
     display: flex;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.8);
-}
+}}
 
 [data-testid="stAppViewContainer"] > .main {{
     padding-top: 60px;
