@@ -869,11 +869,9 @@ def render_ticker_tape():
     ticker_items = []
     
     try:
-        # Automatically grab the data
         live_rss = parse_rss_txt_file()
         if not live_rss: return
         
-        # Flatten the region dictionary into a single list of unique news items
         seen_titles = set()
         unique_news = []
         for region, articles in live_rss.items():
@@ -882,7 +880,6 @@ def render_ticker_tape():
                     seen_titles.add(art['title'])
                     unique_news.append(art)
 
-        # Dynamic Threat Scoring ...
         critical = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
         high = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension', 'export control', 'embargo', 'risk']
         med = ['delay', 'subsidy', 'compete', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'concern', 'geopolitical']
@@ -916,72 +913,113 @@ def render_ticker_tape():
     if not ticker_items: return
     all_items_html = "".join(ticker_items)
 
-    # Inject CSS
     ticker_code = f"""
     <style>
+        /* ── TICKER TAPE ── */
         .ticker-wrap {{
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 42px;
-            background-color: #050505; border-bottom: 1px solid #333;
-            z-index: 998; pointer-events: none; overflow: hidden;
-            display: flex; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            background-color: #050505;
+            border-bottom: 1px solid #333;
+            z-index: 998;
+            pointer-events: none;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }}
+
+        /* ── STREAMLIT CHROME ── */
         #MainMenu {{ visibility: hidden; }}
         footer {{ visibility: hidden; }}
         [data-testid="stToolbar"] {{ display: none !important; }}
-        [data-testid="stHeader"] {{ background-color: transparent !important; z-index: 990 !important; }}
+        [data-testid="stHeader"] {{
+            background-color: transparent !important;
+            z-index: 990 !important;
+        }}
+
+        /* ── PUSH MAIN CONTENT DOWN BELOW TICKER ── */
         .block-container {{ padding-top: 60px !important; }}
 
-        /* --------------------------------------------------------
-           THE MASTERSTROKE: HIJACK STREAMLIT'S NATIVE TOGGLE
-           Instead of creating a fake button, we physically move 
-           Streamlit's real native button to the bottom left. 
-           This bypasses all state bugs completely!
-        -------------------------------------------------------- */
-        [data-testid="collapsedControl"] {{
-            display: flex !important;
-            position: fixed !important;
-            bottom: 40px !important;
-            left: 20px !important;
-            top: auto !important;
-            width: 55px !important;
-            height: 55px !important;
-            border-radius: 50% !important;
-            background: rgba(20,20,20,0.9) !important;
-            border: 1px solid #444 !important;
-            color: white !important;
-            box-shadow: 0 0 12px rgba(0,0,0,0.6) !important;
-            z-index: 10002 !important;
-            justify-content: center !important;
-            align-items: center !important;
-            padding: 0 !important;
-            transition: all 0.2s ease !important;
-        }}
-        [data-testid="collapsedControl"]:hover {{
-            border-color: #facc15 !important;
-            transform: scale(1.1) !important;
-        }}
-        /* Color the native SVG icon white, then yellow on hover */
-        [data-testid="collapsedControl"] svg {{
-            width: 25px !important;
-            height: 25px !important;
-            fill: white !important;
-            color: white !important;
-        }}
-        [data-testid="collapsedControl"]:hover svg {{
-            fill: #facc15 !important;
-            color: #facc15 !important;
+        /* ── SIDEBAR: DESKTOP — keep native open/close, just clear the top gap ── */
+        [data-testid="stSidebar"] {{
+            z-index: 999 !important;          /* above ticker */
+            padding-top: 50px !important;     /* clear the ticker height */
         }}
 
-        .ticker-move {{ display: inline-block; white-space: nowrap; padding-left: 100vw; animation: ticker 260s linear infinite; }}
+        /* ── SIDEBAR TOGGLE BUTTON: DESKTOP ──
+           Streamlit renders this as stSidebarCollapsedControl on desktop.
+           We leave it exactly where Streamlit puts it (top-left) but
+           nudge it below the ticker so it is not hidden behind it.        */
+        [data-testid="stSidebarCollapsedControl"] {{
+            top: 50px !important;             /* just below 42px ticker */
+            z-index: 1000 !important;
+        }}
+
+        /* ── SIDEBAR TOGGLE BUTTON: MOBILE ──
+           On mobile Streamlit uses collapsedControl (no "Sidebar" prefix).
+           We move it to the bottom-left floating button style.            */
+        @media screen and (max-width: 768px) {{
+            [data-testid="collapsedControl"] {{
+                display: flex !important;
+                position: fixed !important;
+                bottom: 40px !important;
+                left: 20px !important;
+                top: auto !important;
+                width: 55px !important;
+                height: 55px !important;
+                border-radius: 50% !important;
+                background: rgba(20,20,20,0.9) !important;
+                border: 1px solid #444 !important;
+                color: white !important;
+                box-shadow: 0 0 12px rgba(0,0,0,0.6) !important;
+                z-index: 10002 !important;
+                justify-content: center !important;
+                align-items: center !important;
+                padding: 0 !important;
+                transition: all 0.2s ease !important;
+            }}
+            [data-testid="collapsedControl"]:hover {{
+                border-color: #facc15 !important;
+                transform: scale(1.1) !important;
+            }}
+            [data-testid="collapsedControl"] svg {{
+                width: 25px !important;
+                height: 25px !important;
+                fill: white !important;
+                color: white !important;
+            }}
+            [data-testid="collapsedControl"]:hover svg {{
+                fill: #facc15 !important;
+                color: #facc15 !important;
+            }}
+        }}
+
+        /* ── TICKER ANIMATION ── */
+        .ticker-move {{
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100vw;
+            animation: ticker 260s linear infinite;
+        }}
         .ticker-move:hover {{ animation-play-state: paused; }}
-        @keyframes ticker {{ 0% {{ transform: translate3d(0, 0, 0); }} 100% {{ transform: translate3d(-100%, 0, 0); }} }}
-        .ticker-item {{ display: inline-block; margin-right: 60px; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 14px; letter-spacing: 0.5px; }}
+        @keyframes ticker {{
+            0%   {{ transform: translate3d(0, 0, 0); }}
+            100% {{ transform: translate3d(-100%, 0, 0); }}
+        }}
+        .ticker-item {{
+            display: inline-block;
+            margin-right: 60px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }}
         .ticker-item a {{ text-decoration: none; transition: opacity 0.2s; }}
         .ticker-item a:hover {{ text-decoration: underline; opacity: 0.8; cursor: pointer; }}
         .color-yellow {{ color: #facc15 !important; }}
         .color-orange {{ color: #f97316 !important; }}
-        .color-red {{ color: #ef4444 !important; text-shadow: 0 0 5px rgba(239, 68, 68, 0.4); }}
+        .color-red    {{ color: #ef4444 !important; text-shadow: 0 0 5px rgba(239,68,68,0.4); }}
     </style>
     <div class="ticker-wrap"><div class="ticker-move">{all_items_html}</div></div>
     """
