@@ -918,88 +918,89 @@ def render_ticker_tape():
 
     # Inject CSS
     ticker_code = f"""
-<style>
+    <style>
+    /* ================================
+    SEMICON INTELLIGENCE TICKER
+    ================================ */
 
-/* ================================
-SEMICON INTELLIGENCE TICKER
-================================ */
+    .ticker-wrap {{
+        position: fixed;
+        top: 60px; /* FIX: Anchors ticker safely below the native header */
+        left: 0;
+        width: 100vw;
+        height: 42px;
+        background-color: #050505;
+        border-bottom: 1px solid #333;
+        border-top: 1px solid #333; /* Nice visual separator */
+        z-index: 990; /* Keeps it above content but out of the way of modals */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    }}
 
-.ticker-wrap {{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 42px;
-    background-color: #050505;
-    border-bottom: 1px solid #333;
-    z-index: 999;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
-}}
+    /* FIX: Pushes the main dashboard content down so it doesn't hide under the ticker */
+    .block-container {{
+        padding-top: 110px !important; 
+    }}
 
-[data-testid="stAppViewContainer"] > .main {{
-    padding-top: 60px;
-}}
+    .ticker-move {{
+        display: inline-block;
+        white-space: nowrap;
+        padding-left: 100vw;
+        animation: ticker 260s linear infinite;
+    }}
 
-.ticker-move {{
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 100vw;
-    animation: ticker 260s linear infinite;
-}}
+    .ticker-move:hover {{
+        animation-play-state: paused;
+    }}
 
-.ticker-move:hover {{
-    animation-play-state: paused;
-}}
+    @keyframes ticker {{
+        0% {{ transform: translate3d(0,0,0); }}
+        100% {{ transform: translate3d(-100%,0,0); }}
+    }}
 
-@keyframes ticker {{
-    0% {{ transform: translate3d(0,0,0); }}
-    100% {{ transform: translate3d(-100%,0,0); }}
-}}
+    .ticker-item {{
+        display: inline-block;
+        margin-right: 60px;
+        font-family: "Courier New", monospace;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }}
 
-.ticker-item {{
-    display: inline-block;
-    margin-right: 60px;
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-}}
+    .ticker-item a {{
+        text-decoration: none;
+    }}
 
-.ticker-item a {{
-    text-decoration: none;
-}}
+    .ticker-item a:hover {{
+        text-decoration: underline;
+        opacity: 0.8;
+    }}
 
-.ticker-item a:hover {{
-    text-decoration: underline;
-    opacity: 0.8;
-}}
+    .color-yellow {{ color:#facc15; }}
+    .color-orange {{ color:#f97316; }}
 
-.color-yellow {{ color:#facc15; }}
-.color-orange {{ color:#f97316; }}
+    .color-red {{
+        color:#ef4444;
+        text-shadow:0 0 5px rgba(239,68,68,0.4);
+        animation:flash 1.5s infinite;
+    }}
 
-.color-red {{
-    color:#ef4444;
-    text-shadow:0 0 5px rgba(239,68,68,0.4);
-    animation:flash 1.5s infinite;
-}}
+    @keyframes flash {{
+        0% {{opacity:1}}
+        50% {{opacity:0.4}}
+        100% {{opacity:1}}
+    }}
+    </style>
 
-@keyframes flash {{
-    0% {{opacity:1}}
-    50% {{opacity:0.4}}
-    100% {{opacity:1}}
-}}
-
-</style>
-
-<div class="ticker-wrap">
-<div class="ticker-move">
-{all_items_html}
-</div>
-</div>
-"""
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            {all_items_html}
+        </div>
+    </div>
+    """
+    st.markdown(ticker_code, unsafe_allow_html=True)
 
 # ==========================================
 # LOGIN SCREEN 
