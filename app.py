@@ -939,29 +939,27 @@ INTELLIGENCE TERMINAL TICKER
     box-shadow: 0 2px 12px rgba(0,0,0,0.9);
 }}
 
-/* Prevent page hiding under ticker */
+/* Prevent dashboard hiding under ticker */
 [data-testid="stAppViewContainer"] > .main {{
     padding-top: 60px;
 }}
 
-.ticker-move {{
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 100vw;
-    animation: ticker 240s linear infinite;
+.ticker-track {{
+    display: flex;
+    width: max-content;
+    animation: ticker-scroll 260s linear infinite;
 }}
 
-.ticker-move:hover {{
+.ticker-track:hover {{
     animation-play-state: paused;
 }}
 
-@keyframes ticker {{
-    0% {{ transform: translate3d(0,0,0); }}
-    100% {{ transform: translate3d(-100%,0,0); }}
+.ticker-content {{
+    display: flex;
+    white-space: nowrap;
 }}
 
 .ticker-item {{
-    display: inline-block;
     margin-right: 70px;
     font-family: "Courier New", monospace;
     font-weight: bold;
@@ -969,7 +967,7 @@ INTELLIGENCE TERMINAL TICKER
     letter-spacing: 0.6px;
 }}
 
-/* clickable links */
+/* Links */
 
 .ticker-item a {{
     text-decoration: none;
@@ -980,7 +978,7 @@ INTELLIGENCE TERMINAL TICKER
     opacity: 0.85;
 }}
 
-/* Threat levels */
+/* Threat Levels */
 
 .color-yellow {{
     color: #facc15;
@@ -996,20 +994,32 @@ INTELLIGENCE TERMINAL TICKER
     animation: flash 1.5s infinite;
 }}
 
-/* Flash animation for critical alerts */
+/* Critical alert flash */
 
 @keyframes flash {{
-    0% {{ opacity: 1; }}
-    50% {{ opacity: 0.4; }}
-    100% {{ opacity: 1; }}
+    0% {{opacity:1}}
+    50% {{opacity:0.35}}
+    100% {{opacity:1}}
+}}
+
+/* Smooth ticker scroll */
+
+@keyframes ticker-scroll {{
+    0% {{ transform: translateX(0); }}
+    100% {{ transform: translateX(-50%); }}
 }}
 
 </style>
 
 <div class="ticker-wrap">
-<div class="ticker-move">
-{all_items_html}
-</div>
+    <div class="ticker-track">
+        <div class="ticker-content">
+            {all_items_html}
+        </div>
+        <div class="ticker-content">
+            {all_items_html}
+        </div>
+    </div>
 </div>
 """
 
