@@ -920,11 +920,13 @@ def render_ticker_tape():
     ticker_code = f"""
 <style>
 
+/* --- TOP NEWS TICKER --- */
+
 .ticker-wrap {{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 42px;
     background-color: #050505;
     border-bottom: 1px solid #333;
@@ -932,12 +934,18 @@ def render_ticker_tape():
     overflow: hidden;
     display: flex;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}}
+
+/* Push page below ticker without breaking sidebar */
+[data-testid="stAppViewContainer"] > .main {{
+    padding-top: 60px;
 }}
 
 .ticker-move {{
     display: inline-block;
     white-space: nowrap;
-    padding-left: 100%;
+    padding-left: 100vw;
     animation: ticker 260s linear infinite;
 }}
 
@@ -946,25 +954,34 @@ def render_ticker_tape():
 }}
 
 @keyframes ticker {{
-    0% {{ transform: translateX(0); }}
-    100% {{ transform: translateX(-100%); }}
+    0% {{ transform: translate3d(0,0,0); }}
+    100% {{ transform: translate3d(-100%,0,0); }}
 }}
 
 .ticker-item {{
     display: inline-block;
     margin-right: 60px;
-    font-family: 'Courier New', monospace;
+    font-family: "Courier New", monospace;
     font-weight: bold;
     font-size: 14px;
+    letter-spacing: 0.5px;
 }}
 
 .ticker-item a {{
     text-decoration: none;
 }}
 
+.ticker-item a:hover {{
+    text-decoration: underline;
+    opacity: 0.85;
+}}
+
 .color-yellow {{ color: #facc15; }}
 .color-orange {{ color: #f97316; }}
-.color-red {{ color: #ef4444; }}
+.color-red {{
+    color: #ef4444;
+    text-shadow: 0 0 5px rgba(239,68,68,0.4);
+}}
 
 </style>
 
