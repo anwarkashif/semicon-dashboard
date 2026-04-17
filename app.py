@@ -921,53 +921,54 @@ def render_ticker_tape():
 <style>
 
 /* ================================
-INTELLIGENCE TERMINAL TICKER
+SEMICON INTELLIGENCE TICKER
 ================================ */
 
 .ticker-wrap {{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 42px;
-    background: linear-gradient(90deg,#000000,#050505,#000000);
+    background-color: #050505;
     border-bottom: 1px solid #333;
     z-index: 999;
     overflow: hidden;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.9);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }}
 
-/* Prevent dashboard hiding under ticker */
+/* push dashboard below ticker without breaking sidebar */
+
 [data-testid="stAppViewContainer"] > .main {{
     padding-top: 60px;
 }}
 
-.ticker-track {{
-    display: flex;
-    width: max-content;
-    animation: ticker-scroll 260s linear infinite;
+.ticker-move {{
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100vw;
+    animation: ticker 260s linear infinite;
 }}
 
-.ticker-track:hover {{
+.ticker-move:hover {{
     animation-play-state: paused;
 }}
 
-.ticker-content {{
-    display: flex;
-    white-space: nowrap;
+@keyframes ticker {{
+    0% {{ transform: translate3d(0,0,0); }}
+    100% {{ transform: translate3d(-100%,0,0); }}
 }}
 
 .ticker-item {{
-    margin-right: 70px;
+    display: inline-block;
+    margin-right: 60px;
     font-family: "Courier New", monospace;
     font-weight: bold;
     font-size: 14px;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.5px;
 }}
-
-/* Links */
 
 .ticker-item a {{
     text-decoration: none;
@@ -975,51 +976,32 @@ INTELLIGENCE TERMINAL TICKER
 
 .ticker-item a:hover {{
     text-decoration: underline;
-    opacity: 0.85;
+    opacity: 0.8;
 }}
 
-/* Threat Levels */
+/* Threat levels */
 
-.color-yellow {{
-    color: #facc15;
-}}
-
-.color-orange {{
-    color: #f97316;
-}}
+.color-yellow {{ color:#facc15; }}
+.color-orange {{ color:#f97316; }}
 
 .color-red {{
-    color: #ef4444;
-    text-shadow: 0 0 6px rgba(239,68,68,0.5);
-    animation: flash 1.5s infinite;
+    color:#ef4444;
+    text-shadow:0 0 5px rgba(239,68,68,0.4);
+    animation:flash 1.5s infinite;
 }}
-
-/* Critical alert flash */
 
 @keyframes flash {{
     0% {{opacity:1}}
-    50% {{opacity:0.35}}
+    50% {{opacity:0.4}}
     100% {{opacity:1}}
-}}
-
-/* Smooth ticker scroll */
-
-@keyframes ticker-scroll {{
-    0% {{ transform: translateX(0); }}
-    100% {{ transform: translateX(-50%); }}
 }}
 
 </style>
 
 <div class="ticker-wrap">
-    <div class="ticker-track">
-        <div class="ticker-content">
-            {all_items_html}
-        </div>
-        <div class="ticker-content">
-            {all_items_html}
-        </div>
-    </div>
+<div class="ticker-move">
+{all_items_html}
+</div>
 </div>
 """
 
