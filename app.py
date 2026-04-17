@@ -920,7 +920,9 @@ def render_ticker_tape():
     ticker_code = f"""
 <style>
 
-/* --- TOP NEWS TICKER --- */
+/* ================================
+INTELLIGENCE TERMINAL TICKER
+================================ */
 
 .ticker-wrap {{
     position: fixed;
@@ -928,16 +930,16 @@ def render_ticker_tape():
     left: 0;
     width: 100vw;
     height: 42px;
-    background-color: #050505;
+    background: linear-gradient(90deg,#000000,#050505,#000000);
     border-bottom: 1px solid #333;
     z-index: 999;
     overflow: hidden;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.9);
 }}
 
-/* Push page below ticker without breaking sidebar */
+/* Prevent page hiding under ticker */
 [data-testid="stAppViewContainer"] > .main {{
     padding-top: 60px;
 }}
@@ -946,7 +948,7 @@ def render_ticker_tape():
     display: inline-block;
     white-space: nowrap;
     padding-left: 100vw;
-    animation: ticker 260s linear infinite;
+    animation: ticker 240s linear infinite;
 }}
 
 .ticker-move:hover {{
@@ -960,12 +962,14 @@ def render_ticker_tape():
 
 .ticker-item {{
     display: inline-block;
-    margin-right: 60px;
+    margin-right: 70px;
     font-family: "Courier New", monospace;
     font-weight: bold;
     font-size: 14px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }}
+
+/* clickable links */
 
 .ticker-item a {{
     text-decoration: none;
@@ -976,11 +980,28 @@ def render_ticker_tape():
     opacity: 0.85;
 }}
 
-.color-yellow {{ color: #facc15; }}
-.color-orange {{ color: #f97316; }}
+/* Threat levels */
+
+.color-yellow {{
+    color: #facc15;
+}}
+
+.color-orange {{
+    color: #f97316;
+}}
+
 .color-red {{
     color: #ef4444;
-    text-shadow: 0 0 5px rgba(239,68,68,0.4);
+    text-shadow: 0 0 6px rgba(239,68,68,0.5);
+    animation: flash 1.5s infinite;
+}}
+
+/* Flash animation for critical alerts */
+
+@keyframes flash {{
+    0% {{ opacity: 1; }}
+    50% {{ opacity: 0.4; }}
+    100% {{ opacity: 1; }}
 }}
 
 </style>
