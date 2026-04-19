@@ -1453,7 +1453,7 @@ else:
             st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 30px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
             
             check_early_warnings()
-        # --- NEW: LIVE GLOBAL SEMICONDUCTOR RISK INDEX (2-HOUR SYNC) ---
+        # --- NEW: LIVE GLOBAL SEMICONDUCTOR RISK INDEX - In the Last 2 Hours(2-HOUR SYNC) ---
             # 1. Get baseline structural risk from the weekly SCV domains
             all_texts = [text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa]
             valid_scores = [calculate_domain_threat("domain", t, dashboard_data) for t in all_texts if len(t.strip()) > 20]
