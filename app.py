@@ -1118,7 +1118,7 @@ if st.session_state['role'] is None:
 
         if submit_login:
             # Securely fetch credentials from Koyeb's hidden environment variables
-            ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "anwarkashif@semicon.com")
+            ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "anwarkashif@semirare.in")
             ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 
             # Check against the secure variables instead of hardcoded text
