@@ -1453,7 +1453,7 @@ else:
             st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 30px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
             
             check_early_warnings()
-        # --- NEW: LIVE GLOBAL SEMICONDUCTOR RISK INDEX - In the Last 2 Hours(2-HOUR SYNC) ---
+        # --- NEW: LIVE GLOBAL SEMICONDUCTOR RISK INDEX(2-HOUR SYNC) ---
             # 1. Get baseline structural risk from the weekly SCV domains
             all_texts = [text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa]
             valid_scores = [calculate_domain_threat("domain", t, dashboard_data) for t in all_texts if len(t.strip()) > 20]
@@ -1487,11 +1487,11 @@ else:
             risk_cols = st.columns([1, 1])
             with risk_cols[0]:
                 if global_risk >= 75:
-                    st.error(f"🔴 **Global Semiconductor Risk Index: {global_risk} / 100** (Critical)")
+                    st.error(f"🔴 **Global Semiconductor Risk Index - In the Last Two Hours: {global_risk} / 100** (Critical)")
                 elif global_risk >= 50:
-                    st.warning(f"🟠 **Global Semiconductor Risk Index: {global_risk} / 100** (Rising Risk)")
+                    st.warning(f"🟠 **Global Semiconductor Risk Index - In the Last Two Hours: {global_risk} / 100** (Rising Risk)")
                 else:
-                    st.success(f"🟢 **Global Semiconductor Risk Index: {global_risk} / 100** (Stable)")
+                    st.success(f"🟢 **Global Semiconductor Risk Index - In the Last Two Hours: {global_risk} / 100** (Stable)")
             
             with risk_cols[1]:
                 if breaking_news:
