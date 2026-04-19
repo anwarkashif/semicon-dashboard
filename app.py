@@ -1477,7 +1477,7 @@ else:
 
             with scv_cols[0]:
                 st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
-                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel</p>", unsafe_allow_html=True)
+                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel (weekly)</p>", unsafe_allow_html=True)
 
                 if active_cats:
                     fig = go.Figure()
@@ -1558,7 +1558,7 @@ else:
 
             with scv_cols[1]:
                 st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
-                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;'>SCV Threat Matrix (Active Domains)</p>", unsafe_allow_html=True)
+                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;'>SCV Threat Matrix (Active Domains) (Weekly)</p>", unsafe_allow_html=True)
                 
                 if active_cats:
                     for cat in active_cats:
@@ -1583,7 +1583,7 @@ else:
             # ==========================================
             # AI GEOPOLITICAL SYNTHESIS
             # ==========================================
-            st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px; margin-bottom: 10px;'>AI Geopolitical Synthesis</p>", unsafe_allow_html=True)
+            st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px; margin-bottom: 10px;'>AI Geopolitical Synthesis (Weekly)</p>", unsafe_allow_html=True)
             if text_summary and text_summary.strip() != "":
                 with st.container(height=160):
                     render_highlighted_text(text_summary, selected_actor)
