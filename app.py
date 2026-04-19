@@ -1129,6 +1129,11 @@ if st.session_state['role'] is None:
             else: 
                 st.error("Invalid credentials. (Check Koyeb Env Variables if your fallback password doesn't work).")
 
+    # --- ADD THIS BLOCK BACK RIGHT HERE ---
+    if st.button("View as Guest", type="secondary"):
+        st.session_state['role'] = 'guest'
+        st.rerun()
+
 # ==========================================
 # 4. MAIN DASHBOARD
 # ==========================================
@@ -1919,7 +1924,7 @@ else:
                 st.markdown("---")
 
             # --- NEW: AI NEWS SUMMARY (TOP 10) ---
-                st.markdown("##### 🤖 AI Intelligence Summary (Top Radar Hits)")
+                st.markdown("##### AI Intelligence Summary (Top Radar Hits)")
                 if live_rss_data:
                     all_news = []
                     for reg, arts in live_rss_data.items():
