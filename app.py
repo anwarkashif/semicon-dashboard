@@ -1583,7 +1583,7 @@ else:
             # ==========================================
             # AI GEOPOLITICAL SYNTHESIS
             # ==========================================
-            st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px; margin-bottom: 10px;'>AI Geopolitical Synthesis (Weekly)</p>", unsafe_allow_html=True)
+            st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px; margin-bottom: 10px;'>AI Geopolitical Synthesis (Weekly) - The Big Picture</p>", unsafe_allow_html=True)
             if text_summary and text_summary.strip() != "":
                 with st.container(height=160):
                     render_highlighted_text(text_summary, selected_actor)
@@ -1593,7 +1593,7 @@ else:
             st.markdown("---")
 
             if text_ews and text_ews.strip() != "":
-                st.markdown("<h5 style='color:#ff4b4b; margin-top: 0px; margin-bottom: 5px;'>🚨 Weekly EWS Synthesis</h5>", unsafe_allow_html=True)
+                st.markdown("<h5 style='color:#ff4b4b; margin-top: 0px; margin-bottom: 5px;'>🚨 Weekly EWS Synthesis - The Tactical Alarm</h5>", unsafe_allow_html=True)
                 render_highlighted_text(text_ews, selected_actor)
                 st.markdown("<br>", unsafe_allow_html=True)
             
