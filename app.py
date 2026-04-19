@@ -896,18 +896,16 @@ def render_ticker_tape():
             score = min(10, score)
             
             if score >= 5:
+                # Keep the emojis for visual context, but drop the color assignments
                 if score >= 9:
-                    color_class = "color-red"
                     prefix = "🔴 CRITICAL:"
                 elif score >= 7:
-                    color_class = "color-orange"
                     prefix = "🟠 ELEVATED:"
                 else:
-                    color_class = "color-yellow"
                     prefix = "🟡 WATCH:"
                 
                 clean_title = item.get("title", "").replace('"', '&quot;').replace("'", "&#39;")
-                ticker_html = f'<div class="ticker-item {color_class}"><a href="{item.get("link", "#")}" target="_blank" class="{color_class}">{prefix} {clean_title}</a></div>'
+                ticker_html = f'<div class="ticker-item"><a href="{item.get("link", "#")}" target="_blank">{prefix} {clean_title}</a></div>'
                 ticker_items.append(ticker_html)
                 
     except Exception as e:
@@ -925,21 +923,19 @@ def render_ticker_tape():
 
     .ticker-wrap {{
         position: fixed;
-        top: 60px; /* FIX: Anchors ticker safely below the native header */
+        top: 60px;
         left: 0;
         width: 100vw;
         height: 42px;
         background-color: #050505;
-        border-bottom: 1px solid #333;
-        border-top: 1px solid #333; /* Nice visual separator */
-        z-index: 990; /* Keeps it above content but out of the way of modals */
+        border: none !important; /* Completely removes the outline */
+        box-shadow: none !important; /* Removes any bottom shadow */
+        z-index: 990; 
         overflow: hidden;
         display: flex;
         align-items: center;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.8);
     }}
 
-    /* FIX: Pushes the main dashboard content down so it doesn't hide under the ticker */
     .block-container {{
         padding-top: 110px !important; 
     }}
@@ -971,26 +967,12 @@ def render_ticker_tape():
 
     .ticker-item a {{
         text-decoration: none;
+        color: #ffffff !important; /* Forces all text to be pure white */
     }}
 
     .ticker-item a:hover {{
         text-decoration: underline;
         opacity: 0.8;
-    }}
-
-    .color-yellow {{ color:#facc15; }}
-    .color-orange {{ color:#f97316; }}
-
-    .color-red {{
-        color:#ef4444;
-        text-shadow:0 0 5px rgba(239,68,68,0.4);
-        animation:flash 1.5s infinite;
-    }}
-
-    @keyframes flash {{
-        0% {{opacity:1}}
-        50% {{opacity:0.4}}
-        100% {{opacity:1}}
     }}
     </style>
 
