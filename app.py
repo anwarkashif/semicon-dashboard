@@ -1453,10 +1453,36 @@ else:
             st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 30px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
             
             check_early_warnings()
-        # --- NEW: GLOBAL SEMICONDUCTOR RISK INDEX ---
+        # --- NEW: LIVE GLOBAL SEMICONDUCTOR RISK INDEX (2-HOUR SYNC) ---
+            # 1. Get baseline structural risk from the weekly SCV domains
             all_texts = [text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa]
             valid_scores = [calculate_domain_threat("domain", t, dashboard_data) for t in all_texts if len(t.strip()) > 20]
-            global_risk = int(sum(valid_scores) / len(valid_scores)) if valid_scores else 0
+            baseline_risk = int(sum(valid_scores) / len(valid_scores)) if valid_scores else 40
+
+            # 2. Calculate live volatility and extract breaking news from the 2-hour RSS feed
+            live_rss_data = parse_rss_txt_file()
+            live_volatility = 0
+            breaking_news = []
+            
+            if live_rss_data:
+                critical_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'crisis']
+                high_kw = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension']
+                
+                for region, articles in live_rss_data.items():
+                    for art in articles:
+                        title_lower = art['title'].lower()
+                        score = 3 + (sum(1 for kw in critical_kw if kw in title_lower) * 5) + (sum(1 for kw in high_kw if kw in title_lower) * 3)
+                        
+                        # Add penalty points to the live score based on news severity
+                        if score >= 9:
+                            live_volatility += 4  # Major penalty for critical news
+                            if art['title'] not in [b['title'] for b in breaking_news]:
+                                breaking_news.append(art)
+                        elif score >= 6:
+                            live_volatility += 1.5  # Minor penalty for elevated news
+
+            # 3. Final Live Risk Score (Baseline + Live Volatility, capped at 100)
+            global_risk = min(100, int(baseline_risk + live_volatility))
 
             risk_cols = st.columns([1, 1])
             with risk_cols[0]:
@@ -1466,25 +1492,12 @@ else:
                     st.warning(f"🟠 **Global Semiconductor Risk Index: {global_risk} / 100** (Rising Risk)")
                 else:
                     st.success(f"🟢 **Global Semiconductor Risk Index: {global_risk} / 100** (Stable)")
-
-            # --- NEW: BREAKING NEWS ALERT SYSTEM ---
-            live_rss_data = parse_rss_txt_file()
-            breaking_news = []
-            if live_rss_data:
-                critical_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike']
-                high_kw = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension']
-                for region, articles in live_rss_data.items():
-                    for art in articles:
-                        title_lower = art['title'].lower()
-                        score = 3 + (sum(1 for kw in critical_kw if kw in title_lower) * 5) + (sum(1 for kw in high_kw if kw in title_lower) * 3)
-                        if score >= 9 and art['title'] not in [b['title'] for b in breaking_news]:
-                            breaking_news.append(art)
             
             with risk_cols[1]:
                 if breaking_news:
-                    st.error(f"🚨 **BREAKING ALERT:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
+                    st.error(f"🚨 **BREAKING ALERT - In the Last 2 Hours:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
                 else:
-                    st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the last hour.")
+                    st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the last 2 hours.")
 
             # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
             st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 30px; margin-bottom: 10px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
@@ -1924,7 +1937,7 @@ else:
                 st.markdown("---")
 
             # --- NEW: AI NEWS SUMMARY (TOP 10) ---
-                st.markdown("##### AI Intelligence Summary (Top Radar Hits)")
+                st.markdown("##### AI Intelligence Summary (Top Radar Hits) - In the Last 2 Hours")
                 if live_rss_data:
                     all_news = []
                     for reg, arts in live_rss_data.items():
