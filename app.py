@@ -1118,19 +1118,16 @@ if st.session_state['role'] is None:
 
         if submit_login:
             # Securely fetch credentials from Koyeb's hidden environment variables
+            # The second argument is a fallback to ensure you are never locked out
             ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "anwarkashif@semirare.in")
-            ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
+            ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "Admin@123") # <-- Change this fallback to your desired secure key
 
             # Check against the secure variables instead of hardcoded text
             if email_input == ADMIN_EMAIL and password_input == ADMIN_PASSWORD:
                 st.session_state['role'] = 'admin'
                 st.rerun()
             else: 
-                st.error("Invalid credentials.")
-    
-    if st.button("View as Guest", type="secondary"):
-        st.session_state['role'] = 'guest'
-        st.rerun()
+                st.error("Invalid credentials. (Check Koyeb Env Variables if your fallback password doesn't work).")
 
 # ==========================================
 # 4. MAIN DASHBOARD
@@ -1451,6 +1448,38 @@ else:
             st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 30px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
             
             check_early_warnings()
+        # --- NEW: GLOBAL SEMICONDUCTOR RISK INDEX ---
+            all_texts = [text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa]
+            valid_scores = [calculate_domain_threat("domain", t, dashboard_data) for t in all_texts if len(t.strip()) > 20]
+            global_risk = int(sum(valid_scores) / len(valid_scores)) if valid_scores else 0
+
+            risk_cols = st.columns([1, 1])
+            with risk_cols[0]:
+                if global_risk >= 75:
+                    st.error(f"🔴 **Global Semiconductor Risk Index: {global_risk} / 100** (Critical)")
+                elif global_risk >= 50:
+                    st.warning(f"🟠 **Global Semiconductor Risk Index: {global_risk} / 100** (Rising Risk)")
+                else:
+                    st.success(f"🟢 **Global Semiconductor Risk Index: {global_risk} / 100** (Stable)")
+
+            # --- NEW: BREAKING NEWS ALERT SYSTEM ---
+            live_rss_data = parse_rss_txt_file()
+            breaking_news = []
+            if live_rss_data:
+                critical_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike']
+                high_kw = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension']
+                for region, articles in live_rss_data.items():
+                    for art in articles:
+                        title_lower = art['title'].lower()
+                        score = 3 + (sum(1 for kw in critical_kw if kw in title_lower) * 5) + (sum(1 for kw in high_kw if kw in title_lower) * 3)
+                        if score >= 9 and art['title'] not in [b['title'] for b in breaking_news]:
+                            breaking_news.append(art)
+            
+            with risk_cols[1]:
+                if breaking_news:
+                    st.error(f"🚨 **BREAKING ALERT:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
+                else:
+                    st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the last hour.")
 
             # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
             st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 30px; margin-bottom: 10px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
@@ -1720,6 +1749,27 @@ else:
                         fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0}, paper_bgcolor="rgba(0,0,0,0)", showlegend=False)
                         st.plotly_chart(fig, use_container_width=True)
 
+#              ==========================================
+                    # NEW FEATURE: 2D LIVE SUPPLY CHAIN MAP
+                    # ==========================================
+                    st.markdown("##### 🌍 Global Semiconductor Infrastructure Map")
+                    infra_list = []
+                    for category, locations in INFRASTRUCTURE_DATA.items():
+                        for loc in locations:
+                            infra_list.append({"Facility": loc["name"], "Lat": loc["lat"], "Lon": loc["lon"], "Category": category})
+                    
+                    if infra_list:
+                        df_infra = pd.DataFrame(infra_list)
+                        px.set_mapbox_access_token(MAPBOX_PUBLIC_TOKEN)
+                        fig_infra = px.scatter_mapbox(
+                            df_infra, lat="Lat", lon="Lon", color="Category", hover_name="Facility",
+                            mapbox_style="carto-darkmatter", zoom=1.2, height=500,
+                            color_discrete_sequence=["#00ffff", "#ff00ff", "#ffff00", "#39ff14", "#ff4500", "#ffffff"]
+                        )
+                        fig_infra.update_layout(margin={"r":0,"t":0,"l":0,"b":0}, paper_bgcolor="rgba(0,0,0,0)", legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01, font=dict(color="white")))
+                        st.plotly_chart(fig_infra, use_container_width=True)
+                    st.markdown("<br>", unsafe_allow_html=True)
+
                     # ==========================================
                     # NEW FEATURE: TRUE 3D MAPBOX GLOBE
                     # ==========================================
@@ -1867,7 +1917,24 @@ else:
                 # ==========================================
                 st.markdown("<h2 style='text-align: center; color: #00bfff; margin-top: 50px; margin-bottom: 10px;'>Live Global Telemetry</h2>", unsafe_allow_html=True)
                 st.markdown("---")
-                
+
+            # --- NEW: AI NEWS SUMMARY (TOP 10) ---
+                st.markdown("##### 🤖 AI Intelligence Summary (Top Radar Hits)")
+                if live_rss_data:
+                    all_news = []
+                    for reg, arts in live_rss_data.items():
+                        all_news.extend(arts)
+                    # Deduplicate and sort by threat keyword presence
+                    unique_news = {v['title']:v for v in all_news}.values()
+                    critical_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war']
+                    sorted_news = sorted(unique_news, key=lambda x: sum(1 for kw in critical_kw if kw in x['title'].lower()), reverse=True)
+                    
+                    summary_html = "<div style='background-color: #111; padding: 15px; border-radius: 8px; border-left: 4px solid #00bfff; margin-bottom: 20px;'>"
+                    for idx, art in enumerate(list(sorted_news)[:10]):
+                        summary_html += f"<p style='margin: 5px 0; font-size: 14px;'><span style='color: #00bfff; font-weight: bold;'>{idx+1}.</span> <a href='{art['link']}' target='_blank' style='color: #ddd; text-decoration: none;'>{art['title']}</a></p>"
+                    summary_html += "</div>"
+                    st.markdown(summary_html, unsafe_allow_html=True)
+
                 last_updated_str = "Unknown"
                 latest_time = 0
                 
