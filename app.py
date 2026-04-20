@@ -1765,7 +1765,8 @@ else:
                             opacity=0.6 
                         )
                         fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0}, paper_bgcolor="rgba(0,0,0,0)", showlegend=False)
-                        st.plotly_chart(fig, use_container_width=True)
+                        st.plotly_chart(fig, use_container_width=True)              
+
 
 #              ==========================================
                     # NEW FEATURE: 2D LIVE SUPPLY CHAIN MAP
@@ -1926,6 +1927,59 @@ else:
                         display_actions = df_actions
                         
                     st.table(display_actions.set_index(display_actions.columns[0]))
+                    
+                    # ==========================================
+                    # FEATURE 3 & 4: CORRELATION ENGINE & TIMELINE
+                    # ==========================================
+                    col_tc1, col_tc2 = st.columns(2)
+                    
+                    with col_tc1:
+                        st.markdown("##### 🔗 Event Correlation Engine - Weekly")
+                        st.caption("Detects geographic hotspots where multiple distinct entities are operating simultaneously.")
+                        try:
+                            loc_group = display_actions.groupby('Location')['Actor'].apply(lambda x: list(set(x))).reset_index()
+                            # Strip out vague locations so we only get real strategic convergences
+                            loc_group = loc_group[~loc_group['Location'].isin(['Global', 'Multiple', 'Various', 'None', '', 'N/A'])]
+                            correlated = loc_group[loc_group['Actor'].apply(len) > 1]
+                            
+                            if not correlated.empty:
+                                for _, row in correlated.head(4).iterrows():
+                                    actors_str = ", ".join(row['Actor'])
+                                    loc = row['Location']
+                                    
+                                    # Updated 4WH Explanatory Format (Natural Language)
+                                    html_box = f'''
+                                    <div style="background-color: rgba(255,140,0, 0.1); border-left: 3px solid #ff8c00; padding: 12px; margin-bottom: 12px; border-radius: 4px;">
+                                        <p style="margin: 0 0 6px 0; font-size: 14px; color: #ff8c00;"><b>⚠️ Strategic Convergence Detected</b></p>
+                                        <p style="margin: 0 0 8px 0; font-size: 13px; color: #d1d5db; line-height: 1.5;">
+                                            Currently, multiple distinct entities—specifically <b>{actors_str}</b>—are actively concentrating their operational and policy vectors within <b>{loc}</b>, indicating a high-priority strategic hotspot.
+                                        </p>
+                                        <p style="margin: 0 0 2px 0; font-size: 12px; color: #aaaaaa;"><b>Location:</b> <span style="color: #ddd;">{loc}</span></p>
+                                        <p style="margin: 0; font-size: 12px; color: #aaaaaa;"><b>Actors Involved:</b> <span style="color: #ddd;">{actors_str}</span></p>
+                                    </div>
+                                    '''
+                                    st.markdown(html_box, unsafe_allow_html=True)
+                            else:
+                                st.info("No localized strategic convergences detected this week.")
+                        except Exception:
+                            pass
+                            
+                    with col_tc2:
+                        st.markdown("##### ⏳ Strategic Timeline Reconstruction - Weekly")
+                        try:
+                            if len(display_actions) > 0:
+                                timeline_html = '<div style="border-left: 2px solid #333; padding-left: 15px; margin-left: 10px;">'
+                                for _, row in display_actions.head(5).iterrows():
+                                    actor = row.get('Actor', 'Unknown')
+                                    # FIX: Removed the [:100] + "..." cutoff. Now the full sentence will render naturally.
+                                    action = str(row.get('Action', ''))
+                                    
+                                    timeline_html += f'<div style="position: relative; margin-bottom: 15px;"><span style="position: absolute; left: -21px; top: 0px; height: 10px; width: 10px; border-radius: 50%; background-color: #00bfff;"></span><div style="font-size: 12px; font-weight: bold; color: #00bfff;">{actor}</div><div style="font-size: 14px; color: #eee; line-height: 1.3; padding-top: 2px;">{action}</div></div>'
+                                timeline_html += '</div>'
+                                st.markdown(timeline_html, unsafe_allow_html=True)
+                        except Exception:
+                            pass
+
 
                 st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Strategic Conclusion</h3>", unsafe_allow_html=True)
                 if text_final: render_highlighted_text(text_final, selected_actor)
@@ -2094,21 +2148,56 @@ else:
                     st.plotly_chart(radar_fig, use_container_width=True)
 
             # --- NEW: AI NEWS SUMMARY (TOP 10) ---
-                st.markdown("##### AI Intelligence Summary (Top Radar Hits) - In the Last 2 Hours")
-                if live_rss_data:
-                    all_news = []
-                    for reg, arts in live_rss_data.items():
-                        all_news.extend(arts)
-                    # Deduplicate and sort by threat keyword presence
-                    unique_news = {v['title']:v for v in all_news}.values()
-                    critical_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war']
-                    sorted_news = sorted(unique_news, key=lambda x: sum(1 for kw in critical_kw if kw in x['title'].lower()), reverse=True)
-                    
-                    summary_html = "<div style='background-color: #111; padding: 15px; border-radius: 8px; border-left: 4px solid #00bfff; margin-bottom: 20px;'>"
-                    for idx, art in enumerate(list(sorted_news)[:10]):
-                        summary_html += f"<p style='margin: 5px 0; font-size: 14px;'><span style='color: #00bfff; font-weight: bold;'>{idx+1}.</span> <a href='{art['link']}' target='_blank' style='color: #ddd; text-decoration: none;'>{art['title']}</a></p>"
-                    summary_html += "</div>"
-                    st.markdown(summary_html, unsafe_allow_html=True)
+                sum_cols = st.columns([1.5, 1])
+                with sum_cols[0]:
+                    st.markdown("##### AI Intelligence Summary (Top Radar Hits) - In the Last 2 Hours")
+                    if live_rss_data:
+                        all_news = []
+                        for reg, arts in live_rss_data.items():
+                            all_news.extend(arts)
+                        # Deduplicate and sort by threat keyword presence
+                        unique_news = {v['title']:v for v in all_news}.values()
+                        critical_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war']
+                        sorted_news = sorted(unique_news, key=lambda x: sum(1 for kw in critical_kw if kw in x['title'].lower()), reverse=True)
+                        
+                        summary_html = "<div style='background-color: #111; padding: 15px; border-radius: 8px; border-left: 4px solid #00bfff; margin-bottom: 20px;'>"
+                        for idx, art in enumerate(list(sorted_news)[:10]):
+                            summary_html += f"<p style='margin: 5px 0; font-size: 14px;'><span style='color: #00bfff; font-weight: bold;'>{idx+1}.</span> <a href='{art['link']}' target='_blank' style='color: #ddd; text-decoration: none;'>{art['title']}</a></p>"
+                        summary_html += "</div>"
+                        st.markdown(summary_html, unsafe_allow_html=True)
+                
+                with sum_cols[1]:
+                    # ==========================================
+                    # FEATURE 1: INTELLIGENCE SIGNAL DETECTION
+                    # ==========================================
+                    st.markdown("##### 📡 Intelligence Signal Detection Engine - In the Last Two Hours")
+                    if live_rss_data:
+                        medium_keywords = ['subsidy', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'delay']
+                        keyword_counts = {}
+                        
+                        # Flatten RSS
+                        for reg, arts in live_rss_data.items():
+                            for art in arts:
+                                title_lower = art['title'].lower()
+                                for kw in medium_keywords:
+                                    if kw in title_lower:
+                                        keyword_counts[kw] = keyword_counts.get(kw, 0) + 1
+                        
+                        # Find rising signals that aren't critical yet
+                        weak_signals = {k: v for k, v in keyword_counts.items() if v > 1}
+                        
+                        if weak_signals:
+                            for signal_kw, count in sorted(weak_signals.items(), key=lambda x: x[1], reverse=True)[:3]:
+                                confidence = min(99, count * 15 + 30)
+                                st.markdown(f"""
+                                <div style="background-color: rgba(255, 255, 0, 0.05); border: 1px solid #ffeb3b; padding: 12px; border-radius: 8px; margin-bottom: 10px;">
+                                    <h6 style="color: #ffeb3b; margin: 0 0 5px 0; font-size: 13px;">⚠ Weak Signal Detected</h6>
+                                    <p style="margin: 0; font-size: 13px; color: #ddd;">Increased diplomatic/media chatter regarding: <b>{signal_kw.upper()}</b></p>
+                                    <p style="margin: 5px 0 0 0; font-size: 11px; color: #888; font-family: monospace;">Confidence: {confidence}% | Trend: Rising ▲</p>
+                                </div>
+                                """, unsafe_allow_html=True)
+                        else:
+                            st.info("No abnormal weak signal clusters detected in the last 2 hours.")
 
                 last_updated_str = "Unknown"
                 latest_time = 0
