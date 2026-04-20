@@ -1486,35 +1486,35 @@ else:
                         breaking_news.append(art)
 
         # 3. Mathematical Method: Weighted Composite Risk Model with Logarithmic Normalization
-        import math
-        def log_scale(score, max_boost):
-            # Asymptotic curve: Prevents linear stacking from maxing out at 100%
-            return max_boost * (1 - math.exp(-0.06 * score)) if score > 0 else 0
-            
-        # Distribute the maximum allowed volatility (60%) across themes
-        kinetic_volatility = log_scale(theme_scores["Kinetic"], 25)  # Hardest impact
-        economic_volatility = log_scale(theme_scores["Economic"], 20)
-        supply_volatility = log_scale(theme_scores["Supply"], 15)
-        
-        # Final Composite Math: 40% Structural Baseline + 60% Dynamic Volatility
-        raw_composite = (baseline_risk * 0.4) + kinetic_volatility + economic_volatility + supply_volatility
-        global_risk = int(round(raw_composite + 25)) # Apply a standard operational floor
-        global_risk = max(20, min(99, global_risk)) # Cap at 99% to maintain metric authenticity
+import math
+def log_scale(score, max_boost):
+    # Asymptotic curve: Prevents linear stacking from maxing out at 100%
+    return max_boost * (1 - math.exp(-0.06 * score)) if score > 0 else 0
 
-        risk_cols = st.columns([1, 1])
-        with risk_cols[0]:
-            if global_risk >= 75:
-                st.error(f"🔴 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Critical)")
-            elif global_risk >= 50:
-                st.warning(f"🟠 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Rising Risk)")
-            else:
-                st.success(f"🟢 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Stable)")
-        
-        with risk_cols[1]:
-            if breaking_news:
-                st.error(f"🚨 **BREAKING ALERT – In the Past 24-Hours:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
-            else:
-                st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the past 24-hours.")
+# Distribute the maximum allowed volatility (60%) across themes
+kinetic_volatility = log_scale(theme_scores["Kinetic"], 25)  # Hardest impact
+economic_volatility = log_scale(theme_scores["Economic"], 20)
+supply_volatility = log_scale(theme_scores["Supply"], 15)
+
+# Final Composite Math: 40% Structural Baseline + 60% Dynamic Volatility
+raw_composite = (baseline_risk * 0.4) + kinetic_volatility + economic_volatility + supply_volatility
+global_risk = int(round(raw_composite + 25)) # Apply a standard operational floor
+global_risk = max(20, min(99, global_risk)) # Cap at 99% to maintain metric authenticity
+
+risk_cols = st.columns([1, 1])
+with risk_cols[0]:
+    if global_risk >= 75:
+        st.error(f"🔴 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Critical)")
+    elif global_risk >= 50:
+        st.warning(f"🟠 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Rising Risk)")
+    else:
+        st.success(f"🟢 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Stable)")
+
+with risk_cols[1]:
+    if breaking_news:
+        st.error(f"🚨 **BREAKING ALERT – In the Past 24-Hours:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
+    else:
+        st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the past 24-hours.")
 
             # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
             st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 30px; margin-bottom: 10px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
@@ -2240,7 +2240,7 @@ else:
                         last_updated_str = f"{hours}h {mins}m ago"
 
                 st.markdown("##### Think Tank Radar")
-                st.markdown(f"<p style='font-size: 14px; font-weight: bold; color: #00ff00; margin-top: -10px;'>🟢 LIVE Geopolitical and OSINT SYNC: <span style='color: #888; font-weight: normal;'>Last updated {last_updated_str}</span></p>", unsafe_allow_html=True)
+                st.markdown(f"<p style='font-size: 14px; font-weight: bold; color: #00ff00; margin-top: -10px;'>🟢 LIVE Geopolitical and SemicoN Dashboard SYNC: <span style='color: #888; font-weight: normal;'>Last updated {last_updated_str}</span></p>", unsafe_allow_html=True)
                 
                 live_rss = parse_rss_txt_file()
 
