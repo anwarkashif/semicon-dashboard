@@ -2134,6 +2134,10 @@ else:
                     st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
                     st.markdown("##### 📊 Strategic Threat Radar – In the Past 24-Hours (Heuristic Math Method)")
                     
+                    # FIX: Define live_volatility by summing your dynamic thematic scores 
+                    # before passing it into the radar array
+                    live_volatility = kinetic_volatility + economic_volatility + supply_volatility
+                    
                     # Generate dynamic radar data based on your existing baseline
                     radar_data = [
                         min(100, global_risk + 5), 
