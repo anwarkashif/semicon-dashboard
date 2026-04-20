@@ -1453,51 +1453,68 @@ else:
             st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 30px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
             
             check_early_warnings()
-        # --- NEW: LIVE GLOBAL SEMICONDUCTOR RISK INDEX(2-HOUR SYNC) ---
-            # 1. Get baseline structural risk from the weekly SCV domains
-            all_texts = [text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa]
-            valid_scores = [calculate_domain_threat("domain", t, dashboard_data) for t in all_texts if len(t.strip()) > 20]
-            baseline_risk = int(sum(valid_scores) / len(valid_scores)) if valid_scores else 40
+        # --- NEW: LIVE GLOBAL SEMICONDUCTOR RISK INDEX (24-HOUR SYNC) ---
+        # 1. Get baseline structural risk from the weekly SCV domains
+        all_texts = [text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa]
+        valid_scores = [calculate_domain_threat("domain", t, dashboard_data) for t in all_texts if len(t.strip()) > 20]
+        baseline_risk = int(sum(valid_scores) / len(valid_scores)) if valid_scores else 40
 
-            # 2. Calculate live volatility and extract breaking news from the 2-hour RSS feed
-            live_rss_data = parse_rss_txt_file()
-            live_volatility = 0
-            breaking_news = []
+        # 2. Divide collected 24-hour news into thematic categories
+        live_rss_data = parse_rss_txt_file()
+        theme_scores = {"Kinetic": 0, "Economic": 0, "Supply": 0}
+        breaking_news = []
+        
+        if live_rss_data:
+            kw_kinetic = ['war', 'military', 'strike', 'blockade', 'escalation', 'breach', 'crisis']
+            kw_economic = ['sanction', 'tariff', 'export control', 'ban', 'subsidy', 'embargo']
+            kw_supply = ['shortage', 'disrupt', 'delay', 'chokepoint', 'vulnerability']
             
-            if live_rss_data:
-                critical_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'crisis']
-                high_kw = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension']
-                
-                for region, articles in live_rss_data.items():
-                    for art in articles:
-                        title_lower = art['title'].lower()
-                        score = 3 + (sum(1 for kw in critical_kw if kw in title_lower) * 5) + (sum(1 for kw in high_kw if kw in title_lower) * 3)
-                        
-                        # Add penalty points to the live score based on news severity
-                        if score >= 9:
-                            live_volatility += 4  # Major penalty for critical news
-                            if art['title'] not in [b['title'] for b in breaking_news]:
-                                breaking_news.append(art)
-                        elif score >= 6:
-                            live_volatility += 1.5  # Minor penalty for elevated news
+            for region, articles in live_rss_data.items():
+                for art in articles:
+                    title_lower = art['title'].lower()
+                    # Thematic scoring
+                    k_hits = sum(1 for kw in kw_kinetic if kw in title_lower)
+                    e_hits = sum(1 for kw in kw_economic if kw in title_lower)
+                    s_hits = sum(1 for kw in kw_supply if kw in title_lower)
+                    
+                    theme_scores["Kinetic"] += k_hits * 5.0
+                    theme_scores["Economic"] += e_hits * 3.5
+                    theme_scores["Supply"] += s_hits * 4.0
+                    
+                    # Capture breaking alert dynamically
+                    if (k_hits + e_hits + s_hits) >= 2 and not breaking_news:
+                        breaking_news.append(art)
 
-            # 3. Final Live Risk Score (Baseline + Live Volatility, capped at 100)
-            global_risk = min(100, int(baseline_risk + live_volatility))
-
-            risk_cols = st.columns([1, 1])
-            with risk_cols[0]:
-                if global_risk >= 75:
-                    st.error(f"🔴 **Global Semiconductor Risk Index - In the Last Two Hours: {global_risk} / 100** (Critical)")
-                elif global_risk >= 50:
-                    st.warning(f"🟠 **Global Semiconductor Risk Index - In the Last Two Hours: {global_risk} / 100** (Rising Risk)")
-                else:
-                    st.success(f"🟢 **Global Semiconductor Risk Index - In the Last Two Hours: {global_risk} / 100** (Stable)")
+        # 3. Mathematical Method: Weighted Composite Risk Model with Logarithmic Normalization
+        import math
+        def log_scale(score, max_boost):
+            # Asymptotic curve: Prevents linear stacking from maxing out at 100%
+            return max_boost * (1 - math.exp(-0.06 * score)) if score > 0 else 0
             
-            with risk_cols[1]:
-                if breaking_news:
-                    st.error(f"🚨 **BREAKING ALERT - In the Last 2 Hours:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
-                else:
-                    st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the last 2 hours.")
+        # Distribute the maximum allowed volatility (60%) across themes
+        kinetic_volatility = log_scale(theme_scores["Kinetic"], 25)  # Hardest impact
+        economic_volatility = log_scale(theme_scores["Economic"], 20)
+        supply_volatility = log_scale(theme_scores["Supply"], 15)
+        
+        # Final Composite Math: 40% Structural Baseline + 60% Dynamic Volatility
+        raw_composite = (baseline_risk * 0.4) + kinetic_volatility + economic_volatility + supply_volatility
+        global_risk = int(round(raw_composite + 25)) # Apply a standard operational floor
+        global_risk = max(20, min(99, global_risk)) # Cap at 99% to maintain metric authenticity
+
+        risk_cols = st.columns([1, 1])
+        with risk_cols[0]:
+            if global_risk >= 75:
+                st.error(f"🔴 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Critical)")
+            elif global_risk >= 50:
+                st.warning(f"🟠 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Rising Risk)")
+            else:
+                st.success(f"🟢 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Stable)")
+        
+        with risk_cols[1]:
+            if breaking_news:
+                st.error(f"🚨 **BREAKING ALERT – In the Past 24-Hours:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
+            else:
+                st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the past 24-hours.")
 
             # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
             st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 30px; margin-bottom: 10px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
@@ -1999,7 +2016,7 @@ else:
 
                 with adv_cols[0]:
                     # 1. Semiconductor Supply Chain Disruption Monitor
-                    st.markdown("##### 🛰️ Supply Chain Disruption Monitor - In the Last 2 Hours")
+                    st.markdown("##### 🛰️ Supply Chain Disruption Monitor – In the Past 24-Hours")
                     
                     # Dynamically adjust mock risk based on your existing global_risk variable
                     tsmc_risk = "🔴 Critical" if global_risk > 70 else "🟠 Elevated Risk"
@@ -2019,7 +2036,7 @@ else:
                     # 2. Threat Trend Forecast (Machine Learning Projection)
                     # INCREASED GAP FOR MOBILE RESPONSIVENESS
                     st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
-                    st.markdown("##### 📉 Threat Trend Forecast - In the Last 2 Hours (Machine Learning Projection)")
+                    st.markdown("##### 📉 Threat Trend Forecast – In the Past 24-Hours (Machine Learning Projection)")
                     
                     # True Machine Learning (Linear Regression)
                     import numpy as np
@@ -2115,7 +2132,7 @@ else:
                     # 4. Strategic Threat Radar Chart
                     # INCREASED GAP FOR MOBILE RESPONSIVENESS
                     st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
-                    st.markdown("##### 📊 Strategic Threat Radar - In the Last 2 Hours (Heuristic Math Method)")
+                    st.markdown("##### 📊 Strategic Threat Radar – In the Past 24-Hours (Heuristic Math Method)")
                     
                     # Generate dynamic radar data based on your existing baseline
                     radar_data = [
@@ -2150,7 +2167,7 @@ else:
             # --- NEW: AI NEWS SUMMARY (TOP 10) ---
                 sum_cols = st.columns([1.5, 1])
                 with sum_cols[0]:
-                    st.markdown("##### AI Intelligence Summary (Top Radar Hits) - In the Last 2 Hours")
+                    st.markdown("##### AI Intelligence Summary (Top Radar Hits) – In the Past 24-Hours")
                     if live_rss_data:
                         all_news = []
                         for reg, arts in live_rss_data.items():
@@ -2170,7 +2187,7 @@ else:
                     # ==========================================
                     # FEATURE 1: INTELLIGENCE SIGNAL DETECTION
                     # ==========================================
-                    st.markdown("##### 📡 Intelligence Signal Detection Engine - In the Last Two Hours")
+                    st.markdown("##### 📡 Intelligence Signal Detection Engine – In the Past 24-Hours")
                     if live_rss_data:
                         medium_keywords = ['subsidy', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'delay']
                         keyword_counts = {}
