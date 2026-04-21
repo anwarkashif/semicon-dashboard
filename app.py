@@ -51,8 +51,13 @@ if st.session_state['role'] is None:
         }
         footer { visibility: hidden; }
 
-        /* Clean app background */
-        html, body, .stApp { height: 100vh; margin: 0; background-color: #000000; overflow: hidden; }
+        /* FIX 1: Use 100dvh for virtual keyboards and allow safe overflow */
+        html, body, .stApp { min-height: 100dvh; margin: 0; background-color: #000000; overflow-x: hidden; }
+
+        /* FIX 1: Prevent Mobile Browser Auto-Zoom on inputs */
+        input[type="text"], input[type="password"] {
+            font-size: 16px !important; 
+        }
 
         /* --- 1. THE PURE CSS LEFT PANEL --- */
         .fixed-left-panel {
@@ -82,6 +87,24 @@ if st.session_state['role'] is None:
 
         .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
 
+        /* --- LOGIN BUTTON YELLOW OVERRIDE --- */
+        button[kind="primaryFormSubmit"],
+        button[kind="primary"],
+        div[data-testid="stFormSubmitButton"] button {
+            background-color: #facc15 !important;
+            color: #000000 !important;
+            border: none !important;
+            width: 100% !important;
+            height: 45px !important;
+            font-weight: bold !important;
+            border-radius: 8px !important;
+        }
+        button[kind="primaryFormSubmit"]:hover,
+        button[kind="primary"]:hover,
+        div[data-testid="stFormSubmitButton"] button:hover {
+            background-color: #eab308 !important;
+        }
+
         /* --- 5. MOBILE OVERRIDES --- */
         @media screen and (max-width: 900px) {
             html, body, .stApp { overflow: auto; }
@@ -109,7 +132,8 @@ else:
         
         .block-container {
             margin-left: auto !important; margin-right: auto !important;
-            width: 100vw !important; max-width: 100vw !important;
+            /* FIX 2: Changed from 100vw to 100% so it respects the sidebar width */
+            width: 100% !important; max-width: 100% !important;
             display: block !important; /* CRITICAL FIX: Releases the flexbox lock from the login screen */
             height: auto !important;   /* CRITICAL FIX: Allows dashboard to scroll normally */
         }
@@ -260,17 +284,23 @@ st.markdown("""
 
     /* --- GLOBAL BUTTON THEME (Keeps Yellow Color on Dashboard & Fixes Pink Button) --- */
     div[data-testid="stButton"] > button[kind="primary"],
-    div[data-testid="stButton"] > button[data-testid="baseButton-primary"] { 
+    div[data-testid="stButton"] > button[data-testid="baseButton-primary"],
+    div[data-testid="stFormSubmitButton"] button,
+    button[kind="primaryFormSubmit"] { 
         width: 100%; background-color: #facc15 !important; color: black !important; 
         font-weight: bold; border: none !important; margin-top: 10px; height: 45px;
     }
     div[data-testid="stButton"] > button[kind="primary"]:hover,
-    div[data-testid="stButton"] > button[data-testid="baseButton-primary"]:hover { 
+    div[data-testid="stButton"] > button[data-testid="baseButton-primary"]:hover,
+    div[data-testid="stFormSubmitButton"] button:hover,
+    button[kind="primaryFormSubmit"]:hover { 
         background-color: #eab308 !important; color: black !important; border: none !important;
     }
     div[data-testid="stButton"] > button[kind="primary"]:active, 
     div[data-testid="stButton"] > button[kind="primary"]:focus,
-    div[data-testid="stButton"] > button[data-testid="baseButton-primary"]:active {
+    div[data-testid="stButton"] > button[data-testid="baseButton-primary"]:active,
+    div[data-testid="stFormSubmitButton"] button:active,
+    button[kind="primaryFormSubmit"]:active {
         background-color: #ca8a04 !important; color: black !important; 
         border: none !important; outline: none !important; box-shadow: none !important;
     }
@@ -1144,28 +1174,42 @@ if st.session_state['role'] is None:
             <h2>Login</h2>
             <p>Enter your credentials</p>
         </div>
+        
+        <style>
+            /* Hack to remove form border natively across all Streamlit versions */
+            [data-testid="stForm"] {{ border: none !important; padding: 0 !important; }}
+        </style>
         """, unsafe_allow_html=True)
         
-        email_input = st.text_input("Email", placeholder="analyst@agency.gov")
-        password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
-        submit_login = st.button("Login", type="primary", use_container_width=True)
+        # --- FIX 1: Use columns to shrink the width of the login elements ---
+        spacer_left, center_col, spacer_right = st.columns([1, 1.5, 1])
+        
+        with center_col:
+            # --- FIX 2: Wrap inside st.form to stop keystroke & eye-icon flickering ---
+            with st.form("login_form", border=False):
+                email_input = st.text_input("Email", placeholder="analyst@agency.gov")
+                password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
+                
+                # Note: st.button becomes st.form_submit_button inside a form
+                submit_login = st.form_submit_button("Login", type="primary", use_container_width=True)
 
-        if submit_login:
-            ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "anwarkashif@semirare.in")
-            ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "Admin@123") 
-            
-            if email_input == ADMIN_EMAIL and password_input == ADMIN_PASSWORD:
-                st.session_state['role'] = 'admin'
+            if submit_login:
+                ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "anwarkashif@semirare.in")
+                ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "Admin@123") 
+                
+                if email_input == ADMIN_EMAIL and password_input == ADMIN_PASSWORD:
+                    st.session_state['role'] = 'admin'
+                    login_placeholder.empty() # INSTANTLY DESTROY LOGIN WIDGETS BEFORE RERUN
+                    st.rerun()
+                else: 
+                    st.toast("Invalid credentials. Please verify your secure key.", icon="🚫")
+
+            # --- GUEST ACCESS ---
+            # Kept inside the center_col so it perfectly matches the constrained width
+            if st.button("View as Guest", type="secondary", use_container_width=True):
+                st.session_state['role'] = 'guest'
                 login_placeholder.empty() # INSTANTLY DESTROY LOGIN WIDGETS BEFORE RERUN
                 st.rerun()
-            else: 
-                st.toast("Invalid credentials. Please verify your secure key.", icon="🚫")
-
-        # --- GUEST ACCESS ---
-        if st.button("View as Guest", type="secondary"):
-            st.session_state['role'] = 'guest'
-            login_placeholder.empty() # INSTANTLY DESTROY LOGIN WIDGETS BEFORE RERUN
-            st.rerun()
 
 # ==========================================
 # 4. MAIN DASHBOARD
@@ -1202,10 +1246,17 @@ else:
             75% { opacity: 1; visibility: visible; } /* Hold solid black for 75% of the time */
             100% { opacity: 0; visibility: hidden; display: none; }
         }
+        @keyframes blinkDots {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        .loading-dots {
+            animation: blinkDots 1.2s infinite ease-in-out;
+        }
     </style>
     
     <div class="splash-overlay">
-        <div class="splash-text">Welcome to my SemicoN Dashboard</div>
+        <div class="splash-text">Welcome to my SemicoN Dashboard<span class="loading-dots">...</span></div>
     </div>
     """, unsafe_allow_html=True)
 
