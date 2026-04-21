@@ -30,10 +30,92 @@ import base64
 # ==========================================
 st.set_page_config(
     page_title="SemicoN Dashboard", 
-    page_icon="logo.jpg", 
+    page_icon="🛡️",  # <-- FIX 1: Use emoji to prevent fleeting startup errors
     layout="wide", 
-    initial_sidebar_state="collapsed" # Start closed natively, let CSS handle the rest
+    initial_sidebar_state="collapsed"
 )
+
+# FIX 1 & 3: Initialize session state immediately so routing doesn't flash
+if 'role' not in st.session_state: 
+    st.session_state['role'] = None
+
+# ==========================================
+# EARLY CSS ROUTING (KILLS THE FLASH/BLINK BUG)
+# ==========================================
+if st.session_state['role'] is None:
+    st.markdown("""
+    <style>
+        /* SAFE UI HIDING */
+        [data-testid="stToolbar"], [data-testid="stHeader"], [data-testid="collapsedControl"], [data-testid="stSidebar"] { 
+            display: none !important; 
+        }
+        footer { visibility: hidden; }
+
+        /* Clean app background */
+        html, body, .stApp { height: 100vh; margin: 0; background-color: #000000; overflow: hidden; }
+
+        /* --- 1. THE PURE CSS LEFT PANEL --- */
+        .fixed-left-panel {
+            position: fixed; top: 0; left: 0; width: 50vw; height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
+            padding: 60px; display: flex; flex-direction: column;
+            justify-content: center; z-index: 100; box-sizing: border-box;
+            border-right: 1px solid #222;
+        }
+        .fixed-left-panel h1 { font-size: 3.2rem; font-weight: 300; line-height: 1.2; margin-bottom: 10px; color: white;}
+        .fixed-left-panel span { font-weight: 700; color: #facc15; }
+        .fixed-left-panel p { color: #94a3b8; font-size: 1.2rem; margin-top: 10px; }
+
+        /* --- 2. THE RIGHT PANEL (STREAMLIT NATIVE CONTAINER) --- */
+        .block-container {
+            margin-left: 50vw !important; width: 50vw !important; max-width: 50vw !important;
+            height: 100vh !important; padding: 0 15% !important;
+            display: flex !important; flex-direction: column !important;
+            justify-content: center !important;
+        }
+
+        /* --- 3. LOGIN HEADER --- */
+        .login-header { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 25px; text-align: center; }
+        .login-logo { width: 300px; max-width: 100%; margin-bottom: 5px; image-rendering: crisp-edges; }
+        .login-header h2 { margin: 0; font-size: 32px; color: white; }
+        .login-header p { margin-top: 5px; color: #aaa; font-size: 14px; }
+
+        .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
+
+        /* --- 5. MOBILE OVERRIDES --- */
+        @media screen and (max-width: 900px) {
+            html, body, .stApp { overflow: auto; }
+            .fixed-left-panel { display: none !important; }
+            .block-container {
+                margin-left: 0 !important; width: 100vw !important; max-width: 100vw !important;
+                padding: 2rem !important; position: relative !important;
+                height: auto !important; min-height: 100vh !important;
+            }
+        }
+    </style>
+    """, unsafe_allow_html=True)
+else:
+    # Pre-load the normal dashboard layout before DOM renders
+    st.markdown("""
+    <style>
+        /* AGGRESSIVELY HIDE ALL LOGIN ELEMENTS TO PREVENT 1-SECOND GHOSTING FLASH */
+        .fixed-left-panel, .login-header { 
+            display: none !important; 
+            visibility: hidden !important; 
+            opacity: 0 !important; 
+            z-index: -999 !important; 
+            height: 0px !important;
+        } 
+        
+        .block-container {
+            margin-left: auto !important; margin-right: auto !important;
+            width: 100vw !important; max-width: 100vw !important;
+            display: block !important; /* CRITICAL FIX: Releases the flexbox lock from the login screen */
+            height: auto !important;   /* CRITICAL FIX: Allows dashboard to scroll normally */
+        }
+        [data-testid="stToolbar"], [data-testid="collapsedControl"] { display: flex !important; }
+    </style>
+    """, unsafe_allow_html=True)
 
 # --- App Configuration ---
 MAINTENANCE_MODE = False
@@ -164,6 +246,33 @@ st.markdown("""
     /* Force main app background to pure black */
     .stApp, .stAppViewContainer, .main .block-container { 
         background-color: #000000 !important; 
+    }
+    
+    /* AGGRESSIVE FIX FOR ISSUE 2: Kill Streamlit's native crossfade/ghosting completely */
+    [data-testid="stAppViewContainer"] > section > div > div,
+    [data-testid="stHeader"],
+    .element-container,
+    .stMarkdown {
+        transition: none !important;
+        animation-duration: 0s !important;
+        /* FIX: Removed 'opacity: 1 !important;' so the login screen can actually disappear! */
+    }
+
+    /* --- GLOBAL BUTTON THEME (Keeps Yellow Color on Dashboard & Fixes Pink Button) --- */
+    div[data-testid="stButton"] > button[kind="primary"],
+    div[data-testid="stButton"] > button[data-testid="baseButton-primary"] { 
+        width: 100%; background-color: #facc15 !important; color: black !important; 
+        font-weight: bold; border: none !important; margin-top: 10px; height: 45px;
+    }
+    div[data-testid="stButton"] > button[kind="primary"]:hover,
+    div[data-testid="stButton"] > button[data-testid="baseButton-primary"]:hover { 
+        background-color: #eab308 !important; color: black !important; border: none !important;
+    }
+    div[data-testid="stButton"] > button[kind="primary"]:active, 
+    div[data-testid="stButton"] > button[kind="primary"]:focus,
+    div[data-testid="stButton"] > button[data-testid="baseButton-primary"]:active {
+        background-color: #ca8a04 !important; color: black !important; 
+        border: none !important; outline: none !important; box-shadow: none !important;
     }
     
     /* Ensure Header is transparent so Mobile Hamburger remains visible on black */
@@ -684,11 +793,29 @@ def get_active_live_alert():
         pass 
     return None
 
-# --- NEW ROCK-SOLID CLOCK CACHE ---
-@st.cache_resource
+# --- NEW ROCK-SOLID CLOCK CACHE (FIX FOR ISSUE 2) ---
 def get_deployment_timestamp():
-    """Anchors the clock to the exact moment the Koyeb server booted up."""
-    return int(time.time() * 1000)
+    """Anchors the clock to a persistent file so it survives all refreshes and log-ins."""
+    os.makedirs('data', exist_ok=True)
+    file_path = 'data/nominal_timer.txt'
+    
+    # Read the saved timestamp if it exists
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, 'r') as f:
+                return int(f.read().strip())
+        except Exception:
+            pass
+            
+    # If no file exists (first run), generate the time and save it
+    now_ms = int(time.time() * 1000)
+    try:
+        with open(file_path, 'w') as f:
+            f.write(str(now_ms))
+    except Exception:
+        pass
+        
+    return now_ms
 
 def check_early_warnings():
     try:
@@ -990,154 +1117,98 @@ def render_ticker_tape():
 if 'role' not in st.session_state: st.session_state['role'] = None
 
 if st.session_state['role'] is None:
-    # --- NEW PARADIGM: FIXED LEFT PANEL + CENTERED RIGHT CONTAINER ---
-    st.markdown("""
-    <style>
-        /* SAFE UI HIDING */
-        #MainMenu { visibility: hidden; }
-        [data-testid="stToolbar"] { display: none !important; }
-        footer { visibility: hidden; }
+    
+    # --- FIX: Wrap login in a placeholder to instantly destroy it upon authentication ---
+    login_placeholder = st.empty()
+    
+    with login_placeholder.container():
+        st.markdown("""
+        <div class="fixed-left-panel">
+            <h1>Be a Part of<br>Something <span>Beautiful</span></h1>
+            <p>Access high-fidelity insights at the intersection of global policy and the semiconductor industry.</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # Safely convert logo to base64 so it securely renders inside HTML
+        try:
+            with open("logo.jpg", "rb") as image_file:
+                encoded_string = base64.b64encode(image_file.read()).decode()
+                img_html = f'<img src="data:image/jpeg;base64,{encoded_string}" class="login-logo" style="width: 300px; max-width: 100%;"/>'
+        except FileNotFoundError:
+            img_html = '' 
+
+        # Inject the Single Unified Block ensuring the logo and text are permanently attached
+        st.markdown(f"""
+        <div class="login-header">
+            {img_html}
+            <h2>Login</h2>
+            <p>Enter your credentials</p>
+        </div>
+        """, unsafe_allow_html=True)
         
-        /* Clean app background */
-        html, body, .stApp {
-            height: 100vh;
-            margin: 0;
-            background-color: #000000;
-        }
-
-        /* --- 1. THE PURE CSS LEFT PANEL --- */
-        .fixed-left-panel {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 50vw;
-            height: 100vh;
-            background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
-            padding: 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            z-index: 100;
-            box-sizing: border-box;
-            border-right: 1px solid #222;
-        }
-        .fixed-left-panel h1 { font-size: 3.2rem; font-weight: 300; line-height: 1.2; margin-bottom: 10px; color: white;}
-        .fixed-left-panel span { font-weight: 700; color: #facc15; }
-        .fixed-left-panel p { color: #94a3b8; font-size: 1.2rem; margin-top: 10px; }
-
-        /* --- 2. THE RIGHT PANEL (STREAMLIT NATIVE CONTAINER) --- */
-        .block-container {
-            /* DELETED position: absolute !important; */
-            margin-left: 50vw !important; /* Pushes content to the right safely */
-            width: 50vw !important;
-            max-width: 50vw !important;
-            height: 100vh !important;
-            padding: 0 10% !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-        }
-
-        /* --- 3. LOGIN HEADER --- */
-        .login-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .login-logo {
-            width: 300px;
-            max-width: 100%;
-            margin-bottom: 5px;
-            image-rendering: crisp-edges;
-        }
-        .login-header h2 { margin: 0; font-size: 32px; }
-        .login-header p { margin-top: 5px; color: #aaa; font-size: 14px; }
-
-        /* Style the login button */
-        .stButton>button[kind="primary"] { 
-            width: 100%; 
-            background-color: #facc15; 
-            color: black; 
-            font-weight: bold; 
-            border: none; 
-            margin-top: 10px;
-            height: 45px;
-        }
-        .stButton>button[kind="primary"]:hover { background-color: #eab308; color: black; }
-        .stButton>button[kind="secondary"] { width: 100%; font-weight: bold; height: 45px; }
-
-        /* --- 4. MOBILE OVERRIDES --- */
-        @media screen and (max-width: 900px) {
-            html, body, .stApp { overflow: auto; }
-            .fixed-left-panel { display: none !important; }
-            
-            .block-container {
-                margin-left: 0 !important; /* Resets the split-screen on mobile */
-                width: 100vw !important;
-                max-width: 100vw !important;
-                padding: 2rem !important;
-                position: relative !important;
-                height: auto !important;
-                min-height: 100vh !important;
-            }
-        }
-    </style>
-    
-    <div class="fixed-left-panel">
-        <h1>Be a Part of<br>Something <span>Beautiful</span></h1>
-        <p>Access high-fidelity insights at the intersection of global policy and the semiconductor industry.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # --- RIGHT PANEL CONTENT ---
-    
-    # Safely convert logo to base64 so it securely renders inside HTML
-    try:
-        with open("logo.jpg", "rb") as image_file:
-            encoded_string = base64.b64encode(image_file.read()).decode()
-            img_html = f'<img src="data:image/jpeg;base64,{encoded_string}" class="login-logo" style="width: 300px; max-width: 100%;"/>'
-    except FileNotFoundError:
-        img_html = '' 
-
-    # Inject the Single Unified Block ensuring the logo and text are permanently attached
-    st.markdown(f"""
-    <div class="login-header">
-        {img_html}
-        <h2>Login</h2>
-        <p>Enter your credentials</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    with st.form("split_login_form"):
         email_input = st.text_input("Email", placeholder="analyst@agency.gov")
         password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
-        submit_login = st.form_submit_button("Login", type="primary")
+        submit_login = st.button("Login", type="primary", use_container_width=True)
 
         if submit_login:
-            # Securely fetch credentials from Koyeb's hidden environment variables
-            # The second argument is a fallback to ensure you are never locked out
             ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "anwarkashif@semirare.in")
-            ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "Admin@123") # <-- Change this fallback to your desired secure key
-
-            # Check against the secure variables instead of hardcoded text
+            ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "Admin@123") 
+            
             if email_input == ADMIN_EMAIL and password_input == ADMIN_PASSWORD:
                 st.session_state['role'] = 'admin'
+                login_placeholder.empty() # INSTANTLY DESTROY LOGIN WIDGETS BEFORE RERUN
                 st.rerun()
             else: 
-                st.error("Invalid credentials. (Check Koyeb Env Variables if your fallback password doesn't work).")
+                st.toast("Invalid credentials. Please verify your secure key.", icon="🚫")
 
-    # --- ADD THIS BLOCK BACK RIGHT HERE ---
-    if st.button("View as Guest", type="secondary"):
-        st.session_state['role'] = 'guest'
-        st.rerun()
+        # --- GUEST ACCESS ---
+        if st.button("View as Guest", type="secondary"):
+            st.session_state['role'] = 'guest'
+            login_placeholder.empty() # INSTANTLY DESTROY LOGIN WIDGETS BEFORE RERUN
+            st.rerun()
 
 # ==========================================
 # 4. MAIN DASHBOARD
 # ==========================================
 else:
+    # --- NEW: PITCH BLACK SPLASH SCREEN TO KILL GHOSTING FLASH ---
+    # This creates a physical black curtain over the app to hide Streamlit's layout snap.
+    st.markdown("""
+    <style>
+        .splash-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000; /* Pitch dark black */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999999; /* Forces it on top of EVERYTHING */
+            animation: fadeOutSplash 3.5s forwards; /* INCREASED TIME SLOT (from 1.5s to 3.5s) */
+            pointer-events: none; /* Allows user to interact with dashboard once it fades */
+        }
+        .splash-text {
+            color: #ffffff; /* White text */
+            font-size: 2.5rem;
+            font-weight: 300;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        @keyframes fadeOutSplash {
+            0% { opacity: 1; visibility: visible; }
+            75% { opacity: 1; visibility: visible; } /* Hold solid black for 75% of the time */
+            100% { opacity: 0; visibility: hidden; display: none; }
+        }
+    </style>
+    
+    <div class="splash-overlay">
+        <div class="splash-text">Welcome to my SemicoN Dashboard</div>
+    </div>
+    """, unsafe_allow_html=True)
+
     # --- RENDER THE NEW TICKER TAPE FIRST ---
     # (The CSS inside this function safely positions the native Streamlit toggle)
     render_ticker_tape()
