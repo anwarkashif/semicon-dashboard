@@ -1101,7 +1101,7 @@ def render_ticker_tape():
         display: inline-block;
         white-space: nowrap;
         padding-left: 100vw;
-        animation: ticker 260s linear infinite;
+        animation: ticker 320s linear infinite;
     }}
 
     .ticker-move:hover {{
