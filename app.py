@@ -1120,7 +1120,7 @@ def render_ticker_tape():
         display: inline-block;
         white-space: nowrap;
         padding-left: 100vw;
-        animation: ticker 300s linear infinite;
+        animation: ticker 280s linear infinite;
     }}
 
     .ticker-move:hover {{
@@ -2359,7 +2359,7 @@ else:
                                 </div>
                                 """, unsafe_allow_html=True)
                         else:
-                            st.info("No abnormal weak signal clusters detected in the last 2 hours.")
+                            st.info("No abnormal weak signal clusters detected in the past 24-hours.")
 
                 last_updated_str = "Unknown"
                 latest_time = 0
