@@ -1120,7 +1120,7 @@ def render_ticker_tape():
         display: inline-block;
         white-space: nowrap;
         padding-left: 100vw;
-        animation: ticker 240s linear infinite;
+        animation: ticker 140s linear infinite;
     }}
 
     .ticker-move:hover {{
@@ -2334,7 +2334,17 @@ else:
                     # ==========================================
                     # FEATURE 1: INTELLIGENCE SIGNAL DETECTION
                     # ==========================================
-                    st.markdown("##### 📡 Intelligence Signal Detection Engine – In the Past 24-Hours")
+                    st.markdown("""
+                    <div style="margin-bottom: 15px;">
+                        <div style="font-size: 18px; font-weight: 600; margin-bottom: 2px; color: white;">
+                            📡 Intelligence Signal Detection Engine – In the Past 24-Hours
+                        </div>
+                        <div style="font-size: 14px; color: #888888; line-height: 1.4;">
+                            Automated scan of live global news tracking secondary geopolitical keywords to surface early 'weak signals' before they escalate into critical threats.
+                        </div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
                     if live_rss_data:
                         medium_keywords = ['subsidy', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'delay']
                         keyword_counts = {}
