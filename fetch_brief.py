@@ -90,8 +90,8 @@ def fetch_live_rss_feed():
                         # --- REPLACE THE OLD DATE EXTRACTION WITH THIS ---
                         if pub_date_str != 'Recent Update':
                             try:
-                                pub_dt = parsedate_to_datetime(pub_date_str)
-                                # Force it into a strict YYYY-MM-DD HH:MM format
+                                # Force RSS dates to strict UTC timezone for accurate 24h calculation
+                                pub_dt = parsedate_to_datetime(pub_date_str).astimezone(timezone.utc)
                                 display_date = pub_dt.strftime('%Y-%m-%d %H:%M') 
                                 if datetime.now(timezone.utc) - pub_dt > timedelta(days=3):
                                     continue 

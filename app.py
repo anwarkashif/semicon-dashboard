@@ -694,13 +694,16 @@ dashboard_data = load_data(latest_filepath)
 # TEXT PARSER FOR RSS ACCUMULATOR FIX
 # ==========================================
 def parse_rss_txt_file():
-    import urllib.parse 
-    
+    import urllib.parse
+    from datetime import datetime, timedelta, timezone
+
     rss_dict = {}
     filepath = 'data/rss_accumulator.txt'
     if not os.path.exists(filepath): return rss_dict
-    
+
+    now_utc = datetime.now(timezone.utc)
     current_reg = None
+
     with open(filepath, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.strip()
@@ -715,14 +718,30 @@ def parse_rss_txt_file():
                     d_end = line.find("]")
                     date_str = line[3:d_end]
                     title_str = line[d_end+1:].strip()
-                    
-                    # --- NEW FIX: Clean the string before searching ---
-                    # Remove emojis and prefixes that confuse Google News
+
+                    # --- CRITICAL FIX: STRICT 24-HOUR FILTER ---
+                    is_recent = False
+                    if date_str != "Recent Update":
+                        try:
+                            # Convert the string back into a UTC datetime object
+                            pub_dt = datetime.strptime(date_str, "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+                            # Check if the article is exactly within the last 24 hours
+                            if now_utc - pub_dt <= timedelta(hours=24):
+                                is_recent = True
+                        except Exception:
+                            # Fallback if parsing fails to avoid dropping unformatted alerts
+                            is_recent = True
+                    else:
+                        is_recent = True
+
+                    # 🛑 If older than 24 hours, discard it to keep features dynamic!
+                    if not is_recent:
+                        continue
+
                     clean_search = title_str.replace("🔴", "").replace("🟠", "").replace("🟡", "").replace("CRITICAL:", "").replace("ELEVATED:", "").replace("WATCH:", "").replace("LIVE WARNING:", "").strip()
-                    
                     search_query = urllib.parse.quote_plus(clean_search)
                     news_link = f"https://news.google.com/search?q={search_query}"
-                    
+
                     if not any(x['title'] == title_str for x in rss_dict[current_reg]):
                         rss_dict[current_reg].append({"title": title_str, "published": date_str, "link": news_link})
                 except Exception: pass
@@ -1101,7 +1120,7 @@ def render_ticker_tape():
         display: inline-block;
         white-space: nowrap;
         padding-left: 100vw;
-        animation: ticker 320s linear infinite;
+        animation: ticker 300s linear infinite;
     }}
 
     .ticker-move:hover {{
