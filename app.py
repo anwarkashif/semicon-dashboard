@@ -1234,50 +1234,52 @@ if st.session_state['role'] is None:
 # 4. MAIN DASHBOARD
 # ==========================================
 else:
-    # --- NEW: PITCH BLACK SPLASH SCREEN TO KILL GHOSTING FLASH ---
-    # This creates a physical black curtain over the app to hide Streamlit's layout snap.
-    st.markdown("""
-    <style>
-        .splash-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: #000000; /* Pitch dark black */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999999; /* Forces it on top of EVERYTHING */
-            animation: fadeOutSplash 3.5s forwards; /* INCREASED TIME SLOT (from 1.5s to 3.5s) */
-            pointer-events: none; /* Allows user to interact with dashboard once it fades */
-        }
-        .splash-text {
-            color: #ffffff; /* White text */
-            font-size: 2.5rem;
-            font-weight: 300;
-            font-family: 'Times New Roman', Times, serif;
-            letter-spacing: 2px;
-            text-align: center;
-        }
-        @keyframes fadeOutSplash {
-            0% { opacity: 1; visibility: visible; }
-            75% { opacity: 1; visibility: visible; } /* Hold solid black for 75% of the time */
-            100% { opacity: 0; visibility: hidden; display: none; }
-        }
-        @keyframes blinkDots {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
-        }
-        .loading-dots {
-            animation: blinkDots 1.2s infinite ease-in-out;
-        }
-    </style>
-    
-    <div class="splash-overlay">
-        <div class="splash-text">Welcome to my SemicoN Dashboard<span class="loading-dots">...</span></div>
-    </div>
-    """, unsafe_allow_html=True)
+    # --- FIX: USE SESSION STATE SO SPLASH SCREEN ONLY PLAYS ONCE ---
+    if 'splash_shown' not in st.session_state:
+        st.session_state['splash_shown'] = True # Marks that it has played
+        
+        st.markdown("""
+        <style>
+            .splash-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: #000000; /* Pitch dark black */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999999; /* Forces it on top of EVERYTHING */
+                animation: fadeOutSplash 3.5s forwards; 
+                pointer-events: none; /* Allows user to interact with dashboard once it fades */
+            }
+            .splash-text {
+                color: #ffffff; /* White text */
+                font-size: 2.5rem;
+                font-weight: 300;
+                font-family: 'Times New Roman', Times, serif;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            @keyframes fadeOutSplash {
+                0% { opacity: 1; visibility: visible; }
+                75% { opacity: 1; visibility: visible; } 
+                100% { opacity: 0; visibility: hidden; display: none; }
+            }
+            @keyframes blinkDots {
+                0%, 100% { opacity: 0; }
+                50% { opacity: 1; }
+            }
+            .loading-dots {
+                animation: blinkDots 1.2s infinite ease-in-out;
+            }
+        </style>
+        
+        <div class="splash-overlay">
+            <div class="splash-text">Welcome to my SemicoN Dashboard<span class="loading-dots">...</span></div>
+        </div>
+        """, unsafe_allow_html=True)
 
     # --- RENDER THE NEW TICKER TAPE FIRST ---
     # (The CSS inside this function safely positions the native Streamlit toggle)
