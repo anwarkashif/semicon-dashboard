@@ -221,7 +221,8 @@ INFRASTRUCTURE_DATA = {
         {"name": "CG Power (Sanand) - ACTIVE", "lat": 23.005, "lon": 72.385},
         {"name": "Micron (Sanand) - ACTIVE", "lat": 22.956, "lon": 72.338},
         {"name": "Tower Semi (Panvel) - PLANNED", "lat": 18.989, "lon": 73.117},
-        {"name": "ASML HQ (Netherlands)", "lat": 51.405, "lon": 5.405}
+        {"name": "ASML HQ (Netherlands)", "lat": 51.405, "lon": 5.405},
+        {"name": "HIPSPL (3DGS) - 3D Glass Packaging (Odisha, India)", "lat": 20.238, "lon": 85.702}
     ],
     "Critical Mineral Sites": [
         {"name": "Bayan Obo Mine [Largest REE] (China)", "lat": 41.796, "lon": 109.972},
