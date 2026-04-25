@@ -1084,6 +1084,11 @@ def render_ticker_tape():
     if not ticker_items: return
     all_items_html = "".join(ticker_items)
 
+    # --- DYNAMIC SPEED CALCULATION ---
+    # Assign ~10 seconds per news item, plus 15 seconds to travel across the screen.
+    # This guarantees consistent reading speed regardless of how much news there is!
+    dynamic_duration = max(20, len(ticker_items) * 10 + 15)
+
     # Inject CSS
     ticker_code = f"""
     <style>
@@ -1114,7 +1119,8 @@ def render_ticker_tape():
         display: inline-block;
         white-space: nowrap;
         padding-left: 100vw;
-        animation: ticker 140s linear infinite;
+        /* Inject the Python calculated duration dynamically */
+        animation: ticker {dynamic_duration}s linear infinite;
     }}
 
     .ticker-move:hover {{
@@ -1611,7 +1617,11 @@ else:
                         if not art.get('is_24h', False): continue # STRICT 24-HOUR FILTER
                         
                         title_lower = art['title'].lower()
+                        
+                        # --- FIX: ADDED MISSING DEFINITIONS FOR ALL HIT COUNTERS ---
                         k_hits = sum(1 for kw in kw_kinetic if kw in title_lower)
+                        e_hits = sum(1 for kw in kw_economic if kw in title_lower)
+                        s_hits = sum(1 for kw in kw_supply if kw in title_lower)
                         
                         theme_scores["Kinetic"] += k_hits * 5.0
                         theme_scores["Economic"] += e_hits * 3.5
