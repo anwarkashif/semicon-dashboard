@@ -719,31 +719,25 @@ def parse_rss_txt_file():
                     date_str = line[3:d_end]
                     title_str = line[d_end+1:].strip()
 
-                    # --- CRITICAL FIX: STRICT 24-HOUR FILTER ---
+                    # --- CRITICAL FIX: TAG INSTEAD OF DELETE ---
                     is_recent = False
                     if date_str != "Recent Update":
                         try:
-                            # Convert the string back into a UTC datetime object
                             pub_dt = datetime.strptime(date_str, "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
-                            # Check if the article is exactly within the last 24 hours
                             if now_utc - pub_dt <= timedelta(hours=24):
                                 is_recent = True
                         except Exception:
-                            # Fallback if parsing fails to avoid dropping unformatted alerts
                             is_recent = True
                     else:
                         is_recent = True
-
-                    # 🛑 If older than 24 hours, discard it to keep features dynamic!
-                    if not is_recent:
-                        continue
 
                     clean_search = title_str.replace("🔴", "").replace("🟠", "").replace("🟡", "").replace("CRITICAL:", "").replace("ELEVATED:", "").replace("WATCH:", "").replace("LIVE WARNING:", "").strip()
                     search_query = urllib.parse.quote_plus(clean_search)
                     news_link = f"https://news.google.com/search?q={search_query}"
 
                     if not any(x['title'] == title_str for x in rss_dict[current_reg]):
-                        rss_dict[current_reg].append({"title": title_str, "published": date_str, "link": news_link})
+                        # Inject the "is_24h" flag into the dictionary
+                        rss_dict[current_reg].append({"title": title_str, "published": date_str, "link": news_link, "is_24h": is_recent})
                 except Exception: pass
     return rss_dict
 
@@ -1054,7 +1048,7 @@ def render_ticker_tape():
         unique_news = []
         for region, articles in live_rss.items():
             for art in articles:
-                if art['title'] not in seen_titles:
+                if art['title'] not in seen_titles and art.get('is_24h', False): # Only 24h news
                     seen_titles.add(art['title'])
                     unique_news.append(art)
 
@@ -1614,11 +1608,10 @@ else:
                 
                 for region, articles in live_rss_data.items():
                     for art in articles:
+                        if not art.get('is_24h', False): continue # STRICT 24-HOUR FILTER
+                        
                         title_lower = art['title'].lower()
-                        # Thematic scoring
                         k_hits = sum(1 for kw in kw_kinetic if kw in title_lower)
-                        e_hits = sum(1 for kw in kw_economic if kw in title_lower)
-                        s_hits = sum(1 for kw in kw_supply if kw in title_lower)
                         
                         theme_scores["Kinetic"] += k_hits * 5.0
                         theme_scores["Economic"] += e_hits * 3.5
@@ -2313,12 +2306,16 @@ else:
 
             # --- NEW: AI NEWS SUMMARY (TOP 10) ---
                 sum_cols = st.columns([1.5, 1])
+                
                 with sum_cols[0]:
                     st.markdown("##### AI Intelligence Summary (Top Radar Hits) – In the Past 24-Hours")
                     if live_rss_data:
                         all_news = []
                         for reg, arts in live_rss_data.items():
-                            all_news.extend(arts)
+                            for art in arts:
+                                if art.get('is_24h', False): # STRICT 24-HOUR FILTER
+                                    all_news.append(art)
+                                    
                         # Deduplicate and sort by threat keyword presence
                         unique_news = {v['title']:v for v in all_news}.values()
                         critical_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war']
@@ -2352,6 +2349,8 @@ else:
                         # Flatten RSS
                         for reg, arts in live_rss_data.items():
                             for art in arts:
+                                if not art.get('is_24h', False): continue # STRICT 24-HOUR FILTER
+                                
                                 title_lower = art['title'].lower()
                                 for kw in medium_keywords:
                                     if kw in title_lower:
@@ -2447,7 +2446,8 @@ else:
                             st.markdown(f"<h4 style='color: {color}; border-bottom: 2px solid {color}; padding-bottom: 5px;'>{reg}</h4>", unsafe_allow_html=True)
                             if articles:
                                 scroll_box = st.container(height=300)
-                                for art in reversed(articles): 
+                                # Display up to the 8 most recent to keep UI clean but populated
+                                for art in list(reversed(articles))[:8]: 
                                     clean_title = art['title'].replace('"', '&quot;').replace("'", "&#39;")
                                     html_str = f'<div style="margin-bottom:10px; padding:10px; background-color:rgba(255,255,255,0.05); border-left:3px solid {color}; border-radius:4px;"><a href="{art["link"]}" target="_blank" style="color:#e0e0e0; font-weight:600; text-decoration:none; font-size:13px; display:block; margin-bottom:5px;">{clean_title}</a><span style="font-size:11px; color:#888;">{art["published"][:25]}</span></div>'
                                     scroll_box.markdown(html_str, unsafe_allow_html=True)

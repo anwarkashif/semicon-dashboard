@@ -451,11 +451,17 @@ if __name__ == "__main__":
                     "live_rss": live_rss_feed 
                 }
                 
-                with open(filename, 'w') as f:
+               with open(filename, 'w') as f:
                     json.dump(data_package, f)
                     
                 open(cache_file, 'w').close()
                 print("🗑️ RSS Accumulator cleared for the new week.")
+                
+                # --- FIX: IMMEDIATELY RE-SEED SO RADAR ISN'T EMPTY ON FRIDAY ---
+                print("📡 Re-seeding Think Tank Radar for the new week...")
+                fresh_rss, fresh_text = fetch_live_rss_feed()
+                with open(cache_file, "a", encoding="utf-8") as f:
+                    f.write(fresh_text)
                     
                 cutoff_date = datetime.now() - timedelta(days=180)
                 for file_path in glob.glob("data/brief_*.json"):
