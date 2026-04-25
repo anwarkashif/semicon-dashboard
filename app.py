@@ -2488,11 +2488,55 @@ else:
                 sources_list = dashboard_data.get('sources', [])
                 if sources_list:
                     st.markdown("---")
-                    st.markdown("<h3 style='color:#00bfff; font-size:20px; margin-top: 20px; margin-bottom: 0px;'>Verified Intelligence Sources</h3>", unsafe_allow_html=True)
-                    sources_markdown = ""
+                    st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 15px;'>Verified Intelligence Sources</h3>", unsafe_allow_html=True)
+                    
+                    # Auto-Categorization Engine for Sources
+                    themes = {
+                        "Global Foundry Market": {"keywords": ["foundry", "tsmc", "samsung", "intel", "smic", "fab", "manufacturing", "yield", "semiconductor", "chipmaker"], "color": "#00bfff", "icon": "🏭", "sources": []},
+                        "AI Chip Demand": {"keywords": ["ai", "nvidia", "gpu", "tpu", "compute", "openai", "data center", "server", "algorithm"], "color": "#ff00ff", "icon": "🧠", "sources": []},
+                        "Critical Minerals (REE)": {"keywords": ["rare earth", "mineral", "lithium", "cobalt", "graphite", "gallium", "germanium", "mining", "supply chain"], "color": "#00ff00", "icon": "⛏️", "sources": []},
+                        "Export Controls & Geopolitics": {"keywords": ["export", "control", "sanction", "ban", "tariff", "entity list", "bis", "geopolitics", "war", "tension", "blockade", "trade"], "color": "#ff4b4b", "icon": "⚖️", "sources": []},
+                        "Military & Outer Space": {"keywords": ["military", "defense", "weapon", "missile", "space", "satellite", "darpa", "dod", "navy", "army", "air force", "pentagon"], "color": "#ffd166", "icon": "🚀", "sources": []},
+                        "Regional (India & West Asia)": {"keywords": ["india", "modi", "dholera", "tata", "west asia", "middle east", "uae", "saudi", "israel", "gulf", "cg power"], "color": "#ff8c00", "icon": "🌍", "sources": []},
+                        "General Strategic Intelligence": {"keywords": [], "color": "#888888", "icon": "📡", "sources": []} # Fallback
+                    }
+
                     for src in sources_list:
-                        sources_markdown += f"- [{src['title']}]({src['url']})\n"
-                    st.markdown(sources_markdown)
+                        title_lower = src.get('title', '').lower()
+                        placed = False
+                        
+                        # Keyword matching
+                        for t_name, t_data in themes.items():
+                            if t_name == "General Strategic Intelligence":
+                                continue
+                            if any(kw in title_lower for kw in t_data["keywords"]):
+                                t_data["sources"].append(src)
+                                placed = True
+                                break
+                        
+                        # Fallback for unmatched sources
+                        if not placed:
+                            themes["General Strategic Intelligence"]["sources"].append(src)
+
+                    # UI Rendering: 2-Column Grid Layout with Custom CSS Cards
+                    src_cols = st.columns(2)
+                    col_idx = 0
+                    
+                    for t_name, t_data in themes.items():
+                        if t_data["sources"]:
+                            with src_cols[col_idx % 2]:
+                                theme_html = f"""
+                                <div style="background-color: rgba(255,255,255,0.03); border-left: 4px solid {t_data['color']}; padding: 15px; margin-bottom: 15px; border-radius: 6px; height: 100%;">
+                                    <h5 style="color: {t_data['color']}; margin-top: 0; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">{t_data['icon']} {t_name}</h5>
+                                    <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #d1d5db; line-height: 1.6;">
+                                """
+                                for src in t_data["sources"]:
+                                    clean_title = src['title'].replace('"', '&quot;').replace("'", "&#39;")
+                                    theme_html += f"<li style='margin-bottom: 5px;'><a href='{src['url']}' target='_blank' style='color: #e0e0e0; text-decoration: none; transition: 0.3s;' onmouseover=\"this.style.color='{t_data['color']}'\" onmouseout=\"this.style.color='#e0e0e0'\">{clean_title}</a></li>"
+                                
+                                theme_html += "</ul></div>"
+                                st.markdown(theme_html, unsafe_allow_html=True)
+                            col_idx += 1
 
             # --- SHARE & EXPORT ---
             st.markdown("---")
