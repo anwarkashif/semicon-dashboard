@@ -1006,7 +1006,7 @@ def check_early_warnings():
                 setInterval(update, 1000); update();
             </script>
             """
-            components.html(html_code, height=260) 
+            components.html(html_code, height=245) # <-- TIGHTENED HEIGHT 
             
         else:
             start_timestamp_ms = fallback_time_ms
@@ -1718,7 +1718,7 @@ else:
             
             check_early_warnings()
 
-            st.markdown("<br>", unsafe_allow_html=True)
+            # Removed the extra <br> here to eliminate the dead space
             run_shockwave_engine()
             st.markdown("<br><hr><br>", unsafe_allow_html=True)
 
