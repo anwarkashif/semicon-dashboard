@@ -702,7 +702,24 @@ def parse_rss_txt_file():
     filepath = 'data/rss_accumulator.txt'
     if not os.path.exists(filepath): return rss_dict
 
+    # --- CRITICAL FIX: FREEZE 24-HOUR WINDOW TO 01:30 AM IST ROLLOVER ---
     now_utc = datetime.now(timezone.utc)
+    now_ist = now_utc + timedelta(hours=5, minutes=30)
+
+    # The first GitHub Action after midnight IST runs at 20:00 UTC (01:30 AM IST).
+    # We freeze the dashboard to ONLY evaluate news from the 24 hours PRECEDING this exact time.
+    if now_ist.hour < 1 or (now_ist.hour == 1 and now_ist.minute < 30):
+        # If visited before 01:30 AM IST, lock onto yesterday's rollover snapshot
+        anchor_ist = now_ist.replace(hour=1, minute=30, second=0, microsecond=0) - timedelta(days=1)
+    else:
+        # If visited after 01:30 AM IST, lock onto today's rollover snapshot
+        anchor_ist = now_ist.replace(hour=1, minute=30, second=0, microsecond=0)
+
+    # Convert strict window back to UTC for safe comparison with published timestamps
+    window_end_utc = anchor_ist - timedelta(hours=5, minutes=30)
+    window_start_utc = window_end_utc - timedelta(hours=24)
+    # ----------------------------------------------------------------------
+
     current_reg = None
 
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -720,17 +737,18 @@ def parse_rss_txt_file():
                     date_str = line[3:d_end]
                     title_str = line[d_end+1:].strip()
 
-                    # --- CRITICAL FIX: TAG INSTEAD OF DELETE ---
+                    # --- NEW STATIC WINDOW EVALUATION ---
                     is_recent = False
                     if date_str != "Recent Update":
                         try:
                             pub_dt = datetime.strptime(date_str, "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
-                            if now_utc - pub_dt <= timedelta(hours=24):
+                            # ONLY mark as 24h if it falls perfectly inside the locked daily window
+                            if window_start_utc <= pub_dt <= window_end_utc:
                                 is_recent = True
                         except Exception:
-                            is_recent = True
+                            is_recent = False
                     else:
-                        is_recent = True
+                        is_recent = False
 
                     clean_search = title_str.replace("🔴", "").replace("🟠", "").replace("🟡", "").replace("CRITICAL:", "").replace("ELEVATED:", "").replace("WATCH:", "").replace("LIVE WARNING:", "").strip()
                     search_query = urllib.parse.quote_plus(clean_search)
