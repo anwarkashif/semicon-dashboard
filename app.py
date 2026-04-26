@@ -144,7 +144,7 @@ else:
 # --- App Configuration ---
 MAINTENANCE_MODE = False
 if MAINTENANCE_MODE:
-    st.markdown("""<style>, [data-testid="stSidebar"] { display: none; }</style>""", unsafe_allow_html=True)
+    st.markdown("""<style>[data-testid="stSidebar"] { display: none; }</style>""", unsafe_allow_html=True)
     st.markdown("<div style='margin-top: 15vh;'></div>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
@@ -1048,8 +1048,142 @@ def check_early_warnings():
             </script>
             """
             components.html(html_code, height=130)
+# ==========================================
+# SHOCKWAVE ENGINE V2 (INTELLIGENCE GRADE)
+# ==========================================
+def run_shockwave_engine():
+    from datetime import datetime, timedelta, timezone
+    import pandas as pd
+    import streamlit as st
+    import re
+
+    st.markdown("<h3 style='color:#ff9f1c;'>🌍 Geopolitical Shockwave Engine - In the Last 24 Hours</h3>", unsafe_allow_html=True)
+
+    try:
+        rss_data = parse_rss_txt_file()
+        if not rss_data:
+            st.warning("No RSS data available.")
+            return
+
+        # ---- Flatten last 24h news ----
+        news_items = []
+        for region, articles in rss_data.items():
+            for art in articles:
+                if art.get("is_24h", False):  # Ensure we strictly pull the 24h flagged items
+                    news_items.append(art)
+
+        if not news_items:
+            st.info("No events detected in last 24h.")
+            return
+
+        # ---- Domain Keywords ----
+        domain_map = {
+            "Supply Chain": ["shortage","delay","logistics","disruption","shutdown"],
+            "Rare Earths": ["rare earth","mineral","lithium","cobalt","mining"],
+            "AI Chips": ["ai chip","nvidia","gpu","semiconductor","tsmc"],
+            "Export Controls": ["ban","sanction","export control","restriction","embargo"],
+            "Military Tech": ["military","defense","missile","war","navy","air force"]
+        }
+
+        # ---- Impact weights ----
+        propagation_weights = {
+            "Supply Chain": {"Rare Earths":0.6,"AI Chips":0.8,"Export Controls":0.5},
+            "Rare Earths": {"Supply Chain":0.7,"AI Chips":0.6},
+            "AI Chips": {"Supply Chain":0.5,"Military Tech":0.7},
+            "Export Controls": {"AI Chips":0.9,"Supply Chain":0.6},
+            "Military Tech": {"AI Chips":0.8,"Supply Chain":0.4}
+        }
+
+        shock_events = []
+
+        for item in news_items:
+            title = item.get("title","")
+            title_lower = title.lower()
+
+            base_score = 0
+            origin_domain = None
+
+            # ---- Detect origin ----
+            for domain, keywords in domain_map.items():
+                if any(kw in title_lower for kw in keywords):
+                    origin_domain = domain
+                    base_score += 5
+
+            # Extra severity boost
+            if any(k in title_lower for k in ["war","crisis","ban","sanction","strike"]):
+                base_score += 5
+
+            if not origin_domain:
+                continue
+
+            base_score = min(base_score, 10)
+
+            # ---- Propagation ----
+            propagation_result = {}
+
+            if origin_domain in propagation_weights:
+                for target, weight in propagation_weights[origin_domain].items():
+                    propagation_result[target] = round(base_score * weight, 2)
+
+            total_impact = base_score + sum(propagation_result.values())
+
+            shock_events.append({
+                "Event": title[:80],
+                "Origin": origin_domain,
+                "Base Impact": base_score,
+                "Ripple Impact": round(sum(propagation_result.values()),2),
+                "Total Shock Score": round(total_impact,2)
+            })
+
+        if not shock_events:
+            st.info("No major shockwaves detected.")
+            return
+
+        df = pd.DataFrame(shock_events)
+        df = df.sort_values(by="Total Shock Score", ascending=False).head(10)
+
+        # ---- Global Risk Index ----
+        global_score = int(df["Total Shock Score"].mean())
+
+        if global_score > 20:
+            status = "🔴 Critical"
+        elif global_score > 12:
+            status = "🟠 Elevated"
+        else:
+            status = "🟡 Watch"
+
+        # ---- UI OUTPUT ----
+        col1, col2 = st.columns([2,1])
+
+        with col1:
+            st.markdown("#### Top Shockwave Events (Last 24H)")
+            st.dataframe(df, use_container_width=True)
+
+        with col2:
+            st.markdown("#### Global Shock Index")
+            st.metric("Score", f"{global_score}/30", status)
+
+        # ---- Intelligence Summary ----
+        top_event = df.iloc[0]
+
+        st.markdown("#### 🧠 Intelligence Assessment")
+        st.markdown(f"""
+        **Primary Shock Driver:** {top_event['Event']}  
+        **Origin Domain:** {top_event['Origin']}  
+
+        **Analysis:**
+        This event is propagating across multiple semiconductor dependencies.  
+        Secondary disruptions are visible in adjacent domains due to structural interdependence.
+
+        **System Impact Pathway:**
+        {top_event['Origin']} → Supply Chain → AI Chips → Strategic Risk Escalation
+
+        **Assessment:**
+        Current environment reflects **{status} geopolitical volatility** with cascading supply chain implications.
+        """)
+
     except Exception as e:
-        pass
+        st.error(f"Shockwave Engine Error: {e}")
 
 # ==========================================
 # 2. TICKER TAPE & CSS INJECTIONS
@@ -1615,6 +1749,11 @@ else:
             st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 30px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
             
             check_early_warnings()
+
+            st.markdown("<br>", unsafe_allow_html=True)
+            run_shockwave_engine()
+            st.markdown("<br><hr><br>", unsafe_allow_html=True)
+
         # --- NEW: LIVE GLOBAL SEMICONDUCTOR RISK INDEX (24-HOUR SYNC) ---
             # 1. Get baseline structural risk from the weekly SCV domains
             all_texts = [text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa]
