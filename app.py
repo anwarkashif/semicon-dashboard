@@ -1053,141 +1053,105 @@ def check_early_warnings():
         pass  # <--- THIS CLOSES THE TRY BLOCK AT THE TOP OF THE FUNCTION
 
 # ==========================================
-# SHOCKWAVE ENGINE V2 (INTELLIGENCE GRADE)
+# SHOCKWAVE ENGINE V2 (CLEAN & POWERFUL)
 # ==========================================
 def run_shockwave_engine():
-    from datetime import datetime, timedelta, timezone
     import pandas as pd
     import streamlit as st
-    import re
 
     st.markdown("<h3 style='color:#ff9f1c;'>🌍 Geopolitical Shockwave Engine - In the Last 24 Hours</h3>", unsafe_allow_html=True)
 
+    # --- LOAD LAST 24H RSS DATA ---
     try:
-        rss_data = parse_rss_txt_file()
-        if not rss_data:
-            st.warning("No RSS data available.")
+        live_rss = parse_rss_txt_file()
+        if not live_rss:
+            st.warning("No RSS data available")
             return
+    except Exception:
+        st.warning("RSS pipeline unavailable")
+        return
 
-        # ---- Flatten last 24h news ----
-        news_items = []
-        for region, articles in rss_data.items():
-            for art in articles:
-                if art.get("is_24h", False):  # Ensure we strictly pull the 24h flagged items
-                    news_items.append(art)
+    # --- STRICT TIMELOCK (00:15 AM IST SYNC) ---
+    all_news = []
+    for region, articles in live_rss.items():
+        for art in articles:
+            # This ensures we ONLY calculate shocks based on the locked daily window
+            if art.get("is_24h", False):  
+                all_news.append(art)
 
-        if not news_items:
-            st.info("No events detected in last 24h.")
-            return
+    df = pd.DataFrame(all_news)
 
-        # ---- Domain Keywords ----
-        domain_map = {
-            "Supply Chain": ["shortage","delay","logistics","disruption","shutdown"],
-            "Rare Earths": ["rare earth","mineral","lithium","cobalt","mining"],
-            "AI Chips": ["ai chip","nvidia","gpu","semiconductor","tsmc"],
-            "Export Controls": ["ban","sanction","export control","restriction","embargo"],
-            "Military Tech": ["military","defense","missile","war","navy","air force"]
-        }
+    if df.empty or "title" not in df.columns:
+        st.info("No major shockwaves detected in the current 24-hour cycle.")
+        return
 
-        # ---- Impact weights ----
-        propagation_weights = {
-            "Supply Chain": {"Rare Earths":0.6,"AI Chips":0.8,"Export Controls":0.5},
-            "Rare Earths": {"Supply Chain":0.7,"AI Chips":0.6},
-            "AI Chips": {"Supply Chain":0.5,"Military Tech":0.7},
-            "Export Controls": {"AI Chips":0.9,"Supply Chain":0.6},
-            "Military Tech": {"AI Chips":0.8,"Supply Chain":0.4}
-        }
+    # --- SHOCK KEYWORDS (INTELLIGENCE GRADE) ---
+    shock_keywords = {
+        "Geopolitical Conflict": ["war","military","strike","missile","conflict","escalation"],
+        "Supply Chain Disruption": ["shortage","disrupt","halt","delay","shutdown","blockade"],
+        "Export Controls": ["sanction","export control","ban","restriction","embargo"],
+        "Tech Dominance": ["ai chip","semiconductor","tsmc","nvidia","intel","fab"],
+        "Rare Earth Risk": ["rare earth","mineral","lithium","cobalt","mining"]
+    }
 
-        shock_events = []
+    scores = {}
 
-        for item in news_items:
-            title = item.get("title","")
-            title_lower = title.lower()
+    for domain, keywords in shock_keywords.items():
+        score = 0
+        for title in df["title"].astype(str):
+            t = title.lower()
+            score += sum(1 for kw in keywords if kw in t)
+        # Cap max domain score at 100
+        scores[domain] = min(100, score * 5)
 
-            base_score = 0
-            origin_domain = None
+    shock_df = pd.DataFrame(list(scores.items()), columns=["Domain", "Shock Score"])
+    shock_df = shock_df.sort_values(by="Shock Score", ascending=False)
 
-            # ---- Detect origin ----
-            for domain, keywords in domain_map.items():
-                if any(kw in title_lower for kw in keywords):
-                    origin_domain = domain
-                    base_score += 5
+    # --- GLOBAL INDEX ---
+    global_index = int(shock_df["Shock Score"].mean())
 
-            # Extra severity boost
-            if any(k in title_lower for k in ["war","crisis","ban","sanction","strike"]):
-                base_score += 5
+    if global_index > 70:
+        status = "🔴 CRITICAL"
+    elif global_index > 50:
+        status = "🟠 HIGH"
+    elif global_index > 30:
+        status = "🟡 ELEVATED"
+    else:
+        status = "🟢 STABLE"
 
-            if not origin_domain:
-                continue
+    # --- DISPLAY UI ---
+    st.markdown(f"""
+    <div style="padding:20px; background:#0a0a0a; border:1px solid #333; border-radius:8px; margin-bottom:25px;">
+        <h3 style="color:#ff4b4b; margin-bottom:5px; margin-top:0px; font-size:18px; text-transform:uppercase; letter-spacing:1px;">Global Shock Index</h3>
+        <h1 style="color:white; margin:0; font-size: 3.5rem;">{global_index}<span style="font-size: 1.5rem; color: #555;">/100</span></h1>
+        <p style="color:#aaa; font-size:15px; margin-top: 5px; margin-bottom:0px;">Status: <strong>{status}</strong></p>
+    </div>
+    """, unsafe_allow_html=True)
 
-            base_score = min(base_score, 10)
+    # --- BAR DISPLAY (STREAMLIT NATIVE) ---
+    for _, row in shock_df.iterrows():
+        label = row["Domain"]
+        val = int(row["Shock Score"])
 
-            # ---- Propagation ----
-            propagation_result = {}
+        color = "#00ff00"
+        if val > 70:
+            color = "#ff4b4b"
+        elif val > 50:
+            color = "#f97316"
+        elif val > 30:
+            color = "#facc15"
 
-            if origin_domain in propagation_weights:
-                for target, weight in propagation_weights[origin_domain].items():
-                    propagation_result[target] = round(base_score * weight, 2)
-
-            total_impact = base_score + sum(propagation_result.values())
-
-            shock_events.append({
-                "Event": title[:80],
-                "Origin": origin_domain,
-                "Base Impact": base_score,
-                "Ripple Impact": round(sum(propagation_result.values()),2),
-                "Total Shock Score": round(total_impact,2)
-            })
-
-        if not shock_events:
-            st.info("No major shockwaves detected.")
-            return
-
-        df = pd.DataFrame(shock_events)
-        df = df.sort_values(by="Total Shock Score", ascending=False).head(10)
-
-        # ---- Global Risk Index ----
-        global_score = int(df["Total Shock Score"].mean())
-
-        if global_score > 20:
-            status = "🔴 Critical"
-        elif global_score > 12:
-            status = "🟠 Elevated"
-        else:
-            status = "🟡 Watch"
-
-        # ---- UI OUTPUT ----
-        col1, col2 = st.columns([2,1])
-
-        with col1:
-            st.markdown("#### Top Shockwave Events (Last 24H)")
-            st.dataframe(df, use_container_width=True)
-
-        with col2:
-            st.markdown("#### Global Shock Index")
-            st.metric("Score", f"{global_score}/30", status)
-
-        # ---- Intelligence Summary ----
-        top_event = df.iloc[0]
-
-        st.markdown("#### 🧠 Intelligence Assessment")
         st.markdown(f"""
-        **Primary Shock Driver:** {top_event['Event']}  
-        **Origin Domain:** {top_event['Origin']}  
-
-        **Analysis:**
-        This event is propagating across multiple semiconductor dependencies.  
-        Secondary disruptions are visible in adjacent domains due to structural interdependence.
-
-        **System Impact Pathway:**
-        {top_event['Origin']} → Supply Chain → AI Chips → Strategic Risk Escalation
-
-        **Assessment:**
-        Current environment reflects **{status} geopolitical volatility** with cascading supply chain implications.
-        """)
-
-    except Exception as e:
-        st.error(f"Shockwave Engine Error: {e}")
+        <div style="margin-bottom:16px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom: 6px;">
+                <span style="color:#ddd; font-size:14px; font-weight: 600;">{label}</span>
+                <span style="color:{color}; font-weight:bold; font-size:14px;">{val}%</span>
+            </div>
+            <div style="background:#1f2937; height:8px; border-radius:4px;">
+                <div style="width:{val}%; background:{color}; height:8px; border-radius:4px; box-shadow: 0 0 10px {color}60;"></div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
 # ==========================================
 # 2. TICKER TAPE & CSS INJECTIONS
