@@ -144,7 +144,7 @@ else:
 # --- App Configuration ---
 MAINTENANCE_MODE = False
 if MAINTENANCE_MODE:
-    st.markdown("""<style>[data-testid="stSidebar"] { display: none; }</style>""", unsafe_allow_html=True)
+    st.markdown("""<style>, [data-testid="stSidebar"] { display: none; }</style>""", unsafe_allow_html=True)
     st.markdown("<div style='margin-top: 15vh;'></div>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
@@ -1048,6 +1048,10 @@ def check_early_warnings():
             </script>
             """
             components.html(html_code, height=130)
+
+    except Exception as e:
+        pass  # <--- THIS CLOSES THE TRY BLOCK AT THE TOP OF THE FUNCTION
+
 # ==========================================
 # SHOCKWAVE ENGINE V2 (INTELLIGENCE GRADE)
 # ==========================================
