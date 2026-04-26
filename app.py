@@ -702,18 +702,18 @@ def parse_rss_txt_file():
     filepath = 'data/rss_accumulator.txt'
     if not os.path.exists(filepath): return rss_dict
 
-    # --- CRITICAL FIX: FREEZE 24-HOUR WINDOW TO 01:30 AM IST ROLLOVER ---
+    # --- CRITICAL FIX: FREEZE 24-HOUR WINDOW TO 00:15 AM IST ROLLOVER ---
     now_utc = datetime.now(timezone.utc)
     now_ist = now_utc + timedelta(hours=5, minutes=30)
 
-    # The first GitHub Action after midnight IST runs at 20:00 UTC (01:30 AM IST).
+    # The new target anchor is 18:45 UTC (00:15 AM IST).
     # We freeze the dashboard to ONLY evaluate news from the 24 hours PRECEDING this exact time.
-    if now_ist.hour < 1 or (now_ist.hour == 1 and now_ist.minute < 30):
-        # If visited before 01:30 AM IST, lock onto yesterday's rollover snapshot
-        anchor_ist = now_ist.replace(hour=1, minute=30, second=0, microsecond=0) - timedelta(days=1)
+    if now_ist.hour == 0 and now_ist.minute < 15:
+        # If visited before 00:15 AM IST, lock onto yesterday's rollover snapshot
+        anchor_ist = now_ist.replace(hour=0, minute=15, second=0, microsecond=0) - timedelta(days=1)
     else:
-        # If visited after 01:30 AM IST, lock onto today's rollover snapshot
-        anchor_ist = now_ist.replace(hour=1, minute=30, second=0, microsecond=0)
+        # If visited after 00:15 AM IST, lock onto today's rollover snapshot
+        anchor_ist = now_ist.replace(hour=0, minute=15, second=0, microsecond=0)
 
     # Convert strict window back to UTC for safe comparison with published timestamps
     window_end_utc = anchor_ist - timedelta(hours=5, minutes=30)
