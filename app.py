@@ -1788,6 +1788,126 @@ else:
                 else:
                     st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the past 24-hours.")
 
+            st.markdown("<br><hr><br>", unsafe_allow_html=True)
+
+            # ==========================================
+            # 🧠 CORRELATION ENGINE (WEEKLY INTELLIGENCE)
+            # ==========================================
+
+            st.markdown("### 🧠 Correlation Intelligence Layer")
+
+            try:
+                archive_mapping = get_brief_mappings('data')
+
+                if archive_mapping and len(archive_mapping) >= 2:
+
+                    # --- Load latest and previous ---
+                    files = list(archive_mapping.values())
+                    latest_file = files[0]
+                    prev_file = files[1]
+
+                    with open(latest_file, 'r') as f:
+                        latest = json.load(f)
+
+                    with open(prev_file, 'r') as f:
+                        prev = json.load(f)
+
+                    def extract_domains(data):
+                        txt = data.get('brief_raw', '').lower()
+
+                        return {
+                            "AI": txt.count("ai"),
+                            "Export": txt.count("export"),
+                            "Military": txt.count("military"),
+                            "RareEarth": txt.count("rare earth"),
+                            "Taiwan": txt.count("taiwan"),
+                            "China": txt.count("china"),
+                            "US": txt.count("united states") + txt.count("u.s")
+                        }
+
+                    latest_d = extract_domains(latest)
+                    prev_d = extract_domains(prev)
+
+                    # --- Actor weights ---
+                    weights = {
+                        "US": 1.4,
+                        "China": 1.4,
+                        "Taiwan": 1.3,
+                        "Military": 1.5,
+                        "Export": 1.3
+                    }
+
+                    # --- Shock keywords ---
+                    shock_words = ["sanction", "ban", "war", "strike", "export ban", "embargo"]
+
+                    shock_flag = any(word in latest.get('brief_raw', '').lower() for word in shock_words)
+
+                    # --- Correlation calculation ---
+                    correlations = []
+
+                    domains = ["AI", "Export", "Military", "RareEarth"]
+
+                    for d1 in domains:
+                        for d2 in domains:
+                            if d1 != d2:
+
+                                delta1 = latest_d[d1] - prev_d[d1]
+                                delta2 = latest_d[d2] - prev_d[d2]
+
+                                base_score = abs(delta1 * delta2)
+
+                                # Apply weights
+                                weight = weights.get(d1, 1) * weights.get(d2, 1)
+
+                                score = int(base_score * weight)
+
+                                # Shock boost
+                                if shock_flag:
+                                    score = int(score * 1.5)
+
+                                if score > 5:
+                                    correlations.append((d1, d2, score))
+
+                    correlations = sorted(correlations, key=lambda x: x[2], reverse=True)[:6]
+
+                    # --- UI OUTPUT ---
+                    if correlations:
+                        for c in correlations:
+                            d1, d2, score = c
+
+                            if score > 25:
+                                color = "#ef4444"
+                                label = "CRITICAL LINK"
+                            elif score > 15:
+                                color = "#f97316"
+                                label = "STRONG LINK"
+                            else:
+                                color = "#facc15"
+                                label = "MODERATE LINK"
+
+                            st.markdown(f"""
+                            <div style="margin-bottom:12px;">
+                                <span style="color:{color}; font-weight:bold;">
+                                {label} → {d1} ↔ {d2}
+                                </span>
+                                <div style="width:100%; background:#1f2937; height:6px; border-radius:4px;">
+                                    <div style="width:{min(score,100)}%; background:{color}; height:6px;"></div>
+                                </div>
+                            </div>
+                            """, unsafe_allow_html=True)
+
+                        if shock_flag:
+                            st.warning("⚠️ Shock-trigger detected: correlations amplified due to sanctions / conflict signals.")
+
+                    else:
+                        st.info("No strong correlations detected this week.")
+
+                else:
+                    st.info("Not enough historical data for correlation engine.")
+
+            except Exception as e:
+                st.warning("Correlation engine error.")
+
             # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
             st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 30px; margin-bottom: 10px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
 
