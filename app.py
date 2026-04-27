@@ -1058,10 +1058,64 @@ def check_early_warnings():
 def run_shockwave_engine():
     import pandas as pd
     import streamlit as st
+    import os
+    import json
+    from datetime import datetime, timezone, timedelta
 
     st.markdown("<h3 style='color:#ff9f1c;'>🌍 Geopolitical Shockwave Engine - In the Last 24 Hours</h3>", unsafe_allow_html=True)
 
-    # --- LOAD LAST 24H RSS DATA ---
+    # --- STRICT TIMELOCK (00:15 AM IST SYNC) ---
+    now_utc = datetime.now(timezone.utc)
+    now_ist = now_utc + timedelta(hours=5, minutes=30)
+    if now_ist.hour == 0 and now_ist.minute < 15:
+        anchor_ist = now_ist.replace(hour=0, minute=15, second=0, microsecond=0) - timedelta(days=1)
+    else:
+        anchor_ist = now_ist.replace(hour=0, minute=15, second=0, microsecond=0)
+
+    anchor_str = anchor_ist.strftime("%Y-%m-%d")
+    snapshot_file = f'data/shockwave_snapshot_{anchor_str}.json'
+
+    # --- ATTEMPT TO LOAD THE FROZEN DAILY SNAPSHOT ---
+    if os.path.exists(snapshot_file):
+        try:
+            with open(snapshot_file, 'r') as f:
+                saved_data = json.load(f)
+                global_index = saved_data["global_index"]
+                shock_df = pd.DataFrame(saved_data["shock_df"])
+                status = saved_data["status"]
+                
+                # Render the UI immediately from the frozen state
+                st.markdown(f"""
+                <div style="padding:20px; background:#0a0a0a; border:1px solid #333; border-radius:8px; margin-bottom:25px;">
+                    <h3 style="color:#ff4b4b; margin-bottom:5px; margin-top:0px; font-size:18px; text-transform:uppercase; letter-spacing:1px;">Global Shock Index</h3>
+                    <h1 style="color:white; margin:0; font-size: 3.5rem;">{global_index}<span style="font-size: 1.5rem; color: #555;">/100</span></h1>
+                    <p style="color:#aaa; font-size:15px; margin-top: 5px; margin-bottom:0px;">Status: <strong>{status}</strong></p>
+                </div>
+                """, unsafe_allow_html=True)
+
+                for _, row in shock_df.iterrows():
+                    label = row["Domain"]
+                    val = int(row["Shock Score"])
+                    color = "#00ff00"
+                    if val > 70: color = "#ff4b4b"
+                    elif val > 50: color = "#f97316"
+                    elif val > 30: color = "#facc15"
+                    st.markdown(f"""
+                    <div style="margin-bottom:16px;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom: 6px;">
+                            <span style="color:#ddd; font-size:14px; font-weight: 600;">{label}</span>
+                            <span style="color:{color}; font-weight:bold; font-size:14px;">{val}%</span>
+                        </div>
+                        <div style="background:#1f2937; height:8px; border-radius:4px;">
+                            <div style="width:{val}%; background:{color}; height:8px; border-radius:4px; box-shadow: 0 0 10px {color}60;"></div>
+                        </div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                return  # End execution here so it never recalculates!
+        except Exception:
+            pass
+
+    # --- IF NO SNAPSHOT EXISTS, CALCULATE IT (HAPPENS ONCE A DAY) ---
     try:
         live_rss = parse_rss_txt_file()
         if not live_rss:
@@ -1071,12 +1125,10 @@ def run_shockwave_engine():
         st.warning("RSS pipeline unavailable")
         return
 
-    # --- STRICT TIMELOCK (00:15 AM IST SYNC) ---
     all_news = []
     for region, articles in live_rss.items():
         for art in articles:
-            # This ensures we ONLY calculate shocks based on the locked daily window
-            if art.get("is_24h", False):  
+            if art.get("is_24h", False):
                 all_news.append(art)
 
     df = pd.DataFrame(all_news)
@@ -1101,13 +1153,11 @@ def run_shockwave_engine():
         for title in df["title"].astype(str):
             t = title.lower()
             score += sum(1 for kw in keywords if kw in t)
-        # Cap max domain score at 100
         scores[domain] = min(100, score * 5)
 
     shock_df = pd.DataFrame(list(scores.items()), columns=["Domain", "Shock Score"])
     shock_df = shock_df.sort_values(by="Shock Score", ascending=False)
 
-    # --- GLOBAL INDEX ---
     global_index = int(shock_df["Shock Score"].mean())
 
     if global_index > 70:
@@ -1119,6 +1169,18 @@ def run_shockwave_engine():
     else:
         status = "🟢 STABLE"
 
+    # --- SAVE THE SNAPSHOT SO IT NEVER CHANGES AGAIN TODAY ---
+    os.makedirs('data', exist_ok=True)
+    try:
+        with open(snapshot_file, 'w') as f:
+            json.dump({
+                "global_index": global_index,
+                "shock_df": shock_df.to_dict('records'),
+                "status": status
+            }, f)
+    except Exception:
+        pass
+
     # --- DISPLAY UI ---
     st.markdown(f"""
     <div style="padding:20px; background:#0a0a0a; border:1px solid #333; border-radius:8px; margin-bottom:25px;">
@@ -1128,19 +1190,13 @@ def run_shockwave_engine():
     </div>
     """, unsafe_allow_html=True)
 
-    # --- BAR DISPLAY (STREAMLIT NATIVE) ---
     for _, row in shock_df.iterrows():
         label = row["Domain"]
         val = int(row["Shock Score"])
-
         color = "#00ff00"
-        if val > 70:
-            color = "#ff4b4b"
-        elif val > 50:
-            color = "#f97316"
-        elif val > 30:
-            color = "#facc15"
-
+        if val > 70: color = "#ff4b4b"
+        elif val > 50: color = "#f97316"
+        elif val > 30: color = "#facc15"
         st.markdown(f"""
         <div style="margin-bottom:16px;">
             <div style="display:flex; justify-content:space-between; margin-bottom: 6px;">
