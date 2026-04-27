@@ -1405,7 +1405,7 @@ if st.session_state['role'] is None:
                     st.session_state['role'] = 'admin'
                     login_placeholder.empty() # INSTANTLY DESTROY LOGIN WIDGETS BEFORE RERUN
                     st.rerun()
-                else: 
+                else:
                     st.toast("Invalid credentials. Please verify your secure key.", icon="🚫")
 
             # --- GUEST ACCESS ---
@@ -1431,16 +1431,16 @@ else:
                 left: 0;
                 width: 100vw;
                 height: 100vh;
-                background-color: #000000; /* Pitch dark black */
+                background-color: #000000;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                z-index: 9999999; /* Forces it on top of EVERYTHING */
+                z-index: 9999999;
                 animation: fadeOutSplash 3.5s forwards; 
-                pointer-events: none; /* Allows user to interact with dashboard once it fades */
+                pointer-events: none;
             }
             .splash-text {
-                color: #ffffff; /* White text */
+                color: #ffffff;
                 font-size: 2.5rem;
                 font-weight: 300;
                 font-family: 'Times New Roman', Times, serif;
@@ -1466,12 +1466,8 @@ else:
         </div>
         """, unsafe_allow_html=True)
 
-    # --- RENDER THE NEW TICKER TAPE FIRST ---
-    # (The CSS inside this function safely positions the native Streamlit toggle)
     render_ticker_tape()
 
-    # --- SIDEBAR CONTENT ---
-    # Because we hijacked the native button, Streamlit manages opening/closing natively!
     st.sidebar.image("logo.jpg", use_container_width=True)
     st.sidebar.markdown("""
     <div style='text-align: center; margin-top: -10px;'>
@@ -1485,7 +1481,6 @@ else:
     st.sidebar.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>Global Filter</p>", unsafe_allow_html=True)
     
     actor_list = []
-    
     df_actions = clean_dataframe(pd.DataFrame(dashboard_data.get('recent_actions', [])))
     
     if not df_actions.empty and 'Actor' in df_actions.columns:
@@ -1539,7 +1534,7 @@ else:
     st.sidebar.markdown("---")
     st.sidebar.title("SemicoN Access")
 
-    if st.session_state['role'] == 'admin':
+    if st.session_state.get('role') == 'admin':
         st.sidebar.info("Access Level: **Administrator**")
         if st.sidebar.button("Logout"):
             st.session_state['role'] = None
@@ -1587,13 +1582,11 @@ else:
                     else: return "🟢 Standard"
                     
                 score_df["Calculated Threat Level"] = score_df["Instability Actions Logged"].apply(assign_threat)
-                
                 st.table(score_df.set_index(score_df.columns[0]))
             else:
                 st.warning("Not enough historical data to generate scores yet.")
         else:
             st.warning("No archives available.")
-            
         st.stop() 
         
     elif advanced_tool == "Intelligence Interrogation (RAG)":
@@ -1611,7 +1604,7 @@ else:
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
 
-        if prompt := st.chat_input("Ask a strategic question (e.g., 'What were the major export controls on China last month?'):"):
+        if prompt := st.chat_input("Ask a strategic question:"):
             st.session_state.rag_messages.append({"role": "user", "content": prompt})
             with st.chat_message("user"):
                 st.markdown(prompt)
@@ -1623,7 +1616,6 @@ else:
                 archive_mapping = get_brief_mappings('data')
                 context_data = ""
                 
-                # --- RAG 2.0 CONTEXT BUILDER (OPTIMIZED FOR SPEED & ACCURACY) ---
                 user_keywords = [w.lower() for w in re.findall(r'\b\w+\b', prompt) if len(w) > 2 and w.lower() not in ['what', 'when', 'where', 'which', 'who', 'why', 'how', 'were', 'was', 'this', 'that', 'with', 'from', 'about', 'the', 'and', 'for', 'are', 'did', 'have', 'has']]
 
                 file_scores = []
@@ -1636,10 +1628,7 @@ else:
                             file_scores.append((score, f_path))
                     except: pass
 
-                # Sort files by relevance score
                 file_scores.sort(key=lambda x: x[0], reverse=True)
-
-                # Pick top 3 most relevant files, fallback to latest 2 if no keywords match
                 top_files = [fs[1] for fs in file_scores if fs[0] > 0][:3]
                 if not top_files:
                     top_files = list(archive_mapping.values())[:2]
@@ -1649,7 +1638,6 @@ else:
                         with open(f_path, 'r') as file:
                             d = json.load(file)
                             r_text = d.get('brief_raw', '')
-                            
                             categories = [
                                 ("Global Foundry Market", extract_tag('EXEC', r_text) or ""),
                                 ("AI Chip Demand", extract_tag('LITHO', r_text) or ""),
@@ -1662,7 +1650,6 @@ else:
                             
                             context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
                             context_data += "ALGORITHMIC THREAT SCORES:\n"
-                            
                             for name, txt in categories:
                                 if len(txt.strip()) > 20:
                                     score = calculate_domain_threat(name, txt, d)
@@ -1673,19 +1660,10 @@ else:
                             context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', []))}"
                     except: pass
 
-                # --- RAG 2.0 SYSTEM PROMPT ---
                 sys_prompt = f"""
                 You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
                 Your primary directive is to answer the user's question using ONLY the provided historical intelligence archives below.
-                
-                CRITICAL RAG 2.0 DIRECTIVE: You now have access to the "Algorithmic Threat Scores" (0-100%) calculated for each domain.
-                - Scores > 60% indicate High Volatility/Threat environments.
-                - Scores < 40% indicate standard baseline risk.
-                When analyzing threats, vulnerabilities, or risks, explicitly cite these Algorithmic Threat Scores to ground your reasoning in the quantitative data model.
-                
-                If the answer is not present in the context, explicitly state: "I cannot find this information in the vetted intelligence archives."
-                Format your responses in a structured, highly analytical style. Use structured comparative tables if you are summarizing multiple actors, dates, or data points. Do NOT invent or hallucinate external information.
-                
+                CRITICAL RAG 2.0 DIRECTIVE: Cite "Algorithmic Threat Scores" to ground your reasoning.
                 ARCHIVES CONTEXT:
                 {context_data}
                 """
@@ -1706,13 +1684,12 @@ else:
                     full_response = f"⚠️ Error querying the intelligence database: {e}"
                     message_placeholder.markdown(full_response)
             st.session_state.rag_messages.append({"role": "assistant", "content": full_response})
-            
         st.stop() 
 
     if view_selection == "Weekly Intelligence Brief":
         is_editing = st.session_state.get('vetting_toggle', False)
             
-        if is_editing and st.session_state['role'] == 'admin':
+        if is_editing and st.session_state.get('role') == 'admin':
             st.warning("You are currently in Edit Mode. Changes made here will be permanently written to the intelligence database.")
             with st.form("editor_form"):
                 st.markdown("### Edit Intelligence Text")
@@ -1729,7 +1706,6 @@ else:
                 new_fin = st.text_area("Strategic Conclusion", text_final, height=150)
                 
                 st.markdown("### Edit Data Tables & KPIs")
-                
                 edited_kpi_df = st.data_editor(clean_dataframe(pd.DataFrame(dashboard_data.get('kpi_metrics', []))), num_rows="dynamic", use_container_width=True)
                 edited_funding_df = st.data_editor(clean_dataframe(pd.DataFrame(dashboard_data.get('funding_data', []))), num_rows="dynamic", use_container_width=True)
                 edited_market_df = st.data_editor(clean_dataframe(pd.DataFrame(dashboard_data.get('market_impact', []))), num_rows="dynamic", use_container_width=True)
@@ -1737,20 +1713,13 @@ else:
                 edited_actions_df = st.data_editor(clean_dataframe(pd.DataFrame(dashboard_data.get('recent_actions', []))), num_rows="dynamic", use_container_width=True)
                 
                 if st.form_submit_button("💾 Save Vetted Intelligence"):
-                    
                     clean_kpi = edited_kpi_df.fillna("")
                     clean_actions = edited_actions_df.fillna("")
                     clean_fund = edited_funding_df.fillna("")
                     clean_market = edited_market_df.fillna("")
                     clean_risk = edited_risk_df.fillna("")
                     
-                    kpi_json = clean_kpi.to_json(orient='records')
-                    matrix_json = clean_actions.to_json(orient='records')
-                    fund_json = clean_fund.to_json(orient='records')
-                    market_json = clean_market.to_json(orient='records')
-                    risk_json = clean_risk.to_json(orient='records')
-                    
-                    new_raw = f"<SUMMARY>\n{new_sum}\n</SUMMARY>\n\n<EWS>\n{new_ews}\n</EWS>\n\n<EXEC>\n{new_s1}\n</EXEC>\n\n<LITHO>\n{new_s2}\n</LITHO>\n\n<REE>\n{new_s3}\n</REE>\n\n<GEO>\n{new_s4}\n</GEO>\n\n<MILITARY>\n{new_mil}\n</MILITARY>\n\n<CONCLUSION>\n{new_s5}\n</CONCLUSION>\n\n<INDIA>\n{new_india}\n</INDIA>\n\n<WEST_ASIA>\n{new_wa}\n</WEST_ASIA>\n\n<FINAL_CONCLUSION>\n{new_fin}\n</FINAL_CONCLUSION>\n\n<KPI_METRICS>{kpi_json}</KPI_METRICS>\n<FUNDING_DATA>{fund_json}</FUNDING_DATA>\n<MARKET_IMPACT>{market_json}</MARKET_IMPACT>\n<RISK_INDEX>{risk_json}</RISK_INDEX>\n<ACTION_MATRIX>{matrix_json}</ACTION_MATRIX>"
+                    new_raw = f"<SUMMARY>\n{new_sum}\n</SUMMARY>\n\n<EWS>\n{new_ews}\n</EWS>\n\n<EXEC>\n{new_s1}\n</EXEC>\n\n<LITHO>\n{new_s2}\n</LITHO>\n\n<REE>\n{new_s3}\n</REE>\n\n<GEO>\n{new_s4}\n</GEO>\n\n<MILITARY>\n{new_mil}\n</MILITARY>\n\n<CONCLUSION>\n{new_s5}\n</CONCLUSION>\n\n<INDIA>\n{new_india}\n</INDIA>\n\n<WEST_ASIA>\n{new_wa}\n</WEST_ASIA>\n\n<FINAL_CONCLUSION>\n{new_fin}\n</FINAL_CONCLUSION>\n\n<KPI_METRICS>{clean_kpi.to_json(orient='records')}</KPI_METRICS>\n<FUNDING_DATA>{clean_fund.to_json(orient='records')}</FUNDING_DATA>\n<MARKET_IMPACT>{clean_market.to_json(orient='records')}</MARKET_IMPACT>\n<RISK_INDEX>{clean_risk.to_json(orient='records')}</RISK_INDEX>\n<ACTION_MATRIX>{clean_actions.to_json(orient='records')}</ACTION_MATRIX>"
                     
                     dashboard_data['brief_raw'] = new_raw
                     dashboard_data['kpi_metrics'] = clean_kpi.to_dict(orient='records')
@@ -1774,65 +1743,115 @@ else:
         else:
             st.title(f"SemicoN Weekly Brief - {brief_date}") 
             st.markdown("---")
-            
             current_day = datetime.now(timezone.utc).astimezone().strftime('%B %d, %Y')
 
-            # Change margin-bottom: 10px; to margin-bottom: 30px;
             st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 30px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
-            
             check_early_warnings()
 
             # ==========================================
-            # 🧠 SIGNAL PRIORITIZATION ENGINE (WEEKLY)
+            # 🌐 GEOPOLITICAL SHOCKWAVE ENGINE
             # ==========================================
-            
+            run_shockwave_engine()
+            st.markdown("---")
+
+            # ==========================================
+            # 🧠 CORRELATION ENGINE (WEEKLY INTELLIGENCE)
+            # ==========================================
+            st.markdown("### 🧠 Correlation Intelligence Layer (Weekly)")
+            try:
+                archive_mapping = get_brief_mappings('data')
+                if archive_mapping and len(archive_mapping) >= 2:
+                    files = list(archive_mapping.values())
+                    with open(files[0], 'r') as f: latest = json.load(f)
+                    with open(files[1], 'r') as f: prev = json.load(f)
+
+                    def extract_domains(data):
+                        txt = data.get('brief_raw', '').lower()
+                        return {
+                            "AI": txt.count("ai"), "Export": txt.count("export"),
+                            "Military": txt.count("military"), "RareEarth": txt.count("rare earth"),
+                            "Taiwan": txt.count("taiwan"), "China": txt.count("china"),
+                            "US": txt.count("united states") + txt.count("u.s")
+                        }
+
+                    latest_d = extract_domains(latest)
+                    prev_d = extract_domains(prev)
+                    weights = {"US": 1.4, "China": 1.4, "Taiwan": 1.3, "Military": 1.5, "Export": 1.3}
+                    shock_words = ["sanction", "ban", "war", "strike", "export ban", "embargo"]
+                    shock_flag = any(word in latest.get('brief_raw', '').lower() for word in shock_words)
+
+                    correlations = []
+                    domains = ["AI", "Export", "Military", "RareEarth"]
+                    for d1 in domains:
+                        for d2 in domains:
+                            if d1 != d2:
+                                delta1 = latest_d[d1] - prev_d[d1]
+                                delta2 = latest_d[d2] - prev_d[d2]
+                                base_score = abs(delta1 * delta2)
+                                weight = weights.get(d1, 1) * weights.get(d2, 1)
+                                score = int(base_score * weight)
+                                if shock_flag: score = int(score * 1.5)
+                                if score > 5: correlations.append((d1, d2, score))
+
+                    correlations = sorted(correlations, key=lambda x: x[2], reverse=True)[:6]
+                    if correlations:
+                        for c in correlations:
+                            d1, d2, score = c
+                            if score > 25: color, label = "#ef4444", "CRITICAL LINK"
+                            elif score > 15: color, label = "#f97316", "STRONG LINK"
+                            else: color, label = "#facc15", "MODERATE LINK"
+
+                            st.markdown(f"""
+                            <div style="margin-bottom:12px;">
+                                <span style="color:{color}; font-weight:bold;">{label} → {d1} ↔ {d2}</span>
+                                <div style="width:100%; background:#1f2937; height:6px; border-radius:4px;">
+                                    <div style="width:{min(score,100)}%; background:{color}; height:6px;"></div>
+                                </div>
+                            </div>
+                            """, unsafe_allow_html=True)
+                        if shock_flag:
+                            st.warning("⚠️ Shock-trigger detected: correlations amplified due to sanctions / conflict signals.")
+                    else: st.info("No strong correlations detected this week.")
+                else: st.info("Not enough historical data for correlation engine.")
+            except Exception as e:
+                st.warning("Correlation engine error.")
+                
+            st.markdown("---")
+
+            # ==========================================
+            # 🧠 SIGNAL PRIORITIZATION ENGINE & ALERTS (WEEKLY)
+            # ==========================================
             st.markdown("<h3 style='color:#00ffaa;'>🧠 Strategic Signal Prioritization (Weekly)</h3>", unsafe_allow_html=True)
-            
             signal_scores = {}
-            
-            # Actor weighting (intelligence-grade logic)
-            actor_weight = {
-                "us": 1.5,
-                "china": 1.5,
-                "taiwan": 1.4,
-                "eu": 1.2,
-                "india": 1.2,
-                "russia": 1.3,
-            }
-            
-            # Shock triggers
+            actor_weight = {"us": 1.5, "china": 1.5, "taiwan": 1.4, "eu": 1.2, "india": 1.2, "russia": 1.3}
             shock_keywords = ['sanction', 'ban', 'war', 'military', 'export control', 'embargo']
             
-            try:
-                actions = dashboard_data.get('recent_actions', [])
-            
+            actions = dashboard_data.get('recent_actions', [])
+            if actions:
                 for act in actions:
                     text = str(act).lower()
-            
                     score = 1
             
-                    # keyword intensity
-                    if any(k in text for k in ['war','military','conflict','strike']):
-                        score += 5
-                    if any(k in text for k in ['sanction','export','ban','restriction']):
-                        score += 4
-                    if any(k in text for k in ['investment','policy','deal']):
-                        score += 2
+                    if any(k in text for k in ['war','military','conflict','strike']): score += 5
+                    if any(k in text for k in ['sanction','export','ban','restriction']): score += 4
+                    if any(k in text for k in ['investment','policy','deal']): score += 2
             
-                    # actor weighting
                     for actor, weight in actor_weight.items():
-                        if actor in text:
-                            score *= weight
+                        if actor in text: score *= weight
             
-                    # shock trigger boost
-                    if any(k in text for k in shock_keywords):
-                        score *= 1.5
+                    if any(k in text for k in shock_keywords): score *= 1.5
             
-                    label = act.get("Event", "Unknown Event")
+                    # --- FIX FOR "UNKNOWN EVENT" MEGA-GROUPING ---
+                    if isinstance(act, dict):
+                        # Tries to find ANY valid key, falls back to a snippet of the raw dict if missing
+                        label = act.get("Event") or act.get("Action") or act.get("Description") or act.get("Title")
+                        if not label:
+                            label = f"Strategic Action recorded in {act.get('Location', 'Global Domain')}"
+                    else:
+                        label = str(act)[:80] + "..."
             
                     signal_scores[label] = signal_scores.get(label, 0) + score
             
-                # rank signals
                 ranked_signals = sorted(signal_scores.items(), key=lambda x: x[1], reverse=True)[:5]
             
                 for sig, val in ranked_signals:
@@ -1842,55 +1861,34 @@ else:
                         <span style="color:#aaa;">Signal Strength: {int(val)}</span>
                     </div>
                     """, unsafe_allow_html=True)
-            
-            except:
-                st.info("Not enough data for signal prioritization yet.")
-            
-            
-            # ==========================================
-            # 🧠 AUTONOMOUS ALERT GENERATOR
-            # ==========================================
-            
-            st.markdown("<h3 style='color:#ff4b4b;'>🚨 Top 3 Geopolitical Risks This Week</h3>", unsafe_allow_html=True)
-            
-            try:
+                
+                # --- TOP 3 GEOPOLITICAL RISKS ---
+                st.markdown("<h3 style='color:#ff4b4b; margin-top:25px;'>🚨 Top 3 Geopolitical Risks This Week</h3>", unsafe_allow_html=True)
                 top3 = ranked_signals[:3]
-            
                 for i, (sig, val) in enumerate(top3, 1):
-            
                     risk_level = "Elevated"
-                    if val > 15:
-                        risk_level = "Critical"
-                    elif val > 10:
-                        risk_level = "High"
+                    if val > 15: risk_level = "Critical"
+                    elif val > 10: risk_level = "High"
             
                     st.markdown(f"""
-                    <div style="
-                        border-left:4px solid #ff4b4b;
-                        padding:10px;
-                        margin-bottom:12px;
-                        background:rgba(255,75,75,0.05);
-                    ">
+                    <div style="border-left:4px solid #ff4b4b; padding:10px; margin-bottom:12px; background:rgba(255,75,75,0.05);">
                     <b>Risk #{i}: {sig}</b><br>
                     Severity: <span style="color:#ff4b4b;">{risk_level}</span><br>
                     Intelligence Score: {int(val)}
                     </div>
                     """, unsafe_allow_html=True)
-            
-            except:
-                st.info("No risks detected this week.")
+            else:
+                st.info("Not enough data for signal prioritization yet.")
+                
+            st.markdown("---")
 
-            # Removed the extra <br> here to eliminate the dead space
-            run_shockwave_engine()
-            st.markdown("<br><hr><br>", unsafe_allow_html=True)
-
-        # --- NEW: LIVE GLOBAL SEMICONDUCTOR RISK INDEX (24-HOUR SYNC) ---
-            # 1. Get baseline structural risk from the weekly SCV domains
+            # ==========================================
+            # 🚨 LIVE RISK INDEX (24-HOUR SYNC)
+            # ==========================================
             all_texts = [text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa]
             valid_scores = [calculate_domain_threat("domain", t, dashboard_data) for t in all_texts if len(t.strip()) > 20]
             baseline_risk = int(sum(valid_scores) / len(valid_scores)) if valid_scores else 40
 
-            # 2. Divide collected 24-hour news into thematic categories
             live_rss_data = parse_rss_txt_file()
             theme_scores = {"Kinetic": 0, "Economic": 0, "Supply": 0}
             breaking_news = []
@@ -1902,11 +1900,9 @@ else:
                 
                 for region, articles in live_rss_data.items():
                     for art in articles:
-                        if not art.get('is_24h', False): continue # STRICT 24-HOUR FILTER
+                        if not art.get('is_24h', False): continue 
                         
                         title_lower = art['title'].lower()
-                        
-                        # --- FIX: ADDED MISSING DEFINITIONS FOR ALL HIT COUNTERS ---
                         k_hits = sum(1 for kw in kw_kinetic if kw in title_lower)
                         e_hits = sum(1 for kw in kw_economic if kw in title_lower)
                         s_hits = sum(1 for kw in kw_supply if kw in title_lower)
@@ -1915,162 +1911,40 @@ else:
                         theme_scores["Economic"] += e_hits * 3.5
                         theme_scores["Supply"] += s_hits * 4.0
                         
-                        # Capture breaking alert dynamically
                         if (k_hits + e_hits + s_hits) >= 2 and not breaking_news:
                             breaking_news.append(art)
 
-            # 3. Mathematical Method: Weighted Composite Risk Model with Logarithmic Normalization
             import math
-            def log_scale(score, max_boost):
-                # Asymptotic curve: Prevents linear stacking from maxing out at 100%
-                return max_boost * (1 - math.exp(-0.06 * score)) if score > 0 else 0
+            def log_scale(score, max_boost): return max_boost * (1 - math.exp(-0.06 * score)) if score > 0 else 0
 
-            # Distribute the maximum allowed volatility (60%) across themes
-            kinetic_volatility = log_scale(theme_scores["Kinetic"], 25)  # Hardest impact
+            kinetic_volatility = log_scale(theme_scores["Kinetic"], 25) 
             economic_volatility = log_scale(theme_scores["Economic"], 20)
             supply_volatility = log_scale(theme_scores["Supply"], 15)
 
-            # Final Composite Math: 40% Structural Baseline + 60% Dynamic Volatility
             raw_composite = (baseline_risk * 0.4) + kinetic_volatility + economic_volatility + supply_volatility
-            global_risk = int(round(raw_composite + 25)) # Apply a standard operational floor
-            global_risk = max(20, min(99, global_risk)) # Cap at 99% to maintain metric authenticity
+            global_risk = int(round(raw_composite + 25))
+            global_risk = max(20, min(99, global_risk)) 
 
             risk_cols = st.columns([1, 1])
             with risk_cols[0]:
                 if global_risk >= 75:
-                    st.error(f"🔴 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Critical)")
+                    st.error(f"🔴 **Global Semiconductor Risk Index – In the Past 24-Hours: {global_risk} / 100** (Critical)")
                 elif global_risk >= 50:
-                    st.warning(f"🟠 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Rising Risk)")
+                    st.warning(f"🟠 **Global Semiconductor Risk Index – In the Past 24-Hours: {global_risk} / 100** (Rising Risk)")
                 else:
-                    st.success(f"🟢 **Global Semiconductor Risk Index – In the Past 24-Hours (Logarithmic Composite Model): {global_risk} / 100** (Stable)")
+                    st.success(f"🟢 **Global Semiconductor Risk Index – In the Past 24-Hours: {global_risk} / 100** (Stable)")
 
             with risk_cols[1]:
                 if breaking_news:
-                    st.error(f"🚨 **BREAKING ALERT – In the Past 24-Hours:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
+                    st.error(f"🚨 **BREAKING ALERT – Past 24-Hours:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
                 else:
                     st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the past 24-hours.")
 
-            st.markdown("<br><hr><br>", unsafe_allow_html=True)
+            st.markdown("---")
 
             # ==========================================
-            # 🧠 CORRELATION ENGINE (WEEKLY INTELLIGENCE)
+            # 🌀 SCV CONCENTRIC WHEEL
             # ==========================================
-
-            st.markdown("### 🧠 Correlation Intelligence Layer (Weekly)")
-
-            try:
-                archive_mapping = get_brief_mappings('data')
-
-                if archive_mapping and len(archive_mapping) >= 2:
-
-                    # --- Load latest and previous ---
-                    files = list(archive_mapping.values())
-                    latest_file = files[0]
-                    prev_file = files[1]
-
-                    with open(latest_file, 'r') as f:
-                        latest = json.load(f)
-
-                    with open(prev_file, 'r') as f:
-                        prev = json.load(f)
-
-                    def extract_domains(data):
-                        txt = data.get('brief_raw', '').lower()
-
-                        return {
-                            "AI": txt.count("ai"),
-                            "Export": txt.count("export"),
-                            "Military": txt.count("military"),
-                            "RareEarth": txt.count("rare earth"),
-                            "Taiwan": txt.count("taiwan"),
-                            "China": txt.count("china"),
-                            "US": txt.count("united states") + txt.count("u.s")
-                        }
-
-                    latest_d = extract_domains(latest)
-                    prev_d = extract_domains(prev)
-
-                    # --- Actor weights ---
-                    weights = {
-                        "US": 1.4,
-                        "China": 1.4,
-                        "Taiwan": 1.3,
-                        "Military": 1.5,
-                        "Export": 1.3
-                    }
-
-                    # --- Shock keywords ---
-                    shock_words = ["sanction", "ban", "war", "strike", "export ban", "embargo"]
-
-                    shock_flag = any(word in latest.get('brief_raw', '').lower() for word in shock_words)
-
-                    # --- Correlation calculation ---
-                    correlations = []
-
-                    domains = ["AI", "Export", "Military", "RareEarth"]
-
-                    for d1 in domains:
-                        for d2 in domains:
-                            if d1 != d2:
-
-                                delta1 = latest_d[d1] - prev_d[d1]
-                                delta2 = latest_d[d2] - prev_d[d2]
-
-                                base_score = abs(delta1 * delta2)
-
-                                # Apply weights
-                                weight = weights.get(d1, 1) * weights.get(d2, 1)
-
-                                score = int(base_score * weight)
-
-                                # Shock boost
-                                if shock_flag:
-                                    score = int(score * 1.5)
-
-                                if score > 5:
-                                    correlations.append((d1, d2, score))
-
-                    correlations = sorted(correlations, key=lambda x: x[2], reverse=True)[:6]
-
-                    # --- UI OUTPUT ---
-                    if correlations:
-                        for c in correlations:
-                            d1, d2, score = c
-
-                            if score > 25:
-                                color = "#ef4444"
-                                label = "CRITICAL LINK"
-                            elif score > 15:
-                                color = "#f97316"
-                                label = "STRONG LINK"
-                            else:
-                                color = "#facc15"
-                                label = "MODERATE LINK"
-
-                            st.markdown(f"""
-                            <div style="margin-bottom:12px;">
-                                <span style="color:{color}; font-weight:bold;">
-                                {label} → {d1} ↔ {d2}
-                                </span>
-                                <div style="width:100%; background:#1f2937; height:6px; border-radius:4px;">
-                                    <div style="width:{min(score,100)}%; background:{color}; height:6px;"></div>
-                                </div>
-                            </div>
-                            """, unsafe_allow_html=True)
-
-                        if shock_flag:
-                            st.warning("⚠️ Shock-trigger detected: correlations amplified due to sanctions / conflict signals.")
-
-                    else:
-                        st.info("No strong correlations detected this week.")
-
-                else:
-                    st.info("Not enough historical data for correlation engine.")
-
-            except Exception as e:
-                st.warning("Correlation engine error.")
-
-            # --- PLOTLY CONCENTRIC RING WHEEL IMPLEMENTATION ---
             st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 30px; margin-bottom: 10px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
 
             scv_categories = [
@@ -2092,98 +1966,38 @@ else:
             active_cats = sorted(active_cats, key=lambda x: x["score"], reverse=True)
 
             scv_cols = st.columns([1.2, 1])
-
             with scv_cols[0]:
                 st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
                 st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0px; text-align: center;'>Supply Chain Vulnerability (SCV) Wheel (weekly)</p>", unsafe_allow_html=True)
 
                 if active_cats:
                     fig = go.Figure()
-
-                    base_hole = 0.35      
-                    ring_width = 0.015    
-                    gap = 0.075          
+                    base_hole, ring_width, gap = 0.35, 0.015, 0.075          
 
                     for i, cat in enumerate(active_cats):
-                        val = cat["score"]
-                        color = cat["color"]
-
+                        val, color = cat["score"], cat["color"]
                         data_hole = base_hole + i * (ring_width + gap)
-                        fig.add_trace(go.Pie(
-                            values=[val, 100 - val],
-                            hole=data_hole,
-                            domain=dict(x=[0, 1], y=[0, 1]),
-                            marker=dict(
-                                colors=[color, "#000000"],
-                                line=dict(width=0) 
-                            ),
-                            textinfo='none',
-                            sort=False,
-                            direction='clockwise',
-                            hoverinfo='text',
-                            hovertext=[f"{cat['name']}: {val}%", ""],
-                            showlegend=False
-                        ))
-
-                        gap_hole = data_hole + ring_width
-                        fig.add_trace(go.Pie(
-                            values=[100], 
-                            hole=gap_hole,
-                            domain=dict(x=[0, 1], y=[0, 1]),
-                            marker=dict(
-                                colors=["#000000"], 
-                                line=dict(width=2, color="#000000")
-                            ), 
-                            textinfo='none',
-                            sort=False,
-                            hoverinfo='none',
-                            showlegend=False
-                        ))
+                        
+                        fig.add_trace(go.Pie(values=[val, 100 - val], hole=data_hole, domain=dict(x=[0, 1], y=[0, 1]), marker=dict(colors=[color, "#000000"], line=dict(width=0)), textinfo='none', sort=False, direction='clockwise', hoverinfo='text', hovertext=[f"{cat['name']}: {val}%", ""], showlegend=False))
+                        fig.add_trace(go.Pie(values=[100], hole=data_hole + ring_width, domain=dict(x=[0, 1], y=[0, 1]), marker=dict(colors=["#000000"], line=dict(width=2, color="#000000")), textinfo='none', sort=False, hoverinfo='none', showlegend=False))
                     
-                    fig.add_trace(go.Pie(
-                        values=[100],
-                        hole=0.98,
-                        domain=dict(x=[0, 1], y=[0, 1]),
-                        marker=dict(colors=["#000000"], line=dict(width=4, color="#000000")),
-                        textinfo='none',
-                        hoverinfo='none',
-                        showlegend=False
-                    ))
+                    fig.add_trace(go.Pie(values=[100], hole=0.98, domain=dict(x=[0, 1], y=[0, 1]), marker=dict(colors=["#000000"], line=dict(width=4, color="#000000")), textinfo='none', hoverinfo='none', showlegend=False))
 
                     overall_score = int(sum(c["score"] for c in active_cats) / len(active_cats)) if active_cats else 0
 
-                    fig.update_layout(
-                        paper_bgcolor='rgba(0,0,0,0)',
-                        plot_bgcolor='rgba(0,0,0,0)',
-                        margin=dict(t=20, b=20, l=20, r=20),
-                        height=400,
-                        annotations=[dict(
-                            text=f"<b style='font-size:42px; color:white;'>{overall_score}</b><br><span style='color:#aaaaaa; font-size:12px; font-weight:bold;'>AVG SCV SCORE</span>",
-                            x=0.5, y=0.5,
-                            showarrow=False
-                        )]
-                    )
-
+                    fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=20, b=20, l=20, r=20), height=400, annotations=[dict(text=f"<b style='font-size:42px; color:white;'>{overall_score}</b><br><span style='color:#aaaaaa; font-size:12px; font-weight:bold;'>AVG SCV SCORE</span>", x=0.5, y=0.5, showarrow=False)])
                     st.plotly_chart(fig, use_container_width=True)
                     
                     legend_html = "<div style='display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:-30px; margin-bottom:20px;'>"
-                    for cat in active_cats:
-                        legend_html += f"<div style='font-size:10px; font-weight:bold; color:#a3a3a3;'><span style='color:{cat['color']};'>●</span> {cat['name'].upper()}</div>"
-                    legend_html += "</div>"
-                    st.markdown(legend_html, unsafe_allow_html=True)
-                else:
-                    st.warning("Not enough data to render the wheel.")
+                    for cat in active_cats: legend_html += f"<div style='font-size:10px; font-weight:bold; color:#a3a3a3;'><span style='color:{cat['color']};'>●</span> {cat['name'].upper()}</div>"
+                    st.markdown(legend_html + "</div>", unsafe_allow_html=True)
+                else: st.warning("Not enough data to render the wheel.")
 
             with scv_cols[1]:
-                st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
-                st.markdown("<p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;'>SCV Threat Matrix (Active Domains) (Weekly)</p>", unsafe_allow_html=True)
-                
+                st.markdown("<div style='margin-top: 20px;'></div><p style='color: #888; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;'>SCV Threat Matrix (Active Domains) (Weekly)</p>", unsafe_allow_html=True)
                 if active_cats:
                     for cat in active_cats:
-                        label = cat["name"].upper()
-                        value = cat["score"]
-                        color = cat["color"]
-                        
+                        label, value, color = cat["name"].upper(), cat["score"], cat["color"]
                         st.markdown(f"""
                         <div style="margin-bottom: 15px;">
                             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
@@ -2195,8 +2009,7 @@ else:
                             </div>
                         </div>
                         """, unsafe_allow_html=True)
-                else:
-                    st.info("No domain data available to calculate threat matrix.")
+                else: st.info("No domain data available to calculate threat matrix.")
             
             # ==========================================
             # AI GEOPOLITICAL SYNTHESIS
