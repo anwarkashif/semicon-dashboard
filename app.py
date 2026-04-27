@@ -1086,12 +1086,20 @@ def run_shockwave_engine():
                 
                 # Render the UI immediately from the frozen state
                 st.markdown(f"""
-                <div style="padding:20px; background:#0a0a0a; border:1px solid #333; border-radius:8px; margin-bottom:25px;">
-                    <h3 style="color:#ff4b4b; margin-bottom:5px; margin-top:0px; font-size:18px; text-transform:uppercase; letter-spacing:1px;">Global Shock Index</h3>
-                    <h1 style="color:white; margin:0; font-size: 3.5rem;">{global_index}<span style="font-size: 1.5rem; color: #555;">/100</span></h1>
-                    <p style="color:#aaa; font-size:15px; margin-top: 5px; margin-bottom:0px;">Status: <strong>{status}</strong></p>
-                </div>
-                """, unsafe_allow_html=True)
+<div style="margin-bottom:12px;">
+    <div style="display:flex; justify-content:space-between; margin-bottom: 4px;">
+        <span style="color:{color}; font-weight:bold; font-size:14px;">
+            {label} → {d1} ↔ {d2}
+        </span>
+        <span style="color:{color}; font-weight:bold; font-size:14px;">
+            Impact Score: {score}
+        </span>
+    </div>
+    <div style="width:100%; background:#1f2937; height:6px; border-radius:4px;">
+        <div style="width:{min(score,100)}%; background:{color}; height:6px; border-radius:4px; box-shadow: 0 0 8px {color}60;"></div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
                 for _, row in shock_df.iterrows():
                     label = row["Domain"]
@@ -1850,7 +1858,7 @@ else:
             # 🧠 CORRELATION ENGINE (WEEKLY INTELLIGENCE)
             # ==========================================
 
-            st.markdown("### 🧠 Correlation Intelligence Layer")
+            st.markdown("### 🧠 Correlation Intelligence Layer (Weekly)")
 
             try:
                 archive_mapping = get_brief_mappings('data')
