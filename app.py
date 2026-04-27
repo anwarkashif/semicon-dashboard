@@ -1782,6 +1782,104 @@ else:
             
             check_early_warnings()
 
+            # ==========================================
+            # 🧠 SIGNAL PRIORITIZATION ENGINE (WEEKLY)
+            # ==========================================
+            
+            st.markdown("<h3 style='color:#00ffaa;'>🧠 Strategic Signal Prioritization (Weekly)</h3>", unsafe_allow_html=True)
+            
+            signal_scores = {}
+            
+            # Actor weighting (intelligence-grade logic)
+            actor_weight = {
+                "us": 1.5,
+                "china": 1.5,
+                "taiwan": 1.4,
+                "eu": 1.2,
+                "india": 1.2,
+                "russia": 1.3,
+            }
+            
+            # Shock triggers
+            shock_keywords = ['sanction', 'ban', 'war', 'military', 'export control', 'embargo']
+            
+            try:
+                actions = dashboard_data.get('recent_actions', [])
+            
+                for act in actions:
+                    text = str(act).lower()
+            
+                    score = 1
+            
+                    # keyword intensity
+                    if any(k in text for k in ['war','military','conflict','strike']):
+                        score += 5
+                    if any(k in text for k in ['sanction','export','ban','restriction']):
+                        score += 4
+                    if any(k in text for k in ['investment','policy','deal']):
+                        score += 2
+            
+                    # actor weighting
+                    for actor, weight in actor_weight.items():
+                        if actor in text:
+                            score *= weight
+            
+                    # shock trigger boost
+                    if any(k in text for k in shock_keywords):
+                        score *= 1.5
+            
+                    label = act.get("Event", "Unknown Event")
+            
+                    signal_scores[label] = signal_scores.get(label, 0) + score
+            
+                # rank signals
+                ranked_signals = sorted(signal_scores.items(), key=lambda x: x[1], reverse=True)[:5]
+            
+                for sig, val in ranked_signals:
+                    st.markdown(f"""
+                    <div style="margin-bottom:10px;">
+                        <span style="color:#00ffaa; font-weight:bold;">{sig}</span><br>
+                        <span style="color:#aaa;">Signal Strength: {int(val)}</span>
+                    </div>
+                    """, unsafe_allow_html=True)
+            
+            except:
+                st.info("Not enough data for signal prioritization yet.")
+            
+            
+            # ==========================================
+            # 🧠 AUTONOMOUS ALERT GENERATOR
+            # ==========================================
+            
+            st.markdown("<h3 style='color:#ff4b4b;'>🚨 Top 3 Geopolitical Risks This Week</h3>", unsafe_allow_html=True)
+            
+            try:
+                top3 = ranked_signals[:3]
+            
+                for i, (sig, val) in enumerate(top3, 1):
+            
+                    risk_level = "Elevated"
+                    if val > 15:
+                        risk_level = "Critical"
+                    elif val > 10:
+                        risk_level = "High"
+            
+                    st.markdown(f"""
+                    <div style="
+                        border-left:4px solid #ff4b4b;
+                        padding:10px;
+                        margin-bottom:12px;
+                        background:rgba(255,75,75,0.05);
+                    ">
+                    <b>Risk #{i}: {sig}</b><br>
+                    Severity: <span style="color:#ff4b4b;">{risk_level}</span><br>
+                    Intelligence Score: {int(val)}
+                    </div>
+                    """, unsafe_allow_html=True)
+            
+            except:
+                st.info("No risks detected this week.")
+
             # Removed the extra <br> here to eliminate the dead space
             run_shockwave_engine()
             st.markdown("<br><hr><br>", unsafe_allow_html=True)
