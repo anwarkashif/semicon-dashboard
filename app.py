@@ -1782,16 +1782,19 @@ else:
 
                     correlations = []
                     domains = ["AI", "Export", "Military", "RareEarth"]
-                    for d1 in domains:
-                        for d2 in domains:
-                            if d1 != d2:
-                                delta1 = latest_d[d1] - prev_d[d1]
-                                delta2 = latest_d[d2] - prev_d[d2]
-                                base_score = abs(delta1 * delta2)
-                                weight = weights.get(d1, 1) * weights.get(d2, 1)
-                                score = int(base_score * weight)
-                                if shock_flag: score = int(score * 1.5)
-                                if score > 5: correlations.append((d1, d2, score))
+                    
+                    # FIX: Use index-based loop to prevent duplicate mirrored pairs (e.g., A<->B and B<->A)
+                    for i in range(len(domains)):
+                        for j in range(i + 1, len(domains)):
+                            d1 = domains[i]
+                            d2 = domains[j]
+                            delta1 = latest_d[d1] - prev_d[d1]
+                            delta2 = latest_d[d2] - prev_d[d2]
+                            base_score = abs(delta1 * delta2)
+                            weight = weights.get(d1, 1) * weights.get(d2, 1)
+                            score = int(base_score * weight)
+                            if shock_flag: score = int(score * 1.5)
+                            if score > 5: correlations.append((d1, d2, score))
 
                     correlations = sorted(correlations, key=lambda x: x[2], reverse=True)[:6]
                     if correlations:
@@ -1801,9 +1804,10 @@ else:
                             elif score > 15: color, label = "#f97316", "STRONG LINK"
                             else: color, label = "#facc15", "MODERATE LINK"
 
+                            # FIX: Added (Score: {score}) to the HTML span display
                             st.markdown(f"""
                             <div style="margin-bottom:12px;">
-                                <span style="color:{color}; font-weight:bold;">{label} → {d1} ↔ {d2}</span>
+                                <span style="color:{color}; font-weight:bold;">{label} (Score: {score}) → {d1} ↔ {d2}</span>
                                 <div style="width:100%; background:#1f2937; height:6px; border-radius:4px;">
                                     <div style="width:{min(score,100)}%; background:{color}; height:6px;"></div>
                                 </div>
@@ -1817,7 +1821,6 @@ else:
                 st.warning("Correlation engine error.")
                 
             st.markdown("---")
-
             # ==========================================
             # 🧠 SIGNAL PRIORITIZATION ENGINE & ALERTS (WEEKLY)
             # ==========================================
