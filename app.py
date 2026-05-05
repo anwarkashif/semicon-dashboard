@@ -1946,10 +1946,106 @@ else:
             st.markdown("---")
 
             # ==========================================
+            # 🧠 INTELLIGENCE BRIEFING ENGINE (WEEKLY)
+            # ==========================================
+            st.markdown("<h3 style='color:#ff4b4b; margin-top: 30px;'>🧠 Weekly Intelligence Assessment</h3>", unsafe_allow_html=True)
+
+            # Move scv_categories up here so the engine can calculate the scores
+            scv_categories = [
+                ("Global Foundry Market", text_section_1, "#00bfff"),
+                ("AI Chip Demand", text_section_2, "#ff00ff"),
+                ("Critical Minerals (REE)", text_section_3, "#00ff00"),
+                ("Export Controls", text_section_4, "#ff4b4b"),
+                ("Military & Outer Space", text_military, "#ffd166"),
+                ("India Developments", text_india, "#ff8c00"),
+                ("West Asia / Middle East", text_wa, "#9400d3")
+            ]
+
+            try:
+                # --- 1. SCV SCORE ---
+                scv_scores = []
+                for name, txt, _ in scv_categories:
+                    if len(txt.strip()) > 20:
+                        scv_scores.append(calculate_domain_threat(name, txt, dashboard_data))
+
+                avg_scv = int(sum(scv_scores)/len(scv_scores)) if scv_scores else 0
+
+                # --- 2. RSS SIGNAL INTENSITY (last 7 days proxy) ---
+                rss = parse_rss_txt_file()
+                signal_score = 0
+
+                for region in rss.values():
+                    for item in region:
+                        title = item.get("title", "").lower()
+
+                        if any(k in title for k in ["war","strike","military","crisis","blockade"]):
+                            signal_score += 3
+                        elif any(k in title for k in ["sanction","export","ban","restriction"]):
+                            signal_score += 2
+                        else:
+                            signal_score += 1
+
+                signal_score = min(100, signal_score)
+
+                # --- 3. COMPOSITE RISK ---
+                global_risk = int((avg_scv * 0.6) + (signal_score * 0.4))
+
+                if global_risk >= 75:
+                    status = "🔴 HIGH RISK"
+                elif global_risk >= 60:
+                    status = "🟠 ELEVATED"
+                else:
+                    status = "🟡 MODERATE"
+
+                # --- 4. TOP RISKS EXTRACTION ---
+                risks = []
+
+                if "taiwan" in text_section_2.lower():
+                    risks.append("Taiwan semiconductor dependency risk rising")
+                if "rare earth" in text_section_3.lower():
+                    risks.append("Rare earth supply chain instability")
+                if "export" in text_section_4.lower():
+                    risks.append("Export control fragmentation increasing")
+                if "military" in text_military.lower():
+                    risks.append("Military-linked supply chain risks emerging")
+
+                # fallback
+                if not risks:
+                    risks = ["No dominant single-point risk detected (distributed instability)"]
+
+                # --- OUTPUT ---
+                st.markdown(f"""
+                <div style="background:#0b0b0b; padding:20px; border-radius:10px; border:1px solid #222; margin-bottom: 25px;">
+                
+                <h4 style="color:#00bfff; margin-top:0px;">GLOBAL SEMICONDUCTOR RISK ASSESSMENT</h4>
+                
+                <p><b>Overall Risk Level:</b> {status} ({global_risk}/100)</p>
+                
+                <p><b>Top Strategic Risks:</b></p>
+                <ul style="color:#d1d5db;">
+                {''.join(f"<li>{r}</li>" for r in risks[:3])}
+                </ul>
+
+                <p><b>Key Insight:</b><br>
+                <span style="color:#aaa;">Supply chain vulnerabilities are increasingly interconnected across geopolitical domains.</span></p>
+
+                <p><b>Recommended Monitoring:</b><br>
+                <span style="color:#aaa;">• Taiwan Strait developments<br>
+                • Rare earth export policies<br>
+                • US–China technology controls</span>
+                </p>
+
+                </div>
+                """, unsafe_allow_html=True)
+
+            except Exception as e:
+                st.warning("Intelligence briefing engine could not generate this week.")
+
+
+            # ==========================================
             # 🌀 SCV CONCENTRIC WHEEL
             # ==========================================
-            st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 30px; margin-bottom: 10px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
-
+            st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 10px; margin-bottom: 10px;'>Semicon, Rare Earth and AI Geopolitical Outlook</h3>", unsafe_allow_html=True)
             scv_categories = [
                 ("Global Foundry Market", text_section_1, "#00bfff"),
                 ("AI Chip Demand", text_section_2, "#ff00ff"),

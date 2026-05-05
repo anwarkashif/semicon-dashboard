@@ -39,6 +39,9 @@ jobs:
         NEWS_API_KEY_4: ${{ secrets.NEWS_API_KEY_4 }}
       run: python fetch_brief.py
 
+    - name: Generate Strategic Outlook
+      run: python generate_outlook.py || echo "Strategic Outlook generator not found, skipping."
+
     - name: Commit and Push changes
       run: |
         git config --global user.name 'github-actions[bot]'
