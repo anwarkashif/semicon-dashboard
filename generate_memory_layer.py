@@ -7,6 +7,7 @@ DATA_DIR = "data"
 
 memory = {
     "date": datetime.utcnow().strftime("%Y-%m-%d"),
+    "timeframe": "Bi-Weekly Strategic Assessment",
     "persistent_patterns": [],
     "strategic_observation": ""
 }

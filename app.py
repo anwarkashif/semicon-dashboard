@@ -2056,12 +2056,16 @@ else:
                     memory = json.load(f)
             
                 st.markdown(
-                    "<h3 style='color:#ffd166;'>🧠 Geopolitical Memory Layer</h3>",
+                    "<h3 style='color:#ffd166; margin-bottom: 5px;'>🧠 Geopolitical Memory Layer</h3>",
                     unsafe_allow_html=True
                 )
+                
+                # NEW: Display the dynamic timeframe
+                timeframe_text = memory.get("timeframe", "Bi-Weekly Strategic Assessment")
+                st.markdown(f"<p style='color: #888; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-top: 0px; margin-bottom: 15px;'>{timeframe_text}</p>", unsafe_allow_html=True)
             
                 patterns_html = "".join(
-                    [f"<li>{p}</li>" for p in memory["persistent_patterns"]]
+                    [f"<li>{p}</li>" for p in memory.get("persistent_patterns", [])]
                 )
             
                 st.markdown(f"""
