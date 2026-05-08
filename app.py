@@ -1800,16 +1800,20 @@ else:
                     if correlations:
                         for c in correlations:
                             d1, d2, score = c
-                            if score > 25: color, label = "#ef4444", "CRITICAL LINK"
-                            elif score > 15: color, label = "#f97316", "STRONG LINK"
+                            
+                            if score > 200: color, label = "#ef4444", "CRITICAL LINK"
+                            elif score > 75: color, label = "#f97316", "STRONG LINK"
                             else: color, label = "#facc15", "MODERATE LINK"
 
-                            # FIX: Added (Score: {score}) to the HTML span display
+                            # NEW: Cap the visual width relative to a massive score like 500
+                            visual_width = min((score / 500) * 100, 100)
+
+                            # FIX: Added (Score: {score}) to the HTML span display and used visual_width
                             st.markdown(f"""
                             <div style="margin-bottom:12px;">
                                 <span style="color:{color}; font-weight:bold;">{label} (Score: {score}) → {d1} ↔ {d2}</span>
                                 <div style="width:100%; background:#1f2937; height:6px; border-radius:4px;">
-                                    <div style="width:{min(score,100)}%; background:{color}; height:6px;"></div>
+                                    <div style="width:{visual_width}%; background:{color}; height:6px; border-radius:4px;"></div>
                                 </div>
                             </div>
                             """, unsafe_allow_html=True)
