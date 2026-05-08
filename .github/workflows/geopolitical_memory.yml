@@ -1,0 +1,35 @@
+name: Geopolitical Memory Layer
+
+on:
+  schedule:
+    - cron: '45 18 14 * *'
+  workflow_dispatch:
+
+jobs:
+  build-memory-layer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install pandas
+
+      - name: Run Memory Engine
+        run: python generate_memory_layer.py
+
+      - name: Commit Updated Memory File
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+
+          git add data/geopolitical_memory.json
+          git commit -m "Update Geopolitical Memory Layer" || echo "No changes"
+
+          git push
