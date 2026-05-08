@@ -1805,8 +1805,8 @@ else:
                             elif score > 75: color, label = "#f97316", "STRONG LINK"
                             else: color, label = "#facc15", "MODERATE LINK"
 
-                            # NEW: Cap the visual width relative to a massive score like 500
-                            visual_width = min((score / 500) * 100, 100)
+                            # THE FIX: Changed the denominator from 500 to 1000 so the bars scale properly
+                            visual_width = min((score / 1000) * 100, 100)
 
                             # FIX: Added (Score: {score}) to the HTML span display and used visual_width
                             st.markdown(f"""
