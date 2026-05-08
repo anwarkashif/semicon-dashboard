@@ -2045,6 +2045,54 @@ else:
             except Exception as e:
                 st.warning("Intelligence briefing engine could not generate this week.")
 
+            # ==========================================
+            # 🧠 GEOPOLITICAL MEMORY LAYER
+            # ==========================================
+            memory_file = "data/geopolitical_memory.json"
+            
+            if os.path.exists(memory_file):
+            
+                with open(memory_file, "r") as f:
+                    memory = json.load(f)
+            
+                st.markdown(
+                    "<h3 style='color:#ffd166;'>🧠 Geopolitical Memory Layer</h3>",
+                    unsafe_allow_html=True
+                )
+            
+                patterns_html = "".join(
+                    [f"<li>{p}</li>" for p in memory["persistent_patterns"]]
+                )
+            
+                st.markdown(f"""
+                <div style="
+                    background:#0b0b0b;
+                    border:1px solid #333;
+                    padding:20px;
+                    border-radius:10px;
+                    margin-bottom:25px;
+                ">
+            
+                <h4 style="color:#00bfff;">
+                Persistent Strategic Patterns
+                </h4>
+            
+                <ul>
+                {patterns_html}
+                </ul>
+            
+                <p style="margin-top:15px;">
+                <b>Strategic Observation:</b><br>
+                {memory["strategic_observation"]}
+                </p>
+            
+                <p style="color:#888; font-size:12px;">
+                Last Updated: {memory["date"]}
+                </p>
+            
+                </div>
+                """, unsafe_allow_html=True)
+
 
             # ==========================================
             # 🌀 SCV CONCENTRIC WHEEL
