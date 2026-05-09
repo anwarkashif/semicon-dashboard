@@ -7,9 +7,17 @@ DATA_DIR = "data"
 
 now = datetime.utcnow()
 
-# Dynamically calculate the exact 14-day window ending today
-start_date = (now - timedelta(days=13)).strftime("%b %d, %Y")
-end_date = now.strftime("%b %d, %Y")
+# 1. Anchor to the most recent Friday (or today, if today is Friday)
+# In Python, Monday is 0, Friday is 4
+days_since_friday = (now.weekday() - 4) % 7
+latest_friday = now - timedelta(days=days_since_friday)
+
+# 2. Calculate exactly two weeks (14 days) prior to that Friday
+start_friday = latest_friday - timedelta(days=14)
+
+# 3. Format the dates
+start_date = start_friday.strftime("%b %d, %Y")
+end_date = latest_friday.strftime("%b %d, %Y")
 
 dynamic_timeframe = f"Bi-Weekly Strategic Assessment ({start_date} to {end_date})"
 
