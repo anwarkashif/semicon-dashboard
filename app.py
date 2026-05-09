@@ -1748,14 +1748,14 @@ else:
             st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 30px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
             check_early_warnings()
 
-            # =======================================================
-            # 🧠 DECISION SUPPORT ENGINE (Friday Weekly Intelligence)
-            # =======================================================
+            # ===========================
+            # 🧠 DECISION SUPPORT ENGINE 
+            # ===========================
             st.markdown("""
             <h3 style='color:#00ffaa;
             margin-top:25px;
             margin-bottom:15px;'>
-            🧠 Strategic Decision Support Engine
+            🧠 Strategic Decision Support Engine (Friday Weekly Intelligence)
             </h3>
             """, unsafe_allow_html=True)
             
