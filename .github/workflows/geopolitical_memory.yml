@@ -2,34 +2,52 @@ name: Geopolitical Memory Layer
 
 on:
   schedule:
-    - cron: '45 18 14,28 * *'
+    # Runs at 02:30 UTC (8:00 AM IST) every Friday
+    - cron: '30 2 * * 5'
   workflow_dispatch:
 
 jobs:
   build-memory-layer:
     runs-on: ubuntu-latest
-    
-    # --- THIS IS THE MISSING PIECE ---
     permissions:
       contents: write
-    # ---------------------------------
 
     steps:
+      - name: Gatekeeper (Enforce 2nd and 4th Friday)
+        id: gatekeeper
+        run: |
+          DAY=$(date +%d | sed 's/^0//')
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+             echo "EXECUTE_PIPELINE=true" >> $GITHUB_ENV
+             echo "Manual trigger detected. Proceeding."
+          elif { [ $DAY -ge 8 ] && [ $DAY -le 14 ]; } || { [ $DAY -ge 22 ] && [ $DAY -le 28 ]; }; then
+             echo "EXECUTE_PIPELINE=true" >> $GITHUB_ENV
+             echo "2nd or 4th Friday detected. Proceeding."
+          else
+             echo "EXECUTE_PIPELINE=false" >> $GITHUB_ENV
+             echo "Not the 2nd or 4th Friday. Pausing until next cycle."
+          fi
+
       - name: Checkout Repository
+        if: env.EXECUTE_PIPELINE == 'true'
         uses: actions/checkout@v4
 
       - name: Set Up Python
+        if: env.EXECUTE_PIPELINE == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install Dependencies
+        if: env.EXECUTE_PIPELINE == 'true'
         run: pip install pandas
 
       - name: Run Memory Engine
+        if: env.EXECUTE_PIPELINE == 'true'
         run: python generate_memory_layer.py
 
       - name: Commit Updated Memory File
+        if: env.EXECUTE_PIPELINE == 'true'
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
@@ -40,10 +58,12 @@ jobs:
           git push
 
       - name: Install Koyeb CLI
+        if: env.EXECUTE_PIPELINE == 'true'
         uses: koyeb-community/koyeb-actions@v2
         with:
           api_token: "${{ secrets.KOYEB_API_TOKEN }}"
           github_token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Trigger Koyeb Redeploy
+        if: env.EXECUTE_PIPELINE == 'true'
         run: koyeb service redeploy 83c34b02-6b6a-41fb-81c5-7543947250b4

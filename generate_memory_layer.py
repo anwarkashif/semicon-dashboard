@@ -1,13 +1,21 @@
 import os
 import json
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timedelta
 
 DATA_DIR = "data"
 
+now = datetime.utcnow()
+
+# Dynamically calculate the exact 14-day window ending today
+start_date = (now - timedelta(days=13)).strftime("%b %d, %Y")
+end_date = now.strftime("%b %d, %Y")
+
+dynamic_timeframe = f"Bi-Weekly Strategic Assessment ({start_date} to {end_date})"
+
 memory = {
-    "date": datetime.utcnow().strftime("%Y-%m-%d"),
-    "timeframe": "Bi-Weekly Strategic Assessment",
+    "date": now.strftime("%Y-%m-%d"),
+    "timeframe": dynamic_timeframe,
     "persistent_patterns": [],
     "strategic_observation": ""
 }
