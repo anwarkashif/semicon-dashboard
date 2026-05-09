@@ -1753,12 +1753,12 @@ else:
             # 🧠 DECISION SUPPORT ENGINE 
             # ===========================
             
-            # --- FIX: Reduced margin-top from 25px to 5px ---
+            # --- FIX: Updated title to reflect live continuous evaluation ---
             st.markdown("""
             <h3 style='color:#00ffaa;
             margin-top: 5px;
             margin-bottom: 15px;'>
-            🧠 Strategic Decision Support Engine (Friday Weekly Intelligence)
+            🧠 Strategic Decision Support Engine (Live Geopolitics-OSINT Evaluation and Intelligence)
             </h3>
             """, unsafe_allow_html=True)
             
