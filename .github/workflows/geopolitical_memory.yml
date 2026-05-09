@@ -33,3 +33,13 @@ jobs:
           git commit -m "Update Geopolitical Memory Layer" || echo "No changes"
 
           git push
+
+      # --- NEW: KOYEB AUTO-DEPLOY TRIGGER ---
+      - name: Install Koyeb CLI
+        uses: koyeb-community/koyeb-actions@v2
+        with:
+          api_token: "${{ secrets.KOYEB_API_TOKEN }}"
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Trigger Koyeb Redeploy
+        run: koyeb service redeploy 83c34b02-6b6a-41fb-81c5-7543947250b4
