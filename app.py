@@ -1801,14 +1801,20 @@ else:
                         for c in correlations:
                             d1, d2, score = c
                             
-                            if score > 200: color, label = "#ef4444", "CRITICAL LINK"
-                            elif score > 75: color, label = "#f97316", "STRONG LINK"
-                            else: color, label = "#facc15", "MODERATE LINK"
+                            # --- NEW COLOR CODING LOGIC ---
+                            if score > 750: 
+                                color, label = "#ef4444", "CRITICAL LINK"   # Red
+                            elif score > 500: 
+                                color, label = "#f97316", "STRONG LINK"     # Orange
+                            elif score > 200: 
+                                color, label = "#facc15", "MODERATE LINK"   # Yellow
+                            else: 
+                                color, label = "#22c55e", "NOTABLE LINK"    # Green
+                            # ------------------------------
 
-                            # THE FIX: Changed the denominator from 500 to 1000 so the bars scale properly
+                            # Scale properly out of 1000
                             visual_width = min((score / 1000) * 100, 100)
 
-                            # FIX: Added (Score: {score}) to the HTML span display and used visual_width
                             st.markdown(f"""
                             <div style="margin-bottom:12px;">
                                 <span style="color:{color}; font-weight:bold;">{label} (Score: {score}) → {d1} ↔ {d2}</span>
