@@ -1749,6 +1749,127 @@ else:
             check_early_warnings()
 
             # ==========================================
+            # 🧠 DECISION SUPPORT ENGINE
+            # ==========================================
+            st.markdown("""
+            <h3 style='color:#00ffaa;
+            margin-top:25px;
+            margin-bottom:15px;'>
+            🧠 Strategic Decision Support Engine
+            </h3>
+            """, unsafe_allow_html=True)
+            
+            decision_signals = []
+            
+            all_text = " ".join([
+                text_section_1,
+                text_section_2,
+                text_section_3,
+                text_section_4,
+                text_military,
+                text_india,
+                text_wa
+            ]).lower()
+            
+            # ==========================================
+            # STRATEGIC SIGNAL DETECTION
+            # ==========================================
+            if any(k in all_text for k in ["taiwan", "tsmc", "strait", "blockade"]):
+                decision_signals.append({
+                    "risk": "Taiwan Semiconductor Exposure",
+                    "impact": "Advanced node disruption risk rising",
+                    "recommendation": "Increase supply diversification monitoring",
+                    "priority": "🔴 HIGH"
+                })
+            
+            if any(k in all_text for k in ["rare earth", "ree", "critical minerals"]):
+                decision_signals.append({
+                    "risk": "Rare Earth Supply Chokepoint",
+                    "impact": "Potential manufacturing bottlenecks",
+                    "recommendation": "Track export quotas and strategic reserves",
+                    "priority": "🟠 ELEVATED"
+                })
+            
+            if any(k in all_text for k in ["export control", "sanction", "entity list"]):
+                decision_signals.append({
+                    "risk": "Export Control Escalation",
+                    "impact": "Cross-border semiconductor restrictions increasing",
+                    "recommendation": "Monitor US-China technology controls",
+                    "priority": "🔴 HIGH"
+                })
+            
+            if any(k in all_text for k in ["military", "missile", "war", "strike"]):
+                decision_signals.append({
+                    "risk": "Military Escalation Risk",
+                    "impact": "Regional supply chain volatility increasing",
+                    "recommendation": "Track logistics and maritime chokepoints",
+                    "priority": "🔴 HIGH"
+                })
+            
+            if any(k in all_text for k in ["ai", "gpu", "nvidia"]):
+                decision_signals.append({
+                    "risk": "AI Infrastructure Concentration",
+                    "impact": "AI compute dependency increasing globally",
+                    "recommendation": "Monitor hyperscaler chip demand pressure",
+                    "priority": "🟡 WATCH"
+                })
+            
+            # ==========================================
+            # RENDER ENGINE
+            # ==========================================
+            if decision_signals:
+                for signal in decision_signals:
+                    priority = signal["priority"]
+            
+                    if "HIGH" in priority:
+                        border_color = "#ef4444"
+                    elif "ELEVATED" in priority:
+                        border_color = "#f97316"
+                    else:
+                        border_color = "#facc15"
+            
+                    st.markdown(f"""
+                    <div style="
+                        background-color:#0a0a0a;
+                        border-left:5px solid {border_color};
+                        padding:16px;
+                        border-radius:10px;
+                        margin-bottom:15px;
+                        box-shadow:0 0 12px rgba(0,0,0,0.5);
+                    ">
+            
+                    <div style="
+                        font-size:18px;
+                        font-weight:bold;
+                        margin-bottom:10px;
+                        color:white;
+                    ">
+                    {priority} — {signal['risk']}
+                    </div>
+            
+                    <div style="
+                        color:#cbd5e1;
+                        margin-bottom:8px;
+                        font-size:14px;
+                    ">
+                    <b>Strategic Impact:</b> {signal['impact']}
+                    </div>
+            
+                    <div style="
+                        color:#93c5fd;
+                        font-size:14px;
+                    ">
+                    <b>Recommended Action:</b> {signal['recommendation']}
+                    </div>
+            
+                    </div>
+                    """, unsafe_allow_html=True)
+            else:
+                st.info("No major strategic decision signals detected this cycle.")
+            
+            st.markdown("---")
+
+            # ==========================================
             # 🌐 GEOPOLITICAL SHOCKWAVE ENGINE
             # ==========================================
             run_shockwave_engine()
