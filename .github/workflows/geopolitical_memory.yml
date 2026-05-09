@@ -8,6 +8,11 @@ on:
 jobs:
   build-memory-layer:
     runs-on: ubuntu-latest
+    
+    # --- THIS IS THE MISSING PIECE ---
+    permissions:
+      contents: write
+    # ---------------------------------
 
     steps:
       - name: Checkout Repository
@@ -34,7 +39,6 @@ jobs:
 
           git push
 
-      # --- NEW: KOYEB AUTO-DEPLOY TRIGGER ---
       - name: Install Koyeb CLI
         uses: koyeb-community/koyeb-actions@v2
         with:
