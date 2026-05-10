@@ -3010,15 +3010,15 @@ else:
                     st.markdown("---")
                     st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 15px;'>Verified Intelligence Sources</h3>", unsafe_allow_html=True)
                     
-                    # Auto-Categorization Engine for Sources
+                    # Auto-Categorization Engine for Sources (Alphabetical Order)
                     themes = {
-                        "Global Foundry Market": {"keywords": ["foundry", "tsmc", "samsung", "intel", "smic", "fab", "manufacturing", "yield", "semiconductor", "chipmaker"], "color": "#00bfff", "icon": "🏭", "sources": []},
                         "AI Chip Demand": {"keywords": ["ai", "nvidia", "gpu", "tpu", "compute", "openai", "data center", "server", "algorithm"], "color": "#ff00ff", "icon": "🧠", "sources": []},
                         "Critical Minerals (REE)": {"keywords": ["rare earth", "mineral", "lithium", "cobalt", "graphite", "gallium", "germanium", "mining", "supply chain"], "color": "#00ff00", "icon": "⛏️", "sources": []},
                         "Export Controls & Geopolitics": {"keywords": ["export", "control", "sanction", "ban", "tariff", "entity list", "bis", "geopolitics", "war", "tension", "blockade", "trade"], "color": "#ff4b4b", "icon": "⚖️", "sources": []},
+                        "General Strategic Intelligence": {"keywords": [], "color": "#888888", "icon": "📡", "sources": []}, # Fallback
+                        "Global Foundry Market": {"keywords": ["foundry", "tsmc", "samsung", "intel", "smic", "fab", "manufacturing", "yield", "semiconductor", "chipmaker"], "color": "#00bfff", "icon": "🏭", "sources": []},
                         "Military & Outer Space": {"keywords": ["military", "defense", "weapon", "missile", "space", "satellite", "darpa", "dod", "navy", "army", "air force", "pentagon"], "color": "#ffd166", "icon": "🚀", "sources": []},
-                        "Regional (India & West Asia)": {"keywords": ["india", "modi", "dholera", "tata", "west asia", "middle east", "uae", "saudi", "israel", "gulf", "cg power"], "color": "#ff8c00", "icon": "🌍", "sources": []},
-                        "General Strategic Intelligence": {"keywords": [], "color": "#888888", "icon": "📡", "sources": []} # Fallback
+                        "Regional (India & West Asia)": {"keywords": ["india", "modi", "dholera", "tata", "west asia", "middle east", "uae", "saudi", "israel", "gulf", "cg power"], "color": "#ff8c00", "icon": "🌍", "sources": []}
                     }
 
                     for src in sources_list:
@@ -3042,7 +3042,9 @@ else:
                     src_cols = st.columns(2)
                     col_idx = 0
                     
-                    for t_name, t_data in themes.items():
+                    # Dynamically sort themes alphabetically before rendering them
+                    for t_name in sorted(themes.keys()):
+                        t_data = themes[t_name]
                         if t_data["sources"]:
                             with src_cols[col_idx % 2]:
                                 theme_html = f"""
