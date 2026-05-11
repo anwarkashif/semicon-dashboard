@@ -10,3 +10,7 @@ feedparser==6.0.10
 Pillow==10.2.0
 pyarrow==14.0.1
 pydeck>=0.8.0
+folium
+streamlit-folium
+geopy
+feedparser
