@@ -87,6 +87,41 @@ def render_geospatial_intelligence(df_actions):
     ).add_to(m)
 
     # ==========================================
+    # STRATEGIC CONFLICT ZONES
+    # ==========================================
+    conflict_zones = [
+        {
+            "name": "Red Sea Disruption Zone",
+            "coords": [[12.0, 42.0], [16.0, 42.0], [16.0, 46.0], [12.0, 46.0]],
+            "color": "red"
+        },
+        {
+            "name": "South China Sea Strategic Friction Zone",
+            "coords": [[8.0, 109.0], [20.0, 109.0], [20.0, 121.0], [8.0, 121.0]],
+            "color": "orange"
+        },
+        {
+            "name": "Black Sea / Ukraine Theater",
+            "coords": [[42.0, 27.0], [47.0, 27.0], [47.0, 40.0], [42.0, 40.0]],
+            "color": "darkred"
+        },
+        {
+            "name": "Persian Gulf / Iran Tension Zone",
+            "coords": [[24.0, 48.0], [30.0, 48.0], [30.0, 57.0], [24.0, 57.0]],
+            "color": "crimson"
+        }
+    ]
+
+    for zone in conflict_zones:
+        folium.Polygon(
+            locations=zone["coords"],
+            color=zone["color"],
+            fill=True,
+            fill_opacity=0.15,
+            popup=zone["name"]
+        ).add_to(m)
+
+    # ==========================================
     # DYNAMIC DATA EXTRACTION ENGINE
     # ==========================================
     marker_cluster = MarkerCluster(name="Verified Strategic Events").add_to(m)
@@ -152,7 +187,7 @@ def render_geospatial_intelligence(df_actions):
     The Geospatial Intelligence Layer correlates:
     <ul style="color: #d1d5db; margin-top: 8px;">
         <li>Semiconductor manufacturing chokepoints</li>
-        <li>Maritime disruption zones and shipping telemetry</li>
+        <li>Maritime disruption zones, shipping telemetry, and strategic conflict polygons</li>
         <li>Rare earth concentration regions</li>
     </ul>
     This architecture utilizes WMS data streams to mirror modern Geopolitics-OSINT spatial analysis platforms.

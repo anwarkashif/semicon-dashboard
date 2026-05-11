@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit.components.v1 as components
 from utils.data_helpers import clean_dataframe, render_highlighted_text, extract_tag
 
-# --- NEW IMPORT ---
+# --- CORE GEOSPATIAL IMPORT ---
 from features.geospatial_features import render_geospatial_intelligence
 
 # Import the sub-features required specifically for the report body
