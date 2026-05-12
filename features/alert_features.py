@@ -3,7 +3,34 @@ import streamlit.components.v1 as components
 import os
 import time
 from datetime import datetime
-from utils.engines import get_active_live_alert, get_deployment_timestamp
+from utils.engines import get_active_live_alert
+
+# ==========================================
+# ROCK-SOLID CLOCK CACHE (FIX FOR REFRESH TIMERS)
+# ==========================================
+def get_deployment_timestamp():
+    """Anchors the clock to a persistent file so it survives all refreshes and log-ins."""
+    os.makedirs('data', exist_ok=True)
+    file_path = 'data/nominal_timer.txt'
+    
+    # Read the saved timestamp if it exists
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, 'r') as f:
+                return int(f.read().strip())
+        except Exception:
+            pass
+            
+    # If no file exists (first run), generate the time and save it
+    now_ms = int(time.time() * 1000)
+    try:
+        with open(file_path, 'w') as f:
+            f.write(str(now_ms))
+    except Exception:
+        pass
+        
+    return now_ms
+
 
 def check_early_warnings():
     try:
@@ -176,4 +203,4 @@ def check_early_warnings():
             components.html(html_code, height=130)
 
     except Exception as e:
-        pass  # <--- THIS CLOSES THE TRY BLOCK AT THE TOP OF THE FUNCTION
+        pass
