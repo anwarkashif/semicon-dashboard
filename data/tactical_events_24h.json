@@ -1,37 +1,44 @@
 [
     {
-        "Date": "2026-05-12",
-        "Actor": "United States",
-        "Action": "Conducts naval drills with key allies.",
-        "Location": "Philippine Sea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-12",
-        "Actor": "TSMC",
-        "Action": "Warns of advanced chip production delays.",
+        "Date": "2026-05-15",
+        "Actor": "United States, China",
+        "Action": "Discussing rare earths, semiconductor supply chain deal",
         "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-12",
-        "Actor": "NATO",
-        "Action": "Warns of escalating Russian border activity.",
-        "Location": "Baltic States",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-12",
-        "Actor": "Houthi Forces",
-        "Action": "Claims new attacks on commercial vessels.",
-        "Location": "Red Sea",
+        "Date": "2026-05-15",
+        "Actor": "Unknown/Regional Actors",
+        "Action": "New attacks target ships near Hormuz",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-12",
-        "Actor": "Philippines",
-        "Action": "Protests Chinese presence near Scarborough Shoal.",
-        "Location": "South China Sea",
+        "Date": "2026-05-15",
+        "Actor": "United States",
+        "Action": "Expands arsenal with cruise, hypersonic missiles",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-15",
+        "Actor": "Shipping Carriers",
+        "Action": "Container spot rates surge, adding surcharges",
+        "Location": "Global Trade Routes",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-15",
+        "Actor": "United States",
+        "Action": "Claims rolled back Iranian military investment",
+        "Location": "Middle East",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-15",
+        "Actor": "Hezbollah",
+        "Action": "Targeted Israeli troops in northern Israel",
+        "Location": "Northern Israel",
         "Risk": "HIGH"
     }
 ]

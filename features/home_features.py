@@ -185,20 +185,26 @@ def get_active_live_alert():
     return None
 
 def get_deployment_timestamp():
+    """Anchors the clock to a persistent file so it survives all refreshes and log-ins."""
     os.makedirs('data', exist_ok=True)
     file_path = 'data/nominal_timer.txt'
+    
+    # Read the saved timestamp if it exists
     if os.path.exists(file_path):
         try:
             with open(file_path, 'r') as f:
                 return int(f.read().strip())
         except Exception:
             pass
+            
+    # If no file exists (first run), generate the time and save it
     now_ms = int(time.time() * 1000)
     try:
         with open(file_path, 'w') as f:
             f.write(str(now_ms))
     except Exception:
         pass
+        
     return now_ms
 
 def check_early_warnings():
@@ -214,12 +220,16 @@ def check_early_warnings():
                     st.error(f"Failed to clear: {e}")
 
         alert = get_active_live_alert()
+        
         box_bg_color = "#000000"
         nominal_text_color = "#d1d5db"
+        
+        # Guarantee the fallback time never shifts during navigation or refresh
         fallback_time_ms = get_deployment_timestamp()
         
         if alert:   
             try:
+                # Safely check for timestamp without triggering datetime.now() execution
                 if 'timestamp' in alert:
                     dt = datetime.fromisoformat(alert['timestamp'].replace("Z", "+00:00"))
                     start_timestamp_ms = int(dt.timestamp() * 1000)
@@ -228,10 +238,12 @@ def check_early_warnings():
             except:
                 start_timestamp_ms = fallback_time_ms
             
+            # Pre-calculate the elapsed time in Python to eliminate the 00:00:00 visual flash
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
             initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
             
+            # --- RESPONSIVE DEFCON CSS FIX ---
             html_code = f"""
             <style>
                 body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -245,11 +257,11 @@ def check_early_warnings():
                     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
                     color: #ffffff;
                     min-height: 185px;
-                    max-height: 240px; 
+                    max-height: 240px; /* NEW: Forces the box to stop expanding and trigger the scrollbar */
                     height: auto;
                     box-sizing: border-box;
                     overflow-y: auto; 
-                    -webkit-overflow-scrolling: touch;
+                    -webkit-overflow-scrolling: touch; /* NEW: Forces smooth scroll support on Android/iOS non-Safari browsers */
                 }}
                 :fullscreen {{
                     background-color: rgba(20, 20, 20, 0.95);
@@ -266,6 +278,7 @@ def check_early_warnings():
                 @keyframes pulseBackground {{ 0% {{ background-position: 0% 50%; }} 50% {{ background-position: 100% 50%; }} 100% {{ background-position: 0% 50%; }} }}
                 @keyframes blinkText {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
                 
+                /* Responsive Flex Wrap Fix */
                 .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-top: 0px; margin-bottom: 8px; flex-wrap: wrap; gap: 10px; }}
                 .title {{ font-size: 1.17em; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin:0; display:flex; align-items:center; flex: 1 1 100%; }}
                 .timer-container {{ display: flex; align-items: center; flex: 1 1 100%; justify-content: flex-start; margin-bottom: 5px; }}
@@ -321,14 +334,17 @@ def check_early_warnings():
                 setInterval(update, 1000); update();
             </script>
             """
-            components.html(html_code, height=245) 
+            components.html(html_code, height=245) # <-- TIGHTENED HEIGHT 
             
         else:
             start_timestamp_ms = fallback_time_ms
+            
+            # Pre-calculate to eliminate 00:00:00 flash
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
             initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
 
+            # --- RESPONSIVE NOMINAL CSS FIX ---
             html_code = f"""
             <style>
                 body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -362,7 +378,7 @@ def check_early_warnings():
             components.html(html_code, height=130)
 
     except Exception as e:
-        pass
+        pass 
 
 
 # ==========================================
@@ -373,7 +389,8 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     # --- ENSURE DATA IS SORTED AND CLEAN ---
     if not df_actions.empty and 'Date' in df_actions.columns:
-        df_actions['Date'] = pd.to_datetime(df_actions['Date'], errors='coerce')
+        # Try mixed format parsing to catch variations in ingested date strings
+df_actions['Date'] = pd.to_datetime(df_actions['Date'], format='mixed', errors='coerce', utc=True)
         # Drop rows where Date conversion failed to avoid pulling NaT to the top
         df_actions = df_actions.dropna(subset=['Date'])
         df_actions = df_actions.sort_values(by='Date', ascending=False)
