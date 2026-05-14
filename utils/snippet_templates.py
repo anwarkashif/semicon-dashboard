@@ -1,0 +1,32 @@
+import datetime
+import json
+import os
+
+def get_friday_2_0_template():
+    live_file_path = 'data/snippet_2_0_live.json'
+    
+    if os.path.exists(live_file_path):
+        try:
+            with open(live_file_path, 'r') as f:
+                return json.load(f)
+        except Exception:
+            pass 
+
+    current_date = datetime.datetime.now().strftime("%d %B %Y")
+    
+    return {
+        "title": "Friday's Snippet 2.0: Strategic Intelligence Synthesis",
+        "date": current_date,
+        "classification": "UNCLASSIFIED",
+        "bluf": "**BLUF:** Immediate supply chain continuity is maintained, but emerging regulatory friction in DUV lithography exports and elevated maritime patrols in the South China Sea present a compound, systemic risk vector.\n\n**Impact:** This friction directly threatens Q3 and Q4 advanced semiconductor manufacturing yields, alters pricing models for fabless designers, and risks cascading delays across Western automotive sectors.\n\n**Evidence:**\n- 1.2% aggregate increase in maritime insurance premiums for tech cargo.\n- Sudden, unannounced customs audits targeting Tier-2 packaging resin suppliers in the EU.\n\n**Actionable Recommendation:**\n- Initiate immediate stress-testing of redundant logistics routes spanning India and West Asia.\n- Audit total corporate reliance on single-origin rare earth refining.",
+        "executive_summary": "Over the past 168 hours, comprehensive OSINT and geospatial indicators demonstrate a stabilization in immediate physical maritime chokepoints, allowing global logistics to return to a nominal operational flow. However, long-term strategic friction remains severely elevated. Geopolitical posturing has fundamentally shifted from overt physical blockade threats to highly targeted, legislative export controls aimed directly at legacy node infrastructure and raw material processing capabilities.\n\nWe assess that major foundries (TSMC, Intel, Samsung) have adequately priced in this localized turbulence, accelerating their geographical diversification efforts across the US, EU, and Japan. Despite this, the intricate web of Tier-2 and Tier-3 suppliers—specifically those providing highly specialized packaging resins, etching gases, and rare earth alloys—remains critically exposed to single-point-of-failure risks. As competing geopolitical blocs formalize their 'de-risking' strategies, the semiconductor supply chain is transitioning from a globally optimized, just-in-time network into a heavily balkanized, politically managed ecosystem.",
+        "threat_narrative": "State actors are increasingly leveraging chokepoint controls not as immediate economic weapons designed to halt production, but as strategic deterrents meant to dictate the pace of technological advancement. The current narrative extracted from state-aligned media and recent legislative drafts indicates a deliberate pivot toward domesticating raw rare earth processing. By restricting the export of processed Gallium and Germanium, adversary states are attempting to create artificial market scarcity, thereby applying intense pressure on Western fab expansion timelines.\n\nFurthermore, diplomatic back-channeling suggests an intent to utilize access to vast consumer tech markets as leverage against tighter EU and US export restrictions on advanced DUV and EUV lithography machines. This retaliatory cycle is moving beyond pure economics into the realm of national security posturing, where maintaining dominance in AI-compute capability is viewed as an existential imperative.",
+        "risk_assessment": "Markets have largely priced in the recent diplomatic posturing within the Indo-Pacific theatre. Investment focus has aggressively shifted toward monitoring capital expenditure announcements from major foundries, indicating a sustained, multi-billion-dollar push toward supply chain redundancy in the Americas and Europe. \n\nHowever, the risk of 'collateral friction' remains high. Non-aligned third-party nations operating in West Asia and Southeast Asia may face secondary sanctions or compliance audits if they are perceived as transshipment hubs for restricted technologies. Organizations reliant on these transit routes must account for unpredictable delays and a higher burden of proof regarding end-user certification.",
+        "tactical_indicators": [
+            "- **Supply Chain Disruption:** Low risk of immediate physical disruption; however, we strongly advise monitoring Q3 foundry utilization rates closely, as any dip may indicate upstream material shortages rather than a drop in consumer demand.",
+            "- **Geopolitical Volatility:** Moderate-to-high friction is expected surrounding upcoming multilateral trade summits in West Asia. Expect aggressive rhetoric aimed at decoupling supply chains, accompanied by unannounced regulatory audits.",
+            "- **Cyber and Intellectual Property:** An elevated risk profile currently exists for fabless design firms. Threat intelligence networks indicate persistent, low-and-slow probing efforts designed to exfiltrate proprietary chip architecture and tape-out schematics."
+        ],
+        "predictive_analysis": "Within the next 7 to 14 days, our models predict an escalation in retaliatory rhetoric regarding export controls from major Eastern powers. While secondary, cascading supply chain shocks are unlikely to manifest immediately on the factory floor, procurement analysts should anticipate that Tier-2 suppliers will begin aggressively hoarding crucial packaging substrates and rare earth compounds in anticipation of tighter quotas.\n\nWe project a 60% probability of new, restrictive export licenses being implemented by Western powers focusing on legacy chip manufacturing equipment. This will likely trigger immediate, reciprocal constraints on the export of raw semiconductor materials.",
+        "recommendations": "Stakeholders must expedite alternative sourcing protocols for legacy node (28nm+) components immediately. We advise initiating comprehensive vendor diversification audits targeting upstream chemical suppliers heavily reliant on single-source logistics flowing through West Asian and Indo-Pacific chokepoints.\n\nExecutive leadership should instruct legal and compliance teams to pre-emptively review all end-user certification processes to insulate against sudden changes in international sanction regimes. Finally, cybersecurity postures surrounding proprietary design data must be elevated to an active-defense footing."
+    }

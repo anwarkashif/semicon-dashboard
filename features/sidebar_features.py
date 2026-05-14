@@ -20,12 +20,34 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
     selected_actor = st.sidebar.selectbox("🔍 Highlight & Filter by Actor:", ["All"] + sorted(actor_list))
     st.sidebar.markdown("---")
 
-    st.sidebar.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>Advanced Threat Tools</p>", unsafe_allow_html=True)
-    advanced_tool = st.sidebar.radio(
-        "Launch Sandbox Module:", 
-        ["None (View Main Dashboard)", "Quantitative Threat Scoring", "Intelligence Interrogation (RAG)"], 
-        index=0
-    )
+    st.sidebar.title("SemicoN Access")
+
+    # Define the base strategic sequence
+    base_options = [
+        "Executive Home",
+        "Today's Snippet",
+        "Friday's Snippet 2.0",
+        "Weekly Intelligence Brief",
+        "Quantitative Threat Scoring",
+        "Intelligence Interrogation (RAG)",
+        "Trend Timelines",
+        "Archives"
+    ]
+
+    if st.session_state.get('role') == 'admin':
+        st.sidebar.info("Access Level: **Administrator**")
+        if st.sidebar.button("Logout"):
+            st.session_state['role'] = None
+            st.rerun()
+        # Admin gets everything, appended to the base sequence
+        view_options = base_options + ["Clean Archives", "Trash"]
+    else:
+        st.sidebar.info("Access Level: **Guest Viewer**")
+        st.sidebar.caption("*(System Access Restricted)*")
+        view_options = base_options
+
+    st.sidebar.markdown("---")
+    view_selection = st.sidebar.radio("Strategic Navigation", view_options)
     st.sidebar.markdown("---")
 
     st.sidebar.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>Regions Covered</p>", unsafe_allow_html=True)
@@ -62,22 +84,5 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         **Fabless:** Companies that design chips but outsource manufacturing (e.g., Nvidia, Apple, AMD).
         """)
 
-    st.sidebar.markdown("---")
-    st.sidebar.title("SemicoN Access")
-
-    if st.session_state.get('role') == 'admin':
-        st.sidebar.info("Access Level: **Administrator**")
-        if st.sidebar.button("Logout"):
-            st.session_state['role'] = None
-            st.rerun()
-        view_options = ["Weekly Intelligence Brief", "Trend Timelines", "Archives", "Clean Archives", "Trash"]
-    else:
-        st.sidebar.info("Access Level: **Guest Viewer**")
-        st.sidebar.caption("*(System Access Restricted)*")
-        view_options = ["Weekly Intelligence Brief", "Trend Timelines", "Archives"]
-
-    st.sidebar.markdown("---")
-    view_selection = st.sidebar.radio("Select View:", view_options)
-
-    # Return the user's selections back to app.py!
-    return selected_actor, advanced_tool, view_selection
+    # We now only return two variables instead of three
+    return selected_actor, view_selection

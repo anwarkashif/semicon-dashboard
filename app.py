@@ -16,6 +16,11 @@ from features.ui_features import inject_early_css, inject_global_theme, render_l
 # --- THE WEEKLY ORCHESTRATOR ---
 from features.weekly_orchestrator import render_full_weekly_brief
 
+# --- PHASE 4: INTELLIGENCE PRODUCT LAYER IMPORTS ---
+from features.home_features import render_executive_home
+from features.snippet_features import render_daily_snippet
+from features.snippet_orchestrator import handle_snippet_logic
+
 # ==========================================
 # 1. PAGE CONFIGURATION
 # ==========================================
@@ -30,7 +35,7 @@ if 'role' not in st.session_state:
     st.session_state['role'] = None
 
 # ==========================================
-# 2. EARLY CSS ROUTING
+# 2. EARLY CSS ROUTING & THEME
 # ==========================================
 inject_early_css(st.session_state['role'])
 
@@ -47,6 +52,10 @@ if MAINTENANCE_MODE:
         except: pass
         st.warning("⚠️ **Warning: Work in Progress.** Please wait, the Dashboard will be live soon.")
     st.stop()
+
+# --- PHASE 4: LOCAL HOST TEST MODE ---
+# Set to False when deploying the final live version
+SNIPPET_TEST_MODE = True
 
 os.makedirs('data', exist_ok=True)
 os.makedirs('trash', exist_ok=True)
@@ -78,8 +87,8 @@ def load_data(filepath):
     if not filepath: return None
     with open(filepath, 'r') as f: return json.load(f)
 
-# --- NEW: 24-HOUR LIVE DATA LOADER ---
-@st.cache_data(ttl=60) # Fast 60-second refresh for live tactical feed
+# --- 24-HOUR LIVE DATA LOADER ---
+@st.cache_data(ttl=60)
 def load_live_tactical_data():
     filepath = 'data/tactical_events_24h.json'
     if os.path.exists(filepath):
@@ -121,13 +130,14 @@ if st.session_state['role'] is None:
 else:
     render_splash_screen()
     render_ticker_tape()
+    
+    if SNIPPET_TEST_MODE:
+        st.sidebar.info("🛠️ **Snippet Test Mode Active**")
 
     # Extract Weekly Actions as the baseline
     df_actions_weekly = clean_dataframe(pd.DataFrame(dashboard_data.get('recent_actions', []) if dashboard_data else []))
 
-    # --- NEW: 24H TACTICAL DATA OVERRIDE ---
-    # If the 24h cron job file exists, it hijacks the data pipe.
-    # The map and timeline will autonomously update to show live data.
+    # 24H TACTICAL DATA OVERRIDE
     if live_tactical_data is not None:
         if isinstance(live_tactical_data, list):
             df_actions = clean_dataframe(pd.DataFrame(live_tactical_data))
@@ -136,32 +146,42 @@ else:
     else:
         df_actions = df_actions_weekly
 
-    selected_actor, advanced_tool, view_selection = render_sidebar(
+    # Fetch Sidebar selections (Notice we only pull 2 variables now!)
+    selected_actor, view_selection = render_sidebar(
         dashboard_data, df_actions, raw_text, text_india, text_wa
     )
 
-    if advanced_tool == "Quantitative Threat Scoring":
-        render_threat_scoring()
-        st.stop() 
-        
-    elif advanced_tool == "Intelligence Interrogation (RAG)":
-        render_rag_interrogation(client, model_name)
-        st.stop()
+    # ==========================================
+    # 7. UNIFIED ROUTING LOGIC
+    # ==========================================
+    
+    if view_selection == "Executive Home":
+        render_executive_home(dashboard_data, df_actions, live_tactical_data, MAPBOX_PUBLIC_TOKEN)
 
-    if view_selection == "Weekly Intelligence Brief":
+    elif view_selection == "Today's Snippet":
+        render_daily_snippet(df_actions)
+
+    elif view_selection == "Friday's Snippet 2.0":
+        handle_snippet_logic(mode="friday")
+        
+    elif view_selection == "Weekly Intelligence Brief":
         is_editing = st.session_state.get('vetting_toggle', False)
             
         if is_editing and st.session_state.get('role') == 'admin':
             render_vetting_editor(dashboard_data, latest_filepath)
-
         else:
-            # --- THE WEEKLY ROUTER ---
             render_full_weekly_brief(
                 dashboard_data, latest_filepath, brief_date, text_summary, 
                 text_section_1, text_section_2, text_section_3, text_section_4, 
                 text_military, text_section_5, text_india, text_wa, text_final, text_ews,
                 selected_actor, df_actions, MAPBOX_PUBLIC_TOKEN
             )
+            
+    elif view_selection == "Quantitative Threat Scoring":
+        render_threat_scoring()
+        
+    elif view_selection == "Intelligence Interrogation (RAG)":
+        render_rag_interrogation(client, model_name)
 
     elif view_selection == "Trend Timelines":
         render_trend_timelines()
