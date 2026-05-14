@@ -390,7 +390,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     # --- ENSURE DATA IS SORTED AND CLEAN ---
     if not df_actions.empty and 'Date' in df_actions.columns:
         # Try mixed format parsing to catch variations in ingested date strings
-df_actions['Date'] = pd.to_datetime(df_actions['Date'], format='mixed', errors='coerce', utc=True)
+        df_actions['Date'] = pd.to_datetime(df_actions['Date'], format='mixed', errors='coerce', utc=True)
         # Drop rows where Date conversion failed to avoid pulling NaT to the top
         df_actions = df_actions.dropna(subset=['Date'])
         df_actions = df_actions.sort_values(by='Date', ascending=False)
