@@ -10,6 +10,9 @@ from datetime import datetime, timezone
 import streamlit.components.v1 as components
 from geopy.geocoders import Nominatim
 
+# --- Newly added import for Decision Support Engine ---
+from features.tactical_features import render_decision_support_engine
+
 # ==========================================
 # 1. CSS INJECTION (Self-Contained)
 # ==========================================
@@ -411,6 +414,28 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     check_early_warnings()
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
     
+    # ==========================================
+    # 2.5 🧠 STRATEGIC DECISION SUPPORT ENGINE
+    # ==========================================
+    st.markdown("### 🧠 Strategic Decision Support Engine")
+    st.caption("Live Geopolitics-OSINT Evaluation and Intelligence")
+    
+    # Aggregating textual data context from the home page state
+    all_text_parts = []
+    live_summary = dashboard_data.get('executive_summary', None) if dashboard_data else None
+    
+    if live_summary:
+        all_text_parts.append(live_summary)
+        
+    if not df_actions.empty and 'Headline' in df_actions.columns:
+        # Include recent headline context for the engine to evaluate
+        all_text_parts.extend(df_actions['Headline'].dropna().astype(str).tolist())
+        
+    all_text = " ".join(all_text_parts).lower()
+    
+    render_decision_support_engine(all_text)
+    st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
+
     # 3. KPI CARDS
     st.markdown("### 📊 Global Threat Posture")
     col1, col2, col3, col4 = st.columns(4)
@@ -480,10 +505,51 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
             
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # 7. LIVE TACTICAL THEATRE
-    st.markdown("### 📡 Live Tactical Theatre")
-    st.caption("Auto-resolving global telemetry vectors in real-time.")
+    # ==========================================
+    # 7. 🌍 STRATEGIC GEOSPATIAL INTELLIGENCE LAYER
+    # ==========================================
+    st.markdown("### 🌍 Strategic Geospatial Intelligence Layer")
+    st.caption("Live global telemetry mapping with active 13-sector radar scanning.")
     
+    # --- RADAR SWEEP UI COMPONENT ---
+    regions = [
+        "North America", "Latin America", "Africa", "Oceanic",
+        "East Europe", "Central Europe", "Western Europe", "West Asia",
+        "South Asia", "East Asia and Far East Asia", "South East Asia",
+        "Central Asia", "Eurasia"
+    ]
+    regions_js = json.dumps(regions)
+
+    sweep_html = f"""
+    <style>
+        body {{ font-family: system-ui, sans-serif; margin: 0; background: transparent; }}
+        .radar-container {{
+            background-color: rgba(17, 24, 39, 0.8); border: 1px solid #1f2937;
+            border-left: 4px solid #10b981; padding: 12px 18px; border-radius: 6px;
+            display: flex; align-items: center; justify-content: space-between;
+            color: #d1d5db; margin-bottom: 15px;
+        }}
+        .radar-text {{ font-size: 13px; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }}
+        .radar-text::before {{ content: ''; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #10b981; box-shadow: 0 0 8px #10b981; animation: blink 1s infinite; }}
+        .radar-region {{ color: #10b981; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }}
+        @keyframes blink {{ 0%, 100% {{opacity: 1;}} 50% {{opacity: 0.4;}} }}
+    </style>
+    <div class="radar-container">
+        <div class="radar-text">Live Sector Scan Active</div>
+        <div>RESOLVING TELEMETRY: <span id="radar-region" class="radar-region">INITIALIZING...</span></div>
+    </div>
+    <script>
+        const regions = {regions_js};
+        let index = 0;
+        setInterval(() => {{
+            document.getElementById('radar-region').innerText = regions[index];
+            index = (index + 1) % regions.length;
+        }}, 1000);
+    </script>
+    """
+    components.html(sweep_html, height=70)
+    
+    # --- PYDECK MAP RENDER ---
     map_data = []
     if not df_actions.empty:
         geo_col = 'Location' if 'Location' in df_actions.columns else 'Actor'
@@ -555,7 +621,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     # 9. STRATEGIC ANALYSIS
     st.markdown("### 📝 Strategic Command Analysis (12H Briefing)")
-    live_summary = dashboard_data.get('executive_summary', None) if dashboard_data else None
     
     if live_summary:
         st.info(live_summary)

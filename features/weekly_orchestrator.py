@@ -11,7 +11,7 @@ from features.weekly_features import (
     render_scv_concentric_wheel,
     render_ai_geopolitical_synthesis_weekly
 )
-from features.tactical_features import render_decision_support_engine
+# from features.tactical_features import render_decision_support_engine   <-- Commented out
 from features.alert_features import check_early_warnings
 from features.report_body_features import render_weekly_report_body
 from features.export_features import render_document_controls
@@ -30,42 +30,44 @@ def render_full_weekly_brief(
     check_early_warnings()
 
     # ===========================
-    # 🧠 DECISION SUPPORT ENGINE 
+    # 🧠 DECISION SUPPORT ENGINE (REMOVED/COMMENTED OUT)
     # ===========================
-    all_text = " ".join([
-        text_section_1, text_section_2, text_section_3,
-        text_section_4, text_military, text_india, text_wa
-    ]).lower()
-    
-    render_decision_support_engine(all_text)
+    # all_text = " ".join([
+    #     text_section_1, text_section_2, text_section_3,
+    #     text_section_4, text_military, text_india, text_wa
+    # ]).lower()
+    # 
+    # render_decision_support_engine(all_text)
 
     # ==========================================
     # 🌐 GEOPOLITICAL SHOCKWAVE ENGINE
     # ==========================================
-    run_shockwave_engine()
-    st.markdown("---")
+    # --- HIDING 24-HOUR FEATURES FOR NOW (Migrated to Today's Snippet) ---
+    # run_shockwave_engine()
+    # st.markdown("---")
 
     # ==========================================
     # 🧠 CORRELATION ENGINE (WEEKLY INTELLIGENCE)
     # ==========================================
-    render_correlation_engine_weekly()
-    st.markdown("---")
+    # --- HIDING WEEKLY FEATURES FOR NOW (Migrated to Friday's Snippet) ---
+    # render_correlation_engine_weekly()
+    # st.markdown("---")
     
     # ==========================================
     # 🧠 SIGNAL PRIORITIZATION ENGINE & ALERTS (WEEKLY)
     # ==========================================
-    render_signal_prioritization_weekly(dashboard_data)
-    st.markdown("---")
+    # render_signal_prioritization_weekly(dashboard_data)
+    # st.markdown("---")
 
     # ==========================================
     # 🧠 INTELLIGENCE BRIEFING ENGINE (WEEKLY)
     # ==========================================
-    render_intelligence_assessment_weekly(dashboard_data, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa)
+    # render_intelligence_assessment_weekly(dashboard_data, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa)
 
     # ==========================================
     # 🧠 GEOPOLITICAL MEMORY LAYER
     # ==========================================
-    render_geopolitical_memory_layer()
+    # render_geopolitical_memory_layer()
 
     # ==========================================
     # 🌀 SCV CONCENTRIC WHEEL

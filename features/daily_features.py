@@ -349,9 +349,12 @@ def render_24h_live_analytics(dashboard_data, text_sections):
     st.markdown("---")
     st.markdown("<h3 style='color:#ff4b4b; font-size:22px; margin-top: 20px; margin-bottom: 10px;'>Advanced Threat Analytics</h3>", unsafe_allow_html=True)
 
-    adv_cols = st.columns([1, 1])
+    # ==========================================
+    # ROW 1: Supply Chain & Scenario Simulator
+    # ==========================================
+    r1_cols = st.columns([1, 1])
 
-    with adv_cols[0]:
+    with r1_cols[0]:
         st.markdown("##### 🛰️ Supply Chain Disruption Monitor – In the Past 24-Hours")
         tsmc_risk = "🔴 Critical" if global_risk > 70 else "🟠 Elevated Risk"
         asml_risk = "🟠 Elevated Risk" if global_risk > 60 else "🟡 Watch"
@@ -367,7 +370,44 @@ def render_24h_live_analytics(dashboard_data, text_sections):
         </div>
         """, unsafe_allow_html=True)
 
-        st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
+    with r1_cols[1]:
+        st.markdown("##### 🧠 Strategic Scenario Simulator")
+        scenario = st.selectbox("Select Geopolitical Trigger:",
+            ["Taiwan Strait Naval Blockade",
+             "China Rare Earth Export Ban",
+             "US Revokes ASML Servicing Licenses",
+             "Middle East Logistics Chokepoint (Red Sea)"]
+        )
+
+        if scenario == "Taiwan Strait Naval Blockade":
+            impact = "Chip Supply: -37%<br>AI Hardware Cost: +22%<br>US-China Tension: Extreme"
+            color = "#ff4b4b"
+        elif scenario == "China Rare Earth Export Ban":
+            impact = "REE Supply: -60%<br>EV/Defense Mfg: Critical Delay<br>Global Tension: High"
+            color = "#ff8c00"
+        elif scenario == "US Revokes ASML Servicing Licenses":
+            impact = "China Legacy Chip Cap: -40%<br>ASML Rev: -15%<br>Tech War Tension: High"
+            color = "#ff00ff"
+        else:
+            impact = "Shipping Costs: +300%<br>Logistics Delay: +14 Days<br>Market Tension: Elevated"
+            color = "#ffd166"
+
+        st.markdown(f"""
+        <div style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid {color}; padding: 15px; border-radius: 8px; margin-top: 10px; margin-bottom: 25px;">
+            <h6 style="color: {color}; margin-top: 0; font-size: 14px;">Projected Scenario Effects:</h6>
+            <p style="font-family: monospace; color: #ddd; margin-bottom: 0; font-size: 13px; line-height: 1.6;">{impact}</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # --- DIVIDER LINE ---
+    st.markdown("<hr style='border: 1px solid #333; margin: 20px 0;'>", unsafe_allow_html=True)
+
+    # ==========================================
+    # ROW 2: Threat Trend Forecast & Threat Radar
+    # ==========================================
+    r2_cols = st.columns([1, 1])
+
+    with r2_cols[0]:
         st.markdown("##### 📉 Threat Trend Forecast – In the Past 24-Hours (Machine Learning Projection)")
         
         import numpy as np
@@ -412,37 +452,7 @@ def render_24h_live_analytics(dashboard_data, text_sections):
                 </div>
                 """, unsafe_allow_html=True)
 
-    with adv_cols[1]:
-        # --- STRATEGIC SCENARIO SIMULATOR (Restored) ---
-        st.markdown("##### 🧠 Strategic Scenario Simulator")
-        scenario = st.selectbox("Select Geopolitical Trigger:",
-            ["Taiwan Strait Naval Blockade",
-             "China Rare Earth Export Ban",
-             "US Revokes ASML Servicing Licenses",
-             "Middle East Logistics Chokepoint (Red Sea)"]
-        )
-
-        if scenario == "Taiwan Strait Naval Blockade":
-            impact = "Chip Supply: -37%<br>AI Hardware Cost: +22%<br>US-China Tension: Extreme"
-            color = "#ff4b4b"
-        elif scenario == "China Rare Earth Export Ban":
-            impact = "REE Supply: -60%<br>EV/Defense Mfg: Critical Delay<br>Global Tension: High"
-            color = "#ff8c00"
-        elif scenario == "US Revokes ASML Servicing Licenses":
-            impact = "China Legacy Chip Cap: -40%<br>ASML Rev: -15%<br>Tech War Tension: High"
-            color = "#ff00ff"
-        else:
-            impact = "Shipping Costs: +300%<br>Logistics Delay: +14 Days<br>Market Tension: Elevated"
-            color = "#ffd166"
-
-        st.markdown(f"""
-        <div style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid {color}; padding: 15px; border-radius: 8px; margin-top: 10px; margin-bottom: 25px;">
-            <h6 style="color: {color}; margin-top: 0; font-size: 14px;">Projected Scenario Effects:</h6>
-            <p style="font-family: monospace; color: #ddd; margin-bottom: 0; font-size: 13px; line-height: 1.6;">{impact}</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
+    with r2_cols[1]:
         st.markdown("##### 📊 Strategic Threat Radar – In the Past 24-Hours (Heuristic Math Method)")
         live_volatility = kinetic_volatility + economic_volatility + supply_volatility
         radar_data = [
@@ -474,8 +484,15 @@ def render_24h_live_analytics(dashboard_data, text_sections):
         )
         st.plotly_chart(radar_fig, use_container_width=True)
 
-    sum_cols = st.columns([1.5, 1])
-    with sum_cols[0]:
+    # --- DIVIDER LINE ---
+    st.markdown("<hr style='border: 1px solid #333; margin: 20px 0;'>", unsafe_allow_html=True)
+
+    # ==========================================
+    # ROW 3: AI Intelligence Summary & Signal Detection
+    # ==========================================
+    r3_cols = st.columns([1.5, 1])
+    
+    with r3_cols[0]:
         st.markdown("##### AI Intelligence Summary (Top Radar Hits) – In the Past 24-Hours")
         if live_rss_data:
             all_news = []
@@ -494,7 +511,7 @@ def render_24h_live_analytics(dashboard_data, text_sections):
             summary_html += "</div>"
             st.markdown(summary_html, unsafe_allow_html=True)
     
-    with sum_cols[1]:
+    with r3_cols[1]:
         st.markdown("""
         <div style="margin-bottom: 15px;">
             <div style="font-size: 18px; font-weight: 600; margin-bottom: 2px; color: white;">

@@ -3,7 +3,10 @@ import pandas as pd
 from datetime import datetime, timedelta, timezone
 from utils.snippet_engine import get_fallback_snippet
 
-def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_data=None):
+# --- ADDED: Import ALL 24H Engines ---
+from features.daily_features import render_24h_live_analytics, run_shockwave_engine
+
+def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_data=None, text_sections=None):
     st.markdown("""
     <div style='text-align: center; margin-top: 10px; margin-bottom: 20px;'>
         <h1 style='color: #00bfff; font-size: 2.2em; letter-spacing: 1px;'>📝 Today's Snippet</h1>
@@ -15,11 +18,7 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
     # In a live environment, you would call synthesize_12h_snippet here. 
     intel_data = get_fallback_snippet() 
 
-    # 1. NEW BLUF STRUCTURE
-    st.markdown("### 🎯 BLUF (Bottom Line Up Front)")
-    st.warning(intel_data.get('bluf', 'Pending AI Generation...'))
-
-    # 2. EVIDENCE (UPDATED WITH 12-HOUR FILTER)
+    # 1. EVIDENCE (UPDATED WITH 12-HOUR FILTER)
     st.markdown("### 📊 Raw Tactical Feeds (12H)")
     if not df_actions.empty:
         # 1. Ensure Date column is standard timezone-aware datetime
@@ -54,7 +53,24 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # 3. ANALYSIS
+    # ==========================================
+    # --- NEW: ALL 24-HOUR FEATURES INJECTED HERE ---
+    # ==========================================
+    
+    # 2. Geopolitical Shockwave Engine
+    run_shockwave_engine()
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # 3. Advanced Threat Analytics (Includes the 24H Risk Index & Breaking Alert)
+    if dashboard_data is not None and text_sections is not None:
+        render_24h_live_analytics(dashboard_data, text_sections)
+        st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
+    # ==========================================
+
+    # 4. ANALYSIS (BLUF AND EXECUTIVE SUMMARY TOGETHER)
+    st.markdown("### 🎯 BLUF (Bottom Line Up Front)")
+    st.warning(intel_data.get('bluf', 'Pending AI Generation...'))
+
     st.markdown("### 📋 Executive Summary")
     st.info(intel_data.get('executive_summary', 'Pending AI Generation...'))
     

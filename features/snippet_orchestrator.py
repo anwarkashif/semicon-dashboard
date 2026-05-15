@@ -2,13 +2,22 @@ import streamlit as st
 from utils.snippet_templates import get_friday_2_0_template
 from utils.snippet_docx_generator import generate_snippet_2_0_docx
 
-def handle_snippet_logic(mode="friday"):
+# --- ADDED: Import Weekly Features ---
+from features.weekly_features import (
+    render_correlation_engine_weekly,
+    render_signal_prioritization_weekly,
+    render_intelligence_assessment_weekly,
+    render_geopolitical_memory_layer,
+    render_event_correlation_and_timeline_weekly
+)
+
+def handle_snippet_logic(mode="friday", dashboard_data=None, text_summary="", text_section_1="", text_section_2="", text_section_3="", text_section_4="", text_military="", text_india="", text_wa="", text_ews="", selected_actor=None, df_actions=None):
     if mode == "friday":
-        render_friday_snippet_2_0()
+        render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa, text_ews, selected_actor, df_actions)
     else:
         st.error("Unknown Snippet Mode Requested.")
 
-def render_friday_snippet_2_0():
+def render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa, text_ews, selected_actor, df_actions):
     intel_data = get_friday_2_0_template()
     
     st.markdown(f"""
@@ -20,6 +29,23 @@ def render_friday_snippet_2_0():
     </div>
     """, unsafe_allow_html=True)
     
+    # ==========================================
+    # --- NEW: WEEKLY FEATURES INJECTED HERE ---
+    # ==========================================
+    if dashboard_data is not None:
+        render_correlation_engine_weekly()
+        st.markdown("---")
+        render_signal_prioritization_weekly(dashboard_data)
+        st.markdown("---")
+        render_intelligence_assessment_weekly(dashboard_data, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa)
+        st.markdown("---")
+        render_geopolitical_memory_layer()
+        st.markdown("---")
+        
+    if df_actions is not None and not df_actions.empty:
+        render_event_correlation_and_timeline_weekly(df_actions)
+        st.markdown("---")
+
     # 1. NEW BLUF STRUCTURE
     st.markdown("### 🎯 BLUF (Bottom Line Up Front)")
     st.warning(intel_data.get('bluf', 'Pending generation...'))
@@ -58,10 +84,13 @@ def render_friday_snippet_2_0():
     st.markdown("<hr style='border: 1px solid #333; margin-top: 30px;'>", unsafe_allow_html=True)
     colA, colB = st.columns([3, 1])
     with colA:
-        st.caption("This intelligence product integrates OSINT feeds, weekly geopolitical briefs, and autonomous risk assessments.")
+        st.caption("This intelligence product integrates Geopolitics-OSINT feeds, weekly geopolitical briefs, and autonomous risk assessments.")
     with colB:
-        try:
-            docx_buffer = generate_snippet_2_0_docx(intel_data)
-            st.download_button(label="📥 Download Friday's Snippet (DOCX)", data=docx_buffer, file_name=f"Fridays_Snippet.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", type="primary", use_container_width=True)
-        except Exception as e:
-            st.button("📥 Download Unavailable", disabled=True)
+        if st.session_state.get('role') == 'admin':
+            try:
+                docx_buffer = generate_snippet_2_0_docx(intel_data)
+                st.download_button(label="📥 Download Friday's Snippet (DOCX)", data=docx_buffer, file_name=f"Fridays_Snippet.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", type="primary", use_container_width=True)
+            except Exception as e:
+                st.button("📥 Download Unavailable", disabled=True)
+        else:
+            st.button("📥 Admin Only Download", disabled=True)

@@ -146,7 +146,7 @@ else:
     else:
         df_actions = df_actions_weekly
 
-    # Fetch Sidebar selections (Notice we only pull 2 variables now!)
+    # Fetch Sidebar selections
     selected_actor, view_selection = render_sidebar(
         dashboard_data, df_actions, raw_text, text_india, text_wa
     )
@@ -159,10 +159,28 @@ else:
         render_executive_home(dashboard_data, df_actions, live_tactical_data, MAPBOX_PUBLIC_TOKEN)
 
     elif view_selection == "Today's Snippet":
-        render_daily_snippet(df_actions)
+        text_sections = [
+            text_summary, text_section_1, text_section_2, text_section_3, 
+            text_section_4, text_military, text_india, text_wa, text_final
+        ]
+        render_daily_snippet(df_actions, client=client, model_name=model_name, dashboard_data=dashboard_data, text_sections=text_sections)
 
     elif view_selection == "Friday's Snippet 2.0":
-        handle_snippet_logic(mode="friday")
+        handle_snippet_logic(
+            mode="friday",
+            dashboard_data=dashboard_data,
+            text_summary=text_summary,
+            text_section_1=text_section_1,
+            text_section_2=text_section_2,
+            text_section_3=text_section_3,
+            text_section_4=text_section_4,
+            text_military=text_military,
+            text_india=text_india,
+            text_wa=text_wa,
+            text_ews=text_ews,
+            selected_actor=selected_actor,
+            df_actions=df_actions
+        )
         
     elif view_selection == "Weekly Intelligence Brief":
         is_editing = st.session_state.get('vetting_toggle', False)

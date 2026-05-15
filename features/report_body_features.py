@@ -122,7 +122,9 @@ def render_weekly_report_body(dashboard_data, selected_actor, df_actions, MAPBOX
             display_actions = df_actions
             
         st.table(display_actions.set_index(display_actions.columns[0]))
-        render_event_correlation_and_timeline_weekly(display_actions)
+        
+        # --- HIDDEN FOR NOW: Migrated to Friday's Snippet ---
+        # render_event_correlation_and_timeline_weekly(display_actions)
 
     st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Strategic Conclusion</h3>", unsafe_allow_html=True)
     if text_final: render_highlighted_text(text_final, selected_actor)
@@ -142,16 +144,18 @@ def render_weekly_report_body(dashboard_data, selected_actor, df_actions, MAPBOX
     # ==========================================
     # LIVE GLOBAL TELEMETRY 
     # ==========================================
-    st.markdown("<h2 style='text-align: center; color: #00bfff; margin-top: 50px; margin-bottom: 10px;'>Live Global Telemetry</h2>", unsafe_allow_html=True)
-    st.markdown("---")
+    # --- HIDDEN FOR NOW: Migrated to Today's Snippet ---
+    # st.markdown("<h2 style='text-align: center; color: #00bfff; margin-top: 50px; margin-bottom: 10px;'>Live Global Telemetry</h2>", unsafe_allow_html=True)
+    # st.markdown("---")
 
-    text_sections = [
-        text_section_1, text_section_2, text_section_3, 
-        text_section_4, text_military, text_section_5, 
-        text_india, text_wa
-    ]
-    render_24h_live_analytics(dashboard_data, text_sections)
-    render_live_telemetry()
+    # text_sections = [
+    #     text_section_1, text_section_2, text_section_3, 
+    #     text_section_4, text_military, text_section_5, 
+    #     text_india, text_wa
+    # ]
+    
+    # render_24h_live_analytics(dashboard_data, text_sections)
+    # render_live_telemetry()
 
     sources_list = dashboard_data.get('sources', [])
     render_verified_sources(sources_list)
