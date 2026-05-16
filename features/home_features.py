@@ -133,7 +133,6 @@ def resolve_location(query):
     if not query or not isinstance(query, str):
         return None, None, "Unknown"
 
-    # Expanded baseline cache to dramatically reduce API dependency
     baseline = {
         "TSMC": (24.77, 120.99, "TSMC Hsinchu"), "Taiwan": (23.7, 120.9, "Taiwan"),
         "China": (39.9, 116.4, "China"), "United States": (38.9, -77.0, "USA"),
@@ -151,14 +150,9 @@ def resolve_location(query):
         if key.lower() in query.lower():
             return data[0], data[1], data[2]
 
-    # Dynamic Geocoding for anywhere else in the world
     try:
-        # Unique user agent to avoid default blocks
         geolocator = Nominatim(user_agent="semicon_tactical_osint_local")
-        
-        # CRITICAL: Force a 1.5 second delay before calling the API to satisfy 1 req/sec limit
         time.sleep(1.5) 
-        
         loc = geolocator.geocode(query, timeout=5)
         if loc:
             clean_name = loc.address.split(',')[0]
@@ -188,11 +182,8 @@ def get_active_live_alert():
     return None
 
 def get_deployment_timestamp():
-    """Anchors the clock to a persistent file so it survives all refreshes and log-ins."""
     os.makedirs('data', exist_ok=True)
     file_path = 'data/nominal_timer.txt'
-    
-    # Read the saved timestamp if it exists
     if os.path.exists(file_path):
         try:
             with open(file_path, 'r') as f:
@@ -200,7 +191,6 @@ def get_deployment_timestamp():
         except Exception:
             pass
             
-    # If no file exists (first run), generate the time and save it
     now_ms = int(time.time() * 1000)
     try:
         with open(file_path, 'w') as f:
@@ -223,16 +213,12 @@ def check_early_warnings():
                     st.error(f"Failed to clear: {e}")
 
         alert = get_active_live_alert()
-        
         box_bg_color = "#000000"
         nominal_text_color = "#d1d5db"
-        
-        # Guarantee the fallback time never shifts during navigation or refresh
         fallback_time_ms = get_deployment_timestamp()
         
         if alert:   
             try:
-                # Safely check for timestamp without triggering datetime.now() execution
                 if 'timestamp' in alert:
                     dt = datetime.fromisoformat(alert['timestamp'].replace("Z", "+00:00"))
                     start_timestamp_ms = int(dt.timestamp() * 1000)
@@ -241,12 +227,12 @@ def check_early_warnings():
             except:
                 start_timestamp_ms = fallback_time_ms
             
-            # Pre-calculate the elapsed time in Python to eliminate the 00:00:00 visual flash
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
-            initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
             
-            # --- RESPONSIVE DEFCON CSS FIX ---
+            # --- UPDATED: Explicitly use Duration Format (00h 00m 00s) ---
+            initial_clock = f"{h:02d}h {m:02d}m {s:02d}s"
+            
             html_code = f"""
             <style>
                 body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -259,42 +245,24 @@ def check_early_warnings():
                     border-radius: 8px; 
                     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
                     color: #ffffff;
-                    min-height: 185px;
-                    max-height: 240px; /* NEW: Forces the box to stop expanding and trigger the scrollbar */
-                    height: auto;
-                    box-sizing: border-box;
-                    overflow-y: auto; 
-                    -webkit-overflow-scrolling: touch; /* NEW: Forces smooth scroll support on Android/iOS non-Safari browsers */
+                    min-height: 185px; max-height: 240px; height: auto;
+                    box-sizing: border-box; overflow-y: auto; -webkit-overflow-scrolling: touch; 
                 }}
-                :fullscreen {{
-                    background-color: rgba(20, 20, 20, 0.95);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }}
+                :fullscreen {{ background-color: rgba(20, 20, 20, 0.95); display: flex; align-items: center; justify-content: center; }}
                 :fullscreen .defcon-box {{ width: 90vw; max-height: 90vh; height: auto; padding: 40px; border-width: 4px; }}
                 :fullscreen .title {{ font-size: 2.5em; }}
                 :fullscreen .timer {{ font-size: 1.5em; }}
                 :fullscreen .headline {{ font-size: 2em; line-height: 1.2; margin-top: 20px; }}
                 :fullscreen .summary {{ font-size: 1.5em; line-height: 1.4; margin-top: 20px; }}
-                
                 @keyframes pulseBackground {{ 0% {{ background-position: 0% 50%; }} 50% {{ background-position: 100% 50%; }} 100% {{ background-position: 0% 50%; }} }}
                 @keyframes blinkText {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
-                
-                /* Responsive Flex Wrap Fix */
                 .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-top: 0px; margin-bottom: 8px; flex-wrap: wrap; gap: 10px; }}
                 .title {{ font-size: 1.17em; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin:0; display:flex; align-items:center; flex: 1 1 100%; }}
                 .timer-container {{ display: flex; align-items: center; flex: 1 1 100%; justify-content: flex-start; margin-bottom: 5px; }}
-                
-                @media (min-width: 600px) {{
-                    .title {{ flex: 1; }}
-                    .timer-container {{ flex: 1; justify-content: flex-end; margin-bottom: 0px; }}
-                }}
-                
+                @media (min-width: 600px) {{ .title {{ flex: 1; }} .timer-container {{ flex: 1; justify-content: flex-end; margin-bottom: 0px; }} }}
                 .timer {{ font-size: 15px; font-weight: bold; background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; border: 1px solid rgba(255,255,255,0.4); }}
                 .headline {{ font-weight: 800; font-size: 16px; margin-bottom: 8px; margin-top:0; }}
                 .summary {{ font-size: 14px; color: #f8f8f8; margin-bottom: 0px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 10px; }}
-                
                 .magnify-btn {{ background: rgba(0,0,0,0.6); color: white; border: 1px solid white; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; margin-left: 10px; }}
                 .magnify-btn:hover {{ background: rgba(255,255,255,0.2); }}
                 :fullscreen .magnify-btn {{ display: none; }} 
@@ -304,9 +272,7 @@ def check_early_warnings():
             
             <div class="defcon-box" id="defcon-container">
                 <div class="header-flex">
-                    <h3 class="title">
-                        <span style="animation: blinkText 1s infinite; margin-right: 15px;">⚠️ DEFCON-LEVEL THREAT</span> 
-                    </h3>
+                    <h3 class="title"><span style="animation: blinkText 1s infinite; margin-right: 15px;">⚠️ DEFCON-LEVEL THREAT</span></h3>
                     <div class="timer-container">
                         <div class="timer">Live Since: <span id="clock">{initial_clock}</span></div>
                         <button class="magnify-btn" onclick="toggleFullscreen()">🔍 MAGNIFY</button>
@@ -320,34 +286,29 @@ def check_early_warnings():
             <script>
                 function toggleFullscreen() {{
                     let elem = document.documentElement;
-                    if (!document.fullscreenElement) {{
-                        elem.requestFullscreen().catch(err => {{ alert(`Error: ${{err.message}}`); }});
+                    if (!document.fullscreenElement) {{ elem.requestFullscreen().catch(err => {{ alert(`Error: ${{err.message}}`); }});
                     }} else {{ document.exitFullscreen(); }}
                 }}
                 const start = {start_timestamp_ms};
                 function update() {{
-                    const now = new Date().getTime();
-                    let diff = now - start;
-                    if(diff < 0) diff = 0;
-                    let h = Math.floor(diff / (1000 * 60 * 60));
-                    let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    let s = Math.floor((diff % (1000 * 60)) / 1000);
-                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+                    const now = new Date().getTime(); let diff = now - start; if(diff < 0) diff = 0;
+                    let h = Math.floor(diff / (1000 * 60 * 60)); let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); let s = Math.floor((diff % (1000 * 60)) / 1000);
+                    // UPDATED: Duration Format (00h 00m 00s)
+                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + 'h ' + String(m).padStart(2, '0') + 'm ' + String(s).padStart(2, '0') + 's';
                 }}
                 setInterval(update, 1000); update();
             </script>
             """
-            components.html(html_code, height=245) # <-- TIGHTENED HEIGHT 
+            components.html(html_code, height=245) 
             
         else:
             start_timestamp_ms = fallback_time_ms
-            
-            # Pre-calculate to eliminate 00:00:00 flash
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
-            initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
+            
+            # --- UPDATED: Explicitly use Duration Format (00h 00m 00s) ---
+            initial_clock = f"{h:02d}h {m:02d}m {s:02d}s"
 
-            # --- RESPONSIVE NOMINAL CSS FIX ---
             html_code = f"""
             <style>
                 body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -367,13 +328,10 @@ def check_early_warnings():
             <script>
                 const start = {start_timestamp_ms};
                 function update() {{
-                    const now = new Date().getTime();
-                    let diff = now - start;
-                    if(diff < 0) diff = 0;
-                    let h = Math.floor(diff / (1000 * 60 * 60));
-                    let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    let s = Math.floor((diff % (1000 * 60)) / 1000);
-                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+                    const now = new Date().getTime(); let diff = now - start; if(diff < 0) diff = 0;
+                    let h = Math.floor(diff / (1000 * 60 * 60)); let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); let s = Math.floor((diff % (1000 * 60)) / 1000);
+                    // UPDATED: Duration Format (00h 00m 00s)
+                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + 'h ' + String(m).padStart(2, '0') + 'm ' + String(s).padStart(2, '0') + 's';
                 }}
                 setInterval(update, 1000); update();
             </script>
@@ -390,15 +348,11 @@ def check_early_warnings():
 def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox_token):
     inject_executive_home_css()
 
-    # --- ENSURE DATA IS SORTED AND CLEAN ---
     if not df_actions.empty and 'Date' in df_actions.columns:
-        # Try mixed format parsing to catch variations in ingested date strings
         df_actions['Date'] = pd.to_datetime(df_actions['Date'], format='mixed', errors='coerce', utc=True)
-        # Drop rows where Date conversion failed to avoid pulling NaT to the top
         df_actions = df_actions.dropna(subset=['Date'])
         df_actions = df_actions.sort_values(by='Date', ascending=False)
 
-    # --- HEADER SECTION ---
     st.markdown("""
     <div style='text-align: center; margin-top: 10px; margin-bottom: 30px;'>
         <h1 style='color: #00bfff; font-size: 2.5em; letter-spacing: 2px; margin-bottom: 0px;'>SemicoN Strategic Command</h1>
@@ -406,10 +360,8 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     </div>
     """, unsafe_allow_html=True)
     
-    # 1. FLASH ALERT
     render_flash_alert(df_actions)
 
-    # 2. DEFCON WARNING SYSTEM
     st.markdown("### 🚨 Live Strategic Alert Monitor")
     check_early_warnings()
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
@@ -417,20 +369,26 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     # ==========================================
     # 2.5 🧠 STRATEGIC DECISION SUPPORT ENGINE
     # ==========================================
-    st.markdown("### 🧠 Strategic Decision Support Engine")
-    st.caption("Live Geopolitics-OSINT Evaluation and Intelligence")
     
-    # Aggregating textual data context from the home page state
+    # Clean injection of the title so it handles the formatting purely here in the home panel
+    st.markdown("""
+    <h3 style='color:#00ffaa; margin-top: 5px; margin-bottom: 10px;'>
+    🧠 Strategic Decision Support Engine
+    </h3>
+    """, unsafe_allow_html=True)
+    
+    # --- ADDED: Restored INTELLIGENCE NOTE with Geopolitics-OSINT terminology ---
+    st.markdown("**INTELLIGENCE NOTE:** Live Geopolitics-OSINT Evaluation and Intelligence")
+    
+    # --- ADDED: Robust Tactical Text Aggregation ---
+    # The Engine is now forcefully reading the recent 24-hours of events to trigger properly
     all_text_parts = []
-    live_summary = dashboard_data.get('executive_summary', None) if dashboard_data else None
     
-    if live_summary:
-        all_text_parts.append(live_summary)
-        
-    if not df_actions.empty and 'Headline' in df_actions.columns:
-        # Include recent headline context for the engine to evaluate
-        all_text_parts.extend(df_actions['Headline'].dropna().astype(str).tolist())
-        
+    if not df_actions.empty:
+        for col in ['Headline', 'Event', 'Action', 'Actor', 'Location']:
+            if col in df_actions.columns:
+                all_text_parts.extend(df_actions[col].dropna().astype(str).tolist())
+                
     all_text = " ".join(all_text_parts).lower()
     
     render_decision_support_engine(all_text)
@@ -511,7 +469,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     st.markdown("### 🌍 Strategic Geospatial Intelligence Layer")
     st.caption("Live global telemetry mapping with active 13-sector radar scanning.")
     
-    # --- RADAR SWEEP UI COMPONENT ---
     regions = [
         "North America", "Latin America", "Africa", "Oceanic",
         "East Europe", "Central Europe", "Western Europe", "West Asia",
@@ -549,18 +506,14 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     """
     components.html(sweep_html, height=70)
     
-    # --- PYDECK MAP RENDER ---
     map_data = []
     if not df_actions.empty:
         geo_col = 'Location' if 'Location' in df_actions.columns else 'Actor'
         
         if geo_col in df_actions.columns:
-            # We limit to the 15 most recent rows to prevent UI hangs while geocoding
             recent_entities = df_actions.head(15)[geo_col].dropna().unique()
-            
             for entity in recent_entities:
                 clean_query = str(entity).replace("Government of ", "").strip()
-                
                 lat, lon, resolved_name = resolve_location(clean_query)
                 
                 if lat is not None and lon is not None:
@@ -581,8 +534,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         map_data = [{"name": "Global Monitor", "entity": "System Nominal", "lat": 20.0, "lon": 0.0, "color": [0, 191, 255, 100], "radius": 400000}]
 
     map_df = pd.DataFrame(map_data)
-    
-    # Ensure latitude and longitude are explicitly numeric to prevent mean() failures
     map_df['lat'] = pd.to_numeric(map_df['lat'], errors='coerce')
     map_df['lon'] = pd.to_numeric(map_df['lon'], errors='coerce')
     
@@ -621,6 +572,8 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     # 9. STRATEGIC ANALYSIS
     st.markdown("### 📝 Strategic Command Analysis (12H Briefing)")
+    
+    live_summary = dashboard_data.get('executive_summary', None) if dashboard_data else None
     
     if live_summary:
         st.info(live_summary)

@@ -11,14 +11,17 @@ import streamlit.components.v1 as components
 from utils.constants import COUNTRY_INFO, INFRASTRUCTURE_DATA
 from utils.engines import parse_rss_txt_file, get_active_live_alert
 
-def render_decision_support_engine(all_text):
+def render_decision_support_engine(all_text, show_intel_note=False):
     st.markdown("""
     <h3 style='color:#00ffaa;
     margin-top: 5px;
     margin-bottom: 15px;'>
-    🧠 Strategic Decision Support Engine (Live Geopolitics-OSINT Evaluation and Intelligence)
+    🧠 Strategic Decision Support Engine
     </h3>
     """, unsafe_allow_html=True)
+    
+    if show_intel_note:
+        st.markdown("**INTELLIGENCE NOTE:** Live Geopolitics-OSINT Evaluation and Intelligence")
     
     decision_signals = []
     
