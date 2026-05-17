@@ -230,8 +230,7 @@ def check_early_warnings():
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
             
-            # --- UPDATED: Explicitly use Duration Format (00h 00m 00s) ---
-            initial_clock = f"{h:02d}h {m:02d}m {s:02d}s"
+            initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
             
             html_code = f"""
             <style>
@@ -245,24 +244,42 @@ def check_early_warnings():
                     border-radius: 8px; 
                     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
                     color: #ffffff;
-                    min-height: 185px; max-height: 240px; height: auto;
-                    box-sizing: border-box; overflow-y: auto; -webkit-overflow-scrolling: touch; 
+                    min-height: 185px;
+                    max-height: 240px; /* NEW: Forces the box to stop expanding and trigger the scrollbar */
+                    height: auto;
+                    box-sizing: border-box;
+                    overflow-y: auto; 
+                    -webkit-overflow-scrolling: touch; /* NEW: Forces smooth scroll support on Android/iOS non-Safari browsers */
                 }}
-                :fullscreen {{ background-color: rgba(20, 20, 20, 0.95); display: flex; align-items: center; justify-content: center; }}
+                :fullscreen {{
+                    background-color: rgba(20, 20, 20, 0.95);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }}
                 :fullscreen .defcon-box {{ width: 90vw; max-height: 90vh; height: auto; padding: 40px; border-width: 4px; }}
                 :fullscreen .title {{ font-size: 2.5em; }}
                 :fullscreen .timer {{ font-size: 1.5em; }}
                 :fullscreen .headline {{ font-size: 2em; line-height: 1.2; margin-top: 20px; }}
                 :fullscreen .summary {{ font-size: 1.5em; line-height: 1.4; margin-top: 20px; }}
+                
                 @keyframes pulseBackground {{ 0% {{ background-position: 0% 50%; }} 50% {{ background-position: 100% 50%; }} 100% {{ background-position: 0% 50%; }} }}
                 @keyframes blinkText {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
+                
+                /* Responsive Flex Wrap Fix */
                 .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-top: 0px; margin-bottom: 8px; flex-wrap: wrap; gap: 10px; }}
                 .title {{ font-size: 1.17em; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin:0; display:flex; align-items:center; flex: 1 1 100%; }}
                 .timer-container {{ display: flex; align-items: center; flex: 1 1 100%; justify-content: flex-start; margin-bottom: 5px; }}
-                @media (min-width: 600px) {{ .title {{ flex: 1; }} .timer-container {{ flex: 1; justify-content: flex-end; margin-bottom: 0px; }} }}
+                
+                @media (min-width: 600px) {{
+                    .title {{ flex: 1; }}
+                    .timer-container {{ flex: 1; justify-content: flex-end; margin-bottom: 0px; }}
+                }}
+                
                 .timer {{ font-size: 15px; font-weight: bold; background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; border: 1px solid rgba(255,255,255,0.4); }}
                 .headline {{ font-weight: 800; font-size: 16px; margin-bottom: 8px; margin-top:0; }}
                 .summary {{ font-size: 14px; color: #f8f8f8; margin-bottom: 0px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 10px; }}
+                
                 .magnify-btn {{ background: rgba(0,0,0,0.6); color: white; border: 1px solid white; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; margin-left: 10px; }}
                 .magnify-btn:hover {{ background: rgba(255,255,255,0.2); }}
                 :fullscreen .magnify-btn {{ display: none; }} 
@@ -272,7 +289,9 @@ def check_early_warnings():
             
             <div class="defcon-box" id="defcon-container">
                 <div class="header-flex">
-                    <h3 class="title"><span style="animation: blinkText 1s infinite; margin-right: 15px;">⚠️ DEFCON-LEVEL THREAT</span></h3>
+                    <h3 class="title">
+                        <span style="animation: blinkText 1s infinite; margin-right: 15px;">⚠️ DEFCON-LEVEL THREAT</span> 
+                    </h3>
                     <div class="timer-container">
                         <div class="timer">Live Since: <span id="clock">{initial_clock}</span></div>
                         <button class="magnify-btn" onclick="toggleFullscreen()">🔍 MAGNIFY</button>
@@ -286,15 +305,19 @@ def check_early_warnings():
             <script>
                 function toggleFullscreen() {{
                     let elem = document.documentElement;
-                    if (!document.fullscreenElement) {{ elem.requestFullscreen().catch(err => {{ alert(`Error: ${{err.message}}`); }});
+                    if (!document.fullscreenElement) {{
+                        elem.requestFullscreen().catch(err => {{ alert(`Error: ${{err.message}}`); }});
                     }} else {{ document.exitFullscreen(); }}
                 }}
                 const start = {start_timestamp_ms};
                 function update() {{
-                    const now = new Date().getTime(); let diff = now - start; if(diff < 0) diff = 0;
-                    let h = Math.floor(diff / (1000 * 60 * 60)); let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); let s = Math.floor((diff % (1000 * 60)) / 1000);
-                    // UPDATED: Duration Format (00h 00m 00s)
-                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + 'h ' + String(m).padStart(2, '0') + 'm ' + String(s).padStart(2, '0') + 's';
+                    const now = new Date().getTime();
+                    let diff = now - start;
+                    if(diff < 0) diff = 0;
+                    let h = Math.floor(diff / (1000 * 60 * 60));
+                    let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    let s = Math.floor((diff % (1000 * 60)) / 1000);
+                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
                 }}
                 setInterval(update, 1000); update();
             </script>
@@ -303,11 +326,12 @@ def check_early_warnings():
             
         else:
             start_timestamp_ms = fallback_time_ms
+            
+            # Pre-calculate to eliminate 00:00:00 flash
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
             
-            # --- UPDATED: Explicitly use Duration Format (00h 00m 00s) ---
-            initial_clock = f"{h:02d}h {m:02d}m {s:02d}s"
+            initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
 
             html_code = f"""
             <style>
@@ -330,8 +354,7 @@ def check_early_warnings():
                 function update() {{
                     const now = new Date().getTime(); let diff = now - start; if(diff < 0) diff = 0;
                     let h = Math.floor(diff / (1000 * 60 * 60)); let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); let s = Math.floor((diff % (1000 * 60)) / 1000);
-                    // UPDATED: Duration Format (00h 00m 00s)
-                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + 'h ' + String(m).padStart(2, '0') + 'm ' + String(s).padStart(2, '0') + 's';
+                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
                 }}
                 setInterval(update, 1000); update();
             </script>
