@@ -372,9 +372,17 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     inject_executive_home_css()
 
     if not df_actions.empty and 'Date' in df_actions.columns:
-        df_actions['Date'] = pd.to_datetime(df_actions['Date'], format='mixed', errors='coerce', utc=True)
-        df_actions = df_actions.dropna(subset=['Date'])
-        df_actions = df_actions.sort_values(by='Date', ascending=False)
+        # 1. Safely parse dates, coercing errors to NaT instead of crashing
+        parsed_dates = pd.to_datetime(df_actions['Date'], errors='coerce', utc=True)
+        
+        # 2. CRITICAL FIX: Instead of dropping unparseable newest dates, we fill them with 'now' 
+        # so they bubble to the top of the feed instead of vanishing.
+        df_actions['_sort_date'] = parsed_dates.fillna(pd.Timestamp.now(tz='UTC'))
+        df_actions = df_actions.sort_values(by='_sort_date', ascending=False)
+        
+        # 3. Format cleanly parsed dates, fallback to original string if it couldn't parse
+        formatted_dates = parsed_dates.dt.strftime('%Y-%m-%d %H:%M')
+        df_actions['Date'] = formatted_dates.fillna(df_actions['Date'].astype(str))
 
     st.markdown("""
     <div style='text-align: center; margin-top: 10px; margin-bottom: 30px;'>
@@ -469,8 +477,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         
         display_df = df_actions[cols_to_show].head(8).copy() if cols_to_show else df_actions.head(8).copy()
         
-        if 'Date' in display_df.columns:
-             display_df['Date'] = display_df['Date'].dt.strftime('%Y-%m-%d %H:%M')
+        # We removed the second date formatting logic here since it's perfectly handled at the top now
              
         st.dataframe(display_df, use_container_width=True, hide_index=True)
     else:
