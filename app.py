@@ -55,7 +55,7 @@ if MAINTENANCE_MODE:
 
 # --- PHASE 4: LOCAL HOST TEST MODE ---
 # Set to False when deploying the final live version
-SNIPPET_TEST_MODE = True
+SNIPPET_TEST_MODE = False
 
 os.makedirs('data', exist_ok=True)
 os.makedirs('trash', exist_ok=True)
