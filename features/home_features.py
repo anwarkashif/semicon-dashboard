@@ -227,6 +227,10 @@ def check_early_warnings():
             except:
                 start_timestamp_ms = fallback_time_ms
             
+            # ---------------------------------------------------------
+            # SERVER-SIDE ELAPSED TIME CALCULATION
+            # Completely isolates the timer from client browser clock errors
+            # ---------------------------------------------------------
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
             
@@ -245,11 +249,11 @@ def check_early_warnings():
                     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
                     color: #ffffff;
                     min-height: 185px;
-                    max-height: 240px;
+                    max-height: 240px; /* NEW: Forces the box to stop expanding and trigger the scrollbar */
                     height: auto;
                     box-sizing: border-box;
                     overflow-y: auto; 
-                    -webkit-overflow-scrolling: touch;
+                    -webkit-overflow-scrolling: touch; /* NEW: Forces smooth scroll support on Android/iOS non-Safari browsers */
                 }}
                 :fullscreen {{
                     background-color: rgba(20, 20, 20, 0.95);
@@ -309,17 +313,18 @@ def check_early_warnings():
                         elem.requestFullscreen().catch(err => {{ alert(`Error: ${{err.message}}`); }});
                     }} else {{ document.exitFullscreen(); }}
                 }}
-                const start = {start_timestamp_ms};
+                
+                // Pure server-relative calculation loop
+                let currentElapsedMs = {elapsed_ms};
+                
                 function update() {{
-                    const now = new Date().getTime();
-                    let diff = now - start;
-                    if(diff < 0) diff = 0;
-                    let h = Math.floor(diff / (1000 * 60 * 60));
-                    let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    let s = Math.floor((diff % (1000 * 60)) / 1000);
+                    currentElapsedMs += 1000;
+                    let h = Math.floor(currentElapsedMs / (1000 * 60 * 60));
+                    let m = Math.floor((currentElapsedMs % (1000 * 60 * 60)) / (1000 * 60));
+                    let s = Math.floor((currentElapsedMs % (1000 * 60)) / 1000);
                     document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
                 }}
-                setInterval(update, 1000); update();
+                setInterval(update, 1000); 
             </script>
             """
             components.html(html_code, height=245) 
@@ -327,7 +332,6 @@ def check_early_warnings():
         else:
             start_timestamp_ms = fallback_time_ms
             
-            # Pre-calculate to eliminate 00:00:00 flash
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
             
@@ -350,19 +354,23 @@ def check_early_warnings():
                 <p class="desc">Current Warning System doesn't see an early warning situation. Watch out for further updates.</p>
             </div>
             <script>
-                const start = {start_timestamp_ms};
+                // Pure server-relative calculation loop
+                let currentElapsedMs = {elapsed_ms};
+                
                 function update() {{
-                    const now = new Date().getTime(); let diff = now - start; if(diff < 0) diff = 0;
-                    let h = Math.floor(diff / (1000 * 60 * 60)); let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); let s = Math.floor((diff % (1000 * 60)) / 1000);
+                    currentElapsedMs += 1000;
+                    let h = Math.floor(currentElapsedMs / (1000 * 60 * 60)); 
+                    let m = Math.floor((currentElapsedMs % (1000 * 60 * 60)) / (1000 * 60)); 
+                    let s = Math.floor((currentElapsedMs % (1000 * 60)) / 1000);
                     document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
                 }}
-                setInterval(update, 1000); update();
+                setInterval(update, 1000);
             </script>
             """
             components.html(html_code, height=130)
 
     except Exception as e:
-        pass 
+        pass
 
 
 # ==========================================
