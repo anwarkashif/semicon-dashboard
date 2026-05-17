@@ -484,8 +484,26 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         target_cols = ['Date', 'Action', 'Event', 'Headline']
         cols_to_show = [col for col in target_cols if col in available_cols]
         
-        display_df = df_actions[cols_to_show].head(8).copy() if cols_to_show else df_actions.head(8).copy()
-             
+        display_df = df_actions[cols_to_show].copy() if cols_to_show else df_actions.copy()
+        
+        if 'Date' in display_df.columns:
+            # Regional Date Format Fix: Force Pandas to understand DD-MM-YYYY
+            def ultra_safe_parse(date_str):
+                try:
+                    # dayfirst=True prevents valid dates like 17-05-2026 from being rejected
+                    return pd.to_datetime(date_str, dayfirst=True, utc=True)
+                except:
+                    # If completely unreadable, float it to the absolute top
+                    return pd.Timestamp.now(tz='UTC') + pd.Timedelta(days=100)
+            
+            display_df['_sort_date'] = display_df['Date'].apply(ultra_safe_parse)
+            display_df = display_df.sort_values(by='_sort_date', ascending=False)
+            display_df = display_df.drop(columns=['_sort_date'])
+            
+            # Format cleanly for display without losing the raw LLM text
+            display_df['Date'] = display_df['Date'].astype(str)
+            
+        display_df = display_df.head(8)
         st.dataframe(display_df, use_container_width=True, hide_index=True)
     else:
         st.write("No tactical alerts logged.")
