@@ -482,28 +482,25 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     if not df_actions.empty:
         available_cols = df_actions.columns.tolist()
         target_cols = ['Date', 'Action', 'Event', 'Headline']
-        cols_to_show = [col for col in target_cols if col in available_cols]
         
-        display_df = df_actions[cols_to_show].copy() if cols_to_show else df_actions.copy()
+        display_df = df_actions.copy()
         
-        if 'Date' in display_df.columns:
-            # Regional Date Format Fix: Force Pandas to understand DD-MM-YYYY
-            def ultra_safe_parse(date_str):
-                try:
-                    # dayfirst=True prevents valid dates like 17-05-2026 from being rejected
-                    return pd.to_datetime(date_str, dayfirst=True, utc=True)
-                except:
-                    # If completely unreadable, float it to the absolute top
-                    return pd.Timestamp.now(tz='UTC') + pd.Timedelta(days=100)
+        # ULTIMATE BYPASS: Stop relying on Pandas datetime parsing entirely.
+        # The LLM appends new intelligence to the bottom of the dataset.
+        # Therefore, sorting by the highest raw index guarantees the newest rows.
+        if '_raw_idx' in display_df.columns:
+            display_df = display_df.sort_values(by='_raw_idx', ascending=False)
             
-            display_df['_sort_date'] = display_df['Date'].apply(ultra_safe_parse)
-            display_df = display_df.sort_values(by='_sort_date', ascending=False)
-            display_df = display_df.drop(columns=['_sort_date'])
-            
-            # Format cleanly for display without losing the raw LLM text
-            display_df['Date'] = display_df['Date'].astype(str)
+        cols_to_show = [col for col in target_cols if col in display_df.columns]
+        if cols_to_show:
+            display_df = display_df[cols_to_show]
             
         display_df = display_df.head(8)
+        
+        # Force 'Date' to display whatever raw text the LLM wrote to prevent rendering crashes
+        if 'Date' in display_df.columns:
+            display_df['Date'] = display_df['Date'].astype(str)
+            
         st.dataframe(display_df, use_container_width=True, hide_index=True)
     else:
         st.write("No tactical alerts logged.")
