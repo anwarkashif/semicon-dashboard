@@ -393,13 +393,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     # 2.5 🧠 STRATEGIC DECISION SUPPORT ENGINE
     # ==========================================
     
-    # Clean injection of the title so it handles the formatting purely here in the home panel
-    st.markdown("""
-    <h3 style='color:#00ffaa; margin-top: 5px; margin-bottom: 10px;'>
-    🧠 Strategic Decision Support Engine
-    </h3>
-    """, unsafe_allow_html=True)
-    
     # --- ADDED: Robust Tactical Text Aggregation ---
     # The Engine is now forcefully reading the recent 24-hours of events to trigger properly
     all_text_parts = []
@@ -411,11 +404,8 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 
     all_text = " ".join(all_text_parts).lower()
     
-    # 1. RENDER THE ENGINE FIRST
-    render_decision_support_engine(all_text)
-    
-    # 2. RENDER THE INTELLIGENCE NOTE DIRECTLY BELOW IT
-    st.markdown("**INTELLIGENCE NOTE:** Live Geopolitics-OSINT Evaluation and Intelligence")
+    # RENDER THE ENGINE WITH is_home=True TO TRIGGER THE NOTE AUTOMATICALLY
+    render_decision_support_engine(all_text, is_home=True)
     
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
