@@ -227,15 +227,12 @@ def check_early_warnings():
             except:
                 start_timestamp_ms = fallback_time_ms
             
-            # ---------------------------------------------------------
-            # SERVER-SIDE ELAPSED TIME CALCULATION
-            # Completely isolates the timer from client browser clock errors
-            # ---------------------------------------------------------
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
             
             initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
             
+            # --- RESPONSIVE DEFCON CSS FIX MERGED EXACTLY ---
             html_code = f"""
             <style>
                 body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -313,18 +310,17 @@ def check_early_warnings():
                         elem.requestFullscreen().catch(err => {{ alert(`Error: ${{err.message}}`); }});
                     }} else {{ document.exitFullscreen(); }}
                 }}
-                
-                // Pure server-relative calculation loop
-                let currentElapsedMs = {elapsed_ms};
-                
+                const start = {start_timestamp_ms};
                 function update() {{
-                    currentElapsedMs += 1000;
-                    let h = Math.floor(currentElapsedMs / (1000 * 60 * 60));
-                    let m = Math.floor((currentElapsedMs % (1000 * 60 * 60)) / (1000 * 60));
-                    let s = Math.floor((currentElapsedMs % (1000 * 60)) / 1000);
+                    const now = new Date().getTime();
+                    let diff = now - start;
+                    if(diff < 0) diff = 0;
+                    let h = Math.floor(diff / (1000 * 60 * 60));
+                    let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    let s = Math.floor((diff % (1000 * 60)) / 1000);
                     document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
                 }}
-                setInterval(update, 1000); 
+                setInterval(update, 1000); update();
             </script>
             """
             components.html(html_code, height=245) 
@@ -332,11 +328,7 @@ def check_early_warnings():
         else:
             start_timestamp_ms = fallback_time_ms
             
-            elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
-            h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
-            
-            initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
-
+            # --- REVERTED CLOCK LOGIC TO LOCAL HOST TIME FORMAT ---
             html_code = f"""
             <style>
                 body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -349,28 +341,19 @@ def check_early_warnings():
             <div class="nominal-box">
                 <div class="header-flex">
                     <h4 class="title"><span>🟢 System Nominal</span></h4>
-                    <div class="timer">Status Verified: <span id="clock">{initial_clock}</span> ago</div>
+                    <div class="timer">Status Verified: <span id="clock">Loading...</span></div>
                 </div>
                 <p class="desc">Current Warning System doesn't see an early warning situation. Watch out for further updates.</p>
             </div>
             <script>
-                // Pure server-relative calculation loop
-                let currentElapsedMs = {elapsed_ms};
-                
-                function update() {{
-                    currentElapsedMs += 1000;
-                    let h = Math.floor(currentElapsedMs / (1000 * 60 * 60)); 
-                    let m = Math.floor((currentElapsedMs % (1000 * 60 * 60)) / (1000 * 60)); 
-                    let s = Math.floor((currentElapsedMs % (1000 * 60)) / 1000);
-                    document.getElementById('clock').innerText = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
-                }}
-                setInterval(update, 1000);
+                const start = {start_timestamp_ms};
+                document.getElementById('clock').innerText = new Date(start).toLocaleString();
             </script>
             """
             components.html(html_code, height=130)
 
     except Exception as e:
-        pass
+        pass 
 
 
 # ==========================================
@@ -378,29 +361,6 @@ def check_early_warnings():
 # ==========================================
 def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox_token):
     inject_executive_home_css()
-
-    if not df_actions.empty:
-        # Create a backup of the original index to preserve raw append order
-        df_actions = df_actions.copy()
-        df_actions['_raw_idx'] = range(len(df_actions))
-        
-        if 'Date' in df_actions.columns:
-            # 1. Safely parse dates, coercing errors to NaT
-            parsed_dates = pd.to_datetime(df_actions['Date'], format='mixed', errors='coerce', utc=True)
-            
-            # 2. NUCLEAR FIX: Fill NaT with the year 2099 so any new, unparseable LLM output 
-            # is physically forced to be recognized as the "newest" date.
-            df_actions['_sort_date'] = parsed_dates.fillna(pd.Timestamp('2099-12-31', tz='UTC'))
-            
-            # Sort by the forced date descending, then by raw index descending (highest index = newest row)
-            df_actions = df_actions.sort_values(by=['_sort_date', '_raw_idx'], ascending=[False, False])
-            
-            # 3. Format cleanly parsed dates, fallback to whatever raw string the LLM originally output
-            formatted_dates = parsed_dates.dt.strftime('%Y-%m-%d %H:%M')
-            df_actions['Date'] = formatted_dates.fillna(df_actions['Date'].astype(str))
-        else:
-            # Absolute fallback if the 'Date' column is missing entirely
-            df_actions = df_actions.sort_values(by='_raw_idx', ascending=False)
 
     st.markdown("""
     <div style='text-align: center; margin-top: 10px; margin-bottom: 30px;'>
@@ -491,20 +451,13 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         available_cols = df_actions.columns.tolist()
         target_cols = ['Date', 'Action', 'Event', 'Headline']
         
-        display_df = df_actions.copy()
-        
-        # ULTIMATE BYPASS: Stop relying on Pandas datetime parsing entirely.
-        # The LLM appends new intelligence to the bottom of the dataset.
-        # Therefore, sorting by the highest raw index guarantees the newest rows.
-        if '_raw_idx' in display_df.columns:
-            display_df = display_df.sort_values(by='_raw_idx', ascending=False)
+        # Absolute foolproof way to get newest appended rows regardless of what Pandas thinks of the dates
+        display_df = df_actions.sort_index(ascending=False).head(8).copy()
             
         cols_to_show = [col for col in target_cols if col in display_df.columns]
         if cols_to_show:
             display_df = display_df[cols_to_show]
             
-        display_df = display_df.head(8)
-        
         # Force 'Date' to display whatever raw text the LLM wrote to prevent rendering crashes
         if 'Date' in display_df.columns:
             display_df['Date'] = display_df['Date'].astype(str)
