@@ -371,18 +371,28 @@ def check_early_warnings():
 def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox_token):
     inject_executive_home_css()
 
-    if not df_actions.empty and 'Date' in df_actions.columns:
-        # 1. Safely parse dates, coercing errors to NaT instead of crashing
-        parsed_dates = pd.to_datetime(df_actions['Date'], errors='coerce', utc=True)
+    if not df_actions.empty:
+        # Create a backup of the original index to preserve raw append order
+        df_actions = df_actions.copy()
+        df_actions['_raw_idx'] = range(len(df_actions))
         
-        # 2. CRITICAL FIX: Instead of dropping unparseable newest dates, we fill them with 'now' 
-        # so they bubble to the top of the feed instead of vanishing.
-        df_actions['_sort_date'] = parsed_dates.fillna(pd.Timestamp.now(tz='UTC'))
-        df_actions = df_actions.sort_values(by='_sort_date', ascending=False)
-        
-        # 3. Format cleanly parsed dates, fallback to original string if it couldn't parse
-        formatted_dates = parsed_dates.dt.strftime('%Y-%m-%d %H:%M')
-        df_actions['Date'] = formatted_dates.fillna(df_actions['Date'].astype(str))
+        if 'Date' in df_actions.columns:
+            # 1. Safely parse dates, coercing errors to NaT
+            parsed_dates = pd.to_datetime(df_actions['Date'], format='mixed', errors='coerce', utc=True)
+            
+            # 2. NUCLEAR FIX: Fill NaT with the year 2099 so any new, unparseable LLM output 
+            # is physically forced to be recognized as the "newest" date.
+            df_actions['_sort_date'] = parsed_dates.fillna(pd.Timestamp('2099-12-31', tz='UTC'))
+            
+            # Sort by the forced date descending, then by raw index descending (highest index = newest row)
+            df_actions = df_actions.sort_values(by=['_sort_date', '_raw_idx'], ascending=[False, False])
+            
+            # 3. Format cleanly parsed dates, fallback to whatever raw string the LLM originally output
+            formatted_dates = parsed_dates.dt.strftime('%Y-%m-%d %H:%M')
+            df_actions['Date'] = formatted_dates.fillna(df_actions['Date'].astype(str))
+        else:
+            # Absolute fallback if the 'Date' column is missing entirely
+            df_actions = df_actions.sort_values(by='_raw_idx', ascending=False)
 
     st.markdown("""
     <div style='text-align: center; margin-top: 10px; margin-bottom: 30px;'>
@@ -402,7 +412,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     # ==========================================
     
     # --- ADDED: Robust Tactical Text Aggregation ---
-    # The Engine is now forcefully reading the recent 24-hours of events to trigger properly
     all_text_parts = []
     
     if not df_actions.empty:
@@ -476,8 +485,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         cols_to_show = [col for col in target_cols if col in available_cols]
         
         display_df = df_actions[cols_to_show].head(8).copy() if cols_to_show else df_actions.head(8).copy()
-        
-        # We removed the second date formatting logic here since it's perfectly handled at the top now
              
         st.dataframe(display_df, use_container_width=True, hide_index=True)
     else:
