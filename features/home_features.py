@@ -245,11 +245,11 @@ def check_early_warnings():
                     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
                     color: #ffffff;
                     min-height: 185px;
-                    max-height: 240px; /* NEW: Forces the box to stop expanding and trigger the scrollbar */
+                    max-height: 240px;
                     height: auto;
                     box-sizing: border-box;
                     overflow-y: auto; 
-                    -webkit-overflow-scrolling: touch; /* NEW: Forces smooth scroll support on Android/iOS non-Safari browsers */
+                    -webkit-overflow-scrolling: touch;
                 }}
                 :fullscreen {{
                     background-color: rgba(20, 20, 20, 0.95);
@@ -400,9 +400,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     </h3>
     """, unsafe_allow_html=True)
     
-    # --- ADDED: Restored INTELLIGENCE NOTE with Geopolitics-OSINT terminology ---
-    st.markdown("**INTELLIGENCE NOTE:** Live Geopolitics-OSINT Evaluation and Intelligence")
-    
     # --- ADDED: Robust Tactical Text Aggregation ---
     # The Engine is now forcefully reading the recent 24-hours of events to trigger properly
     all_text_parts = []
@@ -414,7 +411,12 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 
     all_text = " ".join(all_text_parts).lower()
     
+    # 1. RENDER THE ENGINE FIRST
     render_decision_support_engine(all_text)
+    
+    # 2. RENDER THE INTELLIGENCE NOTE DIRECTLY BELOW IT
+    st.markdown("**INTELLIGENCE NOTE:** Live Geopolitics-OSINT Evaluation and Intelligence")
+    
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
     # 3. KPI CARDS
