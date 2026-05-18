@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import os
+import json
 from datetime import datetime, timedelta, timezone
 from utils.snippet_engine import get_fallback_snippet
 
@@ -7,6 +9,29 @@ from utils.snippet_engine import get_fallback_snippet
 from features.daily_features import render_24h_live_analytics, run_shockwave_engine
 
 def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_data=None, text_sections=None):
+    
+    # --- NEW INTEGRATION: Load isolated Today's Snippet data and complement existing feed ---
+    today_data_path = 'data/today_snippet/tactical_events_24h.json'
+    if os.path.exists(today_data_path):
+        try:
+            with open(today_data_path, 'r') as f:
+                today_events = json.load(f)
+                df_today = pd.DataFrame(today_events)
+                
+                # Align columns to match the master dataframe expected format
+                if 'Headline' not in df_today.columns and 'Action' in df_today.columns:
+                    df_today['Headline'] = df_today['Action']
+                    
+                # Merge with existing df_actions to enrich the analysis
+                if not df_today.empty:
+                    if df_actions is None or df_actions.empty:
+                        df_actions = df_today
+                    else:
+                        df_actions = pd.concat([df_today, df_actions], ignore_index=True)
+        except Exception as e:
+            pass # Fail silently and safely rely on the master df_actions if reading fails
+    # -----------------------------------------------------------------------------------
+
     st.markdown("""
     <div style='text-align: center; margin-top: 10px; margin-bottom: 20px;'>
         <h1 style='color: #00bfff; font-size: 2.2em; letter-spacing: 1px;'>📝 Today's Snippet</h1>
@@ -20,7 +45,7 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
 
     # 1. EVIDENCE (UPDATED WITH 12-HOUR FILTER)
     st.markdown("### 📊 Raw Tactical Feeds (12H)")
-    if not df_actions.empty:
+    if df_actions is not None and not df_actions.empty:
         # 1. Ensure Date column is standard timezone-aware datetime
         if 'Date' in df_actions.columns:
             df_actions['Date'] = pd.to_datetime(df_actions['Date'], format='mixed', errors='coerce', utc=True)

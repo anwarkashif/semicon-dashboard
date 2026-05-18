@@ -360,6 +360,29 @@ def check_early_warnings():
 # 5. MAIN EXECUTIVE HOME RENDER
 # ==========================================
 def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox_token):
+    
+    # --- NEW INTEGRATION: Load isolated Executive Home data and complement existing feed ---
+    exec_data_path = 'data/executive_home/tactical_events_24h.json'
+    if os.path.exists(exec_data_path):
+        try:
+            with open(exec_data_path, 'r') as f:
+                exec_events = json.load(f)
+                df_exec = pd.DataFrame(exec_events)
+                
+                # Check if 'Headline' is missing but 'Action' exists (to match main dataframe format)
+                if 'Headline' not in df_exec.columns and 'Action' in df_exec.columns:
+                    df_exec['Headline'] = df_exec['Action']
+                    
+                # Merge with existing df_actions to enrich the analysis
+                if not df_exec.empty:
+                    if df_actions.empty:
+                        df_actions = df_exec
+                    else:
+                        df_actions = pd.concat([df_exec, df_actions], ignore_index=True)
+        except Exception as e:
+            pass # Fail silently and safely rely on the master df_actions if reading fails
+    # -----------------------------------------------------------------------------------
+
     inject_executive_home_css()
 
     st.markdown("""

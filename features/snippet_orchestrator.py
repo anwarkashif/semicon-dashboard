@@ -1,4 +1,7 @@
 import streamlit as st
+import pandas as pd
+import os
+import json
 from utils.snippet_templates import get_friday_2_0_template
 from utils.snippet_docx_generator import generate_snippet_2_0_docx
 
@@ -18,6 +21,29 @@ def handle_snippet_logic(mode="friday", dashboard_data=None, text_summary="", te
         st.error("Unknown Snippet Mode Requested.")
 
 def render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa, text_ews, selected_actor, df_actions):
+    
+    # --- NEW INTEGRATION: Load isolated Friday's Snippet data and complement existing feed ---
+    friday_data_path = 'data/friday_snippet/tactical_events_24h.json'
+    if os.path.exists(friday_data_path):
+        try:
+            with open(friday_data_path, 'r') as f:
+                friday_events = json.load(f)
+                df_friday = pd.DataFrame(friday_events)
+                
+                # Align columns to match the master dataframe expected format
+                if 'Headline' not in df_friday.columns and 'Action' in df_friday.columns:
+                    df_friday['Headline'] = df_friday['Action']
+                    
+                # Merge with existing df_actions to enrich the analysis
+                if not df_friday.empty:
+                    if df_actions is None or df_actions.empty:
+                        df_actions = df_friday
+                    else:
+                        df_actions = pd.concat([df_friday, df_actions], ignore_index=True)
+        except Exception as e:
+            pass # Fail silently and safely rely on the master df_actions if reading fails
+    # -----------------------------------------------------------------------------------
+
     intel_data = get_friday_2_0_template()
     
     st.markdown(f"""
