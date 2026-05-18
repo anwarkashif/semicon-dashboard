@@ -1,0 +1,47 @@
+name: Executive Home - Live Radar (45m)
+
+on:
+  schedule:
+    - cron: '*/45 * * * *'
+  workflow_dispatch: 
+
+jobs:
+  update_executive_intel:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests google-genai feedparser
+
+    - name: Run Executive Home Pipeline
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: python live_pipeline_executive.py || echo "Executive pipeline failed."
+
+    - name: Commit and Push
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git pull origin main --rebase || echo "No changes to pull"
+        git add data/executive_home/
+        git commit -m "🚨 Auto-Update: Executive Home Live Radar" || echo "No changes to commit"
+        git push
+
+    - name: Trigger Koyeb Redeploy
+      uses: koyeb-community/koyeb-actions@v2
+      with:
+        api_token: "${{ secrets.KOYEB_API_TOKEN }}"
+        github_token: "${{ secrets.GITHUB_TOKEN }}"
+      run: koyeb service redeploy 83c34b02-6b6a-41fb-81c5-7543947250b4
