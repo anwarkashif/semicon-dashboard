@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-18",
+        "Actor": "TSMC",
+        "Action": "Places record tool orders for expansion.",
+        "Location": "Taiwan, Global Semiconductor Industry",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-18",
+        "Actor": "US Treasury",
+        "Action": "Extends Russian oil sanctions relief.",
+        "Location": "Global Energy Market, Russia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-18",
         "Actor": "US, China",
-        "Action": "Leaders discuss cyber, no rare earth deal",
-        "Location": "Beijing, China",
+        "Action": "Presidents discussed cyberattacks and spying.",
+        "Location": "Global, US, China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-18",
-        "Actor": "US, Iran",
-        "Action": "Mutual threats; Iran threatens undersea cables",
-        "Location": "Iran, Persian Gulf",
-        "Risk": "CRITICAL"
+        "Actor": "China",
+        "Action": "Unveils supercomputer using domestic CPUs.",
+        "Location": "China",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-18",
-        "Actor": "Israel",
-        "Action": "Restricts fuel, flour imports to Gaza",
-        "Location": "Gaza",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-18",
-        "Actor": "TSMC",
-        "Action": "Record tool orders hint CapEx shockwave",
+        "Actor": "Taiwan",
+        "Action": "Cuts defense budget, impacting drone capabilities.",
         "Location": "Taiwan",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-18",
-        "Actor": "US Marines",
-        "Action": "Practice seizing remote islands in exercise",
-        "Location": "Philippines",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-18",
-        "Actor": "Hapag-Lloyd, CMA CGM, US",
-        "Action": "Suspend Cuba bookings after US executive order",
-        "Location": "Cuba",
+        "Actor": "US",
+        "Action": "Pauses potential military strike on Iran.",
+        "Location": "Persian Gulf, Iran",
         "Risk": "HIGH"
     }
 ]
