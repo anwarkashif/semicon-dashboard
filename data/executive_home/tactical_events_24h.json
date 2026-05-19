@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-19",
-        "Actor": "NATO",
-        "Action": "Weighing military mission if Strait crisis drags",
-        "Location": "Strait of Hormuz",
+        "Actor": "United States, Europe, Iran",
+        "Action": "Iran war straining US-Europe strategic alliance",
+        "Location": "Iran, United States, Europe",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "United States, Chinese Shipping Firms",
+        "Action": "US alleges Chinese firms rigged global supply",
+        "Location": "Global, China, United States",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
         "Actor": "TSMC",
-        "Action": "Plans 1nm roadmap, up to 12 new fabs",
-        "Location": "Global",
+        "Action": "Plans 1nm chip roadmap and 12 new fabs",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "Hezbollah, Israel, NATO",
+        "Action": "Hezbollah attacks intensify; NATO considers Hormuz mission",
+        "Location": "South Lebanon, Israel, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "Ukraine, Russia, Europe",
+        "Action": "Ukraine gaining drone war advantage over Russia",
+        "Location": "Ukraine, Russia, Europe",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
         "Actor": "United States",
-        "Action": "Alleges Chinese firms rigged global container supply",
-        "Location": "Global Shipping / China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Canada",
-        "Action": "Fast-tracks $1.5B graphite mine, answers China control",
-        "Location": "Canada",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "China",
-        "Action": "Unveils GPU-free supercomputer with domestic CPU cores",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Somaliland",
-        "Action": "Recognizes Jerusalem as Israel capital, plans embassy",
-        "Location": "Somaliland / Israel / Red Sea",
-        "Risk": "ELEVATED"
+        "Action": "Undermining relationships with Pacific Island partners",
+        "Location": "Pacific Islands, United States",
+        "Risk": "CRITICAL"
     }
 ]
