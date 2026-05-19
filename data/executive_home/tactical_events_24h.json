@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-19",
-        "Actor": "United States, China",
-        "Action": "Leaders discuss cyber, spying, nuclear issues.",
-        "Location": "Asia",
+        "Actor": "Israel",
+        "Action": "Orders evacuations in South Lebanon",
+        "Location": "South Lebanon/Israel border",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "United States",
+        "Action": "Sanctions Iran; threatens military strike",
+        "Location": "Iran/Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
         "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap, 12 new fabs.",
-        "Location": "Taiwan",
+        "Action": "Plans 1nm roadmap and 12 new fabs",
+        "Location": "Taiwan/Global",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
         "Actor": "China",
-        "Action": "Unveils supercomputer using domestic CPU cores.",
+        "Action": "Unveils GPU-free LineShine supercomputer",
         "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Global",
-        "Action": "Strait of Hormuz crisis cracking petrodollar.",
-        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "Taiwan",
-        "Action": "Cuts special defense budget for drones.",
-        "Location": "Taiwan",
+        "Actor": "Philippines",
+        "Action": "VP impeachment begins amid internal conflict",
+        "Location": "Philippines",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "Russia, Taliban",
-        "Action": "Russia partners with Taliban-ruled Afghanistan at SCO.",
-        "Location": "Afghanistan",
+        "Actor": "Indonesia",
+        "Action": "Rupiah falls as global oil prices surge",
+        "Location": "Indonesia",
         "Risk": "HIGH"
     }
 ]
