@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-18",
+        "Date": "2026-05-19",
+        "Actor": "EU, Russia, Canada",
+        "Action": "EU bans Russian uranium, boosts Canadian exports",
+        "Location": "Europe, Russia, Canada",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "Russia, Afghanistan (Taliban)",
+        "Action": "Russia seeks full partnership with Taliban Afghanistan",
+        "Location": "Central Asia/Afghanistan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
         "Actor": "Iran",
-        "Action": "Iran claims control over Strait of Hormuz.",
+        "Action": "Launches Bitcoin insurance for Hormuz ships",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-18",
-        "Actor": "United States (Senator)",
-        "Action": "US Senator calls to hurt, destroy Iran infrastructure.",
+        "Date": "2026-05-19",
+        "Actor": "Iran",
+        "Action": "Moves missiles into mountain facilities",
         "Location": "Iran",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-18",
-        "Actor": "Iran",
-        "Action": "Iran threatens tariffs on global undersea cables.",
-        "Location": "Global / International waters",
+        "Date": "2026-05-19",
+        "Actor": "Hezbollah",
+        "Action": "Claims drone, rocket attacks on Israeli army",
+        "Location": "Israel/Lebanon border",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-18",
-        "Actor": "United States Marines",
-        "Action": "US Marines practice seizing remote islands.",
-        "Location": "Philippines",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-18",
-        "Actor": "TSMC",
-        "Action": "TSMC record tool orders hint CapEx shockwave.",
-        "Location": "Taiwan / Global semiconductor industry",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-18",
-        "Actor": "United States, China",
-        "Action": "Trump fails to secure rare earth deal.",
-        "Location": "China / Global rare earth market",
-        "Risk": "HIGH"
+        "Date": "2026-05-19",
+        "Actor": "United States",
+        "Action": "Postpones Iran attack after Gulf allies' request",
+        "Location": "Iran/Gulf Region",
+        "Risk": "CRITICAL"
     }
 ]

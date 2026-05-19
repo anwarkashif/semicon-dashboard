@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-18",
-        "Actor": "US, China",
-        "Action": "Leaders discuss cyber, no rare earth deal",
-        "Location": "Beijing, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-18",
-        "Actor": "US, Iran",
-        "Action": "Mutual threats; Iran threatens undersea cables",
-        "Location": "Iran, Persian Gulf",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-18",
-        "Actor": "Israel",
-        "Action": "Restricts fuel, flour imports to Gaza",
-        "Location": "Gaza",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-18",
+        "Date": "2026-05-19",
         "Actor": "TSMC",
-        "Action": "Record tool orders hint CapEx shockwave",
+        "Action": "Plans 1nm chip roadmap, 12 new fabs",
         "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "China",
+        "Action": "Unveils GPU-free LineShine supercomputer",
+        "Location": "China",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-18",
-        "Actor": "US Marines",
-        "Action": "Practice seizing remote islands in exercise",
-        "Location": "Philippines",
+        "Date": "2026-05-19",
+        "Actor": "Iran",
+        "Action": "Strait of Hormuz crisis impacts petrodollar",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "Israel",
+        "Action": "Intercepts Gaza aid flotilla, sparks protests",
+        "Location": "Eastern Mediterranean",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-18",
-        "Actor": "Hapag-Lloyd, CMA CGM, US",
-        "Action": "Suspend Cuba bookings after US executive order",
-        "Location": "Cuba",
+        "Date": "2026-05-19",
+        "Actor": "United States Army",
+        "Action": "Orders 3,000 container-launched cruise missiles",
+        "Location": "United States",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "Russia, Afghanistan",
+        "Action": "Russia pursues full partnership with Taliban",
+        "Location": "Afghanistan",
+        "Risk": "ELEVATED"
     }
 ]
