@@ -130,18 +130,6 @@ def render_weekly_report_body(dashboard_data, selected_actor, df_actions, MAPBOX
     if text_final: render_highlighted_text(text_final, selected_actor)
 
     # ==========================================
-    # 🚢 LIVE MARITIME CHOKEPOINT TRACKER
-    # ==========================================
-    st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
-    st.markdown("##### 🚢 Live Maritime Telemetry")
-    st.caption("Real-time tracking of global shipping lanes and critical maritime chokepoints.")
-    components.iframe(
-        "https://www.marinetraffic.com/en/ais/embed/zoom:4/centery:25.0/centerx:-12.0/maptype:3/shownames:false/mmsi:0/shipid:0/fleet:/fleet_id:/vtypes:/showmenu:false/remember:false",
-        height=600, 
-        scrolling=False
-    )
-
-    # ==========================================
     # LIVE GLOBAL TELEMETRY 
     # ==========================================
     # --- HIDDEN FOR NOW: Migrated to Today's Snippet ---
