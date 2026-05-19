@@ -355,6 +355,62 @@ def check_early_warnings():
     except Exception as e:
         pass 
 
+# ==========================================
+# NEW DYNAMIC ANALYTICS HELPER ENGINES
+# ==========================================
+def calculate_dynamic_posture(df_actions):
+    active_escalations = 0
+    chokepoints = 0
+    geo_shifts = 0
+    
+    if df_actions is not None and not df_actions.empty:
+        for _, row in df_actions.iterrows():
+            risk = str(row.get('Risk', '')).upper()
+            text_parts = [str(row.get(col, '')) for col in ['Action', 'Headline', 'Location', 'Event'] if col in row]
+            text = " ".join(text_parts).lower()
+            
+            if risk == 'CRITICAL':
+                active_escalations += 1
+            elif risk == 'HIGH':
+                geo_shifts += 1
+                
+            if any(kw in text for kw in ['supply', 'semiconductor', 'chip', 'export', 'tsmc', 'asml', 'mineral', 'material', 'foundry', 'node', 'logistics', 'transit', 'strait']):
+                chokepoints += 1
+                
+    sys_status = "DEFCON 3" if active_escalations > 0 else "DEFCON 4"
+    return str(active_escalations), str(chokepoints), str(max(geo_shifts, 1)), sys_status
+
+def calculate_dynamic_velocity(df_actions, keywords, base_trend):
+    score = base_trend[-1]
+    if df_actions is not None and not df_actions.empty:
+        score = 50 
+        for _, row in df_actions.iterrows():
+            text_parts = [str(row.get(col, '')) for col in ['Action', 'Headline', 'Location'] if col in row]
+            text = " ".join(text_parts).lower()
+            if any(kw in text for kw in keywords):
+                risk = str(row.get('Risk', '')).upper()
+                if risk == 'CRITICAL': score += 15
+                elif risk == 'HIGH': score += 10
+                else: score += 5
+    score = min(100, max(0, score))
+    return base_trend[:6] + [score]
+
+def calculate_dynamic_risk(df_actions, keywords, base_val):
+    val = base_val
+    if df_actions is not None and not df_actions.empty:
+        count = 0
+        for _, row in df_actions.iterrows():
+            text_parts = [str(row.get(col, '')) for col in ['Action', 'Headline', 'Location'] if col in row]
+            text = " ".join(text_parts).lower()
+            if any(kw in text for kw in keywords):
+                count += 1
+        val = min(1.0, base_val + (count * 0.08))
+        
+    if val >= 0.8: level = "Critical"
+    elif val >= 0.6: level = "Elevated"
+    elif val >= 0.4: level = "Moderate"
+    else: level = "Low"
+    return val, f"{level} ({int(val*100)}%)"
 
 # ==========================================
 # 5. MAIN EXECUTIVE HOME RENDER
@@ -417,22 +473,33 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # 3. KPI CARDS
+    # 3. KPI CARDS (NOW DYNAMIC)
     st.markdown("### 📊 Global Threat Posture")
+    esc_val, choke_val, geo_val, status_val = calculate_dynamic_posture(df_actions)
+    
     col1, col2, col3, col4 = st.columns(4)
-    with col1: st.metric(label="🔴 Active Escalations", value="3", delta="+1 in last 12h", delta_color="inverse")
-    with col2: st.metric(label="🚢 Supply Chain Chokepoints", value="2", delta="Nominal", delta_color="off")
-    with col3: st.metric(label="🛰️ Geopolitical Shifts", value="5", delta="-2 from yesterday", delta_color="normal")
-    with col4: st.metric(label="🛡️ System Status", value="DEFCON 4", delta="Monitoring Active")
+    with col1: st.metric(label="🔴 Active Escalations", value=esc_val, delta="Live Updated", delta_color="inverse" if int(esc_val)>0 else "off")
+    with col2: st.metric(label="🚢 Supply Chain Chokepoints", value=choke_val, delta="Live Updated", delta_color="off")
+    with col3: st.metric(label="🛰️ Geopolitical Shifts", value=geo_val, delta="Live Updated", delta_color="normal")
+    with col4: st.metric(label="🛡️ System Status", value=status_val, delta="Monitoring Active")
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # 4. THREAT VELOCITY 
+    # 4. THREAT VELOCITY (NOW DYNAMIC)
     st.markdown("### 📈 Threat Velocity (Past 7 Days)")
+    
+    indo_kws = ['taiwan', 'china', 'japan', 'korea', 'indo-pacific', 'south china sea', 'philippines']
+    export_kws = ['export', 'control', 'sanction', 'entity list', 'smic', 'huawei', 'asml', 'node']
+    maritime_kws = ['strait', 'sea', 'maritime', 'ship', 'cargo', 'transit', 'logistics', 'red sea', 'hormuz']
+    
+    indo_trend = calculate_dynamic_velocity(df_actions, indo_kws, [40,45,50,55,60,62,65])
+    export_trend = calculate_dynamic_velocity(df_actions, export_kws, [20,25,30,40,55,70,85])
+    maritime_trend = calculate_dynamic_velocity(df_actions, maritime_kws, [35,38,42,40,44,48,52])
+    
     v1, v2, v3 = st.columns(3)
-    with v1: render_velocity_chart("Indo-Pacific Risk", [40,45,50,55,60,62,65])
-    with v2: render_velocity_chart("Export Control Friction", [20,25,30,40,55,70,85])
-    with v3: render_velocity_chart("Maritime Disruption", [35,38,42,40,44,48,52])
+    with v1: render_velocity_chart("Indo-Pacific Risk", indo_trend)
+    with v2: render_velocity_chart("Export Control Friction", export_trend)
+    with v3: render_velocity_chart("Maritime Disruption", maritime_trend)
         
     with st.expander("⚙️ Threat Velocity Methodology & Approach"):
         st.markdown("""
@@ -595,12 +662,18 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # 8. RISK INDICATORS
+    # 8. RISK INDICATORS (NOW DYNAMIC)
     st.markdown("### 📦 Strategic Risk Indicators")
+    
+    indo_risk_val, indo_risk_text = calculate_dynamic_risk(df_actions, indo_kws, 0.40)
+    wa_kws = ['iran', 'israel', 'red sea', 'yemen', 'houthis', 'suez', 'middle east']
+    wa_risk_val, wa_risk_text = calculate_dynamic_risk(df_actions, wa_kws, 0.30)
+    node_risk_val, node_risk_text = calculate_dynamic_risk(df_actions, export_kws, 0.60)
+    
     col_ind1, col_ind2, col_ind3 = st.columns(3)
-    with col_ind1: st.progress(0.65, text="Indo-Pacific Transit Risk: Elevated (65%)")
-    with col_ind2: st.progress(0.40, text="West Asia Logistics: Moderate (40%)")
-    with col_ind3: st.progress(0.85, text="Advanced Node Controls: Critical (85%)")
+    with col_ind1: st.progress(indo_risk_val, text=f"Indo-Pacific Transit Risk: {indo_risk_text}")
+    with col_ind2: st.progress(wa_risk_val, text=f"West Asia Logistics: {wa_risk_text}")
+    with col_ind3: st.progress(node_risk_val, text=f"Advanced Node Controls: {node_risk_text}")
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
