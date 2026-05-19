@@ -232,7 +232,7 @@ def check_early_warnings():
             
             initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
             
-            # --- RESPONSIVE DEFCON CSS FIX MERGED EXACTLY ---
+            # --- RESPONSIVE DEFCON CSS FIX ---
             html_code = f"""
             <style>
                 body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -413,7 +413,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     all_text = " ".join(all_text_parts).lower()
     
     # RENDER THE ENGINE WITH is_home=True TO TRIGGER THE NOTE AUTOMATICALLY
-    render_decision_support_engine(all_text, is_home=True)
+    render_decision_support_engine(all_text)
     
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
