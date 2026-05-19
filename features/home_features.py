@@ -772,3 +772,22 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
             <div class="maritime-desc">{item['details']}</div>
         </div>
         """, unsafe_allow_html=True)
+
+    st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
+
+    # ==========================================
+    # 10. 🚢 LIVE MARITIME CHOKEPOINT TRACKER
+    # ==========================================
+    st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
+
+    st.markdown("### 🚢 Live Maritime Telemetry")
+    st.caption("Real-time tracking of global shipping lanes and critical maritime chokepoints.")
+
+    try:
+        components.iframe(
+            "https://www.marinetraffic.com/en/ais/embed/zoom:4/centery:25.0/centerx:-12.0/maptype:3/shownames:false/mmsi:0/shipid:0/fleet:/fleet_id:/vtypes:/showmenu:false/remember:false",
+            height=600,
+            scrolling=False
+        )
+    except Exception:
+        st.warning("Unable to load MarineTraffic telemetry feed at this time.")
