@@ -474,8 +474,14 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         available_cols = df_actions.columns.tolist()
         target_cols = ['Date', 'Action', 'Event', 'Headline']
         
-        # Absolute foolproof way to get newest appended rows regardless of what Pandas thinks of the dates
-        display_df = df_actions.sort_index(ascending=False).head(8).copy()
+        # --- FIX: Sort chronologically by the actual Date rather than the physical row index ---
+        temp_df = df_actions.copy()
+        if 'Date' in temp_df.columns:
+            temp_df['Parsed_Date'] = pd.to_datetime(temp_df['Date'], errors='coerce', utc=True)
+            temp_df = temp_df.sort_values(by='Parsed_Date', ascending=False)
+            temp_df = temp_df.drop(columns=['Parsed_Date'])
+            
+        display_df = temp_df.head(8).copy()
             
         cols_to_show = [col for col in target_cols if col in display_df.columns]
         if cols_to_show:
