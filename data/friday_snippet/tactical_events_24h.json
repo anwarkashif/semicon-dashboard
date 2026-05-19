@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-19",
-        "Actor": "Iran",
-        "Action": "Threatens to open new fronts against US",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
         "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap; 12 new fabs",
+        "Action": "Plans 1nm roadmap, up to 12 new fabs.",
         "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "Israel",
-        "Action": "Issues expulsion orders in Southern Lebanon",
-        "Location": "Southern Lebanon",
-        "Risk": "HIGH"
+        "Actor": "United States",
+        "Action": "Sanctions 19 Iran-linked tankers, shadow banks.",
+        "Location": "Iran, Global maritime",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
         "Actor": "China",
-        "Action": "Unveils supercomputer using domestic CPUs",
+        "Action": "Unveils supercomputer using 2.45 million domestic CPUs.",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "Saudi Arabia",
-        "Action": "Launches Middle East's first quantum computer",
-        "Location": "Saudi Arabia",
+        "Actor": "United States",
+        "Action": "Expands Arctic fleet; new icebreaker on patrol.",
+        "Location": "Arctic",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
         "Actor": "United States",
-        "Action": "Expands polar fleet for Arctic operations",
-        "Location": "Arctic",
-        "Risk": "ELEVATED"
+        "Action": "Extends sanctions waiver on Russian oil.",
+        "Location": "Global oil market",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "Israel, Somaliland",
+        "Action": "Potential recognition impacts Red Sea power struggle.",
+        "Location": "Red Sea, Somaliland",
+        "Risk": "HIGH"
     }
 ]
