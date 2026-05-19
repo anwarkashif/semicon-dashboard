@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-19",
-        "Actor": "Israel",
-        "Action": "Orders evacuations in South Lebanon",
-        "Location": "South Lebanon/Israel border",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "United States",
-        "Action": "Sanctions Iran; threatens military strike",
-        "Location": "Iran/Middle East",
+        "Actor": "NATO",
+        "Action": "Weighing military mission if Strait crisis drags",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
         "Actor": "TSMC",
-        "Action": "Plans 1nm roadmap and 12 new fabs",
-        "Location": "Taiwan/Global",
-        "Risk": "CRITICAL"
+        "Action": "Plans 1nm roadmap, up to 12 new fabs",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "United States",
+        "Action": "Alleges Chinese firms rigged global container supply",
+        "Location": "Global Shipping / China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "Canada",
+        "Action": "Fast-tracks $1.5B graphite mine, answers China control",
+        "Location": "Canada",
+        "Risk": "ELEVATED"
     },
     {
         "Date": "2026-05-19",
         "Actor": "China",
-        "Action": "Unveils GPU-free LineShine supercomputer",
+        "Action": "Unveils GPU-free supercomputer with domestic CPU cores",
         "Location": "China",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Philippines",
-        "Action": "VP impeachment begins amid internal conflict",
-        "Location": "Philippines",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "Indonesia",
-        "Action": "Rupiah falls as global oil prices surge",
-        "Location": "Indonesia",
-        "Risk": "HIGH"
+        "Actor": "Somaliland",
+        "Action": "Recognizes Jerusalem as Israel capital, plans embassy",
+        "Location": "Somaliland / Israel / Red Sea",
+        "Risk": "ELEVATED"
     }
 ]
