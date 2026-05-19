@@ -12,6 +12,7 @@ from geopy.geocoders import Nominatim
 
 # --- Newly added import for Decision Support Engine ---
 from features.tactical_features import render_decision_support_engine
+from features.executive_intelligence_note import render_executive_deep_intelligence_note
 
 # ==========================================
 # 1. CSS INJECTION (Self-Contained)
@@ -791,3 +792,10 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         )
     except Exception:
         st.warning("Unable to load MarineTraffic telemetry feed at this time.")
+
+    # ==========================================
+    # 11. 🧠 EXECUTIVE DEEP INTELLIGENCE NOTE
+    # ==========================================
+    st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
+
+    render_executive_deep_intelligence_note()
