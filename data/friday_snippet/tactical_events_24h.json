@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-19",
-        "Actor": "Taiwan",
-        "Action": "Cuts defense budget, impacting drone capabilities.",
+        "Actor": "TSMC",
+        "Action": "Plans 1nm roadmap, up to 12 new fabs.",
         "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap and 12 new fabs.",
-        "Location": "Global Semiconductor Industry",
+        "Actor": "United States",
+        "Action": "Sanctions 19 Iran-linked tankers, shadow banks.",
+        "Location": "Iran, Global maritime",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Iran",
-        "Action": "Launches Bitcoin insurance for Strait of Hormuz shipping.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "United States, China",
-        "Action": "Leaders discuss cyberattacks, espionage during summit.",
-        "Location": "United States, China",
-        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
         "Actor": "China",
-        "Action": "Unveiled GPU-free LineShine supercomputer with domestic CPUs.",
+        "Action": "Unveils supercomputer using 2.45 million domestic CPUs.",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "United States, Iran",
-        "Action": "US delays attack, Iran vows no surrender.",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
+        "Actor": "United States",
+        "Action": "Expands Arctic fleet; new icebreaker on patrol.",
+        "Location": "Arctic",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "United States",
+        "Action": "Extends sanctions waiver on Russian oil.",
+        "Location": "Global oil market",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "Israel, Somaliland",
+        "Action": "Potential recognition impacts Red Sea power struggle.",
+        "Location": "Red Sea, Somaliland",
+        "Risk": "HIGH"
     }
 ]
