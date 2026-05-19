@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-19",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm roadmap, up to 12 new fabs.",
-        "Location": "Taiwan",
+        "Actor": "United States, Europe",
+        "Action": "Iran war straining US-European strategic alliance.",
+        "Location": "Global",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "United States",
-        "Action": "Sanctions 19 Iran-linked tankers, shadow banks.",
-        "Location": "Iran, Global maritime",
+        "Actor": "NATO",
+        "Action": "Weighing Hormuz mission amid strait crisis.",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "Israel, Lebanon",
+        "Action": "Israeli strike increases Lebanon death toll.",
+        "Location": "South Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
+        "Actor": "TSMC",
+        "Action": "Plans 1nm roadmap, builds 12 new fabs.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
         "Actor": "China",
-        "Action": "Unveils supercomputer using 2.45 million domestic CPUs.",
+        "Action": "Unveils supercomputer with domestic CPU cores.",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "United States",
-        "Action": "Expands Arctic fleet; new icebreaker on patrol.",
-        "Location": "Arctic",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "United States",
-        "Action": "Extends sanctions waiver on Russian oil.",
-        "Location": "Global oil market",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Israel, Somaliland",
-        "Action": "Potential recognition impacts Red Sea power struggle.",
-        "Location": "Red Sea, Somaliland",
+        "Actor": "Canada, China",
+        "Action": "Canada fast-tracks graphite mine countering China.",
+        "Location": "Canada",
         "Risk": "HIGH"
     }
 ]
