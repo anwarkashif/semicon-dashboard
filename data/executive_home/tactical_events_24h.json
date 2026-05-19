@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-19",
+        "Actor": "United States, China",
+        "Action": "Leaders discuss cyber, spying, nuclear issues.",
+        "Location": "Asia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-19",
         "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap, 12 new fabs",
+        "Action": "Plans 1nm chip roadmap, 12 new fabs.",
         "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
         "Actor": "China",
-        "Action": "Unveils GPU-free LineShine supercomputer",
+        "Action": "Unveils supercomputer using domestic CPU cores.",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "Iran",
-        "Action": "Strait of Hormuz crisis impacts petrodollar",
+        "Actor": "Global",
+        "Action": "Strait of Hormuz crisis cracking petrodollar.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "Israel",
-        "Action": "Intercepts Gaza aid flotilla, sparks protests",
-        "Location": "Eastern Mediterranean",
+        "Actor": "Taiwan",
+        "Action": "Cuts special defense budget for drones.",
+        "Location": "Taiwan",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-19",
-        "Actor": "United States Army",
-        "Action": "Orders 3,000 container-launched cruise missiles",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Russia, Afghanistan",
-        "Action": "Russia pursues full partnership with Taliban",
+        "Actor": "Russia, Taliban",
+        "Action": "Russia partners with Taliban-ruled Afghanistan at SCO.",
         "Location": "Afghanistan",
-        "Risk": "ELEVATED"
+        "Risk": "HIGH"
     }
 ]
