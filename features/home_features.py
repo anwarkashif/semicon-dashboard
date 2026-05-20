@@ -15,6 +15,13 @@ import folium
 from folium.plugins import HeatMap, MarkerCluster
 from streamlit_folium import st_folium
 
+# --- Strategic Constants Import ---
+try:
+    from utils.constants import INFRASTRUCTURE_DATA, COUNTRY_INFO
+except ImportError:
+    INFRASTRUCTURE_DATA = {}
+    COUNTRY_INFO = {}
+
 # --- Existing imports for Decision Support Engine ---
 from features.tactical_features import render_decision_support_engine
 from features.executive_intelligence_note import render_executive_deep_intelligence_note
@@ -131,13 +138,14 @@ def render_flash_alert(df_actions):
 # ==========================================
 @st.cache_data(show_spinner=False, ttl=86400) 
 def resolve_location(query):
-    """
-    Dynamically fetches coordinates. 
-    Uses expanded baseline to bypass API limits for major players.
-    Applies strict sleep delays to prevent 429 API blocks.
-    """
     if not query or not isinstance(query, str):
         return None, None, "Unknown"
+
+    if INFRASTRUCTURE_DATA:
+        for category, sites in INFRASTRUCTURE_DATA.items():
+            for site in sites:
+                if query.lower() in site['name'].lower() or site['name'].lower() in query.lower():
+                    return site['lat'], site['lon'], site['name']
 
     baseline = {
         "TSMC": (24.77, 120.99, "TSMC Hsinchu"), "Taiwan": (23.7, 120.9, "Taiwan"),
@@ -238,7 +246,6 @@ def check_early_warnings():
             
             initial_clock = f"{h:02d}:{m:02d}:{s:02d}"
             
-            # --- RESPONSIVE DEFCON CSS FIX ---
             html_code = f"""
             <style>
                 body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -273,7 +280,6 @@ def check_early_warnings():
                 @keyframes pulseBackground {{ 0% {{ background-position: 0% 50%; }} 50% {{ background-position: 100% 50%; }} 100% {{ background-position: 0% 50%; }} }}
                 @keyframes blinkText {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
                 
-                /* Responsive Flex Wrap Fix */
                 .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-top: 0px; margin-bottom: 8px; flex-wrap: wrap; gap: 10px; }}
                 .title {{ font-size: 1.17em; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin:0; display:flex; align-items:center; flex: 1 1 100%; }}
                 .timer-container {{ display: flex; align-items: center; flex: 1 1 100%; justify-content: flex-start; margin-bottom: 5px; }}
@@ -332,7 +338,6 @@ def check_early_warnings():
             components.html(html_code, height=245) 
             
         else:
-            # --- NEW LIVE IST CLOCK FOR NOMINAL STATE ---
             html_code = f"""
             <style>
                 body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -431,26 +436,18 @@ def calculate_dynamic_risk(df_actions, keywords, base_val):
 # ==========================================
 @st.cache_data(show_spinner=False, ttl=3600)
 def fetch_live_maritime_intel():
-    """
-    Attempts to dynamically scrape live incident data from UKMTO and MSCIO.
-    Implements a strict fail-safe fallback to ensure the dashboard remains populated 
-    even if the military servers apply Cloudflare 403 blocks against automated pings.
-    """
     import requests
     feed_data = []
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
     
-    # 1. Active Scrape Attempt 
     try:
         from bs4 import BeautifulSoup
         res = requests.get("https://www.ukmto.org/recent-incidents", headers=headers, timeout=5)
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, 'html.parser')
-            # Extract live data logic parses here when allowed by server
     except Exception:
         pass
 
-    # 2. Resilient OSINT Fallback Data (Guarantees zero-downtime rendering if blocked)
     if not feed_data:
         feed_data = [
             {"source": "🇬🇧 UKMTO", "type": "Suspicious Activity", "time": "Last 12 Hours", "details": "UKMTO has received a report of an incident 38NM northeast of Fujairah, UAE. Vessel reported unauthorized personnel approach. Authorities continue to investigate."},
@@ -479,18 +476,12 @@ GEOCODER_MAP = {
 
 @st.cache_data(ttl=86400, show_spinner=False)
 def intelligent_geocode(location_name):
-    """
-    Converts geopolitical locations into coordinates specifically for the Folium map.
-    Cached for 24h for performance optimization.
-    """
     if not location_name or pd.isna(location_name):
         return None
 
-    # Fast local lookup
     if location_name in GEOCODER_MAP:
         return GEOCODER_MAP[location_name]
 
-    # Dynamic geocoding
     try:
         time.sleep(0.5)
         location = folium_geolocator.geocode(location_name)
@@ -501,11 +492,45 @@ def intelligent_geocode(location_name):
 
     return None
 
+def get_strategic_asset_match(row):
+    """
+    Scans a news row against the exact sites in constants.py.
+    If a hit is found, it returns the specific site dictionary and its strategic category.
+    """
+    if not INFRASTRUCTURE_DATA:
+        return None, None
+        
+    headline = str(row.get('Headline', '')).lower()
+    action = str(row.get('Action', '')).lower()
+    loc = str(row.get('Location', '')).lower()
+    actor = str(row.get('Actor', '')).lower()
+    
+    combined_text = f"{headline} {action} {loc} {actor}"
+    
+    # Core identifiers from constants to force exact asset matching
+    key_identifiers = ["tsmc", "samsung", "intel", "smic", "globalfoundries", "micron", "asml", 
+                       "bayan obo", "malacca", "hormuz", "bab el-mandeb", "suez", "taiwan strait", 
+                       "severomorsk", "kadamba", "cape canaveral", "jiuquan"]
+
+    for category, sites in INFRASTRUCTURE_DATA.items():
+        for site in sites:
+            site_name_lower = site['name'].lower()
+            
+            # Scenario A: The location or actor exactly matches a specific site string
+            if len(loc) > 3 and loc in site_name_lower:
+                return site, category
+            if len(actor) > 2 and actor in site_name_lower:
+                return site, category
+                
+            # Scenario B: A major corporate or geographic identifier hits our database
+            for identifier in key_identifiers:
+                if identifier in combined_text and identifier in site_name_lower:
+                    return site, category
+
+    return None, None
+
+
 def render_tactical_conflict_overlay(df_actions):
-    """
-    Complementary Folium-based Macro-Strategic overlay featuring heatmaps,
-    conflict polygons, and NASA FIRMS active thermal signatures.
-    """
     st.markdown("""
     ### 🗺️ Multi-Domain Conflict & Thermal Radar Overlay
     """)
@@ -514,18 +539,12 @@ def render_tactical_conflict_overlay(df_actions):
         "Live geopolitical telemetry mapping with maritime disruption zones, semiconductor chokepoints, and strategic conflict overlays."
     )
 
-    # ==========================================
-    # BASE MAP
-    # ==========================================
     m = folium.Map(
         location=[25.0, 60.0],
         zoom_start=3,
         tiles="CartoDB dark_matter"
     )
 
-    # ==========================================
-    # LIVE WMS / WMTS LAYERS
-    # ==========================================
     folium.raster_layers.WmsTileLayer(
         url="https://firms.modaps.eosdis.nasa.gov/mapserver/wms/fires",
         layers="fires_viirs_24",
@@ -544,48 +563,25 @@ def render_tactical_conflict_overlay(df_actions):
         control=True
     ).add_to(m)
 
-    # ==========================================
-    # STRATEGIC CONFLICT ZONES
-    # ==========================================
     conflict_zones = [
         {
             "name": "Red Sea Disruption Zone",
-            "coords": [
-                [12.0, 42.0],
-                [16.0, 42.0],
-                [16.0, 46.0],
-                [12.0, 46.0]
-            ],
+            "coords": [[12.0, 42.0], [16.0, 42.0], [16.0, 46.0], [12.0, 46.0]],
             "color": "red"
         },
         {
             "name": "South China Sea Strategic Friction Zone",
-            "coords": [
-                [8.0, 109.0],
-                [20.0, 109.0],
-                [20.0, 121.0],
-                [8.0, 121.0]
-            ],
+            "coords": [[8.0, 109.0], [20.0, 109.0], [20.0, 121.0], [8.0, 121.0]],
             "color": "orange"
         },
         {
             "name": "Black Sea / Ukraine Theater",
-            "coords": [
-                [42.0, 27.0],
-                [47.0, 27.0],
-                [47.0, 40.0],
-                [42.0, 40.0]
-            ],
+            "coords": [[42.0, 27.0], [47.0, 27.0], [47.0, 40.0], [42.0, 40.0]],
             "color": "darkred"
         },
         {
             "name": "Persian Gulf / Iran Tension Zone",
-            "coords": [
-                [24.0, 48.0],
-                [30.0, 48.0],
-                [30.0, 57.0],
-                [24.0, 57.0]
-            ],
+            "coords": [[24.0, 48.0], [30.0, 48.0], [30.0, 57.0], [24.0, 57.0]],
             "color": "crimson"
         }
     ]
@@ -600,113 +596,144 @@ def render_tactical_conflict_overlay(df_actions):
         ).add_to(m)
 
     # ==========================================
-    # DYNAMIC EVENT EXTRACTION
+    # STRATEGIC ASSET INFRASTRUCTURE (Static Layer Toggles)
+    # ==========================================
+    if INFRASTRUCTURE_DATA:
+        asset_colors = {
+            "Semiconductor Fabs": "#00bfff",
+            "Critical Mineral Sites": "#10b981",
+            "Maritime Chokepoints": "#3b82f6",
+            "Gulf FDI & Capital Diplomacy": "#f59e0b",
+            "Naval Order of Battle & Strategic Bases": "#8b5cf6",
+            "Aerospace & Space Force Installations": "#f43f5e"
+        }
+
+        for category, sites in INFRASTRUCTURE_DATA.items():
+            fg = folium.FeatureGroup(name=f"📍 {category}", show=False)
+            color = asset_colors.get(category, "#ffffff")
+            
+            for site in sites:
+                folium.CircleMarker(
+                    location=[site["lat"], site["lon"]],
+                    radius=5,
+                    popup=f"<b>{category}</b><br>{site['name']}",
+                    tooltip=f"{category}: {site['name']}",
+                    color=color,
+                    fill=True,
+                    fill_opacity=0.7,
+                    weight=1
+                ).add_to(fg)
+            
+            fg.add_to(m)
+
+    # ==========================================
+    # DYNAMIC EVENT EXTRACTION WITH CONSTANTS.PY HIGHLIGHTING
     # ==========================================
     marker_cluster = MarkerCluster(
-        name="Verified Strategic Events"
+        name="🚨 Verified Strategic Events (Live)"
     ).add_to(m)
 
     event_points = []
     heat_data = []
 
-    # Extract live dataframe locations
     if (
         df_actions is not None
         and not df_actions.empty
         and 'Location' in df_actions.columns
     ):
         for _, row in df_actions.iterrows():
-            location_str = str(
-                row.get('Location', '')
-            ).strip()
+            location_str = str(row.get('Location', '')).strip()
+            actor = str(row.get('Actor', 'Unknown Actor'))
+            headline = str(row.get('Headline', row.get('Action', 'Strategic Event')))
+            risk_val = "CRITICAL" if str(row.get('Risk', '')).upper() == 'CRITICAL' else "HIGH"
 
-            coords = intelligent_geocode(location_str)
+            # 1. INTERCEPT: Does this live news hit our constants.py database?
+            matched_site, matched_category = get_strategic_asset_match(row)
 
-            if coords:
-                lat, lon = coords
-
-                name = row.get(
-                    'Action',
-                    row.get('Event', 'Strategic Event')
-                )
-
-                actor = row.get(
-                    'Actor',
-                    'Unknown Actor'
-                )
-
+            if matched_site:
+                # IT'S A MATCH: Create a rich, explanatory HTML popup
+                lat, lon = matched_site['lat'], matched_site['lon']
+                site_name = matched_site['name']
+                
+                popup_html = f"""
+                <div style='min-width: 250px; font-family: sans-serif;'>
+                    <h4 style='color: #ef4444; margin-top: 0px; margin-bottom: 8px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>🎯 STRATEGIC ASSET ALERT</h4>
+                    <b style='color: #000;'>📍 The Spot:</b> <span style='color: #333;'>{site_name}</span><br><br>
+                    <b style='color: #000;'>⚡ What is happening:</b> <span style='color: #333;'>{headline}</span><br><br>
+                    <b style='color: #000;'>🛡️ Why it's important:</b> <span style='color: #333;'>This location is tracked as a critical node in <b>{matched_category}</b>. Disruption here has immediate macro-strategic ripple effects.</span>
+                </div>
+                """
+                
                 event_points.append({
-                    "name": f"{actor}: {name} ({location_str})",
+                    "name": site_name,
                     "lat": lat,
                     "lon": lon,
-                    "risk": "HIGH"
+                    "risk": risk_val,
+                    "is_asset_match": True,
+                    "popup_html": popup_html
                 })
+                heat_data.append([lat, lon, 1.0])
 
-                heat_data.append([lat, lon, 0.8])
+            else:
+                # STANDARD GEOCODE: It's just a general location (e.g., "China", "Europe")
+                coords = intelligent_geocode(location_str)
 
-    # ==========================================
-    # FALLBACK STRATEGIC POINTS
-    # ==========================================
+                if coords:
+                    lat, lon = coords
+                    popup_html = f"<b>{actor}:</b> {headline} <br><i>(General Vicinity: {location_str})</i>"
+
+                    event_points.append({
+                        "name": f"{actor}: {headline}",
+                        "lat": lat,
+                        "lon": lon,
+                        "risk": risk_val,
+                        "is_asset_match": False,
+                        "popup_html": popup_html
+                    })
+                    heat_data.append([lat, lon, 0.8])
+
+    # Default fallback if empty
     if len(event_points) == 0:
         event_points = [
-            {
-                "name": "Taiwan Semiconductor Fabrication Corridor",
-                "lat": 24.14,
-                "lon": 120.67,
-                "risk": "HIGH"
-            },
-            {
-                "name": "Bab-el-Mandeb Maritime Disruption",
-                "lat": 12.58,
-                "lon": 43.33,
-                "risk": "CRITICAL"
-            },
-            {
-                "name": "Bayan Obo Rare Earth Mining Hub",
-                "lat": 41.78,
-                "lon": 109.97,
-                "risk": "HIGH"
-            },
-            {
-                "name": "Dholera Semiconductor Fabrication Site",
-                "lat": 22.24,
-                "lon": 72.19,
-                "risk": "ELEVATED"
-            }
+            {"name": "Taiwan Semiconductor Fabrication Corridor", "lat": 24.14, "lon": 120.67, "risk": "HIGH", "is_asset_match": False, "popup_html": "Taiwan Corridor Event"},
+            {"name": "Bab-el-Mandeb Maritime Disruption", "lat": 12.58, "lon": 43.33, "risk": "CRITICAL", "is_asset_match": False, "popup_html": "Bab-el-Mandeb Event"}
         ]
-
-        heat_data = [
-            [24.14, 120.67, 0.9],
-            [12.58, 43.33, 1.0],
-            [41.78, 109.97, 0.7],
-            [22.24, 72.19, 0.5]
-        ]
+        heat_data = [[24.14, 120.67, 0.9], [12.58, 43.33, 1.0]]
 
     # ==========================================
-    # RENDER MARKERS
+    # RENDER THE MARKERS
     # ==========================================
     for event in event_points:
-        color = (
-            "red"
-            if event["risk"] == "CRITICAL"
-            else "orange"
-            if event["risk"] == "HIGH"
-            else "yellow"
-        )
+        color = "red" if event["risk"] == "CRITICAL" else "orange" if event["risk"] == "HIGH" else "yellow"
 
-        folium.CircleMarker(
-            location=[event["lat"], event["lon"]],
-            radius=9,
-            popup=f"<b>{event['name']}</b>",
-            color=color,
-            fill=True,
-            fill_opacity=0.8,
-            weight=2
-        ).add_to(marker_cluster)
+        if event.get("is_asset_match", False):
+            # Visually emphasize constants.py hits with a targeted Icon Marker and a pulsating ring
+            folium.Marker(
+                location=[event["lat"], event["lon"]],
+                popup=folium.Popup(event["popup_html"], max_width=350),
+                icon=folium.Icon(color='red', icon='crosshairs', prefix='fa')
+            ).add_to(marker_cluster)
+            
+            folium.CircleMarker(
+                location=[event["lat"], event["lon"]],
+                radius=18,
+                color="red",
+                fill=True,
+                fill_opacity=0.3,
+                weight=3
+            ).add_to(marker_cluster)
+        else:
+            # Standard circle marker for general geocodes
+            folium.CircleMarker(
+                location=[event["lat"], event["lon"]],
+                radius=9,
+                popup=folium.Popup(event["popup_html"], max_width=300),
+                color=color,
+                fill=True,
+                fill_opacity=0.8,
+                weight=2
+            ).add_to(marker_cluster)
 
-    # ==========================================
-    # HEATMAP
-    # ==========================================
     if heat_data:
         HeatMap(
             heat_data,
@@ -716,9 +743,6 @@ def render_tactical_conflict_overlay(df_actions):
             max_zoom=5
         ).add_to(m)
 
-    # ==========================================
-    # LAYER CONTROLS
-    # ==========================================
     folium.LayerControl().add_to(m)
 
     st_folium(
@@ -728,16 +752,12 @@ def render_tactical_conflict_overlay(df_actions):
         returned_objects=[]
     )
 
-    # ==========================================
-    # DYNAMIC INTELLIGENCE TEXT GENERATION
-    # ==========================================
     active_locations = []
     for e in event_points:
         if '(' in e['name']:
             loc = e['name'].split('(')[-1].strip(')')
             active_locations.append(loc)
     
-    # Remove duplicates
     active_locations = list(set(active_locations))
 
     if len(active_locations) > 0:
@@ -749,9 +769,6 @@ def render_tactical_conflict_overlay(df_actions):
 
     event_count = len(event_points)
 
-    # ==========================================
-    # INTELLIGENCE NOTE (NOW WITH THE PROPER UPDATE)
-    # ==========================================
     st.markdown(f"""
     <div style="
         background: rgba(17,17,17,0.85);
@@ -804,8 +821,6 @@ def render_tactical_conflict_overlay(df_actions):
 # 5. MAIN EXECUTIVE HOME RENDER
 # ==========================================
 def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox_token):
-    
-    # --- NEW INTEGRATION: Load isolated Executive Home data and complement existing feed ---
     exec_data_path = 'data/executive_home/tactical_events_24h.json'
     if os.path.exists(exec_data_path):
         try:
@@ -813,19 +828,16 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 exec_events = json.load(f)
                 df_exec = pd.DataFrame(exec_events)
                 
-                # Check if 'Headline' is missing but 'Action' exists (to match main dataframe format)
                 if 'Headline' not in df_exec.columns and 'Action' in df_exec.columns:
                     df_exec['Headline'] = df_exec['Action']
                     
-                # Merge with existing df_actions to enrich the analysis
                 if not df_exec.empty:
                     if df_actions.empty:
                         df_actions = df_exec
                     else:
                         df_actions = pd.concat([df_exec, df_actions], ignore_index=True)
         except Exception as e:
-            pass # Fail silently and safely rely on the master df_actions if reading fails
-    # -----------------------------------------------------------------------------------
+            pass
 
     inject_executive_home_css()
 
@@ -842,9 +854,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     check_early_warnings()
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # ==========================================
-    # 2.2 📝 STRATEGIC COMMAND ANALYSIS
-    # ==========================================
     st.markdown("### 📝 Strategic Command Analysis (12H Briefing)")
     
     live_summary = dashboard_data.get('executive_summary', None) if dashboard_data else None
@@ -861,11 +870,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
     
-    # ==========================================
-    # 2.5 🧠 STRATEGIC DECISION SUPPORT ENGINE
-    # ==========================================
-    
-    # --- ADDED: Robust Tactical Text Aggregation ---
     all_text_parts = []
     
     if not df_actions.empty:
@@ -875,12 +879,10 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 
     all_text = " ".join(all_text_parts).lower()
     
-    # RENDER THE ENGINE WITH is_home=True TO TRIGGER THE NOTE AUTOMATICALLY
     render_decision_support_engine(all_text)
     
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # 3. KPI CARDS (NOW DYNAMIC)
     st.markdown("### 📊 Global Threat Posture")
     esc_val, choke_val, geo_val, status_val = calculate_dynamic_posture(df_actions)
     
@@ -892,7 +894,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # 4. THREAT VELOCITY (NOW DYNAMIC)
     st.markdown("### 📈 Threat Velocity (Past 7 Days)")
     
     indo_kws = ['taiwan', 'china', 'japan', 'korea', 'indo-pacific', 'south china sea', 'philippines']
@@ -917,7 +918,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # 5. HOT ACTOR TELEMETRY
     st.markdown("### 🔥 Hot Actor Telemetry")
     hot_actors = get_hot_actors(df_actions)
     if hot_actors:
@@ -942,13 +942,11 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # 6. RECENT TACTICAL ALERTS 
     st.markdown("### ⚠️ Recent Tactical Alerts")
     if not df_actions.empty:
         available_cols = df_actions.columns.tolist()
         target_cols = ['Date', 'Action', 'Event', 'Headline']
         
-        # --- FIX: Sort chronologically by the actual Date rather than the physical row index ---
         temp_df = df_actions.copy()
         if 'Date' in temp_df.columns:
             temp_df['Parsed_Date'] = pd.to_datetime(temp_df['Date'], errors='coerce', utc=True)
@@ -961,7 +959,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         if cols_to_show:
             display_df = display_df[cols_to_show]
             
-        # Force 'Date' to display whatever raw text the LLM wrote to prevent rendering crashes
         if 'Date' in display_df.columns:
             display_df['Date'] = display_df['Date'].astype(str)
             
@@ -971,9 +968,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
             
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # ==========================================
-    # 7. 🌍 STRATEGIC GEOSPATIAL INTELLIGENCE LAYER (PyDeck)
-    # ==========================================
     st.markdown("### 🌍 Strategic Geospatial Intelligence Layer")
     st.caption("Live global telemetry mapping with active 13-sector radar scanning.")
     
@@ -1069,16 +1063,10 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # ==========================================
-    # 7.5 🗺️ MULTI-DOMAIN CONFLICT & THERMAL RADAR OVERLAY (Folium)
-    # ==========================================
     render_tactical_conflict_overlay(df_actions)
     
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # ==========================================
-    # 8. RISK INDICATORS (NOW DYNAMIC)
-    # ==========================================
     st.markdown("### 📦 Strategic Risk Indicators")
     
     indo_risk_val, indo_risk_text = calculate_dynamic_risk(df_actions, indo_kws, 0.40)
@@ -1093,9 +1081,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # ==========================================
-    # 9. 🌊 NATIVE LIVE MARITIME FEED
-    # ==========================================
     st.markdown("### 🌊 Live Combined Maritime Security Feed")
     st.caption("Cross-referenced live maritime security advisories parsed directly into the dashboard.")
 
@@ -1120,7 +1105,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     """, unsafe_allow_html=True)
 
     for item in maritime_intel:
-        # Dynamic color coding based on severity keywords
         border_color = "#ef4444" if "Attack" in item['type'] else "#eab308" if "Advisory" in item['type'] or "Warning" in item['type'] else "#3b82f6"
         
         st.markdown(f"""
@@ -1136,9 +1120,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # ==========================================
-    # 10. 🚢 LIVE MARITIME CHOKEPOINT TRACKER
-    # ==========================================
     st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
 
     st.markdown("### 🚢 Live Maritime Telemetry")
@@ -1153,9 +1134,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     except Exception:
         st.warning("Unable to load MarineTraffic telemetry feed at this time.")
 
-    # ==========================================
-    # 11. 🧠 EXECUTIVE DEEP INTELLIGENCE NOTE
-    # ==========================================
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
     render_executive_deep_intelligence_note()
