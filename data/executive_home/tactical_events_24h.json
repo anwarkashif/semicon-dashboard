@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-19",
-        "Actor": "United States, Europe, Iran",
-        "Action": "Iran war straining US-Europe strategic alliance",
-        "Location": "Iran, United States, Europe",
+        "Date": "2026-05-20",
+        "Actor": "Middle East Region",
+        "Action": "Escalating crisis impacting global economy, alliances.",
+        "Location": "Middle East, Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-19",
-        "Actor": "United States, Chinese Shipping Firms",
-        "Action": "US alleges Chinese firms rigged global supply",
-        "Location": "Global, China, United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
+        "Date": "2026-05-20",
         "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap and 12 new fabs",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Hezbollah, Israel, NATO",
-        "Action": "Hezbollah attacks intensify; NATO considers Hormuz mission",
-        "Location": "South Lebanon, Israel, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Ukraine, Russia, Europe",
-        "Action": "Ukraine gaining drone war advantage over Russia",
-        "Location": "Ukraine, Russia, Europe",
+        "Action": "Plans 1nm chip roadmap and 12 new fabs.",
+        "Location": "Global Semiconductor Supply Chain",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-19",
-        "Actor": "United States",
-        "Action": "Undermining relationships with Pacific Island partners",
-        "Location": "Pacific Islands, United States",
+        "Date": "2026-05-20",
+        "Actor": "China",
+        "Action": "Advances AI strategy and memory chip IPO plans.",
+        "Location": "China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "NATO",
+        "Action": "Center of gravity shifting eastward amid Ukraine lessons.",
+        "Location": "Eastern Europe, Ukraine",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "United States, Europe",
+        "Action": "Iran war straining US-European strategic alliance.",
+        "Location": "Transatlantic Alliance",
         "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "Global Cybercriminals",
+        "Action": "AI-enabled hackers discovering zero-day vulnerabilities.",
+        "Location": "Global Cyberspace",
+        "Risk": "HIGH"
     }
 ]
