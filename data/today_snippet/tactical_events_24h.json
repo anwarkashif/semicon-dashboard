@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-20",
-        "Actor": "United States, Europe, Iran, NATO",
-        "Action": "Iran war strains US-Europe alliance, NATO eyes Hormuz.",
-        "Location": "Middle East, Strait of Hormuz, Europe",
+        "Actor": "International Monetary Fund",
+        "Action": "Warns of worsening economic impact from Iran war",
+        "Location": "Global, Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "China, TSMC",
-        "Action": "China unveils domestic supercomputer, TSMC plans 1nm fabs.",
-        "Location": "China, Taiwan",
+        "Actor": "United States, Europe",
+        "Action": "Strategic alliance breaking due to Iran war",
+        "Location": "Global, Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "United Kingdom, NATO, Somaliland",
-        "Action": "Naval deployments for Hormuz; Red Sea power struggle.",
-        "Location": "Strait of Hormuz, Red Sea",
+        "Actor": "China, Russia",
+        "Action": "Declared 'multipolar world' vision after summit",
+        "Location": "Global",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "United States",
-        "Action": "US torpedoes Pacific ties; acknowledges Indo-Pacific gap.",
-        "Location": "Indo-Pacific, Pacific Islands",
+        "Actor": "United States (Trump)",
+        "Action": "Potential cancellation of $14bn Taiwan arms deal",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "China",
+        "Action": "Banned Nvidia's gaming chip sales",
+        "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "Ukraine, Russia, NATO",
-        "Action": "Ukraine winning drone war; NATO focus shifts eastward.",
-        "Location": "Ukraine, Eastern Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "United States, China",
-        "Action": "US alleges China rigged global shipping supply.",
-        "Location": "Global (shipping, supply chain)",
+        "Actor": "TSMC",
+        "Action": "Plans 1nm chip roadmap and 12 new fabs",
+        "Location": "Global (Taiwan)",
         "Risk": "HIGH"
     }
 ]
