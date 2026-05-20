@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-19",
-        "Actor": "NATO",
-        "Action": "Weighing military mission if Strait crisis drags",
-        "Location": "Strait of Hormuz",
+        "Date": "2026-05-20",
+        "Actor": "Middle East Region",
+        "Action": "Escalating crisis impacting global economy, alliances.",
+        "Location": "Middle East, Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-19",
+        "Date": "2026-05-20",
         "Actor": "TSMC",
-        "Action": "Plans 1nm roadmap, up to 12 new fabs",
-        "Location": "Global",
+        "Action": "Plans 1nm chip roadmap and 12 new fabs.",
+        "Location": "Global Semiconductor Supply Chain",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-19",
-        "Actor": "United States",
-        "Action": "Alleges Chinese firms rigged global container supply",
-        "Location": "Global Shipping / China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Canada",
-        "Action": "Fast-tracks $1.5B graphite mine, answers China control",
-        "Location": "Canada",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-05-19",
+        "Date": "2026-05-20",
         "Actor": "China",
-        "Action": "Unveils GPU-free supercomputer with domestic CPU cores",
+        "Action": "Advances AI strategy and memory chip IPO plans.",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-19",
-        "Actor": "Somaliland",
-        "Action": "Recognizes Jerusalem as Israel capital, plans embassy",
-        "Location": "Somaliland / Israel / Red Sea",
-        "Risk": "ELEVATED"
+        "Date": "2026-05-20",
+        "Actor": "NATO",
+        "Action": "Center of gravity shifting eastward amid Ukraine lessons.",
+        "Location": "Eastern Europe, Ukraine",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "United States, Europe",
+        "Action": "Iran war straining US-European strategic alliance.",
+        "Location": "Transatlantic Alliance",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "Global Cybercriminals",
+        "Action": "AI-enabled hackers discovering zero-day vulnerabilities.",
+        "Location": "Global Cyberspace",
+        "Risk": "HIGH"
     }
 ]

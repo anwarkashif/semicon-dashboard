@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-19",
+        "Date": "2026-05-20",
+        "Actor": "Iran",
+        "Action": "Warns of 'new fronts' as war intensifies.",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "NATO",
+        "Action": "Considers Strait of Hormuz security mission.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
         "Actor": "TSMC",
-        "Action": "Plans 1nm roadmap, up to 12 new fabs.",
+        "Action": "Plans 1nm chip roadmap, up to 12 fabs.",
         "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-19",
+        "Date": "2026-05-20",
         "Actor": "United States",
-        "Action": "Sanctions 19 Iran-linked tankers, shadow banks.",
-        "Location": "Iran, Global maritime",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "China",
-        "Action": "Unveils supercomputer using 2.45 million domestic CPUs.",
-        "Location": "China",
+        "Action": "Alleges Chinese shipping giants rigged supply.",
+        "Location": "Global, China",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-19",
+        "Date": "2026-05-20",
         "Actor": "United States",
-        "Action": "Expands Arctic fleet; new icebreaker on patrol.",
-        "Location": "Arctic",
+        "Action": "Damages relations with Pacific Island partners.",
+        "Location": "Pacific Islands",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-19",
-        "Actor": "United States",
-        "Action": "Extends sanctions waiver on Russian oil.",
-        "Location": "Global oil market",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "Israel, Somaliland",
-        "Action": "Potential recognition impacts Red Sea power struggle.",
-        "Location": "Red Sea, Somaliland",
+        "Date": "2026-05-20",
+        "Actor": "Ukraine",
+        "Action": "Winning drone war against Russian forces.",
+        "Location": "Ukraine, Russia",
         "Risk": "HIGH"
     }
 ]

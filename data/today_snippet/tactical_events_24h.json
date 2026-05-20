@@ -1,37 +1,44 @@
 [
     {
-        "Date": "2026-05-19",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap, 12 new fabs",
-        "Location": "Global",
+        "Date": "2026-05-20",
+        "Actor": "United States, Europe, Iran, NATO",
+        "Action": "Iran war strains US-Europe alliance, NATO eyes Hormuz.",
+        "Location": "Middle East, Strait of Hormuz, Europe",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-19",
+        "Date": "2026-05-20",
+        "Actor": "China, TSMC",
+        "Action": "China unveils domestic supercomputer, TSMC plans 1nm fabs.",
+        "Location": "China, Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "United Kingdom, NATO, Somaliland",
+        "Action": "Naval deployments for Hormuz; Red Sea power struggle.",
+        "Location": "Strait of Hormuz, Red Sea",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
         "Actor": "United States",
-        "Action": "Imposes new sanctions on Iran's oil network",
-        "Location": "Iran",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-19",
-        "Actor": "China",
-        "Action": "Unveils supercomputer using domestic CPU cores",
-        "Location": "China",
+        "Action": "US torpedoes Pacific ties; acknowledges Indo-Pacific gap.",
+        "Location": "Indo-Pacific, Pacific Islands",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-19",
-        "Actor": "Somaliland, Israel",
-        "Action": "Potential Somaliland recognition impacting Red Sea",
-        "Location": "Red Sea, Somaliland",
+        "Date": "2026-05-20",
+        "Actor": "Ukraine, Russia, NATO",
+        "Action": "Ukraine winning drone war; NATO focus shifts eastward.",
+        "Location": "Ukraine, Eastern Europe",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-19",
-        "Actor": "US Marine Corps",
-        "Action": "Acknowledges Indo-Pacific strategic gap",
-        "Location": "Indo-Pacific",
+        "Date": "2026-05-20",
+        "Actor": "United States, China",
+        "Action": "US alleges China rigged global shipping supply.",
+        "Location": "Global (shipping, supply chain)",
         "Risk": "HIGH"
     }
 ]
