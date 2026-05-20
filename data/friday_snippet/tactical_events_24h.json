@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-20",
-        "Actor": "Iran",
-        "Action": "Warns of 'new fronts' as war intensifies.",
-        "Location": "Middle East",
+        "Actor": "United States, Europe",
+        "Action": "Iran war breaking US-European strategic alliance.",
+        "Location": "Middle East, Transatlantic",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "NATO",
-        "Action": "Considers Strait of Hormuz security mission.",
-        "Location": "Strait of Hormuz",
+        "Actor": "United Kingdom, South Korea, China",
+        "Action": "Military deploys, tankers transit volatile Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Suez Canal",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap, up to 12 fabs.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "United States",
-        "Action": "Alleges Chinese shipping giants rigged supply.",
-        "Location": "Global, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "United States",
-        "Action": "Damages relations with Pacific Island partners.",
-        "Location": "Pacific Islands",
+        "Actor": "China",
+        "Action": "Banned Nvidia gaming chips during CEO visit.",
+        "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
         "Actor": "Ukraine",
-        "Action": "Winning drone war against Russian forces.",
+        "Action": "Winning drone war against Russia, Moscow to Crimea.",
         "Location": "Ukraine, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "United States",
+        "Action": "Torpedoing relationship with Pacific Island partners.",
+        "Location": "Pacific Islands",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "South Korea",
+        "Action": "Trialing Arctic container voyage via Russia.",
+        "Location": "Arctic, Northern Sea Route",
         "Risk": "HIGH"
     }
 ]

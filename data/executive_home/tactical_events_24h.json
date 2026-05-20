@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-20",
-        "Actor": "Middle East Region",
-        "Action": "Escalating crisis impacting global economy, alliances.",
-        "Location": "Middle East, Strait of Hormuz",
+        "Actor": "Wood Mackenzie",
+        "Action": "Warns Hormuz closure risks global recession.",
+        "Location": "Strait of Hormuz, Global",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap and 12 new fabs.",
-        "Location": "Global Semiconductor Supply Chain",
-        "Risk": "HIGH"
+        "Actor": "US, Europe",
+        "Action": "Iran conflict strains US-European strategic alliance.",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "IMF",
+        "Action": "Warns of Iran war shock, inflation.",
+        "Location": "Global",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-20",
         "Actor": "China",
-        "Action": "Advances AI strategy and memory chip IPO plans.",
+        "Action": "Banned Nvidia gaming chips during Huang visit.",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "NATO",
-        "Action": "Center of gravity shifting eastward amid Ukraine lessons.",
-        "Location": "Eastern Europe, Ukraine",
+        "Actor": "TSMC",
+        "Action": "Plans 1nm chip roadmap, 12 new fabs.",
+        "Location": "Taiwan",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "United States, Europe",
-        "Action": "Iran war straining US-European strategic alliance.",
-        "Location": "Transatlantic Alliance",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "Global Cybercriminals",
-        "Action": "AI-enabled hackers discovering zero-day vulnerabilities.",
-        "Location": "Global Cyberspace",
+        "Actor": "Russia, China",
+        "Action": "Plan Power of Siberia 2 pipeline.",
+        "Location": "Russia, China",
         "Risk": "HIGH"
     }
 ]
