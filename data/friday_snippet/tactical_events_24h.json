@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-20",
-        "Actor": "United States, Europe",
-        "Action": "Iran war breaking US-European strategic alliance.",
-        "Location": "Middle East, Transatlantic",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "United Kingdom, South Korea, China",
-        "Action": "Military deploys, tankers transit volatile Strait of Hormuz.",
-        "Location": "Strait of Hormuz, Suez Canal",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
         "Actor": "China",
-        "Action": "Banned Nvidia gaming chips during CEO visit.",
+        "Action": "Banned Nvidia gaming chips during visit",
         "Location": "China",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "US, Europe",
+        "Action": "Iran war straining US-European alliance",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "U.S. Marines",
+        "Action": "Boarded Iranian oil tanker",
+        "Location": "Gulf of Oman",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "TSMC",
+        "Action": "Plans 1nm chip roadmap, 12 new fabs",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "Russia",
+        "Action": "Dangerously intercepted British spy plane",
+        "Location": "Black Sea",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "Ukraine",
-        "Action": "Winning drone war against Russia, Moscow to Crimea.",
-        "Location": "Ukraine, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "United States",
-        "Action": "Torpedoing relationship with Pacific Island partners.",
-        "Location": "Pacific Islands",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "South Korea",
-        "Action": "Trialing Arctic container voyage via Russia.",
-        "Location": "Arctic, Northern Sea Route",
+        "Actor": "North Korea, Russia",
+        "Action": "Deepen wartime partnership",
+        "Location": "Global",
         "Risk": "HIGH"
     }
 ]
