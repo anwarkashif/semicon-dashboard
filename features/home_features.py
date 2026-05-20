@@ -892,6 +892,188 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     with col3: st.metric(label="🛰️ Geopolitical Shifts", value=geo_val, delta="Live Updated", delta_color="normal")
     with col4: st.metric(label="🛡️ System Status", value=status_val, delta="Monitoring Active")
 
+    # ==========================================
+    # 📊 GLOBAL THREAT POSTURE ANALYSIS ENGINE
+    # ==========================================
+    with st.expander("📖 Global Threat Posture Intelligence Analysis & Strategic Interpretation"):
+
+        st.markdown("""
+        <div style="
+            background: rgba(17,17,17,0.82);
+            border-left: 4px solid #00bfff;
+            padding: 22px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 18px rgba(0,191,255,0.10);
+        ">
+
+        <h4 style="
+            color:#00bfff;
+            margin-top:0;
+            margin-bottom:12px;
+            letter-spacing:1px;
+        ">
+        📊 Understanding Global Threat Posture
+        </h4>
+
+        <p style="
+            color:#d1d5db;
+            line-height:1.65;
+            font-size:0.96rem;
+            margin-bottom:12px;
+        ">
+        The Global Threat Posture module functions as a strategic geopolitical
+        risk interpretation engine. Rather than displaying raw event counts alone,
+        the architecture correlates escalation patterns, semiconductor supply-chain
+        pressure, maritime instability, export-control friction, critical mineral
+        volatility, and geopolitical realignment into a unified executive risk picture.
+        </p>
+
+        <p style="
+            color:#9ca3af;
+            line-height:1.6;
+            font-size:0.92rem;
+            margin-bottom:20px;
+            font-style:italic;
+        ">
+        The objective is not only to detect events — but to explain how changes
+        in those indicators alter the strategic operating environment surrounding
+        semiconductor ecosystems, rare earth supply chains, advanced-node foundries,
+        logistics corridors, and industrial resilience.
+        </p>
+
+        </div>
+        """, unsafe_allow_html=True)
+
+        # ==========================================
+        # 🔴 ACTIVE ESCALATIONS
+        # ==========================================
+        st.markdown("""
+        ### 🔴 Active Escalations
+
+        **What it measures:** Tracks high-severity geopolitical or military escalation events detected
+        across the live Geopolitics-OSINT pipeline.
+
+        **Examples include:**
+        * Military mobilization
+        * Maritime attacks or blockades
+        * Export-control retaliation
+        * Sanctions escalation
+        * Strategic cyber activity
+        * Crisis-level diplomatic breakdowns
+
+        **If the number INCREASES:** * Semiconductor shipment insurance premiums may rise
+        * Foundry logistics become less predictable
+        * Rare earth export restrictions may intensify
+        * Global markets price in elevated supply risk
+        * Strategic investors reduce exposure to fragile routes
+
+        **If the number DECREASES:** * Supply chain confidence stabilizes
+        * Maritime transit becomes more reliable
+        * Regulatory friction may temporarily ease
+        * Industrial planning horizons improve
+
+        **Strategic Interpretation:** A rise in Active Escalations does not automatically mean open conflict.
+        In modern geopolitical competition, sustained low-intensity escalation
+        often produces greater long-term supply-chain disruption than short-duration
+        kinetic events.
+        """)
+
+        # ==========================================
+        # 🚢 SUPPLY CHAIN CHOKEPOINTS
+        # ==========================================
+        st.markdown("""
+        ### 🚢 Supply Chain Chokepoints
+
+        **What it measures:** Monitors stress signals affecting semiconductor manufacturing,
+        logistics infrastructure, maritime corridors, and critical mineral flow.
+
+        **Tracked domains include:**
+        * Taiwan Strait
+        * Strait of Hormuz
+        * Bab-el-Mandeb
+        * South China Sea
+        * Advanced-node lithography routes
+        * Rare earth refining concentration zones
+
+        **If the number INCREASES:** * Shipping delays and rerouting risks expand
+        * Semiconductor fabrication timelines may slow
+        * Critical minerals become harder to source
+        * Foundries dependent on single-route logistics face elevated vulnerability
+        * Advanced packaging ecosystems experience downstream instability
+
+        **If the number DECREASES:** * Transit normalization improves supply-chain predictability
+        * Industrial procurement confidence improves
+        * Strategic stockpiling pressure may decline
+
+        **Strategic Interpretation:** Semiconductor ecosystems are highly dependent on uninterrupted maritime
+        and mineral logistics. Even small disruptions in one chokepoint can create
+        cascading second-order effects across fabrication, assembly, testing,
+        and downstream electronics manufacturing.
+        """)
+
+        # ==========================================
+        # 🛰️ GEOPOLITICAL SHIFTS
+        # ==========================================
+        st.markdown("""
+        ### 🛰️ Geopolitical Shifts
+
+        **What it measures:** Tracks structural geopolitical realignments affecting technology,
+        industrial policy, strategic alliances, and resource control.
+
+        **Examples include:**
+        * New export-control regimes
+        * Defense partnerships
+        * Critical mineral agreements
+        * Industrial subsidy programs
+        * BRICS/G7 technology positioning
+        * Strategic semiconductor diplomacy
+
+        **If the number INCREASES:** * Technology fragmentation accelerates
+        * Supply chains regionalize into geopolitical blocs
+        * Companies may face dual-compliance environments
+        * Advanced semiconductor access becomes increasingly politicized
+
+        **If the number DECREASES:** * Strategic alignment stabilizes
+        * Cross-border technology cooperation may improve
+        * Regulatory predictability increases
+
+        **Strategic Interpretation:** Not all geopolitical shifts are immediately visible through military activity.
+        Many long-term semiconductor disruptions emerge through policy architecture,
+        investment restrictions, technology-access controls, and alliance restructuring.
+        """)
+
+        # ==========================================
+        # 🛡️ SYSTEM STATUS
+        # ==========================================
+        st.markdown(f"""
+        ### 🛡️ System Status — {status_val}
+
+        **What it represents:** The System Status indicator reflects the platform's aggregate geopolitical
+        threat assessment derived from escalation velocity, logistics disruption,
+        maritime instability, export-control activity, and strategic actor behavior.
+
+        **Current Meaning of {status_val}:**
+        * Elevated geopolitical monitoring posture
+        * Active strategic friction detected
+        * Increased probability of regional supply instability
+        * Higher executive attention recommended
+
+        **Operational Implications for Semiconductor Ecosystems:**
+        * Increased risk to advanced-node continuity
+        * Potential rare earth pricing volatility
+        * Elevated insurance and transit costs
+        * Greater pressure on fab redundancy planning
+        * Higher sensitivity around Taiwan-centered supply architectures
+
+        **Executive Assessment Framework:** The System Status layer functions similarly to an integrated geopolitical
+        readiness index rather than a military-only DEFCON system. It is designed
+        to help decision-makers understand whether the global technology and
+        industrial environment is stabilizing, deteriorating, or entering
+        sustained strategic friction.
+        """)
+
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
     st.markdown("### 📈 Threat Velocity (Past 7 Days)")
