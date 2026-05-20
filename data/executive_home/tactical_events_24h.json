@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-20",
+        "Actor": "Wood Mackenzie",
+        "Action": "Warns Hormuz closure risks global recession.",
+        "Location": "Strait of Hormuz, Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "US, Europe",
+        "Action": "Iran conflict strains US-European strategic alliance.",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
         "Actor": "IMF",
-        "Action": "Warns of worsening Iran war shock",
-        "Location": "Middle East",
+        "Action": "Warns of Iran war shock, inflation.",
+        "Location": "Global",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "US-European Alliance",
-        "Action": "Iran war breaking strategic alliance",
-        "Location": "US, Europe, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "United States",
-        "Action": "Torpedoing Pacific Island partnerships",
-        "Location": "Pacific Islands",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap, new fabs",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
         "Actor": "China",
-        "Action": "Banned Nvidia gaming chip sales",
+        "Action": "Banned Nvidia gaming chips during Huang visit.",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "UK Navy",
-        "Action": "Deploys for potential Hormuz security mission",
-        "Location": "Suez Canal, Strait of Hormuz",
+        "Actor": "TSMC",
+        "Action": "Plans 1nm chip roadmap, 12 new fabs.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "Russia, China",
+        "Action": "Plan Power of Siberia 2 pipeline.",
+        "Location": "Russia, China",
         "Risk": "HIGH"
     }
 ]
