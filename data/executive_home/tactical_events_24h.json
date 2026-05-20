@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-20",
-        "Actor": "International Analysts",
-        "Action": "Warns of global recession from Hormuz closure",
+        "Actor": "Iran",
+        "Action": "Announces controlled maritime zone, Strait of Hormuz",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-20",
         "Actor": "United States",
-        "Action": "Marines board Iranian tanker in Gulf",
+        "Action": "Marines board Iranian tanker in Gulf of Oman",
         "Location": "Gulf of Oman",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
         "Actor": "TSMC",
-        "Action": "Unveils 1nm chip roadmap, plans 12 new fabs",
+        "Action": "Announces 1nm roadmap, 12 new fabs planned",
         "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "North Korea, Russia",
-        "Action": "Strengthen wartime military and strategic partnership",
-        "Location": "International",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "India",
-        "Action": "Signs significant semiconductor manufacturing deal",
-        "Location": "India",
         "Risk": "ELEVATED"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "United States, Europe",
-        "Action": "Iran war fractures strategic alliance",
-        "Location": "Transatlantic",
+        "Actor": "India",
+        "Action": "Signed consequential chip manufacturing deal",
+        "Location": "India",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "Wood Mackenzie",
+        "Action": "Warns Hormuz closure could trigger global recession",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "Russia",
+        "Action": "Exploits drone incursions in Baltic region",
+        "Location": "Baltic Sea",
         "Risk": "HIGH"
     }
 ]
