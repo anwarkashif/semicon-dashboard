@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-20",
-        "Actor": "Middle East Region",
-        "Action": "Escalating crisis impacting global economy, alliances.",
-        "Location": "Middle East, Strait of Hormuz",
+        "Actor": "IMF",
+        "Action": "Warns of worsening Iran war shock",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "US-European Alliance",
+        "Action": "Iran war breaking strategic alliance",
+        "Location": "US, Europe, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-20",
+        "Actor": "United States",
+        "Action": "Torpedoing Pacific Island partnerships",
+        "Location": "Pacific Islands",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-20",
         "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap and 12 new fabs.",
-        "Location": "Global Semiconductor Supply Chain",
+        "Action": "Plans 1nm chip roadmap, new fabs",
+        "Location": "Taiwan",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
         "Actor": "China",
-        "Action": "Advances AI strategy and memory chip IPO plans.",
+        "Action": "Banned Nvidia gaming chip sales",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-20",
-        "Actor": "NATO",
-        "Action": "Center of gravity shifting eastward amid Ukraine lessons.",
-        "Location": "Eastern Europe, Ukraine",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "United States, Europe",
-        "Action": "Iran war straining US-European strategic alliance.",
-        "Location": "Transatlantic Alliance",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "Global Cybercriminals",
-        "Action": "AI-enabled hackers discovering zero-day vulnerabilities.",
-        "Location": "Global Cyberspace",
+        "Actor": "UK Navy",
+        "Action": "Deploys for potential Hormuz security mission",
+        "Location": "Suez Canal, Strait of Hormuz",
         "Risk": "HIGH"
     }
 ]
