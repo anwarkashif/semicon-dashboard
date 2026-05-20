@@ -365,7 +365,7 @@ def check_early_warnings():
                 setInterval(update, 1000); update();
             </script>
             """
-            components.html(html_code, height=245) 
+            components.html(html_code, height=210) 
             
         else:
             html_code = f"""
@@ -399,7 +399,7 @@ def check_early_warnings():
                 setInterval(updateNominalTime, 1000);
             </script>
             """
-            components.html(html_code, height=130)
+            components.html(html_code, height=95)
 
     except Exception as e:
         pass 
@@ -882,7 +882,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("### 🚨 Live Strategic Alert Monitor")
     check_early_warnings()
-    st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
+    st.markdown("<hr style='border: 1px solid #333; margin-top: -15px; margin-bottom: -10px;'>", unsafe_allow_html=True)
 
     st.markdown("### 📝 Strategic Command Analysis")
     st.caption("Autonomous geopolitical synthesis aggregating threat velocity, maritime telemetry, and multi-domain actor posturing.")
@@ -916,7 +916,8 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     
     render_decision_support_engine(all_text)
     
-    st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
+    # --- FIX APPLIED HERE: Targeted Negative Margins to pull sections together ---
+    st.markdown("<hr style='border: 1px solid #333; margin-top: -15px; margin-bottom: -10px;'>", unsafe_allow_html=True)
 
     st.markdown("### 📊 Global Threat Posture")
     esc_val, choke_val, geo_val, status_val = calculate_dynamic_posture(df_actions)
