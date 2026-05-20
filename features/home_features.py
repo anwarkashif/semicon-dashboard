@@ -332,9 +332,7 @@ def check_early_warnings():
             components.html(html_code, height=245) 
             
         else:
-            start_timestamp_ms = fallback_time_ms
-            
-            # --- REVERTED CLOCK LOGIC TO LOCAL HOST TIME FORMAT ---
+            # --- NEW LIVE IST CLOCK FOR NOMINAL STATE ---
             html_code = f"""
             <style>
                 body {{ font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
@@ -352,8 +350,18 @@ def check_early_warnings():
                 <p class="desc">Current Warning System doesn't see an early warning situation. Watch out for further updates.</p>
             </div>
             <script>
-                const start = {start_timestamp_ms};
-                document.getElementById('clock').innerText = new Date(start).toLocaleString();
+                function updateNominalTime() {{
+                    const now = new Date();
+                    const options = {{
+                        timeZone: 'Asia/Kolkata',
+                        day: '2-digit', month: 'short', year: 'numeric',
+                        hour: '2-digit', minute: '2-digit', second: '2-digit',
+                        hour12: true
+                    }};
+                    document.getElementById('clock').innerText = now.toLocaleString('en-IN', options) + ' IST';
+                }}
+                updateNominalTime();
+                setInterval(updateNominalTime, 1000);
             </script>
             """
             components.html(html_code, height=130)
