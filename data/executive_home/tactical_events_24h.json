@@ -2,36 +2,43 @@
     {
         "Date": "2026-05-21",
         "Actor": "Iran",
-        "Action": "Declares new maritime oversight zone in Hormuz",
+        "Action": "Establishes new maritime oversight zone",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm roadmap and 12 new fabs",
-        "Location": "Taiwan",
+        "Actor": "United States Marines",
+        "Action": "Boarded Iranian oil tanker",
+        "Location": "Gulf of Oman",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "North Korea, Russia",
-        "Action": "Deepen wartime defense strategic partnership",
-        "Location": "Russia, North Korea",
+        "Actor": "Israel",
+        "Action": "Launched attacks in southern Lebanon",
+        "Location": "Southern Lebanon",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "YMTC",
-        "Action": "Advances IPO plans for memory chips",
+        "Actor": "China (YMTC)",
+        "Action": "Advances IPO plans despite sanctions",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "U.S. Marines",
-        "Action": "Boarded Iranian tanker in Gulf",
-        "Location": "Gulf of Oman",
+        "Actor": "India",
+        "Action": "Signed a consequential semiconductor deal",
+        "Location": "India",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-21",
+        "Actor": "Russia",
+        "Action": "Exploits drone incursions in Baltics",
+        "Location": "Baltic Sea Region",
         "Risk": "HIGH"
     }
 ]
