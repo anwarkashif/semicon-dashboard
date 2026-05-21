@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-20",
-        "Actor": "Iran, United States",
-        "Action": "Heighten tensions, risk global oil supply",
-        "Location": "Strait of Hormuz, Gulf of Oman",
+        "Date": "2026-05-21",
+        "Actor": "Iran",
+        "Action": "Declares new maritime oversight zone.",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-20",
-        "Actor": "United States, European Alliance",
-        "Action": "Strategic alliance breaks over Iran war",
-        "Location": "US, Europe, Middle East",
+        "Date": "2026-05-21",
+        "Actor": "United States",
+        "Action": "Marines board Iranian tanker in Gulf.",
+        "Location": "Gulf of Oman",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-20",
+        "Date": "2026-05-21",
         "Actor": "TSMC",
-        "Action": "Plans 1nm roadmap, 12 new fabs",
-        "Location": "Taiwan, Global",
+        "Action": "Plans 1nm chip roadmap, 12 new fabs.",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-21",
+        "Actor": "North Korea, Russia",
+        "Action": "Continues strengthening wartime military partnership.",
+        "Location": "Northeast Asia, Ukraine",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-21",
+        "Actor": "India",
+        "Action": "Signs consequential semiconductor manufacturing deal.",
+        "Location": "India",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-20",
-        "Actor": "YMTC (China)",
-        "Action": "Advances memory chipmaker IPO plans",
+        "Date": "2026-05-21",
+        "Actor": "YMTC",
+        "Action": "Advances memory chipmaker IPO plans.",
         "Location": "China",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "Russia, North Korea",
-        "Action": "Deepen wartime partnership, increase instability",
-        "Location": "Russia, North Korea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "India",
-        "Action": "Signs consequential chip manufacturing deal",
-        "Location": "India",
-        "Risk": "ELEVATED"
     }
 ]
