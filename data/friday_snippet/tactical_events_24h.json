@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-05-21",
-        "Actor": "Iran, Oman, United States",
-        "Action": "Iran/Oman discuss Strait of Hormuz toll.",
+        "Actor": "Iran, Oman",
+        "Action": "Discussing potential toll regime at Strait of Hormuz.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "Russia, China",
-        "Action": "Russia, China strengthen strategic partnership, challenge Western influence.",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-21",
         "Actor": "Panama Canal, United States",
-        "Action": "Panama Canal near capacity due to shipping diversions.",
+        "Action": "Canal nears capacity due to Hormuz crisis.",
         "Location": "Panama Canal",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "YMTC (China)",
-        "Action": "YMTC (China) advances IPO for memory chip production.",
-        "Location": "China",
-        "Risk": "HIGH"
+        "Actor": "Israel, Hezbollah",
+        "Action": "Intensifying cross-border attacks escalate regional conflict.",
+        "Location": "Southern Lebanon, Israel",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "China, United States",
-        "Action": "China's AI governance offensive threatens US tech leadership.",
-        "Location": "Global",
-        "Risk": "HIGH"
+        "Actor": "China",
+        "Action": "AI governance offensive threatens U.S. tech leadership.",
+        "Location": "Global, United States",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "Turkey",
-        "Action": "Turkey liquidates US Treasuries amid economic strain.",
-        "Location": "Turkey, United States",
-        "Risk": "HIGH"
+        "Actor": "Russia, China",
+        "Action": "Putin-Xi meeting strengthens their strategic alliance.",
+        "Location": "Russia, China",
+        "Risk": "CRITICAL"
     }
 ]
