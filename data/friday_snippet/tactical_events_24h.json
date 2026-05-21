@@ -2,36 +2,43 @@
     {
         "Date": "2026-05-21",
         "Actor": "Iran, Oman",
-        "Action": "Discussing potential toll regime at Strait of Hormuz.",
+        "Action": "Discuss Hormuz toll regime",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "Panama Canal, United States",
-        "Action": "Canal nears capacity due to Hormuz crisis.",
-        "Location": "Panama Canal",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-21",
-        "Actor": "Israel, Hezbollah",
-        "Action": "Intensifying cross-border attacks escalate regional conflict.",
-        "Location": "Southern Lebanon, Israel",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-21",
-        "Actor": "China",
-        "Action": "AI governance offensive threatens U.S. tech leadership.",
-        "Location": "Global, United States",
+        "Actor": "United States",
+        "Action": "Expended half missile interceptors defending Israel",
+        "Location": "Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
         "Actor": "Russia, China",
-        "Action": "Putin-Xi meeting strengthens their strategic alliance.",
-        "Location": "Russia, China",
+        "Action": "Deepen strategic alliance",
+        "Location": "Global",
         "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-21",
+        "Actor": "Hezbollah",
+        "Action": "Attacks Israeli troops in south Lebanon",
+        "Location": "South Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-21",
+        "Actor": "China",
+        "Action": "Launches AI governance offensive",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-21",
+        "Actor": "United States",
+        "Action": "Announces $2B quantum computing funding",
+        "Location": "United States",
+        "Risk": "HIGH"
     }
 ]
