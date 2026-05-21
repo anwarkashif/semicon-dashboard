@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-21",
         "Actor": "Iran",
-        "Action": "Establishes new 'oversight zone' in Strait of Hormuz",
+        "Action": "Declares enriched uranium to remain domestically",
+        "Location": "Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-21",
+        "Actor": "Iran",
+        "Action": "Declares new maritime oversight zone",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-21",
         "Actor": "United States",
-        "Action": "Marines board Iranian tanker in Gulf of Oman",
+        "Action": "US Marines board Iranian tanker",
         "Location": "Gulf of Oman",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "Israel",
-        "Action": "Launches attacks in southern Lebanon",
-        "Location": "Southern Lebanon",
+        "Actor": "China",
+        "Action": "Launches AI governance offensive, threatens leadership",
+        "Location": "Global, United States",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-21",
+        "Actor": "North Korea, Russia",
+        "Action": "Maintain, expand wartime partnership and cooperation",
+        "Location": "North Korea, Russia, Ukraine",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-21",
-        "Actor": "Russia",
-        "Action": "Exploits drone incursions in Baltic region",
-        "Location": "Baltic Sea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-21",
-        "Actor": "Multiple Nations",
-        "Action": "Intensifies push for local-currency cross-border payments",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-21",
-        "Actor": "India",
-        "Action": "Secures major semiconductor manufacturing deal",
-        "Location": "India",
+        "Actor": "Unknown",
+        "Action": "Submarine cable cut reported",
+        "Location": "Taiwan",
         "Risk": "HIGH"
     }
 ]
