@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-21",
-        "Actor": "Iran, Oman",
-        "Action": "Discuss Hormuz toll regime",
-        "Location": "Strait of Hormuz",
+        "Date": "2026-05-22",
+        "Actor": "Global Supply Chains",
+        "Action": "Key chokepoint closes, redirects global shipping.",
+        "Location": "Strait of Hormuz, Panama Canal",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-21",
+        "Date": "2026-05-22",
         "Actor": "United States",
-        "Action": "Expended half missile interceptors defending Israel",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
+        "Action": "Pauses arms sales to Taiwan.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-21",
-        "Actor": "Russia, China",
-        "Action": "Deepen strategic alliance",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-21",
-        "Actor": "Hezbollah",
-        "Action": "Attacks Israeli troops in south Lebanon",
-        "Location": "South Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-21",
+        "Date": "2026-05-22",
         "Actor": "China",
-        "Action": "Launches AI governance offensive",
+        "Action": "Advances AI governance, challenges US leadership.",
         "Location": "Global",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-21",
-        "Actor": "United States",
-        "Action": "Announces $2B quantum computing funding",
-        "Location": "United States",
+        "Date": "2026-05-22",
+        "Actor": "Russia, North Korea",
+        "Action": "Deepens wartime partnership, raises global concerns.",
+        "Location": "Global",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "YMTC (China)",
+        "Action": "Memory chipmaker advances IPO plans.",
+        "Location": "China",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "United States (Department of Commerce)",
+        "Action": "Invests $2B+ in quantum computing.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
     }
 ]
