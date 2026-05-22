@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-05-22",
-        "Actor": "Iran, Oman, United States, UAE",
-        "Action": "Discussing Hormuz toll regime amid tensions.",
+        "Actor": "Regional Conflict (implied cause)",
+        "Action": "Strait of Hormuz closed due to war",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "Russia",
-        "Action": "Deploys more tactical nuclear weapons to Belarus.",
-        "Location": "Belarus",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On brink of war again",
+        "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "United States",
-        "Action": "Deploys 5,000 troops to Poland, bolstering presence.",
-        "Location": "Poland",
-        "Risk": "HIGH"
+        "Actor": "Hezbollah",
+        "Action": "Strikes Israeli military targets in Lebanon",
+        "Location": "Southern Lebanon",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
         "Actor": "United States, Philippines",
-        "Action": "Nearing deal on economic security zone.",
-        "Location": "Philippines",
+        "Action": "Nearing economic security zone deal",
+        "Location": "Philippines (Indo-Pacific)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "China, United States",
-        "Action": "China's AI governance threatens U.S. tech leadership.",
-        "Location": "Global",
+        "Actor": "China",
+        "Action": "AI governance offensive threatens US tech leadership",
+        "Location": "Global (US-China)",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "Siemens EDA, TSMC",
-        "Action": "Expands AI, advanced packaging collaboration in semiconductors.",
-        "Location": "Global",
-        "Risk": "ELEVATED"
     }
 ]
