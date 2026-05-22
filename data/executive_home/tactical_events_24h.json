@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-22",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "On the brink of renewed conflict",
-        "Location": "Horn of Africa",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-22",
         "Actor": "Iran",
-        "Action": "Expanding control over vital Hormuz Strait",
+        "Action": "Expands control in Strait of Hormuz",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
-        "Location": "Global Semiconductor Industry",
+        "Actor": "Iran",
+        "Action": "Reportedly destroyed 20% of US MQ-9 Reaper fleet",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On brink of war",
+        "Location": "East Africa",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
         "Actor": "China",
-        "Action": "Pursuing AI governance to challenge US",
-        "Location": "Global AI/Tech Sector",
+        "Action": "AI governance offensive threatens U.S. tech leadership",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for high-volume production",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
         "Actor": "South Korea",
-        "Action": "Pushing for nuclear submarine development",
-        "Location": "East Asia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "US, Iran",
-        "Action": "Negotiations stalled despite regional mediation efforts",
-        "Location": "Middle East",
-        "Risk": "HIGH"
+        "Action": "Pushing for nuclear submarines",
+        "Location": "Korean Peninsula",
+        "Risk": "ELEVATED"
     }
 ]
