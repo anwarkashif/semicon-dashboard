@@ -17,7 +17,7 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 # Gather all potential News API keys from the environment
 ALL_NEWS_KEYS = [
-    os.environ.get("NEWS_API_KEY_1") or os.environ.get("NEWS_API_KEY"), # Fallback to original name if needed
+    os.environ.get("NEWS_API_KEY_1") or os.environ.get("NEWS_API_KEY"),
     os.environ.get("NEWS_API_KEY_2"),
     os.environ.get("NEWS_API_KEY_3"),
     os.environ.get("NEWS_API_KEY_4")
@@ -31,7 +31,8 @@ if not VALID_NEWS_KEYS or not GEMINI_API_KEY:
     exit()
 
 client = genai.Client(api_key=GEMINI_API_KEY)
-model_name = 'gemini-2.5-flash'
+# FIX 1: Switched to 2.0-flash for better stability and rate limit handling
+model_name = 'gemini-2.0-flash'
 
 BANNED_SOURCES = ['variety.com', 'hollywoodlife.com', 'tmz.com', 'people.com', 'entertainment', 'amazon', 'searates', 'goodreads', 'researchgate', 'benzinga', 'yahoo']
 
@@ -87,16 +88,14 @@ def fetch_live_rss_feed():
                             
                         pub_date_str = entry.get('published', 'Recent Update')
                         
-                        # --- REPLACE THE OLD DATE EXTRACTION WITH THIS ---
                         if pub_date_str != 'Recent Update':
                             try:
-                                # Force RSS dates to strict UTC timezone for accurate 24h calculation
                                 pub_dt = parsedate_to_datetime(pub_date_str).astimezone(timezone.utc)
                                 display_date = pub_dt.strftime('%Y-%m-%d %H:%M') 
                                 if datetime.now(timezone.utc) - pub_dt > timedelta(days=3):
                                     continue 
                             except:
-                                display_date = pub_date_str[:19] # Fallback to capture time
+                                display_date = pub_date_str[:19] 
                         else:
                             display_date = "Recent Update"
                             
@@ -185,15 +184,16 @@ def fetch_latest_news():
     
     core = '("semiconductor" OR "microchip" OR "foundry" OR "lithography" OR "rare earth" OR "critical minerals" OR "export control" OR "military AI" OR "data center" OR "AI chip" OR "OSAT" OR "packaging")'
     
+    # FIX 2: Reduced limits drastically to ensure the payload slips through rate limits smoothly
     regional_queries = [
-        (f'{core} AND ("Asia" OR "China" OR "Taiwan" OR "Japan" OR "South Korea" OR "TSMC")', 15, 'ASIA'),
-        (f'{core} AND ("USA" OR "United States" OR "Americas" OR "Brazil" OR "Canada" OR "Anthropic" OR "Nvidia")', 15, 'AMERICAS'),
-        (f'("rare earth" OR "cobalt" OR "lithium" OR "gallium" OR "minerals") AND ("Africa" OR "South Africa" OR "Sudan" OR "Congo" OR "Egypt" OR "mining")', 10, 'AFRICA'),
-        (f'{core} AND ("Europe" OR "EU" OR "UK" OR "Germany" OR "France" OR "ASML")', 15, 'EUROPE'),
-        (f'{core} AND ("Oceania" OR "Australia" OR "New Zealand")', 10, 'OCEANIA'),
-        (f'{core} AND ("Middle East" OR "West Asia" OR "Gulf" OR "OPEC" OR "LNG")', 15, 'WEST ASIA / MIDDLE EAST (GLOBAL)'),
-        (f'{core} AND ("India" OR "Modi" OR "Pax Silica" OR "New Delhi")', 10, 'INDIA (DEDICATED)'),
-        (f'("AI" OR "data center" OR "chips" OR "military" OR "energy") AND ("UAE" OR "Saudi Arabia" OR "Israel" OR "Iran" OR "G42" OR "Humain")', 10, 'WEST ASIA (DEDICATED)')
+        (f'{core} AND ("Asia" OR "China" OR "Taiwan" OR "Japan" OR "South Korea" OR "TSMC")', 5, 'ASIA'),
+        (f'{core} AND ("USA" OR "United States" OR "Americas" OR "Brazil" OR "Canada" OR "Anthropic" OR "Nvidia")', 5, 'AMERICAS'),
+        (f'("rare earth" OR "cobalt" OR "lithium" OR "gallium" OR "minerals") AND ("Africa" OR "South Africa" OR "Sudan" OR "Congo" OR "Egypt" OR "mining")', 4, 'AFRICA'),
+        (f'{core} AND ("Europe" OR "EU" OR "UK" OR "Germany" OR "France" OR "ASML")', 5, 'EUROPE'),
+        (f'{core} AND ("Oceania" OR "Australia" OR "New Zealand")', 4, 'OCEANIA'),
+        (f'{core} AND ("Middle East" OR "West Asia" OR "Gulf" OR "OPEC" OR "LNG")', 5, 'WEST ASIA / MIDDLE EAST (GLOBAL)'),
+        (f'{core} AND ("India" OR "Modi" OR "Pax Silica" OR "New Delhi")', 4, 'INDIA (DEDICATED)'),
+        (f'("AI" OR "data center" OR "chips" OR "military" OR "energy") AND ("UAE" OR "Saudi Arabia" OR "Israel" OR "Iran" OR "G42" OR "Humain")', 4, 'WEST ASIA (DEDICATED)')
     ]
     
     news_compiled = ""
@@ -201,7 +201,6 @@ def fetch_latest_news():
     regional_sources = {reg[2]: [] for reg in regional_queries}
     
     for i, (query, limit, region_name) in enumerate(regional_queries):
-        # ROTATION LOGIC: Cycles through whichever keys are valid
         current_api_key = VALID_NEWS_KEYS[i % len(VALID_NEWS_KEYS)]
         
         params = {
@@ -338,13 +337,23 @@ def generate_geopolitical_brief(news_text, timeframe_str):
     Raw Data:
     {news_text}
     """
-    try:
-        response = client.models.generate_content(model=model_name, contents=prompt)
-        if not response.text: return ""
-        return response.text.replace('`', '') 
-    except Exception as e:
-        print(f"❌ Gemini API Error: {e}")
-        return ""
+    
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = client.models.generate_content(model=model_name, contents=prompt)
+            if not response.text: return ""
+            return response.text.replace('`', '') 
+        except Exception as e:
+            error_msg = str(e)
+            print(f"⚠️ Attempt {attempt + 1} failed: {error_msg}")
+            
+            if attempt < max_retries - 1:
+                print("⏳ Waiting 30 seconds before retrying...")
+                time.sleep(30)  
+            else:
+                print("❌ Gemini API Error: Max retries reached. Aborting AI generation.")
+                return ""
 
 if __name__ == "__main__":
     os.makedirs('data', exist_ok=True)
@@ -373,7 +382,7 @@ if __name__ == "__main__":
         "summary": alert_data['summary'] if alert_data else ""
     }
     sitrep_history.insert(0, history_entry)
-    sitrep_history = sitrep_history[:MAX_SITREP_HISTORY] # Maintain last 12 checks
+    sitrep_history = sitrep_history[:MAX_SITREP_HISTORY] 
     
     with open(SITREP_HISTORY_FILE, 'w', encoding="utf-8") as f:
         json.dump(sitrep_history, f)
@@ -414,64 +423,62 @@ if __name__ == "__main__":
     # 4. FRIDAY ONLY AI GENERATION 
     filename = f"data/brief_{datetime.now(timezone.utc).strftime('%Y-%m-%d')}.json"
     
-    if True: # FORCED RUN: if current_weekday == 4 and current_hour >= 18:
-        if os.path.exists(filename):
-            print(f"✅ Brief {filename} already exists. Skipping duplicate AI generation for this fallback window.")
+    if True: # FORCED RUN: Keeps the code running manually on a Saturday
+        print("🚀 FRIDAY MORNING DETECTED: Initiating full Gemini AI Intelligence Sweep...")
+        
+        raw_news, extracted_sources = fetch_latest_news()
+        gdelt_text = fetch_gdelt_data()
+        
+        accumulated_rss_text = ""
+        if os.path.exists(cache_file):
+            with open(cache_file, "r", encoding="utf-8") as f:
+                accumulated_rss_text = f.read()
+                
+        combined_news_for_gemini = raw_news + accumulated_rss_text + gdelt_text
+        
+        if combined_news_for_gemini.strip():
+            raw_brief = generate_geopolitical_brief(combined_news_for_gemini, current_weekly_range)
+            
+            # FIX 3: THE KILL SWITCH. If Gemini fails, script stops immediately to prevent blanking the dashboard.
+            if not raw_brief.strip():
+                print("❌ CRITICAL: Gemini returned no text. Aborting script to protect the dashboard data.")
+                exit()
+            
+            dynamic_kpi = safe_extract_json(raw_brief, 'KPI_METRICS', [{"Metric": "Data Sync Error", "Value": "N/A"}])
+            dynamic_risk = safe_extract_json(raw_brief, 'RISK_INDEX', [{"Risk Factor": "Data Unavailable", "Threat Level": "Unknown"}])
+            dynamic_actions = safe_extract_json(raw_brief, 'ACTION_MATRIX', [{"Date": current_weekly_range, "Actor": "System", "Action": "Insufficient news data.", "Location": "Global"}])
+            dynamic_funding = safe_extract_json(raw_brief, 'FUNDING_DATA', [{"Entity": "No specific funding reported", "Amount": "0"}])
+            dynamic_market = safe_extract_json(raw_brief, 'MARKET_IMPACT', [{"Entity": "Data Unavailable", "Market Share (%)": "N/A"}])
+            
+            data_package = {
+                "date": current_weekly_range,
+                "brief_raw": raw_brief,
+                "kpi_metrics": dynamic_kpi,
+                "supply_chain_risk": dynamic_risk, 
+                "recent_actions": dynamic_actions,
+                "funding_data": dynamic_funding,
+                "market_impact": dynamic_market,
+                "sources": extracted_sources,
+                "live_rss": live_rss_feed 
+            }
+            
+            with open(filename, 'w') as f:
+                json.dump(data_package, f)
+                
+            open(cache_file, 'w').close()
+            print("🗑️ RSS Accumulator cleared for the new week.")
+            
+            print("📡 Re-seeding Think Tank Radar for the new week...")
+            fresh_rss, fresh_text = fetch_live_rss_feed()
+            with open(cache_file, "a", encoding="utf-8") as f:
+                f.write(fresh_text)
+                
+            cutoff_date = datetime.now() - timedelta(days=180)
+            for file_path in glob.glob("data/brief_*.json"):
+                try:
+                    date_str = file_path.split('_')[1].split('.json')[0]
+                    if datetime.strptime(date_str, '%Y-%m-%d') < cutoff_date: os.remove(file_path)
+                except: pass
+            print(f"✅ Success! Saved authentic data to {filename}")
         else:
-            print("🚀 FRIDAY MORNING DETECTED: Initiating full Gemini AI Intelligence Sweep...")
-            
-            raw_news, extracted_sources = fetch_latest_news()
-            gdelt_text = fetch_gdelt_data()
-            
-            accumulated_rss_text = ""
-            if os.path.exists(cache_file):
-                with open(cache_file, "r", encoding="utf-8") as f:
-                    accumulated_rss_text = f.read()
-                    
-            combined_news_for_gemini = raw_news + accumulated_rss_text + gdelt_text
-            
-            if combined_news_for_gemini.strip():
-                raw_brief = generate_geopolitical_brief(combined_news_for_gemini, current_weekly_range)
-                
-                dynamic_kpi = safe_extract_json(raw_brief, 'KPI_METRICS', [{"Metric": "Data Sync Error", "Value": "N/A"}])
-                dynamic_risk = safe_extract_json(raw_brief, 'RISK_INDEX', [{"Risk Factor": "Data Unavailable", "Threat Level": "Unknown"}])
-                dynamic_actions = safe_extract_json(raw_brief, 'ACTION_MATRIX', [{"Date": current_weekly_range, "Actor": "System", "Action": "Insufficient news data.", "Location": "Global"}])
-                dynamic_funding = safe_extract_json(raw_brief, 'FUNDING_DATA', [{"Entity": "No specific funding reported", "Amount": "0"}])
-                dynamic_market = safe_extract_json(raw_brief, 'MARKET_IMPACT', [{"Entity": "Data Unavailable", "Market Share (%)": "N/A"}])
-                
-                data_package = {
-                    "date": current_weekly_range,
-                    "brief_raw": raw_brief,
-                    "kpi_metrics": dynamic_kpi,
-                    "supply_chain_risk": dynamic_risk, 
-                    "recent_actions": dynamic_actions,
-                    "funding_data": dynamic_funding,
-                    "market_impact": dynamic_market,
-                    "sources": extracted_sources,
-                    "live_rss": live_rss_feed 
-                }
-                
-                with open(filename, 'w') as f:
-                    json.dump(data_package, f)
-                    
-                open(cache_file, 'w').close()
-                print("🗑️ RSS Accumulator cleared for the new week.")
-                
-                # --- FIX: IMMEDIATELY RE-SEED SO RADAR ISN'T EMPTY ON FRIDAY ---
-                print("📡 Re-seeding Think Tank Radar for the new week...")
-                fresh_rss, fresh_text = fetch_live_rss_feed()
-                with open(cache_file, "a", encoding="utf-8") as f:
-                    f.write(fresh_text)
-                    
-                cutoff_date = datetime.now() - timedelta(days=180)
-                for file_path in glob.glob("data/brief_*.json"):
-                    try:
-                        date_str = file_path.split('_')[1].split('.json')[0]
-                        if datetime.strptime(date_str, '%Y-%m-%d') < cutoff_date: os.remove(file_path)
-                    except: pass
-                print(f"✅ Success! Saved authentic data to {filename}")
-            else:
-                print("❌ Script Stopped: No news data was pulled. Gemini was not triggered.")
-    else:
-        print(f"⏳ Normal 2-Hour Cycle (IST Weekday: {ist_time.weekday()}, Hour: {ist_time.hour}). Deep AI generation skipped.")
-        print("Dashboard is running smoothly on cached AI data with dynamically updated 2-hour RSS/SITREP.")
+            print("❌ Script Stopped: No news data was pulled. Gemini was not triggered.")
