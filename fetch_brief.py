@@ -414,7 +414,7 @@ if __name__ == "__main__":
     # 4. FRIDAY ONLY AI GENERATION 
     filename = f"data/brief_{datetime.now(timezone.utc).strftime('%Y-%m-%d')}.json"
     
-    if ist_time.weekday() == 4 and ist_time.hour < 12:
+    if True: # FORCED RUN: if current_weekday == 4 and current_hour >= 18:
         if os.path.exists(filename):
             print(f"✅ Brief {filename} already exists. Skipping duplicate AI generation for this fallback window.")
         else:
