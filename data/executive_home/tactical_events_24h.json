@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-22",
-        "Actor": "Iran / Global Shipping",
-        "Action": "Iran's control causes global shipping crisis",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "Nations on brink of war again.",
+        "Location": "Horn of Africa",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "Iran",
+        "Action": "Expanding Hormuz control deepens seafarer crisis.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "Israel / Lebanon / Palestinian factions",
-        "Action": "Middle East regional military conflict significantly escalating",
-        "Location": "Middle East",
+        "Actor": "United States",
+        "Action": "Economic confidence plummets amid Iran war.",
+        "Location": "United States",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "Ethiopia / Eritrea",
-        "Action": "Nations on brink of renewed military conflict",
-        "Location": "Horn of Africa",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
         "Actor": "ASML",
-        "Action": "Next-gen chip manufacturing tool not ready for production",
-        "Location": "Global Semiconductor Industry",
+        "Action": "High-NA EUV not ready for production.",
+        "Location": "Global (Semiconductor Industry)",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "United States / Philippines",
-        "Action": "Progressing on new economic security zone deal",
-        "Location": "Southeast Asia",
-        "Risk": "ELEVATED"
     },
     {
         "Date": "2026-05-22",
         "Actor": "China",
-        "Action": "AI governance strategy challenges U.S. tech leadership",
-        "Location": "Global AI Sector",
-        "Risk": "ELEVATED"
+        "Action": "AI governance threatens US tech leadership.",
+        "Location": "Global (US-China)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "Russia",
+        "Action": "Seeks more foreign fighters amid losses.",
+        "Location": "Ukraine",
+        "Risk": "HIGH"
     }
 ]
