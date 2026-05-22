@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-22",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed conflict",
+        "Action": "On brink of renewed conflict.",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
         "Actor": "Iran",
-        "Action": "Expanding control over Strait of Hormuz",
+        "Action": "Expands Hormuz control, deepens shipping crisis.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "United States, Philippines",
-        "Action": "Nearing economic security zone deal",
-        "Location": "Philippines",
+        "Actor": "China, United States",
+        "Action": "China's AI offensive threatens US tech.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "United States, Taiwan",
+        "Action": "US arms delivery delay rattles Taiwan.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "South Korea",
+        "Action": "Pursues nuclear submarines, tests non-nuclear deterrence.",
+        "Location": "South Korea",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
-        "Location": "Global semiconductor industry",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "Chile",
-        "Action": "Copper mine permit setback",
-        "Location": "Chile",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "China, United States",
-        "Action": "AI governance offensive threatens US tech leadership",
-        "Location": "Global (AI/Tech Sector)",
-        "Risk": "HIGH"
+        "Action": "High-NA EUV not ready for production.",
+        "Location": "Global (semiconductor industry)",
+        "Risk": "ELEVATED"
     }
 ]
