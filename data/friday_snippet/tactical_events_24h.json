@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-22",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "African nations on brink of renewed war.",
+        "Action": "On brink of renewed conflict",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
         "Actor": "ASML",
-        "Action": "Advanced EUV tools not ready for production.",
+        "Action": "High-NA EUV not ready for production",
         "Location": "Global Semiconductor Industry",
-        "Risk": "HIGH"
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
         "Actor": "Iran",
-        "Action": "Expands Hormuz control, deepens shipping crisis.",
+        "Action": "Expanding control over Strait of Hormuz",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "Iran, United States",
-        "Action": "Report: Iran destroyed significant US drone fleet.",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "South Korea",
-        "Action": "Pushes nuclear submarines for deterrence capability.",
-        "Location": "Korean Peninsula",
+        "Actor": "Israel",
+        "Action": "Conducts airstrikes, killings in Lebanon",
+        "Location": "Lebanon, Near Syrian Border",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "China, United States",
-        "Action": "China's AI governance threatens US tech leadership.",
-        "Location": "Global (Tech Sector)",
+        "Actor": "China",
+        "Action": "AI governance offensive threatens US tech leadership",
+        "Location": "Global, United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "South Korea",
+        "Action": "Pursues nuclear submarine capability",
+        "Location": "South Korea, Northeast Asia",
         "Risk": "HIGH"
     }
 ]
