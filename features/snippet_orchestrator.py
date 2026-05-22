@@ -118,5 +118,3 @@ def render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text
                 st.download_button(label="📥 Download Friday's Snippet (DOCX)", data=docx_buffer, file_name=f"Fridays_Snippet.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", type="primary", use_container_width=True)
             except Exception as e:
                 st.button("📥 Download Unavailable", disabled=True)
-        else:
-            st.button("📥 Admin Only Download", disabled=True)

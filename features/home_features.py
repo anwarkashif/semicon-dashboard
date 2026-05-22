@@ -1160,7 +1160,11 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         
     st.markdown("<br>", unsafe_allow_html=True)
 
+    # ==========================================
+    # ⚠️ RECENT TACTICAL ALERTS
+    # ==========================================
     st.markdown("### ⚠️ Recent Tactical Alerts")
+    
     if not df_actions.empty:
         available_cols = df_actions.columns.tolist()
         target_cols = ['Date', 'Action', 'Event', 'Headline']
@@ -1171,7 +1175,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
             temp_df = temp_df.sort_values(by='Parsed_Date', ascending=False)
             temp_df = temp_df.drop(columns=['Parsed_Date'])
             
-        display_df = temp_df.head(8).copy()
+        display_df = temp_df.head(4).copy()
             
         cols_to_show = [col for col in target_cols if col in display_df.columns]
         if cols_to_show:
