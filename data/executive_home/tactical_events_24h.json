@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-22",
-        "Actor": "Global Maritime Authorities",
-        "Action": "Declares critical threat level in Strait.",
+        "Actor": "Iran, Oman, Global Shipping",
+        "Action": "Strait of Hormuz control disputed amidst war, tolls discussed.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "United States",
-        "Action": "Depleted half missile interceptors in Israel defense.",
-        "Location": "Middle East (Israel)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "Russia and China",
-        "Action": "Deepen strategic partnership challenging Western influence.",
+        "Actor": "Russia, China",
+        "Action": "Leaders deepen strategic alliance, challenging Western influence.",
         "Location": "Global",
-        "Risk": "CRITICAL"
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "United States (Department of Commerce)",
-        "Action": "Commits $2 billion to strategic tech companies.",
-        "Location": "United States",
-        "Risk": "CRITICAL"
+        "Actor": "China, United States",
+        "Action": "China's AI governance offensive threatens US tech leadership.",
+        "Location": "Global",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "Hezbollah",
-        "Action": "Conducted 16 attacks against Israeli troops.",
-        "Location": "South Lebanon",
-        "Risk": "CRITICAL"
+        "Actor": "Russia",
+        "Action": "Seeking more foreign fighters as Ukraine losses mount.",
+        "Location": "Ukraine",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "YMTC (China)",
-        "Action": "Advances IPO plans despite US semiconductor sanctions.",
+        "Actor": "United States, Iran",
+        "Action": "Diplomatic deadlock on key issues persists during war.",
+        "Location": "Middle East",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "Global buyout funds, China",
+        "Action": "Funds complete $1bn exit from China data centres.",
         "Location": "China",
-        "Risk": "CRITICAL"
+        "Risk": "ELEVATED"
     }
 ]
