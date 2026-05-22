@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-22",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed war",
+        "Action": "African nations on brink of renewed war.",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
+        "Actor": "ASML",
+        "Action": "Advanced EUV tools not ready for production.",
+        "Location": "Global Semiconductor Industry",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
         "Actor": "Iran",
-        "Action": "Expanding control over critical Strait of Hormuz",
+        "Action": "Expands Hormuz control, deepens shipping crisis.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
-        "Location": "Global (Semiconductor Industry)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "China",
-        "Action": "AI governance offensive challenges US tech leadership",
-        "Location": "Global (US, China)",
-        "Risk": "HIGH"
+        "Actor": "Iran, United States",
+        "Action": "Report: Iran destroyed significant US drone fleet.",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
         "Actor": "South Korea",
-        "Action": "Pushes nuclear submarines, tests non-nuclear deterrence",
-        "Location": "South Korea",
+        "Action": "Pushes nuclear submarines for deterrence capability.",
+        "Location": "Korean Peninsula",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "United States (Pentagon)",
-        "Action": "Invests $54 billion into autonomous warfare",
-        "Location": "United States",
-        "Risk": "ELEVATED"
+        "Actor": "China, United States",
+        "Action": "China's AI governance threatens US tech leadership.",
+        "Location": "Global (Tech Sector)",
+        "Risk": "HIGH"
     }
 ]
