@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-21",
-        "Actor": "Iran",
-        "Action": "Establishes new maritime oversight zone in Hormuz.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-21",
+        "Date": "2026-05-22",
         "Actor": "United States",
-        "Action": "Marines board Iranian tanker in Gulf of Oman.",
-        "Location": "Gulf of Oman",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-21",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap, up to twelve new fabs.",
+        "Action": "US arms sales to Taiwan on 'pause'.",
         "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-21",
-        "Actor": "Russia, North Korea",
-        "Action": "Wartime partnership strengthens, causing global concern.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-21",
-        "Actor": "Hezbollah",
-        "Action": "Carries out 24 operations targeting Israeli military.",
-        "Location": "Israel-Lebanon Border",
+        "Date": "2026-05-22",
+        "Actor": "Iran, Oman, Global Shipping",
+        "Action": "Hormuz closed, Panama Canal busy, Iran discusses tolls.",
+        "Location": "Strait of Hormuz, Panama Canal",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-21",
+        "Date": "2026-05-22",
+        "Actor": "Russia, China, North Korea",
+        "Action": "Russia, China, NK strengthen anti-Western alliance.",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-22",
         "Actor": "China",
-        "Action": "Reveals advanced data-centric intelligence strategy.",
-        "Location": "China",
+        "Action": "China advances AI governance, chip independence.",
+        "Location": "China, Global",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "United States, Iran, Israel, Lebanon",
+        "Action": "Middle East: US-Iran deadlock, Israel-Lebanon conflict persists.",
+        "Location": "Middle East",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "U.S. Department of Commerce",
+        "Action": "US announces $2 billion quantum funding.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
     }
 ]
