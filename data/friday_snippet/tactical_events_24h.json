@@ -1,37 +1,44 @@
 [
     {
         "Date": "2026-05-22",
-        "Actor": "Iran",
-        "Action": "Discussing Strait of Hormuz toll regime",
+        "Actor": "Middle East Conflict",
+        "Action": "Strait of Hormuz closed, disrupting global trade",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "US",
-        "Action": "Deploying 5,000 troops to Poland",
-        "Location": "Poland",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On brink of renewed conflict",
+        "Location": "Horn of Africa",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "Israel, Hezbollah",
+        "Action": "Exchange of military strikes in Lebanon",
+        "Location": "Southern Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "China",
+        "Action": "AI governance offensive threatens US tech",
+        "Location": "Global (United States, China)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
         "Actor": "Russia",
-        "Action": "Seeking more foreign fighters for Ukraine",
+        "Action": "Seeks more foreign fighters for Ukraine",
         "Location": "Ukraine",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "China",
-        "Action": "Launching AI governance offensive, threatening US leadership",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "Global buyout funds",
-        "Action": "Completing exit from China's data centers",
-        "Location": "China",
+        "Actor": "UAE",
+        "Action": "Exited OPEC to boost oil production",
+        "Location": "UAE, Global oil markets",
         "Risk": "HIGH"
     }
 ]
