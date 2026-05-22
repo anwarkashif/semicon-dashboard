@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-20",
-        "Actor": "China",
-        "Action": "Banned Nvidia gaming chips during visit",
-        "Location": "China",
+        "Date": "2026-05-22",
+        "Actor": "Global Shipping",
+        "Action": "Strait of Hormuz closure impacts global shipping.",
+        "Location": "Strait of Hormuz, Panama Canal",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-20",
-        "Actor": "US, Europe",
-        "Action": "Iran war straining US-European alliance",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "U.S. Marines",
-        "Action": "Boarded Iranian oil tanker",
-        "Location": "Gulf of Oman",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap, 12 new fabs",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "Russia",
-        "Action": "Dangerously intercepted British spy plane",
-        "Location": "Black Sea",
+        "Date": "2026-05-22",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "Nations on brink of renewed war.",
+        "Location": "Horn of Africa",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-20",
-        "Actor": "North Korea, Russia",
-        "Action": "Deepen wartime partnership",
-        "Location": "Global",
+        "Date": "2026-05-22",
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for production.",
+        "Location": "Global Semiconductor Industry",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "China",
+        "Action": "AI governance offensive threatens US tech leadership.",
+        "Location": "Global AI/Technology Sector",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "United States, Philippines",
+        "Action": "Nearing deal on economic security zone.",
+        "Location": "South China Sea, Philippines",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "United States",
+        "Action": "Deploys 5,000 troops to Poland.",
+        "Location": "Poland, Eastern Europe",
         "Risk": "HIGH"
     }
 ]

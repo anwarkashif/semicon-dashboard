@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-20",
-        "Actor": "International Monetary Fund",
-        "Action": "Warns of worsening economic impact from Iran war",
-        "Location": "Global, Middle East",
+        "Date": "2026-05-22",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "Ethiopia and Eritrea on brink of war",
+        "Location": "East Africa",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-20",
-        "Actor": "United States, Europe",
-        "Action": "Strategic alliance breaking due to Iran war",
-        "Location": "Global, Middle East",
+        "Date": "2026-05-22",
+        "Actor": "Japan",
+        "Action": "Japan receives first oil tanker exit",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-20",
-        "Actor": "China, Russia",
-        "Action": "Declared 'multipolar world' vision after summit",
+        "Date": "2026-05-22",
+        "Actor": "Russia",
+        "Action": "Russia seeks more foreign fighters for Ukraine",
+        "Location": "Ukraine",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "Russia, China",
+        "Action": "Putin-Xi meeting strengthens strategic alliance",
         "Location": "Global",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-20",
-        "Actor": "United States (Trump)",
-        "Action": "Potential cancellation of $14bn Taiwan arms deal",
-        "Location": "Taiwan",
+        "Date": "2026-05-22",
+        "Actor": "United States, Philippines",
+        "Action": "US, Philippines form economic security zone",
+        "Location": "Philippines",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-22",
+        "Actor": "Hezbollah, Israel",
+        "Action": "Hezbollah, Israel exchange military strikes",
+        "Location": "Southern Lebanon",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "China",
-        "Action": "Banned Nvidia's gaming chip sales",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-20",
-        "Actor": "TSMC",
-        "Action": "Plans 1nm chip roadmap and 12 new fabs",
-        "Location": "Global (Taiwan)",
-        "Risk": "HIGH"
     }
 ]
