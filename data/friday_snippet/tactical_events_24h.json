@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-22",
-        "Actor": "Middle East Conflict",
-        "Action": "Strait of Hormuz closed, disrupting global trade",
-        "Location": "Strait of Hormuz",
+        "Actor": "Global Shipping",
+        "Action": "Strait of Hormuz closure impacts global shipping.",
+        "Location": "Strait of Hormuz, Panama Canal",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed conflict",
+        "Action": "Nations on brink of renewed war.",
         "Location": "Horn of Africa",
-        "Risk": "CRITICAL"
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "Israel, Hezbollah",
-        "Action": "Exchange of military strikes in Lebanon",
-        "Location": "Southern Lebanon",
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for production.",
+        "Location": "Global Semiconductor Industry",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-22",
         "Actor": "China",
-        "Action": "AI governance offensive threatens US tech",
-        "Location": "Global (United States, China)",
+        "Action": "AI governance offensive threatens US tech leadership.",
+        "Location": "Global AI/Technology Sector",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "Russia",
-        "Action": "Seeks more foreign fighters for Ukraine",
-        "Location": "Ukraine",
-        "Risk": "HIGH"
+        "Actor": "United States, Philippines",
+        "Action": "Nearing deal on economic security zone.",
+        "Location": "South China Sea, Philippines",
+        "Risk": "ELEVATED"
     },
     {
         "Date": "2026-05-22",
-        "Actor": "UAE",
-        "Action": "Exited OPEC to boost oil production",
-        "Location": "UAE, Global oil markets",
+        "Actor": "United States",
+        "Action": "Deploys 5,000 troops to Poland.",
+        "Location": "Poland, Eastern Europe",
         "Risk": "HIGH"
     }
 ]
