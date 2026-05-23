@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-23",
-        "Actor": "Iran",
-        "Action": "Expands control, blockade in Strait of Hormuz.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed war in region.",
+        "Action": "On brink of renewed border conflict",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Israel",
-        "Action": "Strike kills five in Lebanon building.",
-        "Location": "Lebanon",
+        "Actor": "Iran, Pakistan, United States",
+        "Action": "Iran expands Hormuz control; Pakistan mediates peace",
+        "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "United States (Space Force)",
-        "Action": "Missile alert satellites at risk of critical defects.",
-        "Location": "Space",
-        "Risk": "CRITICAL"
+        "Actor": "United States, China",
+        "Action": "Space Force warns of moon conflict",
+        "Location": "Lunar Orbit, Space",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for volume production.",
+        "Action": "High-NA EUV not production ready",
         "Location": "Global Semiconductor Industry",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "China",
-        "Action": "AI governance offensive threatens US tech leadership.",
-        "Location": "Global",
-        "Risk": "HIGH"
+        "Actor": "Samsung, MediaTek",
+        "Action": "Negotiating memory for foundry orders",
+        "Location": "South Korea, Taiwan",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Israel, Lebanon",
+        "Action": "Soldier killed; Israel targets rescue team",
+        "Location": "Israel-Lebanon Border",
+        "Risk": "CRITICAL"
     }
 ]
