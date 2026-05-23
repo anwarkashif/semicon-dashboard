@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-22",
+        "Date": "2026-05-23",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed conflict.",
-        "Location": "Horn of Africa",
+        "Action": "Horn of Africa nations nearing renewed conflict.",
+        "Location": "Ethiopia, Eritrea (Horn of Africa)",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-22",
+        "Date": "2026-05-23",
+        "Actor": "United States (Space Force), China",
+        "Action": "US preparing for potential lunar conflict with China.",
+        "Location": "Moon / Space",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
         "Actor": "Iran",
-        "Action": "Expands Hormuz control, deepens shipping crisis.",
+        "Action": "Iran expands control in vital shipping chokepoint.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-22",
-        "Actor": "China, United States",
-        "Action": "China's AI offensive threatens US tech.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "United States, Taiwan",
-        "Action": "US arms delivery delay rattles Taiwan.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "South Korea",
-        "Action": "Pursues nuclear submarines, tests non-nuclear deterrence.",
-        "Location": "South Korea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
+        "Date": "2026-05-23",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production.",
-        "Location": "Global (semiconductor industry)",
-        "Risk": "ELEVATED"
+        "Action": "Key advanced chipmaking tool not volume-ready.",
+        "Location": "Global / Netherlands",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "China, United States",
+        "Action": "China's AI strategy threatens US tech dominance.",
+        "Location": "Global / US / China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "United States (Space Force)",
+        "Action": "Critical defects threaten US missile alert satellites.",
+        "Location": "Space / United States",
+        "Risk": "CRITICAL"
     }
 ]

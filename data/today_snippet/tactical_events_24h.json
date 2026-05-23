@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-22",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "Ethiopia and Eritrea on brink of war",
-        "Location": "East Africa",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "Japan",
-        "Action": "Japan receives first oil tanker exit",
+        "Date": "2026-05-23",
+        "Actor": "Iran",
+        "Action": "Expands control over Strait of Hormuz.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-22",
-        "Actor": "Russia",
-        "Action": "Russia seeks more foreign fighters for Ukraine",
-        "Location": "Ukraine",
+        "Date": "2026-05-23",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On brink of war again.",
+        "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-22",
-        "Actor": "Russia, China",
-        "Action": "Putin-Xi meeting strengthens strategic alliance",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "United States, Philippines",
-        "Action": "US, Philippines form economic security zone",
-        "Location": "Philippines",
+        "Date": "2026-05-23",
+        "Actor": "United States",
+        "Action": "Space Force prepares for moon conflict with China.",
+        "Location": "Space (Moon)",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-22",
-        "Actor": "Hezbollah, Israel",
-        "Action": "Hezbollah, Israel exchange military strikes",
-        "Location": "Southern Lebanon",
-        "Risk": "CRITICAL"
+        "Date": "2026-05-23",
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for production.",
+        "Location": "Global Semiconductor Industry",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Samsung, MediaTek",
+        "Action": "Samsung seeks memory for foundry orders.",
+        "Location": "Global Semiconductor Industry",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "China",
+        "Action": "AI governance offensive threatens US tech leadership.",
+        "Location": "Global",
+        "Risk": "HIGH"
     }
 ]
