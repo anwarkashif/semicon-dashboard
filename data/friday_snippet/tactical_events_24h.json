@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-22",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed conflict",
-        "Location": "Horn of Africa",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
-        "Location": "Global Semiconductor Industry",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-22",
+        "Date": "2026-05-23",
         "Actor": "Iran",
-        "Action": "Expanding control over Strait of Hormuz",
+        "Action": "Expanding Hormuz control, stranding seafarers.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-22",
-        "Actor": "Israel",
-        "Action": "Conducts airstrikes, killings in Lebanon",
-        "Location": "Lebanon, Near Syrian Border",
+        "Date": "2026-05-23",
+        "Actor": "United States",
+        "Action": "Pauses $14bn Taiwan arms sale.",
+        "Location": "Taiwan, Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On the brink of war again.",
+        "Location": "Horn of Africa",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-22",
+        "Date": "2026-05-23",
         "Actor": "China",
-        "Action": "AI governance offensive threatens US tech leadership",
-        "Location": "Global, United States",
+        "Action": "AI governance offensive threatens US tech leadership.",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-22",
-        "Actor": "South Korea",
-        "Action": "Pursues nuclear submarine capability",
-        "Location": "South Korea, Northeast Asia",
+        "Date": "2026-05-23",
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for high-volume production.",
+        "Location": "Global (semiconductor industry)",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "United States (Pentagon)",
+        "Action": "Bets $54 billion on autonomous warfare.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
     }
 ]
