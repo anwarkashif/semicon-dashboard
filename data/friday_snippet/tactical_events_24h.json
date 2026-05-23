@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-23",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed border conflict.",
-        "Location": "Horn of Africa",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
         "Actor": "Iran",
-        "Action": "Expanding control, disrupting Strait of Hormuz shipping.",
+        "Action": "Expanding control in Strait of Hormuz",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Israel",
-        "Action": "Airstrikes pound southern Lebanon and Gaza.",
-        "Location": "Southern Lebanon, Gaza",
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for production",
+        "Location": "Global Semiconductor Industry",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On brink of renewed border war",
+        "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for mass production.",
-        "Location": "Global (Semiconductor Industry)",
+        "Actor": "US Space Force, China",
+        "Action": "Preparing for potential US-China lunar conflict",
+        "Location": "Moon / Space",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "United States, China",
-        "Action": "US prepares for potential moon conflict.",
-        "Location": "Space (Moon)",
+        "Actor": "Samsung, MediaTek",
+        "Action": "Discussing memory-for-foundry orders swap",
+        "Location": "South Korea / Taiwan",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "China, United States",
-        "Action": "China's AI governance threatens US tech leadership.",
-        "Location": "Global (Technology Sector)",
-        "Risk": "HIGH"
+        "Actor": "Chile",
+        "Action": "Copper mine permit setback jolts sector",
+        "Location": "Chile",
+        "Risk": "ELEVATED"
     }
 ]
