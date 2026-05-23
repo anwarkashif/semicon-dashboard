@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-23",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed military conflict.",
+        "Action": "Approaching renewed armed conflict.",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
         "Actor": "United States (Space Force)",
-        "Action": "Missile alert satellites face critical defects.",
+        "Action": "Missile alert satellites at critical defect risk.",
         "Location": "Space",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Global Shipping Industry",
-        "Action": "Hormuz crisis reshapes global tanker trade.",
-        "Location": "Strait of Hormuz",
+        "Actor": "United States",
+        "Action": "Suspends missile delivery to Japan.",
+        "Location": "United States, Japan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Israel",
+        "Action": "Airstrikes kill medics in Lebanon.",
+        "Location": "Southern Lebanon",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for mass production.",
+        "Action": "High-NA EUV not ready for production.",
         "Location": "Global (Semiconductor Industry)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "United States, China",
-        "Action": "US prepares for potential moon conflict.",
-        "Location": "Moon / Space",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "United States, Iran",
-        "Action": "US blockade redirects 100 Iran-bound vessels.",
-        "Location": "Middle East / Global Shipping",
+        "Actor": "United States (Trump)",
+        "Action": "Iran deal negotiated, Hormuz to reopen.",
+        "Location": "Strait of Hormuz",
         "Risk": "HIGH"
     }
 ]
