@@ -31,8 +31,8 @@ if not VALID_NEWS_KEYS or not GEMINI_API_KEY:
     exit()
 
 client = genai.Client(api_key=GEMINI_API_KEY)
-# FIX 1: Switched to 2.0-flash for better stability and rate limit handling
-model_name = 'gemini-2.0-flash'
+# Using trusted 2.5-flash model
+model_name = 'gemini-2.5-flash'
 
 BANNED_SOURCES = ['variety.com', 'hollywoodlife.com', 'tmz.com', 'people.com', 'entertainment', 'amazon', 'searates', 'goodreads', 'researchgate', 'benzinga', 'yahoo']
 
@@ -184,16 +184,16 @@ def fetch_latest_news():
     
     core = '("semiconductor" OR "microchip" OR "foundry" OR "lithography" OR "rare earth" OR "critical minerals" OR "export control" OR "military AI" OR "data center" OR "AI chip" OR "OSAT" OR "packaging")'
     
-    # FIX 2: Reduced limits drastically to ensure the payload slips through rate limits smoothly
+    # Restored to maximum data limits for deep intelligence analysis (100 Articles)
     regional_queries = [
-        (f'{core} AND ("Asia" OR "China" OR "Taiwan" OR "Japan" OR "South Korea" OR "TSMC")', 5, 'ASIA'),
-        (f'{core} AND ("USA" OR "United States" OR "Americas" OR "Brazil" OR "Canada" OR "Anthropic" OR "Nvidia")', 5, 'AMERICAS'),
-        (f'("rare earth" OR "cobalt" OR "lithium" OR "gallium" OR "minerals") AND ("Africa" OR "South Africa" OR "Sudan" OR "Congo" OR "Egypt" OR "mining")', 4, 'AFRICA'),
-        (f'{core} AND ("Europe" OR "EU" OR "UK" OR "Germany" OR "France" OR "ASML")', 5, 'EUROPE'),
-        (f'{core} AND ("Oceania" OR "Australia" OR "New Zealand")', 4, 'OCEANIA'),
-        (f'{core} AND ("Middle East" OR "West Asia" OR "Gulf" OR "OPEC" OR "LNG")', 5, 'WEST ASIA / MIDDLE EAST (GLOBAL)'),
-        (f'{core} AND ("India" OR "Modi" OR "Pax Silica" OR "New Delhi")', 4, 'INDIA (DEDICATED)'),
-        (f'("AI" OR "data center" OR "chips" OR "military" OR "energy") AND ("UAE" OR "Saudi Arabia" OR "Israel" OR "Iran" OR "G42" OR "Humain")', 4, 'WEST ASIA (DEDICATED)')
+        (f'{core} AND ("Asia" OR "China" OR "Taiwan" OR "Japan" OR "South Korea" OR "TSMC")', 15, 'ASIA'),
+        (f'{core} AND ("USA" OR "United States" OR "Americas" OR "Brazil" OR "Canada" OR "Anthropic" OR "Nvidia")', 15, 'AMERICAS'),
+        (f'("rare earth" OR "cobalt" OR "lithium" OR "gallium" OR "minerals") AND ("Africa" OR "South Africa" OR "Sudan" OR "Congo" OR "Egypt" OR "mining")', 10, 'AFRICA'),
+        (f'{core} AND ("Europe" OR "EU" OR "UK" OR "Germany" OR "France" OR "ASML")', 15, 'EUROPE'),
+        (f'{core} AND ("Oceania" OR "Australia" OR "New Zealand")', 10, 'OCEANIA'),
+        (f'{core} AND ("Middle East" OR "West Asia" OR "Gulf" OR "OPEC" OR "LNG")', 15, 'WEST ASIA / MIDDLE EAST (GLOBAL)'),
+        (f'{core} AND ("India" OR "Modi" OR "Pax Silica" OR "New Delhi")', 10, 'INDIA (DEDICATED)'),
+        (f'("AI" OR "data center" OR "chips" OR "military" OR "energy") AND ("UAE" OR "Saudi Arabia" OR "Israel" OR "Iran" OR "G42" OR "Humain")', 10, 'WEST ASIA (DEDICATED)')
     ]
     
     news_compiled = ""
