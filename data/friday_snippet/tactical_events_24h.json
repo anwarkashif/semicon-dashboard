@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-05-23",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "Nations on brink of renewed conflict.",
+        "Location": "Horn of Africa",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-23",
         "Actor": "Iran",
-        "Action": "Expanding control over critical Strait of Hormuz",
+        "Action": "Iran's Hormuz control strands 20,000 seafarers.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "United States, Iran, Pakistan",
-        "Action": "Finalizing interim deal to end US-Iran war",
-        "Location": "Middle East",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed military conflict",
-        "Location": "Horn of Africa",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "United States (Space Force), China",
-        "Action": "Preparing for potential moon conflict with China",
-        "Location": "Moon (Space)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
-        "Location": "Global",
+        "Actor": "United States (Space Force)",
+        "Action": "Missile alert satellites face critical defect risks.",
+        "Location": "Space (US defense)",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Samsung, MediaTek",
-        "Action": "Seeking strategic chip trade and foundry orders",
-        "Location": "Taiwan, South Korea",
-        "Risk": "ELEVATED"
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for mass production.",
+        "Location": "Global (semiconductor industry)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Israel",
+        "Action": "Israeli soldier killed near Lebanon border.",
+        "Location": "Israel-Lebanon border",
+        "Risk": "CRITICAL"
     }
 ]
