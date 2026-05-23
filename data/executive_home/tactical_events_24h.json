@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-23",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "Approaching war again in Horn of Africa.",
-        "Location": "Horn of Africa",
+        "Actor": "United States",
+        "Action": "Suspends Japan missile delivery due to Iran conflict",
+        "Location": "United States, Japan, Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "US Space Force, China",
-        "Action": "Preparing for potential moon conflict with China.",
-        "Location": "Moon / Space",
-        "Risk": "HIGH"
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On brink of war in Horn of Africa",
+        "Location": "Horn of Africa (Ethiopia, Eritrea)",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "China, United States",
-        "Action": "Advancing AI governance, challenging US tech leadership.",
-        "Location": "Global (Tech/AI)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "United States",
-        "Action": "Blockade against Iran redirected 100 vessels.",
-        "Location": "Middle East",
+        "Actor": "US Space Force",
+        "Action": "Missile alert satellites risk critical defects",
+        "Location": "Space (United States)",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production.",
-        "Location": "Global (Semiconductor Industry)",
+        "Action": "High-NA EUV not ready for high-volume production",
+        "Location": "Global (Netherlands)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Israel",
-        "Action": "Air strikes kill medics in southern Lebanon.",
-        "Location": "Southern Lebanon",
-        "Risk": "CRITICAL"
+        "Actor": "China, United States",
+        "Action": "China's AI governance threatens US tech leadership",
+        "Location": "Global (China, United States)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Samsung, MediaTek",
+        "Action": "Samsung seeks chip trade for foundry orders",
+        "Location": "Global (South Korea, Taiwan)",
+        "Risk": "HIGH"
     }
 ]
