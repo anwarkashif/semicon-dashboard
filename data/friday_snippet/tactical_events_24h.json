@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-23",
+        "Actor": "Iran",
+        "Action": "Expanding control over critical Strait of Hormuz",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "United States, Iran, Pakistan",
+        "Action": "Finalizing interim deal to end US-Iran war",
+        "Location": "Middle East",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed border conflict",
+        "Action": "On brink of renewed military conflict",
         "Location": "Horn of Africa",
-        "Risk": "CRITICAL"
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Iran, Pakistan, United States",
-        "Action": "Iran expands Hormuz control; Pakistan mediates peace",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "United States, China",
-        "Action": "Space Force warns of moon conflict",
-        "Location": "Lunar Orbit, Space",
+        "Actor": "United States (Space Force), China",
+        "Action": "Preparing for potential moon conflict with China",
+        "Location": "Moon (Space)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
         "Actor": "ASML",
-        "Action": "High-NA EUV not production ready",
-        "Location": "Global Semiconductor Industry",
-        "Risk": "HIGH"
+        "Action": "High-NA EUV not ready for production",
+        "Location": "Global",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
         "Actor": "Samsung, MediaTek",
-        "Action": "Negotiating memory for foundry orders",
-        "Location": "South Korea, Taiwan",
+        "Action": "Seeking strategic chip trade and foundry orders",
+        "Location": "Taiwan, South Korea",
         "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "Israel, Lebanon",
-        "Action": "Soldier killed; Israel targets rescue team",
-        "Location": "Israel-Lebanon Border",
-        "Risk": "CRITICAL"
     }
 ]
