@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-23",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "Approaching renewed conflict",
+        "Action": "Are on brink of renewed war.",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Iran",
-        "Action": "Increases control over Strait of Hormuz",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
         "Actor": "Israel",
-        "Action": "Continues military operations in Gaza",
+        "Action": "Attacks central Gaza despite ceasefire agreement.",
         "Location": "Gaza",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
-        "Location": "Global (semiconductor industry)",
-        "Risk": "HIGH"
+        "Action": "High-NA EUV not ready for mass production.",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Iran",
+        "Action": "Expands control in Hormuz, disrupting trade.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
         "Actor": "China",
-        "Action": "AI governance threatens U.S. tech leadership",
-        "Location": "Global (tech sector)",
+        "Action": "AI governance offensive threatens US tech leadership.",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "United States, Philippines",
-        "Action": "War games increase regional conflict risk",
-        "Location": "South China Sea",
-        "Risk": "HIGH"
+        "Actor": "Iran, United States",
+        "Action": "Talks reveal major gaps amid ongoing conflict.",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
     }
 ]
