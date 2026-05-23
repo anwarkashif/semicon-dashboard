@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-23",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "Are on brink of renewed war.",
+        "Action": "On brink of renewed conflict.",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Israel",
-        "Action": "Attacks central Gaza despite ceasefire agreement.",
-        "Location": "Gaza",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for mass production.",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
         "Actor": "Iran",
-        "Action": "Expands control in Hormuz, disrupting trade.",
+        "Action": "Expands control in Hormuz, deepening shipping crisis.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "China",
-        "Action": "AI governance offensive threatens US tech leadership.",
-        "Location": "Global",
+        "Actor": "Israel",
+        "Action": "Attacks southern Lebanon and Syrian border.",
+        "Location": "Southern Lebanon, Syrian Border",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Iran, United States",
-        "Action": "Talks reveal major gaps amid ongoing conflict.",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
+        "Actor": "China",
+        "Action": "Launches AI governance offensive, challenges US tech.",
+        "Location": "Global (AI/Tech Sector)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "ASML",
+        "Action": "High-NA EUV tool not ready for production.",
+        "Location": "Global Semiconductor Industry",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Samsung, MediaTek",
+        "Action": "Samsung seeks foundry orders for memory chips.",
+        "Location": "Global Semiconductor Industry",
+        "Risk": "ELEVATED"
     }
 ]
