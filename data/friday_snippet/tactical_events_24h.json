@@ -2,36 +2,43 @@
     {
         "Date": "2026-05-23",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "Nations on brink of renewed conflict.",
-        "Location": "Horn of Africa",
+        "Action": "Horn of Africa nations nearing renewed conflict.",
+        "Location": "Ethiopia, Eritrea (Horn of Africa)",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
+        "Actor": "United States (Space Force), China",
+        "Action": "US preparing for potential lunar conflict with China.",
+        "Location": "Moon / Space",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
         "Actor": "Iran",
-        "Action": "Iran's Hormuz control strands 20,000 seafarers.",
+        "Action": "Iran expands control in vital shipping chokepoint.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "United States (Space Force)",
-        "Action": "Missile alert satellites face critical defect risks.",
-        "Location": "Space (US defense)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for mass production.",
-        "Location": "Global (semiconductor industry)",
+        "Action": "Key advanced chipmaking tool not volume-ready.",
+        "Location": "Global / Netherlands",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Israel",
-        "Action": "Israeli soldier killed near Lebanon border.",
-        "Location": "Israel-Lebanon border",
+        "Actor": "China, United States",
+        "Action": "China's AI strategy threatens US tech dominance.",
+        "Location": "Global / US / China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "United States (Space Force)",
+        "Action": "Critical defects threaten US missile alert satellites.",
+        "Location": "Space / United States",
         "Risk": "CRITICAL"
     }
 ]
