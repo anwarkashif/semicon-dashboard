@@ -1,37 +1,44 @@
 [
     {
-        "Date": "2026-05-22",
+        "Date": "2026-05-23",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On brink of renewed conflict",
+        "Location": "Horn of Africa",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "China",
+        "Action": "Pushes AI governance, threatens US leadership",
+        "Location": "Global AI/Tech Sector",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
         "Actor": "Iran",
-        "Action": "Expands control over vital Strait of Hormuz",
+        "Action": "Expands control, disrupts Strait of Hormuz trade",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-22",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
-        "Location": "Global Semiconductor Industry",
+        "Date": "2026-05-23",
+        "Actor": "United States",
+        "Action": "Pauses Taiwan arms sale amid Iran war",
+        "Location": "Taiwan, Iran",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-22",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed conflict",
-        "Location": "East Africa",
+        "Date": "2026-05-23",
+        "Actor": "ASML",
+        "Action": "High-NA EUV production not ready",
+        "Location": "Global Semiconductor Industry",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-22",
-        "Actor": "China",
-        "Action": "AI governance offensive threatens US tech leadership",
-        "Location": "Global (US, China)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-22",
-        "Actor": "Israel",
-        "Action": "Air strikes escalate conflict in Lebanon",
-        "Location": "Lebanon, Syrian Border",
+        "Date": "2026-05-23",
+        "Actor": "South Korea",
+        "Action": "Initiates nuclear submarine program development",
+        "Location": "Korean Peninsula",
         "Risk": "HIGH"
     }
 ]
