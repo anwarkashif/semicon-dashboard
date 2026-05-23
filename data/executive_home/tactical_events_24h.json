@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-23",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed military conflict",
+        "Action": "On brink of renewed conflict",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "United States (Space Force)",
-        "Action": "Warns of potential moon conflict with China",
-        "Location": "Cislunar Space",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
         "Actor": "Iran",
-        "Action": "Expanding control in critical Strait of Hormuz",
+        "Action": "Expanding Strait of Hormuz control",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for mass production",
-        "Location": "Global Semiconductor Industry",
+        "Action": "High-NA EUV not ready for volume production",
+        "Location": "Netherlands",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "United States, China",
+        "Action": "Prepare for potential moon conflict",
+        "Location": "Space (Moon)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "Israel",
+        "Action": "Military strike kills five in Lebanon",
+        "Location": "Lebanon",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
         "Actor": "Samsung, MediaTek",
-        "Action": "Negotiating memory chips for foundry orders",
-        "Location": "Global Semiconductor Industry",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "China",
-        "Action": "Launches AI governance offensive, threatening US leadership",
-        "Location": "Global Technology Sector",
+        "Action": "Discussing memory for foundry orders",
+        "Location": "South Korea, Taiwan",
         "Risk": "HIGH"
     }
 ]
