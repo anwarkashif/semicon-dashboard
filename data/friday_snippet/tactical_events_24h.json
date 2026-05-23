@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-23",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On brink of renewed border conflict.",
+        "Location": "Horn of Africa",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-23",
         "Actor": "Iran",
-        "Action": "Deepens control, crisis in vital strait",
+        "Action": "Expanding control, disrupting Strait of Hormuz shipping.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-23",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed warfare",
-        "Location": "Horn of Africa",
+        "Actor": "Israel",
+        "Action": "Airstrikes pound southern Lebanon and Gaza.",
+        "Location": "Southern Lebanon, Gaza",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for mass production.",
+        "Location": "Global (Semiconductor Industry)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-23",
+        "Actor": "United States, China",
+        "Action": "US prepares for potential moon conflict.",
+        "Location": "Space (Moon)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-23",
         "Actor": "China, United States",
-        "Action": "AI governance offensive threatens tech leadership",
-        "Location": "Global",
+        "Action": "China's AI governance threatens US tech leadership.",
+        "Location": "Global (Technology Sector)",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
-        "Location": "Global Semiconductor Industry",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "United States Space Force",
-        "Action": "Missile alert satellites at risk of defects",
-        "Location": "Space",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "Samsung, MediaTek",
-        "Action": "Negotiates memory-for-foundry chip orders",
-        "Location": "Global Semiconductor Industry",
-        "Risk": "ELEVATED"
     }
 ]
