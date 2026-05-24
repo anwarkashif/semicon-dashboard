@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-23",
+        "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "Horn of Africa nations nearing renewed conflict.",
-        "Location": "Ethiopia, Eritrea (Horn of Africa)",
+        "Action": "On brink of renewed conflict",
+        "Location": "East Africa",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-23",
-        "Actor": "United States (Space Force), China",
-        "Action": "US preparing for potential lunar conflict with China.",
-        "Location": "Moon / Space",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "Iran",
-        "Action": "Iran expands control in vital shipping chokepoint.",
-        "Location": "Strait of Hormuz",
+        "Date": "2026-05-24",
+        "Actor": "Ukraine",
+        "Action": "Struck Russian oil terminal on Black Sea",
+        "Location": "Black Sea, Russia",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-23",
+        "Date": "2026-05-24",
+        "Actor": "Israel",
+        "Action": "Maintains 'freedom of action' in Lebanon",
+        "Location": "Lebanon, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
         "Actor": "ASML",
-        "Action": "Key advanced chipmaking tool not volume-ready.",
-        "Location": "Global / Netherlands",
-        "Risk": "HIGH"
+        "Action": "High-NA EUV not ready for production",
+        "Location": "Global Semiconductor Industry",
+        "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-23",
-        "Actor": "China, United States",
-        "Action": "China's AI strategy threatens US tech dominance.",
-        "Location": "Global / US / China",
-        "Risk": "HIGH"
+        "Date": "2026-05-24",
+        "Actor": "United States Space Force",
+        "Action": "Missile alert satellites face critical defects",
+        "Location": "Space",
+        "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-23",
-        "Actor": "United States (Space Force)",
-        "Action": "Critical defects threaten US missile alert satellites.",
-        "Location": "Space / United States",
+        "Date": "2026-05-24",
+        "Actor": "Unidentified Terrorists",
+        "Action": "Suicide bombing killed 24 on train",
+        "Location": "Balochistan, Pakistan",
         "Risk": "CRITICAL"
     }
 ]

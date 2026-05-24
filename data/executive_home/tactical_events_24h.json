@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-23",
+        "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed war",
-        "Location": "East Africa",
+        "Action": "On the brink of renewed war",
+        "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-23",
+        "Date": "2026-05-24",
+        "Actor": "Ukraine",
+        "Action": "Struck Russia's Black Sea oil terminal",
+        "Location": "Black Sea, Russia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
         "Actor": "Iran",
-        "Action": "Expands Hormuz control, deepens shipping crisis",
+        "Action": "Asserts right to control Hormuz Strait",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-23",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for volume production",
-        "Location": "Global Semiconductor Industry",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "United States, China",
-        "Action": "Prepare for potential moon conflict with China",
-        "Location": "Moon, Space",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "Israel, Lebanon",
-        "Action": "Israeli soldier killed near Lebanon border",
-        "Location": "Israel-Lebanon border",
+        "Date": "2026-05-24",
+        "Actor": "United States (Space Force)",
+        "Action": "Missile alert satellites face critical defects",
+        "Location": "Outer Space",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-23",
-        "Actor": "China, United States",
-        "Action": "AI governance offensive threatens U.S. leadership",
-        "Location": "Global (AI sector)",
+        "Date": "2026-05-24",
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for mass production",
+        "Location": "Global (semiconductor industry)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "China",
+        "Action": "Ship withdrew after tense standoff",
+        "Location": "Taiwan-controlled islands",
         "Risk": "HIGH"
     }
 ]
