@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed conflict.",
+        "Action": "On brink of war again.",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "Russia, Ukraine",
-        "Action": "Russia pounds capital with hypersonic missile.",
-        "Location": "Ukraine (Kyiv)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "United States (Space Force)",
+        "Actor": "United States Space Force",
         "Action": "Missile alert satellites risk critical defects.",
-        "Location": "Outer Space, United States",
+        "Location": "Space, United States",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "Iran (via UAE company)",
-        "Action": "Illegally acquired military satellite equipment.",
-        "Location": "Iran, United Arab Emirates",
-        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
         "Actor": "ASML",
         "Action": "High-NA EUV not ready for production.",
-        "Location": "Global (Netherlands)",
+        "Location": "Global Semiconductor Industry",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "United States (Space Force), China",
-        "Action": "Preparing for potential lunar conflict.",
-        "Location": "Moon, Outer Space",
+        "Actor": "Iran's Revolutionary Guards",
+        "Action": "Covertly acquired military satellite equipment via UAE.",
+        "Location": "UAE, Iran",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "Ukraine",
+        "Action": "Hit Russia\u2019s Sheskharis Black Sea oil terminal.",
+        "Location": "Black Sea, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "United States, Iran",
+        "Action": "Inch closer to potential deal ending conflict.",
+        "Location": "Middle East",
         "Risk": "HIGH"
     }
 ]
