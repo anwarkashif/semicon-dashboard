@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-24",
+        "Actor": "Russia",
+        "Action": "Struck Kyiv with powerful Oreshnik missile.",
+        "Location": "Ukraine",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed conflict",
-        "Location": "East Africa",
+        "Action": "On brink of war again.",
+        "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "Ukraine",
-        "Action": "Struck Russian oil terminal on Black Sea",
-        "Location": "Black Sea, Russia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "Israel",
-        "Action": "Maintains 'freedom of action' in Lebanon",
-        "Location": "Lebanon, Middle East",
-        "Risk": "CRITICAL"
+        "Actor": "China",
+        "Action": "Ship standoff near Taiwan-controlled islands escalates.",
+        "Location": "Taiwan Strait",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
-        "Location": "Global Semiconductor Industry",
-        "Risk": "CRITICAL"
+        "Action": "High-NA EUV not ready for production.",
+        "Location": "Global semiconductor industry",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "United States Space Force",
-        "Action": "Missile alert satellites face critical defects",
-        "Location": "Space",
-        "Risk": "CRITICAL"
+        "Actor": "United States, Iran",
+        "Action": "Negotiating deal to reopen Strait of Hormuz.",
+        "Location": "Strait of Hormuz",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "Unidentified Terrorists",
-        "Action": "Suicide bombing killed 24 on train",
-        "Location": "Balochistan, Pakistan",
+        "Actor": "Ukraine",
+        "Action": "Hit Russia's Sheskharis Oil Terminal.",
+        "Location": "Black Sea (Russia)",
         "Risk": "CRITICAL"
     }
 ]
