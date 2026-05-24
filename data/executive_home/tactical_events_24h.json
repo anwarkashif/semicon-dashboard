@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-24",
-        "Actor": "Ethiopia / Eritrea",
-        "Action": "On brink of renewed conflict",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "Nations on brink of war again",
         "Location": "Horn of Africa",
-        "Risk": "HIGH"
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "United States / China",
-        "Action": "Preparing for potential 'in-person' moon conflict",
-        "Location": "Moon (Space)",
-        "Risk": "CRITICAL"
+        "Actor": "United States, China",
+        "Action": "US report warns of moon conflict",
+        "Location": "Lunar Orbit",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
         "Actor": "ASML",
         "Action": "High-NA EUV not ready for production",
-        "Location": "Global (Semiconductor Industry)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "United States",
-        "Action": "Suspending missile delivery to Japan",
-        "Location": "United States / Japan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "United States",
-        "Action": "Blockade against Iran redirects 100 vessels",
-        "Location": "Middle East (Maritime)",
+        "Location": "Global Semiconductor Industry",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
+        "Actor": "Ukraine",
+        "Action": "Hits Russian Black Sea oil terminal",
+        "Location": "Black Sea",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "United States, Iran",
+        "Action": "Iran agreement largely negotiated",
+        "Location": "Middle East",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-05-24",
         "Actor": "China",
-        "Action": "AI governance offensive threatens US tech leadership",
-        "Location": "Global (Technology Sector)",
+        "Action": "AI governance threatens US tech leadership",
+        "Location": "Global Technology Sector",
         "Risk": "HIGH"
     }
 ]
