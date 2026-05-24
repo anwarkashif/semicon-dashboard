@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-24",
-        "Actor": "Iran",
-        "Action": "Acquired military satellite equipment via UAE.",
-        "Location": "UAE",
+        "Actor": "China",
+        "Action": "Initiated tense standoff near Taiwan islands.",
+        "Location": "Taiwan Strait",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed war again.",
-        "Location": "Horn of Africa",
+        "Action": "Are on brink of war again.",
+        "Location": "East Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "United States, China",
-        "Action": "Preparing for potential moon conflict.",
-        "Location": "Moon / Space",
+        "Actor": "US Space Force",
+        "Action": "Missile alert satellites risk critical defects.",
+        "Location": "Space/United States",
         "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "Iran's Revolutionary Guards",
+        "Action": "Acquired military satellite equipment via UAE.",
+        "Location": "Iran (via UAE)",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
         "Actor": "ASML",
         "Action": "High-NA EUV not ready for production.",
         "Location": "Global semiconductor industry",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "United States (Space Force)",
-        "Action": "Missile alert satellites at risk.",
-        "Location": "Space",
-        "Risk": "CRITICAL"
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
         "Actor": "Ukraine",
-        "Action": "Attacked Russian Sheskharis oil terminal.",
-        "Location": "Black Sea (Russia)",
+        "Action": "Struck Russia's Sheskharis oil terminal.",
+        "Location": "Black Sea/Russia",
         "Risk": "HIGH"
     }
 ]
