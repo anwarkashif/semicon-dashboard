@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-24",
+        "Actor": "Iran",
+        "Action": "Acquired military satellite equipment via UAE.",
+        "Location": "UAE",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of war again.",
+        "Action": "On brink of renewed war again.",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "United States Space Force",
-        "Action": "Missile alert satellites risk critical defects.",
-        "Location": "Space, United States",
+        "Actor": "United States, China",
+        "Action": "Preparing for potential moon conflict.",
+        "Location": "Moon / Space",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
         "Actor": "ASML",
         "Action": "High-NA EUV not ready for production.",
-        "Location": "Global Semiconductor Industry",
-        "Risk": "HIGH"
+        "Location": "Global semiconductor industry",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "Iran's Revolutionary Guards",
-        "Action": "Covertly acquired military satellite equipment via UAE.",
-        "Location": "UAE, Iran",
-        "Risk": "HIGH"
+        "Actor": "United States (Space Force)",
+        "Action": "Missile alert satellites at risk.",
+        "Location": "Space",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
         "Actor": "Ukraine",
-        "Action": "Hit Russia\u2019s Sheskharis Black Sea oil terminal.",
-        "Location": "Black Sea, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "United States, Iran",
-        "Action": "Inch closer to potential deal ending conflict.",
-        "Location": "Middle East",
+        "Action": "Attacked Russian Sheskharis oil terminal.",
+        "Location": "Black Sea (Russia)",
         "Risk": "HIGH"
     }
 ]
