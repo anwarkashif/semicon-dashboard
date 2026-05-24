@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-23",
-        "Actor": "Iran",
-        "Action": "Expands control over Strait of Hormuz.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
+        "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of war again.",
+        "Action": "On brink of renewed conflict",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-23",
-        "Actor": "United States",
-        "Action": "Space Force prepares for moon conflict with China.",
+        "Date": "2026-05-24",
+        "Actor": "United States, China",
+        "Action": "Report warns of potential moon conflict",
         "Location": "Space (Moon)",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-23",
+        "Date": "2026-05-24",
+        "Actor": "Ukraine",
+        "Action": "Strikes Russia\u2019s Sheskharis oil terminal",
+        "Location": "Black Sea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-24",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production.",
+        "Action": "High-NA EUV not ready for production",
         "Location": "Global Semiconductor Industry",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-23",
+        "Date": "2026-05-24",
+        "Actor": "United States, Iran, Israel",
+        "Action": "US-Iran agreement nears final stage",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
         "Actor": "Samsung, MediaTek",
-        "Action": "Samsung seeks memory for foundry orders.",
-        "Location": "Global Semiconductor Industry",
+        "Action": "Chairman seeks memory for foundry orders",
+        "Location": "South Korea, Taiwan",
         "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "China",
-        "Action": "AI governance offensive threatens US tech leadership.",
-        "Location": "Global",
-        "Risk": "HIGH"
     }
 ]
