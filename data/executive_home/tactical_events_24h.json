@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-24",
-        "Actor": "China",
-        "Action": "Initiated tense standoff near Taiwan islands.",
-        "Location": "Taiwan Strait",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "Are on brink of war again.",
-        "Location": "East Africa",
+        "Action": "On the brink of renewed war",
+        "Location": "Horn of Africa",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "US Space Force",
-        "Action": "Missile alert satellites risk critical defects.",
-        "Location": "Space/United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "Iran's Revolutionary Guards",
-        "Action": "Acquired military satellite equipment via UAE.",
-        "Location": "Iran (via UAE)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production.",
-        "Location": "Global semiconductor industry",
-        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
         "Actor": "Ukraine",
-        "Action": "Struck Russia's Sheskharis oil terminal.",
-        "Location": "Black Sea/Russia",
+        "Action": "Struck Russia's Black Sea oil terminal",
+        "Location": "Black Sea, Russia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "Iran",
+        "Action": "Asserts right to control Hormuz Strait",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "United States (Space Force)",
+        "Action": "Missile alert satellites face critical defects",
+        "Location": "Outer Space",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "ASML",
+        "Action": "High-NA EUV not ready for mass production",
+        "Location": "Global (semiconductor industry)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "China",
+        "Action": "Ship withdrew after tense standoff",
+        "Location": "Taiwan-controlled islands",
         "Risk": "HIGH"
     }
 ]
