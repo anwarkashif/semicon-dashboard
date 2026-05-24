@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On the brink of renewed war",
-        "Location": "Horn of Africa",
+        "Action": "Approaching active conflict; on brink of war",
+        "Location": "Ethiopia, Eritrea",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "Ukraine",
-        "Action": "Struck Russia's Black Sea oil terminal",
-        "Location": "Black Sea, Russia",
+        "Actor": "Russia",
+        "Action": "Launched major Oreshnik missile attack on Kyiv",
+        "Location": "Kyiv, Ukraine",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "Iran",
-        "Action": "Asserts right to control Hormuz Strait",
+        "Actor": "United States, Iran",
+        "Action": "Nearing deal to reopen critical Strait of Hormuz",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "United States (Space Force)",
-        "Action": "Missile alert satellites face critical defects",
-        "Location": "Outer Space",
-        "Risk": "CRITICAL"
+        "Actor": "China",
+        "Action": "Chinese ship leaves after tense standoff",
+        "Location": "Near Taiwan-controlled islands",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
         "Actor": "ASML",
         "Action": "High-NA EUV not ready for mass production",
-        "Location": "Global (semiconductor industry)",
+        "Location": "Global Semiconductor Industry",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "China",
-        "Action": "Ship withdrew after tense standoff",
-        "Location": "Taiwan-controlled islands",
+        "Actor": "Iran's Guards",
+        "Action": "Used UAE firm to buy military satellite equipment",
+        "Location": "Iran (via UAE)",
         "Risk": "HIGH"
     }
 ]
