@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-24",
-        "Actor": "United States, Iran",
-        "Action": "Nearing final stage of new agreement",
-        "Location": "Middle East",
+        "Actor": "Ukraine",
+        "Action": "Attacked Russian Sheskharis oil terminal",
+        "Location": "Black Sea, Russia",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
         "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of renewed interstate war",
+        "Action": "On brink of renewed war",
         "Location": "Horn of Africa",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "United States, China",
-        "Action": "US preparing for potential moon conflict",
-        "Location": "Moon",
-        "Risk": "HIGH"
+        "Actor": "Iran",
+        "Action": "Armed forces remain on highest alert",
+        "Location": "Iran, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "United States (Space Force)",
+        "Action": "Missile alert satellites at risk of defects",
+        "Location": "Space (US national security)",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
         "Actor": "ASML",
         "Action": "High-NA EUV not ready for production",
-        "Location": "Global Semiconductor Industry",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "China, United States",
-        "Action": "China's AI governance offensive threatens US",
-        "Location": "Global",
+        "Location": "Global (semiconductor industry)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "New Zealand",
-        "Action": "Investing in maritime drones and fleet",
-        "Location": "Pacific Ocean",
-        "Risk": "ELEVATED"
+        "Actor": "Iran (via UAE company)",
+        "Action": "Acquired military satellite equipment",
+        "Location": "Iran, UAE",
+        "Risk": "HIGH"
     }
 ]
