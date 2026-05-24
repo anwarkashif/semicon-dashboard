@@ -4,6 +4,7 @@ import json
 import time
 import feedparser
 import requests
+from bs4 import BeautifulSoup
 import urllib.parse
 from datetime import datetime
 from google import genai
