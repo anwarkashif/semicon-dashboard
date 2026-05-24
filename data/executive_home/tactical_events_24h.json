@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-24",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "Nations on brink of war again",
-        "Location": "Horn of Africa",
+        "Actor": "Ukraine",
+        "Action": "Struck Russian oil terminal on Black Sea",
+        "Location": "Black Sea (Russia)",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
-        "Actor": "United States, China",
-        "Action": "US report warns of moon conflict",
-        "Location": "Lunar Orbit",
+        "Actor": "Iran",
+        "Action": "Acquired military satellite equipment via UAE company",
+        "Location": "Iran, UAE",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "Ethiopia, Eritrea",
+        "Action": "On the brink of renewed warfare",
+        "Location": "East Africa",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "United States",
+        "Action": "Blockade against Iran redirected 100 vessels",
+        "Location": "Persian Gulf",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "United States Space Force",
+        "Action": "Missile alert satellites at risk of critical defects",
+        "Location": "Space",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-24",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for production",
+        "Action": "High-NA EUV not ready for high-volume production",
         "Location": "Global Semiconductor Industry",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "Ukraine",
-        "Action": "Hits Russian Black Sea oil terminal",
-        "Location": "Black Sea",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "United States, Iran",
-        "Action": "Iran agreement largely negotiated",
-        "Location": "Middle East",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "China",
-        "Action": "AI governance threatens US tech leadership",
-        "Location": "Global Technology Sector",
         "Risk": "HIGH"
     }
 ]
