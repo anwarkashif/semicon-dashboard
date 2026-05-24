@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-23",
-        "Actor": "United States",
-        "Action": "Suspends Japan missile delivery due to Iran conflict",
-        "Location": "United States, Japan, Middle East",
+        "Date": "2026-05-24",
+        "Actor": "Ethiopia / Eritrea",
+        "Action": "On brink of renewed conflict",
+        "Location": "Horn of Africa",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "United States / China",
+        "Action": "Preparing for potential 'in-person' moon conflict",
+        "Location": "Moon (Space)",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-23",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "On brink of war in Horn of Africa",
-        "Location": "Horn of Africa (Ethiopia, Eritrea)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "US Space Force",
-        "Action": "Missile alert satellites risk critical defects",
-        "Location": "Space (United States)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-23",
+        "Date": "2026-05-24",
         "Actor": "ASML",
-        "Action": "High-NA EUV not ready for high-volume production",
-        "Location": "Global (Netherlands)",
+        "Action": "High-NA EUV not ready for production",
+        "Location": "Global (Semiconductor Industry)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "United States",
+        "Action": "Suspending missile delivery to Japan",
+        "Location": "United States / Japan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-24",
+        "Actor": "United States",
+        "Action": "Blockade against Iran redirects 100 vessels",
+        "Location": "Middle East (Maritime)",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-23",
-        "Actor": "China, United States",
-        "Action": "China's AI governance threatens US tech leadership",
-        "Location": "Global (China, United States)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-23",
-        "Actor": "Samsung, MediaTek",
-        "Action": "Samsung seeks chip trade for foundry orders",
-        "Location": "Global (South Korea, Taiwan)",
+        "Date": "2026-05-24",
+        "Actor": "China",
+        "Action": "AI governance offensive threatens US tech leadership",
+        "Location": "Global (Technology Sector)",
         "Risk": "HIGH"
     }
 ]
