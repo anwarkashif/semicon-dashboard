@@ -73,7 +73,7 @@ if not GEMINI_API_KEY:
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ==========================================
-# 2. DATA SCRAPING (ANTI-BOT + LIVE BOOLEAN)
+# 2. DATA SCRAPING (ANTI-BOT + LIVE BOOLEAN + DEEP SCRAPE)
 # ==========================================
 def fetch_daily_intelligence():
     print("🌍 Scraping strategic RSS & LIVE Boolean feeds...")
@@ -113,7 +113,7 @@ def fetch_daily_intelligence():
 
     for query in GOOGLE_QUERIES:
         encoded_query = urllib.parse.quote(query)
-        gn_url = f'[https://news.google.com/rss/search?q=](https://news.google.com/rss/search?q=){encoded_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
+        gn_url = f'https://news.google.com/rss/search?q={encoded_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
         
         try:
             response = requests.get(gn_url, headers=headers, timeout=15)
@@ -125,7 +125,45 @@ def fetch_daily_intelligence():
         except Exception as e:
             print(f"⚠️ Warning: Could not fetch Google News for {query} - {e}")
             
-    print(f"📰 Successfully grabbed {total_articles} raw headlines.")
+    # --- PHASE 3: DEEP-SCRAPE MARITIME ALERTS (For Gemini Analysis) ---
+    print("🚢 Executing Deep-Scrape on Live Maritime URLs...")
+    # Using 24h here to ensure we capture the full narrative of recent attacks
+    maritime_query = '("UKMTO" OR "Ambrey" OR "MSCHOA" OR "MSCIO") AND ("incident" OR "attack" OR "vessel" OR "boarded" OR "missile" OR "houthi") when:24h'
+    encoded_m_query = urllib.parse.quote(maritime_query)
+    gn_maritime_url = f'https://news.google.com/rss/search?q={encoded_m_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
+    
+    try:
+        m_res = requests.get(gn_maritime_url, headers=headers, timeout=15)
+        m_res.raise_for_status()
+        m_feed = feedparser.parse(m_res.text)
+        
+        for entry in m_feed.entries[:6]: # Target top 6 most recent maritime alerts
+            url = entry.link
+            try:
+                # 1. Visit the actual URL autonomously
+                page_res = requests.get(url, headers=headers, timeout=10)
+                soup = BeautifulSoup(page_res.text, 'html.parser')
+                
+                # 2. Extract all readable paragraph text
+                paragraphs = soup.find_all('p')
+                extracted_text = " ".join([p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 30])
+                
+                # 3. Clean and truncate for the LLM (800 chars is plenty for Gemini to grasp tactical specifics)
+                if extracted_text:
+                    snippet = extracted_text[:800] + "..." if len(extracted_text) > 800 else extracted_text
+                    aggregated_news += f"\n- [LIVE MARITIME ALERT - {entry.title}]\n  DEEP EXTRACTION DATA: {snippet}\n"
+                else:
+                    aggregated_news += f"\n- [LIVE MARITIME ALERT] {entry.title}\n"
+                
+                total_articles += 1
+            except Exception as e:
+                # Failsafe: If a specific publication blocks the scraper, fall back to just the headline
+                aggregated_news += f"\n- [LIVE MARITIME ALERT] {entry.title}\n"
+                total_articles += 1
+    except Exception as e:
+        print(f"⚠️ Warning: Could not fetch Maritime Boolean - {e}")
+
+    print(f"📰 Successfully grabbed {total_articles} raw headlines and deep-scraped data.")
     return aggregated_news, total_articles
 
 # ==========================================
