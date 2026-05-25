@@ -37,11 +37,22 @@ model_name = 'gemini-2.5-flash'
 BANNED_SOURCES = ['variety.com', 'hollywoodlife.com', 'tmz.com', 'people.com', 'entertainment', 'amazon', 'searates', 'goodreads', 'researchgate', 'benzinga', 'yahoo']
 
 def get_weekly_daterange():
-    end_date = datetime.now()
-    start_date = end_date - timedelta(days=7)
-    if start_date.month == end_date.month: return f"{start_date.strftime('%B')} {start_date.day}-{end_date.day}, {end_date.year}"
-    elif start_date.year == end_date.year: return f"{start_date.strftime('%B')} {start_date.day} - {end_date.strftime('%B')} {end_date.day}, {end_date.year}"
-    else: return f"{start_date.strftime('%B %d, %Y')} - {end_date.strftime('%B %d, %Y')}"
+    """Calculates the date range anchored strictly to the most recent Friday."""
+    # 1. Get today's date
+    today = datetime.now()
+
+    # 2. Find the Most Recent Friday (In Python, Monday is 0, Friday is 4)
+    days_since_friday = (today.weekday() - 4) % 7
+    most_recent_friday = today - timedelta(days=days_since_friday)
+    previous_friday = most_recent_friday - timedelta(days=7)
+
+    # 3. Format the string dynamically
+    if most_recent_friday.month == previous_friday.month:
+        return f"{most_recent_friday.strftime('%B')} {previous_friday.day}-{most_recent_friday.day}, {most_recent_friday.year}"
+    elif most_recent_friday.year == previous_friday.year:
+        return f"{previous_friday.strftime('%B %d')} - {most_recent_friday.strftime('%B %d')}, {most_recent_friday.year}"
+    else:
+        return f"{previous_friday.strftime('%B %d, %Y')} - {most_recent_friday.strftime('%B %d, %Y')}"
 
 def fetch_live_rss_feed():
     print("📡 Fetching LIVE Modular Boolean RSS Feeds (Advanced OSINT) for Think Tank Radar...")
