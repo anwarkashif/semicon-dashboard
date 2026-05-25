@@ -26,7 +26,7 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
     base_options = [
         "Executive Home",
         "Today's Snippet",
-        "Friday's Snippet 2.0",
+        "Weekly Tactical Brief",
         "Weekly Intelligence Brief",
         "Quantitative Threat Scoring",
         "Intelligence Interrogation (RAG)",

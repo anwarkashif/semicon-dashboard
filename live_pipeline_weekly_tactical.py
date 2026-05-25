@@ -10,59 +10,59 @@ from datetime import datetime
 from google import genai
 
 # ==========================================
-# 1. CONFIGURATION & SETUP (FRIDAY'S SNIPPET 2.0)
+# 1. CONFIGURATION & SETUP (WEEKLY TACTICAL BRIEF)
 # ==========================================
 os.makedirs('data/friday_snippet', exist_ok=True)
 
 RSS_FEEDS = [
     # --- 1. Geopolitics & Macro Policy ---
-    "https://www.ft.com/technology?format=rss",
-    "https://www.atlanticcouncil.org/feed/",
-    "https://foreignpolicy.com/feed/",
-    "https://moderndiplomacy.eu/feed/",
-    "https://www.worldpoliticsreview.com/feed/", 
+    "[https://www.ft.com/technology?format=rss](https://www.ft.com/technology?format=rss)",
+    "[https://www.atlanticcouncil.org/feed/](https://www.atlanticcouncil.org/feed/)",
+    "[https://foreignpolicy.com/feed/](https://foreignpolicy.com/feed/)",
+    "[https://moderndiplomacy.eu/feed/](https://moderndiplomacy.eu/feed/)",
+    "[https://www.worldpoliticsreview.com/feed/](https://www.worldpoliticsreview.com/feed/)", 
 
     # --- 2. Military & Conflict ---
-    "https://www.defenseone.com/rss/all/",
-    "https://warontherocks.com/feed/",
-    "https://www.realcleardefense.com/index.xml",
-    "https://www.c4isrnet.com/arc/outboundfeeds/rss/",
-    "https://www.defensenews.com/arc/outboundfeeds/rss/", 
+    "[https://www.defenseone.com/rss/all/](https://www.defenseone.com/rss/all/)",
+    "[https://warontherocks.com/feed/](https://warontherocks.com/feed/)",
+    "[https://www.realcleardefense.com/index.xml](https://www.realcleardefense.com/index.xml)",
+    "[https://www.c4isrnet.com/arc/outboundfeeds/rss/](https://www.c4isrnet.com/arc/outboundfeeds/rss/)",
+    "[https://www.defensenews.com/arc/outboundfeeds/rss/](https://www.defensenews.com/arc/outboundfeeds/rss/)", 
 
     # --- 3. Outer Space ---
-    "https://spacepolicyonline.com/feed/",
-    "https://www.space.com/feeds/all",
-    "https://spacewatch.global/feed/", 
-    "https://spaceflightnow.com/feed/", 
-    "https://www.satellitetoday.com/feed/", 
+    "[https://spacepolicyonline.com/feed/](https://spacepolicyonline.com/feed/)",
+    "[https://www.space.com/feeds/all](https://www.space.com/feeds/all)",
+    "[https://spacewatch.global/feed/](https://spacewatch.global/feed/)", 
+    "[https://spaceflightnow.com/feed/](https://spaceflightnow.com/feed/)", 
+    "[https://www.satellitetoday.com/feed/](https://www.satellitetoday.com/feed/)", 
 
     # --- 4. Lithography & Raw Materials ---
-    "https://semiwiki.com/feed/",
-    "https://semiengineering.com/feed/",
-    "https://www.mining.com/feed/",
-    "https://www.eetimes.com/feed/",
-    "https://www.supplychaindive.com/feeds/news/", 
+    "[https://semiwiki.com/feed/](https://semiwiki.com/feed/)",
+    "[https://semiengineering.com/feed/](https://semiengineering.com/feed/)",
+    "[https://www.mining.com/feed/](https://www.mining.com/feed/)",
+    "[https://www.eetimes.com/feed/](https://www.eetimes.com/feed/)",
+    "[https://www.supplychaindive.com/feeds/news/](https://www.supplychaindive.com/feeds/news/)", 
 
     # --- 5. Indo-Pacific & Country Actions ---
-    "https://thediplomat.com/feed/",
-    "https://technode.com/feed/",
-    "https://asiatimes.com/feed/",
-    "https://www.aspistrategist.org.au/feed/", 
-    "https://fulcrum.sg/feed/", 
+    "[https://thediplomat.com/feed/](https://thediplomat.com/feed/)",
+    "[https://technode.com/feed/](https://technode.com/feed/)",
+    "[https://asiatimes.com/feed/](https://asiatimes.com/feed/)",
+    "[https://www.aspistrategist.org.au/feed/](https://www.aspistrategist.org.au/feed/)", 
+    "[https://fulcrum.sg/feed/](https://fulcrum.sg/feed/)", 
 
     # --- 6. Logistics & West Asia ---
-    "https://gcaptain.com/feed/",
-    "https://www.middleeasteye.net/rss",
-    "https://www.aljazeera.com/xml/rss/all.xml",
-    "https://www.al-monitor.com/rss.xml",
-    "https://splash247.com/feed/", 
+    "[https://gcaptain.com/feed/](https://gcaptain.com/feed/)",
+    "[https://www.middleeasteye.net/rss](https://www.middleeasteye.net/rss)",
+    "[https://www.aljazeera.com/xml/rss/all.xml](https://www.aljazeera.com/xml/rss/all.xml)",
+    "[https://www.al-monitor.com/rss.xml](https://www.al-monitor.com/rss.xml)",
+    "[https://splash247.com/feed/](https://splash247.com/feed/)", 
     
     # --- 7. Next-Gen Compute (AI, ML & Quantum) ---
-    "https://www.nextplatform.com/feed/",
-    "https://thequantuminsider.com/feed/",            
-    "https://spectrum.ieee.org/feeds/feed.rss",
-    "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
-    "https://venturebeat.com/category/ai/feed/"
+    "[https://www.nextplatform.com/feed/](https://www.nextplatform.com/feed/)",
+    "[https://thequantuminsider.com/feed/](https://thequantuminsider.com/feed/)",            
+    "[https://spectrum.ieee.org/feeds/feed.rss](https://spectrum.ieee.org/feeds/feed.rss)",
+    "[https://www.technologyreview.com/topic/artificial-intelligence/feed/](https://www.technologyreview.com/topic/artificial-intelligence/feed/)",
+    "[https://venturebeat.com/category/ai/feed/](https://venturebeat.com/category/ai/feed/)"
 ]
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -76,7 +76,7 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 # 2. DATA SCRAPING (ANTI-BOT + LIVE BOOLEAN + DEEP SCRAPE)
 # ==========================================
 def fetch_daily_intelligence():
-    print("🌍 Scraping strategic RSS & LIVE Boolean feeds...")
+    print("🌍 Scraping strategic RSS & LIVE Boolean feeds for Weekly Tactical Brief...")
     aggregated_news = ""
     total_articles = 0
     
@@ -113,7 +113,7 @@ def fetch_daily_intelligence():
 
     for query in GOOGLE_QUERIES:
         encoded_query = urllib.parse.quote(query)
-        gn_url = f'https://news.google.com/rss/search?q={encoded_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
+        gn_url = f'[https://news.google.com/rss/search?q=](https://news.google.com/rss/search?q=){encoded_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
         
         try:
             response = requests.get(gn_url, headers=headers, timeout=15)
@@ -130,7 +130,7 @@ def fetch_daily_intelligence():
     # Using 24h here to ensure we capture the full narrative of recent attacks
     maritime_query = '("UKMTO" OR "Ambrey" OR "MSCHOA" OR "MSCIO") AND ("incident" OR "attack" OR "vessel" OR "boarded" OR "missile" OR "houthi") when:24h'
     encoded_m_query = urllib.parse.quote(maritime_query)
-    gn_maritime_url = f'https://news.google.com/rss/search?q={encoded_m_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
+    gn_maritime_url = f'[https://news.google.com/rss/search?q=](https://news.google.com/rss/search?q=){encoded_m_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
     
     try:
         m_res = requests.get(gn_maritime_url, headers=headers, timeout=15)

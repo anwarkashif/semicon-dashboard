@@ -13,12 +13,12 @@ def get_latest_file(pattern):
 def main():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("No API key found. Skipping Snippet 2.0 generation.")
+        print("No API key found. Skipping Weekly Tactical Brief generation.")
         return
     client = genai.Client(api_key=api_key)
 
     latest_brief_path = get_latest_file('data/brief_*.json')
-    tactical_path = 'data/tactical_events_24h.json'
+    tactical_path = 'data/weekly_tactical/tactical_events_24h.json'
     
     weekly_context = ""
     if latest_brief_path:
@@ -36,7 +36,7 @@ def main():
     Based on this week's intelligence: {weekly_context}
     And these recent tactical events: {tactical_context}
 
-    Write a highly professional "Friday's Snippet 2.0" Strategic Synthesis.
+    Write a highly professional "Tactical Weekly Brief" Strategic Synthesis.
     CRITICAL INSTRUCTION: The total word count MUST be strictly between 1500 and 2000 words. Expand deeply on all geopolitical, OSINT, and supply chain ramifications. Use a highly professional, think-tank analytical tone. Use strict Markdown formatting. DO NOT USE HTML TAGS.
 
     Return ONLY a valid JSON object with EXACTLY these keys and length constraints:
@@ -59,17 +59,28 @@ def main():
         raw_text = response.text.replace('```json', '').replace('```', '').strip()
         snippet_data = json.loads(raw_text)
         
-        snippet_data['date'] = datetime.datetime.now().strftime("%d %B %Y")
-        snippet_data['title'] = "Friday's Snippet 2.0: Strategic Intelligence Synthesis"
-        snippet_data['classification'] = "UNCLASSIFIED"
+        # --- SMART DATE INTERVAL LOGIC ---
+        today = datetime.datetime.now()
+        last_week = today - datetime.timedelta(days=7)
+        
+        if today.month == last_week.month:
+            date_string = f"{today.strftime('%B')} {last_week.day}-{today.day}, {today.year}"
+        else:
+            date_string = f"{last_week.strftime('%B %d')} - {today.strftime('%B %d')}, {today.year}"
+            
+        snippet_data['title'] = f"Tactical Weekly Brief: Strategic Intelligence Synthesis - {date_string}"
+        
+        # Remove old static keys so they don't break the new UI format
+        snippet_data.pop('date', None)
+        snippet_data.pop('classification', None)
 
         os.makedirs('data', exist_ok=True)
-        with open('data/snippet_2_0_live.json', 'w') as f:
+        with open('data/weekly_tactical_live.json', 'w') as f:
             json.dump(snippet_data, f, indent=4)
-        print("Successfully generated snippet_2_0_live.json")
+        print("Successfully generated weekly_tactical_live.json")
 
     except Exception as e:
-        print(f"Failed to generate Snippet 2.0: {e}")
+        print(f"Failed to generate Weekly Tactical Brief: {e}")
 
 if __name__ == "__main__":
     main()

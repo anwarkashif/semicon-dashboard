@@ -7,7 +7,7 @@ on:
     # 2. Fallback Windows (Early Friday Morning IST)
     - cron: '30 0 * * 5'
     - cron: '0 1 * * 5'
-    # 3. NEW: Friday's Snippet 2.0 Generation at 6:00 PM IST (12:30 UTC)
+    # 3. NEW: Weekly Tactical Generation at 6:00 PM IST (12:30 UTC)
     - cron: '30 12 * * 5'
   workflow_dispatch: 
 
@@ -40,17 +40,17 @@ jobs:
         NEWS_API_KEY_4: ${{ secrets.NEWS_API_KEY_4 }}
       run: python fetch_brief.py
 
-    # --- NEW STEP: RUN OUR NEW FRIDAY TACTICAL PIPELINE FIRST ---
-    - name: Run Friday's Snippet Pipeline (Data Gathering)
+    # --- UPDATED: RUN OUR NEW WEEKLY TACTICAL PIPELINE FIRST ---
+    - name: Run Weekly Tactical Pipeline (Data Gathering)
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      run: python live_pipeline_friday.py || echo "Friday tactical pipeline failed, skipping."
+      run: python live_pipeline_weekly_tactical.py || echo "Tactical pipeline failed, skipping."
 
-    # --- EXISTING STEP FOR SNIPPET 2.0 ---
-    - name: Generate Friday Snippet 2.0
+    # --- UPDATED: TACTICAL BRIEF GENERATOR ---
+    - name: Generate Weekly Tactical Brief
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      run: python generate_snippet_2_0.py || echo "Snippet generator failed, skipping."
+      run: python generate_weekly_tactical.py || echo "Tactical generator failed, skipping."
 
     - name: Generate Strategic Outlook
       run: python generate_outlook.py || echo "Strategic Outlook generator not found, skipping."
@@ -64,7 +64,7 @@ jobs:
         git commit -m "🤖 Auto-Update: SemicoN Data updated" || echo "No changes to commit"
         git push
 
-    # --- NEW: KOYEB AUTO-DEPLOY TRIGGER ---
+    # --- KOYEB AUTO-DEPLOY TRIGGER ---
     - name: Install Koyeb CLI
       uses: koyeb-community/koyeb-actions@v2
       with:
@@ -72,5 +72,4 @@ jobs:
         github_token: "${{ secrets.GITHUB_TOKEN }}"
 
     - name: Trigger Koyeb Redeploy
-      # Indentation is now fixed!
       run: koyeb service redeploy 83c34b02-6b6a-41fb-81c5-7543947250b4

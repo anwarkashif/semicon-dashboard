@@ -165,9 +165,9 @@ else:
         ]
         render_daily_snippet(df_actions, client=client, model_name=model_name, dashboard_data=dashboard_data, text_sections=text_sections)
 
-    elif view_selection == "Friday's Snippet 2.0":
+    elif view_selection == "Weekly Tactical Brief":
         handle_snippet_logic(
-            mode="friday",
+            mode="weekly_tactical",
             dashboard_data=dashboard_data,
             text_summary=text_summary,
             text_section_1=text_section_1,

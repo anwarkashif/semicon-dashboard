@@ -3,10 +3,11 @@ import pandas as pd
 import os
 import json
 import re  # <-- Added to properly parse markdown bolding in HTML
-from utils.snippet_templates import get_friday_2_0_template
-from utils.snippet_docx_generator import generate_snippet_2_0_docx
 
-# --- ADDED: Import Weekly Features ---
+# --- UPDATED IMPORTS ---
+from utils.snippet_templates import get_weekly_tactical_template
+from utils.snippet_docx_generator import generate_weekly_tactical_docx
+
 from features.weekly_features import (
     render_correlation_engine_weekly,
     render_signal_prioritization_weekly,
@@ -15,44 +16,41 @@ from features.weekly_features import (
     render_event_correlation_and_timeline_weekly
 )
 
-def handle_snippet_logic(mode="friday", dashboard_data=None, text_summary="", text_section_1="", text_section_2="", text_section_3="", text_section_4="", text_military="", text_india="", text_wa="", text_ews="", selected_actor=None, df_actions=None):
-    if mode == "friday":
-        render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa, text_ews, selected_actor, df_actions)
+def handle_snippet_logic(mode="weekly_tactical", dashboard_data=None, text_summary="", text_section_1="", text_section_2="", text_section_3="", text_section_4="", text_military="", text_india="", text_wa="", text_ews="", selected_actor=None, df_actions=None):
+    if mode == "weekly_tactical":
+        render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa, text_ews, selected_actor, df_actions)
     else:
         st.error("Unknown Snippet Mode Requested.")
 
-def render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa, text_ews, selected_actor, df_actions):
+def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, text_section_2, text_section_3, text_section_4, text_military, text_india, text_wa, text_ews, selected_actor, df_actions):
     
-    # --- NEW INTEGRATION: Load isolated Friday's Snippet data and complement existing feed ---
-    friday_data_path = 'data/friday_snippet/tactical_events_24h.json'
-    if os.path.exists(friday_data_path):
+    # --- UPDATED PATH: Load isolated Weekly Tactical data and complement existing feed ---
+    tactical_data_path = 'data/weekly_tactical/tactical_events_24h.json'
+    if os.path.exists(tactical_data_path):
         try:
-            with open(friday_data_path, 'r') as f:
-                friday_events = json.load(f)
-                df_friday = pd.DataFrame(friday_events)
+            with open(tactical_data_path, 'r') as f:
+                tactical_events = json.load(f)
+                df_tactical = pd.DataFrame(tactical_events)
                 
                 # Align columns to match the master dataframe expected format
-                if 'Headline' not in df_friday.columns and 'Action' in df_friday.columns:
-                    df_friday['Headline'] = df_friday['Action']
+                if 'Headline' not in df_tactical.columns and 'Action' in df_tactical.columns:
+                    df_tactical['Headline'] = df_tactical['Action']
                     
                 # Merge with existing df_actions to enrich the analysis
-                if not df_friday.empty:
+                if not df_tactical.empty:
                     if df_actions is None or df_actions.empty:
-                        df_actions = df_friday
+                        df_actions = df_tactical
                     else:
-                        df_actions = pd.concat([df_friday, df_actions], ignore_index=True)
+                        df_actions = pd.concat([df_tactical, df_actions], ignore_index=True)
         except Exception as e:
             pass # Fail silently and safely rely on the master df_actions if reading fails
     # -----------------------------------------------------------------------------------
 
-    intel_data = get_friday_2_0_template()
+    intel_data = get_weekly_tactical_template()
     
     st.markdown(f"""
     <div style='text-align: center; border-bottom: 3px solid #00bfff; padding-bottom: 10px; margin-bottom: 20px;'>
-        <h1 style='color: #ffffff; font-size: 2.5em; margin-bottom: 0px;'>{intel_data.get('title', "Friday's Snippet 2.0")}</h1>
-        <p style='color: #00bfff; font-family: monospace; font-size: 1.1em; letter-spacing: 1px; margin-top: 5px;'>
-            DATE: {intel_data.get('date', '')} | {intel_data.get('classification', 'UNCLASSIFIED')}
-        </p>
+        <h1 style='color: #ffffff; font-size: 2.3em; margin-bottom: 0px;'>{intel_data.get('title', "Tactical Weekly Brief: Strategic Intelligence Synthesis")}</h1>
     </div>
     """, unsafe_allow_html=True)
     
@@ -65,10 +63,9 @@ def render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text
         return text.replace('\n', '<br>')
 
     # ==========================================
-    # --- MOVED UP: ANALYSIS & STRATEGY SECTIONS ---
+    # --- ANALYSIS & STRATEGY SECTIONS ---
     # ==========================================
     
-    # 1. NEW BLUF STRUCTURE
     bluf_content = format_html_text(intel_data.get('bluf', 'Pending generation...'))
     st.markdown(f"""
     <div style="background: linear-gradient(135deg, #141e30 0%, #243b55 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #00bfff; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
@@ -77,7 +74,6 @@ def render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text
     </div>
     """, unsafe_allow_html=True)
 
-    # 2. INDICATORS
     tactical_raw = intel_data.get('tactical_indicators', 'No indicators provided.')
     if isinstance(tactical_raw, list):
         tactical_content = "<br>".join([f"• {format_html_text(ind)}" for ind in tactical_raw])
@@ -93,7 +89,6 @@ def render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text
         
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # 3. DEEP ANALYSIS
     col1, col2 = st.columns([1, 1])
     
     with col1:
@@ -141,7 +136,7 @@ def render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
     # ==========================================
-    # --- MOVED DOWN: WEEKLY FEATURES ---
+    # --- WEEKLY FEATURES ---
     # ==========================================
     if dashboard_data is not None:
         render_correlation_engine_weekly()
@@ -165,7 +160,7 @@ def render_friday_snippet_2_0(dashboard_data, text_summary, text_section_1, text
     with colB:
         if st.session_state.get('role') == 'admin':
             try:
-                docx_buffer = generate_snippet_2_0_docx(intel_data)
-                st.download_button(label="📥 Download Friday's Snippet (DOCX)", data=docx_buffer, file_name=f"Fridays_Snippet.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", type="primary", use_container_width=True)
+                docx_buffer = generate_weekly_tactical_docx(intel_data)
+                st.download_button(label="📥 Download Weekly Tactical Brief (DOCX)", data=docx_buffer, file_name=f"Weekly_Tactical_Brief.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", type="primary", use_container_width=True)
             except Exception as e:
                 st.button("📥 Download Unavailable", disabled=True)

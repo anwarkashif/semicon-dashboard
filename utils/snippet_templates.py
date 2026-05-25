@@ -1,9 +1,8 @@
-import datetime
 import json
 import os
 
-def get_friday_2_0_template():
-    live_file_path = 'data/snippet_2_0_live.json'
+def get_weekly_tactical_template():
+    live_file_path = 'data/weekly_tactical_live.json'
     
     if os.path.exists(live_file_path):
         try:
@@ -11,13 +10,9 @@ def get_friday_2_0_template():
                 return json.load(f)
         except Exception:
             pass 
-
-    current_date = datetime.datetime.now().strftime("%d %B %Y")
     
     return {
-        "title": "Friday's Snippet 2.0: Strategic Intelligence Synthesis",
-        "date": current_date,
-        "classification": "UNCLASSIFIED",
+        "title": "Tactical Weekly Brief: Strategic Intelligence Synthesis - May 15-22, 2026",
         "bluf": "**BLUF:** Immediate supply chain continuity is maintained, but emerging regulatory friction in DUV lithography exports and elevated maritime patrols in the South China Sea present a compound, systemic risk vector.\n\n**Impact:** This friction directly threatens Q3 and Q4 advanced semiconductor manufacturing yields, alters pricing models for fabless designers, and risks cascading delays across Western automotive sectors.\n\n**Evidence:**\n- 1.2% aggregate increase in maritime insurance premiums for tech cargo.\n- Sudden, unannounced customs audits targeting Tier-2 packaging resin suppliers in the EU.\n\n**Actionable Recommendation:**\n- Initiate immediate stress-testing of redundant logistics routes spanning India and West Asia.\n- Audit total corporate reliance on single-origin rare earth refining.",
         "executive_summary": "Over the past 168 hours, comprehensive OSINT and geospatial indicators demonstrate a stabilization in immediate physical maritime chokepoints, allowing global logistics to return to a nominal operational flow. However, long-term strategic friction remains severely elevated. Geopolitical posturing has fundamentally shifted from overt physical blockade threats to highly targeted, legislative export controls aimed directly at legacy node infrastructure and raw material processing capabilities.\n\nWe assess that major foundries (TSMC, Intel, Samsung) have adequately priced in this localized turbulence, accelerating their geographical diversification efforts across the US, EU, and Japan. Despite this, the intricate web of Tier-2 and Tier-3 suppliers—specifically those providing highly specialized packaging resins, etching gases, and rare earth alloys—remains critically exposed to single-point-of-failure risks. As competing geopolitical blocs formalize their 'de-risking' strategies, the semiconductor supply chain is transitioning from a globally optimized, just-in-time network into a heavily balkanized, politically managed ecosystem.",
         "threat_narrative": "State actors are increasingly leveraging chokepoint controls not as immediate economic weapons designed to halt production, but as strategic deterrents meant to dictate the pace of technological advancement. The current narrative extracted from state-aligned media and recent legislative drafts indicates a deliberate pivot toward domesticating raw rare earth processing. By restricting the export of processed Gallium and Germanium, adversary states are attempting to create artificial market scarcity, thereby applying intense pressure on Western fab expansion timelines.\n\nFurthermore, diplomatic back-channeling suggests an intent to utilize access to vast consumer tech markets as leverage against tighter EU and US export restrictions on advanced DUV and EUV lithography machines. This retaliatory cycle is moving beyond pure economics into the realm of national security posturing, where maintaining dominance in AI-compute capability is viewed as an existential imperative.",

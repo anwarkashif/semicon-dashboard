@@ -3,7 +3,7 @@ from docx import Document
 from docx.shared import Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
-def generate_snippet_2_0_docx(intel_data):
+def generate_weekly_tactical_docx(intel_data):
     doc = Document()
     
     # --- Title (Centred) ---
