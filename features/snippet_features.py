@@ -2,16 +2,14 @@ import streamlit as st
 import pandas as pd
 import os
 import json
-import re  # <-- Added regex to handle Markdown parsing
+import re  
 from datetime import datetime, timedelta, timezone
 from utils.snippet_engine import get_fallback_snippet
 
-# --- ADDED: Import ALL 24H Engines ---
 from features.daily_features import render_24h_live_analytics, run_shockwave_engine
 
 def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_data=None, text_sections=None):
     
-    # --- NEW INTEGRATION: Load isolated Today's Snippet data and complement existing feed ---
     today_data_path = 'data/today_snippet/tactical_events_24h.json'
     if os.path.exists(today_data_path):
         try:
@@ -19,19 +17,16 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
                 today_events = json.load(f)
                 df_today = pd.DataFrame(today_events)
                 
-                # Align columns to match the master dataframe expected format
                 if 'Headline' not in df_today.columns and 'Action' in df_today.columns:
                     df_today['Headline'] = df_today['Action']
                     
-                # Merge with existing df_actions to enrich the analysis
                 if not df_today.empty:
                     if df_actions is None or df_actions.empty:
                         df_actions = df_today
                     else:
                         df_actions = pd.concat([df_today, df_actions], ignore_index=True)
         except Exception as e:
-            pass # Fail silently and safely rely on the master df_actions if reading fails
-    # -----------------------------------------------------------------------------------
+            pass 
 
     st.markdown("""
     <div style='text-align: center; margin-top: 10px; margin-bottom: 20px;'>
@@ -41,21 +36,24 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
     <hr style='border: 1px solid #333;'>
     """, unsafe_allow_html=True)
 
-    # In a live environment, you would call synthesize_12h_snippet here. 
-    intel_data = get_fallback_snippet() 
+    # --- NEW: LOAD THE DYNAMIC AI SHIFT BRIEF ---
+    brief_data_path = 'data/today_snippet/shift_brief.json'
+    intel_data = get_fallback_snippet() # Defaults to fallback if no live data exists yet
+    
+    if os.path.exists(brief_data_path):
+        try:
+            with open(brief_data_path, 'r') as f:
+                intel_data = json.load(f)
+        except Exception:
+            pass
 
-    # ==========================================
-    # Helper: Convert AI Markdown to HTML for the custom gradient boxes
-    # ==========================================
     def format_html_text(text):
         text = str(text)
-        # Converts **bold** text to HTML <b>bold</b>
         text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
-        # Converts newlines to HTML breaks
         return text.replace('\n', '<br>')
 
     # ==========================================
-    # 1. ANALYSIS (BLUF AND EXECUTIVE SUMMARY MOVED TO TOP)
+    # 1. ANALYSIS (BLUF AND EXECUTIVE SUMMARY)
     # ==========================================
     
     bluf_content = format_html_text(intel_data.get('bluf', 'Pending AI Generation...'))
@@ -97,37 +95,21 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
     # ==========================================
-    # 2. EVIDENCE (RAW TACTICAL FEEDS MOVED DOWN)
+    # 2. EVIDENCE (RAW TACTICAL FEEDS)
     # ==========================================
     st.markdown("### 📊 Raw Tactical Feeds (12H)")
     if df_actions is not None and not df_actions.empty:
-        # 1. Ensure Date column is standard timezone-aware datetime
-        if 'Date' in df_actions.columns:
-            df_actions['Date'] = pd.to_datetime(df_actions['Date'], format='mixed', errors='coerce', utc=True)
-            
-            # 2. Calculate the 12-hour rolling window
-            twelve_hours_ago = datetime.now(timezone.utc) - timedelta(hours=12)
-            
-            # 3. Filter the dataframe to ONLY include the last 12 hours
-            df_12h = df_actions[df_actions['Date'] >= twelve_hours_ago]
-        else:
-            df_12h = df_actions # Fallback if no Date column exists
         
-        available_cols = df_12h.columns.tolist()
+        # We removed the strict 'datetime.now() - 12 hours' filter here. 
+        # Since this data is continuously overwritten by your GitHub Action every 12 hours, 
+        # the entire JSON file inherently represents the most recent 12 hours of intelligence.
+        available_cols = df_actions.columns.tolist()
         target_cols = ['Date', 'Action', 'Event', 'Headline', 'Actor']
         cols_to_show = [col for col in target_cols if col in available_cols]
         
-        # Display the filtered data (or fallback to empty state if nothing happened in 12h)
-        if not df_12h.empty:
-            display_df = df_12h[cols_to_show].head(8) if cols_to_show else df_12h.head(8)
+        display_df = df_actions[cols_to_show].head(8) if cols_to_show else df_actions.head(8)
             
-            # Format date for clean UI display
-            if 'Date' in display_df.columns:
-                display_df['Date'] = display_df['Date'].dt.strftime('%Y-%m-%d %H:%M')
-                
-            st.dataframe(display_df, use_container_width=True, hide_index=True)
-        else:
-            st.info("No tactical alerts logged in the current 12-hour window. System Nominal.")
+        st.dataframe(display_df, use_container_width=True, hide_index=True)
     else:
         st.info("No tactical alerts logged.")
 
@@ -137,11 +119,9 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
     # 3. ALL 24-HOUR FEATURES 
     # ==========================================
     
-    # Geopolitical Shockwave Engine
     run_shockwave_engine()
     st.markdown("<br>", unsafe_allow_html=True)
     
-    # Advanced Threat Analytics (Includes the 24H Risk Index & Breaking Alert)
     if dashboard_data is not None and text_sections is not None:
         render_24h_live_analytics(dashboard_data, text_sections)
         st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)

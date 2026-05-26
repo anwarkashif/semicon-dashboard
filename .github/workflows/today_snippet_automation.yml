@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests google-genai feedparser
+        pip install requests google-genai feedparser beautifulsoup4
 
     - name: Run Today's Snippet Pipeline
       env:
@@ -40,11 +40,9 @@ jobs:
         git commit -m "📋 Auto-Update: Today's Snippet 12H Brief" || echo "No changes to commit"
         git push
 
-    - name: Install Koyeb CLI
-      uses: koyeb-community/koyeb-actions@v2
-      with:
-        api_token: "${{ secrets.KOYEB_API_TOKEN }}"
-        github_token: "${{ secrets.GITHUB_TOKEN }}"
-
+    # --- KOYEB AUTO-DEPLOY TRIGGER (DIRECT API) ---
     - name: Trigger Koyeb Redeploy
-      run: koyeb service redeploy 83c34b02-6b6a-41fb-81c5-7543947250b4
+      run: |
+        curl -X POST "https://app.koyeb.com/v1/services/83c34b02-6b6a-41fb-81c5-7543947250b4/redeploy" \
+        -H "Authorization: Bearer ${{ secrets.KOYEB_API_TOKEN }}" \
+        -H "Content-Type: application/json"
