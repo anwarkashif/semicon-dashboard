@@ -1368,6 +1368,17 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     maritime_intel = fetch_live_maritime_intel()
     
+    # --- NEW SORTING LOGIC ---
+    try:
+        def parse_feed_time(item):
+            dt = pd.to_datetime(item.get('time', ''), errors='coerce', utc=True)
+            return dt if pd.notna(dt) else pd.Timestamp('1970-01-01', tz='UTC')
+            
+        maritime_intel = sorted(maritime_intel, key=parse_feed_time, reverse=True)
+    except Exception:
+        pass
+    # -------------------------
+
     st.markdown("""
     <style>
     .maritime-card {
