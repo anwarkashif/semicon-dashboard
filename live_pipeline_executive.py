@@ -127,7 +127,6 @@ def fetch_daily_intelligence():
             
     # --- PHASE 3: DEEP-SCRAPE MARITIME ALERTS (For Gemini Analysis) ---
     print("🚢 Executing Deep-Scrape on Live Maritime URLs...")
-    # Using 24h here to ensure we capture the full narrative of recent attacks
     maritime_query = '("UKMTO" OR "Ambrey" OR "MSCHOA" OR "MSCIO") AND ("incident" OR "attack" OR "vessel" OR "boarded" OR "missile" OR "houthi") when:24h'
     encoded_m_query = urllib.parse.quote(maritime_query)
     gn_maritime_url = f'https://news.google.com/rss/search?q={encoded_m_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
@@ -137,18 +136,15 @@ def fetch_daily_intelligence():
         m_res.raise_for_status()
         m_feed = feedparser.parse(m_res.text)
         
-        for entry in m_feed.entries[:6]: # Target top 6 most recent maritime alerts
+        for entry in m_feed.entries[:6]: 
             url = entry.link
             try:
-                # 1. Visit the actual URL autonomously
                 page_res = requests.get(url, headers=headers, timeout=10)
                 soup = BeautifulSoup(page_res.text, 'html.parser')
                 
-                # 2. Extract all readable paragraph text
                 paragraphs = soup.find_all('p')
                 extracted_text = " ".join([p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 30])
                 
-                # 3. Clean and truncate for the LLM (800 chars is plenty for Gemini to grasp tactical specifics)
                 if extracted_text:
                     snippet = extracted_text[:800] + "..." if len(extracted_text) > 800 else extracted_text
                     aggregated_news += f"\n- [LIVE MARITIME ALERT - {entry.title}]\n  DEEP EXTRACTION DATA: {snippet}\n"
@@ -157,7 +153,6 @@ def fetch_daily_intelligence():
                 
                 total_articles += 1
             except Exception as e:
-                # Failsafe: If a specific publication blocks the scraper, fall back to just the headline
                 aggregated_news += f"\n- [LIVE MARITIME ALERT] {entry.title}\n"
                 total_articles += 1
     except Exception as e:
@@ -167,11 +162,10 @@ def fetch_daily_intelligence():
     return aggregated_news, total_articles
 
 # ==========================================
-# 3. AI EXTRACTION PIPELINE (WITH AUTO-RETRY)
+# 3. AI EXTRACTION PIPELINES
 # ==========================================
 def extract_tactical_events(news_text):
     print("🧠 Pushing data to Gemini for tactical extraction...")
-    
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. 
     Review the following news headlines from the last 24 hours. Extract 4 to 6 of the most critical geopolitical, defense, semiconductor, or supply chain events.
@@ -188,7 +182,6 @@ def extract_tactical_events(news_text):
     News Data:
     {news_text}
     """
-    
     max_retries = 3
     for attempt in range(max_retries):
         try:
@@ -203,10 +196,45 @@ def extract_tactical_events(news_text):
             print(f"⚠️ API Error on attempt {attempt + 1}/{max_retries}: {e}")
             if attempt < max_retries - 1:
                 sleep_time = 15 * (attempt + 1) 
-                print(f"⏳ Retrying in {sleep_time} seconds...")
                 time.sleep(sleep_time)
             else:
-                print("❌ Max retries reached. Aborting AI extraction.")
+                raise e 
+
+def generate_flush_to_brief(news_text):
+    print("🧠 Pushing data to Gemini for FLASH TO BRIEF generation...")
+    prompt = f"""
+    You are an elite Geopolitics-OSINT analyst. 
+    Based on the provided raw intelligence from the last hour, generate a highly analytical "FLASH TO BRIEF" strategic intelligence report. 
+    Your priority is rich data and deep analysis. Do not use generic filler words. Write with extreme precision.
+
+    You MUST output ONLY a valid JSON object. Do not include markdown formatting like ```json. 
+    
+    It must have EXACTLY these keys and follow these guidelines:
+    - "bluf": (Bottom Line Up Front - 3-4 sentences of immediate actionable intelligence summarizing the macro threat).
+    - "tactical_indicators": (An Array of exactly 3 detailed string bullet points focusing on live anomalies).
+    - "threat_narrative": (A rich analytical paragraph on state actor intent and macro shifts).
+    - "risk_assessment": (A rich analytical paragraph evaluating supply chain vulnerabilities, maritime constraints, and market impacts).
+    - "strategic_forecast": (A rich actionable forecast for the next 24 hours).
+
+    News Data:
+    {news_text}
+    """
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt,
+            )
+            clean_text = response.text.replace("```json", "").replace("```", "").strip()
+            return json.loads(clean_text)
+            
+        except Exception as e:
+            print(f"⚠️ API Error on attempt {attempt + 1}/{max_retries}: {e}")
+            if attempt < max_retries - 1:
+                sleep_time = 15 * (attempt + 1) 
+                time.sleep(sleep_time)
+            else:
                 raise e 
 
 # ==========================================
@@ -220,13 +248,19 @@ if __name__ == "__main__":
             print("❌ ABORTING: No articles scraped. Preventing AI hallucination.")
             exit(1)
             
+        # 1. Generate the Tactical Grid Array
         tactical_events = extract_tactical_events(news_data)
-        
-        output_file = 'data/executive_home/tactical_events_24h.json'
-        with open(output_file, 'w') as f:
+        output_file_tactical = 'data/executive_home/tactical_events_24h.json'
+        with open(output_file_tactical, 'w') as f:
             json.dump(tactical_events, f, indent=4)
-            
-        print(f"✅ Success! Wrote {len(tactical_events)} tactical events to {output_file}.")
+        print(f"✅ Success! Wrote {len(tactical_events)} tactical events.")
+
+        # 2. Generate the FLASH TO BRIEF Narrative
+        flush_brief_data = generate_flush_to_brief(news_data)
+        output_file_flush = 'data/executive_home/flush_brief_24h.json'
+        with open(output_file_flush, 'w') as f:
+            json.dump(flush_brief_data, f, indent=4)
+        print("✅ Success! Wrote FLASH TO BRIEF data.")
         
     except Exception as e:
         print(f"❌ Pipeline Failed: {e}")

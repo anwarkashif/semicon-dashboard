@@ -70,36 +70,6 @@ def inject_executive_home_css():
         padding: 18px;
         margin-top: 10px;
     }
-    
-    /* New CSS for Endless Strategic Analysis Box */
-    .strategic-analysis-box {
-        background-color: rgba(17, 24, 39, 0.7);
-        border-left: 4px solid #8b5cf6;
-        border-right: 1px solid #374151;
-        border-top: 1px solid #374151;
-        border-bottom: 1px solid #374151;
-        padding: 24px;
-        border-radius: 8px;
-        color: #e2e8f0;
-        font-size: 15px;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-    .strategic-analysis-box h4 {
-        color: #a78bfa;
-        margin-top: 0;
-        margin-bottom: 16px;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    .strategic-analysis-box p {
-        margin-bottom: 16px;
-    }
-    .strategic-analysis-box strong {
-        color: #c4b5fd;
-    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -464,7 +434,7 @@ def calculate_dynamic_risk(df_actions, keywords, base_val):
 # ==========================================
 # NEW AUTONOMOUS MARITIME SCRAPER ENGINE
 # ==========================================
-@st.cache_data(show_spinner=False, ttl=600) # Re-scrapes every 10 minutes
+@st.cache_data(show_spinner=False, ttl=600) 
 def fetch_live_maritime_intel():
     import feedparser
     import requests
@@ -477,8 +447,6 @@ def fetch_live_maritime_intel():
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
     }
 
-    # 1. Google News Boolean for Official Maritime Alerts (Bypasses Gov Firewalls)
-    # We strictly target authorities reporting kinetic maritime incidents
     query = '("UKMTO" OR "Ambrey" OR "MSCHOA" OR "MSCIO") AND ("incident" OR "attack" OR "vessel" OR "boarded" OR "missile" OR "houthi") when:7d'
     encoded_query = urllib.parse.quote(query)
     gn_url = f'https://news.google.com/rss/search?q={encoded_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
@@ -489,23 +457,19 @@ def fetch_live_maritime_intel():
             feed = feedparser.parse(res.text)
             for entry in feed.entries[:8]:
                 title = entry.title
-                # Clean the title (Google News appends the source at the end like " - Reuters")
                 clean_title = re.sub(r' - [^-]+$', '', title).strip()
                 
-                # Determine Source Tag
                 source = "🌍 Maritime Intel"
                 if "UKMTO" in title.upper(): source = "🇬🇧 UKMTO Report"
                 elif "AMBREY" in title.upper(): source = "🛡️ Ambrey Security"
                 elif "MSCIO" in title.upper() or "MSCHOA" in title.upper(): source = "🇪🇺 MSCIO Advisory"
                 
-                # Determine Risk Type
                 type_val = "Security Advisory"
                 if any(w in title.lower() for w in ['attack', 'missile', 'strike', 'hijack', 'boarded']):
                     type_val = "🚨 Attack Warning"
                 elif any(w in title.lower() for w in ['incident', 'explosion', 'suspicious']):
                     type_val = "⚠️ Incident Report"
                     
-                # Format Time cleanly
                 pub_date = entry.get('published', 'Recent')
                 if pub_date.endswith(" GMT"):
                     pub_date = pub_date[:-4] 
@@ -514,7 +478,7 @@ def fetch_live_maritime_intel():
                     "source": source,
                     "type": type_val,
                     "time": pub_date,
-                    "details": clean_title, # This pulls the actual event text straight to your UI
+                    "details": clean_title, 
                     "url": entry.link
                 })
     except Exception as e:
@@ -523,7 +487,6 @@ def fetch_live_maritime_intel():
     if feed_data:
         return feed_data
         
-    # 2. Fallback to Premium Maritime RSS if Boolean fails
     try:
         res = requests.get("https://gcaptain.com/feed/", headers=headers, timeout=10)
         if res.status_code == 200:
@@ -542,7 +505,6 @@ def fetch_live_maritime_intel():
     if feed_data:
         return feed_data
 
-    # 3. Absolute Failsafe
     return [{
         "source": "System",
         "type": "Monitoring Active",
@@ -586,10 +548,6 @@ def intelligent_geocode(location_name):
     return None
 
 def get_strategic_asset_match(row):
-    """
-    Scans a news row against the exact sites in constants.py.
-    If a hit is found, it returns the specific site dictionary and its strategic category.
-    """
     if not INFRASTRUCTURE_DATA:
         return None, None
         
@@ -600,7 +558,6 @@ def get_strategic_asset_match(row):
     
     combined_text = f"{headline} {action} {loc} {actor}"
     
-    # Core identifiers from constants to force exact asset matching
     key_identifiers = ["tsmc", "samsung", "intel", "smic", "globalfoundries", "micron", "asml", 
                        "bayan obo", "malacca", "hormuz", "bab el-mandeb", "suez", "taiwan strait", 
                        "severomorsk", "kadamba", "cape canaveral", "jiuquan"]
@@ -609,13 +566,11 @@ def get_strategic_asset_match(row):
         for site in sites:
             site_name_lower = site['name'].lower()
             
-            # Scenario A: The location or actor exactly matches a specific site string
             if len(loc) > 3 and loc in site_name_lower:
                 return site, category
             if len(actor) > 2 and actor in site_name_lower:
                 return site, category
                 
-            # Scenario B: A major corporate or geographic identifier hits our database
             for identifier in key_identifiers:
                 if identifier in combined_text and identifier in site_name_lower:
                     return site, category
@@ -688,9 +643,6 @@ def render_tactical_conflict_overlay(df_actions):
             popup=zone["name"]
         ).add_to(m)
 
-    # ==========================================
-    # STRATEGIC ASSET INFRASTRUCTURE (Static Layer Toggles)
-    # ==========================================
     if INFRASTRUCTURE_DATA:
         asset_colors = {
             "Semiconductor Fabs": "#00bfff",
@@ -719,9 +671,6 @@ def render_tactical_conflict_overlay(df_actions):
             
             fg.add_to(m)
 
-    # ==========================================
-    # DYNAMIC EVENT EXTRACTION WITH CONSTANTS.PY HIGHLIGHTING
-    # ==========================================
     marker_cluster = MarkerCluster(
         name="🚨 Verified Strategic Events (Live)"
     ).add_to(m)
@@ -740,11 +689,9 @@ def render_tactical_conflict_overlay(df_actions):
             headline = str(row.get('Headline', row.get('Action', 'Strategic Event')))
             risk_val = "CRITICAL" if str(row.get('Risk', '')).upper() == 'CRITICAL' else "HIGH"
 
-            # 1. INTERCEPT: Does this live news hit our constants.py database?
             matched_site, matched_category = get_strategic_asset_match(row)
 
             if matched_site:
-                # IT'S A MATCH: Create a rich, explanatory HTML popup
                 lat, lon = matched_site['lat'], matched_site['lon']
                 site_name = matched_site['name']
                 
@@ -768,7 +715,6 @@ def render_tactical_conflict_overlay(df_actions):
                 heat_data.append([lat, lon, 1.0])
 
             else:
-                # STANDARD GEOCODE: It's just a general location (e.g., "China", "Europe")
                 coords = intelligent_geocode(location_str)
 
                 if coords:
@@ -785,7 +731,6 @@ def render_tactical_conflict_overlay(df_actions):
                     })
                     heat_data.append([lat, lon, 0.8])
 
-    # Default fallback if empty
     if len(event_points) == 0:
         event_points = [
             {"name": "Taiwan Semiconductor Fabrication Corridor", "lat": 24.14, "lon": 120.67, "risk": "HIGH", "is_asset_match": False, "popup_html": "Taiwan Corridor Event"},
@@ -793,14 +738,10 @@ def render_tactical_conflict_overlay(df_actions):
         ]
         heat_data = [[24.14, 120.67, 0.9], [12.58, 43.33, 1.0]]
 
-    # ==========================================
-    # RENDER THE MARKERS
-    # ==========================================
     for event in event_points:
         color = "red" if event["risk"] == "CRITICAL" else "orange" if event["risk"] == "HIGH" else "yellow"
 
         if event.get("is_asset_match", False):
-            # Visually emphasize constants.py hits with a targeted Icon Marker and a pulsating ring
             folium.Marker(
                 location=[event["lat"], event["lon"]],
                 popup=folium.Popup(event["popup_html"], max_width=350),
@@ -816,7 +757,6 @@ def render_tactical_conflict_overlay(df_actions):
                 weight=3
             ).add_to(marker_cluster)
         else:
-            # Standard circle marker for general geocodes
             folium.CircleMarker(
                 location=[event["lat"], event["lon"]],
                 radius=9,
@@ -950,21 +890,79 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     st.markdown("### 📝 Strategic Command Analysis")
     st.caption("Autonomous geopolitical synthesis aggregating threat velocity, maritime telemetry, and multi-domain actor posturing.")
     
-    live_summary = dashboard_data.get('executive_summary', None) if dashboard_data else None
+    # ==========================================
+    # --- NEW FLASH TO BRIEF UI ---
+    # ==========================================
+    flush_path = 'data/executive_home/flush_brief_24h.json'
+    flush_data = {}
+    if os.path.exists(flush_path):
+        try:
+            with open(flush_path, 'r') as f:
+                flush_data = json.load(f)
+        except:
+            pass
+
+    # Extract dynamic keys or provide secure fallbacks
+    bluf_text = flush_data.get('bluf', "Scanning macro-strategic feeds. Awaiting telemetry generation cycle...")
+    tactical_list = flush_data.get('tactical_indicators', ["System initiating...", "Monitoring baseline anomalies...", "Awaiting active extraction..."])
+    threat_text = flush_data.get('threat_narrative', "Data currently rendering inside the strategic analysis layer...")
+    risk_text = flush_data.get('risk_assessment', "Data currently rendering inside the strategic analysis layer...")
+    forecast_text = flush_data.get('strategic_forecast', "Data currently rendering inside the strategic analysis layer...")
     
-    if live_summary:
-        st.markdown(f'<div class="strategic-analysis-box">{live_summary}</div>', unsafe_allow_html=True)
+    if isinstance(tactical_list, list):
+        tactical_html = "<br>".join([f"• {item}" for item in tactical_list])
     else:
-        st.markdown("""
-        <div class="strategic-analysis-box">
-            <h4>Executive Intelligence Brief</h4>
-            <p>In the wake of shifting global technology architectures and geopolitical realignments, the current operational environment demonstrates a pronounced pivot toward regulatory friction and maritime electronic warfare. Tactical telemetry confirms that state-level actors are increasingly utilizing opaque customs audits, localized export quotas, and strategic chokepoint interdiction to challenge semiconductor supply chain continuity.</p>
-            <p>Quantitative threat velocity indicators show Export Control Friction operating at a critically elevated baseline, significantly outpacing traditional physical Indo-Pacific transit risks and standard maritime disruptions. This divergence signals a structural shift: adversaries are prioritizing 'attritional compliance' and deniable, low-intensity economic coercion targeting Tier-2 and Tier-3 suppliers of advanced packaging materials and precursor chemicals.</p>
-            <p>Concurrently, cross-referenced maritime advisories from UKMTO and MSCIO validate sustained spikes in electronic interference—specifically GPS jamming and AIS spoofing—within the Red Sea and Gulf of Aden theaters. While commercial lithography equipment and direct wafer transits remain kinetically unengaged, 'grey zone' posturing by regional proxy forces has established a heightened risk premium. Multi-domain radar tracking verifies that single-origin rare earth refining facilities and critical node assembly hubs remain highly sensitized to these combined physical and regulatory shifts.</p>
-            <p><strong>🔮 Strategic Forecast (T+24 Hours):</strong><br>
-            Over the next 24 hours, the primary vectors of vulnerability will concentrate at the intersection of Western export controls and retaliatory critical mineral restrictions. The threat model assesses with high confidence that immediate tactical friction will manifest as unannounced regulatory inspections at key Indo-Pacific transit hubs and elevated electronic harassment in West Asian maritime corridors. Supply chain managers and strategic allocators are advised to audit reliance on single-origin refinement and activate redundant logistics pathways to bypass immediately saturated chokepoints.</p>
+        tactical_html = tactical_list
+
+    # Title
+    st.markdown("""
+    <h2 style='color: #a855f7; margin-bottom: 15px; margin-top: 10px; font-size: 2em; letter-spacing: 1.5px; border-bottom: 2px solid #a855f7; padding-bottom: 5px; display: inline-block;'>FLASH TO BRIEF</h2>
+    """, unsafe_allow_html=True)
+    
+    # 1. BLUF Box
+    st.markdown(f"""
+    <div style="background: linear-gradient(135deg, #141e30 0%, #243b55 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #00bfff; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+        <h3 style="margin-top: 0; color: #ffffff;">🎯 BLUF (Bottom Line Up Front)</h3>
+        <p style="color: #e2e8f0; font-size: 1.05em; margin-bottom: 0; line-height: 1.5;">{bluf_text}</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 2. Side-By-Side Triple Columns
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown(f"""
+        <div style="background: linear-gradient(135deg, #2c1b3d 0%, #4a2b5e 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #a855f7; height: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+            <h3 style="margin-top: 0; color: #ffffff; font-size: 1.2em;">🚩 Tactical Indicators</h3>
+            <p style="color: #e2e8f0; font-size: 0.95em; margin-bottom: 0; line-height: 1.5;">{tactical_html}</p>
         </div>
         """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown(f"""
+        <div style="background: linear-gradient(135deg, #2b0f19 0%, #591b2c 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #ef4444; height: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+            <h3 style="margin-top: 0; color: #ffffff; font-size: 1.2em;">🕸️ Threat Narrative</h3>
+            <p style="color: #e2e8f0; font-size: 0.95em; margin-bottom: 0; line-height: 1.5;">{threat_text}</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with col3:
+        st.markdown(f"""
+        <div style="background: linear-gradient(135deg, #3f2b1a 0%, #613c20 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #f59e0b; height: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+            <h3 style="margin-top: 0; color: #ffffff; font-size: 1.2em;">⚖️ Risk Assessment</h3>
+            <p style="color: #e2e8f0; font-size: 0.95em; margin-bottom: 0; line-height: 1.5;">{risk_text}</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # 3. Forecast Box
+    st.markdown(f"""
+    <div style="background: linear-gradient(135deg, #093028 0%, #1b4b36 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #10b981; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+        <h3 style="margin-top: 0; color: #ffffff;">🔭 Strategic Recommendations/Strategic Forecast (Within 24 Hours)</h3>
+        <p style="color: #e2e8f0; font-size: 1.05em; margin-bottom: 0; line-height: 1.5;">{forecast_text}</p>
+    </div>
+    """, unsafe_allow_html=True)
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
     
@@ -979,7 +977,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     
     render_decision_support_engine(all_text)
     
-    # --- FIX APPLIED HERE: Targeted Negative Margins to pull sections together ---
     st.markdown("<hr style='border: 1px solid #333; margin-top: -15px; margin-bottom: -10px;'>", unsafe_allow_html=True)
 
     st.markdown("### 📊 Global Threat Posture")
