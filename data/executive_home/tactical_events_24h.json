@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-27",
-        "Actor": "United States / Iran / Unknown",
-        "Action": "US strikes Iran; tanker explodes near Hormuz.",
-        "Location": "Iran, Strait of Hormuz, Oman Coast",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-27",
-        "Actor": "Huawei (China)",
-        "Action": "Achieves chip physics breakthrough bypassing US sanctions.",
-        "Location": "China",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-27",
         "Actor": "United States",
-        "Action": "Pauses arms sales to Taiwan amid regional tensions.",
-        "Location": "Taiwan",
+        "Action": "Launches self-defense strikes against Iran.",
+        "Location": "Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-27",
+        "Actor": "Unidentified",
+        "Action": "Tanker hit by explosion near Hormuz.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-27",
+        "Actor": "China",
+        "Action": "New frigate joins carrier group in Pacific.",
+        "Location": "Western Pacific",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-27",
         "Actor": "Europe",
-        "Action": "Begins major rearmament era, post-Cold War shift.",
+        "Action": "Commences major rearmament, military posture shift.",
         "Location": "Europe",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-27",
-        "Actor": "US Space Force / SpaceX",
-        "Action": "Awards $2.29B contract for military space network.",
-        "Location": "Global / Space",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Taiwan leads global AI semiconductor investment boom.",
+        "Location": "Taiwan",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-27",
-        "Actor": "Taiwan / China",
-        "Action": "Suspects Nvidia chips smuggled to China via Japan.",
-        "Location": "Taiwan, China, Japan",
+        "Actor": "United Kingdom",
+        "Action": "Blacklists crypto firm over Russia sanctions.",
+        "Location": "United Kingdom / Russia",
         "Risk": "HIGH"
     }
 ]
