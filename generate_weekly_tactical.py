@@ -59,14 +59,25 @@ def main():
         raw_text = response.text.replace('```json', '').replace('```', '').strip()
         snippet_data = json.loads(raw_text)
         
-        # --- SMART DATE INTERVAL LOGIC ---
-        today = datetime.datetime.now()
-        last_week = today - datetime.timedelta(days=7)
+        # --- SMART DATE INTERVAL LOGIC (ANCHORED TO FRIDAY EVENING) ---
+        now = datetime.datetime.now(datetime.timezone.utc)
         
-        if today.month == last_week.month:
-            date_string = f"{today.strftime('%B')} {last_week.day}-{today.day}, {today.year}"
+        # Calculate days since last Friday (0 = Monday, 4 = Friday)
+        days_since_friday = (now.weekday() - 4) % 7
+        
+        last_friday = now - datetime.timedelta(days=days_since_friday)
+        previous_friday = last_friday - datetime.timedelta(days=7)
+
+        # If today is Friday, but it's before 12:30 UTC (6:00 PM IST), we haven't hit the new cycle yet.
+        # We push the anchor back by one week to hold the current brief's date structure.
+        if now.weekday() == 4 and (now.hour < 12 or (now.hour == 12 and now.minute < 30)):
+            last_friday = last_friday - datetime.timedelta(days=7)
+            previous_friday = previous_friday - datetime.timedelta(days=7)
+        
+        if last_friday.month == previous_friday.month:
+            date_string = f"{last_friday.strftime('%B')} {previous_friday.day}-{last_friday.day}, {last_friday.year}"
         else:
-            date_string = f"{last_week.strftime('%B %d')} - {today.strftime('%B %d')}, {today.year}"
+            date_string = f"{previous_friday.strftime('%B %d')} - {last_friday.strftime('%B %d')}, {last_friday.year}"
             
         snippet_data['title'] = f"Tactical Weekly Brief: Strategic Intelligence Synthesis - {date_string}"
         
@@ -77,7 +88,7 @@ def main():
         os.makedirs('data', exist_ok=True)
         with open('data/weekly_tactical_live.json', 'w') as f:
             json.dump(snippet_data, f, indent=4)
-        print("Successfully generated weekly_tactical_live.json")
+        print(f"Successfully generated weekly_tactical_live.json for {date_string}")
 
     except Exception as e:
         print(f"Failed to generate Weekly Tactical Brief: {e}")
