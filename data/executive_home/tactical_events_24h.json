@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-27",
-        "Actor": "United States",
-        "Action": "Conducts 'self-defense' strikes on Iran",
-        "Location": "Iran (Gulf Coast)",
+        "Actor": "Unknown Actor",
+        "Action": "Tanker attacked near Strait of Hormuz",
+        "Location": "Strait of Hormuz, Oman Coast",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-27",
-        "Actor": "Unidentified",
-        "Action": "Tanker damaged by external explosion",
-        "Location": "Off Oman coast (near Strait of Hormuz)",
-        "Risk": "CRITICAL"
+        "Actor": "United States, Taiwan",
+        "Action": "US implements semiconductor tariff reduction deal",
+        "Location": "United States, Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-27",
+        "Actor": "United Kingdom, Poland",
+        "Action": "Sign defense treaty against Russian threats",
+        "Location": "Europe",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-27",
         "Actor": "North Korea",
-        "Action": "Unveils AI-guided missile weapons",
+        "Action": "Tests new launch system, tactical missiles",
         "Location": "North Korea",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-27",
-        "Actor": "UK, Poland",
-        "Action": "To sign defense treaty against Russian threats",
-        "Location": "Europe",
-        "Risk": "HIGH"
+        "Actor": "United States",
+        "Action": "Munitions depleted by Iran war, slow restoration",
+        "Location": "United States",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-27",
-        "Actor": "United States (Space Force)",
-        "Action": "Prepares for 'moon conflict' with China",
-        "Location": "Moon (Space)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-27",
-        "Actor": "EU",
-        "Action": "Pushes for 'tech sovereignty' from US",
-        "Location": "Europe",
+        "Actor": "China",
+        "Action": "Accelerates lunar landing program for 2030 goal",
+        "Location": "Moon, Space",
         "Risk": "ELEVATED"
     }
 ]
