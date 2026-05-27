@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-24",
-        "Actor": "Iran (via UAE company)",
-        "Action": "Acquired military satellite equipment via UAE.",
+        "Date": "2026-05-27",
+        "Actor": "United States",
+        "Action": "Launches 'self-defense' strikes against Iran",
         "Location": "Iran",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-24",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "On the brink of renewed conflict.",
-        "Location": "Horn of Africa",
+        "Date": "2026-05-27",
+        "Actor": "Unidentified",
+        "Action": "Tanker reports explosion near Strait of Hormuz",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-24",
-        "Actor": "United States (Space Force)",
-        "Action": "Missile alert satellites face critical defects.",
-        "Location": "Space / United States",
+        "Date": "2026-05-27",
+        "Actor": "Huawei",
+        "Action": "Develops new chips bypassing US sanctions",
+        "Location": "China",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-24",
-        "Actor": "Ukraine",
-        "Action": "Struck Russia's Sheskharis oil terminal.",
-        "Location": "Black Sea / Russia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "ASML",
-        "Action": "High-NA EUV production faces delays.",
-        "Location": "Global (semiconductor industry)",
+        "Date": "2026-05-27",
+        "Actor": "Russia",
+        "Action": "Intensifies missile strikes, drags Belarus closer",
+        "Location": "Ukraine, Belarus",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-24",
-        "Actor": "Unknown (terrorist group)",
-        "Action": "Suicide bombing kills dozens on Pakistan train.",
-        "Location": "Pakistan (Balochistan)",
-        "Risk": "CRITICAL"
+        "Date": "2026-05-27",
+        "Actor": "Nvidia",
+        "Action": "Chips smuggled to China via Japan suspected",
+        "Location": "China, Japan, Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-27",
+        "Actor": "United States Space Force",
+        "Action": "Warns of potential moon conflict with China",
+        "Location": "Space, Lunar Orbit",
+        "Risk": "HIGH"
     }
 ]
