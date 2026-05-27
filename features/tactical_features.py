@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 from utils.constants import COUNTRY_INFO, INFRASTRUCTURE_DATA
 from utils.engines import parse_rss_txt_file, get_active_live_alert
 
-def render_decision_support_engine(all_text, show_intel_note=False, is_home=False):
+def render_decision_support_engine(all_text="", show_intel_note=False, is_home=False):
     st.markdown("""
     <h3 style='color:#00ffaa;
     margin-top: 5px;
@@ -20,7 +20,6 @@ def render_decision_support_engine(all_text, show_intel_note=False, is_home=Fals
     </h3>
     """, unsafe_allow_html=True)
     
-    # Force Intelligence Note to ONLY show on the Executive Home page
     if is_home:
         st.markdown("**INTELLIGENCE NOTE:** Live Geopolitics-OSINT Evaluation and Intelligence")
         st.markdown("<div style='margin-bottom: 15px;'></div>", unsafe_allow_html=True)
@@ -30,61 +29,82 @@ def render_decision_support_engine(all_text, show_intel_note=False, is_home=Fals
     decision_signals = []
     
     # ==========================================
-    # STRATEGIC SIGNAL DETECTION
+    # DYNAMIC LIVE STRATEGIC SIGNAL DETECTION
     # ==========================================
-    if any(k in all_text for k in ["taiwan", "tsmc", "strait", "blockade"]):
-        decision_signals.append({
-            "risk": "Taiwan Semiconductor Exposure",
-            "impact": "Advanced node disruption risk rising",
-            "recommendation": "Increase supply diversification monitoring",
-            "priority": "🔴 HIGH"
-        })
+    live_data_path = 'data/executive_home/tactical_events_24h.json'
     
-    if any(k in all_text for k in ["rare earth", "ree", "critical minerals"]):
-        decision_signals.append({
-            "risk": "Rare Earth Supply Chokepoint",
-            "impact": "Potential manufacturing bottlenecks",
-            "recommendation": "Track export quotas and strategic reserves",
-            "priority": "🟠 ELEVATED"
-        })
-    
-    if any(k in all_text for k in ["export control", "sanction", "entity list"]):
-        decision_signals.append({
-            "risk": "Export Control Escalation",
-            "impact": "Cross-border semiconductor restrictions increasing",
-            "recommendation": "Monitor US-China technology controls",
-            "priority": "🔴 HIGH"
-        })
-    
-    if any(k in all_text for k in ["military", "missile", "war", "strike"]):
-        decision_signals.append({
-            "risk": "Military Escalation Risk",
-            "impact": "Regional supply chain volatility increasing",
-            "recommendation": "Track logistics and maritime chokepoints",
-            "priority": "🔴 HIGH"
-        })
-    
-    if any(k in all_text for k in ["ai", "gpu", "nvidia"]):
-        decision_signals.append({
-            "risk": "AI Infrastructure Concentration",
-            "impact": "AI compute dependency increasing globally",
-            "recommendation": "Monitor hyperscaler chip demand pressure",
-            "priority": "🟡 WATCH"
-        })
-    
+    if os.path.exists(live_data_path):
+        try:
+            with open(live_data_path, 'r') as f:
+                live_events = json.load(f)
+            
+            for event in live_events:
+                risk_val = str(event.get('Risk', 'ELEVATED')).upper()
+                
+                # Dynamic priority routing & weights for execution sequence sorting
+                if 'CRITICAL' in risk_val:
+                    priority = "🔴 CRITICAL"
+                    border_color = "#ef4444"
+                    severity_weight = 3
+                elif 'HIGH' in risk_val:
+                    priority = "🟠 HIGH"
+                    border_color = "#f97316"
+                    severity_weight = 2
+                else:
+                    priority = "🟡 WATCH"
+                    border_color = "#facc15"
+                    severity_weight = 1
+                    
+                actor = event.get('Actor', 'Strategic Actor')
+                location = event.get('Location', 'Global Domain')
+                action = event.get('Action', 'Geopolitical shift detected')
+                headline = event.get('Headline', action) 
+                
+                # Extract the execution timestamp / event date
+                timestamp = event.get('Date', time.strftime('%Y-%m-%d'))
+                
+                # Generate dynamic recommendations based on live context
+                action_context = (action + " " + location + " " + headline).lower()
+                
+                if any(k in action_context for k in ['mineral', 'rare earth', 'mining', 'lithium']):
+                    rec = "Verify strategic mineral reserves and activate secondary sourcing protocols."
+                elif any(k in action_context for k in ['taiwan', 'tsmc', 'semiconductor', 'fab', 'chip']):
+                    rec = "Review advanced node inventory buffers and assess immediate regional exposure."
+                elif any(k in action_context for k in ['military', 'strike', 'missile', 'war', 'navy']):
+                    rec = "Initiate maritime rerouting protocols and monitor kinetic spillover."
+                elif any(k in action_context for k in ['sanction', 'export', 'tariff', 'ban']):
+                    rec = "Engage compliance teams to verify cross-border component legality and entity lists."
+                elif any(k in action_context for k in ['ship', 'maritime', 'sea', 'strait', 'port']):
+                    rec = "Monitor freight insurance premiums and immediate logistics bottlenecks."
+                elif any(k in action_context for k in ['ai', 'quantum', 'cyber', 'drone']):
+                    rec = "Audit IP security protocols and monitor competitive technological advancements."
+                else:
+                    rec = "Escalate to executive risk committee for continuous tracking."
+
+                decision_signals.append({
+                    "risk": f"{actor} ➔ {location}",
+                    "impact": headline,
+                    "recommendation": rec,
+                    "priority": priority,
+                    "border": border_color,
+                    "weight": severity_weight,
+                    "timestamp": timestamp
+                })
+        except Exception:
+            pass
+
+    # ==========================================
+    # COMBO SORTING LAYER (CRITICAL -> HIGH -> WATCH)
+    # ==========================================
+    if decision_signals:
+        decision_signals.sort(key=lambda x: x['weight'], reverse=True)
+
     # ==========================================
     # RENDER ENGINE
     # ==========================================
     if decision_signals:
         for signal in decision_signals:
-            priority = signal["priority"]
-    
-            if "HIGH" in priority:
-                border_color = "#ef4444"
-            elif "ELEVATED" in priority:
-                border_color = "#f97316"
-            else:
-                border_color = "#facc15"
+            border_color = signal.get("border", "#facc15")
     
             st.markdown(f"""
             <div style="
@@ -94,15 +114,32 @@ def render_decision_support_engine(all_text, show_intel_note=False, is_home=Fals
                 border-radius:10px;
                 margin-bottom:15px;
                 box-shadow:0 0 12px rgba(0,0,0,0.5);
+                position: relative;
             ">
+            
+            <div style="
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                font-size: 11px;
+                font-family: monospace;
+                color: #888888;
+                background: #111111;
+                padding: 4px 8px;
+                border-radius: 4px;
+                border: 1px solid #222222;
+            ">
+                🕒 INTEL SYNC: {signal['timestamp']}
+            </div>
     
             <div style="
                 font-size:18px;
                 font-weight:bold;
                 margin-bottom:10px;
                 color:white;
+                padding-right: 120px;
             ">
-            {priority} — {signal['risk']}
+            {signal['priority']} — {signal['risk']}
             </div>
     
             <div style="
@@ -110,7 +147,7 @@ def render_decision_support_engine(all_text, show_intel_note=False, is_home=Fals
                 margin-bottom:8px;
                 font-size:14px;
             ">
-            <b>Strategic Impact:</b> {signal['impact']}
+            <b>Live Tactical Impact:</b> {signal['impact']}
             </div>
     
             <div style="
@@ -123,7 +160,7 @@ def render_decision_support_engine(all_text, show_intel_note=False, is_home=Fals
             </div>
             """, unsafe_allow_html=True)
     else:
-        st.info("No major strategic decision signals detected this cycle.")
+        st.info("Awaiting live tactical pipeline sync. Engine nominal.")
     
     st.markdown("---")
 
@@ -385,7 +422,6 @@ def render_live_telemetry():
             if target_reg not in live_rss:
                 live_rss[target_reg] = []
                 
-            # Search ONLY the headline, ignoring the red emoji and warning text
             alert_query = urllib.parse.quote_plus(alert_headline)
             
             live_rss[target_reg].append({
@@ -415,7 +451,6 @@ def render_live_telemetry():
                 st.markdown(f"<h4 style='color: {color}; border-bottom: 2px solid {color}; padding-bottom: 5px;'>{reg}</h4>", unsafe_allow_html=True)
                 if articles:
                     scroll_box = st.container(height=300)
-                    # Display up to the 8 most recent to keep UI clean but populated
                     for art in list(reversed(articles))[:8]: 
                         clean_title = art['title'].replace('"', '&quot;').replace("'", "&#39;")
                         html_str = f'<div style="margin-bottom:10px; padding:10px; background-color:rgba(255,255,255,0.05); border-left:3px solid {color}; border-radius:4px;"><a href="{art["link"]}" target="_blank" style="color:#e0e0e0; font-weight:600; text-decoration:none; font-size:13px; display:block; margin-bottom:5px;">{clean_title}</a><span style="font-size:11px; color:#888;">{art["published"][:25]}</span></div>'
@@ -449,12 +484,11 @@ def render_verified_sources(sources_list):
         st.markdown("---")
         st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 15px;'>Verified Intelligence Sources</h3>", unsafe_allow_html=True)
         
-        # Auto-Categorization Engine for Sources (Alphabetical Order)
         themes = {
             "AI Chip Demand": {"keywords": ["ai", "nvidia", "gpu", "tpu", "compute", "openai", "data center", "server", "algorithm"], "color": "#ff00ff", "icon": "🧠", "sources": []},
             "Critical Minerals (REE)": {"keywords": ["rare earth", "mineral", "lithium", "cobalt", "graphite", "gallium", "germanium", "mining", "supply chain"], "color": "#00ff00", "icon": "⛏️", "sources": []},
             "Export Controls & Geopolitics": {"keywords": ["export", "control", "sanction", "ban", "tariff", "entity list", "bis", "geopolitics", "war", "tension", "blockade", "trade"], "color": "#ff4b4b", "icon": "⚖️", "sources": []},
-            "General Strategic Intelligence": {"keywords": [], "color": "#888888", "icon": "📡", "sources": []}, # Fallback
+            "General Strategic Intelligence": {"keywords": [], "color": "#888888", "icon": "📡", "sources": []}, 
             "Global Foundry Market": {"keywords": ["foundry", "tsmc", "samsung", "intel", "smic", "fab", "manufacturing", "yield", "semiconductor", "chipmaker"], "color": "#00bfff", "icon": "🏭", "sources": []},
             "Military & Outer Space": {"keywords": ["military", "defense", "weapon", "missile", "space", "satellite", "darpa", "dod", "navy", "army", "air force", "pentagon"], "color": "#ffd166", "icon": "🚀", "sources": []},
             "Regional (India & West Asia)": {"keywords": ["india", "modi", "dholera", "tata", "west asia", "middle east", "uae", "saudi", "israel", "gulf", "cg power"], "color": "#ff8c00", "icon": "🌍", "sources": []}
@@ -464,7 +498,6 @@ def render_verified_sources(sources_list):
             title_lower = src.get('title', '').lower()
             placed = False
             
-            # Keyword matching
             for t_name, t_data in themes.items():
                 if t_name == "General Strategic Intelligence":
                     continue
@@ -473,15 +506,12 @@ def render_verified_sources(sources_list):
                     placed = True
                     break
             
-            # Fallback for unmatched sources
             if not placed:
                 themes["General Strategic Intelligence"]["sources"].append(src)
 
-        # UI Rendering: 2-Column Grid Layout with Custom CSS Cards
         src_cols = st.columns(2)
         col_idx = 0
         
-        # Dynamically sort themes alphabetically before rendering them
         for t_name in sorted(themes.keys()):
             t_data = themes[t_name]
             if t_data["sources"]:

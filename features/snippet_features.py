@@ -107,7 +107,7 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
         target_cols = ['Date', 'Action', 'Event', 'Headline', 'Actor']
         cols_to_show = [col for col in target_cols if col in available_cols]
         
-        display_df = df_actions[cols_to_show].head(8) if cols_to_show else df_actions.head(8)
+        display_df = df_actions[cols_to_show].head(6) if cols_to_show else df_actions.head(6)
             
         st.dataframe(display_df, use_container_width=True, hide_index=True)
     else:

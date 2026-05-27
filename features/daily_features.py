@@ -3,70 +3,20 @@ import pandas as pd
 import os
 import json
 import math
+import glob
 from datetime import datetime, timezone, timedelta
-import plotly.graph_objects as go # <-- ADDED
+import plotly.graph_objects as go 
 
 # THE CRITICAL FIX: Import the missing functions that caused the NameError crashes
 from utils.engines import calculate_domain_threat, parse_rss_txt_file
 
 # ==========================================
-# 🌐 GEOPOLITICAL SHOCKWAVE ENGINE (RESTORED)
+# 🌐 GEOPOLITICAL SHOCKWAVE ENGINE (LIVE)
 # ==========================================
 def run_shockwave_engine():
-    st.markdown("<h3 style='color:#ff9f1c;'>🌍 Geopolitical Shockwave Engine - In the Last 24 Hours</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color:#ff9f1c;'>🌍 Geopolitical Shockwave Engine - Live Radar</h3>", unsafe_allow_html=True)
 
-    # --- STRICT TIMELOCK (00:15 AM IST SYNC) ---
-    now_utc = datetime.now(timezone.utc)
-    now_ist = now_utc + timedelta(hours=5, minutes=30)
-    if now_ist.hour == 0 and now_ist.minute < 15:
-        anchor_ist = now_ist.replace(hour=0, minute=15, second=0, microsecond=0) - timedelta(days=1)
-    else:
-        anchor_ist = now_ist.replace(hour=0, minute=15, second=0, microsecond=0)
-
-    anchor_str = anchor_ist.strftime("%Y-%m-%d")
-    snapshot_file = f'data/shockwave_snapshot_{anchor_str}.json'
-
-    # --- ATTEMPT TO LOAD THE FROZEN DAILY SNAPSHOT ---
-    if os.path.exists(snapshot_file):
-        try:
-            with open(snapshot_file, 'r') as f:
-                saved_data = json.load(f)
-                global_index = saved_data["global_index"]
-                shock_df = pd.DataFrame(saved_data["shock_df"])
-                status = saved_data["status"]
-                
-                # Render the UI immediately from the frozen state
-                st.markdown(f"""
-                <div style="padding:20px; background:#0a0a0a; border:1px solid #333; border-radius:8px; margin-bottom:25px;">
-                    <h3 style="color:#ff4b4b; margin-bottom:5px; margin-top:0px; font-size:18px; text-transform:uppercase; letter-spacing:1px;">Global Shock Index</h3>
-                    <h1 style="color:white; margin:0; font-size: 3.5rem;">{global_index}<span style="font-size: 1.5rem; color: #555;">/100</span></h1>
-                    <p style="color:#aaa; font-size:15px; margin-top: 5px; margin-bottom:0px;">Status: <strong>{status}</strong></p>
-                </div>
-                """, unsafe_allow_html=True)
-
-                for _, row in shock_df.iterrows():
-                    label = row["Domain"]
-                    val = int(row["Shock Score"])
-                    color = "#00ff00"
-                    if val > 70: color = "#ff4b4b"
-                    elif val > 50: color = "#f97316"
-                    elif val > 30: color = "#facc15"
-                    st.markdown(f"""
-                    <div style="margin-bottom:16px;">
-                        <div style="display:flex; justify-content:space-between; margin-bottom: 6px;">
-                            <span style="color:#ddd; font-size:14px; font-weight: 600;">{label}</span>
-                            <span style="color:{color}; font-weight:bold; font-size:14px;">{val}%</span>
-                        </div>
-                        <div style="background:#1f2937; height:8px; border-radius:4px;">
-                            <div style="width:{val}%; background:{color}; height:8px; border-radius:4px; box-shadow: 0 0 10px {color}60;"></div>
-                        </div>
-                    </div>
-                    """, unsafe_allow_html=True)
-                return  # End execution here so it never recalculates!
-        except Exception:
-            pass
-
-    # --- IF NO SNAPSHOT EXISTS, CALCULATE IT (HAPPENS ONCE A DAY) ---
+    # --- ATTEMPT TO LOAD LIVE DATA EVERY 45 MINS (NO MORE TIMELOCKS) ---
     try:
         live_rss = parse_rss_txt_file()
         if not live_rss:
@@ -85,7 +35,7 @@ def run_shockwave_engine():
     df = pd.DataFrame(all_news)
 
     if df.empty or "title" not in df.columns:
-        st.info("No major shockwaves detected in the current 24-hour cycle.")
+        st.info("No major shockwaves detected in the current 45-minute cycle.")
         return
 
     # --- SHOCK KEYWORDS (INTELLIGENCE GRADE) ---
@@ -119,18 +69,6 @@ def run_shockwave_engine():
         status = "🟡 ELEVATED"
     else:
         status = "🟢 STABLE"
-
-    # --- SAVE THE SNAPSHOT SO IT NEVER CHANGES AGAIN TODAY ---
-    os.makedirs('data', exist_ok=True)
-    try:
-        with open(snapshot_file, 'w') as f:
-            json.dump({
-                "global_index": global_index,
-                "shock_df": shock_df.to_dict('records'),
-                "status": status
-            }, f)
-    except Exception:
-        pass
 
     # --- DISPLAY UI ---
     st.markdown(f"""
@@ -167,20 +105,17 @@ def render_ticker_tape():
     ticker_items = []
     
     try:
-        # Automatically grab the data
         live_rss = parse_rss_txt_file()
         if not live_rss: return
         
-        # Flatten the region dictionary into a single list of unique news items
         seen_titles = set()
         unique_news = []
         for region, articles in live_rss.items():
             for art in articles:
-                if art['title'] not in seen_titles and art.get('is_24h', False): # Only 24h news
+                if art['title'] not in seen_titles and art.get('is_24h', False): 
                     seen_titles.add(art['title'])
                     unique_news.append(art)
 
-        # Dynamic Threat Scoring ...
         critical = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
         high = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension', 'export control', 'embargo', 'risk']
         med = ['delay', 'subsidy', 'compete', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'concern', 'geopolitical']
@@ -194,7 +129,6 @@ def render_ticker_tape():
             score = min(10, score)
             
             if score >= 5:
-                # Keep the emojis for visual context, but drop the color assignments
                 if score >= 9:
                     prefix = "🔴 CRITICAL:"
                 elif score >= 7:
@@ -212,10 +146,8 @@ def render_ticker_tape():
     if not ticker_items: return
     all_items_html = "".join(ticker_items)
 
-    # --- DYNAMIC SPEED CALCULATION ---
     dynamic_duration = max(20, len(ticker_items) * 10 + 15)
 
-    # Inject CSS
     ticker_code = f"""
     <style>
     /* ================================
@@ -229,8 +161,8 @@ def render_ticker_tape():
         width: 100vw;
         height: 42px;
         background-color: #050505;
-        border: none !important; /* Completely removes the outline */
-        box-shadow: none !important; /* Removes any bottom shadow */
+        border: none !important; 
+        box-shadow: none !important; 
         z-index: 990; 
         overflow: hidden;
         display: flex;
@@ -245,7 +177,6 @@ def render_ticker_tape():
         display: inline-block;
         white-space: nowrap;
         padding-left: 100vw;
-        /* Inject the Python calculated duration dynamically */
         animation: ticker {dynamic_duration}s linear infinite;
     }}
 
@@ -269,7 +200,7 @@ def render_ticker_tape():
 
     .ticker-item a {{
         text-decoration: none;
-        color: #ffffff !important; /* Forces all text to be pure white */
+        color: #ffffff !important; 
     }}
 
     .ticker-item a:hover {{
@@ -288,9 +219,11 @@ def render_ticker_tape():
 
 
 # ==========================================
-# 24-HOUR ADVANCED ANALYTICS ENGINE
+# ADVANCED THREAT ANALYTICS ENGINE (NOW USING ALL_TEXT)
 # ==========================================
 def render_24h_live_analytics(dashboard_data, text_sections):
+    # CRITICAL ADDITION: Compile the full AI text to influence scores
+    all_text = " ".join(text_sections).lower()
     
     valid_scores = [calculate_domain_threat("domain", t, dashboard_data) for t in text_sections if len(t.strip()) > 20]
     baseline_risk = int(sum(valid_scores) / len(valid_scores)) if valid_scores else 40
@@ -299,11 +232,17 @@ def render_24h_live_analytics(dashboard_data, text_sections):
     theme_scores = {"Kinetic": 0, "Economic": 0, "Supply": 0}
     breaking_news = []
     
+    kw_kinetic = ['war', 'military', 'strike', 'blockade', 'escalation', 'breach', 'crisis']
+    kw_economic = ['sanction', 'tariff', 'export control', 'ban', 'subsidy', 'embargo']
+    kw_supply = ['shortage', 'disrupt', 'delay', 'chokepoint', 'vulnerability']
+
+    # 1. Analyze AI context first (all_text)
+    theme_scores["Kinetic"] += sum(1 for kw in kw_kinetic if kw in all_text) * 2.5
+    theme_scores["Economic"] += sum(1 for kw in kw_economic if kw in all_text) * 2.0
+    theme_scores["Supply"] += sum(1 for kw in kw_supply if kw in all_text) * 2.0
+    
+    # 2. Analyze live RSS feed
     if live_rss_data:
-        kw_kinetic = ['war', 'military', 'strike', 'blockade', 'escalation', 'breach', 'crisis']
-        kw_economic = ['sanction', 'tariff', 'export control', 'ban', 'subsidy', 'embargo']
-        kw_supply = ['shortage', 'disrupt', 'delay', 'chokepoint', 'vulnerability']
-        
         for region, articles in live_rss_data.items():
             for art in articles:
                 if not art.get('is_24h', False): continue 
@@ -330,24 +269,41 @@ def render_24h_live_analytics(dashboard_data, text_sections):
     global_risk = int(round(raw_composite + 25))
     global_risk = max(20, min(99, global_risk)) 
 
-    # --- RENDER 24H RISK INDEX ---
+    # --- PULL LIVE TACTICAL JSON FOR BREAKING AI ALERTS ---
+    live_data_path = 'data/executive_home/tactical_events_24h.json'
+    ai_breaking_event = None
+    if os.path.exists(live_data_path):
+        try:
+            with open(live_data_path, 'r') as f:
+                live_events = json.load(f)
+            # Find the most severe event evaluated by AI
+            for ev in live_events:
+                if 'CRITICAL' in str(ev.get('Risk', '')).upper():
+                    ai_breaking_event = ev
+                    break
+        except Exception:
+            pass
+
+    # --- RENDER RISK INDEX ---
     risk_cols = st.columns([1, 1])
     with risk_cols[0]:
         if global_risk >= 75:
-            st.error(f"🔴 **Global Semiconductor Risk Index – In the Past 24-Hours: {global_risk} / 100** (Critical)")
+            st.error(f"🔴 **Global Semiconductor Risk Index – Live: {global_risk} / 100** (Critical)")
         elif global_risk >= 50:
-            st.warning(f"🟠 **Global Semiconductor Risk Index – In the Past 24-Hours: {global_risk} / 100** (Rising Risk)")
+            st.warning(f"🟠 **Global Semiconductor Risk Index – Live: {global_risk} / 100** (Rising Risk)")
         else:
-            st.success(f"🟢 **Global Semiconductor Risk Index – In the Past 24-Hours: {global_risk} / 100** (Stable)")
+            st.success(f"🟢 **Global Semiconductor Risk Index – Live: {global_risk} / 100** (Stable)")
 
     with risk_cols[1]:
-        if breaking_news:
-            st.error(f"🚨 **BREAKING ALERT – Past 24-Hours:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
+        if ai_breaking_event:
+            st.error(f"🚨 **LIVE AI ALERT:** {ai_breaking_event.get('Headline', ai_breaking_event.get('Action', 'Critical Shift Detected'))} ➔ **{ai_breaking_event.get('Location', 'Global')}**")
+        elif breaking_news:
+            st.warning(f"⚠️ **LIVE RADAR HIT:** [{breaking_news[0]['title']}]({breaking_news[0]['link']})")
         else:
-            st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected in the past 24-hours.")
+            st.info("📡 **Live Radar:** No immediate kinetic or economic breaks detected.")
 
     st.markdown("---")
-    st.markdown("<h3 style='color:#ff4b4b; font-size:22px; margin-top: 20px; margin-bottom: 10px;'>Advanced Threat Analytics</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color:#ff4b4b; font-size:22px; margin-top: 20px; margin-bottom: 10px;'>Advanced Threat Analytics (Live)</h3>", unsafe_allow_html=True)
 
     # ==========================================
     # ROW 1: Supply Chain & Scenario Simulator
@@ -355,10 +311,10 @@ def render_24h_live_analytics(dashboard_data, text_sections):
     r1_cols = st.columns([1, 1])
 
     with r1_cols[0]:
-        st.markdown("##### 🛰️ Supply Chain Disruption Monitor – In the Past 24-Hours")
-        tsmc_risk = "🔴 Critical" if global_risk > 70 else "🟠 Elevated Risk"
-        asml_risk = "🟠 Elevated Risk" if global_risk > 60 else "🟡 Watch"
-        smic_risk = "🔴 Critical" if "china" in str(breaking_news).lower() else "🟠 Elevated Risk"
+        st.markdown("##### 🛰️ Dynamic Supply Chain Monitor")
+        tsmc_risk = "🔴 Critical" if (global_risk > 70 or "taiwan" in all_text) else "🟠 Elevated Risk"
+        asml_risk = "🟠 Elevated Risk" if (global_risk > 60 or "export" in all_text) else "🟡 Watch"
+        smic_risk = "🔴 Critical" if ("china" in str(breaking_news).lower() or "sanction" in all_text) else "🟠 Elevated Risk"
 
         st.markdown(f"""
         <div style="background-color: #111; padding: 15px; border-radius: 8px; border-left: 4px solid #00bfff;">
@@ -408,7 +364,7 @@ def render_24h_live_analytics(dashboard_data, text_sections):
     r2_cols = st.columns([1, 1])
 
     with r2_cols[0]:
-        st.markdown("##### 📉 Threat Trend Forecast – In the Past 24-Hours (Machine Learning Projection)")
+        st.markdown("##### 📉 Active Threat Trend Projection")
         
         import numpy as np
         x_hist = np.array([-5, -4, -3, -2, -1, 0])
@@ -432,7 +388,7 @@ def render_24h_live_analytics(dashboard_data, text_sections):
 
         f_cols = st.columns(3)
         with f_cols[0]:
-            st.metric("Today", f"{global_risk}/100")
+            st.metric("Live Index", f"{global_risk}/100")
         with f_cols[1]:
             st.metric("+3 Days", f"{t_plus_3}/100", f"{t_plus_3 - global_risk} pts", delta_color="inverse")
             if raw_t_plus_3 > 100:
@@ -453,15 +409,17 @@ def render_24h_live_analytics(dashboard_data, text_sections):
                 """, unsafe_allow_html=True)
 
     with r2_cols[1]:
-        st.markdown("##### 📊 Strategic Threat Radar – In the Past 24-Hours (Heuristic Math Method)")
+        st.markdown("##### 📊 Live Strategic Threat Radar")
         live_volatility = kinetic_volatility + economic_volatility + supply_volatility
-        radar_data = [
-            min(100, global_risk + 5), 
-            min(100, baseline_risk + 15), 
-            min(100, baseline_risk - 5), 
-            min(100, baseline_risk + 20), 
-            min(100, int(live_volatility * 10) + 30)
-        ]
+        
+        # Dynamic radar points based on AI all_text context
+        exp_ctrl = min(100, baseline_risk + 5 + (all_text.count("export") * 5))
+        mil_esc = min(100, baseline_risk + 15 + (all_text.count("military") * 5))
+        ai_comp = min(100, baseline_risk - 5 + (all_text.count("ai") * 5))
+        ree_sup = min(100, baseline_risk + 20 + (all_text.count("rare earth") * 5))
+        trade_war = min(100, int(live_volatility * 10) + 30 + (all_text.count("tariff") * 5))
+
+        radar_data = [exp_ctrl, mil_esc, ai_comp, ree_sup, trade_war]
         
         radar_fig = go.Figure()
         radar_fig.add_trace(go.Scatterpolar(
@@ -493,8 +451,36 @@ def render_24h_live_analytics(dashboard_data, text_sections):
     r3_cols = st.columns([1.5, 1])
     
     with r3_cols[0]:
-        st.markdown("##### AI Intelligence Summary (Top Radar Hits) – In the Past 24-Hours")
-        if live_rss_data:
+        st.markdown("##### AI Intelligence Synthesis Radar")
+        if ai_breaking_event:
+            # If the tactical pipeline JSON exists, render that instead of raw RSS!
+            summary_html = "<div style='background-color: #111; padding: 15px; border-radius: 8px; border-left: 4px solid #00bfff; margin-bottom: 20px;'>"
+            try:
+                with open(live_data_path, 'r') as f:
+                    data = json.load(f)
+                
+                # Sort data: CRITICAL (3) -> HIGH (2) -> WATCH (1)
+                def risk_score(item):
+                    r = str(item.get('Risk', '')).upper()
+                    if 'CRITICAL' in r: return 3
+                    if 'HIGH' in r: return 2
+                    return 1
+                
+                sorted_data = sorted(data, key=risk_score, reverse=True)
+                
+                for idx, art in enumerate(sorted_data[:10]):
+                    r_val = str(art.get('Risk', '')).upper()
+                    if "CRITICAL" in r_val: prefix = "🔴"
+                    elif "HIGH" in r_val: prefix = "🟠"
+                    else: prefix = "🟡"
+                    
+                    summary_html += f"<p style='margin: 5px 0; font-size: 14px;'><span style='color: #00bfff; font-weight: bold;'>{idx+1}. {prefix} </span> <span style='color: #ddd;'>{art.get('Headline', art.get('Action', ''))} <b>[{art.get('Location', '')}]</b></span></p>"
+                summary_html += "</div>"
+                st.markdown(summary_html, unsafe_allow_html=True)
+            except Exception:
+                pass
+        elif live_rss_data:
+            # Fallback to RSS sorting if JSON isn't available
             all_news = []
             for reg, arts in live_rss_data.items():
                 for art in arts:
@@ -502,12 +488,22 @@ def render_24h_live_analytics(dashboard_data, text_sections):
                         all_news.append(art)
                         
             unique_news = {v['title']:v for v in all_news}.values()
-            critical_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war']
-            sorted_news = sorted(unique_news, key=lambda x: sum(1 for kw in critical_kw if kw in x['title'].lower()), reverse=True)
+            
+            def rss_score(item):
+                title = item['title'].lower()
+                c_kw = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war']
+                h_kw = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension']
+                if any(kw in title for kw in c_kw): return 3
+                if any(kw in title for kw in h_kw): return 2
+                return 1
+
+            sorted_news = sorted(unique_news, key=rss_score, reverse=True)
             
             summary_html = "<div style='background-color: #111; padding: 15px; border-radius: 8px; border-left: 4px solid #00bfff; margin-bottom: 20px;'>"
             for idx, art in enumerate(list(sorted_news)[:10]):
-                summary_html += f"<p style='margin: 5px 0; font-size: 14px;'><span style='color: #00bfff; font-weight: bold;'>{idx+1}.</span> <a href='{art['link']}' target='_blank' style='color: #ddd; text-decoration: none;'>{art['title']}</a></p>"
+                score = rss_score(art)
+                prefix = "🔴" if score == 3 else ("🟠" if score == 2 else "🟡")
+                summary_html += f"<p style='margin: 5px 0; font-size: 14px;'><span style='color: #00bfff; font-weight: bold;'>{idx+1}. {prefix} </span> <a href='{art['link']}' target='_blank' style='color: #ddd; text-decoration: none;'>{art['title']}</a></p>"
             summary_html += "</div>"
             st.markdown(summary_html, unsafe_allow_html=True)
     
@@ -515,18 +511,22 @@ def render_24h_live_analytics(dashboard_data, text_sections):
         st.markdown("""
         <div style="margin-bottom: 15px;">
             <div style="font-size: 18px; font-weight: 600; margin-bottom: 2px; color: white;">
-                📡 Intelligence Signal Detection Engine – In the Past 24-Hours
+                📡 AI Signal Detection Engine (Live Context)
             </div>
             <div style="font-size: 14px; color: #888888; line-height: 1.4;">
-                Automated scan of live global news tracking secondary geopolitical keywords to surface early 'weak signals' before they escalate into critical threats.
+                Scanning total AI generated intelligence matrix and live news to surface emerging weak signals.
             </div>
         </div>
         """, unsafe_allow_html=True)
         
+        medium_keywords = ['subsidy', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'delay', 'chokepoint']
+        keyword_counts = {}
+        
+        # Now dynamically counts occurrences directly from the deep AI text synthesis
+        for kw in medium_keywords:
+            keyword_counts[kw] = keyword_counts.get(kw, 0) + all_text.count(kw)
+        
         if live_rss_data:
-            medium_keywords = ['subsidy', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'delay']
-            keyword_counts = {}
-            
             for reg, arts in live_rss_data.items():
                 for art in arts:
                     if not art.get('is_24h', False): continue
@@ -535,17 +535,17 @@ def render_24h_live_analytics(dashboard_data, text_sections):
                         if kw in title_lower:
                             keyword_counts[kw] = keyword_counts.get(kw, 0) + 1
             
-            weak_signals = {k: v for k, v in keyword_counts.items() if v > 1}
-            
-            if weak_signals:
-                for signal_kw, count in sorted(weak_signals.items(), key=lambda x: x[1], reverse=True)[:3]:
-                    confidence = min(99, count * 15 + 30)
-                    st.markdown(f"""
-                    <div style="background-color: rgba(255, 255, 0, 0.05); border: 1px solid #ffeb3b; padding: 12px; border-radius: 8px; margin-bottom: 10px;">
-                        <h6 style="color: #ffeb3b; margin: 0 0 5px 0; font-size: 13px;">⚠ Weak Signal Detected</h6>
-                        <p style="margin: 0; font-size: 13px; color: #ddd;">Increased diplomatic/media chatter regarding: <b>{signal_kw.upper()}</b></p>
-                        <p style="margin: 5px 0 0 0; font-size: 11px; color: #888; font-family: monospace;">Confidence: {confidence}% | Trend: Rising ▲</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-            else:
-                st.info("No abnormal weak signal clusters detected in the past 24-hours.")
+        weak_signals = {k: v for k, v in keyword_counts.items() if v > 1}
+        
+        if weak_signals:
+            for signal_kw, count in sorted(weak_signals.items(), key=lambda x: x[1], reverse=True)[:3]:
+                confidence = min(99, count * 10 + 30)
+                st.markdown(f"""
+                <div style="background-color: rgba(255, 255, 0, 0.05); border: 1px solid #ffeb3b; padding: 12px; border-radius: 8px; margin-bottom: 10px;">
+                    <h6 style="color: #ffeb3b; margin: 0 0 5px 0; font-size: 13px;">⚠ Weak Signal Detected</h6>
+                    <p style="margin: 0; font-size: 13px; color: #ddd;">Increased intelligence chatter regarding: <b>{signal_kw.upper()}</b></p>
+                    <p style="margin: 5px 0 0 0; font-size: 11px; color: #888; font-family: monospace;">Confidence: {confidence}% | Trend: Rising ▲</p>
+                </div>
+                """, unsafe_allow_html=True)
+        else:
+            st.info("No abnormal weak signal clusters detected in the active pipeline.")
