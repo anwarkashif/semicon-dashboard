@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-27",
+        "Actor": "Unidentified Actor",
+        "Action": "Tanker damaged by explosion off coast.",
+        "Location": "Oman (near Strait of Hormuz)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-27",
         "Actor": "United States",
-        "Action": "Launches 'self-defense' strikes against Iran",
+        "Action": "Launches self-defense strikes against military targets.",
         "Location": "Iran",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-27",
-        "Actor": "Unidentified",
-        "Action": "Tanker reports explosion near Strait of Hormuz",
-        "Location": "Strait of Hormuz",
+        "Actor": "United States (Trump administration)",
+        "Action": "Signals willingness to leverage Taiwan's status.",
+        "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-27",
-        "Actor": "Huawei",
-        "Action": "Develops new chips bypassing US sanctions",
-        "Location": "China",
-        "Risk": "CRITICAL"
+        "Actor": "North Korea",
+        "Action": "Tests new AI-guided missile systems.",
+        "Location": "North Korea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-27",
+        "Actor": "UK, Poland",
+        "Action": "To sign defense treaty against Russian threats.",
+        "Location": "Europe",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-27",
         "Actor": "Russia",
-        "Action": "Intensifies missile strikes, drags Belarus closer",
-        "Location": "Ukraine, Belarus",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-27",
-        "Actor": "Nvidia",
-        "Action": "Chips smuggled to China via Japan suspected",
-        "Location": "China, Japan, Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-27",
-        "Actor": "United States Space Force",
-        "Action": "Warns of potential moon conflict with China",
-        "Location": "Space, Lunar Orbit",
+        "Action": "Pressures Armenia over EU ties, threatens fuel.",
+        "Location": "Armenia",
         "Risk": "HIGH"
     }
 ]
