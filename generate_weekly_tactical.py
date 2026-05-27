@@ -10,11 +10,56 @@ def get_latest_file(pattern):
     files.sort() 
     return files[-1]
 
+def update_fallback_title(target_title):
+    """
+    FAILSAFE: If the AI API crashes or times out, this forcefully updates 
+    the date on the existing dashboard file so the UI never displays the wrong week.
+    """
+    file_path = 'data/weekly_tactical_live.json'
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, 'r') as f:
+                data = json.load(f)
+            data['title'] = target_title
+            with open(file_path, 'w') as f:
+                json.dump(data, f, indent=4)
+            print(f"⚠️ AI generation failed, but successfully force-updated title to: {target_title}")
+        except Exception as e:
+            print(f"Fallback title update failed: {e}")
+
 def main():
+    # ==========================================
+    # 1. CALCULATE MATHEMATICAL FRIDAY ANCHOR FIRST
+    # ==========================================
+    now = datetime.datetime.now(datetime.timezone.utc)
+    
+    # Calculate days since last Friday (0 = Monday, 4 = Friday)
+    days_since_friday = (now.weekday() - 4) % 7
+    
+    last_friday = now - datetime.timedelta(days=days_since_friday)
+    previous_friday = last_friday - datetime.timedelta(days=7)
+
+    # Time-gate: Hold the date until Friday 12:30 UTC (6:00 PM IST)
+    if now.weekday() == 4 and (now.hour < 12 or (now.hour == 12 and now.minute < 30)):
+        last_friday = last_friday - datetime.timedelta(days=7)
+        previous_friday = previous_friday - datetime.timedelta(days=7)
+    
+    if last_friday.month == previous_friday.month:
+        date_string = f"{last_friday.strftime('%B')} {previous_friday.day}-{last_friday.day}, {last_friday.year}"
+    else:
+        date_string = f"{previous_friday.strftime('%B %d')} - {last_friday.strftime('%B %d')}, {last_friday.year}"
+        
+    target_title = f"Tactical Weekly Brief: Strategic Intelligence Synthesis - {date_string}"
+
+    # ==========================================
+    # 2. ATTEMPT AI GENERATION
+    # ==========================================
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("No API key found. Skipping Weekly Tactical Brief generation.")
+        update_fallback_title(target_title)
         return
+        
     client = genai.Client(api_key=api_key)
 
     latest_brief_path = get_latest_file('data/brief_*.json')
@@ -22,14 +67,20 @@ def main():
     
     weekly_context = ""
     if latest_brief_path:
-        with open(latest_brief_path, 'r') as f:
-            brief_data = json.load(f)
-            weekly_context = brief_data.get('brief_raw', '')
+        try:
+            with open(latest_brief_path, 'r') as f:
+                brief_data = json.load(f)
+                weekly_context = brief_data.get('brief_raw', '')
+        except Exception:
+            pass
 
     tactical_context = ""
     if os.path.exists(tactical_path):
-        with open(tactical_path, 'r') as f:
-            tactical_context = json.dumps(json.load(f)[:10])
+        try:
+            with open(tactical_path, 'r') as f:
+                tactical_context = json.dumps(json.load(f)[:10])
+        except Exception:
+            pass
 
     prompt = f"""
     You are a senior geopolitical intelligence analyst.
@@ -59,27 +110,8 @@ def main():
         raw_text = response.text.replace('```json', '').replace('```', '').strip()
         snippet_data = json.loads(raw_text)
         
-        # --- SMART DATE INTERVAL LOGIC (ANCHORED TO FRIDAY EVENING) ---
-        now = datetime.datetime.now(datetime.timezone.utc)
-        
-        # Calculate days since last Friday (0 = Monday, 4 = Friday)
-        days_since_friday = (now.weekday() - 4) % 7
-        
-        last_friday = now - datetime.timedelta(days=days_since_friday)
-        previous_friday = last_friday - datetime.timedelta(days=7)
-
-        # If today is Friday, but it's before 12:30 UTC (6:00 PM IST), we haven't hit the new cycle yet.
-        # We push the anchor back by one week to hold the current brief's date structure.
-        if now.weekday() == 4 and (now.hour < 12 or (now.hour == 12 and now.minute < 30)):
-            last_friday = last_friday - datetime.timedelta(days=7)
-            previous_friday = previous_friday - datetime.timedelta(days=7)
-        
-        if last_friday.month == previous_friday.month:
-            date_string = f"{last_friday.strftime('%B')} {previous_friday.day}-{last_friday.day}, {last_friday.year}"
-        else:
-            date_string = f"{previous_friday.strftime('%B %d')} - {last_friday.strftime('%B %d')}, {last_friday.year}"
-            
-        snippet_data['title'] = f"Tactical Weekly Brief: Strategic Intelligence Synthesis - {date_string}"
+        # Apply the mathematically verified title
+        snippet_data['title'] = target_title
         
         # Remove old static keys so they don't break the new UI format
         snippet_data.pop('date', None)
@@ -88,10 +120,12 @@ def main():
         os.makedirs('data', exist_ok=True)
         with open('data/weekly_tactical_live.json', 'w') as f:
             json.dump(snippet_data, f, indent=4)
-        print(f"Successfully generated weekly_tactical_live.json for {date_string}")
+        print(f"✅ Successfully generated and saved weekly_tactical_live.json for {date_string}")
 
     except Exception as e:
-        print(f"Failed to generate Weekly Tactical Brief: {e}")
+        print(f"❌ Failed to generate Weekly Tactical Brief: {e}")
+        # Trigger the failsafe to ensure the date is always correct on the UI
+        update_fallback_title(target_title)
 
 if __name__ == "__main__":
     main()
