@@ -15,7 +15,8 @@ RSS_FEEDS = [
     "https://www.atlanticcouncil.org/feed/",
     "https://foreignpolicy.com/feed/",
     "https://moderndiplomacy.eu/feed/",
-    "https://www.worldpoliticsreview.com/feed/", 
+    "https://www.worldpoliticsreview.com/feed/",
+    "https://hegemonglobal.com", 
 
     # --- 2. Military & Conflict ---
     "https://www.defenseone.com/rss/all/",

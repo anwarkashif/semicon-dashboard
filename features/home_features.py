@@ -1452,4 +1452,25 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
+    # ==========================================
+    # 🌍 HEGEMON GLOBAL EMBED
+    # ==========================================
+    st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
+    
+    st.markdown("### 🌐 Hegemon Global Monitor")
+    st.caption("Live external intelligence platform. **Credit & Rights:** [Hegemon Global](https://hegemonglobal.com) and its original creators. All embedded interactivity is preserved below.")
+
+    try:
+        # We set scrolling=True so you can navigate their site from within your dashboard
+        components.iframe(
+            "https://hegemonglobal.com",
+            height=700, 
+            scrolling=True
+        )
+    except Exception:
+        st.warning("⚠️ Unable to load Hegemon Global. The website's server may actively block iframe embedding (X-Frame-Options).")
+
+    st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
+
+    # This is your Intelligence Note at the absolute bottom
     render_executive_deep_intelligence_note()

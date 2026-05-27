@@ -158,6 +158,29 @@ def fetch_daily_intelligence():
     except Exception as e:
         print(f"⚠️ Warning: Could not fetch Maritime Boolean - {e}")
 
+    # --- PHASE 4: HEGEMON GLOBAL LIVE EXTRACTION ---
+    print("🌐 Executing Deep-Scrape on Hegemon Global...")
+    try:
+        hg_url = "https://hegemonglobal.com"
+        hg_res = requests.get(hg_url, headers=headers, timeout=15)
+        hg_res.raise_for_status()
+        soup = BeautifulSoup(hg_res.text, 'html.parser')
+
+        # Extract headings and paragraphs to capture the main intelligence text
+        text_elements = soup.find_all(['h1', 'h2', 'h3', 'p'])
+        extracted_hg_text = " ".join([elem.get_text(strip=True) for elem in text_elements if len(elem.get_text(strip=True)) > 20])
+
+        if extracted_hg_text:
+            # Truncate to ~1500 characters to ensure we capture a rich summary without overloading the token limit
+            snippet = extracted_hg_text[:1500] + "..." if len(extracted_hg_text) > 1500 else extracted_hg_text
+            aggregated_news += f"\n- [LIVE HEGEMON GLOBAL INTEL]\n  DEEP EXTRACTION DATA: {snippet}\n"
+            total_articles += 1
+            print("✅ Successfully extracted Hegemon Global intelligence.")
+        else:
+            print("⚠️ Hegemon Global returned no readable text.")
+    except Exception as e:
+        print(f"⚠️ Warning: Could not fetch Hegemon Global - {e}")
+
     print(f"📰 Successfully grabbed {total_articles} raw headlines and deep-scraped data.")
     return aggregated_news, total_articles
 
