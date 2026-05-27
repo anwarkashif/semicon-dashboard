@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-24",
-        "Actor": "Iran (via UAE company)",
-        "Action": "Acquired military satellite equipment via UAE.",
+        "Date": "2026-05-27",
+        "Actor": "Unidentified Actor",
+        "Action": "Tanker damaged by explosion off coast.",
+        "Location": "Oman (near Strait of Hormuz)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-27",
+        "Actor": "United States",
+        "Action": "Launches self-defense strikes against military targets.",
         "Location": "Iran",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-24",
-        "Actor": "Ethiopia, Eritrea",
-        "Action": "On the brink of renewed conflict.",
-        "Location": "Horn of Africa",
+        "Date": "2026-05-27",
+        "Actor": "United States (Trump administration)",
+        "Action": "Signals willingness to leverage Taiwan's status.",
+        "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-24",
-        "Actor": "United States (Space Force)",
-        "Action": "Missile alert satellites face critical defects.",
-        "Location": "Space / United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "Ukraine",
-        "Action": "Struck Russia's Sheskharis oil terminal.",
-        "Location": "Black Sea / Russia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-24",
-        "Actor": "ASML",
-        "Action": "High-NA EUV production faces delays.",
-        "Location": "Global (semiconductor industry)",
+        "Date": "2026-05-27",
+        "Actor": "North Korea",
+        "Action": "Tests new AI-guided missile systems.",
+        "Location": "North Korea",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-24",
-        "Actor": "Unknown (terrorist group)",
-        "Action": "Suicide bombing kills dozens on Pakistan train.",
-        "Location": "Pakistan (Balochistan)",
-        "Risk": "CRITICAL"
+        "Date": "2026-05-27",
+        "Actor": "UK, Poland",
+        "Action": "To sign defense treaty against Russian threats.",
+        "Location": "Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-27",
+        "Actor": "Russia",
+        "Action": "Pressures Armenia over EU ties, threatens fuel.",
+        "Location": "Armenia",
+        "Risk": "HIGH"
     }
 ]
