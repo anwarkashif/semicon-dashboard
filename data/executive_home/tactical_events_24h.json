@@ -1,37 +1,44 @@
 [
     {
         "Date": "2026-05-28",
-        "Actor": "United States, Iran, South Korea",
-        "Action": "Exchange airstrikes; tanker attacked near Hormuz.",
-        "Location": "Strait of Hormuz, Persian Gulf",
+        "Actor": "Iran, United States, Global Shipping",
+        "Action": "Strait of Hormuz crisis escalates; ships attacked.",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-28",
-        "Actor": "United States, China",
-        "Action": "Study warns Taiwan conflict risks nuclear escalation.",
+        "Actor": "Israel, Lebanon, Hamas",
+        "Action": "Military strikes intensify, Gaza ceasefire risks collapse.",
+        "Location": "Southern Lebanon, Gaza, Beirut",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-28",
+        "Actor": "United States, China, Taiwan",
+        "Action": "Taiwan conflict could trigger nuclear crisis.",
         "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-28",
-        "Actor": "Global Tech Industry, China",
-        "Action": "AI demand creates critical semiconductor, mineral supply strain.",
+        "Actor": "Global Tech Industry, China, Huawei",
+        "Action": "AI boom causes GPU, RAM supply shortages.",
         "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-28",
-        "Actor": "European Union, China",
-        "Action": "EU broadens tariffs on Chinese industrial goods.",
-        "Location": "Europe, China",
+        "Actor": "China",
+        "Action": "Accelerates space program for 2030 moon landing.",
+        "Location": "Moon, Space",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-28",
-        "Actor": "China, North Korea",
-        "Action": "China seeks North Korea alliance amid rising tensions.",
-        "Location": "Korean Peninsula, East Asia",
-        "Risk": "ELEVATED"
+        "Actor": "United States, Greenland, China",
+        "Action": "US secures rare earth deal, China dominates supply.",
+        "Location": "Global, Greenland",
+        "Risk": "HIGH"
     }
 ]
