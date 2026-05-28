@@ -1,37 +1,37 @@
 [
     {
         "Date": "2026-05-28",
-        "Actor": "United States, Iran, Regional Militias",
-        "Action": "Escalating conflict, maritime attacks near Hormuz.",
-        "Location": "Strait of Hormuz, Gulf of Oman",
+        "Actor": "United States, Iran, South Korea",
+        "Action": "Exchange airstrikes; tanker attacked near Hormuz.",
+        "Location": "Strait of Hormuz, Persian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-28",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Faces widespread shortages, leading to price increases.",
+        "Actor": "United States, China",
+        "Action": "Study warns Taiwan conflict risks nuclear escalation.",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-28",
+        "Actor": "Global Tech Industry, China",
+        "Action": "AI demand creates critical semiconductor, mineral supply strain.",
         "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-28",
-        "Actor": "China",
-        "Action": "Accelerates lunar program, targets 2030 moon landing.",
-        "Location": "Global (Space)",
+        "Actor": "European Union, China",
+        "Action": "EU broadens tariffs on Chinese industrial goods.",
+        "Location": "Europe, China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-28",
-        "Actor": "Quad (US, Australia, India, Japan)",
-        "Action": "Pledges $20B for critical minerals supply security.",
-        "Location": "Global (Supply Chain)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-28",
-        "Actor": "United States",
-        "Action": "Iran war depletes munitions, years to replenish.",
-        "Location": "United States, Global",
-        "Risk": "HIGH"
+        "Actor": "China, North Korea",
+        "Action": "China seeks North Korea alliance amid rising tensions.",
+        "Location": "Korean Peninsula, East Asia",
+        "Risk": "ELEVATED"
     }
 ]
