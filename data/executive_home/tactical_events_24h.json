@@ -1,44 +1,37 @@
 [
     {
-        "Date": "2026-05-27",
-        "Actor": "United States",
-        "Action": "Strikes Iran's Gulf Coast",
-        "Location": "Persian Gulf, Iran",
+        "Date": "2026-05-28",
+        "Actor": "United States, Iran, Regional Militias",
+        "Action": "Escalating conflict, maritime attacks near Hormuz.",
+        "Location": "Strait of Hormuz, Gulf of Oman",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-27",
-        "Actor": "Unknown",
-        "Action": "Tanker hit by external explosion",
-        "Location": "Off Oman Coast, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-27",
-        "Actor": "Israel",
-        "Action": "Orders southern Lebanon residents to leave",
-        "Location": "Southern Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-27",
-        "Actor": "China",
-        "Action": "Used electronic attacks on Dutch frigate",
-        "Location": "Taiwan Strait",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-27",
-        "Actor": "United States",
-        "Action": "Munitions depleted by Iran war, long restoration",
-        "Location": "United States, Global",
+        "Date": "2026-05-28",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Faces widespread shortages, leading to price increases.",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-27",
-        "Actor": "Samsung Electronics",
-        "Action": "Building $1.5B semiconductor test plant",
-        "Location": "Vietnam",
+        "Date": "2026-05-28",
+        "Actor": "China",
+        "Action": "Accelerates lunar program, targets 2030 moon landing.",
+        "Location": "Global (Space)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-28",
+        "Actor": "Quad (US, Australia, India, Japan)",
+        "Action": "Pledges $20B for critical minerals supply security.",
+        "Location": "Global (Supply Chain)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-28",
+        "Actor": "United States",
+        "Action": "Iran war depletes munitions, years to replenish.",
+        "Location": "United States, Global",
         "Risk": "HIGH"
     }
 ]
