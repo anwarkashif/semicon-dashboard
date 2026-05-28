@@ -12,7 +12,7 @@ from features.weekly_features import (
     render_ai_geopolitical_synthesis_weekly
 )
 # from features.tactical_features import render_decision_support_engine   <-- Commented out
-from features.alert_features import check_early_warnings
+
 from features.report_body_features import render_weekly_report_body
 from features.export_features import render_document_controls
 
@@ -24,10 +24,6 @@ def render_full_weekly_brief(
 ):
     st.title(f"SemicoN Weekly Brief - {brief_date}") 
     st.markdown("---")
-    current_day = datetime.now(timezone.utc).astimezone().strftime('%B %d, %Y')
-
-    st.markdown(f"<h3 style='color:#ff4b4b; margin-top: 10px; margin-bottom: 5px;'>🛡️ Strategic Threat Monitor ({current_day})</h3>", unsafe_allow_html=True)
-    check_early_warnings()
 
     # ===========================
     # 🧠 DECISION SUPPORT ENGINE (REMOVED/COMMENTED OUT)

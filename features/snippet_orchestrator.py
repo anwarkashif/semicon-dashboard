@@ -150,15 +150,16 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
         
     if df_actions is not None and not df_actions.empty:
         render_event_correlation_and_timeline_weekly(df_actions)
-        st.markdown("---")
+        # VISUAL FIX: Removed trailing st.markdown("---") from inside here to prevent duplicate line wrapping
 
-    # --- FOOTER & DOWNLOAD ---
-    st.markdown("<hr style='border: 1px solid #333; margin-top: 30px;'>", unsafe_allow_html=True)
-    colA, colB = st.columns([3, 1])
-    with colA:
-        st.caption("This intelligence product integrates Geopolitics-OSINT feeds, weekly geopolitical briefs, and autonomous risk assessments.")
-    with colB:
-        if st.session_state.get('role') == 'admin':
+    # ==========================================
+    # --- CLEANED FOOTER & DOWNLOAD BLOCK ---
+    # ==========================================
+    st.markdown("<hr style='border: 1px solid #333; margin-top: 20px; margin-bottom: 25px;'>", unsafe_allow_html=True)
+    
+    if st.session_state.get('role') == 'admin':
+        colA, colB = st.columns([3, 1])
+        with colB:
             try:
                 docx_buffer = generate_weekly_tactical_docx(intel_data)
                 st.download_button(label="📥 Download Weekly Tactical Brief (DOCX)", data=docx_buffer, file_name=f"Weekly_Tactical_Brief.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", type="primary", use_container_width=True)

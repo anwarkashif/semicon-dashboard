@@ -169,7 +169,7 @@ def extract_tactical_events(news_text):
     
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. 
-    Review the following news headlines from the last 24 hours. Extract 4 to 6 of the most critical geopolitical, defense, semiconductor, or supply chain events.
+    Review the following news headlines from the last 24 hours. Extract exactly 10 to 12 of the most critical geopolitical, defense, semiconductor, or supply chain events.
     
     You MUST output the result as a raw JSON array of objects. Do not include markdown formatting like ```json.
     
@@ -179,6 +179,7 @@ def extract_tactical_events(news_text):
     "Action": A concise, 5-8 word description of the event.
     "Location": A specific country, region, or chokepoint (e.g., "Taiwan", "Strait of Hormuz", "United States", "China").
     "Risk": Must be strictly one of: "CRITICAL", "HIGH", or "ELEVATED".
+    "Headline": The original or highly summarized headline of the event.
     
     News Data:
     {news_text}

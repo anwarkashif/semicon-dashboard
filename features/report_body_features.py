@@ -3,9 +3,6 @@ import pandas as pd
 import streamlit.components.v1 as components
 from utils.data_helpers import clean_dataframe, render_highlighted_text, extract_tag
 
-# --- CORE GEOSPATIAL IMPORT ---
-from features.geospatial_features import render_geospatial_intelligence
-
 # Import the sub-features required specifically for the report body
 from features.tactical_features import render_tactical_maps, render_live_telemetry, render_verified_sources
 from features.weekly_features import render_event_correlation_and_timeline_weekly
@@ -103,11 +100,6 @@ def render_weekly_report_body(dashboard_data, selected_actor, df_actions, MAPBOX
     if text_wa and text_wa.strip() != "": 
         st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>West Asia/Middle East: Domestic & Strategic Developments</h3>", unsafe_allow_html=True)
         render_highlighted_text(text_wa, selected_actor)
-
-    # ==========================================
-    # 🌍 STRATEGIC GEOSPATIAL INTELLIGENCE LAYER
-    # ==========================================
-    render_geospatial_intelligence(df_actions)
 
     # ==========================================
     # TACTICAL MAPS & TIMELINE LAYER
