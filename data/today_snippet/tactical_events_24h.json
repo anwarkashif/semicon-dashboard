@@ -1,44 +1,37 @@
 [
     {
-        "Date": "2026-05-27",
-        "Actor": "Unidentified Actor",
-        "Action": "Tanker damaged by explosion off coast.",
-        "Location": "Oman (near Strait of Hormuz)",
+        "Date": "2026-05-28",
+        "Actor": "United States, Iran",
+        "Action": "Escalating military conflict, trade sanctions, blockades.",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-27",
-        "Actor": "United States",
-        "Action": "Launches self-defense strikes against military targets.",
-        "Location": "Iran",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-27",
-        "Actor": "United States (Trump administration)",
-        "Action": "Signals willingness to leverage Taiwan's status.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-27",
-        "Actor": "North Korea",
-        "Action": "Tests new AI-guided missile systems.",
-        "Location": "North Korea",
+        "Date": "2026-05-28",
+        "Actor": "China",
+        "Action": "Dominates Indonesian mineral supply chains, increasing control.",
+        "Location": "Indonesia",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-27",
-        "Actor": "UK, Poland",
-        "Action": "To sign defense treaty against Russian threats.",
-        "Location": "Europe",
+        "Date": "2026-05-28",
+        "Actor": "Ukraine, Sweden",
+        "Action": "Ukraine purchases, Sweden donates Gripen fighter jets.",
+        "Location": "Ukraine",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-27",
-        "Actor": "Russia",
-        "Action": "Pressures Armenia over EU ties, threatens fuel.",
-        "Location": "Armenia",
+        "Date": "2026-05-28",
+        "Actor": "United States, IBM, Canada",
+        "Action": "Billions invested in quantum computing research and development.",
+        "Location": "Global",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-05-28",
+        "Actor": "United States (Space Force), SpaceX",
+        "Action": "US Space Force awards $2.3B contract to SpaceX.",
+        "Location": "Space (US Military)",
         "Risk": "HIGH"
     }
 ]
