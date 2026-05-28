@@ -2,43 +2,36 @@
     {
         "Date": "2026-05-28",
         "Actor": "Iran",
-        "Action": "Attacks UAE, declares Strait of Hormuz closed.",
-        "Location": "Strait of Hormuz, UAE",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-28",
-        "Actor": "United States",
-        "Action": "Sanctions Iranian agency controlling Hormuz shipping.",
+        "Action": "Closes Strait of Hormuz, tanker explodes",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-28",
-        "Actor": "United States, Iran",
-        "Action": "Negotiate tentative Middle East ceasefire extension.",
-        "Location": "Middle East",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-28",
         "Actor": "United States",
-        "Action": "Considers $14 billion arms sale to Taiwan.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-28",
-        "Actor": "China",
-        "Action": "Dominates Indonesia's critical mineral supply chains.",
-        "Location": "Indonesia",
+        "Action": "Imposes fresh sanctions on Iran's military oil",
+        "Location": "Iran",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-28",
         "Actor": "European Union",
-        "Action": "Seeks crisis powers to control chip supplies.",
-        "Location": "European Union",
+        "Action": "Considers Section 301 trade action against China",
+        "Location": "European Union, China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-28",
+        "Actor": "China",
+        "Action": "Dominates Indonesia's critical mineral supply chains",
+        "Location": "Indonesia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-28",
+        "Actor": "China",
+        "Action": "Smuggling Nvidia H200 chips via Japan route",
+        "Location": "Japan, China",
         "Risk": "HIGH"
     }
 ]
