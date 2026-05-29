@@ -1,37 +1,44 @@
 [
     {
-        "Date": "2026-05-28",
+        "Date": "2026-05-29",
         "Actor": "Iran",
-        "Action": "Closes Strait of Hormuz, tanker explodes",
-        "Location": "Strait of Hormuz",
+        "Action": "Launches attacks, decimates Middle East ceasefire.",
+        "Location": "Persian Gulf, Strait of Hormuz, UAE, Oman",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-28",
+        "Date": "2026-05-29",
+        "Actor": "Russia",
+        "Action": "Drone crashes into apartment block in Romania.",
+        "Location": "Romania",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "European Union, China",
+        "Action": "EU edges toward trade war with China.",
+        "Location": "Europe, China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "China, Huawei",
+        "Action": "Pursues chip self-sufficiency, engages in smuggling.",
+        "Location": "China, United States, Japan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-29",
         "Actor": "United States",
-        "Action": "Imposes fresh sanctions on Iran's military oil",
-        "Location": "Iran",
+        "Action": "Imposes fresh sanctions on Iran's oil, shipping.",
+        "Location": "Iran, Global Shipping Networks",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-28",
-        "Actor": "European Union",
-        "Action": "Considers Section 301 trade action against China",
-        "Location": "European Union, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-28",
-        "Actor": "China",
-        "Action": "Dominates Indonesia's critical mineral supply chains",
-        "Location": "Indonesia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-28",
-        "Actor": "China",
-        "Action": "Smuggling Nvidia H200 chips via Japan route",
-        "Location": "Japan, China",
-        "Risk": "HIGH"
+        "Date": "2026-05-29",
+        "Actor": "Blue Origin",
+        "Action": "New Glenn rocket explodes during pre-launch test.",
+        "Location": "Cape Canaveral, United States",
+        "Risk": "ELEVATED"
     }
 ]
