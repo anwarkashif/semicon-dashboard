@@ -1,37 +1,37 @@
 [
     {
         "Date": "2026-05-29",
-        "Actor": "Iran",
-        "Action": "Strikes UAE oil port, vessels in Strait of Hormuz",
+        "Actor": "Iran, United States",
+        "Action": "Iran attacks UAE port, US sinks ships.",
         "Location": "Strait of Hormuz, UAE",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "Russia",
-        "Action": "Drone hits apartment building in NATO's Romania",
+        "Actor": "Russia, NATO",
+        "Action": "Russian drone hits Romania; NATO vows defense.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
         "Actor": "China",
-        "Action": "Building launch pads near nuclear missile silos",
-        "Location": "China",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "China",
-        "Action": "Criticizes Canadian warship transit through Taiwan Strait",
-        "Location": "Taiwan Strait",
+        "Action": "Building new nuclear missile launch pads.",
+        "Location": "Xinjiang, China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-29",
         "Actor": "European Union",
-        "Action": "Considers Section 301-like trade action against China",
-        "Location": "Europe, China",
+        "Action": "Considering Section 301 trade action on China.",
+        "Location": "European Union, China",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "ASML, Tata Electronics",
+        "Action": "MoU for India's first semiconductor fab.",
+        "Location": "India",
+        "Risk": "ELEVATED"
     }
 ]
