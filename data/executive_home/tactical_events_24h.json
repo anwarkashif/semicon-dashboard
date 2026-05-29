@@ -1,37 +1,37 @@
 [
     {
         "Date": "2026-05-29",
-        "Actor": "Iran, United States, UAE, IRGC",
-        "Action": "Escalating conflict threatens Strait of Hormuz",
-        "Location": "Strait of Hormuz, Persian Gulf",
+        "Actor": "Iran",
+        "Action": "Strikes UAE oil port, vessels in Strait of Hormuz",
+        "Location": "Strait of Hormuz, UAE",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
         "Actor": "Russia",
-        "Action": "Drone attack on NATO member Romania",
+        "Action": "Drone hits apartment building in NATO's Romania",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "China, European Union, Indonesia",
-        "Action": "Increasing trade tensions, mineral supply chain control",
-        "Location": "China, European Union, Indonesia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "Global Semiconductor Industry, Taiyo Yuden",
-        "Action": "AI parts demand strains semiconductor supply chain",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "India, Pakistan",
-        "Action": "Conflict eroding nuclear restraint between nations",
-        "Location": "India, Pakistan",
+        "Actor": "China",
+        "Action": "Building launch pads near nuclear missile silos",
+        "Location": "China",
         "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "China",
+        "Action": "Criticizes Canadian warship transit through Taiwan Strait",
+        "Location": "Taiwan Strait",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "European Union",
+        "Action": "Considers Section 301-like trade action against China",
+        "Location": "Europe, China",
+        "Risk": "HIGH"
     }
 ]
