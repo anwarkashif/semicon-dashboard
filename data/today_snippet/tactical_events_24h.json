@@ -1,37 +1,90 @@
 [
     {
-        "Date": "2026-05-28",
-        "Actor": "United States, Iran",
-        "Action": "Escalating military conflict, trade sanctions, blockades.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
+        "Date": "2026-05-29",
+        "Actor": "Russia",
+        "Action": "Drone hits NATO member apartment block",
+        "Location": "Romania",
+        "Risk": "CRITICAL",
+        "Headline": "Russian drone hits apartment building in Romania, NATO vows defense."
     },
     {
-        "Date": "2026-05-28",
+        "Date": "2026-05-29",
+        "Actor": "EU",
+        "Action": "Considers Section 301-style trade action",
+        "Location": "China / EU",
+        "Risk": "HIGH",
+        "Headline": "EU edging toward Section 301 action against China's surpluses."
+    },
+    {
+        "Date": "2026-05-29",
         "Actor": "China",
-        "Action": "Dominates Indonesian mineral supply chains, increasing control.",
-        "Location": "Indonesia",
-        "Risk": "HIGH"
+        "Action": "Criticizes Canadian warship transit",
+        "Location": "Taiwan Strait",
+        "Risk": "HIGH",
+        "Headline": "China criticizes Canadian warship transit through Taiwan Strait."
     },
     {
-        "Date": "2026-05-28",
-        "Actor": "Ukraine, Sweden",
-        "Action": "Ukraine purchases, Sweden donates Gripen fighter jets.",
-        "Location": "Ukraine",
-        "Risk": "HIGH"
+        "Date": "2026-05-29",
+        "Actor": "Iran, United States, UAE",
+        "Action": "Attacks vessels, port; US sinks ships",
+        "Location": "Strait of Hormuz, UAE",
+        "Risk": "CRITICAL",
+        "Headline": "Iran attacks vessels, UAE port; US sinks Iranian ships in Hormuz."
     },
     {
-        "Date": "2026-05-28",
-        "Actor": "United States, IBM, Canada",
-        "Action": "Billions invested in quantum computing research and development.",
+        "Date": "2026-05-29",
+        "Actor": "United States, India",
+        "Action": "Sign critical minerals supply chain framework",
+        "Location": "United States, India",
+        "Risk": "ELEVATED",
+        "Headline": "US, India sign critical minerals supply chain framework."
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "China",
+        "Action": "Building launch pads near nuclear silos",
+        "Location": "China",
+        "Risk": "HIGH",
+        "Headline": "China building launch pads near nuclear missile silos."
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "United States",
+        "Action": "Pausing arms sales to Taiwan",
+        "Location": "Taiwan",
+        "Risk": "HIGH",
+        "Headline": "US pausing arms sales to Taiwan."
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "QUAD (US, Japan, Australia, India)",
+        "Action": "Plans to build port in Fiji",
+        "Location": "Fiji, Indo-Pacific",
+        "Risk": "HIGH",
+        "Headline": "QUAD plans to build port in Fiji, signaling US-China flashpoint."
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "BYD (China)",
+        "Action": "Launches China's first 4nm driving chip",
+        "Location": "China",
+        "Risk": "ELEVATED",
+        "Headline": "BYD launches China's first 4nm smart driving chip."
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "Blue Origin (United States)",
+        "Action": "New Glenn rocket explodes during test",
+        "Location": "Cape Canaveral, United States",
+        "Risk": "HIGH",
+        "Headline": "Blue Origin's New Glenn rocket explodes during pre-launch test."
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "Global supply chains",
+        "Action": "Confronting geopolitical and AI challenges",
         "Location": "Global",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-05-28",
-        "Actor": "United States (Space Force), SpaceX",
-        "Action": "US Space Force awards $2.3B contract to SpaceX.",
-        "Location": "Space (US Military)",
-        "Risk": "HIGH"
+        "Risk": "HIGH",
+        "Headline": "Supply chains confront geopolitical and AI challenges, Gartner says."
     }
 ]
