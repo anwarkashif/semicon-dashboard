@@ -1,37 +1,44 @@
 [
     {
         "Date": "2026-05-29",
-        "Actor": "Iran, United States",
-        "Action": "Iran attacks UAE port, US sinks ships.",
-        "Location": "Strait of Hormuz, UAE",
+        "Actor": "Iran, United States, UAE, Global Shipping",
+        "Action": "Strait of Hormuz attacks, US action, deal nears.",
+        "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
         "Actor": "Russia, NATO",
-        "Action": "Russian drone hits Romania; NATO vows defense.",
+        "Action": "Russian drone strikes apartment in NATO Romania.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "China",
-        "Action": "Building new nuclear missile launch pads.",
-        "Location": "Xinjiang, China",
-        "Risk": "HIGH"
+        "Actor": "Israel, Lebanon",
+        "Action": "Israel expands ground offensive into southern Lebanon.",
+        "Location": "Southern Lebanon, Gaza",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "European Union",
-        "Action": "Considering Section 301 trade action on China.",
+        "Actor": "China",
+        "Action": "China builds launch pads near nuclear missile silos.",
+        "Location": "Xinjiang, China",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "European Union, China",
+        "Action": "EU considers Section 301 trade action against China.",
         "Location": "European Union, China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "ASML, Tata Electronics",
-        "Action": "MoU for India's first semiconductor fab.",
-        "Location": "India",
-        "Risk": "ELEVATED"
+        "Actor": "China (BYD)",
+        "Action": "China's BYD launches first 4nm driving chip.",
+        "Location": "China",
+        "Risk": "HIGH"
     }
 ]
