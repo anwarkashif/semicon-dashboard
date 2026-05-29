@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-29",
-        "Actor": "Iran, United States, UAE, Global Shipping",
-        "Action": "Strait of Hormuz attacks, US action, deal nears.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "Russia, NATO",
-        "Action": "Russian drone strikes apartment in NATO Romania.",
+        "Actor": "Russia",
+        "Action": "Drone strike hits NATO member territory",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "Israel, Lebanon",
-        "Action": "Israel expands ground offensive into southern Lebanon.",
-        "Location": "Southern Lebanon, Gaza",
+        "Actor": "Iran",
+        "Action": "Attacks UAE port, ships in Hormuz",
+        "Location": "Strait of Hormuz, UAE",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "China",
-        "Action": "China builds launch pads near nuclear missile silos.",
-        "Location": "Xinjiang, China",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "European Union, China",
-        "Action": "EU considers Section 301 trade action against China.",
-        "Location": "European Union, China",
+        "Actor": "BYD (China)",
+        "Action": "Launches nation's first 4nm driving chip",
+        "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "China (BYD)",
-        "Action": "China's BYD launches first 4nm driving chip.",
-        "Location": "China",
+        "Actor": "European Union",
+        "Action": "Explores tariffs against China's trade surpluses",
+        "Location": "Europe, China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "Adversaries (Data Brokers)",
+        "Action": "Exploiting data to target US military personnel",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "China",
+        "Action": "Constructs launch pads for nuclear missiles",
+        "Location": "Xinjiang, China",
         "Risk": "HIGH"
     }
 ]
