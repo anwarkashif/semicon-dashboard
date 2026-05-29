@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-05-29",
-        "Actor": "Iran",
-        "Action": "Launches attacks, decimates Middle East ceasefire.",
-        "Location": "Persian Gulf, Strait of Hormuz, UAE, Oman",
+        "Actor": "Iran, United States, UAE, IRGC",
+        "Action": "Escalating conflict threatens Strait of Hormuz",
+        "Location": "Strait of Hormuz, Persian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
         "Actor": "Russia",
-        "Action": "Drone crashes into apartment block in Romania.",
+        "Action": "Drone attack on NATO member Romania",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "European Union, China",
-        "Action": "EU edges toward trade war with China.",
-        "Location": "Europe, China",
+        "Actor": "China, European Union, Indonesia",
+        "Action": "Increasing trade tensions, mineral supply chain control",
+        "Location": "China, European Union, Indonesia",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "China, Huawei",
-        "Action": "Pursues chip self-sufficiency, engages in smuggling.",
-        "Location": "China, United States, Japan",
+        "Actor": "Global Semiconductor Industry, Taiyo Yuden",
+        "Action": "AI parts demand strains semiconductor supply chain",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "United States",
-        "Action": "Imposes fresh sanctions on Iran's oil, shipping.",
-        "Location": "Iran, Global Shipping Networks",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "Blue Origin",
-        "Action": "New Glenn rocket explodes during pre-launch test.",
-        "Location": "Cape Canaveral, United States",
-        "Risk": "ELEVATED"
+        "Actor": "India, Pakistan",
+        "Action": "Conflict eroding nuclear restraint between nations",
+        "Location": "India, Pakistan",
+        "Risk": "CRITICAL"
     }
 ]
