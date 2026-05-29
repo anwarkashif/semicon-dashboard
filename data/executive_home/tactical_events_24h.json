@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-29",
         "Actor": "Russia",
-        "Action": "Drone strike hits NATO member territory",
+        "Action": "Drone strikes apartment building in NATO member",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "Iran",
-        "Action": "Attacks UAE port, ships in Hormuz",
-        "Location": "Strait of Hormuz, UAE",
+        "Actor": "Iran, United States, UAE",
+        "Action": "Escalating conflict disrupts Strait of Hormuz shipping",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-29",
-        "Actor": "BYD (China)",
-        "Action": "Launches nation's first 4nm driving chip",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "European Union",
-        "Action": "Explores tariffs against China's trade surpluses",
-        "Location": "Europe, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "Adversaries (Data Brokers)",
-        "Action": "Exploiting data to target US military personnel",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-29",
         "Actor": "China",
-        "Action": "Constructs launch pads for nuclear missiles",
+        "Action": "Building new launch pads near nuclear missile silos",
         "Location": "Xinjiang, China",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "China, Canada",
+        "Action": "China criticizes Canadian warship transit in Strait",
+        "Location": "Taiwan Strait",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "Blue Origin",
+        "Action": "New Glenn rocket explodes during prelaunch testing",
+        "Location": "Cape Canaveral, United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-05-29",
+        "Actor": "United Nations",
+        "Action": "Blacklists Israel, Russia for conflict sexual violence",
+        "Location": "Global",
+        "Risk": "ELEVATED"
     }
 ]
