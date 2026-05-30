@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-30",
-        "Actor": "Iran, United States, Global Shipping",
-        "Action": "Maritime attacks, blockade, disruptions in Hormuz",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "Israel, Lebanon, Hezbollah",
-        "Action": "Conflict escalates with strikes, missile attack",
-        "Location": "Israel, Lebanon, Gaza",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "United States, Iran",
-        "Action": "US warns of resuming war with Iran",
-        "Location": "Middle East, Iran",
+        "Actor": "Iran, South Korea, UAE",
+        "Action": "Iran attacks UAE oil port, ships in Hormuz.",
+        "Location": "Strait of Hormuz, United Arab Emirates",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
         "Actor": "Russia, Romania, NATO",
-        "Action": "Russian drone hits apartment in NATO country",
+        "Action": "Russian drone strikes apartment building in Romania.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Nikon (Japan), BYD (China), ASML (Netherlands)",
-        "Action": "Intensified chip competition; China launches 4nm",
-        "Location": "Global Semiconductor Industry",
+        "Actor": "Israel, Lebanon",
+        "Action": "Israel military prepares for significant Lebanon escalation.",
+        "Location": "Israel-Lebanon border",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-30",
+        "Actor": "BYD (China)",
+        "Action": "BYD launches China's first 4nm smart chip.",
+        "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "AUKUS (Australia, UK, US)",
-        "Action": "Develops unmanned undersea vehicles for defense",
-        "Location": "Indo-Pacific",
+        "Actor": "United States, Iran",
+        "Action": "US warns readiness to resume war with Iran.",
+        "Location": "Middle East, Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-30",
+        "Actor": "Blue Origin",
+        "Action": "New Glenn rocket explodes during pre-launch test.",
+        "Location": "Cape Canaveral, United States",
         "Risk": "HIGH"
     }
 ]
