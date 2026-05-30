@@ -1,37 +1,44 @@
 [
     {
         "Date": "2026-05-30",
-        "Actor": "Russia / NATO",
-        "Action": "Russian drone hits Romania, NATO vows defense",
+        "Actor": "Iran, Shipping Vessels",
+        "Action": "Strait of Hormuz closed, maritime incidents escalate",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-30",
+        "Actor": "Russia",
+        "Action": "Drone strikes NATO member apartment block",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "United States",
-        "Action": "Warns Iran of potential war resumption",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
+        "Actor": "Blue Origin (United States)",
+        "Action": "New Glenn rocket explodes during test",
+        "Location": "Cape Canaveral, United States",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Iran",
-        "Action": "Attacks UAE oil port, strikes Strait vessels",
-        "Location": "Strait of Hormuz, UAE",
-        "Risk": "CRITICAL"
+        "Actor": "India, Vietnam",
+        "Action": "Finalizes BrahMos missile defense deal",
+        "Location": "Vietnam, Southeast Asia",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Data brokers / Adversaries",
-        "Action": "Data brokers enable enemy targeting of US troops",
-        "Location": "United States",
-        "Risk": "CRITICAL"
+        "Actor": "Philippines, China",
+        "Action": "Philippines anticipates long-term territorial struggle",
+        "Location": "South China Sea",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Iran-linked network",
-        "Action": "Tricked US firms into supplying military tech",
-        "Location": "United States",
-        "Risk": "CRITICAL"
+        "Actor": "BYD (China)",
+        "Action": "Launches China's first 4nm smart driving chip",
+        "Location": "China",
+        "Risk": "ELEVATED"
     }
 ]
