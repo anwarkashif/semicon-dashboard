@@ -7,7 +7,7 @@ from google import genai
 
 from utils.data_helpers import clean_dataframe, extract_tag
 from features.daily_features import render_ticker_tape
-from features.advanced_features import render_threat_scoring, render_rag_interrogation
+from features.advanced_features import render_threat_scoring, render_rag_interrogation, render_fab_chat
 from features.archive_features import render_trend_timelines, render_archives, render_clean_archives, render_trash
 from features.editor_features import render_vetting_editor
 from features.sidebar_features import render_sidebar
@@ -61,12 +61,12 @@ os.makedirs('data', exist_ok=True)
 os.makedirs('trash', exist_ok=True)
 
 MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+GEMINI_API_KEY = st.secrets.get("RAG_GEMINI_API_KEY", os.environ.get("RAG_GEMINI_API_KEY"))
 client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 model_name = 'gemini-2.5-flash'
 
 # ==========================================
-# 4. GLOBAL THEME INJECTION
+# 4. GLOBAL THEME INJECTIONAI
 # ==========================================
 inject_global_theme()
 
@@ -199,7 +199,19 @@ else:
         render_threat_scoring()
         
     elif view_selection == "Intelligence Interrogation (RAG)":
-        render_rag_interrogation(client, model_name)
+        render_rag_interrogation(
+            client, 
+            model_name, 
+            text_summary=text_summary, 
+            text_section_1=text_section_1, 
+            text_section_2=text_section_2, 
+            text_section_3=text_section_3, 
+            text_section_4=text_section_4, 
+            text_military=text_military, 
+            text_india=text_india, 
+            text_wa=text_wa, 
+            text_ews=text_ews
+        )
 
     elif view_selection == "Trend Timelines":
         render_trend_timelines()
@@ -212,3 +224,20 @@ else:
             
     elif view_selection == "Trash" and st.session_state['role'] == 'admin':
         render_trash()
+
+    # ==========================================
+    # 8. GLOBAL RAG FAB
+    # ==========================================
+    render_fab_chat(
+        client, 
+        model_name, 
+        text_summary=text_summary, 
+        text_section_1=text_section_1, 
+        text_section_2=text_section_2, 
+        text_section_3=text_section_3, 
+        text_section_4=text_section_4, 
+        text_military=text_military, 
+        text_india=text_india, 
+        text_wa=text_wa, 
+        text_ews=text_ews
+    )

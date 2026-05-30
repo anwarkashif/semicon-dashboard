@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import re
+import os  # <-- Added to check for live JSON files
 from utils.constants import COUNTRY_INFO
 from utils.data_helpers import get_brief_mappings, extract_tag
 from utils.engines import calculate_domain_threat
@@ -46,13 +47,14 @@ def render_threat_scoring():
     else:
         st.warning("No archives available.")
 
-def render_rag_interrogation(client, model_name):
+# --- UPGRADED RAG ENGINE: Now accepts live text sections ---
+def render_rag_interrogation(client, model_name, text_summary="", text_section_1="", text_section_2="", text_section_3="", text_section_4="", text_military="", text_india="", text_wa="", text_ews=""):
     st.title("Intelligence Interrogation (RAG)")
-    st.markdown("Query the historical SemicoN database. Responses are generated strictly from your vetted archives.")
+    st.markdown("Query the historical SemicoN database and live platform feeds. Responses are generated strictly from your vetted archives and current geopolitical dashboards.")
 
     if not client:
         st.error("⚠️ GEMINI_API_KEY is missing from Koyeb Environment Variables. Please add it to unlock this feature.")
-        return # Use return instead of st.stop() inside a component function
+        return 
 
     if "rag_messages" not in st.session_state:
         st.session_state.rag_messages = []
@@ -68,60 +70,105 @@ def render_rag_interrogation(client, model_name):
 
         with st.chat_message("assistant"):
             message_placeholder = st.empty()
-            message_placeholder.markdown("Scanning intelligence archives & calculating threat models... 🕵️‍♂️")
+            message_placeholder.markdown("Scanning live feeds, intelligence archives & calculating threat models... 🕵️‍♂️")
 
-            archive_mapping = get_brief_mappings('data')
             context_data = ""
+
+            # ==========================================
+            # 1. INGEST LIVE DASHBOARD TEXT FEEDS
+            # ==========================================
+            context_data += "\n\n=== LIVE DASHBOARD TEXT FEEDS ===\n"
+            live_texts = {
+                "Executive Summary": text_summary,
+                "Global Foundry Market": text_section_1,
+                "AI Chip Demand & Lithography": text_section_2,
+                "Critical Minerals (REE)": text_section_3,
+                "Export Controls & Geopolitics": text_section_4,
+                "Military & Outer Space": text_military,
+                "India Developments": text_india,
+                "West Asia / Middle East": text_wa,
+                "Early Warning Systems": text_ews
+            }
+            for section, txt in live_texts.items():
+                if txt and len(str(txt).strip()) > 10:
+                    context_data += f"\n--- {section.upper()} ---\n{txt}\n"
+
+            # ==========================================
+            # 2. INGEST LIVE AUTONOMOUS JSON DATA
+            # ==========================================
+            live_files = [
+                ('data/executive_home/tactical_events_24h.json', 'EXECUTIVE HOME TACTICAL'),
+                ('data/executive_home/flush_brief_24h.json', 'EXECUTIVE HOME BRIEF'),
+                ('data/today_snippet/tactical_events_24h.json', 'TODAY SNIPPET TACTICAL'),
+                ('data/today_snippet/shift_brief.json', 'TODAY SNIPPET BRIEF'),
+                ('data/weekly_tactical/tactical_events_24h.json', 'WEEKLY TACTICAL EVENTS')
+            ]
+            context_data += "\n\n=== LIVE AUTONOMOUS JSON FEEDS ===\n"
+            for file_path, label in live_files:
+                if os.path.exists(file_path):
+                    try:
+                        with open(file_path, 'r') as f:
+                            d = json.load(f)
+                            context_data += f"\n--- {label} ---\n{json.dumps(d)}\n"
+                    except: pass
+
+            # ==========================================
+            # 3. EXISTING: HISTORICAL ARCHIVE RAG LOGIC
+            # ==========================================
+            archive_mapping = get_brief_mappings('data')
+            context_data += "\n\n=== HISTORICAL ARCHIVES ===\n"
             
             user_keywords = [w.lower() for w in re.findall(r'\b\w+\b', prompt) if len(w) > 2 and w.lower() not in ['what', 'when', 'where', 'which', 'who', 'why', 'how', 'were', 'was', 'this', 'that', 'with', 'from', 'about', 'the', 'and', 'for', 'are', 'did', 'have', 'has']]
 
             file_scores = []
-            for f_path in archive_mapping.values():
-                try:
-                    with open(f_path, 'r') as file:
-                        d = json.load(file)
-                        content = d.get('brief_raw', '').lower() + json.dumps(d.get('recent_actions', [])).lower()
-                        score = sum(content.count(kw) for kw in user_keywords)
-                        file_scores.append((score, f_path))
-                except: pass
+            if archive_mapping:
+                for f_path in archive_mapping.values():
+                    try:
+                        with open(f_path, 'r') as file:
+                            d = json.load(file)
+                            content = d.get('brief_raw', '').lower() + json.dumps(d.get('recent_actions', [])).lower()
+                            score = sum(content.count(kw) for kw in user_keywords)
+                            file_scores.append((score, f_path))
+                    except: pass
 
-            file_scores.sort(key=lambda x: x[0], reverse=True)
-            top_files = [fs[1] for fs in file_scores if fs[0] > 0][:3]
-            if not top_files:
-                top_files = list(archive_mapping.values())[:2]
-            
-            for f_path in top_files:
-                try:
-                    with open(f_path, 'r') as file:
-                        d = json.load(file)
-                        r_text = d.get('brief_raw', '')
-                        categories = [
-                            ("Global Foundry Market", extract_tag('EXEC', r_text) or ""),
-                            ("AI Chip Demand", extract_tag('LITHO', r_text) or ""),
-                            ("Critical Minerals (REE)", extract_tag('REE', r_text) or ""),
-                            ("Export Controls", extract_tag('GEO', r_text) or ""),
-                            ("Military & Outer Space", extract_tag('MILITARY', r_text) or ""),
-                            ("India Developments", extract_tag('INDIA', r_text) or ""),
-                            ("West Asia / Middle East", extract_tag('WEST_ASIA', r_text) or "")
-                        ]
-                        
-                        context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
-                        context_data += "ALGORITHMIC THREAT SCORES:\n"
-                        for name, txt in categories:
-                            if len(txt.strip()) > 20:
-                                score = calculate_domain_threat(name, txt, d)
-                                context_data += f"- {name}: {score}%\n"
-                                
-                        context_data += "\nRAW INTELLIGENCE TEXT:\n"
-                        context_data += r_text
-                        context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', []))}"
-                except: pass
+                file_scores.sort(key=lambda x: x[0], reverse=True)
+                top_files = [fs[1] for fs in file_scores if fs[0] > 0][:3]
+                if not top_files:
+                    top_files = list(archive_mapping.values())[:2]
+                
+                for f_path in top_files:
+                    try:
+                        with open(f_path, 'r') as file:
+                            d = json.load(file)
+                            r_text = d.get('brief_raw', '')
+                            categories = [
+                                ("Global Foundry Market", extract_tag('EXEC', r_text) or ""),
+                                ("AI Chip Demand", extract_tag('LITHO', r_text) or ""),
+                                ("Critical Minerals (REE)", extract_tag('REE', r_text) or ""),
+                                ("Export Controls", extract_tag('GEO', r_text) or ""),
+                                ("Military & Outer Space", extract_tag('MILITARY', r_text) or ""),
+                                ("India Developments", extract_tag('INDIA', r_text) or ""),
+                                ("West Asia / Middle East", extract_tag('WEST_ASIA', r_text) or "")
+                            ]
+                            
+                            context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
+                            context_data += "ALGORITHMIC THREAT SCORES:\n"
+                            for name, txt in categories:
+                                if len(txt.strip()) > 20:
+                                    score = calculate_domain_threat(name, txt, d)
+                                    context_data += f"- {name}: {score}%\n"
+                                    
+                            context_data += "\nRAW INTELLIGENCE TEXT:\n"
+                            context_data += r_text
+                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', []))}"
+                    except: pass
 
             sys_prompt = f"""
             You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
-            Your primary directive is to answer the user's question using ONLY the provided historical intelligence archives below.
-            CRITICAL RAG 2.0 DIRECTIVE: Cite "Algorithmic Threat Scores" to ground your reasoning.
-            ARCHIVES CONTEXT:
+            Your primary directive is to answer the user's question using ONLY the provided intelligence context below.
+            The context includes LIVE dashboard text feeds, LIVE autonomous JSON feeds, and HISTORICAL archives.
+            CRITICAL RAG 2.0 DIRECTIVE: Cite "Algorithmic Threat Scores" and "Live Dashboard Feeds" to ground your reasoning.
+            ARCHIVES AND LIVE CONTEXT:
             {context_data}
             """
             
@@ -141,3 +188,242 @@ def render_rag_interrogation(client, model_name):
                 full_response = f"⚠️ Error querying the intelligence database: {e}"
                 message_placeholder.markdown(full_response)
         st.session_state.rag_messages.append({"role": "assistant", "content": full_response})
+
+# ==========================================
+# PHASE 2 STEP B: HYBRID NATIVE RAG FAB ENGINE (NATIVE POPOVER FIX)
+# ==========================================
+def render_fab_chat(client, model_name, text_summary="", text_section_1="", text_section_2="", text_section_3="", text_section_4="", text_military="", text_india="", text_wa="", text_ews=""):
+    import os
+    import json
+    import re
+    from utils.data_helpers import get_brief_mappings
+
+    # 1. Initialize State
+    if "fab_open" not in st.session_state:
+        st.session_state.fab_open = False
+    if "fab_rag_messages" not in st.session_state:
+        st.session_state.fab_rag_messages = []
+
+    # ==========================================
+    # THE FIX: @st.fragment isolates this UI component. 
+    # Clicking the button now ONLY re-runs this tiny sandbox,
+    # completely bypassing the 50-second dashboard reload!
+    # ==========================================
+    @st.fragment
+    def render_isolated_fab():
+        def toggle_fab():
+            st.session_state.fab_open = not st.session_state.fab_open
+
+        # 2. ULTRA-FAST NATIVE CSS
+        st.markdown("""
+        <style>
+        div[data-testid="stElementContainer"]:has(#fab-anchor),
+        div[data-testid="stElementContainer"]:has(#chat-anchor) { display: none !important; }
+
+        /* FAB BUTTON */
+        div[data-testid="stElementContainer"]:has(#fab-anchor) + div {
+            position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 999999 !important;
+        }
+        div[data-testid="stElementContainer"]:has(#fab-anchor) + div button {
+            width: 65px !important; height: 65px !important; border-radius: 50% !important;
+            background: radial-gradient(circle, #2d2d2d, #000000) !important;
+            border: 1px solid #444 !important; box-shadow: 0 4px 20px rgba(0,0,0,0.8) !important; padding: 0 !important;
+        }
+
+        /* CHAT WINDOW */
+        div[data-testid="stElementContainer"]:has(#chat-anchor) + div {
+            position: fixed !important; bottom: 110px !important; right: 30px !important;
+            width: 380px !important; height: 550px !important; background: #000000 !important;
+            border: 1px solid #2d2d2d !important; border-radius: 16px !important; z-index: 999998 !important;
+            padding: 20px !important; box-shadow: 0 10px 50px rgba(0,0,0,0.95) !important; overflow-y: auto !important;
+        }
+
+        /* --- GRADIENT CHAT BUBBLES --- */
+        div[data-testid="stChatMessage"] { background: transparent !important; }
+        
+        div[data-testid="stChatMessageContent"] {
+            border-radius: 12px !important; color: #f8fafc !important;
+            padding: 12px 16px !important; box-shadow: 0 4px 10px rgba(0,0,0,0.4) !important;
+        }
+
+        /* Force Streamlit's default grey text background to be transparent */
+        div[data-testid="stChatMessageContent"] > div {
+            background: transparent !important;
+        }
+
+        /* Query (User) - Gradient Red using Bulletproof Wildcards */
+        div[data-testid="stChatMessage"]:has([data-testid*="user"]) div[data-testid="stChatMessageContent"],
+        div[data-testid="stChatMessage"]:has([aria-label*="user"]) div[data-testid="stChatMessageContent"],
+        div[data-testid="stChatMessage"]:has(svg[title*="user"]) div[data-testid="stChatMessageContent"] {
+            background: linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%) !important;
+            border: 1px solid #991b1b !important;
+        }
+
+        /* Response (Assistant) - Gradient Sky Blue using Bulletproof Wildcards */
+        div[data-testid="stChatMessage"]:has([data-testid*="assistant"]) div[data-testid="stChatMessageContent"],
+        div[data-testid="stChatMessage"]:has([aria-label*="assistant"]) div[data-testid="stChatMessageContent"],
+        div[data-testid="stChatMessage"]:has(svg[title*="assistant"]) div[data-testid="stChatMessageContent"] {
+            background: linear-gradient(135deg, #0284c7 0%, #082f49 100%) !important;
+            border: 1px solid #0369a1 !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+        # 3. CHAT LOGIC 
+        if st.session_state.fab_open:
+            st.markdown('<span id="chat-anchor"></span>', unsafe_allow_html=True)
+            with st.container():
+                c1, c2 = st.columns([5,1])
+                with c1:
+                    st.markdown("<h4 style='color: #00bfff; margin:0;'>RAG Analysis</h4>", unsafe_allow_html=True)
+                with c2:
+                    st.button("✖", key="close_fab", on_click=toggle_fab)
+
+                st.markdown("<hr style='border-color: #333; margin-top: 5px; margin-bottom: 15px;'>", unsafe_allow_html=True)
+
+                if not client:
+                    st.error("⚠️ GEMINI_API_KEY is missing.")
+                else:
+                    for message in st.session_state.fab_rag_messages:
+                        with st.chat_message(message["role"]):
+                            st.markdown(message["content"])
+
+                    if st.session_state.get("fab_pending_query"):
+                        query = st.session_state.fab_pending_query
+                        st.session_state.fab_pending_query = None
+
+                        with st.chat_message("assistant"):
+                            message_placeholder = st.empty()
+                            message_placeholder.markdown("Scanning live feeds & archives... 🕵️‍♂️")
+
+                            context_data = ""
+                            context_data += "\n\n=== LIVE DASHBOARD TEXT FEEDS ===\n"
+                            live_texts = {
+                                "Executive Summary": text_summary, "Global Foundry Market": text_section_1,
+                                "AI Chip Demand & Lithography": text_section_2, "Critical Minerals (REE)": text_section_3,
+                                "Export Controls": text_section_4, "Military & Outer Space": text_military,
+                                "India": text_india, "West Asia": text_wa, "Early Warning": text_ews
+                            }
+                            for section, txt in live_texts.items():
+                                if txt and len(str(txt).strip()) > 10:
+                                    context_data += f"\n--- {section.upper()} ---\n{txt}\n"
+
+                            live_files = [
+                                ('data/executive_home/tactical_events_24h.json', 'EXECUTIVE HOME TACTICAL'),
+                                ('data/executive_home/flush_brief_24h.json', 'EXECUTIVE HOME BRIEF'),
+                                ('data/today_snippet/tactical_events_24h.json', 'TODAY SNIPPET TACTICAL'),
+                                ('data/today_snippet/shift_brief.json', 'TODAY SNIPPET BRIEF'),
+                                ('data/weekly_tactical/tactical_events_24h.json', 'WEEKLY TACTICAL EVENTS')
+                            ]
+                            context_data += "\n\n=== LIVE AUTONOMOUS JSON FEEDS ===\n"
+                            for file_path, label in live_files:
+                                if os.path.exists(file_path):
+                                    try:
+                                        with open(file_path, 'r') as f:
+                                            context_data += f"\n--- {label} ---\n{json.dumps(json.load(f))}\n"
+                                    except: pass
+
+                            archive_mapping = get_brief_mappings('data')
+                            context_data += "\n\n=== HISTORICAL ARCHIVES ===\n"
+                            user_keywords = [w.lower() for w in re.findall(r'\b\w+\b', query) if len(w) > 2 and w.lower() not in ['what', 'when', 'where', 'which', 'who', 'why', 'how', 'were', 'was', 'this', 'that', 'with', 'from', 'about', 'the', 'and', 'for', 'are', 'did', 'have', 'has']]
+                            
+                            if archive_mapping:
+                                file_scores = []
+                                for f_path in archive_mapping.values():
+                                    try:
+                                        with open(f_path, 'r') as file:
+                                            d = json.load(file)
+                                            content = d.get('brief_raw', '').lower() + json.dumps(d.get('recent_actions', [])).lower()
+                                            score = sum(content.count(kw) for kw in user_keywords)
+                                            file_scores.append((score, f_path))
+                                    except: pass
+
+                                file_scores.sort(key=lambda x: x[0], reverse=True)
+                                top_files = [fs[1] for fs in file_scores if fs[0] > 0][:3]
+                                if not top_files:
+                                    top_files = list(archive_mapping.values())[:2]
+                                
+                                for f_path in top_files:
+                                    try:
+                                        with open(f_path, 'r') as file:
+                                            d = json.load(file)
+                                            context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
+                                            context_data += "\nRAW INTELLIGENCE TEXT:\n" + d.get('brief_raw', '')
+                                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', []))}"
+                                    except: pass
+
+                            sys_prompt = f"""
+                            You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
+                            Answer the user's question concisely using the provided context.
+                            ARCHIVES AND LIVE CONTEXT:
+                            {context_data}
+                            """
+                            
+                            try:
+                                full_response = ""
+                                unique_urls = set()
+                                sources_md = ""
+                                
+                                response = client.models.generate_content_stream(
+                                    model=model_name,
+                                    contents=[sys_prompt, query],
+                                    config={"tools": [{"google_search": {}}]}
+                                )
+                                
+                                for chunk in response:
+                                    if chunk.text:
+                                        full_response += chunk.text
+                                        message_placeholder.markdown(full_response + "▌") 
+                                        
+                                    # Intercept Grounding Metadata safely from the stream
+                                    try:
+                                        if chunk.candidates and chunk.candidates[0].grounding_metadata:
+                                            meta = chunk.candidates[0].grounding_metadata
+                                            if hasattr(meta, 'grounding_chunks') and meta.grounding_chunks:
+                                                for g_chunk in meta.grounding_chunks:
+                                                    if hasattr(g_chunk, 'web') and getattr(g_chunk.web, 'uri', None):
+                                                        title = getattr(g_chunk.web, 'title', 'Source link')
+                                                        url = g_chunk.web.uri
+                                                        if url not in unique_urls:
+                                                            unique_urls.add(url)
+                                                            sources_md += f"\n* [{title}]({url})"
+                                    except Exception: pass
+
+                                # Append Beautiful Citations to the final text
+                                if sources_md:
+                                    full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
+                                
+                                # Fallback handling to completely protect against empty rendering frames
+                                if not full_response.strip():
+                                    full_response = "Intelligence processing completed. Re-indexing data models..."
+                                    
+                                message_placeholder.markdown(full_response)
+                                
+                            except Exception as e:
+                                error_str = str(e)
+                                if "503" in error_str or "UNAVAILABLE" in error_str:
+                                    full_response = "⚠️ Server Down. Please try after sometime."
+                                else:
+                                    full_response = f"⚠️ Error querying database: {e}"
+                                    
+                                message_placeholder.markdown(full_response)
+                                
+                        st.session_state.fab_rag_messages.append({"role": "assistant", "content": full_response})
+                        st.rerun()
+
+                    if "fab_input_text" not in st.session_state:
+                        st.session_state.fab_input_text = ""
+                        
+                    def submit_fab_chat():
+                        if st.session_state.fab_input_text:
+                            st.session_state.fab_rag_messages.append({"role": "user", "content": st.session_state.fab_input_text})
+                            st.session_state.fab_pending_query = st.session_state.fab_input_text
+                            st.session_state.fab_input_text = "" 
+                            
+                    st.text_input("Ask the dashboard...", key="fab_input_text", on_change=submit_fab_chat)
+
+        st.markdown('<span id="fab-anchor"></span>', unsafe_allow_html=True)
+        st.button("RAG", key="fab_main_toggle", on_click=toggle_fab)
+
+    # 4. EXECUTE THE ISOLATED FRAGMENT
+    render_isolated_fab()
