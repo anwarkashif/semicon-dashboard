@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-05-30",
-        "Actor": "Iran",
-        "Action": "Closes Strait of Hormuz; multiple ships attacked.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "Russia",
-        "Action": "Drone hits Romania apartment; NATO vows alliance defense.",
+        "Actor": "Russia / NATO",
+        "Action": "Russian drone hits Romania, NATO vows defense",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "BYD (China)",
-        "Action": "Launches China's first 4nm smart driving chip.",
-        "Location": "China",
-        "Risk": "HIGH"
+        "Actor": "United States",
+        "Action": "Warns Iran of potential war resumption",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Blue Origin",
-        "Action": "New Glenn rocket explodes during pre-launch test.",
-        "Location": "Cape Canaveral, US",
-        "Risk": "HIGH"
+        "Actor": "Iran",
+        "Action": "Attacks UAE oil port, strikes Strait vessels",
+        "Location": "Strait of Hormuz, UAE",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "US",
-        "Action": "Sanctions Iranian military procurement network amid negotiations.",
-        "Location": "Iran",
-        "Risk": "HIGH"
+        "Actor": "Data brokers / Adversaries",
+        "Action": "Data brokers enable enemy targeting of US troops",
+        "Location": "United States",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Adversaries (via data brokers)",
-        "Action": "Targeting US troops using compromised location data.",
-        "Location": "Global",
-        "Risk": "HIGH"
+        "Actor": "Iran-linked network",
+        "Action": "Tricked US firms into supplying military tech",
+        "Location": "United States",
+        "Risk": "CRITICAL"
     }
 ]
