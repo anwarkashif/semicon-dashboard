@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-30",
-        "Actor": "Iran, United States, Global Shipping",
-        "Action": "Escalating disruptions, attacks, threats in Hormuz.",
+        "Actor": "Iran",
+        "Action": "Asserts control over Hormuz, attacks vessels.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
+        "Actor": "Israel",
+        "Action": "Escalates attacks, invades southern Lebanon city.",
+        "Location": "Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-30",
         "Actor": "Russia",
-        "Action": "Drone strikes apartment building in NATO member.",
+        "Action": "Drone strikes NATO member, prompts defense vow.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Israel, Lebanon (Hezbollah), United States, Iran",
-        "Action": "Intensifying conflict; US threatens renewed Iran strikes.",
-        "Location": "Israel, Lebanon, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "India, Pakistan",
-        "Action": "Conflict erodes nuclear restraint between rival powers.",
-        "Location": "India, Pakistan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "Blue Origin",
-        "Action": "New Glenn rocket explodes during pre-launch test.",
-        "Location": "Cape Canaveral, United States",
+        "Actor": "NVIDIA",
+        "Action": "Pledges $150bn for AI hub development.",
+        "Location": "Taiwan",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Adversaries (via data brokers)",
-        "Action": "Enemies using data to target US troops.",
-        "Location": "Global",
+        "Actor": "SoftBank",
+        "Action": "Pledges \u20ac75bn for Europe's largest AI facility.",
+        "Location": "France",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-30",
+        "Actor": "Blue Origin",
+        "Action": "Orbital rocket explodes during pre-launch test.",
+        "Location": "Cape Canaveral, United States",
         "Risk": "HIGH"
     }
 ]
