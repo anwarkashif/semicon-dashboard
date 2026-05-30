@@ -2,43 +2,43 @@
     {
         "Date": "2026-05-30",
         "Actor": "Iran",
-        "Action": "Closes Strait of Hormuz, attacks vessels",
+        "Action": "Closes Strait of Hormuz; multiple ships attacked.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
         "Actor": "Russia",
-        "Action": "Drone hits NATO member building",
+        "Action": "Drone hits Romania apartment; NATO vows alliance defense.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Israel",
-        "Action": "Troops push deeper into Lebanon",
-        "Location": "Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "China",
-        "Action": "Builds new nuclear missile silos infrastructure",
+        "Actor": "BYD (China)",
+        "Action": "Launches China's first 4nm smart driving chip.",
         "Location": "China",
-        "Risk": "CRITICAL"
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "United States",
-        "Action": "Sanctions Iranian military technology buyers",
+        "Actor": "Blue Origin",
+        "Action": "New Glenn rocket explodes during pre-launch test.",
+        "Location": "Cape Canaveral, US",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-30",
+        "Actor": "US",
+        "Action": "Sanctions Iranian military procurement network amid negotiations.",
         "Location": "Iran",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "BYD",
-        "Action": "Launches China's first 4nm driving chip",
-        "Location": "China",
+        "Actor": "Adversaries (via data brokers)",
+        "Action": "Targeting US troops using compromised location data.",
+        "Location": "Global",
         "Risk": "HIGH"
     }
 ]
