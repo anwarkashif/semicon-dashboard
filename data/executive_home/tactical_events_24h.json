@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-29",
-        "Actor": "Russia",
-        "Action": "Russian drone attacks NATO member's territory.",
-        "Location": "Romania",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "Iran, United States, Global Entities",
-        "Action": "Chokepoint disruptions threaten global energy supply.",
+        "Date": "2026-05-30",
+        "Actor": "Iran",
+        "Action": "Closes Strait of Hormuz, attacks vessels",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-29",
-        "Actor": "Unspecified Enemies, United States",
-        "Action": "Enemies target US troops via location data.",
-        "Location": "Global",
-        "Risk": "HIGH"
+        "Date": "2026-05-30",
+        "Actor": "Russia",
+        "Action": "Drone hits NATO member building",
+        "Location": "Romania",
+        "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-29",
+        "Date": "2026-05-30",
+        "Actor": "Israel",
+        "Action": "Troops push deeper into Lebanon",
+        "Location": "Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-30",
         "Actor": "China",
-        "Action": "China expands strategic nuclear missile infrastructure.",
+        "Action": "Builds new nuclear missile silos infrastructure",
         "Location": "China",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-30",
+        "Actor": "United States",
+        "Action": "Sanctions Iranian military technology buyers",
+        "Location": "Iran",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-05-29",
-        "Actor": "Blue Origin",
-        "Action": "Blue Origin rocket explodes during pre-launch test.",
-        "Location": "Cape Canaveral, United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-29",
-        "Actor": "BYD (China)",
-        "Action": "China's BYD launches first 4nm driving chip.",
+        "Date": "2026-05-30",
+        "Actor": "BYD",
+        "Action": "Launches China's first 4nm driving chip",
         "Location": "China",
-        "Risk": "ELEVATED"
+        "Risk": "HIGH"
     }
 ]
