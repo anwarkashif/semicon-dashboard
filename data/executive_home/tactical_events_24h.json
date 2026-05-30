@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-30",
-        "Actor": "Iran, Shipping Vessels",
-        "Action": "Strait of Hormuz closed, maritime incidents escalate",
+        "Actor": "Iran, United States, Global Shipping",
+        "Action": "Maritime attacks, blockade, disruptions in Hormuz",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Russia",
-        "Action": "Drone strikes NATO member apartment block",
+        "Actor": "Israel, Lebanon, Hezbollah",
+        "Action": "Conflict escalates with strikes, missile attack",
+        "Location": "Israel, Lebanon, Gaza",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-30",
+        "Actor": "United States, Iran",
+        "Action": "US warns of resuming war with Iran",
+        "Location": "Middle East, Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-30",
+        "Actor": "Russia, Romania, NATO",
+        "Action": "Russian drone hits apartment in NATO country",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Blue Origin (United States)",
-        "Action": "New Glenn rocket explodes during test",
-        "Location": "Cape Canaveral, United States",
+        "Actor": "Nikon (Japan), BYD (China), ASML (Netherlands)",
+        "Action": "Intensified chip competition; China launches 4nm",
+        "Location": "Global Semiconductor Industry",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "India, Vietnam",
-        "Action": "Finalizes BrahMos missile defense deal",
-        "Location": "Vietnam, Southeast Asia",
+        "Actor": "AUKUS (Australia, UK, US)",
+        "Action": "Develops unmanned undersea vehicles for defense",
+        "Location": "Indo-Pacific",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "Philippines, China",
-        "Action": "Philippines anticipates long-term territorial struggle",
-        "Location": "South China Sea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "BYD (China)",
-        "Action": "Launches China's first 4nm smart driving chip",
-        "Location": "China",
-        "Risk": "ELEVATED"
     }
 ]
