@@ -1,37 +1,30 @@
 [
     {
         "Date": "2026-05-30",
-        "Actor": "Iran, South Korea, UAE",
-        "Action": "Iran attacks UAE oil port, ships in Hormuz.",
-        "Location": "Strait of Hormuz, United Arab Emirates",
+        "Actor": "Iran, United States, Global Shipping",
+        "Action": "Escalating disruptions, attacks, threats in Hormuz.",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Russia, Romania, NATO",
-        "Action": "Russian drone strikes apartment building in Romania.",
+        "Actor": "Russia",
+        "Action": "Drone strikes apartment building in NATO member.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "Israel, Lebanon",
-        "Action": "Israel military prepares for significant Lebanon escalation.",
-        "Location": "Israel-Lebanon border",
+        "Actor": "Israel, Lebanon (Hezbollah), United States, Iran",
+        "Action": "Intensifying conflict; US threatens renewed Iran strikes.",
+        "Location": "Israel, Lebanon, Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-30",
-        "Actor": "BYD (China)",
-        "Action": "BYD launches China's first 4nm smart chip.",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "United States, Iran",
-        "Action": "US warns readiness to resume war with Iran.",
-        "Location": "Middle East, Iran",
+        "Actor": "India, Pakistan",
+        "Action": "Conflict erodes nuclear restraint between rival powers.",
+        "Location": "India, Pakistan",
         "Risk": "CRITICAL"
     },
     {
@@ -39,6 +32,13 @@
         "Actor": "Blue Origin",
         "Action": "New Glenn rocket explodes during pre-launch test.",
         "Location": "Cape Canaveral, United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-30",
+        "Actor": "Adversaries (via data brokers)",
+        "Action": "Enemies using data to target US troops.",
+        "Location": "Global",
         "Risk": "HIGH"
     }
 ]
