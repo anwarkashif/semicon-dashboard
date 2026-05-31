@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-31",
-        "Actor": "Iran / Unidentified Actors",
-        "Action": "Vessels attacked, blockade active in Strait.",
+        "Actor": "Iran / United States",
+        "Action": "Strait of Hormuz: Vessels attacked, US sinks ships.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
+        "Actor": "Israel",
+        "Action": "Expands South Lebanon invasion, seizes strategic castle.",
+        "Location": "Southern Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-31",
+        "Actor": "BYD",
+        "Action": "Launches China's first 4nm smart driving chip.",
+        "Location": "China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-31",
         "Actor": "SoftBank",
-        "Action": "Pledges \u20ac75bn for huge AI facility.",
+        "Action": "Pledges \u20ac75bn for Europe's largest AI facility.",
         "Location": "France",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "China",
-        "Action": "Conducts patrols around disputed island.",
-        "Location": "Scarborough Shoal, South China Sea",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-31",
-        "Actor": "Russia",
-        "Action": "Drone impacts apartment in NATO territory.",
-        "Location": "Romania",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-31",
         "Actor": "Blue Origin",
-        "Action": "New Glenn rocket explodes during test.",
+        "Action": "New Glenn rocket explodes during pre-launch test.",
         "Location": "Cape Canaveral, United States",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "Nvidia",
-        "Action": "Forecasts $1 trillion data center investment.",
-        "Location": "Global",
+        "Actor": "United States",
+        "Action": "Imposes 15% tariffs on Taiwan auto, aircraft parts.",
+        "Location": "United States",
         "Risk": "HIGH"
     }
 ]
