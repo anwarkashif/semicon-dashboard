@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-31",
-        "Actor": "NATO, Russia",
-        "Action": "Russian drone hits Romania, NATO vows defense.",
-        "Location": "Romania",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-31",
-        "Actor": "US Navy, Iran",
-        "Action": "US Navy blockade escalates Strait of Hormuz tensions.",
+        "Actor": "Unidentified Actors",
+        "Action": "Multiple cargo ships attacked near chokepoint.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "China, Philippines",
-        "Action": "China patrols Scarborough Shoal after Philippine warning.",
-        "Location": "Scarborough Shoal, South China Sea",
-        "Risk": "CRITICAL"
+        "Actor": "Blue Origin",
+        "Action": "New Glenn rocket explodes during pre-launch test.",
+        "Location": "Cape Canaveral, United States",
+        "Risk": "ELEVATED"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "BYD",
-        "Action": "China launches first domestic 4nm smart driving chip.",
+        "Actor": "United States",
+        "Action": "Eases sanctions on Iranian oil, Syrian economy.",
+        "Location": "Iran, Syria",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-31",
+        "Actor": "China (BYD)",
+        "Action": "Launches first 4nm smart driving chip.",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "U.S. Space Force, SpaceX",
-        "Action": "Awards $4.2bn for airborne target tracking constellation.",
-        "Location": "Global (Space)",
-        "Risk": "HIGH"
+        "Actor": "Data Brokers, Foreign Adversaries",
+        "Action": "Data brokers enable targeting of US troops.",
+        "Location": "United States (origin), Global (troops)",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "United States",
-        "Action": "Imposes 15% tariffs on Taiwan auto, wood, aircraft parts.",
-        "Location": "Taiwan, United States",
-        "Risk": "HIGH"
+        "Actor": "Israel",
+        "Action": "Launches major military offensive into Lebanon.",
+        "Location": "Southern Lebanon",
+        "Risk": "CRITICAL"
     }
 ]
