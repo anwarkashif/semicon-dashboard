@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-31",
-        "Actor": "Iran / United States",
-        "Action": "Strait of Hormuz: Vessels attacked, US sinks ships.",
+        "Actor": "Unknown/Aggressors",
+        "Action": "Three vessels hit by gunfire",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "Israel",
-        "Action": "Expands South Lebanon invasion, seizes strategic castle.",
-        "Location": "Southern Lebanon",
+        "Actor": "Russia, Romania, NATO",
+        "Action": "Russian drone strikes Romanian apartment block",
+        "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "BYD",
-        "Action": "Launches China's first 4nm smart driving chip.",
-        "Location": "China",
-        "Risk": "HIGH"
+        "Actor": "Israel",
+        "Action": "Israel heavily bombs southern Lebanese city",
+        "Location": "Tyre, Lebanon",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "SoftBank",
-        "Action": "Pledges \u20ac75bn for Europe's largest AI facility.",
-        "Location": "France",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-31",
-        "Actor": "Blue Origin",
-        "Action": "New Glenn rocket explodes during pre-launch test.",
-        "Location": "Cape Canaveral, United States",
-        "Risk": "HIGH"
+        "Actor": "Iran",
+        "Action": "Reopening access to missile tunnels",
+        "Location": "Iran",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
         "Actor": "United States",
-        "Action": "Imposes 15% tariffs on Taiwan auto, aircraft parts.",
-        "Location": "United States",
+        "Action": "US sets tariffs on Taiwan imports",
+        "Location": "Taiwan, United States",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-31",
+        "Actor": "BYD (China)",
+        "Action": "China's BYD launches first 4nm chip",
+        "Location": "China",
+        "Risk": "ELEVATED"
     }
 ]
