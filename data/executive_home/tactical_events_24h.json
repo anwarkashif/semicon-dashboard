@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-31",
-        "Actor": "Iran (IRGC)",
-        "Action": "Strikes oil tanker, escalates Hormuz tensions.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-31",
-        "Actor": "Russia, NATO, Romania",
-        "Action": "Russian drone hits Romania; NATO vows defense.",
+        "Actor": "NATO, Russia",
+        "Action": "Russian drone hits Romania, NATO vows defense.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "United States",
-        "Action": "Warns ships ignoring orders in Hormuz.",
+        "Actor": "US Navy, Iran",
+        "Action": "US Navy blockade escalates Strait of Hormuz tensions.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "China, Regional Powers",
-        "Action": "South China Sea remains highly unstable.",
-        "Location": "South China Sea",
+        "Actor": "China, Philippines",
+        "Action": "China patrols Scarborough Shoal after Philippine warning.",
+        "Location": "Scarborough Shoal, South China Sea",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "BYD (China)",
-        "Action": "Unveils China's first 4nm smart driving chip.",
+        "Actor": "BYD",
+        "Action": "China launches first domestic 4nm smart driving chip.",
         "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "Adversaries, Data Brokers",
-        "Action": "Exploiting data to target US military personnel.",
-        "Location": "Global",
+        "Actor": "U.S. Space Force, SpaceX",
+        "Action": "Awards $4.2bn for airborne target tracking constellation.",
+        "Location": "Global (Space)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-31",
+        "Actor": "United States",
+        "Action": "Imposes 15% tariffs on Taiwan auto, wood, aircraft parts.",
+        "Location": "Taiwan, United States",
         "Risk": "HIGH"
     }
 ]
