@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-30",
+        "Date": "2026-05-31",
         "Actor": "Iran",
-        "Action": "Asserts control over Hormuz, attacks vessels.",
+        "Action": "Fires warning shots at US Navy ships",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "Israel",
-        "Action": "Escalates attacks, invades southern Lebanon city.",
-        "Location": "Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-30",
+        "Date": "2026-05-31",
         "Actor": "Russia",
-        "Action": "Drone strikes NATO member, prompts defense vow.",
+        "Action": "Drone hits apartment block in Romania",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "NVIDIA",
-        "Action": "Pledges $150bn for AI hub development.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
+        "Date": "2026-05-31",
+        "Actor": "US Pentagon",
+        "Action": "Warns of escalating China military buildup",
+        "Location": "Asia-Pacific",
+        "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "SoftBank",
-        "Action": "Pledges \u20ac75bn for Europe's largest AI facility.",
-        "Location": "France",
-        "Risk": "HIGH"
+        "Date": "2026-05-31",
+        "Actor": "Pentagon",
+        "Action": "Reports US troops targeted by location data",
+        "Location": "Global",
+        "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-30",
+        "Date": "2026-05-31",
         "Actor": "Blue Origin",
-        "Action": "Orbital rocket explodes during pre-launch test.",
+        "Action": "New Glenn rocket explodes during test",
         "Location": "Cape Canaveral, United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-31",
+        "Actor": "Huawei",
+        "Action": "Develops tech to sidestep US chip sanctions",
+        "Location": "China",
         "Risk": "HIGH"
     }
 ]
