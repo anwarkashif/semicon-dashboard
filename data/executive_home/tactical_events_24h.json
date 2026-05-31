@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-05-31",
-        "Actor": "Iran",
-        "Action": "Fires warning shots at US Navy ships",
+        "Actor": "Iran / Unidentified Actors",
+        "Action": "Vessels attacked, blockade active in Strait.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
+        "Actor": "SoftBank",
+        "Action": "Pledges \u20ac75bn for huge AI facility.",
+        "Location": "France",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-05-31",
+        "Actor": "China",
+        "Action": "Conducts patrols around disputed island.",
+        "Location": "Scarborough Shoal, South China Sea",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-05-31",
         "Actor": "Russia",
-        "Action": "Drone hits apartment block in Romania",
+        "Action": "Drone impacts apartment in NATO territory.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "US Pentagon",
-        "Action": "Warns of escalating China military buildup",
-        "Location": "Asia-Pacific",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-31",
-        "Actor": "Pentagon",
-        "Action": "Reports US troops targeted by location data",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-31",
         "Actor": "Blue Origin",
-        "Action": "New Glenn rocket explodes during test",
+        "Action": "New Glenn rocket explodes during test.",
         "Location": "Cape Canaveral, United States",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-05-31",
-        "Actor": "Huawei",
-        "Action": "Develops tech to sidestep US chip sanctions",
-        "Location": "China",
+        "Actor": "Nvidia",
+        "Action": "Forecasts $1 trillion data center investment.",
+        "Location": "Global",
         "Risk": "HIGH"
     }
 ]
