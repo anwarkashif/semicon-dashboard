@@ -1,90 +1,98 @@
 [
     {
-        "Date": "2026-05-30",
-        "Actor": "Russia",
-        "Action": "Drone hits apartment building in Romania.",
-        "Location": "Romania",
-        "Risk": "CRITICAL",
-        "Headline": "Russian drone hits apartment building in Romania"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "Iran",
-        "Action": "Ballistic missile hits US base.",
-        "Location": "Kuwait",
-        "Risk": "CRITICAL",
-        "Headline": "Truce at Risk: Iranian Ballistic Missile Hits US Base in Kuwait Amid Peace Talks"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "Unknown",
-        "Action": "Cargo ship attacked, increasing maritime risk.",
+        "Date": "2026-05-31",
+        "Actor": "United States, Iran",
+        "Action": "US warns sanctions risk, vessels attacked.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL",
-        "Headline": "Cargo ship attacked near Strait of Hormuz as armed boats swarm vessel"
+        "Headline": "US Warns Of Sanctions Risk If Deals On Strait Of Hormuz Passage Are Struck; Vessels Attacked"
     },
     {
-        "Date": "2026-05-30",
+        "Date": "2026-05-31",
+        "Actor": "Israel",
+        "Action": "Israel expands ground operation, seizes castle.",
+        "Location": "Southern Lebanon",
+        "Risk": "CRITICAL",
+        "Headline": "Israel expands ground operation, seizes Beaufort Castle in southern Lebanon."
+    },
+    {
+        "Date": "2026-05-31",
+        "Actor": "United Nations",
+        "Action": "UN blacklists Israel, Russia for sexual violence.",
+        "Location": "Global",
+        "Risk": "CRITICAL",
+        "Headline": "U.N. Blacklists Israel, Russia for Sexual Violence in Conflict"
+    },
+    {
+        "Date": "2026-05-31",
+        "Actor": "US Military, Adversaries",
+        "Action": "US troops targeted via commercial location data.",
+        "Location": "Global",
+        "Risk": "CRITICAL",
+        "Headline": "US Troops Targeted Via Commercial Location Data by Adversaries."
+    },
+    {
+        "Date": "2026-05-31",
         "Actor": "Iran",
-        "Action": "Strikes UAE oil port, vessels in Hormuz.",
-        "Location": "UAE, Strait of Hormuz",
+        "Action": "Satellite imagery shows Iran reopening missile tunnels.",
+        "Location": "Iran",
         "Risk": "CRITICAL",
-        "Headline": "Oil Prices Jump 6% as Iran Sets UAE Oil Port Ablaze, Strikes Vessels in Strait of Hormuz"
+        "Headline": "Satellite Images Show Iran Reopening Access to Missile Tunnels"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "United Kingdom",
-        "Action": "Military considers autonomous lethal strikes.",
-        "Location": "United Kingdom",
-        "Risk": "HIGH",
-        "Headline": "UK military looks at allowing lethal strikes without human approval"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "United States",
-        "Action": "Warns Iran, ready to resume strikes.",
-        "Location": "Middle East",
+        "Date": "2026-05-31",
+        "Actor": "Russia, Romania, NATO",
+        "Action": "Russian drone hits Romania; NATO vows defense.",
+        "Location": "Romania",
         "Risk": "CRITICAL",
-        "Headline": "US warns capable of resuming war with Iran as deal remains elusive"
+        "Headline": "Romania says Russian drone hit apartment block, NATO vows to defend alliance territory"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "United States",
-        "Action": "Arms sales pause shifts Taiwan defense.",
-        "Location": "Taiwan",
+        "Date": "2026-05-31",
+        "Actor": "Blue Origin",
+        "Action": "Blue Origin's New Glenn rocket explodes pre-launch.",
+        "Location": "Cape Canaveral, United States",
         "Risk": "HIGH",
-        "Headline": "US arms sales pause would push Taiwan toward asymmetric-defense tech: Analysts"
+        "Headline": "Blue Origin\u2019s New Glenn Rocket Explodes During Pre-Launch Test"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "Nikon",
-        "Action": "Lowers prices to challenge ASML monopoly.",
-        "Location": "Global Semiconductor Market",
+        "Date": "2026-05-31",
+        "Actor": "Japan, China",
+        "Action": "Japan concerned by China's rapid military arming.",
+        "Location": "East Asia",
         "Risk": "HIGH",
-        "Headline": "Nikon weaponizes lower prices to break ASML's lithography monopoly"
+        "Headline": "Japan rejects \u2018new militarism\u2019, says China is rapidly arming"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "AUKUS",
-        "Action": "Develops unmanned undersea vehicles by 2027.",
-        "Location": "Indo-Pacific",
+        "Date": "2026-05-31",
+        "Actor": "SoftBank, France",
+        "Action": "SoftBank pledges \u20ac75bn for Europe's largest AI.",
+        "Location": "France, Europe",
         "Risk": "HIGH",
-        "Headline": "AUKUS to develop unmanned undersea vehicles, delivery set for 2027"
+        "Headline": "SoftBank pledges \u20ac75bn to build Europe\u2019s biggest AI facility in France"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "United States",
-        "Action": "Initiates Section 301 trade probe.",
+        "Date": "2026-05-31",
+        "Actor": "United States, Mexico",
+        "Action": "US-Mexico trade talks falter amidst tariff disputes.",
+        "Location": "North America",
+        "Risk": "HIGH",
+        "Headline": "As Trade Talks Begin, U.S.-Mexico Ties Falter"
+    },
+    {
+        "Date": "2026-05-31",
+        "Actor": "United States (USTR)",
+        "Action": "USTR initiates Section 301 probe against Vietnam.",
         "Location": "Vietnam",
-        "Risk": "ELEVATED",
+        "Risk": "HIGH",
         "Headline": "USTR initiates Section 301 probe of Vietnam"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "Philippines",
-        "Action": "Seeks closer ties with Taiwan.",
-        "Location": "Southeast Asia, Taiwan Strait",
+        "Date": "2026-05-31",
+        "Actor": "AUKUS (Australia, UK, US)",
+        "Action": "AUKUS Ministers commit to 2027 submarine base.",
+        "Location": "Australia",
         "Risk": "HIGH",
-        "Headline": "Philippines Seeks Closer Ties With Taiwan, Adversaries of China"
+        "Headline": "AUKUS Ministers Commit to 2027 Sub Base"
     }
 ]
