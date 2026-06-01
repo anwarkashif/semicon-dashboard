@@ -2,43 +2,43 @@
     {
         "Date": "2026-06-01",
         "Actor": "Iran",
-        "Action": "Halts US talks, threatens strait blockade",
-        "Location": "Strait of Hormuz, Bab el-Mandeb",
+        "Action": "Halts US talks, threatens Hormuz blockade",
+        "Location": "Strait of Hormuz, Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "Unknown (linked to US-Iran tensions)",
-        "Action": "Cargo vessel attacked in Arabian Gulf",
-        "Location": "Arabian Gulf",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "United States, Iran",
-        "Action": "US bombs Iranian sites, downs missiles",
-        "Location": "Kuwait, Iran",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "Russia, Romania (NATO)",
-        "Action": "Russian drone hits NATO member territory",
+        "Actor": "Russia",
+        "Action": "Drone strikes NATO territory, raises tensions",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "United States, hostile entities",
-        "Action": "US troops targeted via location data",
+        "Actor": "China",
+        "Action": "Closes heavy rare earth exports door",
+        "Location": "China",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "Adversaries (targeting US troops)",
+        "Action": "Targeting US troops via smartphone data",
         "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "China",
-        "Action": "Conducts naval patrols east of Taiwan",
-        "Location": "East of Taiwan",
+        "Actor": "South Korea",
+        "Action": "Accelerates nuclear-powered submarine development",
+        "Location": "South Korea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "BYD (China)",
+        "Action": "Launches China's first 4nm smart chip",
+        "Location": "China",
         "Risk": "HIGH"
     }
 ]
