@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-01",
-        "Actor": "United States, Iran, Israel",
-        "Action": "Exchange strikes, escalate regional conflict, impacting shipping.",
-        "Location": "Middle East, Strait of Hormuz, Lebanon, Kuwait",
+        "Actor": "United States, Iran",
+        "Action": "Exchange fire, Iran threatens Strait of Hormuz.",
+        "Location": "Middle East, Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "China",
-        "Action": "Conducts patrols near Taiwan, Scarborough Shoal.",
-        "Location": "South China Sea, Taiwan Strait, Philippines",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "Russia",
-        "Action": "Drone hits apartment block, provoking NATO.",
+        "Actor": "Russia, NATO",
+        "Action": "Russian drone hits NATO member's apartment.",
         "Location": "Romania",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "China (BYD)",
+        "Action": "Launches first 4nm smart driving chip.",
+        "Location": "China",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "USA Rare Earth",
-        "Action": "Invests \u20ac175M in French magnet supply chain.",
-        "Location": "France, Europe",
-        "Risk": "ELEVATED"
+        "Actor": "China, Philippines",
+        "Action": "China patrols Scarborough Shoal after Philippines warning.",
+        "Location": "Scarborough Shoal, South China Sea",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "Blue Origin",
-        "Action": "New Glenn rocket explodes during pre-launch test.",
-        "Location": "Cape Canaveral, United States",
-        "Risk": "ELEVATED"
+        "Actor": "Adversaries, Data brokers, United States",
+        "Action": "Enemies target US troops using location data.",
+        "Location": "Global (US personnel)",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "BYD",
-        "Action": "Launches China's first 4nm smart driving chip.",
-        "Location": "China",
+        "Actor": "France (Tessalia), European Union",
+        "Action": "France plans advanced chip packaging facility.",
+        "Location": "France, European Union",
         "Risk": "ELEVATED"
     }
 ]
