@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-01",
+        "Actor": "United States, Iran, Israel",
+        "Action": "Exchange strikes, escalate regional conflict, impacting shipping.",
+        "Location": "Middle East, Strait of Hormuz, Lebanon, Kuwait",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-01",
         "Actor": "China",
-        "Action": "Conducts military patrols near Taiwan after Japan-Philippines talks.",
-        "Location": "East of Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "Unidentified (implied Iran/proxies)",
-        "Action": "Multiple cargo ships attacked in critical chokepoint.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "Israel",
-        "Action": "Escalates military operations, striking southern Lebanon.",
-        "Location": "Southern Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "United States",
-        "Action": "Expands AI chip export ban to Chinese firms globally.",
-        "Location": "Global",
+        "Action": "Conducts patrols near Taiwan, Scarborough Shoal.",
+        "Location": "South China Sea, Taiwan Strait, Philippines",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "Russia / NATO",
-        "Action": "Russian drone strikes Romania; NATO vows defense.",
+        "Actor": "Russia",
+        "Action": "Drone hits apartment block, provoking NATO.",
         "Location": "Romania",
-        "Risk": "CRITICAL"
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "USA Rare Earth",
+        "Action": "Invests \u20ac175M in French magnet supply chain.",
+        "Location": "France, Europe",
+        "Risk": "ELEVATED"
     },
     {
         "Date": "2026-06-01",
         "Actor": "Blue Origin",
         "Action": "New Glenn rocket explodes during pre-launch test.",
         "Location": "Cape Canaveral, United States",
-        "Risk": "HIGH"
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "BYD",
+        "Action": "Launches China's first 4nm smart driving chip.",
+        "Location": "China",
+        "Risk": "ELEVATED"
     }
 ]
