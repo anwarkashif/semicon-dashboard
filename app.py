@@ -61,7 +61,15 @@ os.makedirs('data', exist_ok=True)
 os.makedirs('trash', exist_ok=True)
 
 MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
-GEMINI_API_KEY = st.secrets.get("RAG_GEMINI_API_KEY", os.environ.get("RAG_GEMINI_API_KEY"))
+# Try to get the key from Koyeb's environment variables first to avoid Streamlit crashing
+GEMINI_API_KEY = os.environ.get("RAG_GEMINI_API_KEY")
+
+if not GEMINI_API_KEY:
+    try:
+        # Fallback to local hidden secrets file when testing on your Mac
+        GEMINI_API_KEY = st.secrets.get("RAG_GEMINI_API_KEY")
+    except Exception:
+        GEMINI_API_KEY = None
 client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 model_name = 'gemini-2.5-flash'
 
