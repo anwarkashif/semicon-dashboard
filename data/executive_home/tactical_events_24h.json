@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-05-30",
-        "Actor": "Iran, United States, Global Shipping",
-        "Action": "Escalating disruptions, attacks, threats in Hormuz.",
+        "Date": "2026-06-01",
+        "Actor": "China",
+        "Action": "Conducts military patrols near Taiwan after Japan-Philippines talks.",
+        "Location": "East of Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "Unidentified (implied Iran/proxies)",
+        "Action": "Multiple cargo ships attacked in critical chokepoint.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "Russia",
-        "Action": "Drone strikes apartment building in NATO member.",
+        "Date": "2026-06-01",
+        "Actor": "Israel",
+        "Action": "Escalates military operations, striking southern Lebanon.",
+        "Location": "Southern Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "United States",
+        "Action": "Expands AI chip export ban to Chinese firms globally.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "Russia / NATO",
+        "Action": "Russian drone strikes Romania; NATO vows defense.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-05-30",
-        "Actor": "Israel, Lebanon (Hezbollah), United States, Iran",
-        "Action": "Intensifying conflict; US threatens renewed Iran strikes.",
-        "Location": "Israel, Lebanon, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "India, Pakistan",
-        "Action": "Conflict erodes nuclear restraint between rival powers.",
-        "Location": "India, Pakistan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-05-30",
+        "Date": "2026-06-01",
         "Actor": "Blue Origin",
         "Action": "New Glenn rocket explodes during pre-launch test.",
         "Location": "Cape Canaveral, United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-05-30",
-        "Actor": "Adversaries (via data brokers)",
-        "Action": "Enemies using data to target US troops.",
-        "Location": "Global",
         "Risk": "HIGH"
     }
 ]
