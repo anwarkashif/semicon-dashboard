@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-01",
-        "Actor": "Iran",
-        "Action": "Halts US talks, threatens Hormuz blockade",
-        "Location": "Strait of Hormuz, Arabian Gulf",
+        "Actor": "United States, Iran",
+        "Action": "US bombs sites, downs Iranian missiles.",
+        "Location": "Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "Russia",
-        "Action": "Drone strikes NATO territory, raises tensions",
+        "Actor": "Unknown, Cargo Vessel",
+        "Action": "Cargo vessel attacked, raises Gulf shipping concerns.",
+        "Location": "Persian Gulf (off Iraq)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "Russia, Romania, NATO",
+        "Action": "Russian drone hits apartment, NATO vows defense.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "China",
-        "Action": "Closes heavy rare earth exports door",
-        "Location": "China",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "Adversaries (targeting US troops)",
-        "Action": "Targeting US troops via smartphone data",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "South Korea",
-        "Action": "Accelerates nuclear-powered submarine development",
-        "Location": "South Korea",
+        "Actor": "AUKUS (Australia, UK, US)",
+        "Action": "AUKUS partners advance submarine program and projects.",
+        "Location": "Indo-Pacific",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-01",
         "Actor": "BYD (China)",
-        "Action": "Launches China's first 4nm smart chip",
+        "Action": "BYD launches China's first 4nm driving chip.",
         "Location": "China",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "Israel, Hezbollah, United States",
+        "Action": "Trump claims Israel, Hezbollah agreed to halt fighting.",
+        "Location": "Lebanon, Israel",
         "Risk": "HIGH"
     }
 ]
