@@ -151,13 +151,3 @@ jobs:
         git add data/today_snippet/
         git commit -m "📋 Auto-Update: Today's Snippet 12H Brief" || echo "No changes to commit"
         git push
-
-    # ==========================================
-    # UNIFIED DEPLOYMENT TRIGGER FOR KOYEB
-    # ==========================================
-    - name: Unified Koyeb Redeploy Engine
-      if: success() && (github.event.action == 'trigger_executive_radar' || github.event.action == 'trigger_weekly_brief' || github.event.action == 'trigger_memory_layer' || github.event.action == 'trigger_shift_brief')
-      run: |
-        curl -X POST "https://app.koyeb.com/v1/services/83c34b02-6b6a-41fb-81c5-7543947250b4/redeploy" \
-        -H "Authorization: Bearer ${{ secrets.KOYEB_API_TOKEN }}" \
-        -H "Content-Type: application/json"

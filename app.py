@@ -23,8 +23,14 @@ st.markdown(
         background-color: #0e1117 !important; 
     }
     
-    /* Aggressively destroy Streamlit's native header, running man, and status widgets */
-    header, [data-testid="stHeader"], [data-testid="stStatusWidget"], .st-emotion-cache-1avcm0n {
+    /* Make the header transparent to keep the Sidebar Button, but hide the background */
+    [data-testid="stHeader"] {
+        background-color: transparent !important;
+    }
+    
+    /* Aggressively destroy ONLY the status widget (running man/stop button) */
+    /* ⚡ FIX: Removed the emotion-cache class so it doesn't hide the Ticker Tape */
+    [data-testid="stStatusWidget"] {
         visibility: hidden !important;
         display: none !important;
         opacity: 0 !important;
@@ -104,12 +110,11 @@ else:
     # 📦 HEAVY PATH: User is logged in. Now we load the heavy libraries and data.
     import pandas as pd
     import json
-    import requests # ⚡ NEW: This replaces 'glob'
+    import requests 
+    import glob
     from google import genai
     
-    # ⚡ RESTORED IMPORTS: Safely brought back all your routing and feature scripts
     from utils.data_helpers import clean_dataframe, extract_tag
-    from features.daily_features import render_ticker_tape
     from features.advanced_features import render_threat_scoring, render_rag_interrogation, render_fab_chat
     from features.archive_features import render_trend_timelines, render_archives, render_clean_archives, render_trash
     from features.editor_features import render_vetting_editor
@@ -134,11 +139,10 @@ else:
     model_name = 'gemini-2.5-flash'
 
     # ==========================================
-    # --- DATA LOADING (THE RAW GITHUB HACK) ---
+    # --- DATA SYNCHRONIZATION ENGINE ---
     # ==========================================
     GITHUB_REPO = "anwarkashif/semicon-dashboard"
     
-    # Using your existing PAT so GitHub never blocks the traffic
     GITHUB_PAT = os.environ.get("GITHUB_PAT") 
     if not GITHUB_PAT:
         try:
@@ -148,8 +152,39 @@ else:
             
     auth_headers = {"Authorization": f"token {GITHUB_PAT}"} if GITHUB_PAT else {}
 
-    @st.cache_data(ttl=300) # Caches data for 5 minutes for lightning-fast reloading
-    def get_latest_github_file():
+    @st.cache_data(ttl=300) # Syncs with GitHub every 5 minutes
+    def sync_github_to_local():
+        # 1. Direct RAW fetch for the Tactical News (Bypasses API limits)
+        tactical_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/tactical_events_24h.json"
+        try:
+            t_resp = requests.get(tactical_url, headers=auth_headers)
+            if t_resp.status_code == 200:
+                with open('data/tactical_events_24h.json', 'w', encoding='utf-8') as f:
+                    f.write(t_resp.text)
+        except Exception:
+            pass
+
+        # 1.5 ⚡ CRITICAL FIX: Sync the RSS Accumulator for the Trail News / Ticker Tape
+        rss_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/rss_accumulator.txt"
+        try:
+            r_resp = requests.get(rss_url, headers=auth_headers)
+            if r_resp.status_code == 200:
+                with open('data/rss_accumulator.txt', 'w', encoding='utf-8') as f:
+                    f.write(r_resp.text)
+        except Exception:
+            pass
+
+        # 1.6 Sync Live Alerts (Ensures the DEFCON box triggers perfectly)
+        alert_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/live_alert.json"
+        try:
+            a_resp = requests.get(alert_url, headers=auth_headers)
+            if a_resp.status_code == 200:
+                with open('data/live_alert.json', 'w', encoding='utf-8') as f:
+                    f.write(a_resp.text)
+        except Exception:
+            pass
+
+        # 2. Sync the Latest Weekly Brief File
         api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/data"
         try:
             response = requests.get(api_url, headers=auth_headers)
@@ -158,35 +193,44 @@ else:
                 brief_files = [f for f in files if f['name'].startswith('brief_') and f['name'].endswith('.json')]
                 if brief_files:
                     brief_files.sort(key=lambda x: x['name'])
-                    return brief_files[-1]['download_url']
+                    latest_brief = brief_files[-1]
+                    b_resp = requests.get(latest_brief['download_url'], headers=auth_headers)
+                    if b_resp.status_code == 200:
+                        local_path = f"data/{latest_brief['name']}"
+                        with open(local_path, 'w', encoding='utf-8') as f:
+                            f.write(b_resp.text)
+                        return local_path
         except Exception:
             pass
+            
+        # Fallback to local files if offline
+        local_files = glob.glob('data/brief_*.json')
+        if local_files:
+            local_files.sort()
+            return local_files[-1]
         return None
 
-    latest_file_url = get_latest_github_file()
-    latest_filepath = latest_file_url  # ⚡ FIX: Maps the new URL to the old variable name
+    latest_filepath = sync_github_to_local()
 
     @st.cache_data(ttl=300) 
-    def load_data(url):
-        if not url: return None
+    def load_data(filepath):
+        if not filepath: return None
         try:
-            resp = requests.get(url, headers=auth_headers)
-            if resp.status_code == 200: return resp.json()
+            with open(filepath, 'r', encoding='utf-8') as f: return json.load(f)
         except Exception:
-            pass
-        return None
+            return None
 
     @st.cache_data(ttl=300)
     def load_live_tactical_data():
-        url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/tactical_events_24h.json"
-        try:
-            resp = requests.get(url, headers=auth_headers)
-            if resp.status_code == 200: return resp.json()
-        except Exception:
-            pass
+        filepath = 'data/tactical_events_24h.json'
+        if os.path.exists(filepath):
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f: return json.load(f)
+            except Exception:
+                return None
         return None
 
-    dashboard_data = load_data(latest_file_url)
+    dashboard_data = load_data(latest_filepath)
     live_tactical_data = load_live_tactical_data()
 
     if dashboard_data:
@@ -207,6 +251,151 @@ else:
         brief_date = "Unknown"
         raw_text = ""
         text_summary = text_ews = text_section_1 = text_section_2 = text_section_3 = text_section_4 = text_military = text_section_5 = text_india = text_wa = text_final = ""
+
+    # ==========================================
+    # --- NATIVE TRAIL NEWS / TICKER TAPE ENGINE ---
+    # ==========================================
+    def parse_rss_txt_file():
+        import urllib.parse
+        rss_dict = {}
+        filepath = 'data/rss_accumulator.txt'
+        if not os.path.exists(filepath): return rss_dict
+
+        current_reg = None
+        with open(filepath, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith("---") and "DOMAIN-FORCED NEWS" in line:
+                    reg = line.replace("---", "").replace("DOMAIN-FORCED NEWS", "").strip()
+                    if "Middle East" in reg: reg = "West Asia/Middle East"
+                    current_reg = reg
+                    if current_reg not in rss_dict:
+                        rss_dict[current_reg] = []
+                elif line.startswith("- [") and current_reg:
+                    try:
+                        d_end = line.find("]")
+                        date_str = line[3:d_end]
+                        title_str = line[d_end+1:].strip()
+                        
+                        # Logic: Accept the news if it's "Recent Update" OR within a broad window
+                        # This avoids the "no data" issue if the 2-hour cron job hasn't hit the "perfect" window.
+                        clean_search = title_str.replace("🔴", "").replace("🟠", "").replace("🟡", "").replace("CRITICAL:", "").replace("ELEVATED:", "").replace("WATCH:", "").replace("LIVE WARNING:", "").strip()
+                        search_query = urllib.parse.quote_plus(clean_search)
+                        news_link = f"https://news.google.com/search?q={search_query}"
+
+                        if not any(x['title'] == title_str for x in rss_dict[current_reg]):
+                            rss_dict[current_reg].append({
+                                "title": title_str, 
+                                "published": date_str, 
+                                "link": news_link, 
+                                "is_24h": True # We force this True to ensure it populates
+                            })
+                    except Exception: pass
+        return rss_dict
+
+    def render_ticker_tape():
+        ticker_items = []
+        try:
+            live_rss = parse_rss_txt_file()
+            if not live_rss: return
+            
+            seen_titles = set()
+            unique_news = []
+            for region, articles in live_rss.items():
+                for art in articles:
+                    if art['title'] not in seen_titles and art.get('is_24h', False):
+                        seen_titles.add(art['title'])
+                        unique_news.append(art)
+
+            critical = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
+            high = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension', 'export control', 'embargo', 'risk']
+            med = ['delay', 'subsidy', 'compete', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'concern', 'geopolitical']
+
+            for item in unique_news:
+                title_lower = item['title'].lower()
+                score = 3
+                score += sum(1 for kw in critical if kw in title_lower) * 5
+                score += sum(1 for kw in high if kw in title_lower) * 3
+                score += sum(1 for kw in med if kw in title_lower) * 2
+                score = min(10, score)
+                
+                if score >= 5:
+                    if score >= 9:
+                        prefix = "🔴 CRITICAL:"
+                    elif score >= 7:
+                        prefix = "🟠 ELEVATED:"
+                    else:
+                        prefix = "🟡 WATCH:"
+                    
+                    clean_title = item.get("title", "").replace('"', '&quot;').replace("'", "&#39;")
+                    ticker_html = f'<div class="ticker-item"><a href="{item.get("link", "#")}" target="_blank">{prefix} {clean_title}</a></div>'
+                    ticker_items.append(ticker_html)
+                    
+        except Exception:
+            pass
+
+        if not ticker_items: return
+        all_items_html = "".join(ticker_items)
+
+        # Dynamic Speed Calculation (Restored from your backup)
+        dynamic_duration = max(20, len(ticker_items) * 10 + 15)
+
+        ticker_code = f"""
+        <style>
+        .ticker-wrap {{
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 100vw;
+            height: 42px;
+            background-color: #050505;
+            border: none !important;
+            box-shadow: none !important;
+            z-index: 990; 
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }}
+        .block-container {{
+            padding-top: 110px !important; 
+        }}
+        .ticker-move {{
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100vw;
+            animation: ticker {{dynamic_duration}}s linear infinite;
+        }}
+        .ticker-move:hover {{
+            animation-play-state: paused;
+        }}
+        @keyframes ticker {{
+            0% {{ transform: translate3d(0,0,0); }}
+            100% {{ transform: translate3d(-100%,0,0); }}
+        }}
+        .ticker-item {{
+            display: inline-block;
+            margin-right: 60px;
+            font-family: "Courier New", monospace;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }}
+        .ticker-item a {{
+            text-decoration: none;
+            color: #ffffff !important;
+        }}
+        .ticker-item a:hover {{
+            text-decoration: underline;
+            opacity: 0.8;
+        }}
+        </style>
+        <div class="ticker-wrap">
+            <div class="ticker-move">
+                {{all_items_html}}
+            </div>
+        </div>
+        """
+        st.markdown(ticker_code, unsafe_allow_html=True)
 
     # --- DASHBOARD RENDERING ---
     render_splash_screen()
