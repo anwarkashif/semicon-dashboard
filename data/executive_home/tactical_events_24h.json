@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-01",
-        "Actor": "United States, Iran",
-        "Action": "Exchange fire, Iran threatens Strait of Hormuz.",
-        "Location": "Middle East, Strait of Hormuz",
+        "Actor": "Iran",
+        "Action": "Halts US talks, threatens Hormuz blockade",
+        "Location": "Strait of Hormuz, Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "Russia, NATO",
-        "Action": "Russian drone hits NATO member's apartment.",
+        "Actor": "Russia",
+        "Action": "Drone strikes NATO territory, raises tensions",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "China (BYD)",
-        "Action": "Launches first 4nm smart driving chip.",
+        "Actor": "China",
+        "Action": "Closes heavy rare earth exports door",
         "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "China, Philippines",
-        "Action": "China patrols Scarborough Shoal after Philippines warning.",
-        "Location": "Scarborough Shoal, South China Sea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "Adversaries, Data brokers, United States",
-        "Action": "Enemies target US troops using location data.",
-        "Location": "Global (US personnel)",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "France (Tessalia), European Union",
-        "Action": "France plans advanced chip packaging facility.",
-        "Location": "France, European Union",
-        "Risk": "ELEVATED"
+        "Actor": "Adversaries (targeting US troops)",
+        "Action": "Targeting US troops via smartphone data",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "South Korea",
+        "Action": "Accelerates nuclear-powered submarine development",
+        "Location": "South Korea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "BYD (China)",
+        "Action": "Launches China's first 4nm smart chip",
+        "Location": "China",
+        "Risk": "HIGH"
     }
 ]
