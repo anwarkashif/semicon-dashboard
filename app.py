@@ -103,10 +103,11 @@ else:
     
     # 📦 HEAVY PATH: User is logged in. Now we load the heavy libraries and data.
     import pandas as pd
-    import glob
     import json
+    import requests # ⚡ NEW: This replaces 'glob'
     from google import genai
     
+    # ⚡ RESTORED IMPORTS: Safely brought back all your routing and feature scripts
     from utils.data_helpers import clean_dataframe, extract_tag
     from features.daily_features import render_ticker_tape
     from features.advanced_features import render_threat_scoring, render_rag_interrogation, render_fab_chat
@@ -132,33 +133,60 @@ else:
     client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
     model_name = 'gemini-2.5-flash'
 
-    # --- DATA LOADING ---
-    def get_latest_file():
-        if not os.path.exists('data'): return None
-        files = glob.glob('data/brief_*.json')
-        if not files: return None
-        files.sort() 
-        return files[-1]
+    # ==========================================
+    # --- DATA LOADING (THE RAW GITHUB HACK) ---
+    # ==========================================
+    GITHUB_REPO = "anwarkashif/semicon-dashboard"
+    
+    # Using your existing PAT so GitHub never blocks the traffic
+    GITHUB_PAT = os.environ.get("GITHUB_PAT") 
+    if not GITHUB_PAT:
+        try:
+            GITHUB_PAT = st.secrets.get("GITHUB_PAT")
+        except Exception:
+            GITHUB_PAT = None
+            
+    auth_headers = {"Authorization": f"token {GITHUB_PAT}"} if GITHUB_PAT else {}
 
-    latest_filepath = get_latest_file()
-
-    @st.cache_data(ttl=30) 
-    def load_data(filepath):
-        if not filepath: return None
-        with open(filepath, 'r') as f: return json.load(f)
-
-    @st.cache_data(ttl=60)
-    def load_live_tactical_data():
-        filepath = 'data/tactical_events_24h.json'
-        if os.path.exists(filepath):
-            try:
-                with open(filepath, 'r') as f:
-                    return json.load(f)
-            except:
-                return None
+    @st.cache_data(ttl=300) # Caches data for 5 minutes for lightning-fast reloading
+    def get_latest_github_file():
+        api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/data"
+        try:
+            response = requests.get(api_url, headers=auth_headers)
+            if response.status_code == 200:
+                files = response.json()
+                brief_files = [f for f in files if f['name'].startswith('brief_') and f['name'].endswith('.json')]
+                if brief_files:
+                    brief_files.sort(key=lambda x: x['name'])
+                    return brief_files[-1]['download_url']
+        except Exception:
+            pass
         return None
 
-    dashboard_data = load_data(latest_filepath)
+    latest_file_url = get_latest_github_file()
+    latest_filepath = latest_file_url  # ⚡ FIX: Maps the new URL to the old variable name
+
+    @st.cache_data(ttl=300) 
+    def load_data(url):
+        if not url: return None
+        try:
+            resp = requests.get(url, headers=auth_headers)
+            if resp.status_code == 200: return resp.json()
+        except Exception:
+            pass
+        return None
+
+    @st.cache_data(ttl=300)
+    def load_live_tactical_data():
+        url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/tactical_events_24h.json"
+        try:
+            resp = requests.get(url, headers=auth_headers)
+            if resp.status_code == 200: return resp.json()
+        except Exception:
+            pass
+        return None
+
+    dashboard_data = load_data(latest_file_url)
     live_tactical_data = load_live_tactical_data()
 
     if dashboard_data:
