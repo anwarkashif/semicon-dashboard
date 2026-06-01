@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-01",
-        "Actor": "United States, Iran",
-        "Action": "Exchange fire, Iran threatens Strait of Hormuz.",
-        "Location": "Middle East, Strait of Hormuz",
+        "Actor": "Iran",
+        "Action": "Halts US talks, threatens strait blockade",
+        "Location": "Strait of Hormuz, Bab el-Mandeb",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "Russia, NATO",
-        "Action": "Russian drone hits NATO member's apartment.",
+        "Actor": "Unknown (linked to US-Iran tensions)",
+        "Action": "Cargo vessel attacked in Arabian Gulf",
+        "Location": "Arabian Gulf",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "United States, Iran",
+        "Action": "US bombs Iranian sites, downs missiles",
+        "Location": "Kuwait, Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "Russia, Romania (NATO)",
+        "Action": "Russian drone hits NATO member territory",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "China (BYD)",
-        "Action": "Launches first 4nm smart driving chip.",
-        "Location": "China",
+        "Actor": "United States, hostile entities",
+        "Action": "US troops targeted via location data",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-01",
-        "Actor": "China, Philippines",
-        "Action": "China patrols Scarborough Shoal after Philippines warning.",
-        "Location": "Scarborough Shoal, South China Sea",
+        "Actor": "China",
+        "Action": "Conducts naval patrols east of Taiwan",
+        "Location": "East of Taiwan",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "Adversaries, Data brokers, United States",
-        "Action": "Enemies target US troops using location data.",
-        "Location": "Global (US personnel)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "France (Tessalia), European Union",
-        "Action": "France plans advanced chip packaging facility.",
-        "Location": "France, European Union",
-        "Risk": "ELEVATED"
     }
 ]
