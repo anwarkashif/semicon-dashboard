@@ -307,6 +307,9 @@ else:
                         seen_titles.add(art['title'])
                         unique_news.append(art)
 
+            # ⚡ FIX: We cap the news to the 30 most recent items so the animation speed doesn't slow to a crawl!
+            unique_news = unique_news[-30:]
+
             critical = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
             high = ['tariff', 'control', 'restrict', 'vulnerability', 'disrupt', 'tension', 'export control', 'embargo', 'risk']
             med = ['delay', 'subsidy', 'compete', 'invest', 'shift', 'policy', 'regulate', 'pressure', 'concern', 'geopolitical']
@@ -337,7 +340,7 @@ else:
         if not ticker_items: return
         all_items_html = "".join(ticker_items)
 
-        # Dynamic Speed Calculation (Restored from your backup)
+        # Dynamic Speed Calculation
         dynamic_duration = max(20, len(ticker_items) * 10 + 15)
 
         ticker_code = f"""
@@ -363,7 +366,7 @@ else:
             display: inline-block;
             white-space: nowrap;
             padding-left: 100vw;
-            animation: ticker {{dynamic_duration}}s linear infinite;
+            animation: ticker {dynamic_duration}s linear infinite;
         }}
         .ticker-move:hover {{
             animation-play-state: paused;
@@ -391,7 +394,7 @@ else:
         </style>
         <div class="ticker-wrap">
             <div class="ticker-move">
-                {{all_items_html}}
+                {all_items_html}
             </div>
         </div>
         """
@@ -399,7 +402,6 @@ else:
 
     # --- DASHBOARD RENDERING ---
     render_splash_screen()
-    render_ticker_tape()
     
     if SNIPPET_TEST_MODE:
         st.sidebar.info("🛠️ **Snippet Test Mode Active**")
@@ -417,6 +419,9 @@ else:
     selected_actor, view_selection = render_sidebar(
         dashboard_data, df_actions, raw_text, text_india, text_wa
     )
+
+    # 🟢 RENDER TICKER TAPE PLACE EXACTLY HERE 🟢
+    render_ticker_tape()
 
     if view_selection == "Executive Home":
         render_executive_home(dashboard_data, df_actions, live_tactical_data, MAPBOX_PUBLIC_TOKEN)
