@@ -1,37 +1,44 @@
 [
     {
         "Date": "2026-06-02",
-        "Actor": "Russia",
-        "Action": "Drone hits NATO territory, escalating war",
-        "Location": "Romania",
+        "Actor": "Unidentified",
+        "Action": "Cargo vessel attacked by projectiles",
+        "Location": "Gulf of Iraq",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "Unspecified actors (Houthis/Al-Shabaab implied)",
-        "Action": "Attacks vessels, chokes key trade routes",
-        "Location": "Red Sea, Strait of Hormuz",
+        "Actor": "Russia",
+        "Action": "Launches massive missile and drone barrage",
+        "Location": "Ukraine",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-02",
+        "Actor": "Iran, Israel, Hezbollah",
+        "Action": "Ceasefire talks collapse amid fighting",
+        "Location": "Lebanon, Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
         "Actor": "China",
-        "Action": "Accelerates military buildup, threatens Taiwan",
-        "Location": "Indo-Pacific, Taiwan",
+        "Action": "Hardening nuclear forces for Taiwan conflict",
+        "Location": "Taiwan Strait",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "United States",
-        "Action": "Considers expanding nuclear weapon deployments",
-        "Location": "Europe",
-        "Risk": "CRITICAL"
+        "Actor": "China, United States",
+        "Action": "Escalates global critical minerals race",
+        "Location": "Global",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-02",
         "Actor": "United States",
-        "Action": "Initiates Section 301 trade probe against Vietnam",
-        "Location": "Vietnam",
+        "Action": "Warns allies on China's military buildup",
+        "Location": "Indo-Pacific",
         "Risk": "HIGH"
     }
 ]
