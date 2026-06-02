@@ -1,37 +1,37 @@
 [
     {
         "Date": "2026-06-02",
-        "Actor": "Unidentified (MSC vessel)",
-        "Action": "MSC container ship struck by projectiles",
-        "Location": "Gulf (near Umm Qasr, Iraq)",
+        "Actor": "Iran",
+        "Action": "Missile strike on commercial ship in Gulf.",
+        "Location": "Off Umm Qasr, Gulf",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-02",
+        "Actor": "Israel, Hezbollah",
+        "Action": "Trade new attacks despite de-escalation efforts.",
+        "Location": "Southern Lebanon, Northern Israel",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
         "Actor": "Russia, Romania, NATO",
-        "Action": "Russian drone hits Romanian apartment; NATO vows defense",
+        "Action": "Russian drone hit Romania, NATO vows defense.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
+        "Actor": "Taiwan",
+        "Action": "Strait stability crucial for global AI supply chains.",
+        "Location": "Taiwan Strait",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-02",
         "Actor": "United States",
-        "Action": "Proposes 25% tariffs on Brazil; tweaks metal tariffs",
-        "Location": "United States, Brazil",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-02",
-        "Actor": "SpaceX, United States (Space Force)",
-        "Action": "Wins $4B contract for threat-targeting satellites",
-        "Location": "Global (space-based defense)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-02",
-        "Actor": "United States, Iran, Israel, Hezbollah",
-        "Action": "Talks on regional ceasefire continue amidst stalls",
-        "Location": "Middle East",
+        "Action": "Sanctions Iran's crypto exchanges amidst Gulf tensions.",
+        "Location": "Iran",
         "Risk": "HIGH"
     }
 ]
