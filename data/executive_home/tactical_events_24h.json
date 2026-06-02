@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-06-01",
-        "Actor": "United States, Iran",
-        "Action": "US bombs sites, downs Iranian missiles.",
-        "Location": "Middle East",
+        "Date": "2026-06-02",
+        "Actor": "Iran",
+        "Action": "Claims missile strike on commercial vessel in Gulf.",
+        "Location": "Gulf / Near Iraq",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-01",
-        "Actor": "Unknown, Cargo Vessel",
-        "Action": "Cargo vessel attacked, raises Gulf shipping concerns.",
-        "Location": "Persian Gulf (off Iraq)",
+        "Date": "2026-06-02",
+        "Actor": "Iran",
+        "Action": "Breaks off peace talks, threatens Strait of Hormuz.",
+        "Location": "Middle East / Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-01",
-        "Actor": "Russia, Romania, NATO",
-        "Action": "Russian drone hits apartment, NATO vows defense.",
+        "Date": "2026-06-02",
+        "Actor": "Russia",
+        "Action": "Drone strikes apartment block in NATO's Romania.",
         "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-01",
-        "Actor": "AUKUS (Australia, UK, US)",
-        "Action": "AUKUS partners advance submarine program and projects.",
-        "Location": "Indo-Pacific",
+        "Date": "2026-06-02",
+        "Actor": "United States (Pentagon)",
+        "Action": "Warns allies about China's military buildup.",
+        "Location": "Indo-Pacific / Global",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-01",
-        "Actor": "BYD (China)",
-        "Action": "BYD launches China's first 4nm driving chip.",
-        "Location": "China",
+        "Date": "2026-06-02",
+        "Actor": "South Korea",
+        "Action": "Advances nuclear-powered submarine development plans.",
+        "Location": "South Korea / Northeast Asia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-02",
+        "Actor": "United States (USTR)",
+        "Action": "Initiates Section 301 trade probe against Vietnam.",
+        "Location": "Vietnam",
         "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "Israel, Hezbollah, United States",
-        "Action": "Trump claims Israel, Hezbollah agreed to halt fighting.",
-        "Location": "Lebanon, Israel",
-        "Risk": "HIGH"
     }
 ]
