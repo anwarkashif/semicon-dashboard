@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-02",
-        "Actor": "Unidentified",
-        "Action": "Cargo vessel attacked by projectiles",
-        "Location": "Gulf of Iraq",
+        "Actor": "Unidentified / Global Shipping",
+        "Action": "Cargo vessel struck by projectiles near Iraq.",
+        "Location": "Gulf off Iraq",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "Russia",
-        "Action": "Launches massive missile and drone barrage",
-        "Location": "Ukraine",
+        "Actor": "United States",
+        "Action": "Considers placing nuclear weapons in Eastern Europe.",
+        "Location": "Poland, Baltic States",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "Iran, Israel, Hezbollah",
-        "Action": "Ceasefire talks collapse amid fighting",
-        "Location": "Lebanon, Middle East",
+        "Actor": "Russia / NATO",
+        "Action": "Russian drone hits Romania, NATO vows defense.",
+        "Location": "Romania",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-02",
+        "Actor": "Iran / United States",
+        "Action": "Iran-US talks, Strait of Hormuz access uncertain.",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "China",
-        "Action": "Hardening nuclear forces for Taiwan conflict",
+        "Actor": "Global AI Supply Chains / Taiwan",
+        "Action": "Taiwan Strait stability crucial for AI supply.",
         "Location": "Taiwan Strait",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "China, United States",
-        "Action": "Escalates global critical minerals race",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-02",
         "Actor": "United States",
-        "Action": "Warns allies on China's military buildup",
-        "Location": "Indo-Pacific",
+        "Action": "Proposes 25% tariffs on Brazil trade.",
+        "Location": "Brazil",
         "Risk": "HIGH"
     }
 ]
