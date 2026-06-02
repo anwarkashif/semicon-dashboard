@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-06-02",
-        "Actor": "Unidentified / Global Shipping",
-        "Action": "Cargo vessel struck by projectiles near Iraq.",
-        "Location": "Gulf off Iraq",
+        "Actor": "Unidentified (MSC vessel)",
+        "Action": "MSC container ship struck by projectiles",
+        "Location": "Gulf (near Umm Qasr, Iraq)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-02",
+        "Actor": "Russia, Romania, NATO",
+        "Action": "Russian drone hits Romanian apartment; NATO vows defense",
+        "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
         "Actor": "United States",
-        "Action": "Considers placing nuclear weapons in Eastern Europe.",
-        "Location": "Poland, Baltic States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-02",
-        "Actor": "Russia / NATO",
-        "Action": "Russian drone hits Romania, NATO vows defense.",
-        "Location": "Romania",
+        "Action": "Proposes 25% tariffs on Brazil; tweaks metal tariffs",
+        "Location": "United States, Brazil",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "Iran / United States",
-        "Action": "Iran-US talks, Strait of Hormuz access uncertain.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
+        "Actor": "SpaceX, United States (Space Force)",
+        "Action": "Wins $4B contract for threat-targeting satellites",
+        "Location": "Global (space-based defense)",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "Global AI Supply Chains / Taiwan",
-        "Action": "Taiwan Strait stability crucial for AI supply.",
-        "Location": "Taiwan Strait",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-02",
-        "Actor": "United States",
-        "Action": "Proposes 25% tariffs on Brazil trade.",
-        "Location": "Brazil",
+        "Actor": "United States, Iran, Israel, Hezbollah",
+        "Action": "Talks on regional ceasefire continue amidst stalls",
+        "Location": "Middle East",
         "Risk": "HIGH"
     }
 ]
