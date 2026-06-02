@@ -1,37 +1,37 @@
 [
     {
         "Date": "2026-06-02",
-        "Actor": "Iran",
-        "Action": "Missile strike on commercial ship in Gulf.",
-        "Location": "Off Umm Qasr, Gulf",
+        "Actor": "Russia",
+        "Action": "Escalates Ukraine attacks, drone hits NATO territory",
+        "Location": "Ukraine/Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "Israel, Hezbollah",
-        "Action": "Trade new attacks despite de-escalation efforts.",
-        "Location": "Southern Lebanon, Northern Israel",
+        "Actor": "United States/Iran",
+        "Action": "Military actions intensify Gulf maritime shipping conflict",
+        "Location": "Gulf/Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "Russia, Romania, NATO",
-        "Action": "Russian drone hit Romania, NATO vows defense.",
-        "Location": "Romania",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-02",
-        "Actor": "Taiwan",
-        "Action": "Strait stability crucial for global AI supply chains.",
+        "Actor": "Global/Taiwan",
+        "Action": "Taiwan Strait stability critical for global AI supply",
         "Location": "Taiwan Strait",
-        "Risk": "CRITICAL"
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-02",
-        "Actor": "United States",
-        "Action": "Sanctions Iran's crypto exchanges amidst Gulf tensions.",
-        "Location": "Iran",
+        "Actor": "USA Rare Earth",
+        "Action": "Invests $1.2B in rare earth magnet plant",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-02",
+        "Actor": "US Government",
+        "Action": "Trump AI order centralizes NSA oversight role",
+        "Location": "United States",
         "Risk": "HIGH"
     }
 ]
