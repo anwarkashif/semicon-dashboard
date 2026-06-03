@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-06-03",
-        "Actor": "Russia",
-        "Action": "Escalates missile and drone attacks.",
-        "Location": "Ukraine",
+        "Actor": "Iran, United States, Kuwait, Iraq",
+        "Action": "Escalates conflict, attacks shipping and Kuwait",
+        "Location": "Persian Gulf, Kuwait, Iraq, Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "Ukraine",
-        "Action": "Strikes major Russian oil terminal.",
-        "Location": "St Petersburg, Russia",
-        "Risk": "HIGH"
+        "Actor": "Russia, Ukraine",
+        "Action": "Intensifies missile, drone strikes and counter-strikes",
+        "Location": "Ukraine, Western Russia",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
         "Actor": "United States",
-        "Action": "Proposes new tariffs on trading partners.",
+        "Action": "Proposes new tariffs on 60+ trading partners",
         "Location": "Global",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-03",
-        "Actor": "Iran, United States, Houthi",
-        "Action": "Escalating maritime and airport attacks.",
-        "Location": "Persian Gulf, Strait of Hormuz, Kuwait",
-        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
         "Actor": "United States, South Korea",
-        "Action": "Discussing nuclear submarine cooperation.",
-        "Location": "East Asia",
-        "Risk": "ELEVATED"
+        "Action": "Discusses nuclear submarine cooperation for deterrence",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "United States, Brazil, ASEAN",
-        "Action": "Diversifying critical minerals supply chains.",
-        "Location": "Global",
-        "Risk": "HIGH"
+        "Actor": "China, SpaceX, ULA",
+        "Action": "Launches new rocket unannounced; intensifies space race",
+        "Location": "China, United States, Low Earth Orbit",
+        "Risk": "ELEVATED"
     }
 ]
