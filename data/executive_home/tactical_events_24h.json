@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-06-03",
-        "Actor": "United States, Iran, IRGC",
-        "Action": "Engage in direct military, maritime attacks.",
-        "Location": "Middle East, Persian Gulf, Umm Qasr",
+        "Actor": "Iran / IRGC",
+        "Action": "Attacks commercial shipping; escalates regional conflict.",
+        "Location": "Persian Gulf, Strait of Hormuz, Kuwait",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
         "Actor": "Russia",
-        "Action": "Escalates missile, drone strikes on Ukraine.",
+        "Action": "Intensifies missile and drone strikes on Ukraine.",
         "Location": "Ukraine",
-        "Risk": "HIGH"
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
         "Actor": "United States",
-        "Action": "Proposes broad tariffs over forced labor.",
-        "Location": "Global (60 economies)",
+        "Action": "Proposes new tariffs on 60 economies and Brazil.",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "China, Philippines, regional claimants",
-        "Action": "Persistent instability and territorial tensions continue.",
-        "Location": "South China Sea",
+        "Actor": "Taiwan / United States",
+        "Action": "Bolsters defense capabilities, US adjusts posture.",
+        "Location": "Taiwan Strait",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "Israel, Hezbollah",
-        "Action": "Escalating cross-border attacks and tensions.",
-        "Location": "Israel-Lebanon border",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-03",
-        "Actor": "United States, xLight",
-        "Action": "Finalizes $150M CHIPS incentives agreement.",
-        "Location": "United States",
+        "Actor": "United States / China / Europe",
+        "Action": "Advances military, commercial space and AI infrastructure.",
+        "Location": "Global, Space",
         "Risk": "ELEVATED"
     }
 ]
