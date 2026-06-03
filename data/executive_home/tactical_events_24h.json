@@ -1,37 +1,44 @@
 [
     {
-        "Date": "2026-06-02",
+        "Date": "2026-06-03",
+        "Actor": "US, Iran",
+        "Action": "Military hostilities escalate, Strait of Hormuz blockade intensifies.",
+        "Location": "Strait of Hormuz, Persian Gulf",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-03",
         "Actor": "Russia",
-        "Action": "Escalates Ukraine attacks, drone hits NATO territory",
-        "Location": "Ukraine/Romania",
+        "Action": "Escalates missile, drone attacks on Ukrainian civilians.",
+        "Location": "Ukraine",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-02",
-        "Actor": "United States/Iran",
-        "Action": "Military actions intensify Gulf maritime shipping conflict",
-        "Location": "Gulf/Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-02",
-        "Actor": "Global/Taiwan",
-        "Action": "Taiwan Strait stability critical for global AI supply",
-        "Location": "Taiwan Strait",
+        "Date": "2026-06-03",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Navigating persistent semiconductor shortages and innovation challenges.",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-02",
-        "Actor": "USA Rare Earth",
-        "Action": "Invests $1.2B in rare earth magnet plant",
-        "Location": "United States",
+        "Date": "2026-06-03",
+        "Actor": "United States",
+        "Action": "Adjusts tariffs, continuing global trade disputes.",
+        "Location": "United States, Global",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-02",
-        "Actor": "US Government",
-        "Action": "Trump AI order centralizes NSA oversight role",
-        "Location": "United States",
+        "Date": "2026-06-03",
+        "Actor": "China",
+        "Action": "Launches new Falcon 9-like rocket, advancing space.",
+        "Location": "China (Space)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-03",
+        "Actor": "AUKUS",
+        "Action": "Expands underwater defense capabilities in Indo-Pacific.",
+        "Location": "Indo-Pacific",
         "Risk": "HIGH"
     }
 ]
