@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-03",
-        "Actor": "US, Iran",
-        "Action": "Military hostilities escalate, Strait of Hormuz blockade intensifies.",
-        "Location": "Strait of Hormuz, Persian Gulf",
+        "Actor": "United States, Iran, IRGC",
+        "Action": "Engage in direct military, maritime attacks.",
+        "Location": "Middle East, Persian Gulf, Umm Qasr",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
         "Actor": "Russia",
-        "Action": "Escalates missile, drone attacks on Ukrainian civilians.",
+        "Action": "Escalates missile, drone strikes on Ukraine.",
         "Location": "Ukraine",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-03",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Navigating persistent semiconductor shortages and innovation challenges.",
-        "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
         "Actor": "United States",
-        "Action": "Adjusts tariffs, continuing global trade disputes.",
-        "Location": "United States, Global",
+        "Action": "Proposes broad tariffs over forced labor.",
+        "Location": "Global (60 economies)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "China",
-        "Action": "Launches new Falcon 9-like rocket, advancing space.",
-        "Location": "China (Space)",
+        "Actor": "China, Philippines, regional claimants",
+        "Action": "Persistent instability and territorial tensions continue.",
+        "Location": "South China Sea",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "AUKUS",
-        "Action": "Expands underwater defense capabilities in Indo-Pacific.",
-        "Location": "Indo-Pacific",
+        "Actor": "Israel, Hezbollah",
+        "Action": "Escalating cross-border attacks and tensions.",
+        "Location": "Israel-Lebanon border",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-03",
+        "Actor": "United States, xLight",
+        "Action": "Finalizes $150M CHIPS incentives agreement.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
     }
 ]
