@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-03",
-        "Actor": "Iran, United States, Kuwait",
-        "Action": "Escalating tensions with missile, maritime strikes.",
-        "Location": "Persian Gulf, Strait of Hormuz, Kuwait",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-03",
-        "Actor": "Russia, Ukraine",
-        "Action": "Conflict escalates with civilian attacks, terminal strike.",
-        "Location": "Ukraine, St. Petersburg (Russia)",
+        "Actor": "Iran",
+        "Action": "Escalating maritime attacks, blockade near Hormuz",
+        "Location": "Strait of Hormuz, Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
         "Actor": "United States",
-        "Action": "Proposes new tariffs on India over labor claims.",
-        "Location": "India",
-        "Risk": "HIGH"
+        "Action": "Proposes widespread new tariffs on 60+ countries",
+        "Location": "Global",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "United States, Taiwan",
-        "Action": "Militaries face interoperability challenges in defense.",
-        "Location": "Taiwan",
+        "Actor": "Russia, Ukraine",
+        "Action": "Russia escalates civilian attacks, Ukraine strikes oil",
+        "Location": "Ukraine, St Petersburg (Russia)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
         "Actor": "United States, South Korea",
-        "Action": "Discussing future nuclear submarine cooperation.",
-        "Location": "Northeast Asia",
-        "Risk": "ELEVATED"
+        "Action": "Discussing nuclear submarine cooperation in Indo-Pacific",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "European Union",
-        "Action": "Considers expanding naval mission in Strait of Hormuz.",
-        "Location": "Strait of Hormuz",
+        "Actor": "Iran",
+        "Action": "Covert nuclear risk increases; IAEA access constrained",
+        "Location": "Iran",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-03",
+        "Actor": "TSMC, NVIDIA",
+        "Action": "Expanding NVIDIA AI use in chip production",
+        "Location": "Taiwan",
+        "Risk": "ELEVATED"
     }
 ]
