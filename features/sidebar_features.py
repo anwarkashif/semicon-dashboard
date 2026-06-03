@@ -22,14 +22,13 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
 
     st.sidebar.title("SemicoN Access")
 
-    # Define the base strategic sequence
+    # Define the base strategic sequence (Hidden: RAG Page & Threat Scoring)
     base_options = [
         "Executive Home",
         "Today's Snippet",
         "Weekly Tactical Brief",
         "Weekly Intelligence Brief",
-        "Quantitative Threat Scoring",
-        "Intelligence Interrogation (RAG)",
+        "Global Threat Intercept (ShadowBroker)",
         "Trend Timelines",
         "Archives"
     ]

@@ -36,7 +36,6 @@ st.markdown(
         opacity: 0 !important;
     }
     
-    /* Elegant pulse text initialization */
     @keyframes pulse {
         0% { opacity: 0.2; }
         50% { opacity: 0.7; }
@@ -98,8 +97,6 @@ inject_global_theme()
 # ==========================================
 if st.session_state['role'] is None:
     # ⚡ FAST PATH: The user is not logged in. Render login instantly.
-    
-    # Dismiss the pre-loader text smoothly right before drawing elements
     st.markdown("""<style>.loading-pulse { display: none !important; }</style>""", unsafe_allow_html=True)
     render_login_screen()
 
@@ -124,6 +121,7 @@ else:
     from features.home_features import render_executive_home
     from features.snippet_features import render_daily_snippet
     from features.snippet_orchestrator import handle_snippet_logic
+    from features.shadowbroker_features import render_shadowbroker  # 🛰️ ShadowBroker Import
 
     MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
     
@@ -277,8 +275,6 @@ else:
                         date_str = line[3:d_end]
                         title_str = line[d_end+1:].strip()
                         
-                        # Logic: Accept the news if it's "Recent Update" OR within a broad window
-                        # This avoids the "no data" issue if the 2-hour cron job hasn't hit the "perfect" window.
                         clean_search = title_str.replace("🔴", "").replace("🟠", "").replace("🟡", "").replace("CRITICAL:", "").replace("ELEVATED:", "").replace("WATCH:", "").replace("LIVE WARNING:", "").strip()
                         search_query = urllib.parse.quote_plus(clean_search)
                         news_link = f"https://news.google.com/search?q={search_query}"
@@ -288,7 +284,7 @@ else:
                                 "title": title_str, 
                                 "published": date_str, 
                                 "link": news_link, 
-                                "is_24h": True # We force this True to ensure it populates
+                                "is_24h": True
                             })
                     except Exception: pass
         return rss_dict
@@ -307,7 +303,6 @@ else:
                         seen_titles.add(art['title'])
                         unique_news.append(art)
 
-            # ⚡ FIX: We cap the news to the 30 most recent items so the animation speed doesn't slow to a crawl!
             unique_news = unique_news[-30:]
 
             critical = ['ban', 'sanction', 'shortage', 'escalation', 'military', 'war', 'blockade', 'strike', 'chokepoint', 'threat', 'breach', 'crisis']
@@ -340,7 +335,6 @@ else:
         if not ticker_items: return
         all_items_html = "".join(ticker_items)
 
-        # Dynamic Speed Calculation
         dynamic_duration = max(20, len(ticker_items) * 10 + 15)
 
         ticker_code = f"""
@@ -462,6 +456,9 @@ else:
                 text_military, text_section_5, text_india, text_wa, text_final, text_ews,
                 selected_actor, df_actions, MAPBOX_PUBLIC_TOKEN
             )
+
+    elif view_selection == "Global Threat Intercept (ShadowBroker)":
+        render_shadowbroker()
             
     elif view_selection == "Quantitative Threat Scoring":
         render_threat_scoring()
