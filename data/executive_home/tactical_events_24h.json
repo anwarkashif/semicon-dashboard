@@ -1,37 +1,37 @@
 [
     {
         "Date": "2026-06-03",
-        "Actor": "Iran, United States, Kuwait, Iraq",
-        "Action": "Escalates conflict, attacks shipping and Kuwait",
-        "Location": "Persian Gulf, Kuwait, Iraq, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-03",
-        "Actor": "Russia, Ukraine",
-        "Action": "Intensifies missile, drone strikes and counter-strikes",
-        "Location": "Ukraine, Western Russia",
+        "Actor": "Iran, United States, IRGC",
+        "Action": "Engaged in maritime attacks, disabled tanker",
+        "Location": "Persian Gulf, Strait of Hormuz, Iraq",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
         "Actor": "United States",
-        "Action": "Proposes new tariffs on 60+ trading partners",
-        "Location": "Global",
+        "Action": "Proposes new tariffs on China, EU",
+        "Location": "United States, China, European Union",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "United States, South Korea",
-        "Action": "Discusses nuclear submarine cooperation for deterrence",
-        "Location": "Indo-Pacific",
+        "Actor": "Russia",
+        "Action": "Pounds Ukraine, weaponizes drones against NATO",
+        "Location": "Ukraine, NATO",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "China, SpaceX, ULA",
-        "Action": "Launches new rocket unannounced; intensifies space race",
-        "Location": "China, United States, Low Earth Orbit",
-        "Risk": "ELEVATED"
+        "Actor": "United States",
+        "Action": "Secures $1.6B for rare earth supply chain",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-03",
+        "Actor": "European Union",
+        "Action": "Proposes naval mission for Strait of Hormuz",
+        "Location": "Strait of Hormuz",
+        "Risk": "HIGH"
     }
 ]
