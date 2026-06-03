@@ -1,37 +1,44 @@
 [
     {
         "Date": "2026-06-03",
-        "Actor": "Iran / IRGC",
-        "Action": "Attacks commercial shipping; escalates regional conflict.",
-        "Location": "Persian Gulf, Strait of Hormuz, Kuwait",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-03",
         "Actor": "Russia",
-        "Action": "Intensifies missile and drone strikes on Ukraine.",
+        "Action": "Escalates missile and drone attacks.",
         "Location": "Ukraine",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
+        "Actor": "Ukraine",
+        "Action": "Strikes major Russian oil terminal.",
+        "Location": "St Petersburg, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-03",
         "Actor": "United States",
-        "Action": "Proposes new tariffs on 60 economies and Brazil.",
+        "Action": "Proposes new tariffs on trading partners.",
         "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "Taiwan / United States",
-        "Action": "Bolsters defense capabilities, US adjusts posture.",
-        "Location": "Taiwan Strait",
-        "Risk": "HIGH"
+        "Actor": "Iran, United States, Houthi",
+        "Action": "Escalating maritime and airport attacks.",
+        "Location": "Persian Gulf, Strait of Hormuz, Kuwait",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-03",
-        "Actor": "United States / China / Europe",
-        "Action": "Advances military, commercial space and AI infrastructure.",
-        "Location": "Global, Space",
+        "Actor": "United States, South Korea",
+        "Action": "Discussing nuclear submarine cooperation.",
+        "Location": "East Asia",
         "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-03",
+        "Actor": "United States, Brazil, ASEAN",
+        "Action": "Diversifying critical minerals supply chains.",
+        "Location": "Global",
+        "Risk": "HIGH"
     }
 ]
