@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-06-01",
-        "Actor": "Iran",
-        "Action": "Halts US talks, threatens Hormuz blockade",
-        "Location": "Strait of Hormuz, Arabian Gulf",
+        "Date": "2026-06-03",
+        "Actor": "Iran, United States, Kuwait",
+        "Action": "Escalating tensions with missile, maritime strikes.",
+        "Location": "Persian Gulf, Strait of Hormuz, Kuwait",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-01",
-        "Actor": "Russia",
-        "Action": "Drone strikes NATO territory, raises tensions",
-        "Location": "Romania",
+        "Date": "2026-06-03",
+        "Actor": "Russia, Ukraine",
+        "Action": "Conflict escalates with civilian attacks, terminal strike.",
+        "Location": "Ukraine, St. Petersburg (Russia)",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-01",
-        "Actor": "China",
-        "Action": "Closes heavy rare earth exports door",
-        "Location": "China",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-01",
-        "Actor": "Adversaries (targeting US troops)",
-        "Action": "Targeting US troops via smartphone data",
-        "Location": "Global",
+        "Date": "2026-06-03",
+        "Actor": "United States",
+        "Action": "Proposes new tariffs on India over labor claims.",
+        "Location": "India",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-01",
-        "Actor": "South Korea",
-        "Action": "Accelerates nuclear-powered submarine development",
-        "Location": "South Korea",
+        "Date": "2026-06-03",
+        "Actor": "United States, Taiwan",
+        "Action": "Militaries face interoperability challenges in defense.",
+        "Location": "Taiwan",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-01",
-        "Actor": "BYD (China)",
-        "Action": "Launches China's first 4nm smart chip",
-        "Location": "China",
+        "Date": "2026-06-03",
+        "Actor": "United States, South Korea",
+        "Action": "Discussing future nuclear submarine cooperation.",
+        "Location": "Northeast Asia",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-03",
+        "Actor": "European Union",
+        "Action": "Considers expanding naval mission in Strait of Hormuz.",
+        "Location": "Strait of Hormuz",
         "Risk": "HIGH"
     }
 ]
