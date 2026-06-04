@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-04",
-        "Actor": "Iran",
-        "Action": "Launches deadly attack on Kuwait's main airport.",
-        "Location": "Kuwait",
+        "Actor": "Unidentified Actors, Coalition Forces",
+        "Action": "Multiple commercial vessels attacked; coalition formed.",
+        "Location": "Strait of Hormuz / Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "Iran (IRGC)",
-        "Action": "Attacks multiple cargo vessels near Hormuz.",
-        "Location": "Strait of Hormuz, Arabian Gulf",
+        "Actor": "Syria",
+        "Action": "Undeclared chemical weapons sites discovered.",
+        "Location": "Syria",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
         "Actor": "Israel",
-        "Action": "Approves settlements, strikes Gaza, stalls ceasefire.",
-        "Location": "West Bank, Gaza",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-04",
-        "Actor": "China, Taiwan",
-        "Action": "China bans lawmakers; Taiwan boosts anti-ship arsenal.",
-        "Location": "Taiwan Strait",
+        "Action": "Approved 2,000 new West Bank settlement homes.",
+        "Location": "West Bank",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "United States",
-        "Action": "Restricts advanced GPU sales to China-linked data centers.",
-        "Location": "China, Southeast Asia",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Disappointing AI outlook triggers market selloff.",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "United States, NATO",
-        "Action": "Urges NATO allies to boost air, naval forces.",
-        "Location": "Europe, North Atlantic",
+        "Actor": "US, EU, China",
+        "Action": "Escalating trade tensions, tariffs over various concerns.",
+        "Location": "Europe, United States, China, ASEAN",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-04",
+        "Actor": "Taiwan",
+        "Action": "Beefs up anti-ship missile arsenal against invasion.",
+        "Location": "Taiwan",
         "Risk": "HIGH"
     }
 ]
