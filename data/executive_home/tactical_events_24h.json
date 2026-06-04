@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-06-03",
-        "Actor": "Iran, United States, Kuwait",
-        "Action": "Escalating tensions with missile, maritime strikes.",
-        "Location": "Persian Gulf, Strait of Hormuz, Kuwait",
+        "Date": "2026-06-04",
+        "Actor": "Iran",
+        "Action": "Launches deadly attack on Kuwait's main airport.",
+        "Location": "Kuwait",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-03",
-        "Actor": "Russia, Ukraine",
-        "Action": "Conflict escalates with civilian attacks, terminal strike.",
-        "Location": "Ukraine, St. Petersburg (Russia)",
+        "Date": "2026-06-04",
+        "Actor": "Iran (IRGC)",
+        "Action": "Attacks multiple cargo vessels near Hormuz.",
+        "Location": "Strait of Hormuz, Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-03",
+        "Date": "2026-06-04",
+        "Actor": "Israel",
+        "Action": "Approves settlements, strikes Gaza, stalls ceasefire.",
+        "Location": "West Bank, Gaza",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-04",
+        "Actor": "China, Taiwan",
+        "Action": "China bans lawmakers; Taiwan boosts anti-ship arsenal.",
+        "Location": "Taiwan Strait",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-04",
         "Actor": "United States",
-        "Action": "Proposes new tariffs on India over labor claims.",
-        "Location": "India",
+        "Action": "Restricts advanced GPU sales to China-linked data centers.",
+        "Location": "China, Southeast Asia",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-03",
-        "Actor": "United States, Taiwan",
-        "Action": "Militaries face interoperability challenges in defense.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-03",
-        "Actor": "United States, South Korea",
-        "Action": "Discussing future nuclear submarine cooperation.",
-        "Location": "Northeast Asia",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-03",
-        "Actor": "European Union",
-        "Action": "Considers expanding naval mission in Strait of Hormuz.",
-        "Location": "Strait of Hormuz",
+        "Date": "2026-06-04",
+        "Actor": "United States, NATO",
+        "Action": "Urges NATO allies to boost air, naval forces.",
+        "Location": "Europe, North Atlantic",
         "Risk": "HIGH"
     }
 ]
