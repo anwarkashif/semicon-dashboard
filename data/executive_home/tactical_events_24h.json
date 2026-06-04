@@ -2,43 +2,43 @@
     {
         "Date": "2026-06-04",
         "Actor": "Iran",
-        "Action": "Attacks Kuwait airport and shipping in Gulf.",
-        "Location": "Kuwait, Persian Gulf, Strait of Hormuz",
+        "Action": "Launches deadly attack on Kuwait's main airport.",
+        "Location": "Kuwait",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-04",
+        "Actor": "Iran (IRGC)",
+        "Action": "Attacks multiple cargo vessels near Hormuz.",
+        "Location": "Strait of Hormuz, Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
         "Actor": "Israel",
-        "Action": "Continues military operations despite ceasefire efforts.",
-        "Location": "Gaza, Lebanon",
+        "Action": "Approves settlements, strikes Gaza, stalls ceasefire.",
+        "Location": "West Bank, Gaza",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-04",
+        "Actor": "China, Taiwan",
+        "Action": "China bans lawmakers; Taiwan boosts anti-ship arsenal.",
+        "Location": "Taiwan Strait",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-04",
         "Actor": "United States",
-        "Action": "Proposes new tariffs on major trading partners.",
-        "Location": "Global",
+        "Action": "Restricts advanced GPU sales to China-linked data centers.",
+        "Location": "China, Southeast Asia",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "TSMC, Nvidia",
-        "Action": "Signals chip price hikes amid AI boom and crackdowns.",
-        "Location": "Taiwan, China, Southeast Asia",
+        "Actor": "United States, NATO",
+        "Action": "Urges NATO allies to boost air, naval forces.",
+        "Location": "Europe, North Atlantic",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-04",
-        "Actor": "China",
-        "Action": "Bans NZ lawmakers over Taiwan visit.",
-        "Location": "China, Taiwan, New Zealand",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-04",
-        "Actor": "United States",
-        "Action": "Urges NATO allies to boost air/naval forces.",
-        "Location": "Europe, Canada (NATO)",
-        "Risk": "ELEVATED"
     }
 ]
