@@ -14,9 +14,11 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# ⬛ INSTANT SEAMLESS MASK (Color-matched to config.toml #0e1117)
+# ⬛ INSTANT SEAMLESS MASK
 st.markdown(
     """
+    <div id="top-of-page"></div>
+    
     <style>
     /* Intercept the topmost browser layers immediately with your EXACT theme color */
     html, body, [data-testid="stAppViewContainer"], .stApp {
@@ -29,7 +31,6 @@ st.markdown(
     }
     
     /* Aggressively destroy ONLY the status widget (running man/stop button) */
-    /* ⚡ FIX: Removed the emotion-cache class so it doesn't hide the Ticker Tape */
     [data-testid="stStatusWidget"] {
         visibility: hidden !important;
         display: none !important;
@@ -416,6 +417,44 @@ else:
 
     # 🟢 RENDER TICKER TAPE PLACE EXACTLY HERE 🟢
     render_ticker_tape()
+
+    # 🚀 INJECT SCROLL-TO-TOP BUTTON (EXCLUDING SPECIFIC SECTIONS)
+    if view_selection not in ["Trend Timelines", "Archives"]:
+        st.markdown(
+            """
+            <style>
+            .scroll-top-btn {
+                position: fixed;
+                bottom: 25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(255, 255, 255, 0.15); 
+                color: #ffffff !important; 
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                font-weight: bold;
+                text-decoration: none;
+                backdrop-filter: blur(5px); 
+                -webkit-backdrop-filter: blur(5px);
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+                z-index: 999990; 
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                transition: background-color 0.3s ease, transform 0.2s ease;
+            }
+            .scroll-top-btn:hover {
+                background-color: rgba(255, 255, 255, 0.35);
+                transform: translateX(-50%) translateY(-3px);
+            }
+            </style>
+            <a href="#top-of-page" target="_self" class="scroll-top-btn" title="Scroll to Top">↑</a>
+            """,
+            unsafe_allow_html=True
+        )
 
     if view_selection == "Executive Home":
         render_executive_home(dashboard_data, df_actions, live_tactical_data, MAPBOX_PUBLIC_TOKEN)
