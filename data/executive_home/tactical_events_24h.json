@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-06-04",
-        "Actor": "Unidentified Actors",
-        "Action": "Multiple maritime attacks in vital chokepoint.",
-        "Location": "Strait of Hormuz / Arabian Gulf",
+        "Actor": "Unspecified (Iran proxies implied)",
+        "Action": "Ships attacked, threatening critical chokepoint",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "United States",
-        "Action": "Proposes new trade tariffs on 60 economies.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-04",
-        "Actor": "TSMC",
-        "Action": "Forecasts prolonged global AI chip supply shortage.",
-        "Location": "Global (semiconductor industry)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-04",
         "Actor": "Hezbollah",
-        "Action": "Rejects Lebanon-Israel ceasefire, heightening conflict risk.",
+        "Action": "Rejects proposed Lebanon-Israel ceasefire terms",
         "Location": "Lebanon, Israel",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "Syria",
-        "Action": "Hidden chemical weapon sites discovered, proliferation risk.",
-        "Location": "Syria",
+        "Actor": "China",
+        "Action": "Develops advanced seabed warfare submarine capabilities",
+        "Location": "Global oceans, Taiwan Strait",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "Taiwan",
-        "Action": "Boosts anti-ship missile arsenal against China threat.",
-        "Location": "Taiwan",
+        "Actor": "United States",
+        "Action": "Plans $1.2B rare earth magnet facility",
+        "Location": "South Carolina, United States",
         "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-04",
+        "Actor": "Syria",
+        "Action": "Hidden chemical weapons sites emerge",
+        "Location": "Syria",
+        "Risk": "CRITICAL"
     }
 ]
