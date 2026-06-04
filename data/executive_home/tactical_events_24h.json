@@ -1,44 +1,37 @@
 [
     {
-        "Date": "2026-06-03",
+        "Date": "2026-06-04",
         "Actor": "Iran",
-        "Action": "Escalating maritime attacks, blockade near Hormuz",
-        "Location": "Strait of Hormuz, Arabian Gulf",
+        "Action": "Launches attacks on Kuwait airport, Gulf shipping.",
+        "Location": "Kuwait, Arabian Gulf, Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-03",
+        "Date": "2026-06-04",
         "Actor": "United States",
-        "Action": "Proposes widespread new tariffs on 60+ countries",
+        "Action": "Proposes widespread tariffs against 60 nations.",
         "Location": "Global",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-03",
-        "Actor": "Russia, Ukraine",
-        "Action": "Russia escalates civilian attacks, Ukraine strikes oil",
-        "Location": "Ukraine, St Petersburg (Russia)",
+        "Date": "2026-06-04",
+        "Actor": "United States (House of Representatives)",
+        "Action": "Votes to limit President's Iran war powers.",
+        "Location": "United States",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-03",
-        "Actor": "United States, South Korea",
-        "Action": "Discussing nuclear submarine cooperation in Indo-Pacific",
-        "Location": "Indo-Pacific",
+        "Date": "2026-06-04",
+        "Actor": "United States and intelligence allies",
+        "Action": "Issue rare joint warning regarding China.",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-03",
-        "Actor": "Iran",
-        "Action": "Covert nuclear risk increases; IAEA access constrained",
-        "Location": "Iran",
+        "Date": "2026-06-04",
+        "Actor": "United States (USA Rare Earth)",
+        "Action": "Secures $1.6B funding for rare earth supply.",
+        "Location": "United States",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-03",
-        "Actor": "TSMC, NVIDIA",
-        "Action": "Expanding NVIDIA AI use in chip production",
-        "Location": "Taiwan",
-        "Risk": "ELEVATED"
     }
 ]
