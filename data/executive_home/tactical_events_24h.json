@@ -1,37 +1,44 @@
 [
     {
         "Date": "2026-06-04",
-        "Actor": "Unspecified (Iran proxies implied)",
-        "Action": "Ships attacked, threatening critical chokepoint",
+        "Actor": "Iran",
+        "Action": "Asserts co-management of vital Strait of Hormuz.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
+        "Actor": "Unknown",
+        "Action": "Cargo vessel struck by missile in Arabian Gulf.",
+        "Location": "Arabian Gulf",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-04",
         "Actor": "Hezbollah",
-        "Action": "Rejects proposed Lebanon-Israel ceasefire terms",
+        "Action": "Rejects US-brokered Israel-Lebanon ceasefire plan.",
         "Location": "Lebanon, Israel",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "China",
-        "Action": "Develops advanced seabed warfare submarine capabilities",
-        "Location": "Global oceans, Taiwan Strait",
+        "Actor": "Syria",
+        "Action": "Undeclared chemical weapons sites discovered amidst transition.",
+        "Location": "Syria",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "United States",
-        "Action": "Plans $1.2B rare earth magnet facility",
-        "Location": "South Carolina, United States",
+        "Actor": "US National Security Agency (NSA)",
+        "Action": "Utilizing advanced AI for offensive cyber attacks.",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "Syria",
-        "Action": "Hidden chemical weapons sites emerge",
-        "Location": "Syria",
-        "Risk": "CRITICAL"
+        "Actor": "United States (Senator Warren)",
+        "Action": "Scrutinizes Nvidia's AI chip sales to China.",
+        "Location": "United States, China",
+        "Risk": "HIGH"
     }
 ]
