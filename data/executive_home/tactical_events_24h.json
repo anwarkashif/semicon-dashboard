@@ -1,43 +1,43 @@
 [
     {
         "Date": "2026-06-04",
-        "Actor": "Unidentified Actors, Coalition Forces",
-        "Action": "Multiple commercial vessels attacked; coalition formed.",
+        "Actor": "Unidentified Actors",
+        "Action": "Multiple maritime attacks in vital chokepoint.",
         "Location": "Strait of Hormuz / Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "Syria",
-        "Action": "Undeclared chemical weapons sites discovered.",
-        "Location": "Syria",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-04",
-        "Actor": "Israel",
-        "Action": "Approved 2,000 new West Bank settlement homes.",
-        "Location": "West Bank",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-04",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Disappointing AI outlook triggers market selloff.",
+        "Actor": "United States",
+        "Action": "Proposes new trade tariffs on 60 economies.",
         "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-04",
-        "Actor": "US, EU, China",
-        "Action": "Escalating trade tensions, tariffs over various concerns.",
-        "Location": "Europe, United States, China, ASEAN",
+        "Actor": "TSMC",
+        "Action": "Forecasts prolonged global AI chip supply shortage.",
+        "Location": "Global (semiconductor industry)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-04",
+        "Actor": "Hezbollah",
+        "Action": "Rejects Lebanon-Israel ceasefire, heightening conflict risk.",
+        "Location": "Lebanon, Israel",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-04",
+        "Actor": "Syria",
+        "Action": "Hidden chemical weapon sites discovered, proliferation risk.",
+        "Location": "Syria",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-04",
         "Actor": "Taiwan",
-        "Action": "Beefs up anti-ship missile arsenal against invasion.",
+        "Action": "Boosts anti-ship missile arsenal against China threat.",
         "Location": "Taiwan",
         "Risk": "HIGH"
     }
