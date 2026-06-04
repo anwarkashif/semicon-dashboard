@@ -22,13 +22,12 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
 
     st.sidebar.title("SemicoN Access")
 
-    # Define the base strategic sequence (Hidden: RAG Page & Threat Scoring)
+    # Define the base strategic sequence for EVERYONE (ShadowBroker removed)
     base_options = [
         "Executive Home",
         "Today's Snippet",
         "Weekly Tactical Brief",
         "Weekly Intelligence Brief",
-        "Global Threat Intercept (ShadowBroker)",
         "Trend Timelines",
         "Archives"
     ]
@@ -38,8 +37,8 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         if st.sidebar.button("Logout"):
             st.session_state['role'] = None
             st.rerun()
-        # Admin gets everything, appended to the base sequence
-        view_options = base_options + ["Clean Archives", "Trash"]
+        # Admin gets everything: Base + ShadowBroker + Clean Archives + Trash
+        view_options = base_options + ["Global Threat Intercept (ShadowBroker)", "Clean Archives", "Trash"]
     else:
         st.sidebar.info("Access Level: **Guest Viewer**")
         st.sidebar.caption("*(System Access Restricted)*")
@@ -83,5 +82,4 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         **Fabless:** Companies that design chips but outsource manufacturing (e.g., Nvidia, Apple, AMD).
         """)
 
-    # We now only return two variables instead of three
     return selected_actor, view_selection
