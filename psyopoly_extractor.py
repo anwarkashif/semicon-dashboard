@@ -3,6 +3,13 @@ import json
 import os
 from datetime import datetime
 
+# ==========================================
+# --- PATH CONFIGURATION ---
+# ==========================================
+# Get the directory of the current script (SemicoN_Project root)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, 'data', 'tactical_events_24h.json')
+
 # 1. PSYOPOLY SUPABASE CONFIGURATION
 # We use the permanent Anon Key, NOT your personal expiring JWT session token.
 SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news?select=id%2Cheadline%2Cposted_at%2Curl&order=posted_at.desc&limit=40"
@@ -50,7 +57,7 @@ def merge_with_global_pool(new_events):
     if not new_events:
         return
         
-    filepath = 'data/tactical_events_24h.json'
+    filepath = DATA_PATH  # 🚀 USING THE ABSOLUTE PATH HERE
     existing_events = []
     
     # Load current pool
@@ -70,8 +77,8 @@ def merge_with_global_pool(new_events):
             existing_events.insert(0, event) # Add newest to the top
             added_count += 1
             
-    # Save back to the global pool
-    os.makedirs('data', exist_ok=True)
+    # Save back to the global pool using the absolute path directory
+    os.makedirs(os.path.dirname(filepath), exist_ok=True) 
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(existing_events, f, indent=4)
         

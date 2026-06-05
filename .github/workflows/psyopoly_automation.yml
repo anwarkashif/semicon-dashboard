@@ -1,0 +1,36 @@
+name: SemicoN Psyopoly Extractor
+
+on:
+  workflow_dispatch: # Allows manual trigger testing
+  schedule:
+    # Runs at minute 31 of every hour (e.g., 1:31, 2:31)
+    - cron: '31 * * * *' 
+
+jobs:
+  extract_intel:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Run Psyopoly Extractor
+      run: python psyopoly_extractor.py
+
+    - name: Commit and Push Updated Intel
+      run: |
+        git config --global user.name "SemicoN Automaton"
+        git config --global user.email "automaton@semicon.local"
+        git add data/tactical_events_24h.json
+        git commit -m "Automated Psyopoly Intel Update" || echo "No new intel to commit"
+        git push
