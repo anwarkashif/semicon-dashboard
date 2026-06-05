@@ -172,12 +172,15 @@ jobs:
       if: github.event.action == 'trigger_psyopoly_siphon'
       run: python psyopoly_extractor.py || echo "Psyopoly pipeline failed."
 
-    - name: Commit and Push (Psyopoly Siphon)
+   - name: Commit and Push (Psyopoly Siphon)
       if: github.event.action == 'trigger_psyopoly_siphon'
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git pull origin main --rebase || echo "No changes to pull"
+        # 1. SAVE THE DATA FIRST
         git add data/tactical_events_24h.json
         git commit -m "🚨 Auto-Update: West Asia Psyopoly Intel" || echo "No changes to commit"
-        git push
+        # 2. THEN PULL UPDATES FROM SERVER (Now that local changes are safe)
+        git pull origin main --rebase || echo "No remote changes to pull"
+        # 3. PUSH IT ALL BACK
+        git push origin main
