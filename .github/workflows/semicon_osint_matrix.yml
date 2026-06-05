@@ -7,6 +7,7 @@ on:
       - trigger_weekly_brief
       - trigger_memory_layer
       - trigger_shift_brief
+      - trigger_psyopoly_siphon  # 🚀 Added to Master Dispatcher List
 
 jobs:
   osint-pipeline-dispatcher:
@@ -150,4 +151,33 @@ jobs:
         git pull origin main --rebase || echo "No changes to pull"
         git add data/today_snippet/
         git commit -m "📋 Auto-Update: Today's Snippet 12H Brief" || echo "No changes to commit"
+        git push
+
+    # ==========================================
+    # TASK 5: WEST ASIA STRATEGIC INTEL - PSYOPOLY SIPHON (HOURLY)
+    # ==========================================
+    - name: Set up Python 3.10 (Psyopoly Siphon)
+      if: github.event.action == 'trigger_psyopoly_siphon'
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies (Psyopoly Siphon)
+      if: github.event.action == 'trigger_psyopoly_siphon'
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Run Psyopoly Extractor Pipeline
+      if: github.event.action == 'trigger_psyopoly_siphon'
+      run: python psyopoly_extractor.py || echo "Psyopoly pipeline failed."
+
+    - name: Commit and Push (Psyopoly Siphon)
+      if: github.event.action == 'trigger_psyopoly_siphon'
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git pull origin main --rebase || echo "No changes to pull"
+        git add data/tactical_events_24h.json
+        git commit -m "🚨 Auto-Update: West Asia Psyopoly Intel" || echo "No changes to commit"
         git push
