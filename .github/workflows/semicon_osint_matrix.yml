@@ -7,7 +7,7 @@ on:
       - trigger_weekly_brief
       - trigger_memory_layer
       - trigger_shift_brief
-      - trigger_psyopoly_siphon  # 🚀 Added to Master Dispatcher List
+      - trigger_psyopoly_siphon
 
 jobs:
   osint-pipeline-dispatcher:
@@ -180,8 +180,4 @@ jobs:
         git pull origin main --rebase || echo "No changes to pull"
         git add data/tactical_events_24h.json
         git commit -m "🚨 Auto-Update: West Asia Psyopoly Intel" || echo "No changes to commit"
-<<<<<<< HEAD
         git push
-=======
-        git push
->>>>>>> 48da504d86a526213fdbeb17d6381635855dc657
