@@ -1,44 +1,44 @@
 [
     {
-        "Date": "2026-06-04",
-        "Actor": "Iran",
-        "Action": "Asserts co-management of vital Strait of Hormuz.",
-        "Location": "Strait of Hormuz",
+        "Date": "2026-06-05",
+        "Actor": "Oman",
+        "Action": "Halts crude loading after terminal explosion.",
+        "Location": "Oman",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-04",
-        "Actor": "Unknown",
-        "Action": "Cargo vessel struck by missile in Arabian Gulf.",
+        "Date": "2026-06-05",
+        "Actor": "Undisclosed",
+        "Action": "Missile strikes cargo vessel in Arabian Gulf.",
         "Location": "Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-04",
-        "Actor": "Hezbollah",
-        "Action": "Rejects US-brokered Israel-Lebanon ceasefire plan.",
-        "Location": "Lebanon, Israel",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-04",
-        "Actor": "Syria",
-        "Action": "Undeclared chemical weapons sites discovered amidst transition.",
-        "Location": "Syria",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-04",
-        "Actor": "US National Security Agency (NSA)",
-        "Action": "Utilizing advanced AI for offensive cyber attacks.",
-        "Location": "Global",
+        "Date": "2026-06-05",
+        "Actor": "TSMC, NVIDIA",
+        "Action": "Integrates NVIDIA AI for chip production.",
+        "Location": "Taiwan",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-04",
-        "Actor": "United States (Senator Warren)",
-        "Action": "Scrutinizes Nvidia's AI chip sales to China.",
-        "Location": "United States, China",
+        "Date": "2026-06-05",
+        "Actor": "China, North Korea",
+        "Action": "Xi Jinping to visit North Korea.",
+        "Location": "North Korea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-05",
+        "Actor": "United States (NSA)",
+        "Action": "NSA uses AI for offensive cyber attacks.",
+        "Location": "Global",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-05",
+        "Actor": "Global AI Industry",
+        "Action": "AI growth constrained by chip capacity.",
+        "Location": "Global",
         "Risk": "HIGH"
     }
 ]
