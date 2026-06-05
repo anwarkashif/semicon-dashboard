@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-05",
+        "Actor": "Iran / Unidentified",
+        "Action": "Tanker crippled, cargo vessel struck in Arabian Gulf.",
+        "Location": "Arabian Gulf / Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-05",
         "Actor": "China",
-        "Action": "Considers Taiwan invasion, post-invasion governance.",
+        "Action": "China deliberates Taiwan governance post-invasion scenario.",
         "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Unidentified Maritime Actors",
-        "Action": "Cargo vessels struck by explosions in Gulf.",
-        "Location": "Arabian Gulf",
+        "Actor": "Ukraine",
+        "Action": "Stray sea drone explodes in Romanian port.",
+        "Location": "Romania",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-05",
+        "Actor": "China",
+        "Action": "Mystery structure observed on disputed South China Sea reef.",
+        "Location": "South China Sea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-05",
         "Actor": "United States",
-        "Action": "House passes Ukraine aid, new Russia sanctions.",
-        "Location": "Ukraine, Russia, United States",
+        "Action": "US issues new, expanded Iran-related sanctions.",
+        "Location": "Iran / Middle East",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "China, North Korea",
-        "Action": "Xi visits North Korea, deepens influence.",
-        "Location": "North Korea",
+        "Actor": "Panama Canal Authority",
+        "Action": "Panama Canal reduces draft limit due to El Ni\u00f1o.",
+        "Location": "Panama Canal",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "Global Shipping Market",
-        "Action": "Container spot rates surge; early peak season.",
-        "Location": "Global Supply Chains",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "USA Rare Earth",
-        "Action": "Builds $1.2B rare earth magnet plant.",
-        "Location": "South Carolina, United States",
-        "Risk": "ELEVATED"
     }
 ]
