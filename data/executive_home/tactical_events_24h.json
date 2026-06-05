@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-05",
-        "Actor": "Oman",
-        "Action": "Halts crude loading after terminal explosion.",
-        "Location": "Oman",
+        "Actor": "China",
+        "Action": "Contemplates ruling Taiwan post-invasion scenarios",
+        "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Undisclosed",
-        "Action": "Missile strikes cargo vessel in Arabian Gulf.",
+        "Actor": "Unknown",
+        "Action": "Cargo vessels struck in Arabian Gulf",
         "Location": "Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "TSMC, NVIDIA",
-        "Action": "Integrates NVIDIA AI for chip production.",
-        "Location": "Taiwan",
+        "Actor": "United States",
+        "Action": "Approves Ukraine aid, sanctions Russia",
+        "Location": "Ukraine, Russia",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-05",
         "Actor": "China, North Korea",
-        "Action": "Xi Jinping to visit North Korea.",
+        "Action": "Xi visits North Korea to strengthen ties",
         "Location": "North Korea",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "United States (NSA)",
-        "Action": "NSA uses AI for offensive cyber attacks.",
+        "Actor": "Nvidia, Samsung, SK Hynix, Micron",
+        "Action": "Nvidia approves memory suppliers for next-gen AI",
         "Location": "Global",
-        "Risk": "ELEVATED"
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Global AI Industry",
-        "Action": "AI growth constrained by chip capacity.",
-        "Location": "Global",
-        "Risk": "HIGH"
+        "Actor": "United States, Africa",
+        "Action": "US pullback leads to rising Africa terrorism",
+        "Location": "Africa",
+        "Risk": "CRITICAL"
     }
 ]
