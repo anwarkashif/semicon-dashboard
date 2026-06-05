@@ -1,37 +1,44 @@
 [
     {
         "Date": "2026-06-05",
-        "Actor": "United States, Iran",
-        "Action": "US expands sanctions, vessel struck in Gulf.",
-        "Location": "Arabian Gulf, Indian Ocean",
+        "Actor": "China",
+        "Action": "Considers ruling challenges post-Taiwan invasion.",
+        "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "China",
-        "Action": "Bans lawmakers for visiting Taiwan.",
-        "Location": "Taiwan, China",
+        "Actor": "Various Actors",
+        "Action": "Escalating maritime conflict; vessels attacked, boarded.",
+        "Location": "Arabian Gulf / Indian Ocean",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-05",
+        "Actor": "United States",
+        "Action": "Urges Europe, Canada to boost NATO defenses.",
+        "Location": "Europe / North Atlantic",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Ukraine, Romania",
-        "Action": "Stray drone explodes in NATO member port.",
-        "Location": "Romania",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "Global Shipping Industry",
-        "Action": "Container shipping rates surge due to disruptions.",
-        "Location": "Global Maritime Routes (e.g., Hormuz, Panama Canal)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "Semiconductor Industry",
-        "Action": "AI chip demand creates capacity constraints.",
-        "Location": "Global",
+        "Actor": "Japan Government",
+        "Action": "Invests $943M in Rapidus chip production.",
+        "Location": "Japan",
         "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-05",
+        "Actor": "United States Indo-Pacific Command",
+        "Action": "Vows to deny illicit actors maritime freedom.",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-05",
+        "Actor": "Anthropic / NSA",
+        "Action": "Employs AI for cyber hacking against China.",
+        "Location": "United States / China",
+        "Risk": "CRITICAL"
     }
 ]
