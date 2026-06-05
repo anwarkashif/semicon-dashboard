@@ -1,98 +1,98 @@
 [
     {
         "Date": "2026-06-05",
-        "Actor": "Russia, Ukraine",
-        "Action": "Intensified drone and missile exchanges continue",
-        "Location": "Ukraine, Russia",
+        "Actor": "China (Xi Jinping), North Korea",
+        "Action": "Chinese President visits North Korea",
+        "Location": "North Korea",
         "Risk": "CRITICAL",
-        "Headline": "War heats up as Russia, Ukraine trade drone and missile attacks"
+        "Headline": "Xi to Leave China for First Time This Year. Destination: Pyongyang."
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Iran, Iraqi militias",
-        "Action": "Iran's political shift fractures Iraqi militias",
-        "Location": "Iraq, Iran",
+        "Actor": "United States, Iran, UK (vessel)",
+        "Action": "Cargo vessel struck in Arabian Gulf",
+        "Location": "Arabian Gulf",
+        "Risk": "CRITICAL",
+        "Headline": "Cargo vessel struck in Arabian Gulf amid US-Iran tensions."
+    },
+    {
+        "Date": "2026-06-05",
+        "Actor": "China",
+        "Action": "Considers ruling Taiwan post-invasion scenarios",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL",
+        "Headline": "China considers challenges of ruling Taiwan post-invasion."
+    },
+    {
+        "Date": "2026-06-05",
+        "Actor": "UN, WFP",
+        "Action": "Warns of global hunger crisis",
+        "Location": "Middle East (global impact)",
+        "Risk": "CRITICAL",
+        "Headline": "Middle East conflict fuels global hunger crisis."
+    },
+    {
+        "Date": "2026-06-05",
+        "Actor": "United States, NATO (Europe, Canada)",
+        "Action": "Urges allies to boost defense forces",
+        "Location": "Europe, North America",
         "Risk": "HIGH",
-        "Headline": "Iraq\u2019s militias are fracturing as Iran turns from theocracy to juntocracy"
+        "Headline": "US urges NATO allies to boost air and naval forces."
     },
     {
         "Date": "2026-06-05",
-        "Actor": "United States, NATO",
-        "Action": "US urges NATO allies to boost forces",
-        "Location": "Europe",
-        "Risk": "HIGH",
-        "Headline": "US tells Europe, Canada to boost NATO air and naval forces"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "US National Security Agency",
-        "Action": "NSA using Anthropic AI for cyber operations",
-        "Location": "United States",
+        "Actor": "Ukraine",
+        "Action": "Drone attacks shift war momentum",
+        "Location": "Ukraine",
         "Risk": "CRITICAL",
-        "Headline": "US National Security Agency using Anthropic\u2019s Mythos for cyber attacks"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "China, Taiwan",
-        "Action": "China's Taiwan calculus impacts regional power balance",
-        "Location": "Taiwan, Indo-Pacific",
-        "Risk": "CRITICAL",
-        "Headline": "Is Time on China\u2019s Side? Beijing\u2019s Taiwan Calculus and the Balance of Power"
+        "Headline": "Ukraine's drone attacks shifting war momentum."
     },
     {
         "Date": "2026-06-05",
         "Actor": "Syria",
-        "Action": "Hidden chemical weapon sites discovered amid instability",
+        "Action": "Hidden chemical weapon sites emerge",
         "Location": "Syria",
-        "Risk": "HIGH",
-        "Headline": "Hidden chemical weapons sites emerge in Syria amid fragile security transition"
+        "Risk": "CRITICAL",
+        "Headline": "Hidden chemical weapons sites emerge in Syria."
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Netherlands, Ukraine",
-        "Action": "Dutch plant provides combat robots to Ukraine",
-        "Location": "Ukraine, Netherlands",
+        "Actor": "TSMC (Taiwan), NVIDIA (US)",
+        "Action": "Integrates AI into chip production",
+        "Location": "Taiwan",
         "Risk": "ELEVATED",
-        "Headline": "Dutch plant for combat-zone robots offers fresh supply pipeline for Ukraine"
+        "Headline": "TSMC expands NVIDIA AI use in chip production."
     },
     {
         "Date": "2026-06-05",
-        "Actor": "United States, Terrorist groups",
-        "Action": "US pullback raises terrorism threat in Africa",
-        "Location": "Africa",
+        "Actor": "United States, Asia",
+        "Action": "Reintroducing tariffs on Asia",
+        "Location": "Asia (global trade)",
         "Risk": "HIGH",
-        "Headline": "Experts warn terrorism threat is rising in Africa as US pulls back"
+        "Headline": "Trump reintroduces tariffs, impacting Asia."
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Iran, Cargo Vessel",
-        "Action": "Cargo ship struck by missile in Arabian Gulf",
-        "Location": "Arabian Gulf, Strait of Hormuz",
-        "Risk": "CRITICAL",
-        "Headline": "Cargo ship damaged after claimed Iranian missile strike"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "Hezbollah, Israel, Lebanon",
-        "Action": "Hezbollah rejects Lebanon-Israel ceasefire deal",
-        "Location": "Lebanon, Israel, Middle East",
-        "Risk": "CRITICAL",
-        "Headline": "Hezbollah Rejects Cease-Fire Deal Between Lebanon and Israel"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "United States, Cuba",
-        "Action": "US sanctions Cuban President D\u00edaz-Canel",
-        "Location": "Cuba, United States",
+        "Actor": "Russia",
+        "Action": "Sanctioned LNG carrier uses Arctic route",
+        "Location": "Arctic (Russia)",
         "Risk": "HIGH",
-        "Headline": "US Sanctions Cuba\u2019s D\u00edaz-Canel as Trump Ramps Up Pressure"
+        "Headline": "Sanctioned Russian LNG carrier transits Arctic."
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Broadcom",
-        "Action": "Broadcom suffers $285bn rout on revenue outlook",
-        "Location": "Global (semiconductor market)",
+        "Actor": "Blue Origin (US)",
+        "Action": "Rocket explosion exposes launch fragility",
+        "Location": "United States",
         "Risk": "HIGH",
-        "Headline": "Broadcom suffers $285bn rout as revenue outlook disappoints"
+        "Headline": "Blue Origin explosion reveals fragility of national-security launch plans."
+    },
+    {
+        "Date": "2026-06-05",
+        "Actor": "United States",
+        "Action": "Faces missile gap in Indo-Pacific",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH",
+        "Headline": "US Indo-Pacific deterrence strained by missile gap."
     }
 ]
