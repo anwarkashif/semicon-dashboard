@@ -172,7 +172,7 @@ jobs:
       if: github.event.action == 'trigger_psyopoly_siphon'
       run: python psyopoly_extractor.py || echo "Psyopoly pipeline failed."
 
-   - name: Commit and Push (Psyopoly Siphon)
+    - name: Commit and Push (Psyopoly Siphon)
       if: github.event.action == 'trigger_psyopoly_siphon'
       run: |
         git config --global user.name 'github-actions[bot]'
