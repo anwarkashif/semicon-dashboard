@@ -1,18 +1,22 @@
-name: SemicoN Psyopoly Extractor
+name: SemicoN Geopolitics-OSINT Switchboard Engine
 
 on:
-  workflow_dispatch: # Allows manual trigger testing
-  schedule:
-    # Runs at minute 31 of every hour (e.g., 1:31, 2:31)
-    - cron: '31 * * * *' 
+  repository_dispatch:
+    types: [trigger_psyopoly_siphon]
 
 jobs:
-  extract_intel:
+  extract_psyopoly:
     runs-on: ubuntu-latest
+    
+    # 🚀 FIX FOR ERROR 128: Grants GitHub Actions permission to push code
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
+      with:
+        ref: main # 🚀 FIX FOR ERROR 128: Ensures we are not on a detached HEAD
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -33,4 +37,4 @@ jobs:
         git config --global user.email "automaton@semicon.local"
         git add data/tactical_events_24h.json
         git commit -m "Automated Psyopoly Intel Update" || echo "No new intel to commit"
-        git push
+        git push origin main
