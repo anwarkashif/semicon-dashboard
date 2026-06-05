@@ -1,44 +1,37 @@
 [
     {
         "Date": "2026-06-05",
-        "Actor": "Iran / Unidentified",
-        "Action": "Tanker crippled, cargo vessel struck in Arabian Gulf.",
-        "Location": "Arabian Gulf / Strait of Hormuz",
+        "Actor": "United States, Iran",
+        "Action": "US expands sanctions, vessel struck in Gulf.",
+        "Location": "Arabian Gulf, Indian Ocean",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-05",
         "Actor": "China",
-        "Action": "China deliberates Taiwan governance post-invasion scenario.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
+        "Action": "Bans lawmakers for visiting Taiwan.",
+        "Location": "Taiwan, China",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Ukraine",
-        "Action": "Stray sea drone explodes in Romanian port.",
+        "Actor": "Ukraine, Romania",
+        "Action": "Stray drone explodes in NATO member port.",
         "Location": "Romania",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "China",
-        "Action": "Mystery structure observed on disputed South China Sea reef.",
-        "Location": "South China Sea",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "United States",
-        "Action": "US issues new, expanded Iran-related sanctions.",
-        "Location": "Iran / Middle East",
+        "Actor": "Global Shipping Industry",
+        "Action": "Container shipping rates surge due to disruptions.",
+        "Location": "Global Maritime Routes (e.g., Hormuz, Panama Canal)",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-05",
-        "Actor": "Panama Canal Authority",
-        "Action": "Panama Canal reduces draft limit due to El Ni\u00f1o.",
-        "Location": "Panama Canal",
-        "Risk": "HIGH"
+        "Actor": "Semiconductor Industry",
+        "Action": "AI chip demand creates capacity constraints.",
+        "Location": "Global",
+        "Risk": "ELEVATED"
     }
 ]
