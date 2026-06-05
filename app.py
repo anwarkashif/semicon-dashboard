@@ -122,7 +122,8 @@ else:
     from features.home_features import render_executive_home
     from features.snippet_features import render_daily_snippet
     from features.snippet_orchestrator import handle_snippet_logic
-    from features.shadowbroker_features import render_shadowbroker  # 🛰️ ShadowBroker Import
+    from features.shadowbroker_features import render_shadowbroker
+    from features.psyopoly_features import render_psyopoly_viewer  
 
     MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
     
@@ -153,37 +154,30 @@ else:
 
     @st.cache_data(ttl=300) # Syncs with GitHub every 5 minutes
     def sync_github_to_local():
-        # 1. Direct RAW fetch for the Tactical News (Bypasses API limits)
         tactical_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/tactical_events_24h.json"
         try:
             t_resp = requests.get(tactical_url, headers=auth_headers)
             if t_resp.status_code == 200:
                 with open('data/tactical_events_24h.json', 'w', encoding='utf-8') as f:
                     f.write(t_resp.text)
-        except Exception:
-            pass
+        except Exception: pass
 
-        # 1.5 ⚡ CRITICAL FIX: Sync the RSS Accumulator for the Trail News / Ticker Tape
         rss_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/rss_accumulator.txt"
         try:
             r_resp = requests.get(rss_url, headers=auth_headers)
             if r_resp.status_code == 200:
                 with open('data/rss_accumulator.txt', 'w', encoding='utf-8') as f:
                     f.write(r_resp.text)
-        except Exception:
-            pass
+        except Exception: pass
 
-        # 1.6 Sync Live Alerts (Ensures the DEFCON box triggers perfectly)
         alert_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/live_alert.json"
         try:
             a_resp = requests.get(alert_url, headers=auth_headers)
             if a_resp.status_code == 200:
                 with open('data/live_alert.json', 'w', encoding='utf-8') as f:
                     f.write(a_resp.text)
-        except Exception:
-            pass
+        except Exception: pass
 
-        # 2. Sync the Latest Weekly Brief File
         api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/data"
         try:
             response = requests.get(api_url, headers=auth_headers)
@@ -199,10 +193,8 @@ else:
                         with open(local_path, 'w', encoding='utf-8') as f:
                             f.write(b_resp.text)
                         return local_path
-        except Exception:
-            pass
+        except Exception: pass
             
-        # Fallback to local files if offline
         local_files = glob.glob('data/brief_*.json')
         if local_files:
             local_files.sort()
@@ -330,8 +322,7 @@ else:
                     ticker_html = f'<div class="ticker-item"><a href="{item.get("link", "#")}" target="_blank">{prefix} {clean_title}</a></div>'
                     ticker_items.append(ticker_html)
                     
-        except Exception:
-            pass
+        except Exception: pass
 
         if not ticker_items: return
         all_items_html = "".join(ticker_items)
@@ -416,10 +407,13 @@ else:
     )
 
     # 🟢 RENDER TICKER TAPE PLACE EXACTLY HERE 🟢
-    render_ticker_tape()
+    # 🚀 EXCLUDE TICKER FROM PSYOPOLY TO PREVENT LAG/OVERLAP
+    if view_selection != "West Asia Strategic Intel (Psyopoly)":
+        render_ticker_tape()
 
     # 🚀 INJECT SCROLL-TO-TOP BUTTON (EXCLUDING SPECIFIC SECTIONS)
-    if view_selection not in ["Trend Timelines", "Archives"]:
+    # Added Psyopoly to exclude list since scrolling is contained within the iframe
+    if view_selection not in ["Trend Timelines", "Archives", "West Asia Strategic Intel (Psyopoly)"]:
         st.markdown(
             """
             <style>
@@ -495,6 +489,10 @@ else:
                 text_military, text_section_5, text_india, text_wa, text_final, text_ews,
                 selected_actor, df_actions, MAPBOX_PUBLIC_TOKEN
             )
+            
+    # 🚀 NEW ROUTING CONDITION
+    elif view_selection == "West Asia Strategic Intel (Psyopoly)":
+        render_psyopoly_viewer()
 
     elif view_selection == "Global Threat Intercept (ShadowBroker)":
         render_shadowbroker()

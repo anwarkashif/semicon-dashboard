@@ -22,12 +22,13 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
 
     st.sidebar.title("SemicoN Access")
 
-    # Define the base strategic sequence for EVERYONE (ShadowBroker removed)
+    # 🚀 UPDATED: Inserted Psyopoly right below Weekly Intelligence Brief
     base_options = [
         "Executive Home",
         "Today's Snippet",
         "Weekly Tactical Brief",
         "Weekly Intelligence Brief",
+        "West Asia Strategic Intel (Psyopoly)", 
         "Trend Timelines",
         "Archives"
     ]
@@ -37,7 +38,6 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         if st.sidebar.button("Logout"):
             st.session_state['role'] = None
             st.rerun()
-        # Admin gets everything: Base + ShadowBroker + Clean Archives + Trash
         view_options = base_options + ["Global Threat Intercept (ShadowBroker)", "Clean Archives", "Trash"]
     else:
         st.sidebar.info("Access Level: **Guest Viewer**")
