@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-06",
-        "Actor": "United States, Iran",
-        "Action": "US attacks Iranian coastal sites post-drone launch",
-        "Location": "Iran",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-06",
-        "Actor": "United States, Iran, Israel",
-        "Action": "US intercepts Iranian attacks amid Israel-Lebanon conflict",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-06",
-        "Actor": "China, Taiwan, United States",
-        "Action": "China plans Taiwan invasion; Taiwan arms itself",
+        "Actor": "China, Taiwan",
+        "Action": "China considers Taiwan invasion; Taiwan plans chip destruction.",
         "Location": "Taiwan Strait",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "India, United States",
-        "Action": "Hormuz crisis threatens India's energy security",
-        "Location": "Strait of Hormuz, India",
+        "Actor": "United States, Iran",
+        "Action": "US-Iran clashes; US intercepts drones, boards tanker.",
+        "Location": "Strait of Hormuz, Indian Ocean",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "United States, Iran (implied)",
-        "Action": "US boards sanctioned tanker in Indian Ocean",
-        "Location": "Indian Ocean",
-        "Risk": "CRITICAL"
+        "Actor": "Global shipping industry",
+        "Action": "Container shipping rates explode amid chokepoint crises.",
+        "Location": "Global shipping routes",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "United States",
-        "Action": "Missile gap strains US Indo-Pacific deterrence",
-        "Location": "Indo-Pacific",
-        "Risk": "CRITICAL"
+        "Actor": "United States, NATO",
+        "Action": "US urges NATO to boost air/naval forces.",
+        "Location": "Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "United States, Venezuela",
+        "Action": "US military chief visits 'post-Maduro' Venezuela.",
+        "Location": "Venezuela",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Google, SpaceX",
+        "Action": "Google leases massive AI computing capacity from SpaceX.",
+        "Location": "Global AI infrastructure",
+        "Risk": "HIGH"
     }
 ]
