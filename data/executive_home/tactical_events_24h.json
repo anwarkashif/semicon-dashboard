@@ -1,37 +1,37 @@
 [
     {
         "Date": "2026-06-06",
-        "Actor": "US, Iran, Kuwait, Iraq",
-        "Action": "Escalating military actions in Persian Gulf",
-        "Location": "Persian Gulf, Strait of Hormuz",
+        "Actor": "United States, Iran",
+        "Action": "Exchange missile, drone strikes in Gulf",
+        "Location": "Strait of Hormuz, Persian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "China",
-        "Action": "Beijing considers post-invasion governance of Taiwan",
+        "Actor": "China, Taiwan",
+        "Action": "China considers Taiwan invasion, Taiwan arms for defense",
         "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "United States",
-        "Action": "Indo-Pacific missile deterrence capabilities under strain",
-        "Location": "Indo-Pacific",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-06",
-        "Actor": "Global AI/Semiconductor Industry",
-        "Action": "Chip capacity constrains global AI spending growth",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Experiences $1.3 trillion market value selloff",
         "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Russia, United States",
-        "Action": "ISS crew shelters due to Russian air leak",
-        "Location": "International Space Station",
+        "Actor": "China, North Korea",
+        "Action": "Xi Jinping to visit North Korea",
+        "Location": "North Korea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "United States",
+        "Action": "House approves critical aid to Ukraine",
+        "Location": "Ukraine",
         "Risk": "HIGH"
     }
 ]
