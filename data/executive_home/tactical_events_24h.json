@@ -1,37 +1,44 @@
 [
     {
         "Date": "2026-06-06",
-        "Actor": "United States, Iran, UAE, Kuwait",
-        "Action": "US strikes Iran, Iran attacks, US sanctions network",
-        "Location": "Persian Gulf, Strait of Hormuz, Indian Ocean",
+        "Actor": "United States, Iran, UAE",
+        "Action": "US strikes Iran; Iran attacks UAE, launches drones.",
+        "Location": "Strait of Hormuz, Persian Gulf, UAE",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Taiwan, China, United States",
-        "Action": "Taiwan arms amidst waning US reliability",
-        "Location": "Taiwan, Taiwan Strait",
+        "Actor": "China, Taiwan, United States",
+        "Action": "China considers Taiwan rule; Taiwan arms itself.",
+        "Location": "Taiwan Strait, Indo-Pacific",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Global Markets, Semiconductor Industry",
-        "Action": "Chip stocks tumble, AI capacity constrained",
+        "Actor": "Global Semiconductor Industry, SpaceX, Google, India, Japan",
+        "Action": "Chip market tumbles; AI computing deals; national chip roadmaps.",
         "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Global Shipping, India, Malaysia",
-        "Action": "Hormuz crisis fuels energy/shipping rate surge",
-        "Location": "Indian Ocean, Strait of Hormuz",
-        "Risk": "CRITICAL"
+        "Actor": "NATO, United States, France, Netherlands",
+        "Action": "NATO allies boost defense; France tests AI command.",
+        "Location": "Europe, Ukraine",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "NATO, France, Netherlands, Ukraine",
-        "Action": "NATO boosts forces, tests AI, aid Ukraine",
-        "Location": "Europe, Ukraine",
+        "Actor": "Venezuela, India, Canada",
+        "Action": "Venezuela, India deepen energy ties; critical minerals focus.",
+        "Location": "Venezuela, India, Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Blue Origin, United States",
+        "Action": "Rocket explosion exposes national security launch fragility.",
+        "Location": "United States",
         "Risk": "HIGH"
     }
 ]
