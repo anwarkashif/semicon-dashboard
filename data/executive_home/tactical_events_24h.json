@@ -1,37 +1,37 @@
 [
     {
-        "Date": "2026-06-05",
+        "Date": "2026-06-06",
         "Actor": "United States, Iran",
-        "Action": "US expands sanctions, vessel struck in Gulf.",
-        "Location": "Arabian Gulf, Indian Ocean",
+        "Action": "Exchange missile, drone strikes in Gulf",
+        "Location": "Strait of Hormuz, Persian Gulf",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "China",
-        "Action": "Bans lawmakers for visiting Taiwan.",
-        "Location": "Taiwan, China",
-        "Risk": "HIGH"
+        "Date": "2026-06-06",
+        "Actor": "China, Taiwan",
+        "Action": "China considers Taiwan invasion, Taiwan arms for defense",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "Ukraine, Romania",
-        "Action": "Stray drone explodes in NATO member port.",
-        "Location": "Romania",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "Global Shipping Industry",
-        "Action": "Container shipping rates surge due to disruptions.",
-        "Location": "Global Maritime Routes (e.g., Hormuz, Panama Canal)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "Semiconductor Industry",
-        "Action": "AI chip demand creates capacity constraints.",
+        "Date": "2026-06-06",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Experiences $1.3 trillion market value selloff",
         "Location": "Global",
-        "Risk": "ELEVATED"
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "China, North Korea",
+        "Action": "Xi Jinping to visit North Korea",
+        "Location": "North Korea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "United States",
+        "Action": "House approves critical aid to Ukraine",
+        "Location": "Ukraine",
+        "Risk": "HIGH"
     }
 ]
