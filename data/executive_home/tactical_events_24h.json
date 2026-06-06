@@ -1,44 +1,37 @@
 [
     {
-        "Date": "2026-06-05",
+        "Date": "2026-06-06",
+        "Actor": "US, Iran, Kuwait, Iraq",
+        "Action": "Escalating military actions in Persian Gulf",
+        "Location": "Persian Gulf, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-06",
         "Actor": "China",
-        "Action": "Considers ruling challenges post-Taiwan invasion.",
+        "Action": "Beijing considers post-invasion governance of Taiwan",
         "Location": "Taiwan",
         "Risk": "CRITICAL"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "Various Actors",
-        "Action": "Escalating maritime conflict; vessels attacked, boarded.",
-        "Location": "Arabian Gulf / Indian Ocean",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-05",
+        "Date": "2026-06-06",
         "Actor": "United States",
-        "Action": "Urges Europe, Canada to boost NATO defenses.",
-        "Location": "Europe / North Atlantic",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "Japan Government",
-        "Action": "Invests $943M in Rapidus chip production.",
-        "Location": "Japan",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "United States Indo-Pacific Command",
-        "Action": "Vows to deny illicit actors maritime freedom.",
+        "Action": "Indo-Pacific missile deterrence capabilities under strain",
         "Location": "Indo-Pacific",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Global AI/Semiconductor Industry",
+        "Action": "Chip capacity constrains global AI spending growth",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "Anthropic / NSA",
-        "Action": "Employs AI for cyber hacking against China.",
-        "Location": "United States / China",
-        "Risk": "CRITICAL"
+        "Date": "2026-06-06",
+        "Actor": "Russia, United States",
+        "Action": "ISS crew shelters due to Russian air leak",
+        "Location": "International Space Station",
+        "Risk": "HIGH"
     }
 ]
