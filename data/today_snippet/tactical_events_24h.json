@@ -1,98 +1,298 @@
 [
     {
         "Date": "2026-06-06",
-        "Actor": "United States, Iran",
-        "Action": "US attacks Iranian sites after drone launches.",
-        "Location": "Persian Gulf, Iranian Coast",
-        "Risk": "CRITICAL",
-        "Headline": "U.S. attacks Iranian sites after Iran launches drones, in latest Gulf flare-up"
-    },
-    {
-        "Date": "2026-06-06",
-        "Actor": "Iran, United Arab Emirates",
-        "Action": "Iran launches horrific attack, decimating ceasefire.",
-        "Location": "United Arab Emirates",
-        "Risk": "CRITICAL",
-        "Headline": "Iran launches horrific attack on UAE as ceasefire decimated"
-    },
-    {
-        "Date": "2026-06-06",
-        "Actor": "China",
-        "Action": "Deploys new missiles matching Patriots opposite Taiwan.",
-        "Location": "Taiwan Strait",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Deferring jet orders over Iran war would be costly for Middl...",
+        "Summary": "Deferring jet orders over Iran war would be costly for Middle Eastern carriers, IATA VP says",
         "Risk": "HIGH",
-        "Headline": "Beijing deploys new missiles matching Patriots opposite Taiwan"
+        "Source": "https://x.com/Reuters/status/2063399298419622121"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israeli soldier kills seven-month-old Palestinian baby, then...",
+        "Summary": "Israeli soldier kills seven-month-old Palestinian baby, then walks away",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-soldier-kills-seven-month-old-palestinian-baby-then-walks-away"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "US eyes Iranian assets for Gulf allies&#039; reconstruction,...",
+        "Summary": "US eyes Iranian assets for Gulf allies&#039; reconstruction, source says",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/us-eyes-iranian-assets-gulf-allies-reconstruction-source-says"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Palestinian detained after defending himself from Israeli se...",
+        "Summary": "Palestinian detained after defending himself from Israeli settler attack",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/palestinian-detained-after-defending-himself-israeli-settler-attack"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "France pushes sanctions over West Bank settler violence",
+        "Summary": "France pushes sanctions over West Bank settler violence",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/france-pushes-sanctions-over-west-bank-settler-violence"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Abu Dhabi\u2019s Etihad to surpass pre-Iran War capacity without ...",
+        "Summary": "Abu Dhabi\u2019s Etihad to surpass pre-Iran War capacity without price cuts",
+        "Risk": "HIGH",
+        "Source": "https://x.com/FT/status/2063384029726969874"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Pentagon boosts Israeli spying threat to \u2018critical\u2019 \u2013 media",
+        "Summary": "Pentagon boosts Israeli spying threat to \u2018critical\u2019 \u2013 media",
+        "Risk": "HIGH",
+        "Source": "https://www.rt.com/news/641108-pentagon-israel-spying-threat/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran World Cup squad faces same-day US entry rule",
+        "Summary": "Iran World Cup squad faces same-day US entry rule",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-world-cup-squad-faces-same-day-us-entry-rule"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israeli attack on Gaza tent camp kills eight people",
+        "Summary": "Israeli attack on Gaza tent camp kills eight people",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-attack-gaza-tent-camp-kills-eight-people"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Embraer sees airlines delaying decisions on plane purchase o...",
+        "Summary": "Embraer sees airlines delaying decisions on plane purchase options due to Iran war",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2063374138484421110"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israeli army says two soldiers killed in southern Lebanon",
+        "Summary": "Israeli army says two soldiers killed in southern Lebanon",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-army-says-two-soldiers-killed-southern-lebanon"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Pentagon said to raise threat level on Israel spying to \u2018cri...",
+        "Summary": "Pentagon said to raise threat level on Israel spying to \u2018critical\u2019",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/2026/6/6/pentagon-said-to-raise-threat-level-on-israel-spying-to-critical?traffic_source=rss"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "France opens war crimes and torture investigation into Israe...",
+        "Summary": "France opens war crimes and torture investigation into Israel's mistreatment of French activists aboard Gaza-bound aid flotilla, with prosecutors examining allegations tied to interception and detention of participants, officials say",
+        "Risk": "HIGH",
+        "Source": "https://x.com/DailySabah/status/2063365391850643538"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "UAE plans for AI unaffected by Iranian threat to region, tec...",
+        "Summary": "UAE plans for AI unaffected by Iranian threat to region, tech experts say",
+        "Risk": "HIGH",
+        "Source": "https://x.com/TheNationalNews/status/2063365302256075223"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Roadside bomb kills top Anti-Houthi military leader in Yemen",
+        "Summary": "Roadside bomb kills top Anti-Houthi military leader in Yemen",
+        "Risk": "HIGH",
+        "Source": "https://www.albawaba.com/news/roadside-bomb-kills-top-anti-houthi-1629337"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Rights group says drone strike kills 11 in central Sudan mar...",
+        "Summary": "Rights group says drone strike kills 11 in central Sudan market",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/2026/6/6/rights-group-says-drone-strike-kills-11-in-central-sudan-market?traffic_source=rss"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iraq will not sign new contracts with oil companies operatin...",
+        "Summary": "Iraq will not sign new contracts with oil companies operating in the Kurdistan Region because existing agreements remain valid, the Iraqi oil ministry's spokesperson said on Saturday.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/RudawEnglish/status/2063360956495782227"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israeli soldier kills seven-month-old Palestinian baby, then...",
+        "Summary": "Israeli soldier kills seven-month-old Palestinian baby, then walks away",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/news/israeli-soldier-kills-seven-month-old-baby-then-walks-away"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Sergeant Ahed Yaari from Rehovot and Capt. Shahar Gamla Mant...",
+        "Summary": "Sergeant Ahed Yaari from Rehovot and Capt. Shahar Gamla Mantur were killed in southern Lebanon",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2063355709572481194"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Zelensky \u2018doesn\u2019t deserve\u2019 EU\u2019s highest award \u2013 MEPs",
+        "Summary": "Zelensky \u2018doesn\u2019t deserve\u2019 EU\u2019s highest award \u2013 MEPs",
+        "Risk": "HIGH",
+        "Source": "https://www.rt.com/news/641123-zelensky-eu-award-meps/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Iran",
+        "Action": "Iran closes critical Strait of Hormuz",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL",
+        "Headline": "Strait of Hormuz is closed once again: Iran | Akashvani News"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "United States Military, Iran",
+        "Action": "US military shoots down Iranian drones",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL",
+        "Headline": "US military shoots down 4 Iranian drones heading toward Strait of Hormuz"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Israeli Forces",
+        "Action": "Israeli soldier kills Palestinian baby",
+        "Location": "West Bank",
+        "Risk": "CRITICAL",
+        "Headline": "Israeli soldier kills seven-month-old Palestinian baby, then walks away"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Israeli Forces",
+        "Action": "Israeli attack kills 8 in Gaza camp",
+        "Location": "Gaza",
+        "Risk": "CRITICAL",
+        "Headline": "Israeli attack on Gaza tent camp kills eight people"
     },
     {
         "Date": "2026-06-06",
         "Actor": "Taiwan, United States",
-        "Action": "Taiwan races to arm as US reliability wanes.",
+        "Action": "Taiwan arms rapidly as US reliability questioned",
         "Location": "Taiwan",
-        "Risk": "HIGH",
+        "Risk": "CRITICAL",
         "Headline": "Taiwan racing to arm itself as US reliability wanes"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Global Shipping, Middle East",
-        "Action": "Hormuz crisis fuels surge in container rates.",
-        "Location": "Strait of Hormuz, Global Supply Chains",
-        "Risk": "HIGH",
-        "Headline": "Peak Season and Hormuz Crisis Fuel New Surge in Container Shipping Rates"
+        "Actor": "China",
+        "Action": "Considers ruling Taiwan after invasion plans",
+        "Location": "Taiwan, China",
+        "Risk": "CRITICAL",
+        "Headline": "After the Invasion: China Considers the Problem of Ruling Taiwan"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "United States, Iran",
-        "Action": "US forces board sanctioned tanker in Indian Ocean.",
-        "Location": "Indian Ocean",
-        "Risk": "HIGH",
-        "Headline": "U.S. Boards Sanctioned Tanker as Iran Maritime Blockade Expands Into Indian Ocean"
+        "Actor": "Global Shipping Industry",
+        "Action": "Container rates spike 109% due to Iran war",
+        "Location": "Asia-US trade routes",
+        "Risk": "CRITICAL",
+        "Headline": "Asia-To-US Container Rates Spike 109% Since Iran War Started"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Global Markets, Semiconductor Industry",
-        "Action": "Nasdaq tumbles as chip shares sink.",
-        "Location": "Global Markets, Semiconductor Sector",
-        "Risk": "HIGH",
-        "Headline": "Nasdaq tumbles 4% as shares in chip and memory groups sink"
+        "Actor": "United States, Russia",
+        "Action": "US ends Russian oil sanctions waiver",
+        "Location": "Global energy markets",
+        "Risk": "CRITICAL",
+        "Headline": "US Signals End To Russian Oil Sanctions Waiver, Raising Concerns For Importers"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "AI Industry, Semiconductor Industry",
-        "Action": "Chip capacity constraints limit AI spending growth.",
-        "Location": "Global Technology Supply Chains",
-        "Risk": "HIGH",
-        "Headline": "Chip Capacity Constraints Put A Governor On AI Spending Growth"
+        "Actor": "North Korea",
+        "Action": "Declares nuclear program absolutely non-negotiable",
+        "Location": "North Korea",
+        "Risk": "CRITICAL",
+        "Headline": "N. Korean leader\u2019s sister says nuclear programme \u2018absolutely non-negotiable\u2019"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Blue Origin, United States",
-        "Action": "Rocket explosion shows fragility of national-security launches.",
-        "Location": "United States, Space Launch Industry",
-        "Risk": "HIGH",
-        "Headline": "Blue Origin rocket explosion shows \u2018fragility\u2019 of national-security launch plans"
+        "Actor": "United States, Israel",
+        "Action": "Pentagon raises Israel spying threat critical",
+        "Location": "United States",
+        "Risk": "CRITICAL",
+        "Headline": "Pentagon said to raise threat level on Israel spying to \u2018critical\u2019"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "United States, NATO Allies",
-        "Action": "US tells Europe, Canada to boost NATO forces.",
-        "Location": "Europe, North Atlantic",
-        "Risk": "HIGH",
-        "Headline": "US tells Europe, Canada to boost NATO air and naval forces"
+        "Actor": "China, Taiwan",
+        "Action": "Chinese ships near South China Sea islands",
+        "Location": "South China Sea",
+        "Risk": "CRITICAL",
+        "Headline": "Taiwan Says Chinese Coast Guard, Research Ships Near Key S. China Sea Islands"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "United States, Venezuela",
-        "Action": "Joint Chiefs head visits post-Maduro Venezuela.",
-        "Location": "Venezuela",
+        "Actor": "SpaceX, United States, China, Hong Kong",
+        "Action": "SpaceX IPO bars China, HK investors",
+        "Location": "United States (tech market)",
         "Risk": "HIGH",
-        "Headline": "Joint Chiefs head makes first official visit to post-Maduro Venezuela"
-    },
-    {
-        "Date": "2026-06-06",
-        "Actor": "Israel, Lebanon",
-        "Action": "Israeli strike kills three Lebanese soldiers.",
-        "Location": "Lebanon-Israel Border",
-        "Risk": "HIGH",
-        "Headline": "Israeli strike kills three Lebanese soldiers, military probes incident"
+        "Headline": "SpaceX IPO bars investors from China and Hong Kong over US export control rules"
     }
 ]
