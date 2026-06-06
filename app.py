@@ -127,7 +127,7 @@ else:
 
     MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
     
-    # Safe Environment Look-up
+    # Safe Environment Look-up (Primary Key for Snippet Feature)
     GEMINI_API_KEY = os.environ.get("RAG_GEMINI_API_KEY")
     if not GEMINI_API_KEY:
         try:
@@ -136,6 +136,21 @@ else:
             GEMINI_API_KEY = None
             
     client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
+    
+    # ==========================================
+    # 🛡️ 4-NODE API KEY CASCADING ARRAY
+    # ==========================================
+    rag_api_keys = []
+    for key_name in ["RAG_GEMINI_API_KEY", "RAG_GEMINI_API_KEY_2", "RAG_GEMINI_API_KEY_3", "RAG_GEMINI_API_KEY_4"]:
+        val = os.environ.get(key_name)
+        if not val:
+            try:
+                val = st.secrets.get(key_name)
+            except Exception:
+                val = None
+        if val:
+            rag_api_keys.append(val)
+            
     model_name = 'gemini-2.5-flash'
 
     # ==========================================
@@ -490,7 +505,6 @@ else:
                 selected_actor, df_actions, MAPBOX_PUBLIC_TOKEN
             )
             
-# 🚀 NEW ROUTING CONDITION
     elif view_selection == "West Asia Strategic Intel (Psyopoly)":
         render_psyopoly_viewer(df_actions)
 
@@ -502,7 +516,7 @@ else:
         
     elif view_selection == "Intelligence Interrogation (RAG)":
         render_rag_interrogation(
-            client, 
+            rag_api_keys, 
             model_name, 
             text_summary=text_summary, 
             text_section_1=text_section_1, 
@@ -528,7 +542,7 @@ else:
         render_trash()
 
     render_fab_chat(
-        client, 
+        rag_api_keys, 
         model_name, 
         text_summary=text_summary, 
         text_section_1=text_section_1, 

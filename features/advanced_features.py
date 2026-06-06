@@ -47,12 +47,15 @@ def render_threat_scoring():
     else:
         st.warning("No archives available.")
 
-# --- UPGRADED RAG ENGINE: Now accepts live text sections ---
-def render_rag_interrogation(client, model_name, text_summary="", text_section_1="", text_section_2="", text_section_3="", text_section_4="", text_military="", text_india="", text_wa="", text_ews=""):
+
+# ==========================================
+# --- UPGRADED 4-NODE RAG ENGINE ---
+# ==========================================
+def render_rag_interrogation(api_keys, model_name, text_summary="", text_section_1="", text_section_2="", text_section_3="", text_section_4="", text_military="", text_india="", text_wa="", text_ews=""):
     st.title("Intelligence Interrogation (RAG)")
     st.markdown("Query the historical SemicoN database and live platform feeds. Responses are generated strictly from your vetted archives and current geopolitical dashboards.")
 
-    if not client:
+    if not api_keys:
         st.error("⚠️ GEMINI_API_KEY is missing from Koyeb Environment Variables. Please add it to unlock this feature.")
         return 
 
@@ -173,26 +176,52 @@ def render_rag_interrogation(client, model_name, text_summary="", text_section_1
             """
             
             try:
+                from google import genai
+                import time
                 full_response = ""
-                response = client.models.generate_content_stream(
-                    model=model_name,
-                    contents=[sys_prompt, prompt]
-                )
-                for chunk in response:
-                    if chunk.text:
-                        full_response += chunk.text
-                        message_placeholder.markdown(full_response + "▌") 
+                success = False
+                
+                # 🚀 Loop through the 4-Key Cascade
+                for attempt, api_key in enumerate(api_keys):
+                    try:
+                        client = genai.Client(api_key=api_key)
+                        response = client.models.generate_content_stream(
+                            model=model_name,
+                            contents=[sys_prompt, prompt]
+                        )
+                        full_response = ""
+                        for chunk in response:
+                            if chunk.text:
+                                full_response += chunk.text
+                                message_placeholder.markdown(full_response + "▌") 
                         
-                message_placeholder.markdown(full_response)
+                        message_placeholder.markdown(full_response)
+                        success = True
+                        break # Node worked, exit retry loop
+                        
+                    except Exception as e:
+                        # If node fails and we have backup keys remaining
+                        if attempt < len(api_keys) - 1:
+                            message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
+                            time.sleep(1.5)
+                            continue
+                        else:
+                            raise e # Last node failed, trigger main error handler
+                            
             except Exception as e:
-                full_response = f"⚠️ Error querying the intelligence database: {e}"
+                error_str = str(e).lower()
+                if "503" in error_str or "429" in error_str or "unavailable" in error_str or "quota" in error_str or "limit" in error_str or "exhausted" in error_str:
+                    full_response = "⚠️ Server Down. Please try after sometime."
+                else:
+                    full_response = f"⚠️ Error querying the intelligence database: {e}"
                 message_placeholder.markdown(full_response)
+                
         st.session_state.rag_messages.append({"role": "assistant", "content": full_response})
 
 # ==========================================
-# PHASE 2 STEP B: HYBRID NATIVE RAG FAB ENGINE (NATIVE POPOVER FIX)
+# PHASE 2 STEP B: HYBRID NATIVE RAG FAB ENGINE 
 # ==========================================
-def render_fab_chat(client, model_name, text_summary="", text_section_1="", text_section_2="", text_section_3="", text_section_4="", text_military="", text_india="", text_wa="", text_ews=""):
+def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", text_section_2="", text_section_3="", text_section_4="", text_military="", text_india="", text_wa="", text_ews=""):
     import os
     import json
     import re
@@ -204,11 +233,6 @@ def render_fab_chat(client, model_name, text_summary="", text_section_1="", text
     if "fab_rag_messages" not in st.session_state:
         st.session_state.fab_rag_messages = []
 
-    # ==========================================
-    # THE FIX: @st.fragment isolates this UI component. 
-    # Clicking the button now ONLY re-runs this tiny sandbox,
-    # completely bypassing the 50-second dashboard reload!
-    # ==========================================
     @st.fragment
     def render_isolated_fab():
         def toggle_fab():
@@ -281,7 +305,7 @@ def render_fab_chat(client, model_name, text_summary="", text_section_1="", text
 
                 st.markdown("<hr style='border-color: #333; margin-top: 5px; margin-bottom: 15px;'>", unsafe_allow_html=True)
 
-                if not client:
+                if not api_keys:
                     st.error("⚠️ GEMINI_API_KEY is missing.")
                 else:
                     for message in st.session_state.fab_rag_messages:
@@ -360,48 +384,67 @@ def render_fab_chat(client, model_name, text_summary="", text_section_1="", text
                             """
                             
                             try:
+                                from google import genai
+                                import time
                                 full_response = ""
                                 unique_urls = set()
                                 sources_md = ""
+                                success = False
                                 
-                                response = client.models.generate_content_stream(
-                                    model=model_name,
-                                    contents=[sys_prompt, query],
-                                    config={"tools": [{"google_search": {}}]}
-                                )
-                                
-                                for chunk in response:
-                                    if chunk.text:
-                                        full_response += chunk.text
-                                        message_placeholder.markdown(full_response + "▌") 
-                                        
-                                    # Intercept Grounding Metadata safely from the stream
+                                # 🚀 Loop through the 4-Key Cascade
+                                for attempt, api_key in enumerate(api_keys):
                                     try:
-                                        if chunk.candidates and chunk.candidates[0].grounding_metadata:
-                                            meta = chunk.candidates[0].grounding_metadata
-                                            if hasattr(meta, 'grounding_chunks') and meta.grounding_chunks:
-                                                for g_chunk in meta.grounding_chunks:
-                                                    if hasattr(g_chunk, 'web') and getattr(g_chunk.web, 'uri', None):
-                                                        title = getattr(g_chunk.web, 'title', 'Source link')
-                                                        url = g_chunk.web.uri
-                                                        if url not in unique_urls:
-                                                            unique_urls.add(url)
-                                                            sources_md += f"\n* [{title}]({url})"
-                                    except Exception: pass
+                                        client = genai.Client(api_key=api_key)
+                                        response = client.models.generate_content_stream(
+                                            model=model_name,
+                                            contents=[sys_prompt, query],
+                                            config={"tools": [{"google_search": {}}]}
+                                        )
+                                        
+                                        full_response = ""
+                                        unique_urls = set()
+                                        sources_md = ""
+                                        
+                                        for chunk in response:
+                                            if chunk.text:
+                                                full_response += chunk.text
+                                                message_placeholder.markdown(full_response + "▌") 
+                                                
+                                            # Intercept Grounding Metadata safely from the stream
+                                            try:
+                                                if chunk.candidates and chunk.candidates[0].grounding_metadata:
+                                                    meta = chunk.candidates[0].grounding_metadata
+                                                    if hasattr(meta, 'grounding_chunks') and meta.grounding_chunks:
+                                                        for g_chunk in meta.grounding_chunks:
+                                                            if hasattr(g_chunk, 'web') and getattr(g_chunk.web, 'uri', None):
+                                                                title = getattr(g_chunk.web, 'title', 'Source link')
+                                                                url = g_chunk.web.uri
+                                                                if url not in unique_urls:
+                                                                    unique_urls.add(url)
+                                                                    sources_md += f"\n* [{title}]({url})"
+                                            except Exception: pass
+                                            
+                                        success = True
+                                        break # Node worked, exit retry loop
 
-                                # Append Beautiful Citations to the final text
-                                if sources_md:
-                                    full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
-                                
-                                # Fallback handling to completely protect against empty rendering frames
-                                if not full_response.strip():
-                                    full_response = "Intelligence processing completed. Re-indexing data models..."
-                                    
-                                message_placeholder.markdown(full_response)
+                                    except Exception as e:
+                                        if attempt < len(api_keys) - 1:
+                                            message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
+                                            time.sleep(1.5)
+                                            continue
+                                        else:
+                                            raise e
+
+                                if success:
+                                    if sources_md:
+                                        full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
+                                    if not full_response.strip():
+                                        full_response = "Intelligence processing completed. Re-indexing data models..."
+                                    message_placeholder.markdown(full_response)
                                 
                             except Exception as e:
-                                error_str = str(e)
-                                if "503" in error_str or "UNAVAILABLE" in error_str:
+                                error_str = str(e).lower()
+                                if "503" in error_str or "429" in error_str or "unavailable" in error_str or "quota" in error_str or "limit" in error_str or "exhausted" in error_str:
                                     full_response = "⚠️ Server Down. Please try after sometime."
                                 else:
                                     full_response = f"⚠️ Error querying database: {e}"
