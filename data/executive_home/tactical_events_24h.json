@@ -2,36 +2,43 @@
     {
         "Date": "2026-06-06",
         "Actor": "United States, Iran",
-        "Action": "Exchange missile, drone strikes in Gulf",
-        "Location": "Strait of Hormuz, Persian Gulf",
+        "Action": "US attacks Iranian coastal sites post-drone launch",
+        "Location": "Iran",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "China, Taiwan",
-        "Action": "China considers Taiwan invasion, Taiwan arms for defense",
-        "Location": "Taiwan",
+        "Actor": "United States, Iran, Israel",
+        "Action": "US intercepts Iranian attacks amid Israel-Lebanon conflict",
+        "Location": "Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Experiences $1.3 trillion market value selloff",
-        "Location": "Global",
-        "Risk": "HIGH"
+        "Actor": "China, Taiwan, United States",
+        "Action": "China plans Taiwan invasion; Taiwan arms itself",
+        "Location": "Taiwan Strait",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "China, North Korea",
-        "Action": "Xi Jinping to visit North Korea",
-        "Location": "North Korea",
-        "Risk": "HIGH"
+        "Actor": "India, United States",
+        "Action": "Hormuz crisis threatens India's energy security",
+        "Location": "Strait of Hormuz, India",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "United States, Iran (implied)",
+        "Action": "US boards sanctioned tanker in Indian Ocean",
+        "Location": "Indian Ocean",
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
         "Actor": "United States",
-        "Action": "House approves critical aid to Ukraine",
-        "Location": "Ukraine",
-        "Risk": "HIGH"
+        "Action": "Missile gap strains US Indo-Pacific deterrence",
+        "Location": "Indo-Pacific",
+        "Risk": "CRITICAL"
     }
 ]
