@@ -73,6 +73,47 @@ if not GEMINI_API_KEY:
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ==========================================
+# 1.5. PSYOPOLY SUPABASE EXTRACTION
+# ==========================================
+def fetch_psyopoly_data():
+    print("🔍 Siphoning West Asia intelligence from Psyopoly...")
+    SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news?select=id%2Cheadline%2Cposted_at%2Curl&order=posted_at.desc&limit=20"
+    ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxvamlyb2x6a3Nob3FnY2Nyd3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODQyNjQsImV4cCI6MjA4OTY2MDI2NH0.DzdBr_d69SSlRxtnxH8DRqc0hLNQfb4wL5t1Qe96UMo"
+    
+    headers = {
+        "apikey": ANON_KEY,
+        "authorization": f"Bearer {ANON_KEY}",
+        "accept": "application/json",
+        "origin": "https://www.psyopoly.pro"
+    }
+    formatted_events = []
+    raw_text_block = "\n\n=== LIVE PSYOPOLY WEST ASIA INTEL ===\n"
+    
+    try:
+        res = requests.get(SUPABASE_URL, headers=headers, timeout=10)
+        if res.status_code == 200:
+            raw_data = res.json()
+            for item in raw_data:
+                headline = item.get("headline", "No Headline Provided")
+                raw_text_block += f"- [PSYOPOLY] {headline}\n"
+                
+                formatted_events.append({
+                    "Date": item.get("posted_at", "").split("T")[0],
+                    "Actor": "Psyopoly/West Asia",
+                    "Location": "Middle East",
+                    "Event": "Strategic Update",
+                    "Action": headline[:60] + "..." if len(headline) > 60 else headline,
+                    "Summary": headline,
+                    "Risk": "HIGH",
+                    "Source": item.get("url", "https://www.psyopoly.pro/middle-east")
+                })
+            return formatted_events, raw_text_block
+    except Exception as e:
+        print(f"⚠️ Psyopoly extraction failed: {e}")
+        
+    return [], ""
+
+# ==========================================
 # 2. DATA SCRAPING (ANTI-BOT + LIVE BOOLEAN + DEEP SCRAPE)
 # ==========================================
 def fetch_daily_intelligence():
@@ -125,7 +166,7 @@ def fetch_daily_intelligence():
         except Exception as e:
             print(f"⚠️ Warning: Could not fetch Google News for {query} - {e}")
             
-    # --- PHASE 3: DEEP-SCRAPE MARITIME ALERTS (For Gemini Analysis) ---
+    # --- PHASE 3: DEEP-SCRAPE MARITIME ALERTS ---
     print("🚢 Executing Deep-Scrape on Live Maritime URLs...")
     maritime_query = '("UKMTO" OR "Ambrey" OR "MSCHOA" OR "MSCIO") AND ("incident" OR "attack" OR "vessel" OR "boarded" OR "missile" OR "houthi") when:24h'
     encoded_m_query = urllib.parse.quote(maritime_query)
@@ -166,12 +207,10 @@ def fetch_daily_intelligence():
         hg_res.raise_for_status()
         soup = BeautifulSoup(hg_res.text, 'html.parser')
 
-        # Extract headings and paragraphs to capture the main intelligence text
         text_elements = soup.find_all(['h1', 'h2', 'h3', 'p'])
         extracted_hg_text = " ".join([elem.get_text(strip=True) for elem in text_elements if len(elem.get_text(strip=True)) > 20])
 
         if extracted_hg_text:
-            # Truncate to ~1500 characters to ensure we capture a rich summary without overloading the token limit
             snippet = extracted_hg_text[:1500] + "..." if len(extracted_hg_text) > 1500 else extracted_hg_text
             aggregated_news += f"\n- [LIVE HEGEMON GLOBAL INTEL]\n  DEEP EXTRACTION DATA: {snippet}\n"
             total_articles += 1
@@ -181,8 +220,14 @@ def fetch_daily_intelligence():
     except Exception as e:
         print(f"⚠️ Warning: Could not fetch Hegemon Global - {e}")
 
+    # --- PHASE 5: PSYOPOLY WEST ASIA INTEGRATION ---
+    psy_events, psy_text = fetch_psyopoly_data()
+    if psy_text:
+        aggregated_news += psy_text
+        total_articles += len(psy_events)
+
     print(f"📰 Successfully grabbed {total_articles} raw headlines and deep-scraped data.")
-    return aggregated_news, total_articles
+    return aggregated_news, total_articles, psy_events
 
 # ==========================================
 # 3. AI EXTRACTION PIPELINES
@@ -265,7 +310,7 @@ def generate_flush_to_brief(news_text):
 # ==========================================
 if __name__ == "__main__":
     try:
-        news_data, article_count = fetch_daily_intelligence()
+        news_data, article_count, psy_events = fetch_daily_intelligence()
         
         if article_count == 0:
             print("❌ ABORTING: No articles scraped. Preventing AI hallucination.")
@@ -273,10 +318,16 @@ if __name__ == "__main__":
             
         # 1. Generate the Tactical Grid Array
         tactical_events = extract_tactical_events(news_data)
+        
+        # Inject Psyopoly Intel natively into the JSON structure
+        if psy_events:
+            tactical_events = psy_events + tactical_events
+            print(f"✅ Injected {len(psy_events)} native Psyopoly variables into the tactical payload.")
+            
         output_file_tactical = 'data/executive_home/tactical_events_24h.json'
         with open(output_file_tactical, 'w') as f:
             json.dump(tactical_events, f, indent=4)
-        print(f"✅ Success! Wrote {len(tactical_events)} tactical events.")
+        print(f"✅ Success! Wrote {len(tactical_events)} combined tactical events.")
 
         # 2. Generate the FLASH TO BRIEF Narrative
         flush_brief_data = generate_flush_to_brief(news_data)

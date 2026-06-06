@@ -16,53 +16,53 @@ os.makedirs('data/friday_snippet', exist_ok=True)
 
 RSS_FEEDS = [
     # --- 1. Geopolitics & Macro Policy ---
-    "[https://www.ft.com/technology?format=rss](https://www.ft.com/technology?format=rss)",
-    "[https://www.atlanticcouncil.org/feed/](https://www.atlanticcouncil.org/feed/)",
-    "[https://foreignpolicy.com/feed/](https://foreignpolicy.com/feed/)",
-    "[https://moderndiplomacy.eu/feed/](https://moderndiplomacy.eu/feed/)",
-    "[https://www.worldpoliticsreview.com/feed/](https://www.worldpoliticsreview.com/feed/)", 
+    "https://www.ft.com/technology?format=rss",
+    "https://www.atlanticcouncil.org/feed/",
+    "https://foreignpolicy.com/feed/",
+    "https://moderndiplomacy.eu/feed/",
+    "https://www.worldpoliticsreview.com/feed/", 
 
     # --- 2. Military & Conflict ---
-    "[https://www.defenseone.com/rss/all/](https://www.defenseone.com/rss/all/)",
-    "[https://warontherocks.com/feed/](https://warontherocks.com/feed/)",
-    "[https://www.realcleardefense.com/index.xml](https://www.realcleardefense.com/index.xml)",
-    "[https://www.c4isrnet.com/arc/outboundfeeds/rss/](https://www.c4isrnet.com/arc/outboundfeeds/rss/)",
-    "[https://www.defensenews.com/arc/outboundfeeds/rss/](https://www.defensenews.com/arc/outboundfeeds/rss/)", 
+    "https://www.defenseone.com/rss/all/",
+    "https://warontherocks.com/feed/",
+    "https://www.realcleardefense.com/index.xml",
+    "https://www.c4isrnet.com/arc/outboundfeeds/rss/",
+    "https://www.defensenews.com/arc/outboundfeeds/rss/", 
 
     # --- 3. Outer Space ---
-    "[https://spacepolicyonline.com/feed/](https://spacepolicyonline.com/feed/)",
-    "[https://www.space.com/feeds/all](https://www.space.com/feeds/all)",
-    "[https://spacewatch.global/feed/](https://spacewatch.global/feed/)", 
-    "[https://spaceflightnow.com/feed/](https://spaceflightnow.com/feed/)", 
-    "[https://www.satellitetoday.com/feed/](https://www.satellitetoday.com/feed/)", 
+    "https://spacepolicyonline.com/feed/",
+    "https://www.space.com/feeds/all",
+    "https://spacewatch.global/feed/", 
+    "https://spaceflightnow.com/feed/", 
+    "https://www.satellitetoday.com/feed/", 
 
     # --- 4. Lithography & Raw Materials ---
-    "[https://semiwiki.com/feed/](https://semiwiki.com/feed/)",
-    "[https://semiengineering.com/feed/](https://semiengineering.com/feed/)",
-    "[https://www.mining.com/feed/](https://www.mining.com/feed/)",
-    "[https://www.eetimes.com/feed/](https://www.eetimes.com/feed/)",
-    "[https://www.supplychaindive.com/feeds/news/](https://www.supplychaindive.com/feeds/news/)", 
+    "https://semiwiki.com/feed/",
+    "https://semiengineering.com/feed/",
+    "https://www.mining.com/feed/",
+    "https://www.eetimes.com/feed/",
+    "https://www.supplychaindive.com/feeds/news/", 
 
     # --- 5. Indo-Pacific & Country Actions ---
-    "[https://thediplomat.com/feed/](https://thediplomat.com/feed/)",
-    "[https://technode.com/feed/](https://technode.com/feed/)",
-    "[https://asiatimes.com/feed/](https://asiatimes.com/feed/)",
-    "[https://www.aspistrategist.org.au/feed/](https://www.aspistrategist.org.au/feed/)", 
-    "[https://fulcrum.sg/feed/](https://fulcrum.sg/feed/)", 
+    "https://thediplomat.com/feed/",
+    "https://technode.com/feed/",
+    "https://asiatimes.com/feed/",
+    "https://www.aspistrategist.org.au/feed/", 
+    "https://fulcrum.sg/feed/", 
 
     # --- 6. Logistics & West Asia ---
-    "[https://gcaptain.com/feed/](https://gcaptain.com/feed/)",
-    "[https://www.middleeasteye.net/rss](https://www.middleeasteye.net/rss)",
-    "[https://www.aljazeera.com/xml/rss/all.xml](https://www.aljazeera.com/xml/rss/all.xml)",
-    "[https://www.al-monitor.com/rss.xml](https://www.al-monitor.com/rss.xml)",
-    "[https://splash247.com/feed/](https://splash247.com/feed/)", 
+    "https://gcaptain.com/feed/",
+    "https://www.middleeasteye.net/rss",
+    "https://www.aljazeera.com/xml/rss/all.xml",
+    "https://www.al-monitor.com/rss.xml",
+    "https://splash247.com/feed/", 
     
     # --- 7. Next-Gen Compute (AI, ML & Quantum) ---
-    "[https://www.nextplatform.com/feed/](https://www.nextplatform.com/feed/)",
-    "[https://thequantuminsider.com/feed/](https://thequantuminsider.com/feed/)",            
-    "[https://spectrum.ieee.org/feeds/feed.rss](https://spectrum.ieee.org/feeds/feed.rss)",
-    "[https://www.technologyreview.com/topic/artificial-intelligence/feed/](https://www.technologyreview.com/topic/artificial-intelligence/feed/)",
-    "[https://venturebeat.com/category/ai/feed/](https://venturebeat.com/category/ai/feed/)"
+    "https://www.nextplatform.com/feed/",
+    "https://thequantuminsider.com/feed/",            
+    "https://spectrum.ieee.org/feeds/feed.rss",
+    "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+    "https://venturebeat.com/category/ai/feed/"
 ]
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -71,6 +71,47 @@ if not GEMINI_API_KEY:
     exit(1)
 
 client = genai.Client(api_key=GEMINI_API_KEY)
+
+# ==========================================
+# 1.5. PSYOPOLY SUPABASE EXTRACTION
+# ==========================================
+def fetch_psyopoly_data():
+    print("🔍 Siphoning West Asia intelligence from Psyopoly...")
+    SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news?select=id%2Cheadline%2Cposted_at%2Curl&order=posted_at.desc&limit=20"
+    ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxvamlyb2x6a3Nob3FnY2Nyd3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODQyNjQsImV4cCI6MjA4OTY2MDI2NH0.DzdBr_d69SSlRxtnxH8DRqc0hLNQfb4wL5t1Qe96UMo"
+    
+    headers = {
+        "apikey": ANON_KEY,
+        "authorization": f"Bearer {ANON_KEY}",
+        "accept": "application/json",
+        "origin": "https://www.psyopoly.pro"
+    }
+    formatted_events = []
+    raw_text_block = "\n\n=== LIVE PSYOPOLY WEST ASIA INTEL ===\n"
+    
+    try:
+        res = requests.get(SUPABASE_URL, headers=headers, timeout=10)
+        if res.status_code == 200:
+            raw_data = res.json()
+            for item in raw_data:
+                headline = item.get("headline", "No Headline Provided")
+                raw_text_block += f"- [PSYOPOLY] {headline}\n"
+                
+                formatted_events.append({
+                    "Date": item.get("posted_at", "").split("T")[0],
+                    "Actor": "Psyopoly/West Asia",
+                    "Location": "Middle East",
+                    "Event": "Strategic Update",
+                    "Action": headline[:60] + "..." if len(headline) > 60 else headline,
+                    "Summary": headline,
+                    "Risk": "HIGH",
+                    "Source": item.get("url", "https://www.psyopoly.pro/middle-east")
+                })
+            return formatted_events, raw_text_block
+    except Exception as e:
+        print(f"⚠️ Psyopoly extraction failed: {e}")
+        
+    return [], ""
 
 # ==========================================
 # 2. DATA SCRAPING (ANTI-BOT + LIVE BOOLEAN + DEEP SCRAPE)
@@ -113,7 +154,7 @@ def fetch_daily_intelligence():
 
     for query in GOOGLE_QUERIES:
         encoded_query = urllib.parse.quote(query)
-        gn_url = f'[https://news.google.com/rss/search?q=](https://news.google.com/rss/search?q=){encoded_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
+        gn_url = f'https://news.google.com/rss/search?q={encoded_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
         
         try:
             response = requests.get(gn_url, headers=headers, timeout=15)
@@ -125,30 +166,26 @@ def fetch_daily_intelligence():
         except Exception as e:
             print(f"⚠️ Warning: Could not fetch Google News for {query} - {e}")
             
-    # --- PHASE 3: DEEP-SCRAPE MARITIME ALERTS (For Gemini Analysis) ---
+    # --- PHASE 3: DEEP-SCRAPE MARITIME ALERTS ---
     print("🚢 Executing Deep-Scrape on Live Maritime URLs...")
-    # Using 24h here to ensure we capture the full narrative of recent attacks
     maritime_query = '("UKMTO" OR "Ambrey" OR "MSCHOA" OR "MSCIO") AND ("incident" OR "attack" OR "vessel" OR "boarded" OR "missile" OR "houthi") when:24h'
     encoded_m_query = urllib.parse.quote(maritime_query)
-    gn_maritime_url = f'[https://news.google.com/rss/search?q=](https://news.google.com/rss/search?q=){encoded_m_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
+    gn_maritime_url = f'https://news.google.com/rss/search?q={encoded_m_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
     
     try:
         m_res = requests.get(gn_maritime_url, headers=headers, timeout=15)
         m_res.raise_for_status()
         m_feed = feedparser.parse(m_res.text)
         
-        for entry in m_feed.entries[:6]: # Target top 6 most recent maritime alerts
+        for entry in m_feed.entries[:6]: 
             url = entry.link
             try:
-                # 1. Visit the actual URL autonomously
                 page_res = requests.get(url, headers=headers, timeout=10)
                 soup = BeautifulSoup(page_res.text, 'html.parser')
                 
-                # 2. Extract all readable paragraph text
                 paragraphs = soup.find_all('p')
                 extracted_text = " ".join([p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 30])
                 
-                # 3. Clean and truncate for the LLM (800 chars is plenty for Gemini to grasp tactical specifics)
                 if extracted_text:
                     snippet = extracted_text[:800] + "..." if len(extracted_text) > 800 else extracted_text
                     aggregated_news += f"\n- [LIVE MARITIME ALERT - {entry.title}]\n  DEEP EXTRACTION DATA: {snippet}\n"
@@ -157,14 +194,19 @@ def fetch_daily_intelligence():
                 
                 total_articles += 1
             except Exception as e:
-                # Failsafe: If a specific publication blocks the scraper, fall back to just the headline
                 aggregated_news += f"\n- [LIVE MARITIME ALERT] {entry.title}\n"
                 total_articles += 1
     except Exception as e:
         print(f"⚠️ Warning: Could not fetch Maritime Boolean - {e}")
 
+    # --- PHASE 5: PSYOPOLY WEST ASIA INTEGRATION ---
+    psy_events, psy_text = fetch_psyopoly_data()
+    if psy_text:
+        aggregated_news += psy_text
+        total_articles += len(psy_events)
+
     print(f"📰 Successfully grabbed {total_articles} raw headlines and deep-scraped data.")
-    return aggregated_news, total_articles
+    return aggregated_news, total_articles, psy_events
 
 # ==========================================
 # 3. AI EXTRACTION PIPELINE (WITH AUTO-RETRY)
@@ -214,13 +256,18 @@ def extract_tactical_events(news_text):
 # ==========================================
 if __name__ == "__main__":
     try:
-        news_data, article_count = fetch_daily_intelligence()
+        news_data, article_count, psy_events = fetch_daily_intelligence()
         
         if article_count == 0:
             print("❌ ABORTING: No articles scraped. Preventing AI hallucination.")
             exit(1)
             
         tactical_events = extract_tactical_events(news_data)
+        
+        # Inject Psyopoly Intel natively into the JSON structure
+        if psy_events:
+            tactical_events = psy_events + tactical_events
+            print(f"✅ Injected {len(psy_events)} native Psyopoly variables into the tactical payload.")
         
         output_file = 'data/friday_snippet/tactical_events_24h.json'
         with open(output_file, 'w') as f:
