@@ -1,44 +1,44 @@
 [
     {
         "Date": "2026-06-06",
-        "Actor": "China, Taiwan",
-        "Action": "China considers Taiwan invasion; Taiwan plans chip destruction.",
-        "Location": "Taiwan Strait",
+        "Actor": "United States, Iran, UAE",
+        "Action": "US strikes Iran; Iran attacks UAE, launches drones.",
+        "Location": "Strait of Hormuz, Persian Gulf, UAE",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "United States, Iran",
-        "Action": "US-Iran clashes; US intercepts drones, boards tanker.",
-        "Location": "Strait of Hormuz, Indian Ocean",
+        "Actor": "China, Taiwan, United States",
+        "Action": "China considers Taiwan rule; Taiwan arms itself.",
+        "Location": "Taiwan Strait, Indo-Pacific",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Global shipping industry",
-        "Action": "Container shipping rates explode amid chokepoint crises.",
-        "Location": "Global shipping routes",
+        "Actor": "Global Semiconductor Industry, SpaceX, Google, India, Japan",
+        "Action": "Chip market tumbles; AI computing deals; national chip roadmaps.",
+        "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "United States, NATO",
-        "Action": "US urges NATO to boost air/naval forces.",
-        "Location": "Europe",
+        "Actor": "NATO, United States, France, Netherlands",
+        "Action": "NATO allies boost defense; France tests AI command.",
+        "Location": "Europe, Ukraine",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "United States, Venezuela",
-        "Action": "US military chief visits 'post-Maduro' Venezuela.",
-        "Location": "Venezuela",
+        "Actor": "Venezuela, India, Canada",
+        "Action": "Venezuela, India deepen energy ties; critical minerals focus.",
+        "Location": "Venezuela, India, Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-06",
-        "Actor": "Google, SpaceX",
-        "Action": "Google leases massive AI computing capacity from SpaceX.",
-        "Location": "Global AI infrastructure",
+        "Actor": "Blue Origin, United States",
+        "Action": "Rocket explosion exposes national security launch fragility.",
+        "Location": "United States",
         "Risk": "HIGH"
     }
 ]
