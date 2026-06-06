@@ -1,98 +1,98 @@
 [
     {
-        "Date": "2026-06-05",
-        "Actor": "China (Xi Jinping), North Korea",
-        "Action": "Chinese President visits North Korea",
-        "Location": "North Korea",
+        "Date": "2026-06-06",
+        "Actor": "United States, Iran",
+        "Action": "US intercepts Iranian attack drones",
+        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL",
-        "Headline": "Xi to Leave China for First Time This Year. Destination: Pyongyang."
+        "Headline": "US shoots down Iranian drones launched toward Strait of Hormuz: CENTCOM"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "United States, Iran, UK (vessel)",
-        "Action": "Cargo vessel struck in Arabian Gulf",
-        "Location": "Arabian Gulf",
+        "Date": "2026-06-06",
+        "Actor": "Unknown (attackers), Cargo Vessel (implied)",
+        "Action": "Cargo vessel hit by explosions",
+        "Location": "Gulf off Iraq",
         "Risk": "CRITICAL",
-        "Headline": "Cargo vessel struck in Arabian Gulf amid US-Iran tensions."
+        "Headline": "Two explosions hit cargo vessel in Gulf off Iraq, officials say"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "China",
-        "Action": "Considers ruling Taiwan post-invasion scenarios",
-        "Location": "Taiwan",
+        "Date": "2026-06-06",
+        "Actor": "United States, Iran",
+        "Action": "US sanctions Iranian LPG, banking network",
+        "Location": "Iran",
         "Risk": "CRITICAL",
-        "Headline": "China considers challenges of ruling Taiwan post-invasion."
+        "Headline": "New US sanctions target Iran LPG and shadow banking system"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "UN, WFP",
-        "Action": "Warns of global hunger crisis",
-        "Location": "Middle East (global impact)",
-        "Risk": "CRITICAL",
-        "Headline": "Middle East conflict fuels global hunger crisis."
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "United States, NATO (Europe, Canada)",
-        "Action": "Urges allies to boost defense forces",
-        "Location": "Europe, North America",
-        "Risk": "HIGH",
-        "Headline": "US urges NATO allies to boost air and naval forces."
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "Ukraine",
-        "Action": "Drone attacks shift war momentum",
+        "Date": "2026-06-06",
+        "Actor": "Ukraine, Russia",
+        "Action": "Putin rejects talks, opts for war",
         "Location": "Ukraine",
         "Risk": "CRITICAL",
-        "Headline": "Ukraine's drone attacks shifting war momentum."
+        "Headline": "Zelenskyy: Putin choosing war by rejecting offer for in-person talks"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "Syria",
-        "Action": "Hidden chemical weapon sites emerge",
-        "Location": "Syria",
-        "Risk": "CRITICAL",
-        "Headline": "Hidden chemical weapons sites emerge in Syria."
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "TSMC (Taiwan), NVIDIA (US)",
-        "Action": "Integrates AI into chip production",
+        "Date": "2026-06-06",
+        "Actor": "China",
+        "Action": "China studies Taiwan governance post-invasion",
         "Location": "Taiwan",
-        "Risk": "ELEVATED",
-        "Headline": "TSMC expands NVIDIA AI use in chip production."
+        "Risk": "CRITICAL",
+        "Headline": "After the Invasion: China Considers the Problem of Ruling Taiwan"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "United States, Asia",
-        "Action": "Reintroducing tariffs on Asia",
-        "Location": "Asia (global trade)",
+        "Date": "2026-06-06",
+        "Actor": "United States, Iran",
+        "Action": "US boards sanctioned tanker, expands pressure",
+        "Location": "Indian Ocean",
+        "Risk": "CRITICAL",
+        "Headline": "U.S. Boards Sanctioned Tanker as Iran Maritime Blockade Expands Into Indian Ocean"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "United States, NATO (Europe, Canada)",
+        "Action": "US urges NATO allies to boost forces",
+        "Location": "Europe, North Atlantic",
         "Risk": "HIGH",
-        "Headline": "Trump reintroduces tariffs, impacting Asia."
+        "Headline": "US tells Europe, Canada to boost NATO air and naval forces"
     },
     {
-        "Date": "2026-06-05",
-        "Actor": "Russia",
-        "Action": "Sanctioned LNG carrier uses Arctic route",
-        "Location": "Arctic (Russia)",
-        "Risk": "HIGH",
-        "Headline": "Sanctioned Russian LNG carrier transits Arctic."
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "Blue Origin (US)",
-        "Action": "Rocket explosion exposes launch fragility",
-        "Location": "United States",
-        "Risk": "HIGH",
-        "Headline": "Blue Origin explosion reveals fragility of national-security launch plans."
-    },
-    {
-        "Date": "2026-06-05",
-        "Actor": "United States",
-        "Action": "Faces missile gap in Indo-Pacific",
+        "Date": "2026-06-06",
+        "Actor": "Australia, United States",
+        "Action": "Australia acquires US nuclear submarines",
         "Location": "Indo-Pacific",
         "Risk": "HIGH",
-        "Headline": "US Indo-Pacific deterrence strained by missile gap."
+        "Headline": "Why is Australia buying used American nuclear submarines?"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "Global Maritime Industry, Iran (Hormuz Crisis)",
+        "Action": "Hormuz crisis drives shipping rate surge",
+        "Location": "Strait of Hormuz, Global",
+        "Risk": "HIGH",
+        "Headline": "Peak Season and Hormuz Crisis Fuel New Surge in Container Shipping Rates"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "United States, Canada",
+        "Action": "US pressures Canada on critical minerals",
+        "Location": "North America",
+        "Risk": "HIGH",
+        "Headline": "US Presses Canada for Deeper Critical Minerals Cooperation With Ultimatum Over Slow Progress"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "United States",
+        "Action": "US Indo-Pacific missile deterrence under strain",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH",
+        "Headline": "The missile gap problem: US Indo-Pacific deterrence under strain"
+    },
+    {
+        "Date": "2026-06-06",
+        "Actor": "United States",
+        "Action": "US considers equity stakes in AI firms",
+        "Location": "United States",
+        "Risk": "ELEVATED",
+        "Headline": "Trump says US may take equity stakes in AI companies"
     }
 ]
