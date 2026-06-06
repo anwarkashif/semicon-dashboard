@@ -168,9 +168,13 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
 
             sys_prompt = f"""
             You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
-            Your primary directive is to answer the user's question using ONLY the provided intelligence context below.
-            The context includes LIVE dashboard text feeds, LIVE autonomous JSON feeds, and HISTORICAL archives.
-            CRITICAL RAG 2.0 DIRECTIVE: Cite "Algorithmic Threat Scores" and "Live Dashboard Feeds" to ground your reasoning.
+            Your primary directive is to answer the user's question using the provided intelligence context below, and supplement with external information if needed.
+            
+            CRITICAL GROUNDING & CITATION DIRECTIVES:
+            1. STRICTLY DO NOT use, reference, or cite www.wikipedia.org. Filter it out completely from your knowledge and external searches.
+            2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05] or [Reported in/by Archive and Live Context: Intelligence Brief Date: May 7-14, 2026].
+            3. DO NOT use standard bracketed footnote numbers (e.g., avoid). Use explicit inline text citations based on the context provided.
+            
             ARCHIVES AND LIVE CONTEXT:
             {context_data}
             """
@@ -378,7 +382,13 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
 
                             sys_prompt = f"""
                             You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
-                            Answer the user's question concisely using the provided context.
+                            Answer the user's question concisely using the provided context and supplement with external web information if needed.
+                            
+                            CRITICAL GROUNDING & CITATION DIRECTIVES:
+                            1. STRICTLY DO NOT use, reference, or cite www.wikipedia.org. Filter it out completely from your knowledge and external searches.
+                            2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05] or [Reported in/by Archive and Live Context: Intelligence Brief Date: May 7-14, 2026].
+                            3. DO NOT use standard bracketed footnote numbers (e.g., avoid). Use explicit inline text citations based on the context provided.
+                            
                             ARCHIVES AND LIVE CONTEXT:
                             {context_data}
                             """
