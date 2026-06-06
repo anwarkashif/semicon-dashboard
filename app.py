@@ -412,8 +412,8 @@ else:
         render_ticker_tape()
 
     # 🚀 INJECT SCROLL-TO-TOP BUTTON (EXCLUDING SPECIFIC SECTIONS)
-    # Added Psyopoly to exclude list since scrolling is contained within the iframe
-    if view_selection not in ["Trend Timelines", "Archives", "West Asia Strategic Intel (Psyopoly)"]:
+    # Psyopoly removed from exclusion list so the Up Arrow appears
+    if view_selection not in ["Trend Timelines", "Archives"]:
         st.markdown(
             """
             <style>
@@ -490,9 +490,9 @@ else:
                 selected_actor, df_actions, MAPBOX_PUBLIC_TOKEN
             )
             
-    # 🚀 NEW ROUTING CONDITION
+# 🚀 NEW ROUTING CONDITION
     elif view_selection == "West Asia Strategic Intel (Psyopoly)":
-        render_psyopoly_viewer()
+        render_psyopoly_viewer(df_actions)
 
     elif view_selection == "Global Threat Intercept (ShadowBroker)":
         render_shadowbroker()
