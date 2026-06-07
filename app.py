@@ -370,17 +370,20 @@ else:
             padding-top: 110px !important; 
         }}
         .ticker-move {{
-            display: inline-block;
-            white-space: nowrap;
-            padding-left: 100vw;
+            display: flex;
+            width: fit-content;
             animation: ticker {dynamic_duration}s linear infinite;
+        }}
+        .ticker-track {{
+            display: flex;
+            white-space: nowrap;
         }}
         .ticker-move:hover {{
             animation-play-state: paused;
         }}
         @keyframes ticker {{
-            0% {{ transform: translate3d(0,0,0); }}
-            100% {{ transform: translate3d(-100%,0,0); }}
+            0% {{ transform: translate3d(0, 0, 0); }}
+            100% {{ transform: translate3d(-50%, 0, 0); }}
         }}
         .ticker-item {{
             display: inline-block;
@@ -401,7 +404,8 @@ else:
         </style>
         <div class="ticker-wrap">
             <div class="ticker-move">
-                {all_items_html}
+                <div class="ticker-track">{all_items_html}</div>
+                <div class="ticker-track">{all_items_html}</div>
             </div>
         </div>
         """
