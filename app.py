@@ -9,7 +9,7 @@ from features.ui_features import inject_early_css, inject_global_theme, render_l
 # ==========================================
 st.set_page_config(
     page_title="SemicoN Dashboard", 
-    page_icon="🛡️",  
+    page_icon="logo.jpg",  
     layout="wide", 
     initial_sidebar_state="collapsed"
 )
@@ -125,7 +125,12 @@ else:
     from features.shadowbroker_features import render_shadowbroker
     from features.psyopoly_features import render_psyopoly_viewer  
 
-    MAPBOX_PUBLIC_TOKEN = "pk.eyJ1Ijoia2FzaGlmYW53YXIiLCJhIjoiY21td2loemd2Mm10MzJycXh4aTd1YjZtdCJ9.EN4o_kXPmA8ScOimJyf53A"
+    MAPBOX_PUBLIC_TOKEN = os.environ.get("MAPBOX_PUBLIC_TOKEN")
+    if not MAPBOX_PUBLIC_TOKEN:
+        try:
+            MAPBOX_PUBLIC_TOKEN = st.secrets.get("MAPBOX_PUBLIC_TOKEN")
+        except Exception:
+            MAPBOX_PUBLIC_TOKEN = None
     
     # Safe Environment Look-up (Primary Key for Snippet Feature)
     GEMINI_API_KEY = os.environ.get("RAG_GEMINI_API_KEY")
@@ -167,7 +172,8 @@ else:
             
     auth_headers = {"Authorization": f"token {GITHUB_PAT}"} if GITHUB_PAT else {}
 
-    @st.cache_data(ttl=300) # Syncs with GitHub every 5 minutes
+    # 🚀 Muted default Streamlit notification banners on cache updates
+    @st.cache_data(ttl=300, show_spinner=False) 
     def sync_github_to_local():
         tactical_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/tactical_events_24h.json"
         try:
@@ -218,7 +224,7 @@ else:
 
     latest_filepath = sync_github_to_local()
 
-    @st.cache_data(ttl=300) 
+    @st.cache_data(ttl=300, show_spinner=False) 
     def load_data(filepath):
         if not filepath: return None
         try:
@@ -226,7 +232,7 @@ else:
         except Exception:
             return None
 
-    @st.cache_data(ttl=300)
+    @st.cache_data(ttl=300, show_spinner=False)
     def load_live_tactical_data():
         filepath = 'data/tactical_events_24h.json'
         if os.path.exists(filepath):
@@ -427,7 +433,6 @@ else:
         render_ticker_tape()
 
     # 🚀 INJECT SCROLL-TO-TOP BUTTON (EXCLUDING SPECIFIC SECTIONS)
-    # Psyopoly removed from exclusion list so the Up Arrow appears
     if view_selection not in ["Trend Timelines", "Archives"]:
         st.markdown(
             """
