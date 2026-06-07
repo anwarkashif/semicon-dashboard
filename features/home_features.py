@@ -124,13 +124,115 @@ def get_hot_actors(df_actions):
 def render_flash_alert(df_actions):
     if df_actions.empty or 'Headline' not in df_actions.columns:
         return
+        
     latest = df_actions.iloc[0]
-    headline = latest.get('Headline', 'System Nominal')
-    st.markdown(f"""
-    <div class="flash-alert">
-    🚨 FLASH ALERT: {headline}
+    # Sanitize the text so quotes don't break the HTML/JS wrapper
+    headline = str(latest.get('Headline', 'System Nominal')).replace('"', '&quot;').replace("'", "&#39;")
+    
+    html_code = f"""
+    <style>
+        body {{ 
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 0; 
+            padding: 0; 
+            background-color: transparent; 
+            overflow: hidden; 
+        }}
+        .flash-box {{
+            background: linear-gradient(90deg, #8b0000 0%, #ff0000 50%, #8b0000 100%); 
+            background-size: 200% 200%; 
+            animation: pulseBackground 2s infinite; 
+            border: 2px solid #ff4b4b; 
+            padding: 12px 15px; 
+            border-radius: 8px; 
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            color: #ffffff;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 105px; /* Fixed height for the entire box */
+        }}
+        
+        :fullscreen {{
+            background-color: rgba(20, 20, 20, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }}
+        :fullscreen .flash-box {{ 
+            width: 90vw; 
+            height: auto; 
+            max-height: 90vh; 
+            padding: 40px; 
+            border-width: 4px; 
+        }}
+        :fullscreen .title {{ font-size: 2.5em; }}
+        :fullscreen .headline-scroll-area {{ 
+            max-height: none; /* Let it expand freely in fullscreen */
+            overflow-y: auto; 
+        }}
+        :fullscreen .headline {{ font-size: 2em; line-height: 1.4; margin-top: 20px; }}
+        
+        @keyframes pulseBackground {{ 0% {{ background-position: 0% 50%; }} 50% {{ background-position: 100% 50%; }} 100% {{ background-position: 0% 50%; }} }}
+        @keyframes blinkText {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
+        
+        .header-flex {{ 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 5px; 
+            flex-shrink: 0; /* Prevents the header from shrinking */
+        }}
+        .title {{ font-size: 1.17em; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin:0; display:flex; align-items:center; }}
+        
+        /* THIS IS THE STRICT 2-LINE SCROLLABLE CONTAINER */
+        .headline-scroll-area {{
+            flex-grow: 1;
+            overflow-y: auto;
+            padding-right: 8px;
+            max-height: 2.8em; /* Exactly 2 lines based on 1.4 line-height */
+        }}
+        
+        /* Custom Webkit Scrollbar for a sleek UI */
+        .headline-scroll-area::-webkit-scrollbar {{ width: 5px; }}
+        .headline-scroll-area::-webkit-scrollbar-track {{ background: rgba(0, 0, 0, 0.2); border-radius: 4px; }}
+        .headline-scroll-area::-webkit-scrollbar-thumb {{ background: rgba(255, 255, 255, 0.6); border-radius: 4px; }}
+
+        .headline {{ font-weight: 800; font-size: 14px; line-height: 1.4em; margin: 0; }}
+        
+        .magnify-btn {{ background: rgba(0,0,0,0.6); color: white; border: 1px solid white; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; margin-left: 10px; flex-shrink: 0; }}
+        .magnify-btn:hover {{ background: rgba(255,255,255,0.2); }}
+        :fullscreen .magnify-btn {{ display: none; }} 
+        
+        .close-btn {{ display: none; }}
+        :fullscreen .close-btn {{ display: inline-block; background: transparent; color: white; border: 1px solid white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 18px; margin-top: 20px; flex-shrink: 0; }}
+    </style>
+    
+    <div class="flash-box" id="flash-container">
+        <div class="header-flex">
+            <h3 class="title">
+                <span style="animation: blinkText 1s infinite; margin-right: 15px;">🚨 FLASH ALERT</span> 
+            </h3>
+            <button class="magnify-btn" onclick="toggleFullscreen()">🔍 MAGNIFY</button>
+        </div>
+        <div class="headline-scroll-area">
+            <p class="headline">{headline}</p>
+        </div>
+        <button class="close-btn" onclick="document.exitFullscreen()">✖ CLOSE VIEW</button>
     </div>
-    """, unsafe_allow_html=True)
+    
+    <script>
+        function toggleFullscreen() {{
+            let elem = document.documentElement;
+            if (!document.fullscreenElement) {{
+                elem.requestFullscreen().catch(err => {{ alert(`Error: ${{err.message}}`); }});
+            }} else {{ document.exitFullscreen(); }}
+        }}
+    </script>
+    """
+    
+    # Adjusted height to fit the new exact box dimensions
+    components.html(html_code, height=115)
 
 
 # ==========================================
@@ -854,6 +956,10 @@ def render_tactical_conflict_overlay(df_actions):
 # 5. MAIN EXECUTIVE HOME RENDER
 # ==========================================
 def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox_token):
+    # 1. Aggressively normalize global df_actions (strips hidden spaces and fixes case)
+    if not df_actions.empty:
+        df_actions.columns = [str(c).strip().title() for c in df_actions.columns]
+
     exec_data_path = 'data/executive_home/tactical_events_24h.json'
     if os.path.exists(exec_data_path):
         try:
@@ -861,10 +967,17 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 exec_events = json.load(f)
                 df_exec = pd.DataFrame(exec_events)
                 
-                if 'Headline' not in df_exec.columns and 'Action' in df_exec.columns:
-                    df_exec['Headline'] = df_exec['Action']
-                    
                 if not df_exec.empty:
+                    # 2. Aggressively normalize local df_exec
+                    df_exec.columns = [str(c).strip().title() for c in df_exec.columns]
+                    
+                    # 3. Cross-fill Action and Headline in df_exec if one is missing entirely
+                    if 'Action' in df_exec.columns and 'Headline' not in df_exec.columns:
+                        df_exec['Headline'] = df_exec['Action']
+                    elif 'Headline' in df_exec.columns and 'Action' not in df_exec.columns:
+                        df_exec['Action'] = df_exec['Headline']
+                        
+                    # 4. Safe Concatenation
                     if df_actions.empty:
                         df_actions = df_exec
                     else:
@@ -1226,25 +1339,55 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     st.markdown("### ⚠️ Recent Tactical Alerts")
     
     if not df_actions.empty:
-        available_cols = df_actions.columns.tolist()
-        target_cols = ['Date', 'Action', 'Event', 'Headline']
-        
         temp_df = df_actions.copy()
+        
+        # 1. Align the display columns strictly with what the AI pipeline generates
+        target_cols = ['Date', 'Actor', 'Action', 'Location', 'Risk']
+        
+        # 2. Ensure target columns exist safely to prevent KeyError
+        for col in target_cols:
+            if col not in temp_df.columns:
+                # Fallback check for legacy keys if a fresh pipeline hasn't run yet
+                if col == 'Action' and 'Headline' in temp_df.columns:
+                    temp_df['Action'] = temp_df['Headline']
+                elif col == 'Actor' and 'Source' in temp_df.columns:
+                    temp_df['Actor'] = temp_df['Source']
+                else:
+                    temp_df[col] = pd.NA
+                    
+        # 3. Clean and Sort by Date
         if 'Date' in temp_df.columns:
             temp_df['Parsed_Date'] = pd.to_datetime(temp_df['Date'], errors='coerce', utc=True)
             temp_df = temp_df.sort_values(by='Parsed_Date', ascending=False)
+            temp_df['Date'] = temp_df['Date'].astype(str)
             temp_df = temp_df.drop(columns=['Parsed_Date'])
             
-        display_df = temp_df.head(6).copy()
+        # 4. Lock in the exact display columns requested
+        display_df = temp_df[target_cols].head(6).copy()
             
-        cols_to_show = [col for col in target_cols if col in display_df.columns]
-        if cols_to_show:
-            display_df = display_df[cols_to_show]
+        # 5. Clean any remaining NaNs to empty strings for a pristine UI
+        display_df = display_df.fillna("")
+        
+        # 6. Apply dynamic styling to the Risk column
+        def color_risk(val):
+            val_str = str(val).upper()
+            if 'CRITICAL' in val_str:
+                return 'background-color: rgba(239, 68, 68, 0.15); color: #fca5a5; font-weight: bold;'
+            elif 'HIGH' in val_str:
+                return 'background-color: rgba(245, 158, 11, 0.15); color: #fcd34d; font-weight: bold;'
+            elif 'MODERATE' in val_str or 'MID' in val_str or 'ELEVATED' in val_str:
+                return 'color: #fbbf24;'
+            elif 'LOW' in val_str or 'NOMINAL' in val_str:
+                return 'color: #4ade80;'
+            return ''
+
+        # Safely apply the styling (handles both modern and legacy Pandas versions)
+        try:
+            styled_df = display_df.style.map(color_risk, subset=['Risk'])
+        except AttributeError:
+            styled_df = display_df.style.applymap(color_risk, subset=['Risk'])
             
-        if 'Date' in display_df.columns:
-            display_df['Date'] = display_df['Date'].astype(str)
-            
-        st.dataframe(display_df, use_container_width=True, hide_index=True)
+        st.dataframe(styled_df, use_container_width=True, hide_index=True)
     else:
         st.write("No tactical alerts logged.")
             
