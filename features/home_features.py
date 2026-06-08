@@ -1341,55 +1341,58 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     if not df_actions.empty:
         temp_df = df_actions.copy()
         
-        # 1. Align the display columns strictly with what the AI pipeline generates
+        # 1. Target exact columns to map directly to the backend
         target_cols = ['Date', 'Actor', 'Action', 'Location', 'Risk']
         
-        # 2. Ensure target columns exist safely to prevent KeyError
+        # 2. Ensure target columns exist safely
         for col in target_cols:
             if col not in temp_df.columns:
-                # Fallback check for legacy keys if a fresh pipeline hasn't run yet
                 if col == 'Action' and 'Headline' in temp_df.columns:
                     temp_df['Action'] = temp_df['Headline']
                 elif col == 'Actor' and 'Source' in temp_df.columns:
                     temp_df['Actor'] = temp_df['Source']
                 else:
-                    temp_df[col] = pd.NA
+                    temp_df[col] = "Pending Data"
                     
-        # 3. Clean and Sort by Date
-        if 'Date' in temp_df.columns:
-            temp_df['Parsed_Date'] = pd.to_datetime(temp_df['Date'], errors='coerce', utc=True)
-            temp_df = temp_df.sort_values(by='Parsed_Date', ascending=False)
-            temp_df['Date'] = temp_df['Date'].astype(str)
-            temp_df = temp_df.drop(columns=['Parsed_Date'])
+        # 3. Clean, Sort, and Enforce Diversity via Deduplication
+        display_df = temp_df[target_cols].copy()
+        
+        # Drop identical actions to prevent one event flooding the board
+        display_df = display_df.drop_duplicates(subset=['Action'], keep='first')
+        
+        if 'Date' in display_df.columns:
+            display_df['Parsed_Date'] = pd.to_datetime(display_df['Date'], errors='coerce', utc=True)
+            display_df = display_df.sort_values(by=['Parsed_Date'], ascending=[False])
+            display_df['Date'] = display_df['Date'].astype(str)
+            display_df = display_df.drop(columns=['Parsed_Date'])
             
-        # 4. Lock in the exact display columns requested
-        display_df = temp_df[target_cols].head(6).copy()
-            
-        # 5. Clean any remaining NaNs to empty strings for a pristine UI
+        # 4. Lock in exactly 10 diverse rows
+        display_df = display_df.head(10)
         display_df = display_df.fillna("")
         
-        # 6. Apply dynamic styling to the Risk column
+        # 5. Intense Dynamic Styling for CRITICAL Risk Elements
         def color_risk(val):
             val_str = str(val).upper()
             if 'CRITICAL' in val_str:
-                return 'background-color: rgba(239, 68, 68, 0.15); color: #fca5a5; font-weight: bold;'
+                return 'background-color: rgba(220, 38, 38, 0.35); color: #fca5a5; font-weight: 900; border: 1px solid #ef4444;'
             elif 'HIGH' in val_str:
-                return 'background-color: rgba(245, 158, 11, 0.15); color: #fcd34d; font-weight: bold;'
+                return 'background-color: rgba(217, 119, 6, 0.2); color: #fcd34d; font-weight: bold;'
             elif 'MODERATE' in val_str or 'MID' in val_str or 'ELEVATED' in val_str:
                 return 'color: #fbbf24;'
             elif 'LOW' in val_str or 'NOMINAL' in val_str:
                 return 'color: #4ade80;'
             return ''
 
-        # Safely apply the styling (handles both modern and legacy Pandas versions)
+        # Apply styling dynamically
         try:
             styled_df = display_df.style.map(color_risk, subset=['Risk'])
         except AttributeError:
             styled_df = display_df.style.applymap(color_risk, subset=['Risk'])
             
-        st.dataframe(styled_df, use_container_width=True, hide_index=True)
+        # Expanded height slightly to perfectly frame 10 rows
+        st.dataframe(styled_df, use_container_width=True, hide_index=True, height=400)
     else:
-        st.write("No tactical alerts logged.")
+        st.write("No tactical alerts logged in the current operational cycle.")
             
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 

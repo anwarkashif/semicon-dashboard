@@ -236,7 +236,9 @@ def extract_tactical_events(news_text):
     print("🧠 Pushing data to Gemini for tactical extraction...")
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. 
-    Review the following news headlines from the last 24 hours. Extract 4 to 6 of the most critical geopolitical, defense, semiconductor, or supply chain events.
+    Review the following news headlines from the last 24 hours. Extract EXACTLY 8 of the most critical geopolitical, defense, semiconductor, or supply chain events.
+    
+    CRITICAL RULE: Ensure maximum diversity. Mix maritime, semiconductor, geopolitical, and military events. Do not pull everything from one region.
     
     You MUST output the result as a raw JSON array of objects. Do not include markdown formatting like ```json.
     
@@ -244,7 +246,7 @@ def extract_tactical_events(news_text):
     "Date": The current date (use {datetime.now().strftime('%Y-%m-%d')})
     "Actor": The country, company, or entity taking the action.
     "Action": A concise, 5-8 word description of the event.
-    "Location": A specific country, region, or chokepoint (e.g., "Taiwan", "Strait of Hormuz", "United States", "China").
+    "Location": A specific country, region, or chokepoint (e.g., "Taiwan", "Red Sea", "Global").
     "Risk": Must be strictly one of: "CRITICAL", "HIGH", or "ELEVATED".
     
     News Data:
@@ -266,7 +268,7 @@ def extract_tactical_events(news_text):
                 sleep_time = 15 * (attempt + 1) 
                 time.sleep(sleep_time)
             else:
-                raise e 
+                raise e
 
 def generate_flush_to_brief(news_text):
     print("🧠 Pushing data to Gemini for FLASH TO BRIEF generation...")
@@ -319,10 +321,10 @@ if __name__ == "__main__":
         # 1. Generate the Tactical Grid Array
         tactical_events = extract_tactical_events(news_data)
         
-        # Inject Psyopoly Intel natively into the JSON structure
+        # Inject Psyopoly Intel natively into the JSON structure (CAPPED AT 2 to preserve diversity)
         if psy_events:
-            tactical_events = psy_events + tactical_events
-            print(f"✅ Injected {len(psy_events)} native Psyopoly variables into the tactical payload.")
+            tactical_events = psy_events[:2] + tactical_events
+            print(f"✅ Injected top 2 native Psyopoly variables into the tactical payload.")
             
         output_file_tactical = 'data/executive_home/tactical_events_24h.json'
         with open(output_file_tactical, 'w') as f:
