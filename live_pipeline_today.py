@@ -216,7 +216,9 @@ def extract_tactical_events(news_text):
     
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. 
-    Review the following news headlines from the last 24 hours. Extract exactly 10 to 12 of the most critical geopolitical, defense, semiconductor, or supply chain events.
+    Review the following news headlines from the last 24 hours. Extract EXACTLY 8 of the most critical geopolitical, defense, semiconductor, or supply chain events.
+    
+    CRITICAL RULE: Ensure maximum diversity. Mix maritime, semiconductor, geopolitical, and military events. Do not pull everything from one region.
     
     You MUST output the result as a raw JSON array of objects. Do not include markdown formatting like ```json.
     
@@ -224,7 +226,7 @@ def extract_tactical_events(news_text):
     "Date": The current date (use {datetime.now().strftime('%Y-%m-%d')})
     "Actor": The country, company, or entity taking the action.
     "Action": A concise, 5-8 word description of the event.
-    "Location": A specific country, region, or chokepoint (e.g., "Taiwan", "Strait of Hormuz", "United States", "China").
+    "Location": A specific country, region, or chokepoint (e.g., "Taiwan", "Red Sea", "Global").
     "Risk": Must be strictly one of: "CRITICAL", "HIGH", or "ELEVATED".
     "Headline": The original or highly summarized headline of the event.
     
@@ -304,10 +306,10 @@ if __name__ == "__main__":
             
         tactical_events = extract_tactical_events(news_data)
         
-        # Inject Psyopoly Intel natively into the JSON structure
+        # Inject Psyopoly Intel natively into the JSON structure (CAPPED AT 2)
         if psy_events:
-            tactical_events = psy_events + tactical_events
-            print(f"✅ Injected {len(psy_events)} native Psyopoly variables into the tactical payload.")
+            tactical_events = psy_events[:2] + tactical_events
+            print(f"✅ Injected top 2 native Psyopoly variables into the tactical payload.")
         
         output_file_tactical = 'data/today_snippet/tactical_events_24h.json'
         with open(output_file_tactical, 'w') as f:

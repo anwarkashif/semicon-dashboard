@@ -99,17 +99,56 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
     # ==========================================
     st.markdown("### 📊 Raw Tactical Feeds (12H)")
     if df_actions is not None and not df_actions.empty:
+        temp_df = df_actions.copy()
         
-        # We removed the strict 'datetime.now() - 12 hours' filter here. 
-        # Since this data is continuously overwritten by your GitHub Action every 12 hours, 
-        # the entire JSON file inherently represents the most recent 12 hours of intelligence.
-        available_cols = df_actions.columns.tolist()
-        target_cols = ['Date', 'Action', 'Event', 'Headline', 'Actor']
-        cols_to_show = [col for col in target_cols if col in available_cols]
+        # Target exact columns to map directly to the backend
+        target_cols = ['Date', 'Actor', 'Action', 'Location', 'Risk']
         
-        display_df = df_actions[cols_to_show].head(6) if cols_to_show else df_actions.head(6)
+        # Ensure target columns exist safely
+        for col in target_cols:
+            if col not in temp_df.columns:
+                if col == 'Action' and 'Headline' in temp_df.columns:
+                    temp_df['Action'] = temp_df['Headline']
+                elif col == 'Actor' and 'Source' in temp_df.columns:
+                    temp_df['Actor'] = temp_df['Source']
+                else:
+                    temp_df[col] = "Pending Data"
+                    
+        # Clean, Sort, and Enforce Diversity via Deduplication
+        display_df = temp_df[target_cols].copy()
+        display_df = display_df.drop_duplicates(subset=['Action'], keep='first')
+        
+        if 'Date' in display_df.columns:
+            display_df['Parsed_Date'] = pd.to_datetime(display_df['Date'], errors='coerce', utc=True)
+            display_df = display_df.sort_values(by=['Parsed_Date'], ascending=[False])
+            display_df['Date'] = display_df['Date'].astype(str)
+            display_df = display_df.drop(columns=['Parsed_Date'])
             
-        st.dataframe(display_df, use_container_width=True, hide_index=True)
+        # Lock in exactly 10 diverse rows
+        display_df = display_df.head(10)
+        display_df = display_df.fillna("")
+        
+        # Intense Dynamic Styling for CRITICAL Risk Elements
+        def color_risk(val):
+            val_str = str(val).upper()
+            if 'CRITICAL' in val_str:
+                return 'background-color: rgba(220, 38, 38, 0.35); color: #fca5a5; font-weight: 900; border: 1px solid #ef4444;'
+            elif 'HIGH' in val_str:
+                return 'background-color: rgba(217, 119, 6, 0.2); color: #fcd34d; font-weight: bold;'
+            elif 'MODERATE' in val_str or 'MID' in val_str or 'ELEVATED' in val_str:
+                return 'color: #fbbf24;'
+            elif 'LOW' in val_str or 'NOMINAL' in val_str:
+                return 'color: #4ade80;'
+            return ''
+
+        # Apply styling dynamically
+        try:
+            styled_df = display_df.style.map(color_risk, subset=['Risk'])
+        except AttributeError:
+            styled_df = display_df.style.applymap(color_risk, subset=['Risk'])
+            
+        # Expanded height slightly to perfectly frame 10 rows
+        st.dataframe(styled_df, use_container_width=True, hide_index=True, height=400)
     else:
         st.info("No tactical alerts logged.")
 
