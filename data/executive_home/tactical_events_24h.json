@@ -4,75 +4,75 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "'Football unites us': Fifa slogan could be challenged at Wor...",
-        "Summary": "'Football unites us': Fifa slogan could be challenged at World Cup as Iran war enters the pitch",
+        "Action": "Are U.S. and Israel on the Same Page in Mideast Wars?",
+        "Summary": "Are U.S. and Israel on the Same Page in Mideast Wars?",
         "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2063919033242550730"
+        "Source": "https://www.nytimes.com/2026/06/08/world/middleeast/netanyahu-trump-split-iran-lebanon.html"
     },
     {
         "Date": "2026-06-08",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "Iran has fired \u201cnearly 30 ballistic missiles\u201d at Israel sinc...",
-        "Summary": "Iran has fired \u201cnearly 30 ballistic missiles\u201d at Israel since Sunday evening, an Israeli military official said early Monday afternoon.",
+        "Action": "Lebanon\u2019s intractable crisis pulls Israel and Iran back towa...",
+        "Summary": "Lebanon\u2019s intractable crisis pulls Israel and Iran back towards war",
         "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2063918565804155115"
+        "Source": "https://x.com/FT/status/2064012216009961845"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "Israel, Iran, Houthis",
-        "Action": "Exchanging missile strikes, escalating regional conflict.",
-        "Location": "Middle East, Strait of Hormuz",
+        "Actor": "Israel, Iran",
+        "Action": "Exchanged military strikes, escalating regional conflict.",
+        "Location": "Middle East",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "Iran, Houthis, Global Shipping",
-        "Action": "Strait fees, attacks, container rates spike sharply.",
-        "Location": "Strait of Hormuz, Arabian Gulf",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-08",
-        "Actor": "China, North Korea",
-        "Action": "Xi Jinping makes rare state visit, deepens alliance.",
-        "Location": "North Korea",
+        "Actor": "European Union",
+        "Action": "Sanctioned Iran's IRGC Navy over Hormuz blockade.",
+        "Location": "Strait of Hormuz",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "South Korea",
-        "Action": "Plans major AI, chip investment; seeks Nvidia priority.",
-        "Location": "South Korea",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-08",
-        "Actor": "United States",
-        "Action": "Unveils AI security strategy for defense, infrastructure.",
-        "Location": "Global",
+        "Actor": "Houthi rebels",
+        "Action": "Maintained threats to Red Sea shipping, oil markets.",
+        "Location": "Red Sea",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "Taiwan, China",
-        "Action": "Taiwan expels Chinese ships, increasing maritime tensions.",
+        "Actor": "China",
+        "Action": "Explored Taiwan governance, heightening invasion concerns.",
         "Location": "Taiwan Strait",
-        "Risk": "HIGH"
+        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "Russia (ISS)",
-        "Action": "Russian ISS segment air leak causes crew shelter.",
-        "Location": "International Space Station (Orbit)",
+        "Actor": "Foxconn, Intel",
+        "Action": "Partnered on next-generation AI semiconductor infrastructure development.",
+        "Location": "Global",
         "Risk": "ELEVATED"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "Turkey",
-        "Action": "Expands defense exports amidst shifting European alliances.",
+        "Actor": "USA Rare Earth",
+        "Action": "Secured CHIPS Act funding for critical mineral supply.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-08",
+        "Actor": "France (NATO)",
+        "Action": "To test AI battlefield command in June exercise.",
         "Location": "Europe",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-08",
+        "Actor": "SpaceX",
+        "Action": "Launched Falcon 9 booster on record 35th flight.",
+        "Location": "Global Space",
         "Risk": "ELEVATED"
     }
 ]
