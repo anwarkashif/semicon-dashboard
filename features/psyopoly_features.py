@@ -37,6 +37,62 @@ def format_intel_date(date_str):
 
 
 # ==========================================
+# 🚀 CORE INTEL GRID MATRIX RENDERER
+# ==========================================
+def render_tactical_grid_matrix(df_target_segment):
+    """
+    Renders the exact 6-column professional tactical card matrix layout.
+    Shared by both the Live Interceptor and the Historical Archive views.
+    """
+    unique_days = df_target_segment['FormattedDate'].unique()
+    
+    for current_day in unique_days:
+        st.markdown(
+            f"""
+            <div class="dateline-axis-separator">
+                📅 MISSION DATELINE INDEX // {current_day.upper()}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+        
+        df_day_pool = df_target_segment[df_target_segment['FormattedDate'] == current_day]
+        day_variables = df_day_pool['GeoTag'].unique()
+        
+        for current_var in day_variables:
+            st.markdown(f'<div class="variable-sub-banner">▶ {current_var.upper()}</div>', unsafe_allow_html=True)
+            
+            df_target_cluster = df_day_pool[df_day_pool['GeoTag'] == current_var]
+            row_count = len(df_target_cluster)
+            
+            for i in range(0, row_count, 6):
+                cols = st.columns(6)
+                
+                for j in range(6):
+                    if i + j < row_count:
+                        idx = df_target_cluster.index[i + j]
+                        row = df_target_cluster.loc[idx]
+                        
+                        event_type = str(row.get('Event', 'TACTICAL LOG')).upper()
+                        summary_str = str(row.get('Summary', ''))
+                        source_link = str(row.get('Source', 'https://www.psyopoly.pro/middle-east'))
+                        
+                        with cols[j]:
+                            st.markdown(
+                                f"""
+                                <div class="tactical-grid-card">
+                                    <div class="card-content-wrapper">
+                                        <div class="card-tag-header">{event_type}</div>
+                                        <div class="card-body-text">{summary_str}</div>
+                                    </div>
+                                    <a href="{source_link}" target="_blank" class="intercept-btn">INTERCEPT RECORD</a>
+                                </div>
+                                """,
+                                unsafe_allow_html=True
+                            )
+
+
+# ==========================================
 # 📡 GEOPOLITICS-OSINT CONSOLE RENDERER
 # ==========================================
 def render_psyopoly_viewer(df_actions):
@@ -69,7 +125,7 @@ def render_psyopoly_viewer(df_actions):
             transform: translateY(-2px);
         }
         
-        /* Command Console Terminal Strip - Softened and Interactive */
+        /* Command Console Terminal Strip */
         .intel-terminal-banner {
             background: linear-gradient(90deg, #1e293b 0%, #0f172a 50%, #1e293b 100%);
             border: 1px solid rgba(59, 130, 246, 0.3);
@@ -101,7 +157,7 @@ def render_psyopoly_viewer(df_actions):
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
         }
         
-        /* Deep Spectrum Chronological Master Axis Splitter - Softened and Interactive */
+        /* Deep Spectrum Chronological Master Axis Splitter */
         .dateline-axis-separator {
             background: linear-gradient(90deg, #312e81 0%, #4c1d95 40%, #1e1b4b 100%);
             border-left: 4px solid #c084fc;
@@ -123,7 +179,7 @@ def render_psyopoly_viewer(df_actions):
             border-left: 6px solid #d8b4fe;
         }
         
-        /* Low-Profile Variable Anchor Header - Interactive */
+        /* Low-Profile Variable Anchor Header */
         .variable-sub-banner {
             color: #38bdf8;
             font-family: 'Courier New', monospace;
@@ -146,7 +202,7 @@ def render_psyopoly_viewer(df_actions):
             box-shadow: 0 2px 10px rgba(56, 189, 248, 0.3);
         }
         
-        /* High-Density Tactical Grid Card Wrapper - Softened for Readability */
+        /* High-Density Tactical Grid Card Wrapper */
         .tactical-grid-card {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border: 1px solid rgba(148, 163, 184, 0.2);
@@ -192,7 +248,7 @@ def render_psyopoly_viewer(df_actions):
         }
         .card-body-text {
             font-size: 13px;
-            color: #f1f5f9; /* Softened, brighter white for better readability */
+            color: #f1f5f9;
             line-height: 1.5;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             overflow: hidden;
@@ -233,20 +289,27 @@ def render_psyopoly_viewer(df_actions):
         unsafe_allow_html=True
     )
     
+    # Isolate Psyopoly variables
     df_psy = df_actions[df_actions['Actor'] == 'Psyopoly/West Asia'].copy()
     
     if not df_psy.empty:
-        # 🛡️ FIXED TRIPLE-SORT CRITICAL CHRONOLOGY
+        # Pre-process time matrix safely
         df_psy['DateTime'] = pd.to_datetime(df_psy['Date'], errors='coerce')
         df_psy = df_psy.sort_values(by='DateTime', ascending=False)
-        
         df_psy['GeoTag'] = df_psy['Summary'].apply(classify_geopolitical_variable)
         df_psy['FormattedDate'] = df_psy['Date'].apply(format_intel_date)
         
+        # Pull Year and Month integers for our logical archive buckets
+        df_psy['Year'] = df_psy['DateTime'].dt.year
+        df_psy['Month_Num'] = df_psy['DateTime'].dt.month
+        
+        # ------------------------------------------
+        # 🚨 MAIN TERMINAL BANNER & OUTBOUND LINK
+        # ------------------------------------------
         st.markdown(
             f"""
             <div class="intel-terminal-banner">
-                <div><span class="terminal-tag">ORCHESTRATOR:</span> CHRONOLOGICAL GRID INTERCEPTOR</div>
+                <div><span class="terminal-tag">ORCHESTRATOR:</span> LIVE GRID INTERCEPTOR</div>
                 <div><span class="terminal-tag">MONITORED PAYLOADS:</span> {len(df_psy)} ACTIVE CORES</div>
             </div>
             
@@ -258,56 +321,65 @@ def render_psyopoly_viewer(df_actions):
             """,
             unsafe_allow_html=True
         )
-
-        # Segment logs by clean, chronological day identifiers
-        unique_days = df_psy['FormattedDate'].unique()
         
-        for current_day in unique_days:
-            st.markdown(
-                f"""
-                <div class="dateline-axis-separator">
-                    📅 MISSION DATELINE INDEX // {current_day.upper()}
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
+        # ------------------------------------------
+        # 📁 CHRONOLOGICAL ARCHIVE ENGINE (Moved to Top)
+        # ------------------------------------------
+        st.markdown("### 📁 Strategic Intelligence Archives")
+        st.caption("Access non-active multi-theater intelligence payloads segregated by calendar lifecycle.")
+        
+        # Set up absolute core year tracking structure (2026 - 2030)
+        archive_years = ["2026", "2027", "2028", "2029", "2030"]
+        year_tabs = st.tabs([f"📂 {yr}" for yr in archive_years])
+        
+        # Calendar map array
+        all_months_map = {
+            1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
+            7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"
+        }
+        
+        for idx, year_str in enumerate(archive_years):
+            target_year = int(year_str)
             
-            df_day_pool = df_psy[df_psy['FormattedDate'] == current_day]
-            day_variables = df_day_pool['GeoTag'].unique()
-            
-            for current_var in day_variables:
-                st.markdown(f'<div class="variable-sub-banner">▶ {current_var.upper()}</div>', unsafe_allow_html=True)
+            with year_tabs[idx]:
+                # Enforce rule: 2026 starts directly from June, others use a standard calendar year
+                if target_year == 2026:
+                    visible_months = {k: v for k, v in all_months_map.items() if k >= 6}
+                else:
+                    visible_months = all_months_map
                 
-                df_target_cluster = df_day_pool[df_day_pool['GeoTag'] == current_var]
+                # Render clean row of month sub-tabs when the year folder is accessed
+                month_tabs = st.tabs([f"📅 {name}" for name in visible_months.values()])
                 
-                # 🚀 ADVANCED 6-COLUMN TACTICAL INTEL GRID ENGINE
-                row_count = len(df_target_cluster)
-                for i in range(0, row_count, 6):
-                    cols = st.columns(6)
-                    
-                    for j in range(6):
-                        if i + j < row_count:
-                            idx = df_target_cluster.index[i + j]
-                            row = df_target_cluster.loc[idx]
-                            
-                            event_type = str(row.get('Event', 'TACTICAL LOG')).upper()
-                            summary_str = str(row.get('Summary', ''))
-                            source_link = str(row.get('Source', 'https://www.psyopoly.pro/middle-east'))
-                            
-                            with cols[j]:
-                                # Render the visual container skeleton with the embedded HTML button
-                                st.markdown(
-                                    f"""
-                                    <div class="tactical-grid-card">
-                                        <div class="card-content-wrapper">
-                                            <div class="card-tag-header">{event_type}</div>
-                                            <div class="card-body-text">{summary_str}</div>
-                                        </div>
-                                        <a href="{source_link}" target="_blank" class="intercept-btn">INTERCEPT RECORD</a>
-                                    </div>
-                                    """,
-                                    unsafe_allow_html=True
-                                )
-                            
+                for m_idx, (month_num, month_name) in enumerate(visible_months.items()):
+                    with month_tabs[m_idx]:
+                        # Filter rows matching this exact year and month frame
+                        df_archive_segment = df_psy[(df_psy['Year'] == target_year) & (df_psy['Month_Num'] == month_num)]
+                        
+                        if not df_archive_segment.empty:
+                            st.markdown(
+                                f"""
+                                <div class="intel-terminal-banner" style="border-left-color: #a855f7; border-color: rgba(168, 85, 247, 0.3);">
+                                    <div><span class="terminal-tag" style="color: #c084fc;">ARCHIVE RETRIEVAL:</span> {month_name.upper()} {target_year}</div>
+                                    <div><span class="terminal-tag" style="color: #c084fc;">RECOVERED RECORDINGS:</span> {len(df_archive_segment)} LOGS</div>
+                                </div>
+                                """,
+                                unsafe_allow_html=True
+                            )
+                            # Render the matching segments utilizing the exact structural format styles
+                            render_tactical_grid_matrix(df_archive_segment)
+                        else:
+                            st.info(f"No intelligence payloads recorded for {month_name} {target_year}.")
+        
+        # ------------------------------------------
+        # 📡 LIVE INTERCEPTOR VIEW (Recent Feed)
+        # ------------------------------------------
+        st.markdown("<br><hr style='border: 1px solid #1e293b;'><br>", unsafe_allow_html=True)
+        st.markdown("### 🔴 Latest Active Intelligence Logs")
+        st.caption("Chronological stream of all recently intercepted payloads.")
+        
+        # Render the standard dynamic live view feed below the archives
+        render_tactical_grid_matrix(df_psy)
+        
     else:
         st.warning("⚠️ Zero intelligence logs fetched for tracking segment inside the data pool.")
