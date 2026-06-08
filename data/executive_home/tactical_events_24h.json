@@ -4,75 +4,75 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "IRGC Conducts Retaliatory Strike on Haifa Petrochemical Faci...",
-        "Summary": "IRGC Conducts Retaliatory Strike on Haifa Petrochemical Facilities",
+        "Action": "'Football unites us': Fifa slogan could be challenged at Wor...",
+        "Summary": "'Football unites us': Fifa slogan could be challenged at World Cup as Iran war enters the pitch",
         "Risk": "HIGH",
-        "Source": "https://www.tasnimnews.ir/en/news/2026/06/08/3611512/irgc-conducts-retaliatory-strike-on-haifa-petrochemical-facilities"
+        "Source": "https://x.com/TheNationalNews/status/2063919033242550730"
     },
     {
         "Date": "2026-06-08",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "IDF: We attacked military targets in central and western Ira...",
-        "Summary": "IDF: We attacked military targets in central and western Iran",
+        "Action": "Iran has fired \u201cnearly 30 ballistic missiles\u201d at Israel sinc...",
+        "Summary": "Iran has fired \u201cnearly 30 ballistic missiles\u201d at Israel since Sunday evening, an Israeli military official said early Monday afternoon.",
         "Risk": "HIGH",
-        "Source": "https://x.com/Haaretz/status/2063895292630450558"
+        "Source": "https://x.com/LOrientLeJour/status/2063918565804155115"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "Israel / Iran",
-        "Action": "Exchanged direct military strikes, escalating conflict.",
-        "Location": "Middle East",
+        "Actor": "Israel, Iran, Houthis",
+        "Action": "Exchanging missile strikes, escalating regional conflict.",
+        "Location": "Middle East, Strait of Hormuz",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "Houthis",
-        "Action": "Declared Red Sea blockade, targeting Israeli-linked vessels.",
-        "Location": "Red Sea",
+        "Actor": "Iran, Houthis, Global Shipping",
+        "Action": "Strait fees, attacks, container rates spike sharply.",
+        "Location": "Strait of Hormuz, Arabian Gulf",
         "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "China / North Korea",
-        "Action": "Declared \"new starting point\" in bilateral relations.",
-        "Location": "East Asia",
+        "Actor": "China, North Korea",
+        "Action": "Xi Jinping makes rare state visit, deepens alliance.",
+        "Location": "North Korea",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-08",
         "Actor": "South Korea",
-        "Action": "Plans major AI and semiconductor investment project.",
+        "Action": "Plans major AI, chip investment; seeks Nvidia priority.",
         "Location": "South Korea",
-        "Risk": "HIGH"
+        "Risk": "ELEVATED"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Chip capacity constraints limit global AI spending growth.",
+        "Actor": "United States",
+        "Action": "Unveils AI security strategy for defense, infrastructure.",
         "Location": "Global",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "US Treasury Department",
-        "Action": "Issued new sanctions targeting Iran's LPG trade.",
-        "Location": "Iran / Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-08",
-        "Actor": "Taiwan Coast Guard / China",
-        "Action": "Expelled Chinese ships from Taiwan's restricted waters.",
+        "Actor": "Taiwan, China",
+        "Action": "Taiwan expels Chinese ships, increasing maritime tensions.",
         "Location": "Taiwan Strait",
         "Risk": "HIGH"
     },
     {
         "Date": "2026-06-08",
-        "Actor": "Unspecified / UK",
-        "Action": "Cargo vessel struck in Arabian Gulf amid tensions.",
-        "Location": "Arabian Gulf",
-        "Risk": "CRITICAL"
+        "Actor": "Russia (ISS)",
+        "Action": "Russian ISS segment air leak causes crew shelter.",
+        "Location": "International Space Station (Orbit)",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-08",
+        "Actor": "Turkey",
+        "Action": "Expands defense exports amidst shifting European alliances.",
+        "Location": "Europe",
+        "Risk": "ELEVATED"
     }
 ]
