@@ -211,65 +211,22 @@ def fetch_daily_intelligence():
 # ==========================================
 # 3. AI EXTRACTION PIPELINE
 # ==========================================
-def extract_tactical_events(news_text):
-    print("🧠 Pushing data to Gemini for tactical extraction...")
-    
-    prompt = f"""
-    You are an elite Geopolitics-OSINT analyst. 
-    Review the following news headlines from the last 24 hours. Extract EXACTLY 8 of the most critical geopolitical, defense, semiconductor, or supply chain events.
-    
-    CRITICAL RULE: Ensure maximum diversity. Mix maritime, semiconductor, geopolitical, and military events. Do not pull everything from one region.
-    
-    You MUST output the result as a raw JSON array of objects. Do not include markdown formatting like ```json.
-    
-    Each object must have exactly these keys:
-    "Date": The current date (use {datetime.now().strftime('%Y-%m-%d')})
-    "Actor": The country, company, or entity taking the action.
-    "Action": A concise, 5-8 word description of the event.
-    "Location": A specific country, region, or chokepoint (e.g., "Taiwan", "Red Sea", "Global").
-    "Risk": Must be strictly one of: "CRITICAL", "HIGH", or "ELEVATED".
-    "Headline": The original or highly summarized headline of the event.
-    
-    News Data:
-    {news_text}
-    """
-    
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            response = client.models.generate_content(
-                model='gemini-2.5-flash',
-                contents=prompt,
-            )
-            clean_text = response.text.replace("```json", "").replace("```", "").strip()
-            return json.loads(clean_text)
-            
-        except Exception as e:
-            print(f"⚠️ API Error on attempt {attempt + 1}/{max_retries}: {e}")
-            if attempt < max_retries - 1:
-                sleep_time = 15 * (attempt + 1) 
-                print(f"⏳ Retrying in {sleep_time} seconds...")
-                time.sleep(sleep_time)
-            else:
-                print("❌ Max retries reached. Aborting AI extraction.")
-                raise e 
-
-def generate_shift_brief(tactical_events):
-    print("🧠 Pushing data to Gemini for 12H Strategic Shift Brief generation...")
+def generate_shift_brief(accumulated_events):
+    print("🧠 Pushing accumulated master data to Gemini for 12H Strategic Shift Brief generation...")
     
     prompt = f"""
     You are a senior Geopolitics-OSINT intelligence analyst.
-    Review the following tactical alerts from the last 12 hours:
-    {json.dumps(tactical_events)}
+    Review the following accumulated tactical alerts from the last 12-24 hours:
+    {json.dumps(accumulated_events)}
 
     Synthesize a deeply analytical 12-Hour Strategic Snippet.
-    CRITICAL INSTRUCTION: You must write extremely detailed, long-form content. Use strict Markdown formatting (use dashes '-' for bullet points). DO NOT USE HTML TAGS.
+    CRITICAL INSTRUCTION: You must write extremely detailed, long-form content. Use strict Markdown formatting. DO NOT USE HTML TAGS.
 
     Return ONLY a valid JSON object with the following keys exactly as written:
     - "date": Current date/time
     - "bluf": Write a structured Actionable Intelligence BLUF using strict Markdown. Format exactly as: **BLUF:** [1-2 sentences on main threat/insight]. **Impact:** [1-2 sentences]. **Evidence:** [2 brief bullets]. **Action:** [1-2 immediate actions].
     - "executive_summary": Write exactly 3 paragraphs detailing the macro threat landscape and supply chain resilience.
-    - "escalation_indicators": A detailed Markdown bulleted list (- ) of warning signs. Provide 3 sentences of context for each bullet point.
+    - "escalation_indicators": A SINGLE STRING containing a detailed Markdown bulleted list (- ) of warning signs. Provide 3 sentences of context for each bullet point. DO NOT output an array or list.
     - "strategic_outlook": Write exactly 4 paragraphs providing a predictive assessment for the next 24-48 hours.
     - "threat_level": String, e.g., "ELEVATED", "MODERATE", "CRITICAL".
 
@@ -294,7 +251,7 @@ def generate_shift_brief(tactical_events):
                 raise e 
 
 # ==========================================
-# 4. EXECUTE & SAVE
+# 4. EXECUTE & SAVE (WITH ACCUMULATION)
 # ==========================================
 if __name__ == "__main__":
     try:
@@ -304,26 +261,53 @@ if __name__ == "__main__":
             print("❌ ABORTING: No articles scraped. Preventing AI hallucination.")
             exit(1)
             
-        tactical_events = extract_tactical_events(news_data)
+        # 1. Extract the current cycle's events
+        new_tactical_events = extract_tactical_events(news_data)
         
-        # Inject Psyopoly Intel natively into the JSON structure (CAPPED AT 2)
+        # Inject Psyopoly Intel natively (CAPPED AT 2)
         if psy_events:
-            tactical_events = psy_events[:2] + tactical_events
+            new_tactical_events = psy_events[:2] + new_tactical_events
             print(f"✅ Injected top 2 native Psyopoly variables into the tactical payload.")
         
+        # --- NEW ACCUMULATION & MERGE LOGIC ---
         output_file_tactical = 'data/today_snippet/tactical_events_24h.json'
+        master_events = []
+        
+        # Load existing historical events
+        if os.path.exists(output_file_tactical):
+            try:
+                with open(output_file_tactical, 'r') as f:
+                    master_events = json.load(f)
+            except Exception:
+                pass
+                
+        # Combine new scrape with historical scrape
+        master_events = new_tactical_events + master_events
+        
+        # Deduplicate to ensure no repeating news
+        seen = set()
+        unique_master_events = []
+        for event in master_events:
+            identifier = event.get('Action', event.get('Headline', '')).strip().lower()
+            if identifier and identifier not in seen:
+                seen.add(identifier)
+                unique_master_events.append(event)
+                
+        # Cap the master list to the 25 most recent/relevant events
+        unique_master_events = unique_master_events[:25]
+        
+        # Save the new robust accumulated master list
         with open(output_file_tactical, 'w') as f:
-            json.dump(tactical_events, f, indent=4)
-            
-        print(f"✅ Success! Wrote {len(tactical_events)} tactical events.")
+            json.dump(unique_master_events, f, indent=4)
+        print(f"✅ Success! Wrote {len(unique_master_events)} accumulated tactical events.")
 
-        # Pass the newly enriched tactical events directly into the AI brief generator
-        shift_brief_data = generate_shift_brief(tactical_events)
+        # 2. Generate the Brief using the ACCUMULATED data
+        shift_brief_data = generate_shift_brief(unique_master_events)
         output_file_brief = 'data/today_snippet/shift_brief.json'
         with open(output_file_brief, 'w') as f:
             json.dump(shift_brief_data, f, indent=4)
 
-        print("✅ Success! Wrote 12H Strategic Shift Brief.")
+        print("✅ Success! Wrote updated 12H Strategic Shift Brief.")
         
     except Exception as e:
         print(f"❌ Pipeline Failed: {e}")

@@ -75,7 +75,13 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
     col1, col2 = st.columns([1, 1])
     
     with col1:
-        esc_content = format_html_text(intel_data.get('escalation_indicators', '- No indicators detected.'))
+        # Failsafe: if the AI returns a list instead of a string, join it cleanly.
+        raw_esc = intel_data.get('escalation_indicators', '- No indicators detected.')
+        if isinstance(raw_esc, list):
+            raw_esc = "\n".join([str(item) for item in raw_esc])
+            
+        esc_content = format_html_text(raw_esc)
+        
         st.markdown(f"""
         <div style="background: linear-gradient(135deg, #2b0f19 0%, #591b2c 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #ff4b2b; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
             <h3 style="margin-top: 0; color: #ffffff;">⚠️ Escalation Indicators</h3>
