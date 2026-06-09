@@ -232,49 +232,11 @@ def fetch_daily_intelligence():
 # ==========================================
 # 3. AI EXTRACTION PIPELINES
 # ==========================================
-def extract_tactical_events(news_text):
-    print("🧠 Pushing data to Gemini for tactical extraction...")
+def generate_flush_to_brief(accumulated_events):
+    print("🧠 Pushing accumulated master data to Gemini for FLASH TO BRIEF generation...")
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. 
-    Review the following news headlines from the last 24 hours. Extract EXACTLY 8 of the most critical geopolitical, defense, semiconductor, or supply chain events.
-    
-    CRITICAL RULE: Ensure maximum diversity. Mix maritime, semiconductor, geopolitical, and military events. Do not pull everything from one region.
-    
-    You MUST output the result as a raw JSON array of objects. Do not include markdown formatting like ```json.
-    
-    Each object must have exactly these keys:
-    "Date": The current date (use {datetime.now().strftime('%Y-%m-%d')})
-    "Actor": The country, company, or entity taking the action.
-    "Action": A concise, 5-8 word description of the event.
-    "Location": A specific country, region, or chokepoint (e.g., "Taiwan", "Red Sea", "Global").
-    "Risk": Must be strictly one of: "CRITICAL", "HIGH", or "ELEVATED".
-    
-    News Data:
-    {news_text}
-    """
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            response = client.models.generate_content(
-                model='gemini-2.5-flash',
-                contents=prompt,
-            )
-            clean_text = response.text.replace("```json", "").replace("```", "").strip()
-            return json.loads(clean_text)
-            
-        except Exception as e:
-            print(f"⚠️ API Error on attempt {attempt + 1}/{max_retries}: {e}")
-            if attempt < max_retries - 1:
-                sleep_time = 15 * (attempt + 1) 
-                time.sleep(sleep_time)
-            else:
-                raise e
-
-def generate_flush_to_brief(news_text):
-    print("🧠 Pushing data to Gemini for FLASH TO BRIEF generation...")
-    prompt = f"""
-    You are an elite Geopolitics-OSINT analyst. 
-    Based on the provided raw intelligence from the last hour, generate a highly analytical "FLASH TO BRIEF" strategic intelligence report. 
+    Based on the provided accumulated tactical intelligence matrix from the last 24 hours, generate a highly analytical "FLASH TO BRIEF" strategic intelligence report. 
     Your priority is rich data and deep analysis. Do not use generic filler words. Write with extreme precision.
 
     You MUST output ONLY a valid JSON object. Do not include markdown formatting like ```json. 
@@ -286,8 +248,8 @@ def generate_flush_to_brief(news_text):
     - "risk_assessment": (A rich analytical paragraph evaluating supply chain vulnerabilities, maritime constraints, and market impacts).
     - "strategic_forecast": (A rich actionable forecast for the next 24 hours).
 
-    News Data:
-    {news_text}
+    Accumulated Tactical Data:
+    {json.dumps(accumulated_events)}
     """
     max_retries = 3
     for attempt in range(max_retries):
@@ -308,7 +270,7 @@ def generate_flush_to_brief(news_text):
                 raise e 
 
 # ==========================================
-# 4. EXECUTE & SAVE
+# 4. EXECUTE & SAVE (WITH ACCUMULATION LOGIC)
 # ==========================================
 if __name__ == "__main__":
     try:
@@ -318,25 +280,53 @@ if __name__ == "__main__":
             print("❌ ABORTING: No articles scraped. Preventing AI hallucination.")
             exit(1)
             
-        # 1. Generate the Tactical Grid Array
-        tactical_events = extract_tactical_events(news_data)
+        # 1. Generate the Tactical Grid Array for the CURRENT run
+        new_tactical_events = extract_tactical_events(news_data)
         
-        # Inject Psyopoly Intel natively into the JSON structure (CAPPED AT 2 to preserve diversity)
+        # Inject Psyopoly Intel natively (CAPPED AT 2 to preserve diversity)
         if psy_events:
-            tactical_events = psy_events[:2] + tactical_events
-            print(f"✅ Injected top 2 native Psyopoly variables into the tactical payload.")
+            new_tactical_events = psy_events[:2] + new_tactical_events
+            print(f"✅ Injected top 2 native Psyopoly variables into the new tactical payload.")
             
+        # --- NEW ACCUMULATION & MERGE LOGIC ---
         output_file_tactical = 'data/executive_home/tactical_events_24h.json'
+        master_events = []
+        
+        # Load existing historical events if the file exists
+        if os.path.exists(output_file_tactical):
+            try:
+                with open(output_file_tactical, 'r') as f:
+                    master_events = json.load(f)
+            except Exception:
+                pass
+                
+        # Combine new scrape with historical scrape
+        master_events = new_tactical_events + master_events
+        
+        # Deduplicate to ensure no repeating news across cron intervals
+        seen = set()
+        unique_master_events = []
+        for event in master_events:
+            # Use Action as unique identifier, fallback to Headline
+            identifier = event.get('Action', event.get('Headline', '')).strip().lower()
+            if identifier and identifier not in seen:
+                seen.add(identifier)
+                unique_master_events.append(event)
+                
+        # Cap the master list to the 25 most recent/relevant events so Gemini doesn't get overwhelmed
+        unique_master_events = unique_master_events[:25]
+        
+        # Save the new robust accumulated master list
         with open(output_file_tactical, 'w') as f:
-            json.dump(tactical_events, f, indent=4)
-        print(f"✅ Success! Wrote {len(tactical_events)} combined tactical events.")
+            json.dump(unique_master_events, f, indent=4)
+        print(f"✅ Success! Wrote {len(unique_master_events)} accumulated tactical events.")
 
-        # 2. Generate the FLASH TO BRIEF Narrative
-        flush_brief_data = generate_flush_to_brief(news_data)
+        # 2. Generate the FLASH TO BRIEF Narrative using the ACCUMULATED structured data
+        flush_brief_data = generate_flush_to_brief(unique_master_events)
         output_file_flush = 'data/executive_home/flush_brief_24h.json'
         with open(output_file_flush, 'w') as f:
             json.dump(flush_brief_data, f, indent=4)
-        print("✅ Success! Wrote FLASH TO BRIEF data.")
+        print("✅ Success! Wrote updated FLASH TO BRIEF data.")
         
     except Exception as e:
         print(f"❌ Pipeline Failed: {e}")
