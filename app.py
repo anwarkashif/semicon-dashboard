@@ -131,6 +131,17 @@ else:
             MAPBOX_PUBLIC_TOKEN = st.secrets.get("MAPBOX_PUBLIC_TOKEN")
         except Exception:
             MAPBOX_PUBLIC_TOKEN = None
+
+    # ==========================================
+    # 🛠️ THE MAPBOX FAILSAFE INJECTION
+    # ==========================================
+    if MAPBOX_PUBLIC_TOKEN:
+        # 1. Aggressively strip any accidental literal quotes or spaces from cloud environments
+        MAPBOX_PUBLIC_TOKEN = str(MAPBOX_PUBLIC_TOKEN).strip(' "\'')
+        
+        # 2. Force inject it into the global OS environment. 
+        # PyDeck natively hunts for 'MAPBOX_API_KEY' behind the scenes.
+        os.environ["MAPBOX_API_KEY"] = MAPBOX_PUBLIC_TOKEN
     
     # Safe Environment Look-up (Primary Key for Snippet Feature)
     GEMINI_API_KEY = os.environ.get("RAG_GEMINI_API_KEY")
