@@ -1,86 +1,86 @@
 [
     {
-        "Date": "2026-06-08",
+        "Date": "2026-06-09",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "Iranian strikes surprise Israel and raise concern of strateg...",
-        "Summary": "Iranian strikes surprise Israel and raise concern of strategic setback",
+        "Action": "Israel's military adventures have backfired - and the public...",
+        "Summary": "Israel's military adventures have backfired - and the public is losing patience",
         "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/news/iranian-strikes-surprise-israel-and-raise-concern-strategic-setback"
+        "Source": "https://www.middleeasteye.net/opinion/israels-military-adventures-have-backfired-and-public-losing-patience"
     },
     {
-        "Date": "2026-06-08",
+        "Date": "2026-06-09",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "Deterrence and leverage: Iran tries to call the shots with s...",
-        "Summary": "Deterrence and leverage: Iran tries to call the shots with strikes on Israel",
+        "Action": "Netanyahu\u2019s Bow to Trump\u2019s Iran Pressure Spurs New Criticism",
+        "Summary": "Netanyahu\u2019s Bow to Trump\u2019s Iran Pressure Spurs New Criticism",
         "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2063980005676261769"
+        "Source": "https://www.nytimes.com/2026/06/09/world/middleeast/netanyahus-trump-pressure-over-iran.html"
     },
     {
-        "Date": "2026-06-08",
-        "Actor": "Iran, Israel",
-        "Action": "Halt direct military strikes after escalation.",
-        "Location": "Middle East",
+        "Date": "2026-06-09",
+        "Actor": "US",
+        "Action": "US military helicopter crash, tanker strike near chokepoint.",
+        "Location": "Strait of Hormuz / Gulf of Oman",
         "Risk": "CRITICAL",
-        "Headline": "Iran and Israel Halt Attacks for Now"
+        "Headline": "US Navy F/A-18 Super Hornet strikes, disables oil tanker in Gulf of Oman / Crew Rescued After US Helicopter Crashes Near Strait of Hormuz"
     },
     {
-        "Date": "2026-06-08",
-        "Actor": "Houthi Rebels (Yemen)",
-        "Action": "Threaten complete ban on Israeli ships.",
-        "Location": "Red Sea",
+        "Date": "2026-06-09",
+        "Actor": "Tanker Operators",
+        "Action": "Fire on tanker, crew evacuated off Oman coast.",
+        "Location": "Off Oman's Masirah Island",
         "Risk": "HIGH",
-        "Headline": "Houthis Threaten to Widen Iran War by Blocking Israeli Shipping in Red Sea"
+        "Headline": "Crew Evacuated After \u2018Suspicious\u2019 Tanker Fire Near Oman\u2019s Masirah Island"
     },
     {
-        "Date": "2026-06-08",
-        "Actor": "Google, Nvidia, Intel",
-        "Action": "Tech giants consider Intel for chip manufacturing.",
-        "Location": "Global",
-        "Risk": "HIGH",
-        "Headline": "Google, Nvidia consider Intel as backup chip manufacturer"
+        "Date": "2026-06-09",
+        "Actor": "US / China",
+        "Action": "US targets China military-tech ties, forges own.",
+        "Location": "Global / US / China",
+        "Risk": "CRITICAL",
+        "Headline": "US targets China\u2019s military-tech firm ties while forging its own"
     },
     {
-        "Date": "2026-06-08",
-        "Actor": "Taiwan Coast Guard, China",
-        "Action": "Taiwan Coast Guard expels Chinese vessels.",
-        "Location": "Taiwan Strait",
-        "Risk": "HIGH",
-        "Headline": "Taiwan Coast Guard \u2018Expels\u2019 Chinese Ships From Restricted Waters"
+        "Date": "2026-06-09",
+        "Actor": "China",
+        "Action": "Navy surges East of Taiwan amid regional spat.",
+        "Location": "East of Taiwan / South China Sea",
+        "Risk": "CRITICAL",
+        "Headline": "China's Navy Surges East of Taiwan Amid Spat with the Philippines, Japan"
     },
     {
-        "Date": "2026-06-08",
-        "Actor": "France (NATO)",
-        "Action": "Tests AI-powered battlefield command system.",
+        "Date": "2026-06-09",
+        "Actor": "Germany / France",
+        "Action": "Nations drop joint fighter jet project in Europe.",
         "Location": "Europe",
-        "Risk": "ELEVATED",
-        "Headline": "France to test its own AI-powered battlefield command in June NATO exercise"
-    },
-    {
-        "Date": "2026-06-08",
-        "Actor": "IonicRE (and partners)",
-        "Action": "Partners for recycled rare earth supply chain.",
-        "Location": "Global",
-        "Risk": "ELEVATED",
-        "Headline": "IonicRE partnership supports recycled rare earth supply chain for defense magnets"
-    },
-    {
-        "Date": "2026-06-08",
-        "Actor": "China, North Korea",
-        "Action": "China's Xi Jinping visits North Korea, deepens ties.",
-        "Location": "Northeast Asia",
         "Risk": "HIGH",
-        "Headline": "Xi and Kim express hopes for greater ties between China and North Korea"
+        "Headline": "Germany and France drop joint fighter jet project"
     },
     {
-        "Date": "2026-06-08",
-        "Actor": "United States (NATO)",
-        "Action": "US urges NATO allies to boost forces.",
-        "Location": "Europe, North Atlantic",
+        "Date": "2026-06-09",
+        "Actor": "Russia",
+        "Action": "Reactivates Arctic LNG route for early transit.",
+        "Location": "Arctic Sea / Asia",
+        "Risk": "HIGH",
+        "Headline": "Russia Reactivates Arctic LNG Route to Asia as Icebreaking Carrier Completes Rare Early-Summer Transit"
+    },
+    {
+        "Date": "2026-06-09",
+        "Actor": "US Navy / House Lawmakers",
+        "Action": "House lawmakers urge faster drone boat deployment.",
+        "Location": "Global / US",
         "Risk": "ELEVATED",
-        "Headline": "US tells Europe, Canada to boost NATO air and naval forces"
+        "Headline": "House lawmakers want the Navy to deploy drone boats faster"
+    },
+    {
+        "Date": "2026-06-09",
+        "Actor": "Global Shipping Industry",
+        "Action": "Record high newbuild orders for supertankers.",
+        "Location": "Global",
+        "Risk": "HIGH",
+        "Headline": "Newbuild Supertanker Orders Hit Record High, Surpassing 2008 Peak"
     }
 ]
