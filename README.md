@@ -1,1 +1,10 @@
-### 🔴 [Live Demo: Click Here to View the SemicoN Dashboard](https://salty-carlyn-semcon-dashboard-49235e4b.koyeb.app/)
+---
+title: SemicoN Dashboard
+emoji: 🌐
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+app_file: app.py
+python_version: "3.11"
+pinned: false
+---
