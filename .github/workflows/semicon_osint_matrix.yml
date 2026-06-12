@@ -50,6 +50,13 @@ jobs:
         git commit -m "🚨 Auto-Update: Executive Home Live Radar" || echo "No changes to commit"
         git push
 
+    - name: Sync Executive Radar to Hugging Face
+      if: github.event.action == 'trigger_executive_radar'
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
+
     # ==========================================
     # TASK 2: GENERATE SEMICON WEEKLY BRIEF
     # ==========================================
@@ -129,6 +136,13 @@ jobs:
         git commit -m "Update Geopolitical Memory Layer" || echo "No changes"
         git push
 
+    - name: Sync Memory Layer to Hugging Face
+      if: github.event.action == 'trigger_memory_layer'
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
+
     # ==========================================
     # TASK 4: TODAY'S SNIPPET - SHIFT BRIEF (12H)
     # ==========================================
@@ -159,6 +173,13 @@ jobs:
         git add data/today_snippet/
         git commit -m "📋 Auto-Update: Today's Snippet 12H Brief" || echo "No changes to commit"
         git push
+
+    - name: Sync Shift Brief to Hugging Face
+      if: github.event.action == 'trigger_shift_brief'
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
 
     # ==========================================
     # TASK 5: WEST ASIA STRATEGIC INTEL - PSYOPOLY SIPHON (HOURLY)
@@ -191,3 +212,10 @@ jobs:
         git pull origin main --rebase || echo "No remote changes to pull"
         # 3. PUSH IT ALL BACK
         git push origin main
+
+    - name: Sync Psyopoly Siphon to Hugging Face
+      if: github.event.action == 'trigger_psyopoly_siphon'
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
