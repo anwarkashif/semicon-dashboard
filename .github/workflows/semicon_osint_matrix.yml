@@ -89,6 +89,13 @@ jobs:
         git add --all data/
         git commit -m "🤖 Auto-Update: SemicoN Data updated" || echo "No changes to commit"
         git push
+        
+    - name: Sync Weekly Brief to Hugging Face
+      if: github.event.action == 'trigger_weekly_brief'
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
 
     # ==========================================
     # TASK 3: GEOPOLITICAL MEMORY LAYER
