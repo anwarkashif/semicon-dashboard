@@ -170,85 +170,38 @@ else:
     model_name = 'gemini-2.5-flash'
 
     # ==========================================
-    # --- DATA SYNCHRONIZATION ENGINE ---
+    # --- LOCAL DATA ENGINE (Hugging Face API Synced) ---
     # ==========================================
-    GITHUB_REPO = "anwarkashif/semicon-dashboard"
+    # The Hugging Face API now pushes files directly to our local data/ folder.
+    # We use a 60-second cache (ttl=60) so the UI refreshes almost instantly when new data arrives.
     
-    GITHUB_PAT = os.environ.get("GITHUB_PAT") 
-    if not GITHUB_PAT:
-        try:
-            GITHUB_PAT = st.secrets.get("GITHUB_PAT")
-        except Exception:
-            GITHUB_PAT = None
-            
-    auth_headers = {"Authorization": f"token {GITHUB_PAT}"} if GITHUB_PAT else {}
-
-    # 🚀 Muted default Streamlit notification banners on cache updates
-    @st.cache_data(ttl=300, show_spinner=False) 
-    def sync_github_to_local():
-        tactical_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/tactical_events_24h.json"
-        try:
-            t_resp = requests.get(tactical_url, headers=auth_headers)
-            if t_resp.status_code == 200:
-                with open('data/tactical_events_24h.json', 'w', encoding='utf-8') as f:
-                    f.write(t_resp.text)
-        except Exception: pass
-
-        rss_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/rss_accumulator.txt"
-        try:
-            r_resp = requests.get(rss_url, headers=auth_headers)
-            if r_resp.status_code == 200:
-                with open('data/rss_accumulator.txt', 'w', encoding='utf-8') as f:
-                    f.write(r_resp.text)
-        except Exception: pass
-
-        alert_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/live_alert.json"
-        try:
-            a_resp = requests.get(alert_url, headers=auth_headers)
-            if a_resp.status_code == 200:
-                with open('data/live_alert.json', 'w', encoding='utf-8') as f:
-                    f.write(a_resp.text)
-        except Exception: pass
-
-        api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/data"
-        try:
-            response = requests.get(api_url, headers=auth_headers)
-            if response.status_code == 200:
-                files = response.json()
-                brief_files = [f for f in files if f['name'].startswith('brief_') and f['name'].endswith('.json')]
-                if brief_files:
-                    brief_files.sort(key=lambda x: x['name'])
-                    latest_brief = brief_files[-1]
-                    b_resp = requests.get(latest_brief['download_url'], headers=auth_headers)
-                    if b_resp.status_code == 200:
-                        local_path = f"data/{latest_brief['name']}"
-                        with open(local_path, 'w', encoding='utf-8') as f:
-                            f.write(b_resp.text)
-                        return local_path
-        except Exception: pass
-            
+    @st.cache_data(ttl=60, show_spinner=False) 
+    def get_latest_brief_filepath():
+        """Scans the local data folder for the most recent weekly brief."""
         local_files = glob.glob('data/brief_*.json')
         if local_files:
             local_files.sort()
             return local_files[-1]
         return None
 
-    latest_filepath = sync_github_to_local()
+    latest_filepath = get_latest_brief_filepath()
 
-    @st.cache_data(ttl=300, show_spinner=False) 
+    @st.cache_data(ttl=60, show_spinner=False) 
     def load_data(filepath):
         if not filepath: return None
         try:
-            with open(filepath, 'r', encoding='utf-8') as f: return json.load(f)
+            with open(filepath, 'r', encoding='utf-8') as f: 
+                return json.load(f)
         except Exception:
             return None
 
-    @st.cache_data(ttl=300, show_spinner=False)
+    @st.cache_data(ttl=60, show_spinner=False)
     def load_live_tactical_data():
         filepath = 'data/tactical_events_24h.json'
         if os.path.exists(filepath):
             try:
-                with open(filepath, 'r', encoding='utf-8') as f: return json.load(f)
+                with open(filepath, 'r', encoding='utf-8') as f: 
+                    return json.load(f)
             except Exception:
                 return None
         return None
