@@ -18,8 +18,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
 
     # ==========================================
     # TASK 1: EXECUTIVE HOME - LIVE RADAR (45M)
@@ -47,17 +45,18 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git pull origin main --rebase || echo "No changes to pull"
-        git add data/executive_home/
-        git commit -m "🚨 Auto-Update: Executive Home Live Radar" || echo "No changes to commit"
+        git add data/
+        git commit -m "🚨 Auto-Update: Executive Home Live Radar" || true
+        git pull origin main --rebase || true
         git push
 
-    - name: Sync Executive Radar to Hugging Face
+    - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_executive_radar'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
+        pip install huggingface_hub
+        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
 
     # ==========================================
     # TASK 2: GENERATE SEMICON WEEKLY BRIEF
@@ -94,17 +93,18 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git pull origin main --rebase || echo "No changes to pull"
-        git add --all data/
-        git commit -m "🤖 Auto-Update: SemicoN Data updated" || echo "No changes to commit"
+        git add data/
+        git commit -m "🤖 Auto-Update: SemicoN Data updated" || true
+        git pull origin main --rebase || true
         git push
         
-    - name: Sync Weekly Brief to Hugging Face
+    - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_weekly_brief'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
+        pip install huggingface_hub
+        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
 
     # ==========================================
     # TASK 3: GEOPOLITICAL MEMORY LAYER
@@ -134,16 +134,18 @@ jobs:
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "actions@github.com"
-        git add data/geopolitical_memory.json
-        git commit -m "Update Geopolitical Memory Layer" || echo "No changes"
+        git add data/
+        git commit -m "Update Geopolitical Memory Layer" || true
+        git pull origin main --rebase || true
         git push
 
-    - name: Sync Memory Layer to Hugging Face
+    - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_memory_layer'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
+        pip install huggingface_hub
+        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
 
     # ==========================================
     # TASK 4: TODAY'S SNIPPET - SHIFT BRIEF (12H)
@@ -171,17 +173,18 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git pull origin main --rebase || echo "No changes to pull"
-        git add data/today_snippet/
-        git commit -m "📋 Auto-Update: Today's Snippet 12H Brief" || echo "No changes to commit"
+        git add data/
+        git commit -m "📋 Auto-Update: Today's Snippet 12H Brief" || true
+        git pull origin main --rebase || true
         git push
 
-    - name: Sync Shift Brief to Hugging Face
+    - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_shift_brief'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
+        pip install huggingface_hub
+        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
 
     # ==========================================
     # TASK 5: WEST ASIA STRATEGIC INTEL - PSYOPOLY SIPHON (HOURLY)
@@ -207,17 +210,15 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        # 1. SAVE THE DATA FIRST
-        git add data/tactical_events_24h.json
-        git commit -m "🚨 Auto-Update: West Asia Psyopoly Intel" || echo "No changes to commit"
-        # 2. THEN PULL UPDATES FROM SERVER (Now that local changes are safe)
-        git pull origin main --rebase || echo "No remote changes to pull"
-        # 3. PUSH IT ALL BACK
-        git push origin main
+        git add data/
+        git commit -m "🚨 Auto-Update: West Asia Psyopoly Intel" || true
+        git pull origin main --rebase || true
+        git push
 
-    - name: Sync Psyopoly Siphon to Hugging Face
+    - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_psyopoly_siphon'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        git push --force https://kashifanwar:$HF_TOKEN@huggingface.co/spaces/kashifanwar/semicon-dashboard main
+        pip install huggingface_hub
+        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
