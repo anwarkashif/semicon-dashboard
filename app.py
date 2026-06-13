@@ -1,5 +1,12 @@
 import streamlit as st
 import os
+import warnings
+
+# 🔇 AGGRESSIVE SYSTEM-LEVEL WARNING SUPPRESSION
+# Kills PyArrow and GenAI deprecation warnings before Streamlit even boots
+os.environ["PYTHONWARNINGS"] = "ignore"
+os.environ["STREAMLIT_DATA_FRAME_SERIALIZATION"] = "legacy"
+warnings.filterwarnings("ignore")
 
 # ⚡ We ONLY import the lightweight UI elements at the top for an instant login load
 from features.ui_features import inject_early_css, inject_global_theme, render_login_screen
@@ -35,6 +42,13 @@ st.markdown(
         visibility: hidden !important;
         display: none !important;
         opacity: 0 !important;
+    }
+
+    /* 🚫 NUKE SKELETONS & DECORATIONS GLOBALLY FROM THE START */
+    [data-testid="stSkeleton"], [data-testid="stDecoration"] {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
     }
     
     @keyframes pulse {
@@ -240,9 +254,6 @@ else:
             return local_files[-1]
         return None
 
-    # Execute the streaming synchronization pass
-    latest_filepath = stream_pipeline_data_to_disk()
-
     @st.cache_data(ttl=60, show_spinner=False) 
     def load_data(filepath):
         if not filepath: return None
@@ -263,8 +274,11 @@ else:
                 return None
         return None
 
-    dashboard_data = load_data(latest_filepath)
-    live_tactical_data = load_live_tactical_data()
+    # Execute the streaming synchronization pass cleanly
+    with st.spinner("🛰️ Aligning Geopolitical Data Streams..."):
+        latest_filepath = stream_pipeline_data_to_disk()
+        dashboard_data = load_data(latest_filepath)
+        live_tactical_data = load_live_tactical_data()
 
     if dashboard_data:
         brief_date = dashboard_data.get('date', 'Unknown')
