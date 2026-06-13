@@ -170,21 +170,63 @@ else:
     model_name = 'gemini-2.5-flash'
 
     # ==========================================
-    # --- LOCAL DATA ENGINE (Hugging Face API Synced) ---
+    # --- DYNAMIC CLOUD DATA ENGINE (GitHub Real-Time Stream) ---
     # ==========================================
-    # The Hugging Face API now pushes files directly to our local data/ folder.
-    # We use a 60-second cache (ttl=60) so the UI refreshes almost instantly when new data arrives.
+    # To prevent Hugging Face from freezing or getting out of sync with your automated cron-jobs,
+    # this engine streams data directly from GitHub into the container space with a 60-second window.
     
-    @st.cache_data(ttl=60, show_spinner=False) 
-    def get_latest_brief_filepath():
-        """Scans the local data folder for the most recent weekly brief."""
+    GITHUB_REPO = "anwarkashif/semicon-dashboard"
+    
+    GITHUB_PAT = os.environ.get("GITHUB_PAT") 
+    if not GITHUB_PAT:
+        try:
+            GITHUB_PAT = st.secrets.get("GITHUB_PAT")
+        except Exception:
+            GITHUB_PAT = None
+            
+    auth_headers = {"Authorization": f"token {GITHUB_PAT}"} if GITHUB_PAT else {}
+
+    @st.cache_data(ttl=60, show_spinner=False)
+    def stream_pipeline_data_to_disk():
+        """Downloads the latest telemetry directly from GitHub into local memory space every 60 seconds."""
+        files_to_sync = ['tactical_events_24h.json', 'rss_accumulator.txt', 'live_alert.json']
+        for filename in files_to_sync:
+            url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/{filename}"
+            try:
+                resp = requests.get(url, headers=auth_headers, timeout=5)
+                if resp.status_code == 200:
+                    with open(f"data/{filename}", 'w', encoding='utf-8') as f:
+                        f.write(resp.text)
+            except Exception:
+                pass
+
+        # Dynamically discover and pull the newest weekly brief file name from GitHub contents API
+        api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/data"
+        try:
+            resp = requests.get(api_url, headers=auth_headers, timeout=5)
+            if resp.status_code == 200:
+                files = resp.json()
+                brief_files = [f for f in files if f['name'].startswith('brief_') and f['name'].endswith('.json')]
+                if brief_files:
+                    brief_files.sort(key=lambda x: x['name'])
+                    latest_brief = brief_files[-1]
+                    b_resp = requests.get(latest_brief['download_url'], headers=auth_headers, timeout=5)
+                    if b_resp.status_code == 200:
+                        with open(f"data/{latest_brief['name']}", 'w', encoding='utf-8') as f:
+                            f.write(b_resp.text)
+                        return f"data/{latest_brief['name']}"
+        except Exception:
+            pass
+
+        # Local fallback if network check fails
         local_files = glob.glob('data/brief_*.json')
         if local_files:
             local_files.sort()
             return local_files[-1]
         return None
 
-    latest_filepath = get_latest_brief_filepath()
+    # Execute the streaming synchronization pass
+    latest_filepath = stream_pipeline_data_to_disk()
 
     @st.cache_data(ttl=60, show_spinner=False) 
     def load_data(filepath):
