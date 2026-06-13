@@ -274,11 +274,10 @@ else:
                 return None
         return None
 
-    # Execute the streaming synchronization pass cleanly
-    with st.spinner("🛰️ Aligning Geopolitical Data Streams..."):
-        latest_filepath = stream_pipeline_data_to_disk()
-        dashboard_data = load_data(latest_filepath)
-        live_tactical_data = load_live_tactical_data()
+    # Execute the streaming synchronization pass silently (No Spinner to prevent layout flashes)
+    latest_filepath = stream_pipeline_data_to_disk()
+    dashboard_data = load_data(latest_filepath)
+    live_tactical_data = load_live_tactical_data()
 
     if dashboard_data:
         brief_date = dashboard_data.get('date', 'Unknown')
