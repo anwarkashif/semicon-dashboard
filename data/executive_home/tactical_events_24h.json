@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "At least three dead and 15 injured in an Israeli raid on the...",
+        "Summary": "At least three dead and 15 injured in an Israeli raid on the southern suburbs of Beirut. Read the recap here",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066156028454989901"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iranian army official vows that Israel's attack on Beirut 'w...",
+        "Summary": "Iranian army official vows that Israel's attack on Beirut 'will not go unanswered'",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-army-official-vows-israels-attack-beirut-will-not-go-unanswered"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Iran",
+        "Action": "Finalize deal, reopen Hormuz, lift sanctions.",
+        "Location": "Strait of Hormuz, Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Israel, Iran (Hezbollah)",
+        "Action": "Strikes Beirut, raising regional conflict threat.",
+        "Location": "Beirut, Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown",
+        "Action": "Tanker struck by projectile, increasing maritime risk.",
+        "Location": "Oman Coast, Strait of Hormuz",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tightens, prices rise 15%.",
+        "Location": "Global (Semiconductor Industry)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Russia",
+        "Action": "Satellite causes widespread GPS navigation outages.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israeli Regime Bombs Southern Beirut",
         "Summary": "Israeli Regime Bombs Southern Beirut",
         "Risk": "HIGH",
@@ -142,57 +197,5 @@
         "Summary": "The Israeli army orders the evacuation of nearly thirty villages in South Lebanon, more than half of which are in the Saida district. All the details here",
         "Risk": "HIGH",
         "Source": "https://x.com/LOrientLeJour/status/2066095891316965695"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, Iran, Qatar",
-        "Action": "Finalizing deal to reopen Strait of Hormuz",
-        "Location": "Strait of Hormuz, Iran",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC",
-        "Action": "Increasing 3nm chip prices by 15%",
-        "Location": "Global (impact), Taiwan (production)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United Kingdom",
-        "Action": "Seizing Russian 'shadow fleet' oil tanker",
-        "Location": "English Channel",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Unknown",
-        "Action": "Unknown projectile strikes tanker near Oman",
-        "Location": "Off Oman Coast",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Israel, Hezbollah",
-        "Action": "Escalating cross-border conflict, evacuations ordered",
-        "Location": "Southern Lebanon, Northern Israel",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Taiwan (chip supplier)",
-        "Action": "Plans semiconductor factory in Czech Republic",
-        "Location": "Czech Republic",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Qatari delegation met with Iranian officials, as Tehran revi...",
-        "Summary": "Qatari delegation met with Iranian officials, as Tehran reviews proposal",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/qatari-delegation-met-iranian-officials-tehran-reviews-proposal"
     }
 ]
