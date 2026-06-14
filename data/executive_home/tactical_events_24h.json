@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Pro-Israel activists attack protesters at London event marke...",
+        "Summary": "Pro-Israel activists attack protesters at London event marketing Israeli settlement homes",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/news/pro-israel-activists-chant-there-no-palestine-london-event-marketing-israeli-settlement-homes"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The Supreme National Security Council supports the \u201cpath of ...",
+        "Summary": "The Supreme National Security Council supports the \u201cpath of dialogue\u201d with the United States, Iranian President Massoud Pezeshkian assured Sunday, after criticism from ultra-conservative ranks targeting the team of Iranian negotiators.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066205692164268337"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown (Attackers)",
+        "Action": "Multiple vessels attacked near vital chokepoint.",
+        "Location": "Strait of Hormuz, Gulf of Oman",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Iran",
+        "Action": "Negotiating deal, includes oil sanctions waiver.",
+        "Location": "Iran, United States",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC",
+        "Action": "3nm chip capacity tight, prices rising.",
+        "Location": "Taiwan (Global semiconductor market)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Russia",
+        "Action": "Satellite causing mystery GPS outages globally.",
+        "Location": "Global (Europe affected)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "North Korea",
+        "Action": "Declares denuclearization debate formally over.",
+        "Location": "North Korea",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "China",
+        "Action": "Direct strike threat to Australia growing.",
+        "Location": "Australia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "\"Israelis say: America will protect us in New York, and Germ...",
         "Summary": "\"Israelis say: America will protect us in New York, and Germany and Austria in Brussels\"",
         "Risk": "HIGH",
@@ -132,70 +194,5 @@
         "Summary": "Israel kills four Palestinians in north Gaza",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-kills-four-palestinians-north-gaza"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Senior Iranian: Tehran agreed in the memorandum of understan...",
-        "Summary": "Senior Iranian: Tehran agreed in the memorandum of understanding not to develop or acquire nuclear weapons",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Haaretz/status/2066158885346361819"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "US, Iran, Israel",
-        "Action": "US-Iran deal, Israel-Hezbollah escalate, maritime attacks.",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC, Global Tech Industry",
-        "Action": "3nm chip capacity tight, prices rising.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Russia",
-        "Action": "Satellite causes mystery GPS outages in Europe.",
-        "Location": "Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States",
-        "Action": "Federal court upholds global 10% tariffs.",
-        "Location": "United States",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "SpaceX, US State Department",
-        "Action": "Starlink expands for defense, disaster response.",
-        "Location": "Global (Space)",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "At least three dead and 15 injured in an Israeli raid on the...",
-        "Summary": "At least three dead and 15 injured in an Israeli raid on the southern suburbs of Beirut. Read the recap here",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2066156028454989901"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iranian army official vows that Israel's attack on Beirut 'w...",
-        "Summary": "Iranian army official vows that Israel's attack on Beirut 'will not go unanswered'",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-army-official-vows-israels-attack-beirut-will-not-go-unanswered"
     }
 ]
