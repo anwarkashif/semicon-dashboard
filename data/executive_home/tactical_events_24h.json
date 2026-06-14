@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "\"Israelis say: America will protect us in New York, and Germ...",
+        "Summary": "\"Israelis say: America will protect us in New York, and Germany and Austria in Brussels\"",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2066189268721008760"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "U.S. public opinion is undergoing a dramatic shift in regard...",
+        "Summary": "U.S. public opinion is undergoing a dramatic shift in regards to Israel. On June 16, Joshua Leifer will join FP Live to assess the changing relationship between Tel Aviv and Washington. Register here for this free event:",
+        "Risk": "HIGH",
+        "Source": "https://x.com/ForeignPolicy/status/2066189133932884091"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown (linked to Iran War)",
+        "Action": "Multiple vessels hit by projectiles near Hormuz",
+        "Location": "Strait of Hormuz, Oman",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC",
+        "Action": "3nm chip capacity tight, prices rising 15%",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "UK",
+        "Action": "Detains sanctioned Russian shadow fleet tanker",
+        "Location": "Global Waters",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Israel",
+        "Action": "Strikes Hezbollah in Beirut, kills commander",
+        "Location": "Beirut, Southern Lebanon",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Iran",
+        "Action": "US, Iran deal uncertain amid Israeli strikes",
+        "Location": "West Asia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Australia",
+        "Action": "AUKUS submarine deal faces US building delays",
+        "Location": "United States, Australia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Hegseth says Iran deal remains close, calls on Tehran to con...",
         "Summary": "Hegseth says Iran deal remains close, calls on Tehran to contain Hezbollah",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "Iranian army official vows that Israel's attack on Beirut 'will not go unanswered'",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-army-official-vows-israels-attack-beirut-will-not-go-unanswered"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, Iran",
-        "Action": "Finalize deal, reopen Hormuz, lift sanctions.",
-        "Location": "Strait of Hormuz, Iran",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Israel, Iran (Hezbollah)",
-        "Action": "Strikes Beirut, raising regional conflict threat.",
-        "Location": "Beirut, Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Unknown",
-        "Action": "Tanker struck by projectile, increasing maritime risk.",
-        "Location": "Oman Coast, Strait of Hormuz",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tightens, prices rise 15%.",
-        "Location": "Global (Semiconductor Industry)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Russia",
-        "Action": "Satellite causes widespread GPS navigation outages.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israeli Regime Bombs Southern Beirut",
-        "Summary": "Israeli Regime Bombs Southern Beirut",
-        "Risk": "HIGH",
-        "Source": "https://www.tasnimnews.ir/en/news/2026/06/14/3616872/israeli-regime-bombs-southern-beirut"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iranian official says draft US deal includes nuclear limits ...",
-        "Summary": "Iranian official says draft US deal includes nuclear limits and asset release: Report",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-official-says-draft-us-deal-includes-nuclear-limits-and-asset"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, Iran",
-        "Action": "Negotiating deal on nuclear limits, sanctions relief.",
-        "Location": "Iran, Strait of Hormuz",
-        "Risk": "CRITICAL"
     }
 ]
