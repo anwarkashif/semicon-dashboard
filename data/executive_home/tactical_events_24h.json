@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Hegseth says Iran deal remains close, calls on Tehran to con...",
+        "Summary": "Hegseth says Iran deal remains close, calls on Tehran to contain Hezbollah",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066176334125039735"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Trump says Israeli strike on Beirut 'should not have happene...",
+        "Summary": "Trump says Israeli strike on Beirut 'should not have happened'",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-israeli-strike-beirut-should-not-have-happened"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown",
+        "Action": "Tanker struck by projectile off Oman coast",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Israel",
+        "Action": "Strikes Hezbollah targets in Beirut, killing three",
+        "Location": "Beirut, Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC",
+        "Action": "3nm chip capacity tight, prices seen rising 15%",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "US, Japan, India",
+        "Action": "Seek to diversify rare earth supply sources",
+        "Location": "Central Asia, Greenland",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Russia",
+        "Action": "Causing widespread GPS outages via satellite activity",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States",
+        "Action": "US military strike kills Venezuelan gang leader",
+        "Location": "Venezuela",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israel kills four Palestinians in north Gaza",
         "Summary": "Israel kills four Palestinians in north Gaza",
         "Risk": "HIGH",
@@ -134,68 +196,6 @@
         "Actor": "United States, Iran",
         "Action": "Negotiating deal on nuclear limits, sanctions relief.",
         "Location": "Iran, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Israel",
-        "Action": "Launches airstrikes on southern Beirut.",
-        "Location": "Beirut, Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Unknown (attacker), Tanker",
-        "Action": "Tanker struck by projectile near vital chokepoint.",
-        "Location": "Off Oman Coast, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Russia",
-        "Action": "Potentially developing orbital nuclear weapons.",
-        "Location": "Earth Orbit",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC",
-        "Action": "3nm chip capacity tightens, prices rising.",
-        "Location": "Taiwan (global impact)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Philippines, China",
-        "Action": "Philippines vows defense after China sanctions.",
-        "Location": "South China Sea, Philippines",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The Israeli army published two messages around 10 a.m. order...",
-        "Summary": "The Israeli army published two messages around 10 a.m. ordering residents to evacuate before Israeli army strikes. (Video transmitted by our correspondent.)",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2066100167728562284"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israeli troops dynamited several houses this morning in the ...",
-        "Summary": "Israeli troops dynamited several houses this morning in the village of Chihine, in the district of Tyre, reports our correspondent in South Lebanon.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2066099223980818872"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Unknown (potentially Iran-aligned)",
-        "Action": "Tanker struck by unknown projectile off Oman",
-        "Location": "Gulf of Oman",
         "Risk": "CRITICAL"
     }
 ]
