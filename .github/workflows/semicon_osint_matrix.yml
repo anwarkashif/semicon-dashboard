@@ -86,7 +86,7 @@ jobs:
         python live_pipeline_executive.py
         python live_pipeline_weekly_tactical.py
         python generate_weekly_tactical.py
-        python generate_outlook.py
+        python generate_outlook.py || echo "Strategic Outlook generator not found, skipping gracefully."
 
     - name: Commit and Push (Weekly Brief)
       if: github.event.action == 'trigger_weekly_brief'
