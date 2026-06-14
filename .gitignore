@@ -1,2 +1,5 @@
 .streamlit/.tmp_dagster_home_*
 *.duckdb
+.streamlit/secrets.toml
+.DS_Store
+**/.DS_Store

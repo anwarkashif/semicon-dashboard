@@ -211,6 +211,50 @@ def fetch_daily_intelligence():
 # ==========================================
 # 3. AI EXTRACTION PIPELINE
 # ==========================================
+
+# ==========================================
+# 3.5 AI TACTICAL EXTRACTION
+# ==========================================
+def extract_tactical_events(news_text):
+    print("🧠 Pushing data to Gemini for tactical extraction...")
+    
+    prompt = f"""
+    You are an elite Geopolitics-OSINT analyst. 
+    Review the following news headlines from the last 24 hours. Extract 4 to 6 of the most critical geopolitical, defense, semiconductor, or supply chain events.
+    
+    You MUST output the result as a raw JSON array of objects. Do not include markdown formatting like ```json.
+    
+    Each object must have exactly these keys:
+    "Date": The current date (use {datetime.now().strftime('%Y-%m-%d')})
+    "Actor": The country, company, or entity taking the action.
+    "Action": A concise, 5-8 word description of the event.
+    "Location": A specific country, region, or chokepoint (e.g., "Taiwan", "Strait of Hormuz", "United States", "China").
+    "Risk": Must be strictly one of: "CRITICAL", "HIGH", or "ELEVATED".
+    
+    News Data:
+    {news_text}
+    """
+    
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt,
+            )
+            clean_text = response.text.replace("```json", "").replace("```", "").strip()
+            return json.loads(clean_text)
+            
+        except Exception as e:
+            print(f"⚠️ API Error on attempt {attempt + 1}/{max_retries}: {e}")
+            if attempt < max_retries - 1:
+                sleep_time = 15 * (attempt + 1) 
+                print(f"⏳ Retrying in {sleep_time} seconds...")
+                time.sleep(sleep_time)
+            else:
+                print("❌ Max retries reached. Aborting AI extraction.")
+                raise e
+
 def generate_shift_brief(accumulated_events):
     print("🧠 Pushing accumulated master data to Gemini for 12H Strategic Shift Brief generation...")
     
