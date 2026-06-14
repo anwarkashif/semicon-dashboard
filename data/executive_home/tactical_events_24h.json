@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israel kills four Palestinians in north Gaza",
+        "Summary": "Israel kills four Palestinians in north Gaza",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-kills-four-palestinians-north-gaza"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Senior Iranian: Tehran agreed in the memorandum of understan...",
+        "Summary": "Senior Iranian: Tehran agreed in the memorandum of understanding not to develop or acquire nuclear weapons",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2066158885346361819"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "US, Iran, Israel",
+        "Action": "US-Iran deal, Israel-Hezbollah escalate, maritime attacks.",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC, Global Tech Industry",
+        "Action": "3nm chip capacity tight, prices rising.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Russia",
+        "Action": "Satellite causes mystery GPS outages in Europe.",
+        "Location": "Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States",
+        "Action": "Federal court upholds global 10% tariffs.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "SpaceX, US State Department",
+        "Action": "Starlink expands for defense, disaster response.",
+        "Location": "Global (Space)",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "At least three dead and 15 injured in an Israeli raid on the...",
         "Summary": "At least three dead and 15 injured in an Israeli raid on the southern suburbs of Beirut. Read the recap here",
         "Risk": "HIGH",
@@ -142,60 +197,5 @@
         "Action": "Tanker struck by unknown projectile off Oman",
         "Location": "Gulf of Oman",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "British Forces",
-        "Action": "British Forces seize Russian shadow fleet tanker",
-        "Location": "International Waters",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC",
-        "Action": "3nm chip capacity tightens; prices rising",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, Iran (Qatar mediating)",
-        "Action": "Deal to reopen Hormuz remains uncertain",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "North Korea",
-        "Action": "Declares denuclearization debate permanently concluded",
-        "Location": "North Korea",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Russia",
-        "Action": "Traced to causing mystery GPS outages",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iranian media says Tehran has \u201cnot yet made a final decision...",
-        "Summary": "Iranian media says Tehran has \u201cnot yet made a final decision\u201d on an agreement with the United States.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2066096032656531827"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The Israeli army orders the evacuation of nearly thirty vill...",
-        "Summary": "The Israeli army orders the evacuation of nearly thirty villages in South Lebanon, more than half of which are in the Saida district. All the details here",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2066095891316965695"
     }
 ]
