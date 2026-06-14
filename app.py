@@ -119,6 +119,19 @@ else:
     # Dismiss the pre-loader text for authenticated users
     st.markdown("""<style>.loading-pulse { display: none !important; }</style>""", unsafe_allow_html=True)
     
+    # ==========================================
+    # ⬛ THE ABSOLUTE BLACKOUT MASK
+    # ==========================================
+    # Instantly throws a pure #0e1117 background over the entire screen the millisecond login occurs.
+    # This completely hides any native Streamlit loading glitches or layout shifting underneath.
+    st.markdown("""
+        <div id="blackout-mask" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #0e1117; z-index: 9999999; display: flex; align-items: center; justify-content: center;">
+            <div style="color: #444; font-family: 'Courier New', monospace; letter-spacing: 3px; font-size: 14px; animation: pulse 2.5s infinite;">
+                SYNCING SECURE DATA STREAMS...
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
     # 📦 HEAVY PATH: User is logged in. Now we load the heavy libraries and data.
     import pandas as pd
     import json
@@ -444,6 +457,20 @@ else:
         </div>
         """
         st.markdown(ticker_code, unsafe_allow_html=True)
+
+    # ==========================================
+    # 🟢 LIFT THE BLACKOUT MASK
+    # ==========================================
+    # Destroys the pure black mask cleanly just before the dashboard renders
+    st.markdown("""
+        <style>
+        #blackout-mask { 
+            display: none !important; 
+            opacity: 0 !important; 
+            visibility: hidden !important; 
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
     # --- DASHBOARD RENDERING ---
     render_splash_screen()
