@@ -1,5 +1,129 @@
 [
     {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Qatari delegation met with Iranian officials, as Tehran revi...",
+        "Summary": "Qatari delegation met with Iranian officials, as Tehran reviews proposal",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/qatari-delegation-met-iranian-officials-tehran-reviews-proposal"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "#Conflict | Iran would have sealed its stock of uranium clos...",
+        "Summary": "#Conflict | Iran would have sealed its stock of uranium close to the military threshold",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066083229484863702"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Iran",
+        "Action": "Poised to sign deal reopening Hormuz.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Iran",
+        "Action": "Uranium stock nears military threshold.",
+        "Location": "Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown",
+        "Action": "Tanker struck by projectile off Oman coast.",
+        "Location": "Gulf of Oman",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tightens, prices increase 15%.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Russia, United Kingdom",
+        "Action": "Russia linked to GPS outages; UK detains tanker.",
+        "Location": "Europe, English Channel",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "China, Philippines, United States, Taiwan",
+        "Action": "China sanctions Philippines; US eyes Taiwan drone deal.",
+        "Location": "South China Sea, Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israel launches attacks across southern Lebanon, one killed ...",
+        "Summary": "Israel launches attacks across southern Lebanon, one killed in Sidon",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-launches-attacks-across-southern-lebanon-one-killed-sidon"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Trump\u2019s Iran deal is \u2018lose, lose, lose\u2019 \u2013 US congressman",
+        "Summary": "Trump\u2019s Iran deal is \u2018lose, lose, lose\u2019 \u2013 US congressman",
+        "Risk": "HIGH",
+        "Source": "https://www.rt.com/news/641518-trump-iran-deal-surrender/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Iran, Qatar",
+        "Action": "Negotiating landmark deal, potentially reopening Hormuz",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown",
+        "Action": "Tanker struck by unknown projectile off Oman",
+        "Location": "Off Oman Coast, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC",
+        "Action": "3nm chip capacity tightens, prices rising 15%",
+        "Location": "Taiwan, Global Semiconductor Market",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United Kingdom, Russia",
+        "Action": "Detains sanctioned Russian-linked oil tanker in Channel",
+        "Location": "English Channel",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, European Union, China",
+        "Action": "US blacklists Chinese tech; EU toughens stance",
+        "Location": "Global Tech & Trade",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Israel, Lebanon",
+        "Action": "Israel launches strikes, drones from Lebanon fall",
+        "Location": "Southern Lebanon, Northern Israel",
+        "Risk": "HIGH"
+    },
+    {
         "Date": "2026-06-09",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
@@ -67,12 +191,5 @@
         "Action": "Commit $1 billion to quantum research",
         "Location": "Global",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Houthis",
-        "Action": "Ban Israeli vessels in Red Sea",
-        "Location": "Red Sea",
-        "Risk": "CRITICAL"
     }
 ]
