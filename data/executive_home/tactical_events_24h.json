@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iranian armed forces say they have inflicted \u201chumiliation\u201d o...",
+        "Summary": "Iranian armed forces say they have inflicted \u201chumiliation\u201d on the United States and Israel",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066297205011480838"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The UK, France, Germany and Italy say they are ready to lift...",
+        "Summary": "The UK, France, Germany and Italy say they are ready to lift Iran sanctions",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/uk-france-germany-and-italy-say-they-are-ready-lift-iran-sanctions"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Iran",
+        "Action": "Announce peace deal, reopen Strait of Hormuz.",
+        "Location": "Strait of Hormuz, West Asia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown, Hong Kong-Flagged Tanker",
+        "Action": "Tanker hit by unknown projectile.",
+        "Location": "Strait of Hormuz, Gulf of Oman",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC (Taiwan Semiconductor Manufacturing Company)",
+        "Action": "3nm chip capacity tightens, prices rise 15%.",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Russia",
+        "Action": "Caused widespread mystery GPS outages.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "European Union",
+        "Action": "Toughens political and economic stance on China.",
+        "Location": "Europe, China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Canada, Global Markets",
+        "Action": "Critical mineral control, US AI restrictions raise dependence.",
+        "Location": "Global, North America",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Trump says Strait of Hormuz will reopen \u2018very shortly\u2019",
         "Summary": "Trump says Strait of Hormuz will reopen \u2018very shortly\u2019",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "Over the years the Israelis and the Jewish community did not meet. Now they are looking for each other",
         "Risk": "HIGH",
         "Source": "https://x.com/Haaretz/status/2066234410165231819"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Unknown Actors",
-        "Action": "Attacked three vessels with gunfire",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, Iran",
-        "Action": "Nearing deal to reopen Strait of Hormuz",
-        "Location": "Strait of Hormuz, West Asia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising 15%",
-        "Location": "Taiwan (Global Impact)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Russia",
-        "Action": "Linked to mystery GPS outages globally",
-        "Location": "Global (via Russian satellite)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "North Korea",
-        "Action": "Declares denuclearization debate finished",
-        "Location": "Korean Peninsula",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United Kingdom",
-        "Action": "Interdicts Russian shadow fleet tanker",
-        "Location": "Off Oman Coast",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Pro-Israel activists attack protesters at London event marke...",
-        "Summary": "Pro-Israel activists attack protesters at London event marketing Israeli settlement homes",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/news/pro-israel-activists-chant-there-no-palestine-london-event-marketing-israeli-settlement-homes"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The Supreme National Security Council supports the \u201cpath of ...",
-        "Summary": "The Supreme National Security Council supports the \u201cpath of dialogue\u201d with the United States, Iranian President Massoud Pezeshkian assured Sunday, after criticism from ultra-conservative ranks targeting the team of Iranian negotiators.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2066205692164268337"
     }
 ]
