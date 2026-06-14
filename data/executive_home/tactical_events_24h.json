@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "The Israeli army published two messages around 10 a.m. order...",
+        "Summary": "The Israeli army published two messages around 10 a.m. ordering residents to evacuate before Israeli army strikes. (Video transmitted by our correspondent.)",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066100167728562284"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israeli troops dynamited several houses this morning in the ...",
+        "Summary": "Israeli troops dynamited several houses this morning in the village of Chihine, in the district of Tyre, reports our correspondent in South Lebanon.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066099223980818872"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown (potentially Iran-aligned)",
+        "Action": "Tanker struck by unknown projectile off Oman",
+        "Location": "Gulf of Oman",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "British Forces",
+        "Action": "British Forces seize Russian shadow fleet tanker",
+        "Location": "International Waters",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC",
+        "Action": "3nm chip capacity tightens; prices rising",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Iran (Qatar mediating)",
+        "Action": "Deal to reopen Hormuz remains uncertain",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "North Korea",
+        "Action": "Declares denuclearization debate permanently concluded",
+        "Location": "North Korea",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Russia",
+        "Action": "Traced to causing mystery GPS outages",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iranian media says Tehran has \u201cnot yet made a final decision...",
         "Summary": "Iranian media says Tehran has \u201cnot yet made a final decision\u201d on an agreement with the United States.",
         "Risk": "HIGH",
@@ -132,67 +194,5 @@
         "Summary": "Israel launches attacks across southern Lebanon, one killed in Sidon",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-launches-attacks-across-southern-lebanon-one-killed-sidon"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Trump\u2019s Iran deal is \u2018lose, lose, lose\u2019 \u2013 US congressman",
-        "Summary": "Trump\u2019s Iran deal is \u2018lose, lose, lose\u2019 \u2013 US congressman",
-        "Risk": "HIGH",
-        "Source": "https://www.rt.com/news/641518-trump-iran-deal-surrender/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, Iran, Qatar",
-        "Action": "Negotiating landmark deal, potentially reopening Hormuz",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Unknown",
-        "Action": "Tanker struck by unknown projectile off Oman",
-        "Location": "Off Oman Coast, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC",
-        "Action": "3nm chip capacity tightens, prices rising 15%",
-        "Location": "Taiwan, Global Semiconductor Market",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United Kingdom, Russia",
-        "Action": "Detains sanctioned Russian-linked oil tanker in Channel",
-        "Location": "English Channel",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, European Union, China",
-        "Action": "US blacklists Chinese tech; EU toughens stance",
-        "Location": "Global Tech & Trade",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Israel, Lebanon",
-        "Action": "Israel launches strikes, drones from Lebanon fall",
-        "Location": "Southern Lebanon, Northern Israel",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US forces disabled an unladen oil tanker in the Gulf of Oman...",
-        "Summary": "US forces disabled an unladen oil tanker in the Gulf of Oman after it attempted to sail to an Iranian port in violation of the ongoing blockade against Iran, leaving 24 Indian crew members stranded aboard before they were rescued by Omani naval helicopters",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2064283863371923913"
     }
 ]
