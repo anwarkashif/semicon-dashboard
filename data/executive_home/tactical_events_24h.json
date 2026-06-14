@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Trump says Strait of Hormuz will reopen \u2018very shortly\u2019",
+        "Summary": "Trump says Strait of Hormuz will reopen \u2018very shortly\u2019",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-strait-hormuz-will-reopen-very-shortly"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Gaza mourns four killed in Israeli strike",
+        "Summary": "Gaza mourns four killed in Israeli strike",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/14/gaza-mourns-four-killed-in-israeli-strike?traffic_source=rss"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown Actor",
+        "Action": "Tanker hit by projectile in chokepoint",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC",
+        "Action": "3nm chip capacity tight, prices rising",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Israel",
+        "Action": "Bombs Beirut, escalating regional conflict",
+        "Location": "Beirut, Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Russia",
+        "Action": "Satellite causes widespread GPS signal outages",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown Actor",
+        "Action": "Cyberattack cripples Iran's banking backbone",
+        "Location": "Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United Kingdom",
+        "Action": "Boards Russian shadow fleet oil tanker",
+        "Location": "International Waters",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iranian football legend Azizi puts peace above politics amid...",
         "Summary": "Iranian football legend Azizi puts peace above politics amid World Cup tensions",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "The Supreme National Security Council supports the \u201cpath of dialogue\u201d with the United States, Iranian President Massoud Pezeshkian assured Sunday, after criticism from ultra-conservative ranks targeting the team of Iranian negotiators.",
         "Risk": "HIGH",
         "Source": "https://x.com/LOrientLeJour/status/2066205692164268337"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Unknown (Attackers)",
-        "Action": "Multiple vessels attacked near vital chokepoint.",
-        "Location": "Strait of Hormuz, Gulf of Oman",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, Iran",
-        "Action": "Negotiating deal, includes oil sanctions waiver.",
-        "Location": "Iran, United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC",
-        "Action": "3nm chip capacity tight, prices rising.",
-        "Location": "Taiwan (Global semiconductor market)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Russia",
-        "Action": "Satellite causing mystery GPS outages globally.",
-        "Location": "Global (Europe affected)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "North Korea",
-        "Action": "Declares denuclearization debate formally over.",
-        "Location": "North Korea",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "China",
-        "Action": "Direct strike threat to Australia growing.",
-        "Location": "Australia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "\"Israelis say: America will protect us in New York, and Germ...",
-        "Summary": "\"Israelis say: America will protect us in New York, and Germany and Austria in Brussels\"",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Haaretz/status/2066189268721008760"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "U.S. public opinion is undergoing a dramatic shift in regard...",
-        "Summary": "U.S. public opinion is undergoing a dramatic shift in regards to Israel. On June 16, Joshua Leifer will join FP Live to assess the changing relationship between Tel Aviv and Washington. Register here for this free event:",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2066189133932884091"
     }
 ]
