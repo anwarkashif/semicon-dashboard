@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iranian media says Tehran has \u201cnot yet made a final decision...",
+        "Summary": "Iranian media says Tehran has \u201cnot yet made a final decision\u201d on an agreement with the United States.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066096032656531827"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The Israeli army orders the evacuation of nearly thirty vill...",
+        "Summary": "The Israeli army orders the evacuation of nearly thirty villages in South Lebanon, more than half of which are in the Saida district. All the details here",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066095891316965695"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United States, Iran, Qatar",
+        "Action": "Finalizing deal to reopen Strait of Hormuz",
+        "Location": "Strait of Hormuz, Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "TSMC",
+        "Action": "Increasing 3nm chip prices by 15%",
+        "Location": "Global (impact), Taiwan (production)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "United Kingdom",
+        "Action": "Seizing Russian 'shadow fleet' oil tanker",
+        "Location": "English Channel",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Unknown",
+        "Action": "Unknown projectile strikes tanker near Oman",
+        "Location": "Off Oman Coast",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Israel, Hezbollah",
+        "Action": "Escalating cross-border conflict, evacuations ordered",
+        "Location": "Southern Lebanon, Northern Israel",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Taiwan (chip supplier)",
+        "Action": "Plans semiconductor factory in Czech Republic",
+        "Location": "Czech Republic",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Qatari delegation met with Iranian officials, as Tehran revi...",
         "Summary": "Qatari delegation met with Iranian officials, as Tehran reviews proposal",
         "Risk": "HIGH",
@@ -132,64 +194,5 @@
         "Summary": "US forces disabled an unladen oil tanker in the Gulf of Oman after it attempted to sail to an Iranian port in violation of the ongoing blockade against Iran, leaving 24 Indian crew members stranded aboard before they were rescued by Omani naval helicopters",
         "Risk": "HIGH",
         "Source": "https://x.com/Reuters/status/2064283863371923913"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Powerful Israeli strike on Tyre, less than 200 meters from t...",
-        "Summary": "Powerful Israeli strike on Tyre, less than 200 meters from the entrance to a classified archaeological site.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2064282986065875255"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Iran, Israel",
-        "Action": "Pull back from brink after trading fire",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "U.S. Forces",
-        "Action": "Disable sanctioned oil tanker bound for Iran",
-        "Location": "Gulf of Oman",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "China, North Korea",
-        "Action": "Deepen strategic ties as Xi visits",
-        "Location": "Pyongyang",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Germany, France",
-        "Action": "Drop joint fighter jet project",
-        "Location": "Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Foxconn",
-        "Action": "Builds advanced semiconductor packaging plant",
-        "Location": "France",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Russia",
-        "Action": "Reactivates Arctic LNG shipping route",
-        "Location": "Arctic Sea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "U.S., Japan",
-        "Action": "Commit $1 billion to quantum research",
-        "Location": "Global",
-        "Risk": "HIGH"
     }
 ]
