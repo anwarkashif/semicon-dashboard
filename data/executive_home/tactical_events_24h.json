@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran deal leaves Trump fighting a war at home",
+        "Summary": "Iran deal leaves Trump fighting a war at home",
+        "Risk": "HIGH",
+        "Source": "https://x.com/FT/status/2066462729104228609"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "UN human rights chief welcomes US-Iran deal, urges restraint...",
+        "Summary": "UN human rights chief welcomes US-Iran deal, urges restraint in the region",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2066462525059707372"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Announce interim peace deal, reopen Strait",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Russia",
+        "Action": "Launches extensive drone, missile strikes",
+        "Location": "Ukraine",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rising 15%",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Anthropic, United States",
+        "Action": "Suspends AI models after export control order",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United Kingdom, Russia",
+        "Action": "Seizes Russian shadow fleet oil tanker",
+        "Location": "International Waters",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unspecified (attackers)",
+        "Action": "Tanker hit, damaged in Strait attack",
+        "Location": "Strait of Hormuz",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Kurdistan Region President Nechirvan Barzani on Monday welco...",
         "Summary": "Kurdistan Region President Nechirvan Barzani on Monday welcomed the agreement between Tehran and Washington, following months of conflict that began in late February.",
         "Risk": "HIGH",
@@ -132,70 +194,5 @@
         "Summary": "US-Iran deal: What we are witnessing is how to sell defeat as victory",
         "Risk": "HIGH",
         "Source": "https://x.com/itvnews/status/2066418299512967321"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "ECB's Lagarde welcomes Iran ceasefire agreement as 'good new...",
-        "Summary": "ECB's Lagarde welcomes Iran ceasefire agreement as 'good news'",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2066416715307667827"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Agree peace deal, reopen Strait of Hormuz.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unknown (Hong Kong-flagged tanker)",
-        "Action": "Tanker hit by projectile in Strait of Hormuz.",
-        "Location": "Strait of Hormuz, Oman Coast",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rise 15%.",
-        "Location": "Taiwan (Global impact)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States (Anthropic)",
-        "Action": "Orders export controls on top AI models.",
-        "Location": "United States (Global AI industry)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "China",
-        "Action": "Develops 'robotic wolves' for Taiwan conflict.",
-        "Location": "Taiwan Strait, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "EU welcomes US-Iran agreement and calls for lasting peace",
-        "Summary": "EU welcomes US-Iran agreement and calls for lasting peace",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/eu-welcomes-us-iran-agreement-and-calls-lasting-peace"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US and Iranian officials said they had agreed on a framework...",
-        "Summary": "US and Iranian officials said they had agreed on a framework to end their war, halt the US blockade of Iran and reopen the Strait of Hormuz",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2066401567666827593"
     }
 ]
