@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "US-Iran deal: What we are witnessing is how to sell defeat a...",
+        "Summary": "US-Iran deal: What we are witnessing is how to sell defeat as victory",
+        "Risk": "HIGH",
+        "Source": "https://x.com/itvnews/status/2066418299512967321"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "ECB's Lagarde welcomes Iran ceasefire agreement as 'good new...",
+        "Summary": "ECB's Lagarde welcomes Iran ceasefire agreement as 'good news'",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2066416715307667827"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Agree peace deal, reopen Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unknown (Hong Kong-flagged tanker)",
+        "Action": "Tanker hit by projectile in Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Oman Coast",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rise 15%.",
+        "Location": "Taiwan (Global impact)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States (Anthropic)",
+        "Action": "Orders export controls on top AI models.",
+        "Location": "United States (Global AI industry)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "China",
+        "Action": "Develops 'robotic wolves' for Taiwan conflict.",
+        "Location": "Taiwan Strait, China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "EU welcomes US-Iran agreement and calls for lasting peace",
         "Summary": "EU welcomes US-Iran agreement and calls for lasting peace",
         "Risk": "HIGH",
@@ -142,57 +197,5 @@
         "Summary": "France hosts G7 dominated by Trump, Iran",
         "Risk": "HIGH",
         "Source": "https://www.al-monitor.com/originals/2026/06/france-hosts-g7-dominated-trump-iran"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Announce peace deal, reopen Strait of Hormuz",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unknown (attacker), Hong Kong (flagged)",
-        "Action": "Tanker hit by projectile in Strait of Hormuz",
-        "Location": "Strait of Hormuz, off Oman Coast",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising 15%",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States (Trump administration), Anthropic",
-        "Action": "Suspends top AI models via export control",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "European Union",
-        "Action": "Toughens economic stance against China",
-        "Location": "Europe, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States (GAO)",
-        "Action": "F-35 mission capability at 25%, GAO finds",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "On the front page of L'Orient-Le Jour: The southern suburbs,...",
-        "Summary": "On the front page of L'Orient-Le Jour: The southern suburbs, bone of contention between Trump and Netanyahu The Iranians arrive in \"Tehrangeles\" Subscribe",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2066355020774134204"
     }
 ]
