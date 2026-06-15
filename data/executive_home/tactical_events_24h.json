@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Many Iranians Express Relief Over Agreement to End the War",
+        "Summary": "Many Iranians Express Relief Over Agreement to End the War",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/15/world/middleeast/iran-reaction-cease-fire-deal.html"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran's national soccer squad left their Tijuana base camp to...",
+        "Summary": "Iran's national soccer squad left their Tijuana base camp to a rousing send-off, with supporters lining five-deep on a packed sidewalk outside their hotel on the eve of their World Cup opener against New Zealand in Los Angeles",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2066387726111576385"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Finalize peace deal, reopen Strait of Hormuz.",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unknown",
+        "Action": "Hong Kong-flagged tanker hit, damaged near Hormuz.",
+        "Location": "Strait of Hormuz",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States",
+        "Action": "Freezes Anthropic AI models via export controls.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rising 15%.",
+        "Location": "Taiwan (global semiconductor supply)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "China, Philippines",
+        "Action": "China sanctions Philippine minister; SCS tensions.",
+        "Location": "South China Sea, Philippines",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, European Union",
+        "Action": "Seek Kazakhstan's critical mineral resources.",
+        "Location": "Kazakhstan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Middle East war: peace deal reactions",
         "Summary": "Middle East war: peace deal reactions",
         "Risk": "HIGH",
@@ -132,70 +194,5 @@
         "Summary": "After three months of war, Tehran feels it has little left to lose.",
         "Risk": "HIGH",
         "Source": "https://x.com/ForeignPolicy/status/2066324949707469256"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Australia welcomes US-Iran agreement and calls for lasting p...",
-        "Summary": "Australia welcomes US-Iran agreement and calls for lasting peace",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/australia-welcomes-us-iran-agreement-and-calls-lasting-peace"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Confirm peace deal, end naval blockade.",
-        "Location": "Iran, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unknown, Hong Kong-Flagged Tanker",
-        "Action": "Unknown projectile hits tanker near Hormuz.",
-        "Location": "Strait of Hormuz, Oman",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States (Trump administration)",
-        "Action": "US freezes Anthropic's advanced AI models.",
-        "Location": "United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "TSMC raises 3nm chip prices 15%.",
-        "Location": "Taiwan, Global semiconductor market",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Russia",
-        "Action": "Russian satellite causes widespread GPS outages.",
-        "Location": "Global, Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Donald Trump said a deal between the US and Iran to lift a w...",
-        "Summary": "Donald Trump said a deal between the US and Iran to lift a weeks-long naval blockade on Iranian ports was \u2018now complete\u2019, with leaders expected to sign the agreement on Friday.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/FT/status/2066311834764812726"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Source Elaborates on Changes in Text of Iran-US MoU on Final...",
-        "Summary": "Source Elaborates on Changes in Text of Iran-US MoU on Final Days, Hours",
-        "Risk": "HIGH",
-        "Source": "https://www.tasnimnews.ir/en/news/2026/06/15/3617342/source-elaborates-on-changes-in-text-of-iran-us-mou-on-final-days-hours"
     }
 ]
