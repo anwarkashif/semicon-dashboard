@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "'Let the oil flow!': Can US and Iran actually strike lasting...",
+        "Summary": "'Let the oil flow!': Can US and Iran actually strike lasting deal?",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/tv-shows/the-debate/20260615-let-the-oil-flow-can-us-and-iran-actually-strike-lasting-deal"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Hezbollah has not carried out operations since Iran-US deal,...",
+        "Summary": "Hezbollah has not carried out operations since Iran-US deal, Hezbollah official tells Reuters",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2066584061611581666"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Signed peace deal, reopening Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Anthropic",
+        "Action": "Imposed export controls on advanced AI models.",
+        "Location": "United States",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rising 15%.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unknown (Armed Skiffs)",
+        "Action": "Attacking commercial vessels off Yemen coast.",
+        "Location": "Gulf of Aden, Yemen",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "China",
+        "Action": "Dominating rare earth elements supply chain.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Amateur saboteurs: the young men carrying out attacks for ga...",
         "Summary": "Amateur saboteurs: the young men carrying out attacks for gangs, Russia and Iran",
         "Risk": "HIGH",
@@ -141,61 +196,6 @@
         "Actor": "United States, Iran, Various Non-State Actors",
         "Action": "Agree peace deal, reopen Hormuz; attacks continue.",
         "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Anthropic, United States",
-        "Action": "Suspends top AI models due to export controls.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices seen rising.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Russia",
-        "Action": "Unleashes deadly overnight air attacks.",
-        "Location": "Ukraine",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "China",
-        "Action": "Plans to swarm US carriers from afar.",
-        "Location": "Indo-Pacific",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "U.S.-Iran Agreement Leaves Lebanon\u2019s Fate Murky",
-        "Summary": "U.S.-Iran Agreement Leaves Lebanon\u2019s Fate Murky",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/2026/06/15/world/middleeast/us-iran-agreement-leaves-lebanons-fate-murky.html"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israel Counts the Ways That Netanyahu\u2019s Iran Strategy Failed",
-        "Summary": "Israel Counts the Ways That Netanyahu\u2019s Iran Strategy Failed",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/2026/06/15/world/middleeast/israel-counts-the-ways-that-netanyahus-iran-strategy-failed.html"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Agreed interim peace deal, reopened Strait of Hormuz.",
-        "Location": "Middle East, Strait of Hormuz",
         "Risk": "CRITICAL"
     }
 ]
