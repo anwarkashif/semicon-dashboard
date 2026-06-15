@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Exclusive: Illegal settlements promoted in London at Great I...",
+        "Summary": "Exclusive: Illegal settlements promoted in London at Great Israeli Real Estate Event",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/news/exclusive-illegal-settlements-promoted-london-great-israeli-real-estate-event"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "US-Iran peace deal hinges on shipping, sanctions relief and ...",
+        "Summary": "US-Iran peace deal hinges on shipping, sanctions relief and deferred nuclear talks",
+        "Risk": "HIGH",
+        "Source": "https://www.theguardian.com/world/2026/jun/15/analysis-us-iran-peace-deal-shipping-sanctions-relief-nuclear-talks-ballistic-missiles"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran, Various Non-State Actors",
+        "Action": "Agree peace deal, reopen Hormuz; attacks continue.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Anthropic, United States",
+        "Action": "Suspends top AI models due to export controls.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices seen rising.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Russia",
+        "Action": "Unleashes deadly overnight air attacks.",
+        "Location": "Ukraine",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "China",
+        "Action": "Plans to swarm US carriers from afar.",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "U.S.-Iran Agreement Leaves Lebanon\u2019s Fate Murky",
         "Summary": "U.S.-Iran Agreement Leaves Lebanon\u2019s Fate Murky",
         "Risk": "HIGH",
@@ -142,60 +197,5 @@
         "Action": "Announce interim peace deal; Hormuz tanker attacked.",
         "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising 15%.",
-        "Location": "Taiwan (Global semiconductor market)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Anthropic",
-        "Action": "Imposes export controls on advanced AI models.",
-        "Location": "United States (Global AI industry)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, European Union, China",
-        "Action": "Relaunching tariff war, challenging China dominance.",
-        "Location": "Global (Trade, Critical Minerals)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "China",
-        "Action": "Expanding long-range strike capacity against carriers.",
-        "Location": "Western Pacific, South China Sea",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States (Pentagon, GAO)",
-        "Action": "F-35s only 25% fully mission capable.",
-        "Location": "United States (Global allied defense)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Who won the Iran war?",
-        "Summary": "Who won the Iran war?",
-        "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2066430146907684881"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Video: Missile hits Kyiv Pechersk Lavra monastery, Russia de...",
-        "Summary": "Video: Missile hits Kyiv Pechersk Lavra monastery, Russia denies attack",
-        "Risk": "HIGH",
-        "Source": "https://www.albawaba.com/news/video-missile-hits-kyiv-pechersk-lavra-1630263"
     }
 ]
