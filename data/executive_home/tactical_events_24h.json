@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Who won the Iran war?",
+        "Summary": "Who won the Iran war?",
+        "Risk": "HIGH",
+        "Source": "https://x.com/TheNationalNews/status/2066430146907684881"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Video: Missile hits Kyiv Pechersk Lavra monastery, Russia de...",
+        "Summary": "Video: Missile hits Kyiv Pechersk Lavra monastery, Russia denies attack",
+        "Risk": "HIGH",
+        "Source": "https://www.albawaba.com/news/video-missile-hits-kyiv-pechersk-lavra-1630263"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Announce peace deal, reopen Strait of Hormuz",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unidentified; Hong Kong-flagged tanker",
+        "Action": "Tanker hit and damaged",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "Increases 3nm chip prices 15%, capacity tight",
+        "Location": "Taiwan, Global (semiconductor supply)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States (GAO report)",
+        "Action": "Only 25% F-35s fully mission capable",
+        "Location": "United States (global defense operations)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States (Anthropic)",
+        "Action": "Imposes export controls on AI models",
+        "Location": "United States, Global (AI industry)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, G7 Allies",
+        "Action": "US pushes critical minerals plan, G7 resists",
+        "Location": "Global (critical minerals supply chains)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "US-Iran deal: What we are witnessing is how to sell defeat a...",
         "Summary": "US-Iran deal: What we are witnessing is how to sell defeat as victory",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "Iran's national soccer squad left their Tijuana base camp to a rousing send-off, with supporters lining five-deep on a packed sidewalk outside their hotel on the eve of their World Cup opener against New Zealand in Los Angeles",
         "Risk": "HIGH",
         "Source": "https://x.com/Reuters/status/2066387726111576385"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Finalize peace deal, reopen Strait of Hormuz.",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unknown",
-        "Action": "Hong Kong-flagged tanker hit, damaged near Hormuz.",
-        "Location": "Strait of Hormuz",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States",
-        "Action": "Freezes Anthropic AI models via export controls.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising 15%.",
-        "Location": "Taiwan (global semiconductor supply)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "China, Philippines",
-        "Action": "China sanctions Philippine minister; SCS tensions.",
-        "Location": "South China Sea, Philippines",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, European Union",
-        "Action": "Seek Kazakhstan's critical mineral resources.",
-        "Location": "Kazakhstan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Middle East war: peace deal reactions",
-        "Summary": "Middle East war: peace deal reactions",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/middle-east-war-peace-deal-reactions"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "France hosts G7 dominated by Trump, Iran",
-        "Summary": "France hosts G7 dominated by Trump, Iran",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/france-hosts-g7-dominated-trump-iran"
     }
 ]
