@@ -209,15 +209,41 @@ def fetch_daily_intelligence():
     return aggregated_news, total_articles, psy_events
 
 # ==========================================
-# 3. AI EXTRACTION PIPELINE
+# 3. AI EXTRACTION PIPELINE (WITH MODEL FALLBACK CASCADE)
 # ==========================================
+def robust_gemini_call(prompt, task_name="Generation"):
+    models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash']
+    
+    for model_name in models:
+        print(f"🤖 Attempting {task_name} with {model_name}...")
+        for attempt in range(2): # Max 2 attempts per model to save time
+            try:
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt,
+                )
+                clean_text = response.text.replace("```json", "").replace("```", "").strip()
+                return json.loads(clean_text)
+                
+            except Exception as e:
+                error_msg = str(e)
+                print(f"⚠️ API Error on {model_name} (Attempt {attempt + 1}/2): {error_msg}")
+                
+                # Instantly abort this model if it's a hard quota limit
+                if '429' in error_msg or 'Quota' in error_msg or 'RESOURCE_EXHAUSTED' in error_msg:
+                    print(f"🚫 Hard Quota Limit hit for {model_name}. Instantly cascading to fallback model...")
+                    break 
+                
+                # Otherwise, it might be a temporary 503, so sleep and retry once
+                time.sleep(5)
+                
+    raise Exception(f"❌ FATAL: All Gemini fallback models exhausted or failed for {task_name}.")
 
 # ==========================================
 # 3.5 AI TACTICAL EXTRACTION
 # ==========================================
 def extract_tactical_events(news_text):
     print("🧠 Pushing data to Gemini for tactical extraction...")
-    
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. 
     Review the following news headlines from the last 24 hours. Extract 4 to 6 of the most critical geopolitical, defense, semiconductor, or supply chain events.
@@ -234,30 +260,10 @@ def extract_tactical_events(news_text):
     News Data:
     {news_text}
     """
-    
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            response = client.models.generate_content(
-                model='gemini-2.5-flash',
-                contents=prompt,
-            )
-            clean_text = response.text.replace("```json", "").replace("```", "").strip()
-            return json.loads(clean_text)
-            
-        except Exception as e:
-            print(f"⚠️ API Error on attempt {attempt + 1}/{max_retries}: {e}")
-            if attempt < max_retries - 1:
-                sleep_time = 15 * (attempt + 1) 
-                print(f"⏳ Retrying in {sleep_time} seconds...")
-                time.sleep(sleep_time)
-            else:
-                print("❌ Max retries reached. Aborting AI extraction.")
-                raise e
+    return robust_gemini_call(prompt, "Tactical Extraction")
 
 def generate_shift_brief(accumulated_events):
     print("🧠 Pushing accumulated master data to Gemini for 12H Strategic Shift Brief generation...")
-    
     prompt = f"""
     You are a senior Geopolitics-OSINT intelligence analyst.
     Review the following accumulated tactical alerts from the last 12-24 hours:
@@ -276,23 +282,7 @@ def generate_shift_brief(accumulated_events):
 
     Do not include markdown blocks like ```json. Just output the raw JSON.
     """
-    
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            response = client.models.generate_content(
-                model='gemini-2.5-flash',
-                contents=prompt,
-            )
-            clean_text = response.text.replace("```json", "").replace("```", "").strip()
-            return json.loads(clean_text)
-            
-        except Exception as e:
-            print(f"⚠️ API Error on attempt {attempt + 1}/{max_retries}: {e}")
-            if attempt < max_retries - 1:
-                time.sleep(15 * (attempt + 1))
-            else:
-                raise e 
+    return robust_gemini_call(prompt, "Shift Brief Generation")
 
 # ==========================================
 # 4. EXECUTE & SAVE (WITH ACCUMULATION)
@@ -340,7 +330,7 @@ if __name__ == "__main__":
         # Cap the master list to the 25 most recent/relevant events
         unique_master_events = unique_master_events[:25]
         
-        # Save the new robust accumulated master list
+        # Save the new robust accumulated master list immediately so we don't lose data if generation fails
         with open(output_file_tactical, 'w') as f:
             json.dump(unique_master_events, f, indent=4)
         print(f"✅ Success! Wrote {len(unique_master_events)} accumulated tactical events.")
