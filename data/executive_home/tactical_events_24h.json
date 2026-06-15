@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "The US-Iran memorandum of understanding is a short document ...",
+        "Summary": "The US-Iran memorandum of understanding is a short document of a general nature; the details of the agreement will be worked out during technical negotiations, US Vice President JD Vance stated:",
+        "Risk": "HIGH",
+        "Source": "https://x.com/tassagency_en/status/2066658561757778092"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "World Brief: A U.S.-Iran peace deal arrives just in time for...",
+        "Summary": "World Brief: A U.S.-Iran peace deal arrives just in time for the G-7 leaders\u2019 summit, the United Kingdom cracks down on minors\u2019 social media access, and suspected Russian strikes damage a UNESCO World Heritage Site in Kyiv.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/ForeignPolicy/status/2066657032636109165"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Agree peace deal, reopen Strait of Hormuz",
+        "Location": "Strait of Hormuz, West Asia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States (Anthropic)",
+        "Action": "Suspends advanced AI models via export controls",
+        "Location": "Global (AI technology transfer)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rising 15%",
+        "Location": "Taiwan (global semiconductor supply)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unknown (Skiffs)",
+        "Action": "Attack ships off Yemen, Oman coast",
+        "Location": "Gulf of Aden, Arabian Sea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Japan (G7 countries)",
+        "Action": "Proposes G7 critical minerals stockpile partnership",
+        "Location": "Global (resource supply chains)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "China-linked entities",
+        "Action": "Target US AI companies and data centers",
+        "Location": "United States (cyber domain)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran war 'has been a strategic disaster for the State of Isr...",
         "Summary": "Iran war 'has been a strategic disaster for the State of Israel', analyst says",
         "Risk": "HIGH",
@@ -132,67 +194,5 @@
         "Action": "Attacked commercial vessels near Yemen",
         "Location": "Gulf of Aden, Oman Coast, Strait of Hormuz",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "China",
-        "Action": "Plans to swarm US carriers",
-        "Location": "Western Pacific",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Ucore, Sumitomo",
-        "Action": "Formed rare-earth supply chain partnership",
-        "Location": "Global",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israel must withdraw from Lebanon for sustainable peace, Leb...",
-        "Summary": "Israel must withdraw from Lebanon for sustainable peace, Lebanese minister says",
-        "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2066550277285597594"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Will US-Iran peace deal hold? \u2013 The Latest",
-        "Summary": "Will US-Iran peace deal hold? \u2013 The Latest",
-        "Risk": "HIGH",
-        "Source": "https://www.theguardian.com/news/audio/2026/jun/15/will-us-iran-peace-deal-hold-the-latest"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Reached interim peace deal, reopened Strait of Hormuz.",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unknown Actors",
-        "Action": "Attacked vessels near Yemen, Oman, Strait of Hormuz.",
-        "Location": "Gulf of Aden, Strait of Hormuz",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "Raising 3nm chip prices 15% due to tight capacity.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
     }
 ]
