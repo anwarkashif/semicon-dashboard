@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "EU welcomes US-Iran agreement and calls for lasting peace",
+        "Summary": "EU welcomes US-Iran agreement and calls for lasting peace",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/eu-welcomes-us-iran-agreement-and-calls-lasting-peace"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "US and Iranian officials said they had agreed on a framework...",
+        "Summary": "US and Iranian officials said they had agreed on a framework to end their war, halt the US blockade of Iran and reopen the Strait of Hormuz",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2066401567666827593"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Agreed peace deal, reopened Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Israel",
+        "Action": "Bombs Beirut, settlers attack West Bank.",
+        "Location": "Lebanon, West Bank",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Anthropic",
+        "Action": "Imposed AI export controls; Anthropic suspends models.",
+        "Location": "United States, Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight; prices rising 15%.",
+        "Location": "Taiwan, Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Russia, North Korea",
+        "Action": "Russia uses North Korean missile technology.",
+        "Location": "Ukraine, Russia, North Korea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Global Shippers, United States",
+        "Action": "Frontload cargo due to new US tariffs.",
+        "Location": "Global Trade Routes, United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Many Iranians Express Relief Over Agreement to End the War",
         "Summary": "Many Iranians Express Relief Over Agreement to End the War",
         "Risk": "HIGH",
@@ -132,67 +194,5 @@
         "Summary": "On the front page of L'Orient-Le Jour: The southern suburbs, bone of contention between Trump and Netanyahu The Iranians arrive in \"Tehrangeles\" Subscribe",
         "Risk": "HIGH",
         "Source": "https://x.com/LOrientLeJour/status/2066355020774134204"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "World leaders welcome news the Strait of Hormuz could soon r...",
-        "Summary": "World leaders welcome news the Strait of Hormuz could soon reopen.",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/live/2026/06/14/world/iran-war-trump-us/world-leaders-welcome-news-the-strait-of-hormuz-could-soon-reopen"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Sign peace deal, reopen Strait of Hormuz.",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States",
-        "Action": "Imposes export controls, freezing Anthropic AI models.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices to rise 15%.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "ByteDance, China",
-        "Action": "ByteDance negotiating AI chips; China eases InP exports.",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States (GAO finding)",
-        "Action": "Report highlights low F-35 mission capability.",
-        "Location": "United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United Kingdom",
-        "Action": "Boards Russian shadow fleet tanker.",
-        "Location": "English Channel",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "After three months of war, Tehran feels it has little left t...",
-        "Summary": "After three months of war, Tehran feels it has little left to lose.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2066324949707469256"
     }
 ]
