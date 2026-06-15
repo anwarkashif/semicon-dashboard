@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Kurdistan Region President Nechirvan Barzani on Monday welco...",
+        "Summary": "Kurdistan Region President Nechirvan Barzani on Monday welcomed the agreement between Tehran and Washington, following months of conflict that began in late February.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/RudawEnglish/status/2066447351951098210"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran peace deal won't change BOJ's rate-hike plans, ex-centr...",
+        "Summary": "Iran peace deal won't change BOJ's rate-hike plans, ex-central bank economist says",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2066446927101628559"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Announce interim peace deal; Hormuz tanker attacked.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rising 15%.",
+        "Location": "Taiwan (Global semiconductor market)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Anthropic",
+        "Action": "Imposes export controls on advanced AI models.",
+        "Location": "United States (Global AI industry)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, European Union, China",
+        "Action": "Relaunching tariff war, challenging China dominance.",
+        "Location": "Global (Trade, Critical Minerals)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "China",
+        "Action": "Expanding long-range strike capacity against carriers.",
+        "Location": "Western Pacific, South China Sea",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States (Pentagon, GAO)",
+        "Action": "F-35s only 25% fully mission capable.",
+        "Location": "United States (Global allied defense)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Who won the Iran war?",
         "Summary": "Who won the Iran war?",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "US and Iranian officials said they had agreed on a framework to end their war, halt the US blockade of Iran and reopen the Strait of Hormuz",
         "Risk": "HIGH",
         "Source": "https://x.com/Reuters/status/2066401567666827593"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Agreed peace deal, reopened Strait of Hormuz.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Israel",
-        "Action": "Bombs Beirut, settlers attack West Bank.",
-        "Location": "Lebanon, West Bank",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Anthropic",
-        "Action": "Imposed AI export controls; Anthropic suspends models.",
-        "Location": "United States, Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight; prices rising 15%.",
-        "Location": "Taiwan, Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Russia, North Korea",
-        "Action": "Russia uses North Korean missile technology.",
-        "Location": "Ukraine, Russia, North Korea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Global Shippers, United States",
-        "Action": "Frontload cargo due to new US tariffs.",
-        "Location": "Global Trade Routes, United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Many Iranians Express Relief Over Agreement to End the War",
-        "Summary": "Many Iranians Express Relief Over Agreement to End the War",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/2026/06/15/world/middleeast/iran-reaction-cease-fire-deal.html"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran's national soccer squad left their Tijuana base camp to...",
-        "Summary": "Iran's national soccer squad left their Tijuana base camp to a rousing send-off, with supporters lining five-deep on a packed sidewalk outside their hotel on the eve of their World Cup opener against New Zealand in Los Angeles",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2066387726111576385"
     }
 ]
