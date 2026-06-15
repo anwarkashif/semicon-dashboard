@@ -1,5 +1,67 @@
 [
     {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Donald Trump said a deal between the US and Iran to lift a w...",
+        "Summary": "Donald Trump said a deal between the US and Iran to lift a weeks-long naval blockade on Iranian ports was \u2018now complete\u2019, with leaders expected to sign the agreement on Friday.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/FT/status/2066311834764812726"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Source Elaborates on Changes in Text of Iran-US MoU on Final...",
+        "Summary": "Source Elaborates on Changes in Text of Iran-US MoU on Final Days, Hours",
+        "Risk": "HIGH",
+        "Source": "https://www.tasnimnews.ir/en/news/2026/06/15/3617342/source-elaborates-on-changes-in-text-of-iran-us-mou-on-final-days-hours"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Announce peace deal, reopen Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "China",
+        "Action": "Intensifies pressure on Taiwan, Philippines.",
+        "Location": "Taiwan, South China Sea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tightens, prices rise.",
+        "Location": "Taiwan (Global semiconductor market)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States",
+        "Action": "Trump administration freezes Anthropic AI models.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Russia",
+        "Action": "Causes widespread GPS navigation outages.",
+        "Location": "Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United Kingdom",
+        "Action": "Interdicts Russian shadow fleet tanker.",
+        "Location": "International Waters",
+        "Risk": "HIGH"
+    },
+    {
         "Date": "2026-06-14",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
@@ -132,70 +194,5 @@
         "Summary": "Iranian football legend Azizi puts peace above politics amid World Cup tensions",
         "Risk": "HIGH",
         "Source": "https://www.al-monitor.com/originals/2026/06/iranian-football-legend-azizi-puts-peace-above-politics-amid-world-cup-tensions"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Chinese attacks on U.S. forces would likely be much more pre...",
-        "Summary": "Chinese attacks on U.S. forces would likely be much more precise than anything Iran has mustered, writes @dex_eve.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2066249416571343214"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Israel, Iran, Hezbollah, Unknown",
-        "Action": "Escalating regional conflict; maritime attacks near Hormuz.",
-        "Location": "Middle East, Strait of Hormuz, Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United Kingdom, Russia",
-        "Action": "Detains sanctioned Russian 'shadow fleet' oil tanker.",
-        "Location": "Global shipping lanes",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC, Dell, HPE, AI Industry",
-        "Action": "Tight 3nm capacity, rising prices, memory crunch.",
-        "Location": "Global, Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "China, European Union, Chinese Automakers",
-        "Action": "China seeks supply chain control; automakers localize production.",
-        "Location": "Global supply chains, Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Russia",
-        "Action": "Causing widespread GPS navigation disruptions.",
-        "Location": "European airspace",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran cancels flights from western airports: Report",
-        "Summary": "Iran cancels flights from western airports: Report",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-cancels-flights-western-airports-report"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Over the years the Israelis and the Jewish community did not...",
-        "Summary": "Over the years the Israelis and the Jewish community did not meet. Now they are looking for each other",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Haaretz/status/2066234410165231819"
     }
 ]
