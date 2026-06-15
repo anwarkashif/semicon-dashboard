@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Middle East war: peace deal reactions",
+        "Summary": "Middle East war: peace deal reactions",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/middle-east-war-peace-deal-reactions"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "France hosts G7 dominated by Trump, Iran",
+        "Summary": "France hosts G7 dominated by Trump, Iran",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/france-hosts-g7-dominated-trump-iran"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Announce peace deal, reopen Strait of Hormuz",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unknown (attacker), Hong Kong (flagged)",
+        "Action": "Tanker hit by projectile in Strait of Hormuz",
+        "Location": "Strait of Hormuz, off Oman Coast",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rising 15%",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States (Trump administration), Anthropic",
+        "Action": "Suspends top AI models via export control",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "European Union",
+        "Action": "Toughens economic stance against China",
+        "Location": "Europe, China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States (GAO)",
+        "Action": "F-35 mission capability at 25%, GAO finds",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "On the front page of L'Orient-Le Jour: The southern suburbs,...",
         "Summary": "On the front page of L'Orient-Le Jour: The southern suburbs, bone of contention between Trump and Netanyahu The Iranians arrive in \"Tehrangeles\" Subscribe",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "Source Elaborates on Changes in Text of Iran-US MoU on Final Days, Hours",
         "Risk": "HIGH",
         "Source": "https://www.tasnimnews.ir/en/news/2026/06/15/3617342/source-elaborates-on-changes-in-text-of-iran-us-mou-on-final-days-hours"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Announce peace deal, reopen Hormuz.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "China",
-        "Action": "Intensifies pressure on Taiwan, Philippines.",
-        "Location": "Taiwan, South China Sea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tightens, prices rise.",
-        "Location": "Taiwan (Global semiconductor market)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States",
-        "Action": "Trump administration freezes Anthropic AI models.",
-        "Location": "United States",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Russia",
-        "Action": "Causes widespread GPS navigation outages.",
-        "Location": "Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United Kingdom",
-        "Action": "Interdicts Russian shadow fleet tanker.",
-        "Location": "International Waters",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iranian armed forces say they have inflicted \u201chumiliation\u201d o...",
-        "Summary": "Iranian armed forces say they have inflicted \u201chumiliation\u201d on the United States and Israel",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2066297205011480838"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The UK, France, Germany and Italy say they are ready to lift...",
-        "Summary": "The UK, France, Germany and Italy say they are ready to lift Iran sanctions",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/uk-france-germany-and-italy-say-they-are-ready-lift-iran-sanctions"
     }
 ]
