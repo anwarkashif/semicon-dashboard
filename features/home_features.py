@@ -121,116 +121,118 @@ def get_hot_actors(df_actions):
     actor_counts = Counter(df_actions['Actor'].dropna())
     return actor_counts.most_common(5)
 
-def render_flash_alert():
-    flash_path = 'data/flash_alert.json'
+def render_flash_alert(df_actions):
+    if df_actions.empty or 'Headline' not in df_actions.columns:
+        return
+        
+    latest = df_actions.iloc[0]
+    # Sanitize the text so quotes don't break the HTML/JS wrapper
+    headline = str(latest.get('Headline', 'System Nominal')).replace('"', '&quot;').replace("'", "&#39;")
     
-    # Check if the automated file exists
-    if not os.path.exists(flash_path):
-        return
-
-    try:
-        with open(flash_path, 'r') as f:
-            alerts = json.load(f)
-    except:
-        return
-
-    # Skip rendering if empty
-    if not alerts or not isinstance(alerts, list):
-        return
-
-    html_code = """
+    html_code = f"""
     <style>
-        .flash-container {
-            margin-bottom: 25px;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-        .flash-header {
-            color: #ef4444;
-            font-size: 1.2em;
-            font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
+        body {{ 
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 0; 
+            padding: 0; 
+            background-color: transparent; 
+            overflow: hidden; 
+        }}
+        .flash-box {{
+            background: linear-gradient(90deg, #8b0000 0%, #ff0000 50%, #8b0000 100%); 
+            background-size: 200% 200%; 
+            animation: pulseBackground 2s infinite; 
+            border: 2px solid #ff4b4b; 
+            padding: 12px 15px; 
+            border-radius: 8px; 
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            color: #ffffff;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 105px; /* Fixed height for the entire box */
+        }}
+        
+        :fullscreen {{
+            background-color: rgba(20, 20, 20, 0.95);
             display: flex;
             align-items: center;
-        }
-        .flash-header span {
-            animation: blinkText 1.5s infinite;
-        }
-        @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+            justify-content: center;
+        }}
+        :fullscreen .flash-box {{ 
+            width: 90vw; 
+            height: auto; 
+            max-height: 90vh; 
+            padding: 40px; 
+            border-width: 4px; 
+        }}
+        :fullscreen .title {{ font-size: 2.5em; }}
+        :fullscreen .headline-scroll-area {{ 
+            max-height: none; /* Let it expand freely in fullscreen */
+            overflow-y: auto; 
+        }}
+        :fullscreen .headline {{ font-size: 2em; line-height: 1.4; margin-top: 20px; }}
         
-        .flash-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 20px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-            text-decoration: none !important;
-            color: #ffffff !important;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .flash-bar:hover {
-            transform: translateY(-2px);
-        }
+        @keyframes pulseBackground {{ 0% {{ background-position: 0% 50%; }} 50% {{ background-position: 100% 50%; }} 100% {{ background-position: 0% 50%; }} }}
+        @keyframes blinkText {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
         
-        /* Threat Level Color Logic */
-        .level-CRITICAL { background: linear-gradient(90deg, #450a0a 0%, #7f1d1d 100%); border-left: 5px solid #ef4444; }
-        .level-HIGH { background: linear-gradient(90deg, #431407 0%, #9a3412 100%); border-left: 5px solid #f97316; }
-        .level-ELEVATED { background: linear-gradient(90deg, #422006 0%, #854d0e 100%); border-left: 5px solid #eab308; }
-        .level-MODERATE { background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%); border-left: 5px solid #3b82f6; }
+        .header-flex {{ 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 5px; 
+            flex-shrink: 0; /* Prevents the header from shrinking */
+        }}
+        .title {{ font-size: 1.17em; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin:0; display:flex; align-items:center; }}
         
-        .flash-source {
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            color: #cbd5e1;
-            margin-bottom: 4px;
-        }
-        .flash-title {
-            font-size: 15px;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        .flash-arrow {
-            font-size: 20px;
-            opacity: 0.7;
-            margin-left: 15px;
-        }
-        .flash-bar:hover .flash-arrow { opacity: 1; color: #ffffff; }
+        /* THIS IS THE STRICT 2-LINE SCROLLABLE CONTAINER */
+        .headline-scroll-area {{
+            flex-grow: 1;
+            overflow-y: auto;
+            padding-right: 8px;
+            max-height: 2.8em; /* Exactly 2 lines based on 1.4 line-height */
+        }}
+        
+        /* Custom Webkit Scrollbar for a sleek UI */
+        .headline-scroll-area::-webkit-scrollbar {{ width: 5px; }}
+        .headline-scroll-area::-webkit-scrollbar-track {{ background: rgba(0, 0, 0, 0.2); border-radius: 4px; }}
+        .headline-scroll-area::-webkit-scrollbar-thumb {{ background: rgba(255, 255, 255, 0.6); border-radius: 4px; }}
+
+        .headline {{ font-weight: 800; font-size: 14px; line-height: 1.4em; margin: 0; }}
+        
+        .magnify-btn {{ background: rgba(0,0,0,0.6); color: white; border: 1px solid white; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; margin-left: 10px; flex-shrink: 0; }}
+        .magnify-btn:hover {{ background: rgba(255,255,255,0.2); }}
+        :fullscreen .magnify-btn {{ display: none; }} 
+        
+        .close-btn {{ display: none; }}
+        :fullscreen .close-btn {{ display: inline-block; background: transparent; color: white; border: 1px solid white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 18px; margin-top: 20px; flex-shrink: 0; }}
     </style>
     
-    <div class="flash-container">
-        <div class="flash-header"><span>🚨 EXECUTIVE OSINT FLASH ALERTS</span></div>
-    """
-
-    for alert in alerts:
-        source = alert.get('source', 'UNKNOWN SOURCE').upper()
-        title = alert.get('title', 'Intelligence Update Available')
-        url = alert.get('url', '#')
-        threat = alert.get('threat_level', 'MODERATE').upper()
-        
-        # Ensure fallback for unexpected threat strings
-        if threat not in ['CRITICAL', 'HIGH', 'ELEVATED']:
-            threat = 'MODERATE'
-
-        html_code += f"""
-        <a href="{url}" target="_blank" class="flash-bar level-{threat}">
-            <div>
-                <div class="flash-source">[{source}] // THREAT: {threat}</div>
-                <div class="flash-title">{title}</div>
-            </div>
-            <div class="flash-arrow">➡️</div>
-        </a>
-        """
-        
-    html_code += "</div>"
+    <div class="flash-box" id="flash-container">
+        <div class="header-flex">
+            <h3 class="title">
+                <span style="animation: blinkText 1s infinite; margin-right: 15px;">🚨 FLASH ALERT</span> 
+            </h3>
+            <button class="magnify-btn" onclick="toggleFullscreen()">🔍 MAGNIFY</button>
+        </div>
+        <div class="headline-scroll-area">
+            <p class="headline">{headline}</p>
+        </div>
+        <button class="close-btn" onclick="document.exitFullscreen()">✖ CLOSE VIEW</button>
+    </div>
     
-    # Render the interactive block
-    st.components.v1.html(html_code, height=380)
-
-# NOTE: In your render_executive_home() function, change the call from `render_flash_alert(df_actions)` to just `render_flash_alert()`
+    <script>
+        function toggleFullscreen() {{
+            let elem = document.documentElement;
+            if (!document.fullscreenElement) {{
+                elem.requestFullscreen().catch(err => {{ alert(`Error: ${{err.message}}`); }});
+            }} else {{ document.exitFullscreen(); }}
+        }}
+    </script>
+    """
+    
+    # Adjusted height to fit the new exact box dimensions
+    components.html(html_code, height=115)
 
 
 # ==========================================
