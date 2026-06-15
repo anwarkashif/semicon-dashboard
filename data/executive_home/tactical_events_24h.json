@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "On the front page of L'Orient-Le Jour: The southern suburbs,...",
+        "Summary": "On the front page of L'Orient-Le Jour: The southern suburbs, bone of contention between Trump and Netanyahu The Iranians arrive in \"Tehrangeles\" Subscribe",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066355020774134204"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "World leaders welcome news the Strait of Hormuz could soon r...",
+        "Summary": "World leaders welcome news the Strait of Hormuz could soon reopen.",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/live/2026/06/14/world/iran-war-trump-us/world-leaders-welcome-news-the-strait-of-hormuz-could-soon-reopen"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Sign peace deal, reopen Strait of Hormuz.",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States",
+        "Action": "Imposes export controls, freezing Anthropic AI models.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices to rise 15%.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "ByteDance, China",
+        "Action": "ByteDance negotiating AI chips; China eases InP exports.",
+        "Location": "China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States (GAO finding)",
+        "Action": "Report highlights low F-35 mission capability.",
+        "Location": "United States",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United Kingdom",
+        "Action": "Boards Russian shadow fleet tanker.",
+        "Location": "English Channel",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "After three months of war, Tehran feels it has little left t...",
         "Summary": "After three months of war, Tehran feels it has little left to lose.",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "The UK, France, Germany and Italy say they are ready to lift Iran sanctions",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/uk-france-germany-and-italy-say-they-are-ready-lift-iran-sanctions"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, Iran",
-        "Action": "Announce peace deal, reopen Strait of Hormuz.",
-        "Location": "Strait of Hormuz, West Asia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Unknown, Hong Kong-Flagged Tanker",
-        "Action": "Tanker hit by unknown projectile.",
-        "Location": "Strait of Hormuz, Gulf of Oman",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC (Taiwan Semiconductor Manufacturing Company)",
-        "Action": "3nm chip capacity tightens, prices rise 15%.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Russia",
-        "Action": "Caused widespread mystery GPS outages.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "European Union",
-        "Action": "Toughens political and economic stance on China.",
-        "Location": "Europe, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States, Canada, Global Markets",
-        "Action": "Critical mineral control, US AI restrictions raise dependence.",
-        "Location": "Global, North America",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Trump says Strait of Hormuz will reopen \u2018very shortly\u2019",
-        "Summary": "Trump says Strait of Hormuz will reopen \u2018very shortly\u2019",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-strait-hormuz-will-reopen-very-shortly"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Gaza mourns four killed in Israeli strike",
-        "Summary": "Gaza mourns four killed in Israeli strike",
-        "Risk": "HIGH",
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/14/gaza-mourns-four-killed-in-israeli-strike?traffic_source=rss"
     }
 ]
