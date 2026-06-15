@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "U.S.-Iran Agreement Leaves Lebanon\u2019s Fate Murky",
+        "Summary": "U.S.-Iran Agreement Leaves Lebanon\u2019s Fate Murky",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/15/world/middleeast/us-iran-agreement-leaves-lebanons-fate-murky.html"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israel Counts the Ways That Netanyahu\u2019s Iran Strategy Failed",
+        "Summary": "Israel Counts the Ways That Netanyahu\u2019s Iran Strategy Failed",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/15/world/middleeast/israel-counts-the-ways-that-netanyahus-iran-strategy-failed.html"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Agreed interim peace deal, reopened Strait of Hormuz.",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rising 15% in H2 2026.",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Anthropic, United States",
+        "Action": "Suspended AI models after export control order.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unknown, Merchant Vessels",
+        "Action": "Tanker hit, container vessel fired upon near Yemen.",
+        "Location": "Gulf of Oman, Yemen Coast",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States Air Force, GAO",
+        "Action": "F-35s, refueling fleet below readiness standards.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran deal leaves Trump fighting a war at home",
         "Summary": "Iran deal leaves Trump fighting a war at home",
         "Risk": "HIGH",
@@ -142,57 +197,5 @@
         "Summary": "Video: Missile hits Kyiv Pechersk Lavra monastery, Russia denies attack",
         "Risk": "HIGH",
         "Source": "https://www.albawaba.com/news/video-missile-hits-kyiv-pechersk-lavra-1630263"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Announce peace deal, reopen Strait of Hormuz",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unidentified; Hong Kong-flagged tanker",
-        "Action": "Tanker hit and damaged",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "Increases 3nm chip prices 15%, capacity tight",
-        "Location": "Taiwan, Global (semiconductor supply)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States (GAO report)",
-        "Action": "Only 25% F-35s fully mission capable",
-        "Location": "United States (global defense operations)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States (Anthropic)",
-        "Action": "Imposes export controls on AI models",
-        "Location": "United States, Global (AI industry)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, G7 Allies",
-        "Action": "US pushes critical minerals plan, G7 resists",
-        "Location": "Global (critical minerals supply chains)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US-Iran deal: What we are witnessing is how to sell defeat a...",
-        "Summary": "US-Iran deal: What we are witnessing is how to sell defeat as victory",
-        "Risk": "HIGH",
-        "Source": "https://x.com/itvnews/status/2066418299512967321"
     }
 ]
