@@ -4,6 +4,51 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran war 'has been a strategic disaster for the State of Isr...",
+        "Summary": "Iran war 'has been a strategic disaster for the State of Israel', analyst says",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/tv-shows/a-propos/20260615-iran-war-has-been-a-strategic-disaster-for-the-state-of-israel-analyst-says"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Announced peace deal, reopening Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Anthropic",
+        "Action": "Suspended AI models due to US export-controls.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rising 15%.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unknown armed skiffs",
+        "Action": "Attacked multiple vessels off Yemen/Oman coast.",
+        "Location": "Gulf of Aden, off Yemen/Oman",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "South Korea",
+        "Action": "Diversifying critical minerals, facing hard dependencies.",
+        "Location": "South Korea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "'Let the oil flow!': Can US and Iran actually strike lasting...",
         "Summary": "'Let the oil flow!': Can US and Iran actually strike lasting deal?",
         "Risk": "HIGH",
@@ -32,13 +77,6 @@
         "Action": "Imposed export controls on advanced AI models.",
         "Location": "United States",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising 15%.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-15",
@@ -156,46 +194,5 @@
         "Action": "Raising 3nm chip prices 15% due to tight capacity.",
         "Location": "Taiwan",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Anthropic, United States",
-        "Action": "Suspended AI models due to US export-control order.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "China (PLA)",
-        "Action": "Rapid military development, potential threats to allies.",
-        "Location": "Indo-Pacific, Australia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Exclusive: Illegal settlements promoted in London at Great I...",
-        "Summary": "Exclusive: Illegal settlements promoted in London at Great Israeli Real Estate Event",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/news/exclusive-illegal-settlements-promoted-london-great-israeli-real-estate-event"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US-Iran peace deal hinges on shipping, sanctions relief and ...",
-        "Summary": "US-Iran peace deal hinges on shipping, sanctions relief and deferred nuclear talks",
-        "Risk": "HIGH",
-        "Source": "https://www.theguardian.com/world/2026/jun/15/analysis-us-iran-peace-deal-shipping-sanctions-relief-nuclear-talks-ballistic-missiles"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran, Various Non-State Actors",
-        "Action": "Agree peace deal, reopen Hormuz; attacks continue.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
     }
 ]
