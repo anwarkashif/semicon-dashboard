@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israel must withdraw from Lebanon for sustainable peace, Leb...",
+        "Summary": "Israel must withdraw from Lebanon for sustainable peace, Lebanese minister says",
+        "Risk": "HIGH",
+        "Source": "https://x.com/TheNationalNews/status/2066550277285597594"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Will US-Iran peace deal hold? \u2013 The Latest",
+        "Summary": "Will US-Iran peace deal hold? \u2013 The Latest",
+        "Risk": "HIGH",
+        "Source": "https://www.theguardian.com/news/audio/2026/jun/15/will-us-iran-peace-deal-hold-the-latest"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Reached interim peace deal, reopened Strait of Hormuz.",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unknown Actors",
+        "Action": "Attacked vessels near Yemen, Oman, Strait of Hormuz.",
+        "Location": "Gulf of Aden, Strait of Hormuz",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "Raising 3nm chip prices 15% due to tight capacity.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Anthropic, United States",
+        "Action": "Suspended AI models due to US export-control order.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "China (PLA)",
+        "Action": "Rapid military development, potential threats to allies.",
+        "Location": "Indo-Pacific, Australia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Exclusive: Illegal settlements promoted in London at Great I...",
         "Summary": "Exclusive: Illegal settlements promoted in London at Great Israeli Real Estate Event",
         "Risk": "HIGH",
@@ -141,61 +196,6 @@
         "Actor": "Russia",
         "Action": "Launches extensive drone, missile strikes",
         "Location": "Ukraine",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising 15%",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Anthropic, United States",
-        "Action": "Suspends AI models after export control order",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United Kingdom, Russia",
-        "Action": "Seizes Russian shadow fleet oil tanker",
-        "Location": "International Waters",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unspecified (attackers)",
-        "Action": "Tanker hit, damaged in Strait attack",
-        "Location": "Strait of Hormuz",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Kurdistan Region President Nechirvan Barzani on Monday welco...",
-        "Summary": "Kurdistan Region President Nechirvan Barzani on Monday welcomed the agreement between Tehran and Washington, following months of conflict that began in late February.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/RudawEnglish/status/2066447351951098210"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran peace deal won't change BOJ's rate-hike plans, ex-centr...",
-        "Summary": "Iran peace deal won't change BOJ's rate-hike plans, ex-central bank economist says",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2066446927101628559"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Announce interim peace deal; Hormuz tanker attacked.",
-        "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL"
     }
 ]
