@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Amateur saboteurs: the young men carrying out attacks for ga...",
+        "Summary": "Amateur saboteurs: the young men carrying out attacks for gangs, Russia and Iran",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2066567124768702489"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Trump says Strait of Hormuz will be &#039;completely open&#0...",
+        "Summary": "Trump says Strait of Hormuz will be &#039;completely open&#039; Friday",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/trump-says-strait-hormuz-will-be-completely-open-friday"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States",
+        "Action": "Imposed AI model export controls",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "United States, Iran",
+        "Action": "Signed peace deal; reopened Strait of Hormuz",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Unknown Non-State Actors",
+        "Action": "Attacked commercial vessels near Yemen",
+        "Location": "Gulf of Aden, Oman Coast, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "China",
+        "Action": "Plans to swarm US carriers",
+        "Location": "Western Pacific",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "TSMC",
+        "Action": "3nm capacity tight, prices rising",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Ucore, Sumitomo",
+        "Action": "Formed rare-earth supply chain partnership",
+        "Location": "Global",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-15",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israel must withdraw from Lebanon for sustainable peace, Leb...",
         "Summary": "Israel must withdraw from Lebanon for sustainable peace, Lebanese minister says",
         "Risk": "HIGH",
@@ -134,68 +196,6 @@
         "Actor": "United States, Iran",
         "Action": "Agreed interim peace deal, reopened Strait of Hormuz.",
         "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising 15% in H2 2026.",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Anthropic, United States",
-        "Action": "Suspended AI models after export control order.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unknown, Merchant Vessels",
-        "Action": "Tanker hit, container vessel fired upon near Yemen.",
-        "Location": "Gulf of Oman, Yemen Coast",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States Air Force, GAO",
-        "Action": "F-35s, refueling fleet below readiness standards.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran deal leaves Trump fighting a war at home",
-        "Summary": "Iran deal leaves Trump fighting a war at home",
-        "Risk": "HIGH",
-        "Source": "https://x.com/FT/status/2066462729104228609"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "UN human rights chief welcomes US-Iran deal, urges restraint...",
-        "Summary": "UN human rights chief welcomes US-Iran deal, urges restraint in the region",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2066462525059707372"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Announce interim peace deal, reopen Strait",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Russia",
-        "Action": "Launches extensive drone, missile strikes",
-        "Location": "Ukraine",
         "Risk": "CRITICAL"
     }
 ]
