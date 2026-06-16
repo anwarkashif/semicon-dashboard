@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran-US deal ignores what Iranian people want, son of last S...",
+        "Summary": "Iran-US deal ignores what Iranian people want, son of last Shah tells ITV News' Global Security Editor @RohitKachrooITV",
+        "Risk": "HIGH",
+        "Source": "https://x.com/itvnews/status/2067006612225577242"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israel is resisting Donald Trump\u2019s demands that it fall in l...",
+        "Summary": "Israel is resisting Donald Trump\u2019s demands that it fall in line with his Middle East policy.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/ForeignPolicy/status/2067004329555300572"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States",
+        "Action": "Lifts Iranian oil sanctions under new agreement",
+        "Location": "Iran, Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unidentified belligerents",
+        "Action": "Three commercial vessels hit by gunfire",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unidentified belligerents",
+        "Action": "Armed boats attack two commercial ships",
+        "Location": "Gulf of Aden, Yemen",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States",
+        "Action": "Invokes DPA for increased weapons manufacturing",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Europe, China",
+        "Action": "Europe gears for trade fight with China",
+        "Location": "Europe, China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Can Hormuz be bypassed? Past shows commercial viability may ...",
         "Summary": "Can Hormuz be bypassed? Past shows commercial viability may simply not be there, analyst says",
         "Risk": "HIGH",
@@ -63,20 +118,6 @@
         "Summary": "US refused Israeli request to review text of new understanding with Iran, leaving Israel unaware of agreement\u2019s full details, report says",
         "Risk": "HIGH",
         "Source": "https://x.com/DailySabah/status/2066970371362820513"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Lifts Iranian oil sanctions under new agreement",
-        "Location": "Iran, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unknown (likely Houthi-affiliated)",
-        "Action": "Armed boats attack two commercial ships",
-        "Location": "Gulf of Aden, Yemen",
-        "Risk": "CRITICAL"
     },
     {
         "Date": "2026-06-16",
@@ -153,46 +194,5 @@
         "Action": "Commissions rare earth production facility",
         "Location": "United States",
         "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran and Oman reaffirm commitment to free navigation through...",
-        "Summary": "Iran and Oman reaffirm commitment to free navigation through Hormuz",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-and-oman-reaffirm-commitment-free-navigation-through-hormuz"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The head coach of Iran\u2019s football team said his players were...",
-        "Summary": "The head coach of Iran\u2019s football team said his players were being 'oppressed' after they were unexpectedly told to return to Mexico straight after their opening game in Los Angeles.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/FT/status/2066930667519139995"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Agree interim peace deal; Hormuz reopens.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "China",
-        "Action": "Deploys naval supergun targeting Taiwan shores.",
-        "Location": "Taiwan Strait, Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Anthropic (US Company)",
-        "Action": "Suspends top AI models due to export controls.",
-        "Location": "United States, Global AI market",
-        "Risk": "CRITICAL"
     }
 ]
