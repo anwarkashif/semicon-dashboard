@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iranian state TV quoted Foreign Minister Abbas Araghchi as s...",
+        "Summary": "Iranian state TV quoted Foreign Minister Abbas Araghchi as saying the end of the war with the U.S. included the end of Israel\u2019s occupation of Lebanon. Interim deal reached between the U.S. and Iran is yet to be released publicly in full, and it's not clear what terms it contains.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/AP/status/2066792947652215021"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Army Spokesman Highlights Iran\u2019s Full Military Readiness",
+        "Summary": "Army Spokesman Highlights Iran\u2019s Full Military Readiness",
+        "Risk": "HIGH",
+        "Source": "https://www.tasnimnews.ir/en/news/2026/06/16/3618620/army-spokesman-highlights-iran-s-full-military-readiness"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran",
+        "Action": "Agreed to halt war, reopen Hormuz",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unknown",
+        "Action": "Tanker, container vessels attacked near Yemen",
+        "Location": "Off Yemen, Gulf of Aden",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United Kingdom, European Union",
+        "Action": "Imposed sanctions on Russian 'shadow fleet'",
+        "Location": "Global Maritime (targeting Russia)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "US Army",
+        "Action": "Deploys Typhon missile systems to Japan",
+        "Location": "Southern Japan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Anthropic, United States",
+        "Action": "Suspends AI models due to US export controls",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "China",
+        "Action": "Increases control over Indonesian nickel resources",
+        "Location": "Halmahera, Indonesia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran\u2019s Negotiating Team Adhere Strictly to Framework Set by ...",
         "Summary": "Iran\u2019s Negotiating Team Adhere Strictly to Framework Set by Leader: President",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "Australia to investigate allegations of abuse by Gaza flotilla activists",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/australia-investigate-abuse-claims-gaza-flotilla-activists"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Signed interim peace deal, halted war, reopened Hormuz",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unknown (Armed Skiffs)",
-        "Action": "Armed skiffs attacked two commercial vessels",
-        "Location": "Gulf of Aden, off Yemen/Oman",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Anthropic, United States",
-        "Action": "Suspended AI models due to US export controls",
-        "Location": "United States",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "China",
-        "Action": "Developing advanced diamond wafers for AI dominance",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United Kingdom, Russia (Shadow Fleet)",
-        "Action": "UK charged captain of Russian shadow tanker",
-        "Location": "United Kingdom",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Middle East live: Vance says Strait of Hormuz will reopen wi...",
-        "Summary": "Middle East live: Vance says Strait of Hormuz will reopen without tolls",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/middle-east/20260616-middle-east-live-vance-says-strait-of-hormuz-will-reopen-without-tolls"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "On the front page of L'Orient-Le Jour: The \"peace\" of others...",
-        "Summary": "On the front page of L'Orient-Le Jour: The \"peace\" of others, the trap for Lebanon L'\u00c9dito | War in Iran: lessons from defeat Subscribe",
-        "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2066717410535617021"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Agree peace deal, reopen Strait of Hormuz",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
     }
 ]
