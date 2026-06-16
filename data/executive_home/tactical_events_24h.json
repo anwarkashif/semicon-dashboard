@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Kurdistan Region President Nechirvan Barzani received SDF Ch...",
+        "Summary": "Kurdistan Region President Nechirvan Barzani received SDF Chief Mazloum Abdi in Erbil, where discussions centered on Syria\u2019s political and security developments, as well as the conditions facing the Kurdish community in the country.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/RudawEnglish/status/2066959771576803826"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Pope Leo says &#039;thanks be to God&#039; for interim US-Ir...",
+        "Summary": "Pope Leo says &#039;thanks be to God&#039; for interim US-Iran peace deal",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/pope-leo-says-thanks-be-god-interim-us-iran-peace-deal"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States",
+        "Action": "Imposes controls on advanced AI models",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "China, North Korea",
+        "Action": "Strengthens bilateral strategic cooperation",
+        "Location": "East Asia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Non-state actors",
+        "Action": "Attacks commercial shipping in Gulf",
+        "Location": "Gulf of Aden / Red Sea",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran",
+        "Action": "Reaches interim peace deal, lifts oil sanctions",
+        "Location": "Middle East",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States",
+        "Action": "Commissions rare earth production facility",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran and Oman reaffirm commitment to free navigation through...",
         "Summary": "Iran and Oman reaffirm commitment to free navigation through Hormuz",
         "Risk": "HIGH",
@@ -142,60 +197,5 @@
         "Summary": "Israeli air strikes hit southern Lebanon despite US pressure to stop attacks",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-air-strikes-hit-southern-lebanon-despite-us-pressure-stop"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran, G7",
-        "Action": "Announce interim peace deal; G7 sanctions Russia.",
-        "Location": "Middle East, Russia, Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "China",
-        "Action": "Deploys new naval supergun near Taiwan.",
-        "Location": "Taiwan Strait",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "TSMC, Amkor",
-        "Action": "Sign 10-year deal for Arizona chip packaging.",
-        "Location": "Arizona, United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Anthropic, United States",
-        "Action": "Suspends AI models due to US export controls.",
-        "Location": "Global (AI industry)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Ukraine",
-        "Action": "Drone strikes Moscow region refinery, causing fuel limits.",
-        "Location": "Moscow Region, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israeli air strike on central Gaza kills at least two",
-        "Summary": "Israeli air strike on central Gaza kills at least two",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-air-strike-central-gaza-kills-least-two"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Qatar FM: hopeful about signing of Iran-US deal, warns disag...",
-        "Summary": "Qatar FM: hopeful about signing of Iran-US deal, warns disagreements will not be solved in \u2018mere days\u2019",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/qatar-fm-hopeful-about-signing-iran-us-deal-warns-disagreements-will-not"
     }
 ]
