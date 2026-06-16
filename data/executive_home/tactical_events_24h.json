@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Middle East live: Vance says Strait of Hormuz will reopen wi...",
+        "Summary": "Middle East live: Vance says Strait of Hormuz will reopen without tolls",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/middle-east/20260616-middle-east-live-vance-says-strait-of-hormuz-will-reopen-without-tolls"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "On the front page of L'Orient-Le Jour: The \"peace\" of others...",
+        "Summary": "On the front page of L'Orient-Le Jour: The \"peace\" of others, the trap for Lebanon L'\u00c9dito | War in Iran: lessons from defeat Subscribe",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2066717410535617021"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran",
+        "Action": "Agree peace deal, reopen Strait of Hormuz",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unknown (Skiffs)",
+        "Action": "Armed skiffs attack ships off Yemen",
+        "Location": "Gulf of Aden, Yemen",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States",
+        "Action": "Imposes export controls on Anthropic AI models",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "China",
+        "Action": "Achieves breakthrough in quantum chip material",
+        "Location": "China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Japan, India",
+        "Action": "Launch initiatives to secure critical mineral supply chains",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "US and Iran sign agreement electronically ahead of formal ce...",
         "Summary": "US and Iran sign agreement electronically ahead of formal ceremony",
         "Risk": "HIGH",
@@ -131,13 +186,6 @@
     },
     {
         "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Agree peace deal, reopen Strait of Hormuz",
-        "Location": "Strait of Hormuz, West Asia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
         "Actor": "United States (Anthropic)",
         "Action": "Suspends advanced AI models via export controls",
         "Location": "Global (AI technology transfer)",
@@ -149,50 +197,5 @@
         "Action": "3nm capacity tight, prices rising 15%",
         "Location": "Taiwan (global semiconductor supply)",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unknown (Skiffs)",
-        "Action": "Attack ships off Yemen, Oman coast",
-        "Location": "Gulf of Aden, Arabian Sea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Japan (G7 countries)",
-        "Action": "Proposes G7 critical minerals stockpile partnership",
-        "Location": "Global (resource supply chains)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "China-linked entities",
-        "Action": "Target US AI companies and data centers",
-        "Location": "United States (cyber domain)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran war 'has been a strategic disaster for the State of Isr...",
-        "Summary": "Iran war 'has been a strategic disaster for the State of Israel', analyst says",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/tv-shows/a-propos/20260615-iran-war-has-been-a-strategic-disaster-for-the-state-of-israel-analyst-says"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Announced peace deal, reopening Strait of Hormuz.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Anthropic",
-        "Action": "Suspended AI models due to US export-controls.",
-        "Location": "United States",
-        "Risk": "HIGH"
     }
 ]
