@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "US and Iran sign agreement electronically ahead of formal ce...",
+        "Summary": "US and Iran sign agreement electronically ahead of formal ceremony",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/us-iran-agreement-signed-electronically-ahead-formal-ceremony"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran vows to boost military readiness despite agreement with...",
+        "Summary": "Iran vows to boost military readiness despite agreement with US",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-vows-boost-military-readiness-despite-agreement-us"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran",
+        "Action": "Agree interim peace deal, reopen Hormuz",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Anthropic (US Government)",
+        "Action": "Suspends AI models after export control order",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unknown (Skiffs/Attackers)",
+        "Action": "Attack container vessel and tanker",
+        "Location": "Gulf of Aden, Oman, Yemen",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "China",
+        "Action": "Retail sales drop, industrial output slows",
+        "Location": "China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Rapidus (Japan), Fondazione Chips-IT (Italy)",
+        "Action": "Sign MoU for 2nm semiconductor manufacturing",
+        "Location": "Japan, Italy",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iranian Americans protest Iran government ahead of World Cup...",
         "Summary": "Iranian Americans protest Iran government ahead of World Cup match in LA",
         "Risk": "HIGH",
@@ -139,60 +194,5 @@
         "Action": "Suspended AI models due to US export-controls.",
         "Location": "United States",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising 15%.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Unknown armed skiffs",
-        "Action": "Attacked multiple vessels off Yemen/Oman coast.",
-        "Location": "Gulf of Aden, off Yemen/Oman",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "South Korea",
-        "Action": "Diversifying critical minerals, facing hard dependencies.",
-        "Location": "South Korea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "'Let the oil flow!': Can US and Iran actually strike lasting...",
-        "Summary": "'Let the oil flow!': Can US and Iran actually strike lasting deal?",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/tv-shows/the-debate/20260615-let-the-oil-flow-can-us-and-iran-actually-strike-lasting-deal"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Hezbollah has not carried out operations since Iran-US deal,...",
-        "Summary": "Hezbollah has not carried out operations since Iran-US deal, Hezbollah official tells Reuters",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2066584061611581666"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Iran",
-        "Action": "Signed peace deal, reopening Strait of Hormuz.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States, Anthropic",
-        "Action": "Imposed export controls on advanced AI models.",
-        "Location": "United States",
-        "Risk": "CRITICAL"
     }
 ]
