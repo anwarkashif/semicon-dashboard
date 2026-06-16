@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "&#039;The mullahs&#039; team&#039;: Split loyalties for Iran...",
+        "Summary": "&#039;The mullahs&#039; team&#039;: Split loyalties for Iran fans at World Cup",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/mullahs-team-split-loyalties-iran-fans-world-cup"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Australia to investigate allegations of abuse by Gaza flotil...",
+        "Summary": "Australia to investigate allegations of abuse by Gaza flotilla activists",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/australia-investigate-abuse-claims-gaza-flotilla-activists"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran",
+        "Action": "Signed interim peace deal, halted war, reopened Hormuz",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unknown (Armed Skiffs)",
+        "Action": "Armed skiffs attacked two commercial vessels",
+        "Location": "Gulf of Aden, off Yemen/Oman",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Anthropic, United States",
+        "Action": "Suspended AI models due to US export controls",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "China",
+        "Action": "Developing advanced diamond wafers for AI dominance",
+        "Location": "China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United Kingdom, Russia (Shadow Fleet)",
+        "Action": "UK charged captain of Russian shadow tanker",
+        "Location": "United Kingdom",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Middle East live: Vance says Strait of Hormuz will reopen wi...",
         "Summary": "Middle East live: Vance says Strait of Hormuz will reopen without tolls",
         "Risk": "HIGH",
@@ -141,61 +196,6 @@
         "Actor": "United States, Anthropic",
         "Action": "US export controls halt advanced AI model access.",
         "Location": "Global (AI/semiconductor industry)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unknown Actors",
-        "Action": "Armed skiffs attack commercial vessels near Yemen.",
-        "Location": "Gulf of Aden, Yemen, Oman",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "TSMC",
-        "Action": "3nm chip capacity tightens, prices rise 15%.",
-        "Location": "Taiwan (Global semiconductor market)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "China, North Korea",
-        "Action": "Xi visits Pyongyang, strengthening bilateral security ties.",
-        "Location": "North Korea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The US-Iran memorandum of understanding is a short document ...",
-        "Summary": "The US-Iran memorandum of understanding is a short document of a general nature; the details of the agreement will be worked out during technical negotiations, US Vice President JD Vance stated:",
-        "Risk": "HIGH",
-        "Source": "https://x.com/tassagency_en/status/2066658561757778092"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "World Brief: A U.S.-Iran peace deal arrives just in time for...",
-        "Summary": "World Brief: A U.S.-Iran peace deal arrives just in time for the G-7 leaders\u2019 summit, the United Kingdom cracks down on minors\u2019 social media access, and suspected Russian strikes damage a UNESCO World Heritage Site in Kyiv.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2066657032636109165"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "United States (Anthropic)",
-        "Action": "Suspends advanced AI models via export controls",
-        "Location": "Global (AI technology transfer)",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-15",
-        "Actor": "TSMC",
-        "Action": "3nm capacity tight, prices rising 15%",
-        "Location": "Taiwan (global semiconductor supply)",
         "Risk": "CRITICAL"
     }
 ]
