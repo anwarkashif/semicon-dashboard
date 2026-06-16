@@ -18,7 +18,7 @@ FEEDS = {
     "RECORDED FUTURE": "https://therecord.media/feed/",
     "FLASHPOINT": "https://flashpoint.io/blog/feed/",
     "SINTELIX (GLOBAL EYE)": "https://sintelix.com/feed/",
-    "WORLD MONITOR": "https://warontherocks.com/feed/"
+    "CISA (GLOBAL CYBER THREATS)": "https://www.cisa.gov/uscert/ncas/alerts.xml"
 }
 
 def robust_gemini_call(prompt, task_name="Generation"):

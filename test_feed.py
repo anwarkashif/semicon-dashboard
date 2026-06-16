@@ -1,13 +1,19 @@
 import feedparser
 import requests
 
-# The authentic public intelligence feeds for the 6 domains
 FEEDS = {
     "Recorded Future": "https://therecord.media/feed/",
     "Flashpoint": "https://flashpoint.io/blog/feed/",
     "Sintelix (Global Eye)": "https://sintelix.com/feed/",
-    "War on the Rocks": "https://warontherocks.com/feed/",
-    "World Monitor": "https://www.understandingwar.org/rss.xml" # Premium global monitor fallback
+    
+    # User's Suggestions (testing for native feeds)
+    "War-Monitor": "https://war-monitor.com/feed/",
+    "Monitor The Situation": "https://monitor-the-situation.com/feed/",
+    
+    # 24/7 Global OSINT Alternatives
+    "Liveuamap (Kinetic OSINT)": "https://liveuamap.com/rss",
+    "CISA (Global Cyber Threats)": "https://www.cisa.gov/uscert/ncas/alerts.xml",
+    "The Hacker News (Real-time Breaches)": "https://feeds.feedburner.com/TheHackersNews"
 }
 
 headers = {
