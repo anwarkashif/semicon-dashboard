@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israeli air strike on central Gaza kills at least two",
+        "Summary": "Israeli air strike on central Gaza kills at least two",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-air-strike-central-gaza-kills-least-two"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Qatar FM: hopeful about signing of Iran-US deal, warns disag...",
+        "Summary": "Qatar FM: hopeful about signing of Iran-US deal, warns disagreements will not be solved in \u2018mere days\u2019",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/qatar-fm-hopeful-about-signing-iran-us-deal-warns-disagreements-will-not"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran",
+        "Action": "Announce interim peace deal, open Strait of Hormuz.",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unidentified (likely Houthi-aligned)",
+        "Action": "Armed skiffs attack merchant vessels off Yemen.",
+        "Location": "Gulf of Aden, Yemen",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Ukraine",
+        "Action": "Drone strike hits Moscow region oil refinery.",
+        "Location": "Moscow Region, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Taiwan, China",
+        "Action": "Taiwan boosts defense; China develops naval supergun.",
+        "Location": "Taiwan Strait, China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Anthropic (US government)",
+        "Action": "Suspends AI models after US export-control order.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United Kingdom",
+        "Action": "UK charges Russian shadow fleet tanker captain.",
+        "Location": "United Kingdom",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "London synagogue reported to Charity Commission over Israeli...",
         "Summary": "London synagogue reported to Charity Commission over Israeli settlement real estate event",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "Iran, US reach peace deal to halt Mideast war, reopen Hormuz",
         "Risk": "HIGH",
         "Source": "https://x.com/DailySabah/status/2066809315684479412"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Sign interim peace deal, Hormuz transit uncertain.",
-        "Location": "Strait of Hormuz, Persian Gulf",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unknown entities",
-        "Action": "Armed skiffs attack commercial vessels near Yemen.",
-        "Location": "Gulf of Aden, off Yemen/Oman",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Anthropic",
-        "Action": "Imposes export controls on Anthropic's top AI models.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "G7, EU, China",
-        "Action": "G7/EU secure critical minerals; China controls chokepoints.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "European Union, United Kingdom, Russia",
-        "Action": "Sanction Russia's 'shadow fleet' and LNG tankers.",
-        "Location": "Global maritime routes",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israel's former defence minister compares settler ideology t...",
-        "Summary": "Israel's former defence minister compares settler ideology to Nazism",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/news/israel-former-defence-minister-compares-settler-ideology-nazism"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Fifa president Gianni Infantino visited Iran's national team...",
-        "Summary": "Fifa president Gianni Infantino visited Iran's national team after its opening World Cup match. The visit came after several Iranian team officials were denied visas to enter the US and watched the opening match from Mexico. The issue has drawn criticism from Iranian football officials and added to wider concerns over travel restrictions during the World Cup",
-        "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2066793586893664418"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Announce interim peace deal, reopen Hormuz.",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
     }
 ]
