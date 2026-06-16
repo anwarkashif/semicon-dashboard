@@ -22,15 +22,13 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
 
     st.sidebar.title("SemicoN Access")
 
-    # 🚀 UPDATED: Inserted Psyopoly right below Weekly Intelligence Brief
+    # 🚀 The universal base options (Trend Timelines is removed from here)
     base_options = [
         "Executive Home",
         "Today's Snippet",
         "Weekly Tactical Brief",
         "Weekly Intelligence Brief",
-        "West Asia Strategic Intel (Psyopoly)", 
-        "Trend Timelines",
-        "Archives"
+        "West Asia Strategic Intel (Psyopoly)"
     ]
 
     if st.session_state.get('role') == 'admin':
@@ -38,11 +36,13 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         if st.sidebar.button("Logout"):
             st.session_state['role'] = None
             st.rerun()
-        view_options = base_options + ["Global Threat Intercept (ShadowBroker)", "Clean Archives", "Trash"]
+        # Admin gets the base options PLUS Trend Timelines and the backend features
+        view_options = base_options + ["Trend Timelines", "Archives", "Global Threat Intercept (ShadowBroker)", "Clean Archives", "Trash"]
     else:
         st.sidebar.info("Access Level: **Guest Viewer**")
         st.sidebar.caption("*(System Access Restricted)*")
-        view_options = base_options
+        # Guests get the base options PLUS Archives, skipping Trend Timelines completely
+        view_options = base_options + ["Archives"]
 
     st.sidebar.markdown("---")
     view_selection = st.sidebar.radio("Strategic Navigation", view_options)
