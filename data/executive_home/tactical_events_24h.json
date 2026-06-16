@@ -4,6 +4,51 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Can Hormuz be bypassed? Past shows commercial viability may ...",
+        "Summary": "Can Hormuz be bypassed? Past shows commercial viability may simply not be there, analyst says",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/tv-shows/a-propos/20260616-can-hormuz-be-bypassed-past-shows-commercial-viability-may-simply-not-be-there-analyst-says"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran, Houthi Rebels",
+        "Action": "US lifts Iran sanctions; armed groups attack shipping.",
+        "Location": "Middle East, Gulf of Aden, Red Sea",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Europe, Anthropic",
+        "Action": "US controls AI models, sparking international access disputes.",
+        "Location": "United States, Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States (Pentagon)",
+        "Action": "Funds $500M domestic rare-earth refining facility.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "France, Germany, European defense industry",
+        "Action": "Boosts drone, advanced weapon production and cooperation.",
+        "Location": "Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Intel",
+        "Action": "Expands leading-edge 18A semiconductor manufacturing platform.",
+        "Location": "Global Semiconductor Industry",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "US refused to share Iran deal text with Israel: Report",
         "Summary": "US refused to share Iran deal text with Israel: Report",
         "Risk": "HIGH",
@@ -148,54 +193,6 @@
         "Actor": "Anthropic (US Company)",
         "Action": "Suspends top AI models due to export controls.",
         "Location": "United States, Global AI market",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unidentified Actors",
-        "Action": "Armed boats attack two commercial ships.",
-        "Location": "Gulf of Aden, Yemen",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States (Pentagon)",
-        "Action": "Commits $500M for rare earth plant.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Ukraine",
-        "Action": "Drone strike hits Moscow region refinery.",
-        "Location": "Moscow Region, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Happening now: Is the special relationship between the U.S. ...",
-        "Summary": "Happening now: Is the special relationship between the U.S. and Israel over? Joshua Leifer, a columnist for @haaretzcom, joins FP Live to discuss the alliance\u2019s future after the Iran war. Join the conversation here:",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2066898935764209977"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US-Iran deal to be signed in Switzerland on Friday: Bern",
-        "Summary": "US-Iran deal to be signed in Switzerland on Friday: Bern",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/us-iran-deal-be-signed-switzerland-friday-bern"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Announce interim peace deal, ending conflict",
-        "Location": "Middle East",
         "Risk": "CRITICAL"
     }
 ]
