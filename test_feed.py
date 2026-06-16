@@ -1,42 +1,75 @@
-import feedparser
 import requests
 
-FEEDS = {
-    "Recorded Future": "https://therecord.media/feed/",
-    "Flashpoint": "https://flashpoint.io/blog/feed/",
-    "Sintelix (Global Eye)": "https://sintelix.com/feed/",
-    
-    # User's Suggestions (testing for native feeds)
-    "War-Monitor": "https://war-monitor.com/feed/",
-    "Monitor The Situation": "https://monitor-the-situation.com/feed/",
-    
-    # 24/7 Global OSINT Alternatives
-    "Liveuamap (Kinetic OSINT)": "https://liveuamap.com/rss",
-    "CISA (Global Cyber Threats)": "https://www.cisa.gov/uscert/ncas/alerts.xml",
-    "The Hacker News (Real-time Breaches)": "https://feeds.feedburner.com/TheHackersNews"
+# Set up the exact headers required to bypass basic anti-bot systems
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
+    'Connection': 'keep-alive'
 }
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-}
+def extract_war_monitor():
+    print("📡 Targeting Backend: War Monitor (api.war-monitor.com)")
+    url = "https://api.war-monitor.com/api/events"
+    
+    # Passing the exact query parameters from your network log
+    params = {
+        "page": "1",
+        "limit": "20",
+        "fresh_hours": "168"
+    }
+    
+    # Adding the specific Origin and Referer headers required by their server
+    local_headers = HEADERS.copy()
+    local_headers['Origin'] = 'https://war-monitor.com'
+    local_headers['Referer'] = 'https://war-monitor.com/'
 
-def test_feeds():
-    print("🔍 TESTING ENTERPRISE OSINT FEEDS...\n")
-    for name, url in FEEDS.items():
-        try:
-            res = requests.get(url, headers=headers, timeout=10)
-            if res.status_code == 200:
-                feed = feedparser.parse(res.text)
-                if feed.entries:
-                    print(f"✅ {name}: SUCCESS")
-                    print(f"   Latest: {feed.entries[0].title}")
-                    print(f"   URL: {feed.entries[0].link}\n")
-                else:
-                    print(f"⚠️ {name}: Feed reachable, but empty.\n")
-            else:
-                print(f"❌ {name}: FAILED (Status {res.status_code})\n")
-        except Exception as e:
-            print(f"❌ {name}: FAILED (Error: {e})\n")
+    try:
+        response = requests.get(url, headers=local_headers, params=params, timeout=15)
+        if response.status_code == 200:
+            data = response.json()
+            events = data.get('data', []) # Assuming 'data' or similar key holds the array
+            print(f"✅ SUCCESS: Extracted a valid JSON payload from War Monitor.")
+            print(f"   Preview: {str(data)[:200]}...\n")
+            return events
+        elif response.status_code == 403:
+            print("❌ FAILED: 403 Forbidden. Cloudflare block triggered.\n")
+        else:
+            print(f"⚠️ UNEXPECTED RESULT: {response.status_code}\n")
+            
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE: {e}\n")
+    return []
+
+
+def extract_monitor_the_situation():
+    print("📡 Targeting Backend: Monitor The Situation (monitor-the-situation.com/api)")
+    url = "https://monitor-the-situation.com/api/events"
+    
+    params = {
+        "range": "6h",
+        "feed": "live"
+    }
+    
+    local_headers = HEADERS.copy()
+    local_headers['Referer'] = 'https://monitor-the-situation.com/east-asia'
+
+    try:
+        response = requests.get(url, headers=local_headers, params=params, timeout=15)
+        if response.status_code == 200:
+            data = response.json()
+            print(f"✅ SUCCESS: Extracted a valid JSON payload from Monitor The Situation.")
+            print(f"   Preview: {str(data)[:200]}...\n")
+            return data
+        else:
+            print(f"⚠️ UNEXPECTED RESULT: {response.status_code}\n")
+            
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE: {e}\n")
+    return []
 
 if __name__ == "__main__":
-    test_feeds()
+    print("🔍 INITIATING DIRECT API EXTRACTION...\n")
+    
+    war_monitor_data = extract_war_monitor()
+    mts_data = extract_monitor_the_situation()

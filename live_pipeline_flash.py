@@ -14,11 +14,12 @@ if not GEMINI_API_KEY:
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
-FEEDS = {
-    "RECORDED FUTURE": "https://therecord.media/feed/",
-    "FLASHPOINT": "https://flashpoint.io/blog/feed/",
-    "SINTELIX (GLOBAL EYE)": "https://sintelix.com/feed/",
-    "CISA (GLOBAL CYBER THREATS)": "https://www.cisa.gov/uscert/ncas/alerts.xml"
+# Exact headers needed to bypass standard firewall blocks
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
+    'Connection': 'keep-alive'
 }
 
 def robust_gemini_call(prompt, task_name="Generation"):
@@ -42,26 +43,69 @@ def robust_gemini_call(prompt, task_name="Generation"):
                 time.sleep(5)
     raise Exception(f"❌ FATAL: All Gemini models failed for {task_name}.")
 
-def fetch_and_evaluate_flash_alerts():
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    raw_intel_payload = ""
+def extract_monitor_the_situation():
+    print("🌍 Siphoning from Monitor The Situation API...")
+    url = "https://monitor-the-situation.com/api/events"
+    params = {"range": "6h", "feed": "live"}
+    local_headers = HEADERS.copy()
+    local_headers['Referer'] = 'https://monitor-the-situation.com/'
+    
+    try:
+        res = requests.get(url, headers=local_headers, params=params, timeout=10)
+        if res.status_code == 200:
+            events = res.json()
+            extracted = ""
+            for e in events[:5]:
+                extracted += f"TITLE: {e.get('title')}\nURL: https://monitor-the-situation.com/\n\n"
+            return "\n--- MONITOR THE SITUATION ---\n" + extracted
+    except Exception as e:
+        print(f"⚠️ Failed MTS: {e}")
+    return ""
 
-    print("🌍 Scraping Authentic OSINT Platforms...")
-    for source_name, url in FEEDS.items():
-        try:
-            res = requests.get(url, headers=headers, timeout=10)
-            if res.status_code == 200:
-                feed = feedparser.parse(res.text)
-                raw_intel_payload += f"\n--- {source_name} ---\n"
-                # Grab top 5 articles per source for AI to evaluate
-                for entry in feed.entries[:5]:
-                    raw_intel_payload += f"TITLE: {entry.title}\nURL: {entry.link}\n\n"
-        except Exception as e:
-            print(f"⚠️ Failed to fetch {source_name}: {e}")
+def extract_war_monitor():
+    print("🌍 Siphoning from War Monitor API...")
+    url = "https://api.war-monitor.com/api/events"
+    params = {"page": "1", "limit": "5", "fresh_hours": "168"}
+    local_headers = HEADERS.copy()
+    local_headers['Origin'] = 'https://war-monitor.com'
+    local_headers['Referer'] = 'https://war-monitor.com/'
+    
+    try:
+        res = requests.get(url, headers=local_headers, params=params, timeout=10)
+        if res.status_code == 200:
+            events = res.json().get('data', [])
+            extracted = ""
+            for e in events[:5]:
+                extracted += f"TITLE: {e.get('title')}\nURL: https://war-monitor.com/events\n\n"
+            return "\n--- WAR MONITOR ---\n" + extracted
+    except Exception as e:
+        print(f"⚠️ Failed War Monitor: {e}")
+    return ""
+
+def extract_cisa():
+    print("🌍 Siphoning from CISA RSS Feed...")
+    url = "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=10)
+        if res.status_code == 200:
+            feed = feedparser.parse(res.text)
+            extracted = ""
+            for entry in feed.entries[:5]:
+                extracted += f"TITLE: {entry.title}\nURL: {entry.link}\n\n"
+            return "\n--- CISA (GLOBAL CYBER THREATS) ---\n" + extracted
+    except Exception as e:
+        print(f"⚠️ Failed CISA: {e}")
+    return ""
+
+def fetch_and_evaluate_flash_alerts():
+    raw_intel_payload = ""
+    raw_intel_payload += extract_monitor_the_situation()
+    raw_intel_payload += extract_war_monitor()
+    raw_intel_payload += extract_cisa()
 
     prompt = f"""
-    You are an OSINT Intelligence Router. Review the following raw RSS feeds from 4 premium intelligence providers.
-    For EACH of the 4 providers, select the SINGLE MOST CRITICAL geopolitical, cyber, or defense-related headline.
+    You are an OSINT Intelligence Router. Review the following raw feeds from 3 intelligence providers.
+    For EACH of the 3 providers, select the SINGLE MOST CRITICAL geopolitical, cyber, or defense-related headline.
     
     CRITICAL RULE: You MUST use the EXACT title and EXACT URL provided in the text. Do not invent links.
     
@@ -70,11 +114,23 @@ def fetch_and_evaluate_flash_alerts():
     - HIGH (Orange alert)
     - ELEVATED (Yellow alert)
     
-    Output a raw JSON array of 4 objects (one for each source). Do not use markdown.
+    Output a raw JSON array of 3 objects (one for each source). Do not use markdown.
     Format exactly like this:
     [
       {{
-        "source": "RECORDED FUTURE",
+        "source": "MONITOR THE SITUATION",
+        "title": "Exact Article Title",
+        "url": "Exact Article URL",
+        "threat_level": "CRITICAL"
+      }},
+      {{
+        "source": "WAR MONITOR",
+        "title": "Exact Article Title",
+        "url": "Exact Article URL",
+        "threat_level": "CRITICAL"
+      }},
+      {{
+        "source": "CISA",
         "title": "Exact Article Title",
         "url": "Exact Article URL",
         "threat_level": "CRITICAL"
@@ -91,7 +147,6 @@ if __name__ == "__main__":
     try:
         flash_data = fetch_and_evaluate_flash_alerts()
         
-        # Save to data directory
         os.makedirs('data', exist_ok=True)
         with open('data/flash_alert.json', 'w') as f:
             json.dump(flash_data, f, indent=4)

@@ -159,8 +159,8 @@ def render_flash_alert():
         .flash-header span {
             animation: blinkText 1.5s infinite;
         }
-        @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         
+        /* THE NEW FLASHY RED DEFCON BAR OVERRIDE */
         .flash-bar {
             display: flex;
             justify-content: space-between;
@@ -170,38 +170,40 @@ def render_flash_alert():
             border-radius: 6px;
             text-decoration: none !important;
             color: #ffffff !important;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
+            background: linear-gradient(90deg, #8b0000 0%, #ff0000 50%, #8b0000 100%); 
+            background-size: 200% 200%; 
+            animation: pulseBackground 2s infinite; 
+            border: 2px solid #ff4b4b; 
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            transition: transform 0.2s;
         }
         .flash-bar:hover {
             transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
         }
         
-        /* Threat Level Color Logic */
-        .level-CRITICAL { background: linear-gradient(90deg, #450a0a 0%, #7f1d1d 100%); border-left: 5px solid #ef4444; }
-        .level-HIGH { background: linear-gradient(90deg, #431407 0%, #9a3412 100%); border-left: 5px solid #f97316; }
-        .level-ELEVATED { background: linear-gradient(90deg, #422006 0%, #854d0e 100%); border-left: 5px solid #eab308; }
-        .level-MODERATE { background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%); border-left: 5px solid #3b82f6; }
+        @keyframes pulseBackground { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         
         .flash-source {
             font-family: 'Courier New', monospace;
             font-weight: bold;
             font-size: 11px;
             letter-spacing: 1.5px;
-            color: #cbd5e1;
+            color: #fca5a5;
             margin-bottom: 4px;
         }
         .flash-title {
             font-size: 15px;
-            font-weight: 700;
+            font-weight: 800;
             line-height: 1.3;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
         .flash-arrow {
             font-size: 20px;
-            opacity: 0.7;
+            opacity: 0.9;
             margin-left: 15px;
         }
-        .flash-bar:hover .flash-arrow { opacity: 1; color: #ffffff; }
     </style>
     
     <div class="flash-container">
@@ -212,14 +214,11 @@ def render_flash_alert():
         source = alert.get('source', 'UNKNOWN SOURCE').upper()
         title = alert.get('title', 'Intelligence Update Available')
         url = alert.get('url', '#')
-        threat = alert.get('threat_level', 'MODERATE').upper()
-        
-        # Ensure fallback for unexpected threat strings
-        if threat not in ['CRITICAL', 'HIGH', 'ELEVATED']:
-            threat = 'MODERATE'
+        threat = alert.get('threat_level', 'CRITICAL').upper()
 
+        # The CSS class logic is removed since the .flash-bar itself handles the red pulsing now
         html_code += f"""
-        <a href="{url}" target="_blank" class="flash-bar level-{threat}">
+        <a href="{url}" target="_blank" class="flash-bar">
             <div>
                 <div class="flash-source">[{source}] // THREAT: {threat}</div>
                 <div class="flash-title">{title}</div>
