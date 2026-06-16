@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Donald Trump is in France for the G7 summit, where he has me...",
+        "Summary": "Donald Trump is in France for the G7 summit, where he has met with the emir of Qatar, a key mediator in peace talks with Iran.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/SkyNews/status/2066825812746060285"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Trump slams $300 billion payment to Iran as \u2018fake news\u2019",
+        "Summary": "Trump slams $300 billion payment to Iran as \u2018fake news\u2019",
+        "Risk": "HIGH",
+        "Source": "https://www.albawaba.com/business/trump-slams-300-billion-payment-iran-1630380"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran",
+        "Action": "Announced interim peace deal, Strait of Hormuz risks persist.",
+        "Location": "Middle East, Strait of Hormuz, Gulf of Aden",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Taiwan, China",
+        "Action": "Taiwan boosts defense; China deploys new naval supergun.",
+        "Location": "Taiwan Strait, South China Sea",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Anthropic",
+        "Action": "US export controls suspend top AI models.",
+        "Location": "United States, Global Tech Industry",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "SpaceX",
+        "Action": "Achieves $2 trillion valuation on Nasdaq debut.",
+        "Location": "Global Space & Financial Markets",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "South Korea",
+        "Action": "Faces hard dependencies for critical mineral supply.",
+        "Location": "South Korea, Global Supply Chains",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "France, Britain and Other Countries Say They\u2019ll Send Ships t...",
         "Summary": "France, Britain and Other Countries Say They\u2019ll Send Ships to the Strait of Hormuz",
         "Risk": "HIGH",
@@ -31,13 +86,6 @@
         "Actor": "Unknown entities",
         "Action": "Armed skiffs attack commercial vessels near Yemen.",
         "Location": "Gulf of Aden, off Yemen/Oman",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Taiwan, China",
-        "Action": "Taiwan boosts defense; China deploys new naval supergun.",
-        "Location": "Taiwan Strait",
         "Risk": "CRITICAL"
     },
     {
@@ -149,50 +197,5 @@
         "Action": "Agreed to halt war, reopen Hormuz",
         "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unknown",
-        "Action": "Tanker, container vessels attacked near Yemen",
-        "Location": "Off Yemen, Gulf of Aden",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United Kingdom, European Union",
-        "Action": "Imposed sanctions on Russian 'shadow fleet'",
-        "Location": "Global Maritime (targeting Russia)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "US Army",
-        "Action": "Deploys Typhon missile systems to Japan",
-        "Location": "Southern Japan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Anthropic, United States",
-        "Action": "Suspends AI models due to US export controls",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "China",
-        "Action": "Increases control over Indonesian nickel resources",
-        "Location": "Halmahera, Indonesia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran\u2019s Negotiating Team Adhere Strictly to Framework Set by ...",
-        "Summary": "Iran\u2019s Negotiating Team Adhere Strictly to Framework Set by Leader: President",
-        "Risk": "HIGH",
-        "Source": "https://www.tasnimnews.ir/en/news/2026/06/16/3618521/iran-s-negotiating-team-adhere-strictly-to-framework-set-by-leader-president"
     }
 ]
