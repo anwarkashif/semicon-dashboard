@@ -109,18 +109,36 @@ def get_hot_actors(df_actions):
 def render_flash_alert():
     flash_path = 'data/flash_alert.json'
     
+    # --- Sleek Fallback UI ---
+    fallback_html = """
+    <style>
+        .flash-container { margin-bottom: 25px; font-family: system-ui, -apple-system, sans-serif; }
+        .flash-header { color: #ef4444; font-size: 1.2em; font-weight: 900; letter-spacing: 2px; margin-bottom: 15px; display: flex; align-items: center; }
+        .flash-header span { animation: blinkText 1.5s infinite; }
+        @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .flash-placeholder { background: rgba(17, 24, 39, 0.6); border: 1px dashed #374151; border-left: 5px solid #374151; padding: 20px; border-radius: 6px; color: #9ca3af; font-family: 'Courier New', monospace; font-size: 13px; letter-spacing: 1px; }
+    </style>
+    <div class="flash-container">
+        <div class="flash-header"><span>🚨 EXECUTIVE OSINT FLASH ALERTS</span></div>
+        <div class="flash-placeholder">📡 STANDBY: Awaiting initial flash telemetry payload from global OSINT nodes...</div>
+    </div>
+    """
+
     # Check if the automated file exists
     if not os.path.exists(flash_path):
+        components.html(fallback_html, height=120)
         return
 
     try:
         with open(flash_path, 'r') as f:
             alerts = json.load(f)
     except:
+        components.html(fallback_html, height=120)
         return
 
-    # Skip rendering if empty
+    # Skip rendering if empty or invalid
     if not alerts or not isinstance(alerts, list):
+        components.html(fallback_html, height=120)
         return
 
     html_code = """
@@ -213,8 +231,7 @@ def render_flash_alert():
     html_code += "</div>"
     
     # Render the interactive block
-    st.components.v1.html(html_code, height=380)
-
+    components.html(html_code, height=380)
 # ==========================================
 # 3. DYNAMIC GEOCODING ENGINE
 # ==========================================
