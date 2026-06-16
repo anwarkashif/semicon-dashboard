@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran and Oman reaffirm commitment to free navigation through...",
+        "Summary": "Iran and Oman reaffirm commitment to free navigation through Hormuz",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-and-oman-reaffirm-commitment-free-navigation-through-hormuz"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The head coach of Iran\u2019s football team said his players were...",
+        "Summary": "The head coach of Iran\u2019s football team said his players were being 'oppressed' after they were unexpectedly told to return to Mexico straight after their opening game in Los Angeles.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/FT/status/2066930667519139995"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran",
+        "Action": "Agree interim peace deal; Hormuz reopens.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "China",
+        "Action": "Deploys naval supergun targeting Taiwan shores.",
+        "Location": "Taiwan Strait, Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Anthropic (US Company)",
+        "Action": "Suspends top AI models due to export controls.",
+        "Location": "United States, Global AI market",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unidentified Actors",
+        "Action": "Armed boats attack two commercial ships.",
+        "Location": "Gulf of Aden, Yemen",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States (Pentagon)",
+        "Action": "Commits $500M for rare earth plant.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Ukraine",
+        "Action": "Drone strike hits Moscow region refinery.",
+        "Location": "Moscow Region, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Happening now: Is the special relationship between the U.S. ...",
         "Summary": "Happening now: Is the special relationship between the U.S. and Israel over? Joshua Leifer, a columnist for @haaretzcom, joins FP Live to discuss the alliance\u2019s future after the Iran war. Join the conversation here:",
         "Risk": "HIGH",
@@ -90,13 +152,6 @@
     },
     {
         "Date": "2026-06-16",
-        "Actor": "Unidentified Maritime Actors",
-        "Action": "Armed boats attack two commercial ships.",
-        "Location": "Gulf of Aden, Yemen",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
         "Actor": "China",
         "Action": "Deploys new naval supergun near Taiwan.",
         "Location": "Taiwan Strait",
@@ -142,57 +197,5 @@
         "Summary": "Qatar FM: hopeful about signing of Iran-US deal, warns disagreements will not be solved in \u2018mere days\u2019",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/qatar-fm-hopeful-about-signing-iran-us-deal-warns-disagreements-will-not"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Announce interim peace deal, open Strait of Hormuz.",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unidentified (likely Houthi-aligned)",
-        "Action": "Armed skiffs attack merchant vessels off Yemen.",
-        "Location": "Gulf of Aden, Yemen",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Ukraine",
-        "Action": "Drone strike hits Moscow region oil refinery.",
-        "Location": "Moscow Region, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Taiwan, China",
-        "Action": "Taiwan boosts defense; China develops naval supergun.",
-        "Location": "Taiwan Strait, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Anthropic (US government)",
-        "Action": "Suspends AI models after US export-control order.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United Kingdom",
-        "Action": "UK charges Russian shadow fleet tanker captain.",
-        "Location": "United Kingdom",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "London synagogue reported to Charity Commission over Israeli...",
-        "Summary": "London synagogue reported to Charity Commission over Israeli settlement real estate event",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/news/london-synagogue-reported-charity-commission-over-settlement-real-estate-event"
     }
 ]
