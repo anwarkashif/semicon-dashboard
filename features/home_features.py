@@ -210,13 +210,13 @@ def render_flash_alert():
         <div class="flash-header"><span>🚨 EXECUTIVE OSINT FLASH ALERTS</span></div>
     """
 
-    for alert in alerts:
+    # 🛑 SLICING TO ONLY 3 ALERTS FOR EXECUTIVE DASHBOARD
+    for alert in alerts[:3]:
         source = alert.get('source', 'UNKNOWN SOURCE').upper()
         title = alert.get('title', 'Intelligence Update Available')
         url = alert.get('url', '#')
         threat = alert.get('threat_level', 'CRITICAL').upper()
 
-        # The CSS class logic is removed since the .flash-bar itself handles the red pulsing now
         html_code += f"""
         <a href="{url}" target="_blank" class="flash-bar">
             <div>
@@ -229,7 +229,6 @@ def render_flash_alert():
         
     html_code += "</div>"
     
-    # Render the interactive block (Reduced height to remove the massive gap)
     components.html(html_code, height=270)
 # ==========================================
 # 3. DYNAMIC GEOCODING ENGINE

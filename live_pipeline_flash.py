@@ -6,7 +6,7 @@ import requests
 import feedparser
 from google import genai
 
-# Use the specific new key for Flash Alerts
+# Using the designated key for the new 10-item extraction
 GEMINI_API_KEY = os.environ.get("RAG_GEMINI_API_KEY_5")
 if not GEMINI_API_KEY:
     print("Error: RAG_GEMINI_API_KEY_5 environment variable not set.")
@@ -14,7 +14,6 @@ if not GEMINI_API_KEY:
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
-# Exact headers needed to bypass standard firewall blocks
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
     'Accept': 'application/json, text/plain, */*',
@@ -38,7 +37,7 @@ def robust_gemini_call(prompt, task_name="Generation"):
                 error_msg = str(e)
                 print(f"⚠️ API Error on {model_name} (Attempt {attempt + 1}/2): {error_msg}")
                 if '429' in error_msg or 'Quota' in error_msg or 'RESOURCE_EXHAUSTED' in error_msg:
-                    print(f"🚫 Hard Quota Limit hit for {model_name}. Cascading to fallback model...")
+                    print(f"🚫 Hard Quota Limit hit for {model_name}. Cascading to fallback...")
                     break 
                 time.sleep(5)
     raise Exception(f"❌ FATAL: All Gemini models failed for {task_name}.")
@@ -46,7 +45,7 @@ def robust_gemini_call(prompt, task_name="Generation"):
 def extract_monitor_the_situation():
     print("🌍 Siphoning from Monitor The Situation API...")
     url = "https://monitor-the-situation.com/api/events"
-    params = {"range": "6h", "feed": "live"}
+    params = {"range": "12h", "feed": "live"}
     local_headers = HEADERS.copy()
     local_headers['Referer'] = 'https://monitor-the-situation.com/'
     
@@ -55,7 +54,7 @@ def extract_monitor_the_situation():
         if res.status_code == 200:
             events = res.json()
             extracted = ""
-            for e in events[:5]:
+            for e in events[:15]:  # Pulling extra to ensure Gemini has enough to pick 10
                 extracted += f"TITLE: {e.get('title')}\nURL: https://monitor-the-situation.com/\n\n"
             return "\n--- MONITOR THE SITUATION ---\n" + extracted
     except Exception as e:
@@ -65,7 +64,7 @@ def extract_monitor_the_situation():
 def extract_war_monitor():
     print("🌍 Siphoning from War Monitor API...")
     url = "https://api.war-monitor.com/api/events"
-    params = {"page": "1", "limit": "5", "fresh_hours": "168"}
+    params = {"page": "1", "limit": "15", "fresh_hours": "168"}
     local_headers = HEADERS.copy()
     local_headers['Origin'] = 'https://war-monitor.com'
     local_headers['Referer'] = 'https://war-monitor.com/'
@@ -75,7 +74,7 @@ def extract_war_monitor():
         if res.status_code == 200:
             events = res.json().get('data', [])
             extracted = ""
-            for e in events[:5]:
+            for e in events[:15]:
                 extracted += f"TITLE: {e.get('title')}\nURL: https://war-monitor.com/events\n\n"
             return "\n--- WAR MONITOR ---\n" + extracted
     except Exception as e:
@@ -90,7 +89,7 @@ def extract_cisa():
         if res.status_code == 200:
             feed = feedparser.parse(res.text)
             extracted = ""
-            for entry in feed.entries[:5]:
+            for entry in feed.entries[:15]:
                 extracted += f"TITLE: {entry.title}\nURL: {entry.link}\n\n"
             return "\n--- CISA (GLOBAL CYBER THREATS) ---\n" + extracted
     except Exception as e:
@@ -105,16 +104,19 @@ def fetch_and_evaluate_flash_alerts():
 
     prompt = f"""
     You are an OSINT Intelligence Router. Review the following raw feeds from 3 intelligence providers.
-    For EACH of the 3 providers, select the SINGLE MOST CRITICAL geopolitical, cyber, or defense-related headline.
+    Select EXACTLY 10 distinct, critical geopolitical, cyber, or defense-related headlines across ALL providers combined.
     
-    CRITICAL RULE: You MUST use the EXACT title and EXACT URL provided in the text. Do not invent links.
+    CRITICAL INSTRUCTIONS:
+    1. You MUST return exactly 10 objects in the JSON array. Not 3. Not 5. Exactly 10.
+    2. You MUST use the EXACT title and EXACT URL provided in the text. Do not invent links.
     
     Assign a Threat Level to each selected article based on its severity:
-    - CRITICAL (Red alert)
-    - HIGH (Orange alert)
-    - ELEVATED (Yellow alert)
+    - CRITICAL
+    - HIGH
+    - ELEVATED
+    - WATCH
     
-    Output a raw JSON array of 3 objects (one for each source). Do not use markdown.
+    Output a raw JSON array of EXACTLY 10 objects. Do not use markdown.
     Format exactly like this:
     [
       {{
@@ -123,18 +125,7 @@ def fetch_and_evaluate_flash_alerts():
         "url": "Exact Article URL",
         "threat_level": "CRITICAL"
       }},
-      {{
-        "source": "WAR MONITOR",
-        "title": "Exact Article Title",
-        "url": "Exact Article URL",
-        "threat_level": "CRITICAL"
-      }},
-      {{
-        "source": "CISA",
-        "title": "Exact Article Title",
-        "url": "Exact Article URL",
-        "threat_level": "CRITICAL"
-      }}
+      ... (9 more objects)
     ]
     
     Raw Data:
