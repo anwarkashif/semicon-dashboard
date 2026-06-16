@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "France, Britain and Other Countries Say They\u2019ll Send Ships t...",
+        "Summary": "France, Britain and Other Countries Say They\u2019ll Send Ships to the Strait of Hormuz",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/16/world/europe/europe-strait-of-hormuz-iran-security.html"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran, US reach peace deal to halt Mideast war, reopen Hormuz",
+        "Summary": "Iran, US reach peace deal to halt Mideast war, reopen Hormuz",
+        "Risk": "HIGH",
+        "Source": "https://x.com/DailySabah/status/2066809315684479412"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Iran",
+        "Action": "Sign interim peace deal, Hormuz transit uncertain.",
+        "Location": "Strait of Hormuz, Persian Gulf",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unknown entities",
+        "Action": "Armed skiffs attack commercial vessels near Yemen.",
+        "Location": "Gulf of Aden, off Yemen/Oman",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Taiwan, China",
+        "Action": "Taiwan boosts defense; China deploys new naval supergun.",
+        "Location": "Taiwan Strait",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "United States, Anthropic",
+        "Action": "Imposes export controls on Anthropic's top AI models.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "G7, EU, China",
+        "Action": "G7/EU secure critical minerals; China controls chokepoints.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "European Union, United Kingdom, Russia",
+        "Action": "Sanction Russia's 'shadow fleet' and LNG tankers.",
+        "Location": "Global maritime routes",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israel's former defence minister compares settler ideology t...",
         "Summary": "Israel's former defence minister compares settler ideology to Nazism",
         "Risk": "HIGH",
@@ -132,67 +194,5 @@
         "Summary": "Iran\u2019s Negotiating Team Adhere Strictly to Framework Set by Leader: President",
         "Risk": "HIGH",
         "Source": "https://www.tasnimnews.ir/en/news/2026/06/16/3618521/iran-s-negotiating-team-adhere-strictly-to-framework-set-by-leader-president"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "JD Vance says US-Iran deal \u2018very general\u2019 with many details ...",
-        "Summary": "JD Vance says US-Iran deal \u2018very general\u2019 with many details yet to be negotiated \u2013 Middle East crisis live",
-        "Risk": "HIGH",
-        "Source": "https://www.theguardian.com/world/live/2026/jun/16/iran-us-deal-trump-vance-strait-hormuz-israel-lebanon-middle-east-latest-news-updates"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "US, Iran",
-        "Action": "Agree to halt war, reopen Hormuz.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Anthropic, United States",
-        "Action": "Suspends AI models on US export order.",
-        "Location": "Global AI Sector",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "TSMC",
-        "Action": "CEO concerned about water, talent shortages.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, China, Russia",
-        "Action": "Senators propose Arctic spy ship ban.",
-        "Location": "Arctic, Alaska",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "China, Indonesia",
-        "Action": "Chinese companies expanding nickel resource control.",
-        "Location": "Indonesia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Taiwan",
-        "Action": "President commits to increased defense spending.",
-        "Location": "Taiwan",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The Bank of Japan raised interest rates to a 31-year high, m...",
-        "Summary": "The Bank of Japan raised interest rates to a 31-year high, marking another landmark step in normalizing monetary policy as it focused on taming price pressures from the energy shock caused by the \u200cIran war",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2066761814847693169"
     }
 ]
