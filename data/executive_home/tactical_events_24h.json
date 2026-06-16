@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "The Bank of Japan raised interest rates to a 31-year high, m...",
+        "Summary": "The Bank of Japan raised interest rates to a 31-year high, marking another landmark step in normalizing monetary policy as it focused on taming price pressures from the energy shock caused by the \u200cIran war",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2066761814847693169"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Investigation alleges European trade helps sustain Israeli s...",
+        "Summary": "Investigation alleges European trade helps sustain Israeli settlements",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/investigation-alleges-european-trade-helps-sustain-israeli-settlements"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "US, Iran",
+        "Action": "US, Iran agree peace, reopen Hormuz",
+        "Location": "West Asia, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Unknown",
+        "Action": "Armed skiffs attack commercial vessels off Yemen",
+        "Location": "Gulf of Aden, off Yemen/Oman",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "UK, EU",
+        "Action": "UK seizes Russian tanker, EU sanctions shipping",
+        "Location": "UK, Europe, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "China, G7",
+        "Action": "Chinese exports surge, G7 fears Europe's economy",
+        "Location": "China, Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "UK, Rapidus (Japan)",
+        "Action": "UK, Rapidus partner for 2nm chip access",
+        "Location": "UK, Japan",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-16",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "&#039;The mullahs&#039; team&#039;: Split loyalties for Iran...",
         "Summary": "&#039;The mullahs&#039; team&#039;: Split loyalties for Iran fans at World Cup",
         "Risk": "HIGH",
@@ -142,60 +197,5 @@
         "Action": "Suspends AI models after export control order",
         "Location": "United States",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unknown (Skiffs/Attackers)",
-        "Action": "Attack container vessel and tanker",
-        "Location": "Gulf of Aden, Oman, Yemen",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "China",
-        "Action": "Retail sales drop, industrial output slows",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Rapidus (Japan), Fondazione Chips-IT (Italy)",
-        "Action": "Sign MoU for 2nm semiconductor manufacturing",
-        "Location": "Japan, Italy",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iranian Americans protest Iran government ahead of World Cup...",
-        "Summary": "Iranian Americans protest Iran government ahead of World Cup match in LA",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/iranian-americans-protest-iran-government-ahead-world-cup-match-la"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The Race to Land an Iran Deal Loomed Large Behind Trump&#x20...",
-        "Summary": "The Race to Land an Iran Deal Loomed Large Behind Trump&#x2019;s UFC Birthday",
-        "Risk": "HIGH",
-        "Source": "https://www.wsj.com/world/middle-east/trump-iran-peace-deal-how-54988a6e"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Sign interim peace deal, reopening Hormuz.",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Anthropic",
-        "Action": "US export controls halt advanced AI model access.",
-        "Location": "Global (AI/semiconductor industry)",
-        "Risk": "CRITICAL"
     }
 ]
