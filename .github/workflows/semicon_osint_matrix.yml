@@ -8,6 +8,7 @@ on:
       - trigger_memory_layer
       - trigger_shift_brief
       - trigger_psyopoly_siphon
+      - trigger_flash_alert
 
 jobs:
   osint-pipeline-dispatcher:
