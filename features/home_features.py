@@ -229,8 +229,8 @@ def render_flash_alert():
         
     html_code += "</div>"
     
-    # Render the interactive block
-    components.html(html_code, height=380)
+    # Render the interactive block (Reduced height to remove the massive gap)
+    components.html(html_code, height=270)
 # ==========================================
 # 3. DYNAMIC GEOCODING ENGINE
 # ==========================================
