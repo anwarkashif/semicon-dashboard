@@ -6,21 +6,9 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Infrared Lasers for Drone Targeting Recorded in Crimea, Cheboksary, and Ryazan, Russia",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Submarine Attack in Novorossiysk Linked to Security Breach",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Israeli Settlers Set Fire to Mosques in West Bank, Palestine",
-        "url": "https://monitor-the-situation.com/",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "CRITICAL"
     },
     {
@@ -30,26 +18,26 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "CRITICAL"
+        "source": "MONITOR THE SITUATION",
+        "title": "Israeli Settlers Set Fire to Mosques in West Bank, Palestine",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Satellite Imagery Shows 7000 Acres of Coral Reef Destroyed in South China Sea",
+        "title": "Ukraine Uses Infrared Lasers for Drone Targeting Across Multiple Russian Cities",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Ukrainian Submarine Attack in Novorossiysk Linked to Security Breach",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Trump backs G7 leaders\u2019 call for wider talks on Iranian missile programme",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "From supply shock to oil glut: IEA flags scale of demand destruction caused by Iran war",
+        "title": "Mark Rutte says Nato needs \u2018more forces, more resources\u2019 ahead of defence ministers meeting\u2013 Europe live",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
@@ -58,5 +46,17 @@
         "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "AI and tech sovereignty top last day of G7 summit in Evian",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "ELEVATED"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Iran Planning to Purchase Over 100 Boeing Aircraft From US Under Agreement",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
     }
 ]
