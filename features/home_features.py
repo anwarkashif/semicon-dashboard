@@ -119,8 +119,8 @@ def render_flash_alert():
         .flash-placeholder { background: rgba(17, 24, 39, 0.6); border: 1px dashed #374151; border-left: 5px solid #374151; padding: 20px; border-radius: 6px; color: #9ca3af; font-family: 'Courier New', monospace; font-size: 13px; letter-spacing: 1px; }
     </style>
     <div class="flash-container">
-        <div class="flash-header"><span>🚨 EXECUTIVE OSINT FLASH ALERTS</span></div>
-        <div class="flash-placeholder">📡 STANDBY: Awaiting initial flash telemetry payload from global OSINT nodes...</div>
+        <div class="flash-header"><span>🚨 EXECUTIVE GEOPOLITICS-OSINT FLASH ALERTS</span></div>
+        <div class="flash-placeholder">📡 STANDBY: Awaiting initial flash telemetry payload from global Geopolitics-OSINT nodes...</div>
     </div>
     """
 
@@ -207,11 +207,33 @@ def render_flash_alert():
     </style>
     
     <div class="flash-container">
-        <div class="flash-header"><span>🚨 EXECUTIVE OSINT FLASH ALERTS</span></div>
+        <div class="flash-header"><span>🚨 EXECUTIVE GEOPOLITICS-OSINT FLASH ALERTS</span></div>
     """
 
-    # 🛑 SLICING TO ONLY 3 ALERTS FOR EXECUTIVE DASHBOARD
-    for alert in alerts[:3]:
+    # 🛑 SMART ROUTING: Extract exactly 1 from each unique source, max 3
+    display_alerts = []
+    seen_sources = set()
+    
+    # First Pass: Try to grab 3 uniquely sourced items
+    for alert in alerts:
+        src = alert.get('source', 'UNKNOWN SOURCE').upper()
+        if src not in seen_sources:
+            display_alerts.append(alert)
+            seen_sources.add(src)
+        if len(display_alerts) == 3:
+            break
+            
+    # Fallback: If the API somehow provided 10 items but only from 1 or 2 sources,
+    # fill the remaining slots up to 3 so the dashboard isn't empty.
+    if len(display_alerts) < 3:
+        for alert in alerts:
+            if alert not in display_alerts:
+                display_alerts.append(alert)
+            if len(display_alerts) == 3:
+                break
+
+    # Build the HTML for the final filtered list
+    for alert in display_alerts:
         source = alert.get('source', 'UNKNOWN SOURCE').upper()
         title = alert.get('title', 'Intelligence Update Available')
         url = alert.get('url', '#')
