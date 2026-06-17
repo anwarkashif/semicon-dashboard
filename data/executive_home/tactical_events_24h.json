@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Diluting uranium, oil sales: What's in the draft US-Iran dea...",
+        "Summary": "Diluting uranium, oil sales: What's in the draft US-Iran deal?",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/middle-east/20260617-diluting-uranium-oil-sales-what-draft-us-iran-deal"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "U.S. officials are scheduled to sign a deal Friday to end th...",
+        "Summary": "U.S. officials are scheduled to sign a deal Friday to end the war in Iran, but even if it is agreed as planned the world may suffer high gas prices and shortages of fertilizer and other crucial cargo for months longer.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/washingtonpost/status/2067321429117255901"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States, Iran",
+        "Action": "Finalizing peace deal, reopening Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "G7 Nations",
+        "Action": "Launch alliance to reduce China mineral dependence.",
+        "Location": "Global (targeting China's supply chain dominance)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Poland, United States",
+        "Action": "Poland offers permanent US military base.",
+        "Location": "Poland, Eastern Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Intel",
+        "Action": "Expands 18A platform, boosts advanced chip manufacturing.",
+        "Location": "Global (Semiconductor Manufacturing)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States (Pentagon)",
+        "Action": "Reinstates 'Indo-Pacific' command name, reaffirms focus.",
+        "Location": "Indo-Pacific Region",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "'If I don't like it, we'll go back to shooting at them, drop...",
         "Summary": "'If I don't like it, we'll go back to shooting at them, dropping bombs on their head,' US President Donald Trump said, adding that his deal with Iran is not final",
         "Risk": "HIGH",
@@ -142,57 +197,5 @@
         "Summary": "While Trump hails Gulf oil flowing, Iran&#039;s fleet also gearing up to boost exports",
         "Risk": "HIGH",
         "Source": "https://www.al-monitor.com/originals/2026/06/while-trump-hails-gulf-oil-flowing-irans-fleet-also-gearing-boost-exports"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Iran, United States",
-        "Action": "Strait of Hormuz reopens, Iran to sell oil",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "G7",
-        "Action": "Establishes critical minerals alliance and stockpiles",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "G7",
-        "Action": "Unites on Ukraine support, plans stronger Russia sanctions",
-        "Location": "Ukraine, Russia, Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "China, India",
-        "Action": "Chinese surveillance cameras pose problem for India",
-        "Location": "India",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Israel, United States",
-        "Action": "Israel plans to insulate security from US",
-        "Location": "Israel, United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "China",
-        "Action": "Advances quantum security efforts with Wukong",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Despite agreement, G7 looks to decrease Strait of Hormuz rel...",
-        "Summary": "Despite agreement, G7 looks to decrease Strait of Hormuz reliance",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/despite-agreement-g7-looks-to-decrease-strait-of-hormuz-reliance"
     }
 ]
