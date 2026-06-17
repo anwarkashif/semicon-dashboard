@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "FRANCE 24 Exclusive: what Strait of Hormuz locals think of t...",
+        "Summary": "FRANCE 24 Exclusive: what Strait of Hormuz locals think of the Iran-US deal",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/france-24-exclusive-what-strait-of-hormuz-locals-think-of-the-iran-us-deal"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "HRW Warns of Surging Home Demolitions, Evictions in al-Quds",
+        "Summary": "HRW Warns of Surging Home Demolitions, Evictions in al-Quds",
+        "Risk": "HIGH",
+        "Source": "https://www.tasnimnews.ir/en/news/2026/06/17/3619969/hrw-warns-of-surging-home-demolitions-evictions-in-al-quds"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States, Iran",
+        "Action": "US lifts sanctions, Iran reopens Hormuz.",
+        "Location": "Strait of Hormuz, Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "G7",
+        "Action": "Leaders plan stronger sanctions on Russia.",
+        "Location": "Russia, Ukraine",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "G7, United States",
+        "Action": "G7 plans action, US funds rare earth.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Taiwan, China",
+        "Action": "Taiwan reports increased Chinese pressure as \"new normal.\"",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Intel Foundry, United States",
+        "Action": "Intel expands 18A; US awards CHIPS.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "LATEST \u2014 President Donald Trump denies US-Iran peace deal in...",
         "Summary": "LATEST \u2014 President Donald Trump denies US-Iran peace deal includes $300 billion fund, claims Washington not investing 10 cents",
         "Risk": "HIGH",
@@ -142,57 +197,5 @@
         "Summary": "Germany is preparing for a possible mission to help safeguard shipping in the Strait of Hormuz, with naval units already on standby. Chancellor Friedrich Merz said no final decision has been made.",
         "Risk": "HIGH",
         "Source": "https://x.com/euronews/status/2067183703395057891"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Iran",
-        "Action": "Iran announces Strait of Hormuz closure amid attacks.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States, Iran",
-        "Action": "US to lift Iranian oil sanctions under new deal.",
-        "Location": "Iran, Middle East",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "G7 nations",
-        "Action": "G7 unites on Ukraine support, plans Russia sanctions.",
-        "Location": "Ukraine, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States (Pentagon)",
-        "Action": "Pentagon grants $500M for US rare earth refinery.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Indonesia, Brazil",
-        "Action": "Nations partner for semiconductor workforce development.",
-        "Location": "Indonesia, Brazil",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "China (Alibaba)",
-        "Action": "Alibaba unveils new AI robot foundation models.",
-        "Location": "China",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Kamala Harris said on Tuesday she would \u201cabsolutely not\u201d hav...",
-        "Summary": "Kamala Harris said on Tuesday she would \u201cabsolutely not\u201d have started a war with Iran if she had been president and voiced skepticism about the agreement aimed at ending the conflict.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/euronews/status/2067172917519983104"
     }
 ]
