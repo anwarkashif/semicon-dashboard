@@ -6,27 +6,39 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "US Official Says Understandings With Iran Trump Actual Document",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
+        "source": "WAR MONITOR",
+        "title": "Smotrich says Israel taking control of Hebron",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
         "title": "US Southern Command Strikes Terrorist Vessel in Caribbean Sea",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/16/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Bloomberg Reports Interim Deal Has Unclear Nuclear and Shipping Details",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "UN reports decline in cross-border fire in southern Lebanon",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "ELEVATED"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Smotrich says Israel taking control of Hebron",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "US Official Says Understandings With Iran Trump Actual Document",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
@@ -37,26 +49,14 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Why Ukraine could now have fresh hope of vital US support",
+        "title": "Commercial Technology Infrastructure Emerges as a Modern Conflict Target - Crisis24",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-        "threat_level": "CRITICAL"
+        "source": "WAR MONITOR",
+        "title": "Why Ukraine could now have fresh hope of vital US support",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
     }
 ]
