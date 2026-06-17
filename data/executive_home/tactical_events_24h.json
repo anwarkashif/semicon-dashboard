@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "'If I don't like it, we'll go back to shooting at them, drop...",
+        "Summary": "'If I don't like it, we'll go back to shooting at them, dropping bombs on their head,' US President Donald Trump said, adding that his deal with Iran is not final",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2067303762050646270"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "US official says parties can still walk away from Iran deal,...",
+        "Summary": "US official says parties can still walk away from Iran deal, sequencing will be key",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2067303843688337615"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States, Iran",
+        "Action": "US-Iran sign provisional peace agreement.",
+        "Location": "West Asia (Strait of Hormuz)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "G7 Nations",
+        "Action": "Forms alliance for critical mineral supply.",
+        "Location": "Global (targeting China)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "China",
+        "Action": "Continues significant military and nuclear buildup.",
+        "Location": "Global (Indo-Pacific)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States, Israel, Iran",
+        "Action": "Conduct cyberattacks targeting space infrastructure.",
+        "Location": "Global (space domain)",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "UAE",
+        "Action": "Seeks to zero-out Strait of Hormuz dependency.",
+        "Location": "UAE, Strait of Hormuz",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Intel",
+        "Action": "Expands advanced 18A semiconductor manufacturing platform.",
+        "Location": "Global (semiconductor industry)",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Trump says Netanyahu could use 'softer touch' in Lebanon",
         "Summary": "Trump says Netanyahu could use 'softer touch' in Lebanon",
         "Risk": "HIGH",
@@ -132,70 +194,5 @@
         "Summary": "Despite agreement, G7 looks to decrease Strait of Hormuz reliance",
         "Risk": "HIGH",
         "Source": "https://www.france24.com/en/despite-agreement-g7-looks-to-decrease-strait-of-hormuz-reliance"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Five soldiers were injured by a drone strike in southern Leb...",
-        "Summary": "Five soldiers were injured by a drone strike in southern Lebanon, one of them in serious condition",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Haaretz/status/2067247353237557319"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States, Iran, G7",
-        "Action": "Agrees ceasefire, reopens Strait of Hormuz.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "G7 Nations",
-        "Action": "Establishes alliance to reduce China mineral dependence.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States (Pentagon)",
-        "Action": "Funds domestic rare earth \"Freedom Facility\".",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Intel Foundry",
-        "Action": "Expands 18A platform, demonstrating technology leadership.",
-        "Location": "Global (semiconductor industry)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "FRANCE 24 Exclusive: what Strait of Hormuz locals think of t...",
-        "Summary": "FRANCE 24 Exclusive: what Strait of Hormuz locals think of the Iran-US deal",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/france-24-exclusive-what-strait-of-hormuz-locals-think-of-the-iran-us-deal"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "HRW Warns of Surging Home Demolitions, Evictions in al-Quds",
-        "Summary": "HRW Warns of Surging Home Demolitions, Evictions in al-Quds",
-        "Risk": "HIGH",
-        "Source": "https://www.tasnimnews.ir/en/news/2026/06/17/3619969/hrw-warns-of-surging-home-demolitions-evictions-in-al-quds"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States, Iran",
-        "Action": "US lifts sanctions, Iran reopens Hormuz.",
-        "Location": "Strait of Hormuz, Iran",
-        "Risk": "CRITICAL"
     }
 ]
