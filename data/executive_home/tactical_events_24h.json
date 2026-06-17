@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "#Lighting | In Iran, did the war generate a new Islamic Repu...",
+        "Summary": "#Lighting | In Iran, did the war generate a new Islamic Republic? @Hage_Clara explains to you",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2067109988070457641"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israeli military aggression continues in southern Lebanon de...",
+        "Summary": "Israeli military aggression continues in southern Lebanon despite US-Iran accord",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-military-agression-continues-southern-lebanon-despite-us-iran"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Taiwan",
+        "Action": "Fires Himars missiles towards mainland China",
+        "Location": "Taiwan Strait",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Iran",
+        "Action": "Fires drones at ships nightly",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Trump (United States)",
+        "Action": "Lifts Iranian oil sanctions under new agreement",
+        "Location": "Iran, Global Energy Market",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "G7 Nations",
+        "Action": "Tackle reliance on China for critical minerals",
+        "Location": "Global Supply Chains",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Israel",
+        "Action": "Continues military aggression in southern Lebanon",
+        "Location": "Southern Lebanon",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Trump (United States)",
+        "Action": "Signals swift return of sanctions on Russian oil",
+        "Location": "Russia, Global Energy Market",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israeli forces shoot Palestinian girl during West Bank raid,...",
         "Summary": "Israeli forces shoot Palestinian girl during West Bank raid, Wafa reports",
         "Risk": "HIGH",
@@ -132,67 +194,5 @@
         "Summary": "Macron winds up G7 with AI, Trump dinner",
         "Risk": "HIGH",
         "Source": "https://www.al-monitor.com/originals/2026/06/macron-winds-g7-ai-trump-dinner"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "See Where Iran&#x2019;s Billions of Dollars in Frozen Assets...",
-        "Summary": "See Where Iran&#x2019;s Billions of Dollars in Frozen Assets Are Held",
-        "Risk": "HIGH",
-        "Source": "https://www.wsj.com/world/middle-east/iran-frozen-assets-7e926b39"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States, Iran",
-        "Action": "Sign preliminary peace deal, lift oil sanctions.",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Unidentified Non-State Actors",
-        "Action": "Attack commercial vessels in critical chokepoints.",
-        "Location": "Gulf of Aden, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States (Pentagon)",
-        "Action": "Funds rare earth refining facility for security.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Semiconductor Industry",
-        "Action": "Debuts new High-NA Lithography system.",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "South Korea",
-        "Action": "Considers building nuclear submarines.",
-        "Location": "South Korea, Northeast Asia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Japan",
-        "Action": "Develops homegrown defense export system.",
-        "Location": "Japan",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Vance says US has fundamentally changed Middle East with Ira...",
-        "Summary": "Vance says US has fundamentally changed Middle East with Iran deal",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/vance-says-us-has-fundamentally-changed-middle-east-iran-deal"
     }
 ]
