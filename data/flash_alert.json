@@ -1,12 +1,6 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Minister Warns Drone Strikes Threaten Russian Logistics to Crimea",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
         "title": "G7 Opposes Unilateral Changes to Status Quo in Taiwan Strait",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
@@ -19,14 +13,14 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Missile Strike Kills Five Emergency Responders in Kharkiv, Ukraine",
+        "title": "US President Trump Investigates Strike on Iranian School",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Russian artist who criticised Putin is shot dead",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "Iran to Resume Oil Sales After Agreement Signed This Week",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
@@ -43,20 +37,26 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Russia Supplies Helicopters to Iran",
+        "title": "US Pentagon Used Elon Musk's AI in Operation Epic Fury",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "HIGH"
+        "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+        "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "US Pentagon Used Elon Musk's AI in Operation Epic Fury",
-        "url": "https://war-monitor.com/events",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Minister Warns Drone Strikes Threaten Russian Logistics to Crimea",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     }
 ]
