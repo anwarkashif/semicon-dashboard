@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Despite agreement, G7 looks to decrease Strait of Hormuz rel...",
+        "Summary": "Despite agreement, G7 looks to decrease Strait of Hormuz reliance",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/despite-agreement-g7-looks-to-decrease-strait-of-hormuz-reliance"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Five soldiers were injured by a drone strike in southern Leb...",
+        "Summary": "Five soldiers were injured by a drone strike in southern Lebanon, one of them in serious condition",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2067247353237557319"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States, Iran, G7",
+        "Action": "Agrees ceasefire, reopens Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "G7 Nations",
+        "Action": "Establishes alliance to reduce China mineral dependence.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States (Pentagon)",
+        "Action": "Funds domestic rare earth \"Freedom Facility\".",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Intel Foundry",
+        "Action": "Expands 18A platform, demonstrating technology leadership.",
+        "Location": "Global (semiconductor industry)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Russia",
+        "Action": "Escalates war on Ukrainian heritage, national identity.",
+        "Location": "Ukraine",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "FRANCE 24 Exclusive: what Strait of Hormuz locals think of t...",
         "Summary": "FRANCE 24 Exclusive: what Strait of Hormuz locals think of the Iran-US deal",
         "Risk": "HIGH",
@@ -142,60 +197,5 @@
         "Action": "Closes Strait of Hormuz, disrupting shipping",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States, Iran",
-        "Action": "Announce agreement to resolve regional conflict",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Germany, Poland",
-        "Action": "Sign new defense cooperation agreement",
-        "Location": "Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States (Pentagon), OpenAI",
-        "Action": "Integrates ChatGPT into military AI platform",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Kenya, China",
-        "Action": "Deports Taiwanese delegates, increasing China's influence",
-        "Location": "Kenya",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Indonesia, Brazil",
-        "Action": "Partner to train semiconductor, aerospace specialists",
-        "Location": "Indonesia, Brazil",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Thousands flock back to south Lebanon despite Israeli strike...",
-        "Summary": "Thousands flock back to south Lebanon despite Israeli strikes amid US-Iran deal",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/thousands-flock-back-to-south-lebanon-despite-israeli-strikes-amid-us-iran-deal"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Germany is preparing for a possible mission to help safeguar...",
-        "Summary": "Germany is preparing for a possible mission to help safeguard shipping in the Strait of Hormuz, with naval units already on standby. Chancellor Friedrich Merz said no final decision has been made.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/euronews/status/2067183703395057891"
     }
 ]
