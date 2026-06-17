@@ -3,7 +3,7 @@
         "source": "MONITOR THE SITUATION",
         "title": "Taiwan Fires Precision Rockets From West Coast for First Time in Taichung",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
@@ -18,22 +18,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "US Uses AI to Strike Multiple Targets in Iran",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Taiwan says Chinese pressure over the island is the \"new normal\"",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
         "source": "MONITOR THE SITUATION",
         "title": "Ukraine Launches Counterattacks in Multiple Donbas Locations",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Israeli UN Ambassador Says US-Iran Deal Very Bad for Israel",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "US and G7 to Produce Long-Range Missiles in Ukraine",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
@@ -43,20 +43,20 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Ukrainian Drone Attacks Belarusian Bus",
+        "title": "Taiwan says Chinese pressure over the island is the \"new normal\"",
         "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
+        "threat_level": "ELEVATED"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Naxclow IoT Platform",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-162-02",
-        "threat_level": "HIGH"
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/16/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "ELEVATED"
     }
 ]
