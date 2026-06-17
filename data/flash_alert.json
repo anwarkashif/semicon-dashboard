@@ -7,37 +7,13 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Strikes Russian Shadow Fleet Tanker in Black Sea",
+        "title": "Egyptian Aircraft Strike Gold Mines in Northern Sudan, Killing Miners",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Tehran War Diary: Shooting war at home",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Russia Plans Elections in Occupied Donbas",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "\u2018We don\u2019t want world war three\u2019: yacht couple call for calm after Russian warning shots",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
         "source": "MONITOR THE SITUATION",
-        "title": "Iran Signs Deal for 20 Russian Helicopters in Moscow",
+        "title": "Rosatom Calls for Compromise on Iran Nuclear Program",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -48,15 +24,39 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "threat_level": "HIGH"
+        "source": "WAR MONITOR",
+        "title": "Russian artist and outspoken Putin critic shot dead days after protest",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Israeli settlers set fire to a mosque in the occupied West Bank",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "ISIS Claims Attacks In Syria",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
         "title": "EU Attempts to Establish Informal Channels with Putin Fail",
         "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "threat_level": "HIGH"
     }
 ]
