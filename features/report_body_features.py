@@ -106,44 +106,48 @@ def render_weekly_report_body(dashboard_data, selected_actor, df_actions, MAPBOX
     # ==========================================
     render_tactical_maps(df_actions, selected_actor, MAPBOX_PUBLIC_TOKEN)
 
-    if not df_actions.empty:
+    # ==========================================
+    # 🎯 DIVERSITY & BALANCING ENGINE FOR RECENT ACTIONS
+    # ==========================================
+    # Force the table to pull straight from historical curated data to prevent live feed pollution
+    curated_actions = dashboard_data.get('recent_actions', [])
+    df_curated = clean_dataframe(pd.DataFrame(curated_actions)) if curated_actions else pd.DataFrame()
+
+    if not df_curated.empty:
         st.markdown("##### Recent State Actions")
+        
+        # Apply the actor filter from sidebar if selected
         if selected_actor != "All":
-            display_actions = df_actions[df_actions['Actor'] == selected_actor]
+            display_actions = df_curated[df_curated['Actor'] == selected_actor]
         else:
-            display_actions = df_actions
+            display_actions = df_curated
             
-        # --- FIX: Isolate the Weekly Snapshot from the Live Psyopoly Feed ---
-        # 1. Filter out the Psyopoly data so it doesn't break the frozen weekly context
-        if 'Actor' in display_actions.columns:
-            display_actions = display_actions[display_actions['Actor'] != 'Psyopoly/West Asia']
+        if not display_actions.empty and 'Actor' in display_actions.columns:
+            # Separate high-frequency Psyopoly rows from curated global state actions
+            psy_rows = display_actions[display_actions['Actor'] == 'Psyopoly/West Asia']
+            global_state_rows = display_actions[display_actions['Actor'] != 'Psyopoly/West Asia']
             
-        # 2. Strict limit to top 10 rows to maintain the concise dashboard UI
-        display_actions = display_actions.head(10)
+            # Cap Psyopoly to a maximum of 3 items to preserve layout real estate
+            psy_capped = psy_rows.head(3)
             
-        st.table(display_actions.set_index(display_actions.columns[0]))
+            # Merge datasets putting diverse state actions at the top of the stack
+            balanced_dataframe = pd.concat([global_state_rows, psy_capped], ignore_index=True)
+            
+            # Enforce absolute ceiling of exactly 10 items total
+            final_display_actions = balanced_dataframe.head(10)
+        else:
+            final_display_actions = display_actions.head(10)
+            
+        if not final_display_actions.empty:
+            st.table(final_display_actions.set_index(final_display_actions.columns[0]))
+        else:
+            st.info("No curated state actions matched the selected filters for this weekly cycle.")
         
         # --- HIDDEN FOR NOW: Migrated to Friday's Snippet ---
-        # render_event_correlation_and_timeline_weekly(display_actions)
+        # render_event_correlation_and_timeline_weekly(final_display_actions)
 
     st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Strategic Conclusion</h3>", unsafe_allow_html=True)
     if text_final: render_highlighted_text(text_final, selected_actor)
-
-    # ==========================================
-    # LIVE GLOBAL TELEMETRY 
-    # ==========================================
-    # --- HIDDEN FOR NOW: Migrated to Today's Snippet ---
-    # st.markdown("<h2 style='text-align: center; color: #00bfff; margin-top: 50px; margin-bottom: 10px;'>Live Global Telemetry</h2>", unsafe_allow_html=True)
-    # st.markdown("---")
-
-    # text_sections = [
-    #     text_section_1, text_section_2, text_section_3, 
-    #     text_section_4, text_military, text_section_5, 
-    #     text_india, text_wa
-    # ]
-    
-    # render_24h_live_analytics(dashboard_data, text_sections)
-    # render_live_telemetry()
 
     sources_list = dashboard_data.get('sources', [])
     render_verified_sources(sources_list)
