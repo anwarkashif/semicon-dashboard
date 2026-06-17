@@ -1,6 +1,12 @@
 [
     {
         "source": "MONITOR THE SITUATION",
+        "title": "Amnesty Accuses Israel of War Crime of Unlawful Transfer in Lebanon",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "Civilians Killed in Russian Attacks on Sumy Region",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
@@ -19,19 +25,7 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Iran Allegedly Charges Fee Per Vessel in Omani Waters",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Zelenskyy Confirms Strikes on Russian Territory",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Large Mechanized Attack Repelled in Donetsk Oblast",
+        "title": "Ukraine Downs 97 of 119 Russian Drones in Overnight Attack",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -48,15 +42,21 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "US and Iran sign ceasefire agreement, details remain unclear - Reuters",
-        "url": "https://war-monitor.com/events",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "CRITICAL"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "HIGH"
+        "title": "Siemens KACO Blueplanet Inverters",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-160-02",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Schneider Electric EcoStruxure Panel Server",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-160-03",
+        "threat_level": "CRITICAL"
     }
 ]
