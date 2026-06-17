@@ -113,6 +113,14 @@ def render_weekly_report_body(dashboard_data, selected_actor, df_actions, MAPBOX
         else:
             display_actions = df_actions
             
+        # --- FIX: Isolate the Weekly Snapshot from the Live Psyopoly Feed ---
+        # 1. Filter out the Psyopoly data so it doesn't break the frozen weekly context
+        if 'Actor' in display_actions.columns:
+            display_actions = display_actions[display_actions['Actor'] != 'Psyopoly/West Asia']
+            
+        # 2. Strict limit to top 10 rows to maintain the concise dashboard UI
+        display_actions = display_actions.head(10)
+            
         st.table(display_actions.set_index(display_actions.columns[0]))
         
         # --- HIDDEN FOR NOW: Migrated to Friday's Snippet ---
