@@ -1,5 +1,67 @@
 [
     {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Trump signs US-Iran memorandum of understanding",
+        "Summary": "Trump signs US-Iran memorandum of understanding",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/trump-signs-us-iran-memorandum-understanding"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Trump says partnership with Netanyahu 'amazing', but 'little...",
+        "Summary": "Trump says partnership with Netanyahu 'amazing', but 'little dispute' over Lebanon",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-partnership-netanyahu-amazing-little-dispute-over-lebanon"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States, Iran",
+        "Action": "Signed MoU ending war, opening Strait",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "US-led maritime security group",
+        "Action": "Downgraded Strait of Hormuz threat level",
+        "Location": "Strait of Hormuz",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "G7 nations",
+        "Action": "Launched alliance to reduce China mineral dependence",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "China",
+        "Action": "Expanding naval presence in Pacific, Indian Oceans",
+        "Location": "Pacific Ocean, Indian Ocean",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Amkor, TSMC",
+        "Action": "Deal strengthens US semiconductor supply chain",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Russia",
+        "Action": "Escalates war on Ukrainian heritage, identity",
+        "Location": "Ukraine",
+        "Risk": "HIGH"
+    },
+    {
         "Date": "2026-06-16",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
@@ -135,69 +197,5 @@
         "Action": "Announce peace deal amidst tanker attack",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "TSMC",
-        "Action": "3nm chip capacity tight, prices increasing",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Russia",
-        "Action": "Causing widespread GPS outages via satellite",
-        "Location": "Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "China",
-        "Action": "Growing missile threat to Australia affirmed",
-        "Location": "Australia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "United States",
-        "Action": "F-35 fleet readiness only 25% capable",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israel's military adventures have backfired - and the public...",
-        "Summary": "Israel's military adventures have backfired - and the public is losing patience",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/opinion/israels-military-adventures-have-backfired-and-public-losing-patience"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Netanyahu\u2019s Bow to Trump\u2019s Iran Pressure Spurs New Criticism",
-        "Summary": "Netanyahu\u2019s Bow to Trump\u2019s Iran Pressure Spurs New Criticism",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/2026/06/09/world/middleeast/netanyahus-trump-pressure-over-iran.html"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "US",
-        "Action": "US military helicopter crash, tanker strike near chokepoint.",
-        "Location": "Strait of Hormuz / Gulf of Oman",
-        "Risk": "CRITICAL",
-        "Headline": "US Navy F/A-18 Super Hornet strikes, disables oil tanker in Gulf of Oman / Crew Rescued After US Helicopter Crashes Near Strait of Hormuz"
-    },
-    {
-        "Date": "2026-06-09",
-        "Actor": "Tanker Operators",
-        "Action": "Fire on tanker, crew evacuated off Oman coast.",
-        "Location": "Off Oman's Masirah Island",
-        "Risk": "HIGH",
-        "Headline": "Crew Evacuated After \u2018Suspicious\u2019 Tanker Fire Near Oman\u2019s Masirah Island"
     }
 ]
