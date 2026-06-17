@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Macron winds up G7 with AI, Trump dinner",
+        "Summary": "Macron winds up G7 with AI, Trump dinner",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/macron-winds-g7-ai-trump-dinner"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Vance says US has fundamentally changed Middle East with Ira...",
+        "Summary": "Vance says US has fundamentally changed Middle East with Iran deal",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/vance-says-us-has-fundamentally-changed-middle-east-iran-deal"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States, Iran",
+        "Action": "Sign preliminary deal ending Middle East conflict",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States",
+        "Action": "Immediately lifts all Iranian oil sanctions",
+        "Location": "Global, Iran",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Unidentified belligerents",
+        "Action": "Armed boats attack commercial ships in key chokepoints",
+        "Location": "Gulf of Aden, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States (Trump administration)",
+        "Action": "Prioritizes other issues, sidelines Ukraine war",
+        "Location": "Ukraine, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Semiconductor Industry",
+        "Action": "New High-NA lithography system advances chipmaking",
+        "Location": "Global (semiconductor industry)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "China",
+        "Action": "Supports companies against carbon border taxes",
+        "Location": "China, European Union",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran team must leave US within hours of World Cup matches, o...",
         "Summary": "Iran team must leave US within hours of World Cup matches, official says",
         "Risk": "HIGH",
@@ -135,64 +197,5 @@
         "Action": "Three commercial vessels hit by gunfire",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unidentified belligerents",
-        "Action": "Armed boats attack two commercial ships",
-        "Location": "Gulf of Aden, Yemen",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States",
-        "Action": "Invokes DPA for increased weapons manufacturing",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Europe, China",
-        "Action": "Europe gears for trade fight with China",
-        "Location": "Europe, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Can Hormuz be bypassed? Past shows commercial viability may ...",
-        "Summary": "Can Hormuz be bypassed? Past shows commercial viability may simply not be there, analyst says",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/tv-shows/a-propos/20260616-can-hormuz-be-bypassed-past-shows-commercial-viability-may-simply-not-be-there-analyst-says"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran, Houthi Rebels",
-        "Action": "US lifts Iran sanctions; armed groups attack shipping.",
-        "Location": "Middle East, Gulf of Aden, Red Sea",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Europe, Anthropic",
-        "Action": "US controls AI models, sparking international access disputes.",
-        "Location": "United States, Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States (Pentagon)",
-        "Action": "Funds $500M domestic rare-earth refining facility.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "France, Germany, European defense industry",
-        "Action": "Boosts drone, advanced weapon production and cooperation.",
-        "Location": "Europe",
-        "Risk": "HIGH"
     }
 ]
