@@ -1,49 +1,31 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "US Official Says Understandings With Iran Trump Actual Document",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
         "title": "US Southern Command Strikes Terrorist Vessel in Caribbean Sea",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
+        "source": "WAR MONITOR",
+        "title": "Smotrich says Israel taking control of Hebron",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "MONITOR THE SITUATION",
-        "title": "US Renames Indo-Pacific Command to Pacific Command",
+        "title": "US Official Says Understandings With Iran Trump Actual Document",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Trump Signals Hormuz Deal With Europeans at G7 Summit",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Pope Hopes US-Israel War on Iran Is Over",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
         "title": "U.S. holds off blacklisting China's DeepSeek, more than 100 firms deemed security risks",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Telegram's Durov says India punishing 150 million users after country temporarily bans messaging app",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Lebanon: Conflict Intensity Snapshot (2 March - 14 June 2026) - ReliefWeb",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
@@ -58,5 +40,23 @@
         "title": "Why Ukraine could now have fresh hope of vital US support",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Trump Signals Hormuz Deal With Europeans at G7 Summit",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/16/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "ELEVATED"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "US Renames Indo-Pacific Command to Pacific Command",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
     }
 ]
