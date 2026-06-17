@@ -107,44 +107,37 @@ def render_weekly_report_body(dashboard_data, selected_actor, df_actions, MAPBOX
     render_tactical_maps(df_actions, selected_actor, MAPBOX_PUBLIC_TOKEN)
 
     # ==========================================
-    # 🎯 DIVERSITY & BALANCING ENGINE FOR RECENT ACTIONS
+    # 📡 RECENT STATE ACTIONS (PURE CALENDAR SNAPSHOT)
     # ==========================================
-    # Force the table to pull straight from historical curated data to prevent live feed pollution
-    curated_actions = dashboard_data.get('recent_actions', [])
-    df_curated = clean_dataframe(pd.DataFrame(curated_actions)) if curated_actions else pd.DataFrame()
+    # Directly projects exactly what is written in the loaded calendar JSON file.
+    curated_actions = dashboard_data.get("recent_actions", [])
 
-    if not df_curated.empty:
-        st.markdown("##### Recent State Actions")
-        
-        # Apply the actor filter from sidebar if selected
-        if selected_actor != "All":
-            display_actions = df_curated[df_curated['Actor'] == selected_actor]
+    if curated_actions:
+        df_curated = clean_dataframe(pd.DataFrame(curated_actions))
+
+        if not df_curated.empty:
+            # Apply UI actor filter from the sidebar
+            if selected_actor != "All" and "Actor" in df_curated.columns:
+                display_actions = df_curated[df_curated["Actor"] == selected_actor]
+            else:
+                display_actions = df_curated
+                
+            if not display_actions.empty:
+                # Strictly title only, no date strings attached
+                st.markdown("##### Recent State Actions")
+                
+                # Format datetimes safely for display without mutating or dropping rows
+                display_table = display_actions.copy()
+                if "Date" in display_table.columns:
+                    display_table["Date"] = pd.to_datetime(display_table["Date"], errors="coerce").dt.strftime("%Y-%m-%d")
+                
+                st.table(display_table.set_index(display_table.columns[0]))
+            else:
+                st.info("No curated state actions matched the selected actor.")
         else:
-            display_actions = df_curated
-            
-        if not display_actions.empty and 'Actor' in display_actions.columns:
-            # Separate high-frequency Psyopoly rows from curated global state actions
-            psy_rows = display_actions[display_actions['Actor'] == 'Psyopoly/West Asia']
-            global_state_rows = display_actions[display_actions['Actor'] != 'Psyopoly/West Asia']
-            
-            # Cap Psyopoly to a maximum of 3 items to preserve layout real estate
-            psy_capped = psy_rows.head(3)
-            
-            # Merge datasets putting diverse state actions at the top of the stack
-            balanced_dataframe = pd.concat([global_state_rows, psy_capped], ignore_index=True)
-            
-            # Enforce absolute ceiling of exactly 10 items total
-            final_display_actions = balanced_dataframe.head(10)
-        else:
-            final_display_actions = display_actions.head(10)
-            
-        if not final_display_actions.empty:
-            st.table(final_display_actions.set_index(final_display_actions.columns[0]))
-        else:
-            st.info("No curated state actions matched the selected filters for this weekly cycle.")
-        
-        # --- HIDDEN FOR NOW: Migrated to Friday's Snippet ---
-        # render_event_correlation_and_timeline_weekly(final_display_actions)
+            st.info("No curated state actions were supplied for this report.")
+    else:
+        st.info("No curated state actions were supplied for this report.")
 
     st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Strategic Conclusion</h3>", unsafe_allow_html=True)
     if text_final: render_highlighted_text(text_final, selected_actor)

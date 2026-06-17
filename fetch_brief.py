@@ -38,15 +38,11 @@ BANNED_SOURCES = ['variety.com', 'hollywoodlife.com', 'tmz.com', 'people.com', '
 
 def get_weekly_daterange():
     """Calculates the date range anchored strictly to the most recent Friday."""
-    # 1. Get today's date
     today = datetime.now()
-
-    # 2. Find the Most Recent Friday (In Python, Monday is 0, Friday is 4)
     days_since_friday = (today.weekday() - 4) % 7
     most_recent_friday = today - timedelta(days=days_since_friday)
     previous_friday = most_recent_friday - timedelta(days=7)
 
-    # 3. Format the string dynamically
     if most_recent_friday.month == previous_friday.month:
         return f"{most_recent_friday.strftime('%B')} {previous_friday.day}-{most_recent_friday.day}, {most_recent_friday.year}"
     elif most_recent_friday.year == previous_friday.year:
@@ -74,7 +70,6 @@ def fetch_live_rss_feed():
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     feed_data = {}
-    
     rss_text_for_gemini = f"\n\n=== SUPPLEMENTARY REGIONAL OSINT RSS DATA ({datetime.now().strftime('%Y-%m-%d')}) ===\n"
     
     for region, query in regional_queries.items():
@@ -195,7 +190,6 @@ def fetch_latest_news():
     
     core = '("semiconductor" OR "microchip" OR "foundry" OR "lithography" OR "rare earth" OR "critical minerals" OR "export control" OR "military AI" OR "data center" OR "AI chip" OR "OSAT" OR "packaging")'
     
-    # Restored to maximum data limits for deep intelligence analysis (100 Articles)
     regional_queries = [
         (f'{core} AND ("Asia" OR "China" OR "Taiwan" OR "Japan" OR "South Korea" OR "TSMC")', 15, 'ASIA'),
         (f'{core} AND ("USA" OR "United States" OR "Americas" OR "Brazil" OR "Canada" OR "Anthropic" OR "Nvidia")', 15, 'AMERICAS'),
@@ -378,7 +372,7 @@ if __name__ == "__main__":
     # 1.5 RUN EARLY WARNING SYSTEM (EWS) MICRO-SWEEP
     alert_data = evaluate_daily_threat(daily_rss_text)
     
-    # --- NEW: Aggregated 24h SITREP Logging ---
+    # --- Aggregated 24h SITREP Logging ---
     sitrep_history = []
     if os.path.exists(SITREP_HISTORY_FILE):
         try:
@@ -397,7 +391,6 @@ if __name__ == "__main__":
     
     with open(SITREP_HISTORY_FILE, 'w', encoding="utf-8") as f:
         json.dump(sitrep_history, f)
-    # --- End Log Logic ---
 
     if alert_data:
         with open("data/live_alert.json", "w", encoding="utf-8") as f:
@@ -408,33 +401,25 @@ if __name__ == "__main__":
             os.remove("data/live_alert.json")
         print("🟢 No major SITREP developments detected in the last 2 hours. Cleared.")
     
-    # 2. CACHE APPEND
+    # 2. CACHE APPEND (Accumulate data via the 2-hour cron job)
     cache_file = "data/rss_accumulator.txt"
     with open(cache_file, "a", encoding="utf-8") as f:
         f.write(daily_rss_text)
     print("✅ Daily RSS Accumulator Updated.")
 
-    # 3. UI LIVE UPDATE
-    files = glob.glob('data/brief_*.json')
-    if files:
-        files.sort()
-        latest_file = files[-1]
-        try:
-            with open(latest_file, 'r', encoding="utf-8") as f:
-                current_dash_data = json.load(f)
-            
-            current_dash_data['live_rss'] = live_rss_feed 
-            
-            with open(latest_file, 'w', encoding="utf-8") as f:
-                json.dump(current_dash_data, f)
-            print(f"✅ Dashboard UI updated with today's Live Telemetry ({latest_file}).")
-        except Exception as e:
-            print(f"⚠️ Could not update UI feed: {e}")
+    # 3. UI LIVE UPDATE (REMOVED)
+    # We completely stripped the UI LIVE UPDATE block here. 
+    # It was opening the frozen weekly JSON and mutating it every 2 hours, 
+    # which ruined the static nature of the dashboard.
+    print("✅ Live Telemetry grabbed. Weekly JSON remains fully static/frozen.")
 
-    # 4. FRIDAY ONLY AI GENERATION 
+    # 4. FRIDAY ONLY AI GENERATION (RESTORED CALENDAR GATE)
     filename = f"data/brief_{datetime.now(timezone.utc).strftime('%Y-%m-%d')}.json"
     
-    if True: # FORCED RUN: Keeps the code running manually on a Saturday
+    # Calculate if today is Friday (Monday = 0, Friday = 4)
+    is_friday = datetime.now(timezone.utc).weekday() == 4
+    
+    if is_friday: 
         print("🚀 FRIDAY MORNING DETECTED: Initiating full Gemini AI Intelligence Sweep...")
         
         raw_news, extracted_sources = fetch_latest_news()
@@ -450,7 +435,7 @@ if __name__ == "__main__":
         if combined_news_for_gemini.strip():
             raw_brief = generate_geopolitical_brief(combined_news_for_gemini, current_weekly_range)
             
-            # FIX 3: THE KILL SWITCH. If Gemini fails, script stops immediately to prevent blanking the dashboard.
+            # KILL SWITCH: If Gemini fails, script stops immediately to prevent blanking the dashboard.
             if not raw_brief.strip():
                 print("❌ CRITICAL: Gemini returned no text. Aborting script to protect the dashboard data.")
                 exit()
@@ -493,3 +478,5 @@ if __name__ == "__main__":
             print(f"✅ Success! Saved authentic data to {filename}")
         else:
             print("❌ Script Stopped: No news data was pulled. Gemini was not triggered.")
+    else:
+        print("⏳ Data Accumulation Phase: 2-hour cron job logged RSS data successfully. Waiting for Friday to generate the Weekly Intelligence Brief.")
