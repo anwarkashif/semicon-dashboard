@@ -14,6 +14,58 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "See Where Iran&#x2019;s Billions of Dollars in Frozen Assets...",
+        "Summary": "See Where Iran&#x2019;s Billions of Dollars in Frozen Assets Are Held",
+        "Risk": "HIGH",
+        "Source": "https://www.wsj.com/world/middle-east/iran-frozen-assets-7e926b39"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States, Iran",
+        "Action": "Sign preliminary peace deal, lift oil sanctions.",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Unidentified Non-State Actors",
+        "Action": "Attack commercial vessels in critical chokepoints.",
+        "Location": "Gulf of Aden, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "United States (Pentagon)",
+        "Action": "Funds rare earth refining facility for security.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Semiconductor Industry",
+        "Action": "Debuts new High-NA Lithography system.",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "South Korea",
+        "Action": "Considers building nuclear submarines.",
+        "Location": "South Korea, Northeast Asia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Japan",
+        "Action": "Develops homegrown defense export system.",
+        "Location": "Japan",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-17",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Vance says US has fundamentally changed Middle East with Ira...",
         "Summary": "Vance says US has fundamentally changed Middle East with Iran deal",
         "Risk": "HIGH",
@@ -141,61 +193,6 @@
         "Actor": "United States, Iran",
         "Action": "US-Iran deal, sanctions relief amidst maritime attacks",
         "Location": "Strait of Hormuz, Gulf of Aden",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "G7 nations",
-        "Action": "G7 supports Ukraine, reaffirms sanctions on Russia",
-        "Location": "Ukraine, Russia, Europe",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Intel, Samsung, United States, China",
-        "Action": "Advance 18A, AI silicon, rare earth funding",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Pentagon, OpenAI, European nations",
-        "Action": "Pentagon adopts AI, Europe boosts drone production",
-        "Location": "United States, Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran-US deal ignores what Iranian people want, son of last S...",
-        "Summary": "Iran-US deal ignores what Iranian people want, son of last Shah tells ITV News' Global Security Editor @RohitKachrooITV",
-        "Risk": "HIGH",
-        "Source": "https://x.com/itvnews/status/2067006612225577242"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israel is resisting Donald Trump\u2019s demands that it fall in l...",
-        "Summary": "Israel is resisting Donald Trump\u2019s demands that it fall in line with his Middle East policy.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2067004329555300572"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States",
-        "Action": "Lifts Iranian oil sanctions under new agreement",
-        "Location": "Iran, Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unidentified belligerents",
-        "Action": "Three commercial vessels hit by gunfire",
-        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     }
 ]
