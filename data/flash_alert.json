@@ -1,13 +1,7 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Minister Warns Drone Strikes Threaten Russian Logistics to Crimea",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "UKMTO Issues Warning of Attack in Arabian Sea",
+        "title": "Death Toll From Israeli Attacks in Lebanon Rises to 3,884",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -18,45 +12,51 @@
         "threat_level": "CRITICAL"
     },
     {
+        "source": "WAR MONITOR",
+        "title": "Russian Lawmaker Calls for Destruction of Ukrainian Cities",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "\u2018Mistakes Are Made,\u2019 Trump Says About Deadly U.S. Strikes on Iranian School",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "MONITOR THE SITUATION",
-        "title": "US President Trump Investigates Strike on Iranian School",
+        "title": "Ukrainian Drones Strike Henichesk Road Bridge in Kherson",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russia Reinforces Occupied Crimea Against Possible Ukrainian Landings",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Minister Warns Drone Strikes Threaten Russian Logistics to Crimea",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Iranian Pilots Bomb US Bases in Kuwait",
+        "title": "West plays nice on AI in bid to shut out China",
         "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Death toll in Gaza since \u2018ceasefire\u2019 with Israel goes past 1,000",
+        "title": "Iran Signs Deal with Russia for Helicopter Purchase",
         "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Ukraine Forces Attack Bus With Children in Belarus",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "US Pentagon Used Elon Musk's AI in Operation Epic Fury",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog",
         "threat_level": "HIGH"
     }
 ]
