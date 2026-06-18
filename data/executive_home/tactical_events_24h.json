@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran declares victory over US",
+        "Summary": "Iran declares victory over US",
+        "Risk": "HIGH",
+        "Source": "https://www.rt.com/news/641757-iran-us-victory-memorandum/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Trump signing US-Iran MoU in Versailles",
+        "Summary": "Trump signing US-Iran MoU in Versailles",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/trump-signing-us-iran-mou-versailles"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States, Iran",
+        "Action": "Signed interim deal ending war, reopening Strait of Hormuz.",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "G7, China, United States, Europe",
+        "Action": "Competing for global AI and computational power dominance.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States, France, Japan, Poland",
+        "Action": "Expanding defense capabilities, investing in advanced drone systems.",
+        "Location": "Europe, Indo-Pacific",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "China",
+        "Action": "Expanding maritime presence, strategic influence in key regions.",
+        "Location": "Pacific Ocean, Indian Ocean, South China Sea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Intel, Synopsys, CADFEM APAC, SilTerra Malaysia",
+        "Action": "Advancing semiconductor technology, platforms for AI innovation.",
+        "Location": "Global",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Russia",
+        "Action": "Escalates war on Ukrainian heritage, national identity.",
+        "Location": "Ukraine",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Report: Trump tells advisors that Netanyahu wants to 'bomb e...",
         "Summary": "Report: Trump tells advisors that Netanyahu wants to 'bomb everyone'",
         "Risk": "HIGH",
@@ -132,67 +194,5 @@
         "Summary": "Spokesman Baqaei: MoU signed by Presidents of Iran, US",
         "Risk": "HIGH",
         "Source": "https://www.tasnimnews.ir/en/news/2026/06/18/3620207/spokesman-baqaei-mou-signed-by-presidents-of-iran-us"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Trump says 'nobody' attacked Iran girls' school 'on purpose'",
-        "Summary": "Trump says 'nobody' attacked Iran girls' school 'on purpose'",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2067367963573854653"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States, Iran",
-        "Action": "Signed MOU ending war, opening Strait, diluting uranium.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "G7 Nations",
-        "Action": "Launched Critical Minerals Alliance, reducing China dependence.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "China",
-        "Action": "Expanding military presence in Pacific and Indian Oceans.",
-        "Location": "Indo-Pacific, Indian Ocean",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "United States",
-        "Action": "Launched Drone Dominance Program and Gauntlet II.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "China, France, United States, Australia",
-        "Action": "Multiple nations advancing utility-scale quantum computing technology.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Armed assailants",
-        "Action": "Fired upon vessel off Yemen's Aden coast.",
-        "Location": "Gulf of Aden, Yemen",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-17",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Trump signs memorandum of understanding with Iran \u2013 media",
-        "Summary": "Trump signs memorandum of understanding with Iran \u2013 media",
-        "Risk": "HIGH",
-        "Source": "https://www.rt.com/news/641756-us-iran-memorandum-signed/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
     }
 ]
