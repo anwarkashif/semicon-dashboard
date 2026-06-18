@@ -1,13 +1,31 @@
 [
     {
         "source": "MONITOR THE SITUATION",
+        "title": "Iran Lifts Oil Sanctions, Foreign Ministry Announces",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "Ghalibaf Confirms Iran Charging Fees in Strait of Hormuz",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
+        "source": "MONITOR THE SITUATION",
+        "title": "USS Dwight D. Eisenhower Departs Norfolk, Virginia",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
         "source": "WAR MONITOR",
-        "title": "US Prepares to Strike Iran Amid Rising Tensions",
+        "title": "US Relocates Warships From Persian Gulf",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Israel Advances Troop Carriers in Quneitra Syria",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
@@ -18,10 +36,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "HIGH"
+        "source": "WAR MONITOR",
+        "title": "US Prepares to Strike Iran Amid Rising Tensions",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
@@ -30,33 +48,15 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Israel Advances Troop Carriers in Quneitra Syria",
-        "url": "https://war-monitor.com/events",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "JIATFS Interdicts 8 Vessels, Seizes 17.91 Tons of Narcotics Near Panama Canal",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Philippines Plans MULA Satellite Launch for Indigenous Space Program",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "threat_level": "ELEVATED"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Chile Joins Americas Counter Cartel Coalition With SOUTHCOM",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
+        "threat_level": "CRITICAL"
     }
 ]
