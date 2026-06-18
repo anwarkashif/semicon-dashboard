@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Why Flight Prices Might Not Fall After the U.S.-Iran Deal",
+        "Summary": "Why Flight Prices Might Not Fall After the U.S.-Iran Deal",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/18/business/flights-tickets-prices-fuel-iran-deal.html"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Saudi supertankers sail through Strait of Hormuz following I...",
+        "Summary": "Saudi supertankers sail through Strait of Hormuz following Iran deal",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/saudi-supertankers-sail-through-strait-hormuz-following-iran-deal"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States, Iran",
+        "Action": "Sign peace deal, reopen Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Taiwan, United States",
+        "Action": "Taiwan requests US weapons for self-defense.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Apple, Intel, United States",
+        "Action": "Partnership on US semiconductor production.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "China",
+        "Action": "Expands military presence in Indo-Pacific.",
+        "Location": "Pacific Ocean, Indian Ocean",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Russia",
+        "Action": "Escalates war on Ukrainian national identity.",
+        "Location": "Ukraine",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "NATO, Portugal",
+        "Action": "Southern flank identified as exposed, needs fortification.",
+        "Location": "NATO's Southern Flank, Europe",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Ukraine hits Moscow refinery as Zelenskyy seeks Trump suppor...",
         "Summary": "Ukraine hits Moscow refinery as Zelenskyy seeks Trump support to end war",
         "Risk": "HIGH",
@@ -134,68 +196,6 @@
         "Actor": "United States, Iran",
         "Action": "Signed interim peace deal, reopening Hormuz Strait",
         "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Taiwan",
-        "Action": "Seeks faster US arms amid China pressure",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Thailand",
-        "Action": "Revives $30B corridor to bypass Malacca Strait",
-        "Location": "Southeast Asia, Malacca Strait",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Russia",
-        "Action": "Escalates war on Ukrainian heritage, identity",
-        "Location": "Ukraine",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Intel",
-        "Action": "Expands 18A semiconductor platform, demonstrates leadership",
-        "Location": "Global",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Germany",
-        "Action": "Deploys ships to Red Sea for Hormuz mission",
-        "Location": "Red Sea, Strait of Hormuz",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Pakistan Hails Iran-US MoU as Landmark Step Toward Diplomati...",
-        "Summary": "Pakistan Hails Iran-US MoU as Landmark Step Toward Diplomatic Resolution",
-        "Risk": "HIGH",
-        "Source": "https://www.tasnimnews.ir/en/news/2026/06/18/3620296/pakistan-hails-iran-us-mou-as-landmark-step-toward-diplomatic-resolution"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Oil down 2% after US, Iran sign ceasefire agreement",
-        "Summary": "Oil down 2% after US, Iran sign ceasefire agreement",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2067482486527930541"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "United States, Iran",
-        "Action": "Signed initial deal to end war, ease sanctions.",
-        "Location": "Middle East, Strait of Hormuz",
         "Risk": "CRITICAL"
     }
 ]
