@@ -1,39 +1,51 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "White House Sends Interim US-Iran Agreement Text to Congress",
+        "title": "Zelenskyy Selects Drone Strike Targets in Video",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Strait of Hormuz to Officially Reopen, Ships Transiting Iranian Lanes",
+        "title": "Iran's Supreme Leader Khamenei Approves US Nuclear Deal Despite Reservations",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukraine and Germany Sign Anti-Ballistic Program and Robotic Systems Agreements",
+        "title": "Iran Warns It Will Not Comply If US Fails Obligations",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Ecuador President Noboa Declares State of Emergency in 10 Provinces",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Fire Erupts at Moscow Oil Refinery, Helicopters Deployed",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "USAF Tankers and Fighter Jets Active Over Persian Gulf-Gulf of Oman; C-40 Lands at Al Udeid",
+        "title": "UK Minister Calls on Israel to Withdraw from Southern Lebanon",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Russia Targets Ukrainian Economy Through Maritime Strikes",
+        "title": "UK to Supply Ukraine with Drones and Missiles",
         "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "US-Iran deal: Key questions remain over status of Strait of Hormuz",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "US Ends Naval Blockade Against Iran",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
@@ -43,20 +55,8 @@
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "US Embassy in Moscow Warns Citizens Over Drone Attack Photo Ban",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
     }
 ]
