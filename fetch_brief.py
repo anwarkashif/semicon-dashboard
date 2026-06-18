@@ -446,8 +446,10 @@ if __name__ == "__main__":
             dynamic_funding = safe_extract_json(raw_brief, 'FUNDING_DATA', [{"Entity": "No specific funding reported", "Amount": "0"}])
             dynamic_market = safe_extract_json(raw_brief, 'MARKET_IMPACT', [{"Entity": "Data Unavailable", "Market Share (%)": "N/A"}])
             
+            # --- FIX #1 APPLIED HERE ---
             data_package = {
-                "date": current_weekly_range,
+                "date": datetime.now(timezone.utc).strftime('%Y-%m-%d'), # strictly machine readable date
+                "report_range": current_weekly_range, # human readable format safely stored separately
                 "brief_raw": raw_brief,
                 "kpi_metrics": dynamic_kpi,
                 "supply_chain_risk": dynamic_risk, 

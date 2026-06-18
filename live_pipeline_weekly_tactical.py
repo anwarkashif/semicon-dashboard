@@ -225,9 +225,10 @@ if __name__ == "__main__":
             
         tactical_events = extract_tactical_events(news_data)
         
-        # PSYOPOLY INJECTION LOGIC REMOVED FROM HERE
+        # --- FIX #2 APPLIED HERE ---
+        dynamic_date_str = datetime.now().strftime("%Y-%m-%d")
+        output_file = f'data/friday_snippet/tactical_events_{dynamic_date_str}.json'
         
-        output_file = 'data/friday_snippet/tactical_events_24h.json'
         with open(output_file, 'w') as f:
             json.dump(tactical_events, f, indent=4)
             
