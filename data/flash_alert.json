@@ -1,7 +1,7 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "US-Iran Deal Takes Effect, Focus on Strait of Hormuz",
+        "title": "Russian Iskander-M Missiles Strike Poltava Facility, Sparking Fires",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -12,16 +12,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Drones Strike Key Road-Rail Bridge in Crimea, Paralyzing Traffic",
-        "url": "https://monitor-the-situation.com/",
+        "source": "WAR MONITOR",
+        "title": "Russia Hit by Drone Strikes Across Multiple Regions",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Malaysia Strengthens Presence at Swallow Reef in Spratly Islands",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
@@ -30,22 +24,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "US Relocates Warships From Persian Gulf",
-        "url": "https://war-monitor.com/events",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "G7 sets up critical minerals alliance, platform to cut reliance on China - Reuters",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "G7 hails unity on Russia as Trump signals tougher line on Moscow",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
@@ -54,9 +36,27 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "source": "MONITOR THE SITUATION",
+        "title": "Oil Prices Slip After US, Iran Presidents Sign Interim Deal",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "G7 sets up critical minerals alliance, platform to cut reliance on China - Reuters",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Ghalibaf Says Iran Engages US From Position of Strength",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Russia Faces Morning Oil Disruption",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     }
 ]
