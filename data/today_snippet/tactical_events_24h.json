@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Vance\u2019s Defense of Iran Deal Rests on Vague and Misleading C...",
+        "Summary": "Vance\u2019s Defense of Iran Deal Rests on Vague and Misleading Claims",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/18/us/politics/vances-iran-deal-misleading-claims.html"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Vance has become the face of the interim U.S.-Iran peace dea...",
+        "Summary": "Vance has become the face of the interim U.S.-Iran peace deal, and he is set to serve as Washington\u2019s lead negotiator in upcoming nuclear talks.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/ForeignPolicy/status/2067746482002776490"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States, Iran",
+        "Action": "US-Iran deal reopens Hormuz, lifts blockade",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Ukraine",
+        "Action": "Strikes Moscow refinery with major drone attack",
+        "Location": "Moscow, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States",
+        "Action": "Invests $725M to boost domestic rare earth",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States Air Force",
+        "Action": "Awards contracts for first AI drone wingmen",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "European Union",
+        "Action": "Extends sanctions against Russia for 12 months",
+        "Location": "European Union",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "'This was not easy': Trump and Iran sign interim ceasefire d...",
         "Summary": "'This was not easy': Trump and Iran sign interim ceasefire deal in France",
         "Risk": "HIGH",
@@ -142,60 +197,5 @@
         "Summary": "Trump\u2019s Iran truce marks a defeat for American power",
         "Risk": "HIGH",
         "Source": "https://www.rt.com/news/641683-trumps-iran-truce-marks-defeat/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "US lifts Iran oil sanctions amid Gulf maritime incidents.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "China",
-        "Action": "New outbound investment rules, surging exports impact Europe.",
-        "Location": "China, Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Intel, Samsung, Nvidia, Tesla",
-        "Action": "Accelerating advanced AI chip development and manufacturing.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States (Pentagon, USA Rare Earth)",
-        "Action": "Funds and expands domestic rare earth processing capabilities.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "European Union (France, Germany)",
-        "Action": "Accelerates rearmament, drone production, and joint defense projects.",
-        "Location": "Europe",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "War Loomed Over Past World Cups, Too",
-        "Summary": "War Loomed Over Past World Cups, Too",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/2026/06/16/sports/world-cup/us-iran-soccer-world-cup-conflict.html"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Arab leaders convene at G7 in France to discuss Iran-US agre...",
-        "Summary": "Arab leaders convene at G7 in France to discuss Iran-US agreement",
-        "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2066841475967545635"
     }
 ]
