@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 import urllib.parse
 from datetime import datetime
 from google import genai
+from huggingface_hub import HfApi
 
 # ==========================================
 # 1. CONFIGURATION & SETUP (TODAY'S SNIPPET)
@@ -342,6 +343,42 @@ if __name__ == "__main__":
             json.dump(shift_brief_data, f, indent=4)
 
         print("✅ Success! Wrote updated 12H Strategic Shift Brief.")
+        
+        # ==========================================
+        # ☁️ HUGGING FACE PERMANENT RETENTION SYNC
+        # ==========================================
+        HF_TOKEN = os.environ.get("HF_TOKEN")
+        REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
+        
+        if HF_TOKEN and REPO_ID:
+            try:
+                api = HfApi()
+                print(f"☁️ Uploading {output_file_tactical} to permanent storage on {REPO_ID}...")
+                api.upload_file(
+                    path_or_fileobj=output_file_tactical,
+                    path_in_repo=output_file_tactical,
+                    repo_id=REPO_ID,
+                    repo_type="space",
+                    token=HF_TOKEN,
+                    commit_message="Auto-sync Today's Tactical Events"
+                )
+                
+                print(f"☁️ Uploading {output_file_brief} to permanent storage on {REPO_ID}...")
+                api.upload_file(
+                    path_or_fileobj=output_file_brief,
+                    path_in_repo=output_file_brief,
+                    repo_id=REPO_ID,
+                    repo_type="space",
+                    token=HF_TOKEN,
+                    commit_message="Auto-sync 12H Strategic Shift Brief"
+                )
+                
+                print("✅ Successfully locked today's snippet into permanent Hugging Face storage!")
+            except Exception as e:
+                print(f"❌ Failed to sync to Hub. Files are only in temporary memory! Error: {e}")
+        else:
+            print("⚠️ HF_TOKEN or REPO_ID missing. Files saved locally but will be lost on container restart.")
+        # ==========================================
         
     except Exception as e:
         print(f"❌ Pipeline Failed: {e}")
