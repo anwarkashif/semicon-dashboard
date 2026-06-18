@@ -1,27 +1,21 @@
 [
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russian Forces Reportedly Advance Near Kupyansk, Ukraine",
-        "url": "https://monitor-the-situation.com/",
+        "source": "WAR MONITOR",
+        "title": "Read the 14 points of the agreement between Iran and the U.S.",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Iran says deal with U.S. requires Israeli forces to leave Lebanon",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Drone Strikes Electrical Substation in Okhtyrka, Sumy Oblast",
+        "title": "US Reconnaissance Plane Possibly Intercepted by Chinese Aircraft Near Taiwan",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Azerbaijan Military Cargo Plane Lands at Israeli Air Base",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russian 120th Marine Division and 36th Motorized Rifle Brigade Deemed Incapable of Combat",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
@@ -30,16 +24,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "IAEA Prepares to Take Concrete Steps on Iran Nuclear Program",
-        "url": "https://war-monitor.com/events",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Hegseth announces in Brussels a review of U.S. forces in Europe, and a 'NATO 3.0'",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
+        "source": "MONITOR THE SITUATION",
+        "title": "Sheremetyevo Airport Passengers Evacuated During Drone Attack",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Zelensky Warns Moscow Will Burn If Ukraine Burns",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
@@ -48,15 +48,15 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Taiwan\u2019s President Says He Trusts Trump to Approve Arms Sales",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "Switzerland Confirms US-Iran Ceasefire Implementation Talks",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "source": "MONITOR THE SITUATION",
+        "title": "Resistance Groups Ambush Israeli Military in Taybeh, Lebanon",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     }
 ]
