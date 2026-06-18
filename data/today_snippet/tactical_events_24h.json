@@ -1,5 +1,67 @@
 [
     {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "'This was not easy': Trump and Iran sign interim ceasefire d...",
+        "Summary": "'This was not easy': Trump and Iran sign interim ceasefire deal in France",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/news/trump-and-iran-pezeshkian-electronically-sign-mou-ceasefire"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Hormuz vessels must still coordinate with IRGC navy, Iranian...",
+        "Summary": "Hormuz vessels must still coordinate with IRGC navy, Iranian state TV says",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/hormuz-vessels-must-still-coordinate-irgc-navy-iranian-state-tv-says"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States, Iran",
+        "Action": "Sign interim deal, reopen Strait of Hormuz",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Ukraine",
+        "Action": "Launches largest-ever drone attack on Moscow",
+        "Location": "Moscow, Russia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Taiwan, United States",
+        "Action": "Taiwan seeks swift approval for US arms sales",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States",
+        "Action": "Loans $725M to boost rare earth production",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Apple, Intel",
+        "Action": "Partner for US domestic chip production",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Unknown (Assailants), Maritime vessels",
+        "Action": "Armed assailants fire on vessel near Aden",
+        "Location": "Gulf of Aden, Yemen",
+        "Risk": "HIGH"
+    },
+    {
         "Date": "2026-06-17",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
@@ -135,67 +197,5 @@
         "Summary": "Arab leaders convene at G7 in France to discuss Iran-US agreement",
         "Risk": "HIGH",
         "Source": "https://x.com/TheNationalNews/status/2066841475967545635"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "United States, Iran",
-        "Action": "Announced interim peace deal, reopened Hormuz Strait.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Unidentified Yemeni groups",
-        "Action": "Attacked two merchant vessels with armed skiffs.",
-        "Location": "Gulf of Aden, Yemen",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "China",
-        "Action": "Deploys new naval supergun targeting Taiwan.",
-        "Location": "Taiwan Strait, Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Anthropic, United States",
-        "Action": "Suspends AI models after US export order.",
-        "Location": "United States",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-16",
-        "Actor": "Europe",
-        "Action": "Advances Chips Act 2.0 to boost value chain.",
-        "Location": "Europe",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran\u2019s Military Headquarters: Nation\u2019s Will Imposed on Enemi...",
-        "Summary": "Iran\u2019s Military Headquarters: Nation\u2019s Will Imposed on Enemies",
-        "Risk": "HIGH",
-        "Source": "https://www.tasnimnews.ir/en/news/2026/06/15/3617327/iran-s-military-headquarters-nation-s-will-imposed-on-enemies"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US, Iran reach deal to end war",
-        "Summary": "US, Iran reach deal to end war",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/us-iran-reach-deal-to-end-war"
-    },
-    {
-        "Date": "2026-06-14",
-        "Actor": "US/Iran/Unknown",
-        "Action": "Announce peace deal amidst tanker attack",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
     }
 ]
