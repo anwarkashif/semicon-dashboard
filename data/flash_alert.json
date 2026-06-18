@@ -1,6 +1,12 @@
 [
     {
         "source": "MONITOR THE SITUATION",
+        "title": "Russian Missile Misfire Hits Fuel Tank in Moscow",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "Zelenskyy Selects Drone Strike Targets in Video",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
@@ -12,24 +18,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Iran Warns It Will Not Comply If US Fails Obligations",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ecuador President Noboa Declares State of Emergency in 10 Provinces",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "UK Minister Calls on Israel to Withdraw from Southern Lebanon",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
         "source": "WAR MONITOR",
         "title": "UK to Supply Ukraine with Drones and Missiles",
         "url": "https://war-monitor.com/events",
@@ -37,7 +25,7 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "US-Iran deal: Key questions remain over status of Strait of Hormuz",
+        "title": "Russia Captures Rai-Aleksandrovka in Slavyansk Direction",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
@@ -49,14 +37,26 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Israel To Stay In Southern Lebanon",
+        "title": "US-Iran deal: Key questions remain over status of Strait of Hormuz",
         "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Ecuador President Noboa Declares State of Emergency in 10 Provinces",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Schneider Electric EasyLogic T150 and Saitel DP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-04",
+        "threat_level": "HIGH"
     }
 ]
