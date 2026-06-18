@@ -3,6 +3,7 @@ import json
 import glob
 import datetime
 from google import genai
+from huggingface_hub import HfApi
 
 def get_latest_file(pattern):
     files = glob.glob(pattern)
@@ -24,6 +25,24 @@ def update_fallback_title(target_title):
             with open(file_path, 'w') as f:
                 json.dump(data, f, indent=4)
             print(f"⚠️ AI generation failed, but successfully force-updated title to: {target_title}")
+            
+            # --- Sync the fallback to Hugging Face so the updated title persists ---
+            HF_TOKEN = os.environ.get("HF_TOKEN")
+            REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
+            if HF_TOKEN and REPO_ID:
+                try:
+                    api = HfApi()
+                    api.upload_file(
+                        path_or_fileobj=file_path,
+                        path_in_repo=file_path,
+                        repo_id=REPO_ID,
+                        repo_type="space",
+                        token=HF_TOKEN,
+                        commit_message=f"Auto-sync Fallback Tactical Title: {target_title}"
+                    )
+                    print("✅ Locked fallback title into permanent storage.")
+                except Exception as e:
+                    print(f"❌ Failed to sync fallback to Hub: {e}")
         except Exception as e:
             print(f"Fallback title update failed: {e}")
 
@@ -118,9 +137,35 @@ def main():
         snippet_data.pop('classification', None)
 
         os.makedirs('data', exist_ok=True)
-        with open('data/weekly_tactical_live.json', 'w') as f:
+        output_file = 'data/weekly_tactical_live.json'
+        with open(output_file, 'w') as f:
             json.dump(snippet_data, f, indent=4)
-        print(f"✅ Successfully generated and saved weekly_tactical_live.json for {date_string}")
+        print(f"✅ Successfully generated and saved {output_file} for {date_string}")
+
+        # ==========================================
+        # ☁️ HUGGING FACE PERMANENT RETENTION SYNC
+        # ==========================================
+        HF_TOKEN = os.environ.get("HF_TOKEN")
+        REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
+        
+        if HF_TOKEN and REPO_ID:
+            try:
+                api = HfApi()
+                print(f"☁️ Uploading {output_file} to permanent storage on {REPO_ID}...")
+                api.upload_file(
+                    path_or_fileobj=output_file,
+                    path_in_repo=output_file,
+                    repo_id=REPO_ID,
+                    repo_type="space",
+                    token=HF_TOKEN,
+                    commit_message=f"Auto-sync Weekly Tactical Brief: {date_string}"
+                )
+                print("✅ Successfully locked weekly tactical brief into permanent Hugging Face storage!")
+            except Exception as e:
+                print(f"❌ Failed to sync to Hub. File is only in temporary memory! Error: {e}")
+        else:
+            print("⚠️ HF_TOKEN or REPO_ID missing. File saved locally but will be lost on container restart.")
+        # ==========================================
 
     except Exception as e:
         print(f"❌ Failed to generate Weekly Tactical Brief: {e}")

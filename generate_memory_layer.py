@@ -2,6 +2,7 @@ import os
 import json
 from collections import Counter
 from datetime import datetime, timedelta
+from huggingface_hub import HfApi
 
 DATA_DIR = "data"
 
@@ -36,7 +37,6 @@ all_text = ""
 
 for file in os.listdir(DATA_DIR):
     if file.endswith(".json") and "brief" in file.lower():
-
         try:
             with open(os.path.join(DATA_DIR, file), "r") as f:
                 data = json.load(f)
@@ -110,12 +110,39 @@ else:
 memory["strategic_observation"] = observation
 
 # ==========================================
-# SAVE OUTPUT
+# SAVE OUTPUT & SYNC TO HUB
 # ==========================================
 
 os.makedirs(DATA_DIR, exist_ok=True)
+output_file = f"{DATA_DIR}/geopolitical_memory.json"
 
-with open(f"{DATA_DIR}/geopolitical_memory.json", "w") as f:
+with open(output_file, "w") as f:
     json.dump(memory, f, indent=4)
 
-print("Geopolitical Memory Layer Updated.")
+print("Geopolitical Memory Layer Updated Locally.")
+
+# ==========================================
+# ☁️ HUGGING FACE PERMANENT RETENTION SYNC
+# ==========================================
+HF_TOKEN = os.environ.get("HF_TOKEN")
+# If running inside a HF Space, SPACE_ID is automatically available in the environment.
+# If running via GitHub Actions, explicitly define your repo ID: "username/space-name"
+REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
+
+if HF_TOKEN and REPO_ID:
+    try:
+        api = HfApi()
+        print(f"☁️ Uploading {output_file} to permanent storage on {REPO_ID}...")
+        api.upload_file(
+            path_or_fileobj=output_file,
+            path_in_repo=output_file,
+            repo_id=REPO_ID,
+            repo_type="space",
+            token=HF_TOKEN,
+            commit_message=f"Auto-sync Memory Layer: {start_date} to {end_date}"
+        )
+        print("✅ Successfully locked Geopolitical Memory into permanent Hugging Face storage!")
+    except Exception as e:
+        print(f"❌ Failed to sync to Hub. File is only in temporary memory! Error: {e}")
+else:
+    print("⚠️ HF_TOKEN or REPO_ID missing. File saved locally but will be lost on container restart.")
