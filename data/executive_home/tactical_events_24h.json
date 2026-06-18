@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Turkish Airlines will resume flights between Istanbul and Ab...",
+        "Summary": "Turkish Airlines will resume flights between Istanbul and Abu Dhabi, restoring its full UAE network after months of disruption caused by the regional conflict and airspace restrictions. The airline announced that services to Zayed International Airport will restart on July 1, following the resumption of flights to Dubai on June 9. It will also increase its Dubai frequency from seven weekly flights to 14 from June 25. The carrier suspended services to parts of the Gulf and Middle East this year amid airspace closures and operational disruption linked to the Iran war",
+        "Risk": "HIGH",
+        "Source": "https://x.com/TheNationalNews/status/2067594375379685771"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Death toll from Israeli fire in Gaza since ceasefire passes ...",
+        "Summary": "Death toll from Israeli fire in Gaza since ceasefire passes 1,000, says health ministry",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/death-toll-israeli-fire-gaza-ceasefire-passes-1000-says-health-ministry"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States, Iran",
+        "Action": "Sign interim deal opening Strait of Hormuz, despite incidents",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Ukraine",
+        "Action": "Conducts largest-ever drone attack on Moscow",
+        "Location": "Russia (Moscow)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States",
+        "Action": "Pentagon reviews troop presence, posture in Europe",
+        "Location": "Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States",
+        "Action": "Implements new tariffs, targets forced labor",
+        "Location": "United States, Southeast Asia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "United States (Air Force)",
+        "Action": "Awards contracts for AI-powered drone wingmen",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-18",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "'This was not easy': Trump and Iran sign interim ceasefire d...",
         "Summary": "'This was not easy': Trump and Iran sign interim ceasefire deal in France",
         "Risk": "HIGH",
@@ -142,57 +197,5 @@
         "Summary": "The US and Iran will hold preliminary talks on the implementation of the agreement in Switzerland\u2019s Burgenstock on June 19, Reuters reported, citing the Swiss Foreign Ministry:",
         "Risk": "HIGH",
         "Source": "https://x.com/tassagency_en/status/2067545343726596361"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "United States, Iran",
-        "Action": "Sign initial deal, reopen Strait of Hormuz",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Apple, Intel",
-        "Action": "Partner on US chip production",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Taiwan, United States",
-        "Action": "Taiwan seeks rapid US arms approval",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "JPMorgan Chase",
-        "Action": "Cuts Hong Kong staff AI access",
-        "Location": "Hong Kong",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Russia",
-        "Action": "Escalates war on Ukrainian heritage",
-        "Location": "Ukraine",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "HENSOLDT (Germany)",
-        "Action": "Unveils mobile satellite navigation jammer",
-        "Location": "Global",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Why Flight Prices Might Not Fall After the U.S.-Iran Deal",
-        "Summary": "Why Flight Prices Might Not Fall After the U.S.-Iran Deal",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/2026/06/18/business/flights-tickets-prices-fuel-iran-deal.html"
     }
 ]
