@@ -1,7 +1,49 @@
 [
     {
+        "source": "MONITOR THE SITUATION",
+        "title": "Explosion Reported in Dnipro, Ukraine",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Belgium to Transfer F-16s to Ukraine Starting 2026",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Attackers Storm Niamey Airport in Niger, Gunfire and Explosions Reported",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Germany Sends Two Ships to Red Sea for Potential Hormuz Mission",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Multiple Tankers Switch Off AIS Near Strait of Hormuz",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "WAR MONITOR",
-        "title": "US and Iranian presidents sign deal aiming to end war",
+        "title": "Ukraine hits Moscow oil refinery in response to strikes on Ukraine \u2013 Europe live",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Exclusive: US holds off blacklisting China's DeepSeek, more than 100 firms deemed security risks, sources say - Reuters",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Israel Attacks Vehicle in Southern Lebanon",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
@@ -12,51 +54,9 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russia Prepares Large-Scale Missile and Drone Attack on Ukraine",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Strikes Oil Depot in Gukovo, Russia",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Multiple Tankers Switch Off AIS Near Strait of Hormuz",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Russia Hit by Drone Strikes Across Multiple Regions",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Germany Sends Two Ships to Red Sea for Potential Hormuz Mission",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Israel Attacks Vehicle in Southern Lebanon",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "EU Explores Peace Talks With Russia",
-        "url": "https://monitor-the-situation.com/",
+        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "threat_level": "HIGH"
     }
 ]
