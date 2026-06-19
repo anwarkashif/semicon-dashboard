@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "US-Iran peace deal: Six things we learned from the Islamabad...",
+        "Summary": "US-Iran peace deal: Six things we learned from the Islamabad Memorandum of Understanding",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/explainers/us-iran-peace-deal-memorandum-six-things-learned"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran requiring ships to submit requests to cross Strait of H...",
+        "Summary": "Iran requiring ships to submit requests to cross Strait of Hormuz 48 hours in advance",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-requiring-ships-submit-request-cross-strait-hormuz-48-hours-advance"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Iran, United States, Israel, Hezbollah",
+        "Action": "US-Iran peace deal; new Hormuz transit rules",
+        "Location": "Strait of Hormuz, Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States, Japan, Poland, France",
+        "Action": "Accelerating development of autonomous drone warfare",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "China, Taiwan, United States",
+        "Action": "China's bullying Taiwan; US F-35 readiness concerns",
+        "Location": "Taiwan, Indo-Pacific",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States (SpaceX, NRO), Germany",
+        "Action": "Launching intelligence satellites; pursuing sovereign space capabilities",
+        "Location": "Global Space",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Non-state actors, International Shipping",
+        "Action": "Rising pirate attacks threatening global maritime trade",
+        "Location": "Gulf of Aden",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Four Israeli strikes reported in southern Lebanon after ceas...",
         "Summary": "Four Israeli strikes reported in southern Lebanon after ceasefire implementation",
         "Risk": "HIGH",
@@ -142,60 +197,5 @@
         "Action": "US-Iran talks postponed; Israel-Lebanon conflict escalates.",
         "Location": "Middle East, Strait of Hormuz",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States Air Force, General Atomics, Anduril",
-        "Action": "Awards contracts for AI drone wingmen.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Micron Technology (United States)",
-        "Action": "Selects Bechtel for New York chip complex.",
-        "Location": "United States (New York)",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "China",
-        "Action": "Strengthens rare earth dominance infrastructure.",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Pirates",
-        "Action": "Rising pirate attacks threaten shipping in Gulf of Aden.",
-        "Location": "Gulf of Aden",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "European Union",
-        "Action": "Extends Russia sanctions for full year.",
-        "Location": "European Union, Russia",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Syrian activist Hassan Akkad arrested in Damascus",
-        "Summary": "Syrian activist Hassan Akkad arrested in Damascus",
-        "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2067911100184543529"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Police order last-minute ban of Iranian opposition rally in ...",
-        "Summary": "Police order last-minute ban of Iranian opposition rally in Paris",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/police-order-last-minute-ban-iranian-opposition-rally-paris"
     }
 ]
