@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "US-Iran talks delayed as Israel defies fragile roadmap to pe...",
+        "Summary": "US-Iran talks delayed as Israel defies fragile roadmap to peace",
+        "Risk": "HIGH",
+        "Source": "https://www.rt.com/news/641818-us-iran-negotiations-delayed/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "After Deal to Reopen Strait of Hormuz, Ships Begin to Move C...",
+        "Summary": "After Deal to Reopen Strait of Hormuz, Ships Begin to Move Cautiously",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/19/business/iran-us-hormuz-shipping.html"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "US, Iran, France",
+        "Action": "Diplomacy stalls; Hormuz reopened with risks",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Israel, Lebanon (Hezbollah)",
+        "Action": "Israel strikes Lebanon; casualties rise",
+        "Location": "Southern Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Ukraine",
+        "Action": "Drone attacks Moscow oil refinery",
+        "Location": "Moscow, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States (Air Force)",
+        "Action": "Awards autonomous 'drone wingman' production contracts",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Global semiconductor reliance on Taiwan emphasized",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States (NRO), SpaceX",
+        "Action": "Launches new intelligence-gathering satellites",
+        "Location": "Space",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Revealed: How a German-US corporate giant became the world\u2019s...",
         "Summary": "Revealed: How a German-US corporate giant became the world\u2019s largest foreign financier of Israel\u2019s wars",
         "Risk": "HIGH",
@@ -134,68 +196,6 @@
         "Actor": "United States, Iran, Israel",
         "Action": "Peace talks postponed amidst escalating regional conflict.",
         "Location": "Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Global Shipping, Iran",
-        "Action": "Shipping faces mine risks in crucial chokepoint.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States Air Force",
-        "Action": "Awards contracts for AI-powered drone wingmen.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, ASML",
-        "Action": "US raises concern over chip tool to China.",
-        "Location": "China",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, SpaceX",
-        "Action": "Launches intelligence-gathering satellites for NRO.",
-        "Location": "Low Earth Orbit",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran war day 112: Vance defends Tehran \u2018deal\u2019 but Switzerlan...",
-        "Summary": "Iran war day 112: Vance defends Tehran \u2018deal\u2019 but Switzerland trips are off",
-        "Risk": "HIGH",
-        "Source": "https://www.aljazeera.com/news/2026/6/19/iran-war-day-112-vance-defends-tehran-deal-but-switzerland-trips-are-off?traffic_source=rss"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Talks between the US and Iran, with mediators Pakistan and Q...",
-        "Summary": "Talks between the US and Iran, with mediators Pakistan and Qatar, have been postponed, the Swiss foreign ministry told The National on Friday. 'The planned talks between the US, Iran, Qatar and Pakistan have been postponed,' the ministry said. 'Switzerland remains ready to facilitate these talks. The relevant preparatory work at Burgenstock is continuing,' it added. The ministry did not provide a new date for the talks. The announcement came after the White House said on Thursday that US President JD Vance would not be departing for Switzerland as initially scheduled. Talks were planned to kick off the first round of negotiations aimed at securing a lasting peace agreement within 60 days aft",
-        "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2067850781274099778"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States",
-        "Action": "Warns ASML regarding EUV machine transfer.",
-        "Location": "China",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, Iran",
-        "Action": "Peace talks postponed, raising regional tensions.",
-        "Location": "Switzerland",
         "Risk": "CRITICAL"
     }
 ]
