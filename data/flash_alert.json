@@ -1,6 +1,18 @@
 [
     {
         "source": "MONITOR THE SITUATION",
+        "title": "Russian Glide Bombs Hit Kramatorsk, Sparking Large Fire",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Hezbollah Leader Vows Continued Resistance Against Israel",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "IAEA-Brokered Ceasefire Enables Repair of Key Power Line to Zaporizhzhia Nuclear Plant",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
@@ -12,14 +24,20 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Israel Shells Southern Lebanon, Breaking Ceasefire",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
+        "source": "WAR MONITOR",
+        "title": "Live: Israel and Hezbollah agree to a ceasefire in Lebanon, officials say",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Live: Israel and Hezbollah agree to a ceasefire in Lebanon, officials say",
+        "title": "Ukraine Gives Belarus One Week to Remove Military Equipment",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Russia Bombs Moscow For Two Days",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
@@ -30,33 +48,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Russia Bombs Moscow For Two Days",
-        "url": "https://war-monitor.com/events",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "European Union Declines Mediation Role in Ukraine Peace Talks",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukraine and MBDA Sign Deal to Develop Neptune 2 Cruise Missile",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Ukraine Gives Belarus One Week to Remove Military Equipment",
-        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     }
 ]
