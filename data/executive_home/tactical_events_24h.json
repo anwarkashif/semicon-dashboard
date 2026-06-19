@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran lost one of the central assets of its regional strategy...",
+        "Summary": "Iran lost one of the central assets of its regional strategy: the presumption that war could be kept away from Iranian soil, writes Menahem Merhavy.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/ForeignPolicy/status/2068076516332769761"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Lebanon Emerges as Weak Link in U.S.-Iran Deal to End War",
+        "Summary": "Lebanon Emerges as Weak Link in U.S.-Iran Deal to End War",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/19/world/middleeast/lebanon-us-iran-deal-ceasefire.html"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "US, Iran, Israel",
+        "Action": "US-Iran talks stall amid regional conflict and Hormuz control.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "China",
+        "Action": "Tightens indium export checks for AI demand.",
+        "Location": "China (global supply chain)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Chinese Investors, SpaceX",
+        "Action": "Secretly acquired stakes in critical US space company.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "US, Japan, Europe",
+        "Action": "Rapidly developing autonomous drone warfare capabilities.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Norway",
+        "Action": "Moving to cut trade with illegal Israeli settlements.",
+        "Location": "Israel, Palestine",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Lebanon Cease-Fire Bolsters U.S.-Iran Truce, After a Shaky S...",
         "Summary": "Lebanon Cease-Fire Bolsters U.S.-Iran Truce, After a Shaky Start",
         "Risk": "HIGH",
@@ -142,67 +197,5 @@
         "Action": "Imposes new shipping fees, asserts chokepoint control.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, Japan, European Union",
-        "Action": "Accelerating advanced drone, wingman, interceptor development.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "China",
-        "Action": "Rapidly advancing AI, increasing trade, Taiwan tensions.",
-        "Location": "China, Taiwan, Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States (NRO, Pentagon, SpaceX)",
-        "Action": "Boosts space intelligence, orbital refueling capabilities.",
-        "Location": "Space, Low Earth Orbit",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Non-state actors, International Shipping",
-        "Action": "Rising pirate attacks threatening global maritime trade",
-        "Location": "Gulf of Aden",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US-Iran peace deal: Six things we learned from the Islamabad...",
-        "Summary": "US-Iran peace deal: Six things we learned from the Islamabad Memorandum of Understanding",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/explainers/us-iran-peace-deal-memorandum-six-things-learned"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran requiring ships to submit requests to cross Strait of H...",
-        "Summary": "Iran requiring ships to submit requests to cross Strait of Hormuz 48 hours in advance",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-requiring-ships-submit-request-cross-strait-hormuz-48-hours-advance"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Iran, United States, Israel, Hezbollah",
-        "Action": "US-Iran peace deal; new Hormuz transit rules",
-        "Location": "Strait of Hormuz, Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, Japan, Poland, France",
-        "Action": "Accelerating development of autonomous drone warfare",
-        "Location": "Global",
-        "Risk": "HIGH"
     }
 ]
