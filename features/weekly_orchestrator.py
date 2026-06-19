@@ -23,10 +23,17 @@ def render_full_weekly_brief(
     selected_actor, df_actions, MAPBOX_PUBLIC_TOKEN
 ):
     st.title(f"SemicoN Weekly Brief - {brief_date}") 
+    
+    # --- NEW: Extract and display the timeframe subtitle ---
+    timeframe = dashboard_data.get("report_range", "")
+    if timeframe:
+        st.markdown(f"<p style='color: #888; font-size: 16px; font-weight: bold; margin-top: -15px; margin-bottom: 15px;'>Coverage Timeframe: {timeframe}</p>", unsafe_allow_html=True)
+        
     st.markdown("---")
 
     # ===========================
     # 🧠 DECISION SUPPORT ENGINE (REMOVED/COMMENTED OUT)
+    # ===========================
     # ===========================
     # all_text = " ".join([
     #     text_section_1, text_section_2, text_section_3,
