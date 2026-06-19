@@ -1,7 +1,13 @@
 [
     {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Drone Strikes Russian Fuel Tanker on Southern Front",
+        "title": "Russian Forces Advance Near Sloviansk, Ukraine Launches Drone Assault on Moscow",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -13,44 +19,20 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Forces Advance Near Sloviansk, Ukraine Launches Drone Assault on Moscow",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Hezbollah Rockets Israeli Evacuation Force in Southern Lebanon",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Extraordinary Footage From Moscow Under Heavy Ukrainian Aerial Attack",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russia Stabilizes Front After Ukrainian Counteroffensive in Zaporizhzhia",
+        "title": "Israeli Airstrike Hits Residential Building in Gaza City",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "US Drone Strikes Target Hill Near Aleppo, Syria",
+        "title": "Ukraine Recaptures Positions Near Orikhiv as Russia Stabilizes Zaporizhzhia Front",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Thirty dead at DRC displacement camp as Ebola threat grows",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "Satellite Imagery Shows 7,000 Acres of Reef Destroyed in South China Sea",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
@@ -58,5 +40,23 @@
         "title": "Hegseth renews Nato criticism and says US will review presence in Europe",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Kronstadt Installs Modular Bomb Shelters Amid Anticipated Ukrainian Drone Attacks",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
     }
 ]
