@@ -1,14 +1,32 @@
 [
     {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "MONITOR THE SITUATION",
-        "title": "Israeli Drone Strikes Kill One in Khan Younis Refugee Camp",
+        "title": "Mass Exodus in South Lebanon as Civilians Flee via Key Bridge",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Hezbollah Targets Israeli Tank in Lebanon",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "Drone Strike Kills Two in Southern Lebanon After Ceasefire",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Israeli Drone Strikes Kill One in Khan Younis Refugee Camp",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,45 +36,27 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "source": "WAR MONITOR",
+        "title": "Hezbollah Targets Israeli Tank in Lebanon",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Polish President Nawrocki Revokes Zelenskyy's Order of the White Eagle",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Army\u2019s Newest Unit Aims To \u201cOverwhelm\u201d Adversary With Drones In Pacific Fight",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Trump Considers Halting North Korea Nuclear Programs",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Lebanese PM Nawaf Salam Seeks Authority Over War and Peace Decisions",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Mideast Live Updates: Diplomats Work to Preserve Iran Deal With a New Lebanon Cease-Fire",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Army\u2019s Newest Unit Aims To \u201cOverwhelm\u201d Adversary With Drones In Pacific Fight\u00a0",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Iran says it will waive fees for Hormuz during 60 day negotiation period - Reuters",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
     }
 ]
