@@ -21,17 +21,23 @@
         "source": "MONITOR THE SITUATION",
         "title": "Russian Soldier Fires MANPADS at Ukrainian Drone in Moscow, Misses",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
         "title": "Hungary Blocks EU Clause on Accelerating Ukraine Accession",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Oil drifts lower as Strait of Hormuz reopens, focus shifts to demand outlook",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Vance no longer traveling to Switzerland tonight for U.S.-Iran talks, White House says",
+        "title": "EU leaders back stronger trade defences amid Chinese export surge",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
@@ -51,12 +57,6 @@
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     }
 ]
