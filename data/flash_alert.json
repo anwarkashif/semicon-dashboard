@@ -1,7 +1,19 @@
 [
     {
+        "source": "MONITOR THE SITUATION",
+        "title": "Ukraine Launches Attacks Toward Russia in Kursk Region",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "WAR MONITOR",
         "title": "Israel-Hezbollah fighting flares up as U.S.-Iran talks delayed",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Russia Deploys Military Assets to Moscow",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
@@ -12,33 +24,21 @@
         "threat_level": "CRITICAL"
     },
     {
+        "source": "WAR MONITOR",
+        "title": "Can US-Iran peace \u2018deal\u2019 survive Israeli bombing of Lebanon?",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "MONITOR THE SITUATION",
         "title": "Ukraine Fires HIMARS From Kharkiv Into Russia's Belgorod Region",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russia Claims Air Defenses Performed Well During Ukrainian Drone Attack on Moscow",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
-        "title": "US curbs Anthropic AI access, raising global concerns",
+        "title": "Lebanon Reports 18 Killed and 40 Injured in South",
         "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Russia Faces Cyber Security Certificates Revocation",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "HIGH"
     },
     {
@@ -49,14 +49,14 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "US-Iran talks postponed as Vance pulls out of Switzerland trip",
+        "title": "US curbs Anthropic AI access, raising global concerns",
         "url": "https://war-monitor.com/events",
-        "threat_level": "ELEVATED"
+        "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Strikes Mariupol With Drones, Hits Russian Logistics",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "HIGH"
     }
 ]
