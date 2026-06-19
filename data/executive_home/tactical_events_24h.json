@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israeli envoy says Israel committed to truce with Lebanon if...",
+        "Summary": "Israeli envoy says Israel committed to truce with Lebanon if Hezbollah does not breach it",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-envoy-says-israel-committed-truce-lebanon-if-hezbollah-does-not"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israel can\u2019t \u2018kill its way out\u2019 of every crisis \u2013 Vance (VID...",
+        "Summary": "Israel can\u2019t \u2018kill its way out\u2019 of every crisis \u2013 Vance (VIDEO)",
+        "Risk": "HIGH",
+        "Source": "https://www.rt.com/news/641809-netanyahu-israel-kill-way-out/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States, Iran",
+        "Action": "Signed peace deal, reopened Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Ukraine",
+        "Action": "Launched major drone attack on Moscow refinery.",
+        "Location": "Moscow, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Israel, Hezbollah",
+        "Action": "Engaged in cross-border clashes despite peace deal.",
+        "Location": "Lebanon, Israel",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States, Kazakhstan, G7",
+        "Action": "Intensified global race for critical minerals.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "US Air Force, General Atomics, Anduril",
+        "Action": "Awarded contracts for AI drone wingmen (CCA).",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "SpaceX, US National Reconnaissance Office",
+        "Action": "Launched intelligence-gathering satellites for US.",
+        "Location": "Space, United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "US defense ministry looking for $80bn to cover war on Iran c...",
         "Summary": "US defense ministry looking for $80bn to cover war on Iran costs: Report",
         "Risk": "HIGH",
@@ -25,13 +87,6 @@
         "Action": "Signed deal, reopened Strait of Hormuz.",
         "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Ukraine",
-        "Action": "Launched major drone attack on Moscow refinery.",
-        "Location": "Moscow, Russia",
-        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-19",
@@ -141,61 +196,6 @@
         "Actor": "United States",
         "Action": "Lifts maritime blockade, reopens Strait of Hormuz",
         "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Ukraine",
-        "Action": "Strikes Moscow oil refinery with drones",
-        "Location": "Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States",
-        "Action": "Awards contracts for AI-powered drone wingmen",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States",
-        "Action": "Warns ASML regarding China's access to chip tools",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Pirates",
-        "Action": "Increasing attacks on ships",
-        "Location": "Gulf of Aden",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Trump says war on Iran showed 'no limits' to his power",
-        "Summary": "Trump says war on Iran showed 'no limits' to his power",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-war-iran-showed-no-limits-his-power"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Explainer: How Trump's deal with Iran compares to Obama's",
-        "Summary": "Explainer: How Trump's deal with Iran compares to Obama's",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2067761812167180620"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, Iran",
-        "Action": "Signed peace deal, lifting Hormuz blockade",
-        "Location": "Middle East, Strait of Hormuz",
         "Risk": "CRITICAL"
     }
 ]
