@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "US defense ministry looking for $80bn to cover war on Iran c...",
+        "Summary": "US defense ministry looking for $80bn to cover war on Iran costs: Report",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/us-defense-ministry-looking-80bn-cover-war-iran-costs-report"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Gaza Health Ministry reveals Israeli operations in Gaza kill...",
+        "Summary": "Gaza Health Ministry reveals Israeli operations in Gaza killed at least 1,005 Palestinians since October cease-fire between Israel, Hamas",
+        "Risk": "HIGH",
+        "Source": "https://x.com/DailySabah/status/2067804624484982883"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States, Iran",
+        "Action": "Signed deal, reopened Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Ukraine",
+        "Action": "Launched major drone attack on Moscow refinery.",
+        "Location": "Moscow, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Huawei, SMIC (China)",
+        "Action": "Produced advanced Kirin 9030 Pro chip.",
+        "Location": "China",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "US Air Force, General Atomics, Anduril",
+        "Action": "Awarded first AI drone wingman production contracts.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Vietnam",
+        "Action": "Building pre-eminent sea power in Southeast Asia.",
+        "Location": "Southeast Asia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Poland, United States",
+        "Action": "Poland offers permanent US military base.",
+        "Location": "Poland, Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Vance postpones trip for US-Iran talks on Friday in Switzerl...",
         "Summary": "Vance postpones trip for US-Iran talks on Friday in Switzerland",
         "Risk": "HIGH",
@@ -25,13 +87,6 @@
         "Action": "Reached agreement; reopened Strait of Hormuz.",
         "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Ukraine",
-        "Action": "Launched major drone attack on Moscow refinery.",
-        "Location": "Moscow, Russia",
-        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-19",
@@ -141,61 +196,6 @@
         "Actor": "United States, Iran",
         "Action": "Signed peace deal, lifting Hormuz blockade",
         "Location": "Middle East, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Ukraine",
-        "Action": "Launched major drone attack on refinery",
-        "Location": "Moscow, Russia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "China",
-        "Action": "Expanding military presence, altering nuclear balance",
-        "Location": "Pacific Ocean, Indian Ocean, Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Pirates",
-        "Action": "Rising attacks threaten critical maritime security",
-        "Location": "Gulf of Aden",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Intel",
-        "Action": "Expanding semiconductor foundry amid sector boom",
-        "Location": "United States, Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Trump tells The Axios Show there are \"no limits\" to his powe...",
-        "Summary": "Trump tells The Axios Show there are \"no limits\" to his power after Iran war",
-        "Risk": "HIGH",
-        "Source": "https://x.com/axios/status/2067746046835323044"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "U.S. and Iranian officials are set to return to Switzerland ...",
-        "Summary": "U.S. and Iranian officials are set to return to Switzerland for peace talks. With Iran in control of the Strait of Hormuz, how much leverage does it have? Sky's international affairs editor @DominicWaghorn gives his analysis.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/SkyNews/status/2067745179058991599"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Iran",
-        "Action": "Gains control of crucial Strait of Hormuz",
-        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     }
 ]
