@@ -411,8 +411,8 @@ else:
                 .blob-1 { top: -40px; left: -10vw; width: 60vw; height: 280px; background: #1b60d4; animation-delay: 0s; }
                 .blob-2 { top: -20px; right: -10vw; width: 55vw; height: 260px; background: #7f3ab7; animation-delay: -2s; }
                 .blob-3 { top: 10px; left: 20vw; width: 60vw; height: 240px; background: #d44c5c; animation-delay: -4s; }
-                .blob-4 { top: 30px; right: 20vw; width: 50vw; height: 220px; background: #00e5ff; animation-delay: -1s; }
-                .blob-5 { top: -10px; left: 35vw; width: 55vw; height: 250px; background: #ffca28; animation-delay: -3.5s; }
+                .blob-4 { top: 30px; right: 20vw; width: 50vw; height: 220px; background: #FF272A; animation-delay: -1s; }
+                .blob-5 { top: -10px; left: 35vw; width: 55vw; height: 250px; background: #0ADD08; animation-delay: -3.5s; }
                 @keyframes floatWave { 0% { transform: translate(0, 0) scale(1); } 33% { transform: translate(6vw, 40px) scale(1.15); } 66% { transform: translate(-4vw, -20px) scale(0.85); } 100% { transform: translate(4vw, 30px) scale(1.1); } }
                 </style>
                 """, unsafe_allow_html=True
