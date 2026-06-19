@@ -19,44 +19,44 @@
     },
     {
         "source": "WAR MONITOR",
+        "title": "Live: Israel and Hezbollah agree to a ceasefire in Lebanon, officials say",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Iran Prepares Countermeasures Against US",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
         "title": "Russia Bombs Moscow For Two Days",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Drone Strikes Nova Poshta Warehouse in Zaporizhzhia City",
+        "title": "European Union Declines Mediation Role in Ukraine Peace Talks",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "UNICEF Reports 265 Children Killed in Gaza Since Ceasefire",
+        "title": "Ukraine and MBDA Sign Deal to Develop Neptune 2 Cruise Missile",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "\u2018Game Changer\u2019? Too Soon to Tell. But Ukraine Flexed in Striking Moscow.",
+        "title": "Ukraine Gives Belarus One Week to Remove Military Equipment",
         "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Iran Conditions IAEA Access on Nuclear Talks",
-        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     }
 ]
