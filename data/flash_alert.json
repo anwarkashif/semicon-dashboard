@@ -1,38 +1,38 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Soldier Fires MANPADS at Ukrainian Drone in Moscow, Misses",
+        "title": "US Commerce Secretary Raises Concerns Over ASML Machine Reaching China",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Pentagon\u2019s Ability To Supply Ukraine With More Patriot Interceptors Questioned By Congress (Updated)",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "US Southern Command Strikes Terrorist Vessel in Caribbean",
+        "title": "Pentagon Tells US Lawmakers It Needs $80 Billion for Iran War Costs",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "US tells ASML it's concerned one of its chipmaking tools may be in China, Bloomberg News reports - Reuters",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
         "title": "Philippines Spots New Chinese Research Vessel Near Scarborough Shoal",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russian Soldier Fires MANPADS at Ukrainian Drone in Moscow, Misses",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Hungary Blocks EU Clause on Accelerating Ukraine Accession",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Vance no longer traveling to Switzerland tonight for U.S.-Iran talks, White House says",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
@@ -43,20 +43,20 @@
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "ELEVATED"
+        "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Hungary Blocks EU Clause on Accelerating Ukraine Accession",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Iran President Pezeshkian Welcomes Qatar Role in US-Iran Deal",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "HIGH"
     }
 ]
