@@ -1,26 +1,20 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Trump Issues 60-Day Ultimatum to Iran on Nuclear Deal",
+        "title": "Russian Forces Advance Near Sloviansk, Ukraine Launches Drone Assault on Moscow",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "China Reclaims 1,450 Acres at Antelope Reef in South China Sea",
+        "title": "Hezbollah Rockets Israeli Evacuation Force in Southern Lebanon",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Russia Claims NATO to Train Armenian Military Against It",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Hezbollah Targets Israeli Tank in Lebanon",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "Trump Issues 60-Day Ultimatum to Iran on Nuclear Deal",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
@@ -30,33 +24,39 @@
         "threat_level": "CRITICAL"
     },
     {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "MONITOR THE SITUATION",
         "title": "US Drone Strikes Target Hill Near Aleppo, Syria",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Trump Threatens US Operation Against Cuba",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
         "source": "WAR MONITOR",
-        "title": "Lebanon Cease-Fire Bolsters U.S.-Iran Truce, After a Shaky Start",
+        "title": "Hegseth renews Nato criticism and says US will review presence in Europe",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Army\u2019s Newest Unit Aims To \u201cOverwhelm\u201d Adversary With Drones In Pacific Fight",
+        "title": "Ukraine Responds to Lukashenko Propagandists After Zelensky Ultimatum",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Russia Claims NATO to Train Armenian Military Against It",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "HIGH"
     }
 ]
