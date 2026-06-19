@@ -320,14 +320,31 @@ else:
 
         ticker_code = f"""
         <style>
-        .ticker-wrap {{ position: fixed; top: 60px; left: 0; width: 100vw; height: 42px; background-color: #050505; border: none !important; box-shadow: none !important; z-index: 990; overflow: hidden; display: flex; align-items: center; }}
+        .ticker-wrap {{ 
+            position: fixed; 
+            top: 60px; 
+            left: 0; 
+            width: 100vw; 
+            height: 42px; 
+            /* Frosted glass so the ambient glow bleeds through */
+            background-color: rgba(14, 17, 23, 0.35); 
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-top: 1px solid rgba(255, 255, 255, 0.03) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important; 
+            box-shadow: none !important; 
+            z-index: 990; 
+            overflow: hidden; 
+            display: flex; 
+            align-items: center; 
+        }}
         .block-container {{ padding-top: 110px !important; }}
         .ticker-move {{ display: flex; width: fit-content; animation: ticker {dynamic_duration}s linear infinite; }}
         .ticker-track {{ display: flex; white-space: nowrap; }}
         .ticker-move:hover {{ animation-play-state: paused; }}
         @keyframes ticker {{ 0% {{ transform: translate3d(0, 0, 0); }} 100% {{ transform: translate3d(-50%, 0, 0); }} }}
         .ticker-item {{ display: inline-block; margin-right: 60px; font-family: "Courier New", monospace; font-weight: bold; font-size: 14px; letter-spacing: 0.5px; }}
-        .ticker-item a {{ text-decoration: none; color: #ffffff !important; }}
+        .ticker-item a {{ text-decoration: none; color: #ffffff !important; text-shadow: 0 1px 4px rgba(0,0,0,0.8); }}
         .ticker-item a:hover {{ text-decoration: underline; opacity: 0.8; }}
         </style>
         <div class="ticker-wrap"><div class="ticker-move"><div class="ticker-track">{all_items_html}</div><div class="ticker-track">{all_items_html}</div></div></div>
@@ -368,6 +385,38 @@ else:
         selected_actor, view_selection = render_sidebar(
             dashboard_data, df_actions, raw_text, text_india, text_wa
         )
+
+        # ==========================================
+        # 🌌 GEMINI-STYLE AMBIENT GLOW HEADER
+        # ==========================================
+        target_glow_sections = [
+            "Executive Home", "Today's Snippet", "Weekly Tactical Brief", 
+            "Weekly Intelligence Brief", "West Asia Strategic Intel (Psyopoly)", 
+            "Archives"
+        ]
+        
+        if view_selection in target_glow_sections:
+            st.markdown(
+                """
+                <div class="gemini-ambient-container">
+                    <div class="gemini-blob blob-1"></div>
+                    <div class="gemini-blob blob-2"></div>
+                    <div class="gemini-blob blob-3"></div>
+                    <div class="gemini-blob blob-4"></div>
+                    <div class="gemini-blob blob-5"></div>
+                </div>
+                <style>
+                .gemini-ambient-container { position: fixed; top: 0; left: 0; width: 100vw; height: 350px; z-index: 0; pointer-events: none; overflow: hidden; mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 100%); }
+                .gemini-blob { position: absolute; filter: blur(75px); opacity: 0.7; border-radius: 50%; animation: floatWave 5.5s infinite alternate ease-in-out; mix-blend-mode: screen; }
+                .blob-1 { top: -40px; left: -10vw; width: 60vw; height: 280px; background: #1b60d4; animation-delay: 0s; }
+                .blob-2 { top: -20px; right: -10vw; width: 55vw; height: 260px; background: #7f3ab7; animation-delay: -2s; }
+                .blob-3 { top: 10px; left: 20vw; width: 60vw; height: 240px; background: #d44c5c; animation-delay: -4s; }
+                .blob-4 { top: 30px; right: 20vw; width: 50vw; height: 220px; background: #00e5ff; animation-delay: -1s; }
+                .blob-5 { top: -10px; left: 35vw; width: 55vw; height: 250px; background: #ffca28; animation-delay: -3.5s; }
+                @keyframes floatWave { 0% { transform: translate(0, 0) scale(1); } 33% { transform: translate(6vw, 40px) scale(1.15); } 66% { transform: translate(-4vw, -20px) scale(0.85); } 100% { transform: translate(4vw, 30px) scale(1.1); } }
+                </style>
+                """, unsafe_allow_html=True
+            )
 
         if view_selection != "West Asia Strategic Intel (Psyopoly)":
             render_ticker_tape()
