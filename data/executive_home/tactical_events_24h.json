@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Trump envoy Witkoff heads to Switzerland ahead of potential ...",
+        "Summary": "Trump envoy Witkoff heads to Switzerland ahead of potential Iran talks",
+        "Risk": "HIGH",
+        "Source": "https://x.com/axios/status/2068108384922894631"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "'All of Lebanon must burn,' Israeli minister Ben Gvir declar...",
+        "Summary": "'All of Lebanon must burn,' Israeli minister Ben Gvir declares",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/all-lebanon-must-burn-israeli-minister-ben-gvir-declares"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "US, Iran, Israel",
+        "Action": "Fragile US-Iran deal, Israeli strikes, Hormuz control",
+        "Location": "Middle East, Strait of Hormuz, Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "China",
+        "Action": "Tightens Indium export controls impacting global tech",
+        "Location": "Global Semiconductor Supply Chain",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States",
+        "Action": "Establishes new Indo-Pacific command, relocates drones",
+        "Location": "Indo-Pacific, Japan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Japan",
+        "Action": "Seeks G7 plan countering China's rare earth grip",
+        "Location": "Global Critical Mineral Supply Chain",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "SpaceX, National Reconnaissance Office",
+        "Action": "Launches intelligence satellites enhancing US surveillance capabilities",
+        "Location": "Low Earth Orbit",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Pirates",
+        "Action": "Aggressive pirate attacks threaten shipping lanes",
+        "Location": "Gulf of Oman, Arabian Sea",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran lost one of the central assets of its regional strategy...",
         "Summary": "Iran lost one of the central assets of its regional strategy: the presumption that war could be kept away from Iranian soil, writes Menahem Merhavy.",
         "Risk": "HIGH",
@@ -134,68 +196,6 @@
         "Actor": "Israel, Lebanon (Hezbollah), United States, Iran",
         "Action": "Intense conflict, ceasefire, stalled US-Iran talks",
         "Location": "Lebanon, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Iran",
-        "Action": "Asserts control, imposes new Hormuz transit rules",
-        "Location": "Strait of Hormuz",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Taiwan remains central to global semiconductor supply",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, Global Powers",
-        "Action": "Billions invested in AI, autonomous defense systems",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "China",
-        "Action": "Rapid AI advancement, tech exports, dual-use concerns",
-        "Location": "China, Europe, Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "How Iran's World Cup campaign has become an online battlegro...",
-        "Summary": "How Iran's World Cup campaign has become an online battleground for regime loyalists and dissidents",
-        "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2068018246679207958"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Report: American intelligence has warned that Netanyahu is e...",
-        "Summary": "Report: American intelligence has warned that Netanyahu is expected to try to sabotage the agreement with Iran",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Haaretz/status/2068016511583674722"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, Iran, Israel, Hezbollah",
-        "Action": "Fragile ceasefire agreed after regional escalation.",
-        "Location": "Lebanon, West Asia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Iran",
-        "Action": "Imposes new shipping fees, asserts chokepoint control.",
-        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     }
 ]
