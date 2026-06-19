@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Lebanon Cease-Fire Bolsters U.S.-Iran Truce, After a Shaky S...",
+        "Summary": "Lebanon Cease-Fire Bolsters U.S.-Iran Truce, After a Shaky Start",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/19/world/middleeast/lebanon-ceasefire-iran-truce.html"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The Jerusalem Municipality fined activists who planted prote...",
+        "Summary": "The Jerusalem Municipality fined activists who planted protest signs against defacing images of women",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2068054045474865584"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States, Iran, Israel",
+        "Action": "US-Iran talks falter, Israel strikes Lebanon.",
+        "Location": "Middle East, Strait of Hormuz, Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Taiwan, Global Tech Industry",
+        "Action": "Taiwan remains global nexus for advanced semiconductors.",
+        "Location": "Taiwan, Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Japan, G7, China, Canada",
+        "Action": "Nations scramble to secure critical rare earths.",
+        "Location": "Global, China, Myanmar",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States, Europe, Japan",
+        "Action": "Accelerating development of autonomous defense AI systems.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "China, Chinese Tech Companies",
+        "Action": "China expands AI capabilities, secures critical minerals.",
+        "Location": "China, Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Trump heads to Camp David as Iran talks stall",
         "Summary": "Trump heads to Camp David as Iran talks stall",
         "Risk": "HIGH",
@@ -111,6 +166,13 @@
     },
     {
         "Date": "2026-06-19",
+        "Actor": "Non-state actors, International Shipping",
+        "Action": "Rising pirate attacks threatening global maritime trade",
+        "Location": "Gulf of Aden",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-19",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
@@ -141,61 +203,6 @@
         "Actor": "United States, Japan, Poland, France",
         "Action": "Accelerating development of autonomous drone warfare",
         "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "China, Taiwan, United States",
-        "Action": "China's bullying Taiwan; US F-35 readiness concerns",
-        "Location": "Taiwan, Indo-Pacific",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States (SpaceX, NRO), Germany",
-        "Action": "Launching intelligence satellites; pursuing sovereign space capabilities",
-        "Location": "Global Space",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Non-state actors, International Shipping",
-        "Action": "Rising pirate attacks threatening global maritime trade",
-        "Location": "Gulf of Aden",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Four Israeli strikes reported in southern Lebanon after ceas...",
-        "Summary": "Four Israeli strikes reported in southern Lebanon after ceasefire implementation",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/four-israeli-strikes-reported-after-ceasefire-implementation"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "For Vance, Iran talks could shape political rise",
-        "Summary": "For Vance, Iran talks could shape political rise",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/vance-iran-talks-could-shape-political-rise"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Israel, Hezbollah, United States, Iran",
-        "Action": "Ceasefire agreed; US-Iran peace talks delayed.",
-        "Location": "Lebanon, Israel, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Global Shipping, Iran",
-        "Action": "Vital Strait of Hormuz reopens amidst mine risks.",
-        "Location": "Strait of Hormuz",
         "Risk": "HIGH"
     }
 ]
