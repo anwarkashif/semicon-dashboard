@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Vance postpones trip for US-Iran talks on Friday in Switzerl...",
+        "Summary": "Vance postpones trip for US-Iran talks on Friday in Switzerland",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/vance-postpones-trip-us-iran-talks-friday-switzerland"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Vance postpones trip to Switzerland for Iran talks",
+        "Summary": "Vance postpones trip to Switzerland for Iran talks",
+        "Risk": "HIGH",
+        "Source": "https://x.com/axios/status/2067791246051999993"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States, Iran",
+        "Action": "Reached agreement; reopened Strait of Hormuz.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Ukraine",
+        "Action": "Launched major drone attack on Moscow refinery.",
+        "Location": "Moscow, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States Air Force, General Atomics, Anduril",
+        "Action": "Awarded contracts for AI drone wingmen.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Vietnam, Australia, South Korea",
+        "Action": "Building significant naval power; exploring submarine plans.",
+        "Location": "Southeast Asia, Indo-Pacific",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Global Semiconductor Industry, RISC-V Ecosystem",
+        "Action": "Semiconductor market rallies; RISC-V standardizing for AI/Space.",
+        "Location": "Global",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "China, United States",
+        "Action": "Farm drones identified as potential national security threat.",
+        "Location": "China, Global agriculture",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Middle East Live: White House says Vance will not travel to ...",
         "Summary": "Middle East Live: White House says Vance will not travel to Switzerland Thursday for Iran talks",
         "Risk": "HIGH",
@@ -134,68 +196,6 @@
         "Actor": "Iran",
         "Action": "Gains control of crucial Strait of Hormuz",
         "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Ukraine",
-        "Action": "Launches major drone attack on Moscow",
-        "Location": "Moscow, Russia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "G7",
-        "Action": "Forms alliance for critical minerals independence",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Forecasts inevitable global semiconductor price increases",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Israel",
-        "Action": "Over 1,000 killed in Gaza post-ceasefire",
-        "Location": "Gaza",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "European Union",
-        "Action": "Extends Russia sanctions for twelve months",
-        "Location": "Europe",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran stood its ground, and Washington got nothing",
-        "Summary": "Iran stood its ground, and Washington got nothing",
-        "Risk": "HIGH",
-        "Source": "https://www.rt.com/news/641805-iran-stood-its-ground/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "World Brief: Israeli officials and U.S. lawmakers criticize ...",
-        "Summary": "World Brief: Israeli officials and U.S. lawmakers criticize the U.S.-Iran deal, U.S. Defense Secretary Pete Hegseth announces a review of troops in Europe, and Ukraine launches its largest drone bombardment on Moscow.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2067714023211077720"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "United States, Iran",
-        "Action": "Agree deal, lift blockade, reopen Hormuz Strait.",
-        "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL"
     }
 ]
