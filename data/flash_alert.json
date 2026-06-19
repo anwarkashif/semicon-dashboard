@@ -1,13 +1,13 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Iran Condemns Israeli Attacks on Lebanon, Warns US of Consequences",
+        "title": "Russian Su-35 Attempts to Shoot Down Ukrainian Aircraft Near Zaporizhzhia",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Iranian Media Calls for Closing Strait of Hormuz",
+        "title": "Israel Rejects Ceasefire After 4 Soldiers Killed",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -18,14 +18,14 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
+        "source": "CISA",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Russia Conducts Mass Draft Raids in Penza Region",
+        "title": "A statement by Iran\u2019s Khatam Al-Anbiyaa Central Command in the coming hours.",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
@@ -37,26 +37,26 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israel Rejects Ceasefire After 4 Soldiers Killed",
+        "title": "Israel Vows to Maintain Forces in Southern Lebanon",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "source": "MONITOR THE SITUATION",
+        "title": "Israel Accuses Hezbollah of Ceasefire Violation",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
         "title": "Iran Agrees to New UN Nuclear Inspections Amid Fragile Middle East Peace",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
+    },
+    {
+        "source": "CISA",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "ELEVATED"
     }
 ]
