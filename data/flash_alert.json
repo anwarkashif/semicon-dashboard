@@ -1,39 +1,51 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Smotrich Threatens to Open 'Gates of Hell' on Lebanon",
+        "title": "Drone Strike Hits Petrol Station in Zaporizhzhia, Ukraine",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Hezbollah Repels Israeli Attempt to Capture Ali al-Taher Hill",
+        "title": "Lack of US-Iran Oversight Threatens Nuclear Deal",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israel Strikes Hezbollah Infrastructure in Beqaa Valley",
+        "title": "UK F-35B Jets Deploy Aboard HMS Prince of Wales in High North",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Israeli Airstrike Kills Three in Lebanese Town of Jamaliyah",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Hezbollah Drone Strike Wounds 5 Israeli Soldiers in Southern Lebanon",
+        "title": "Russia Strikes Panama and St. Kitts Ships in Black Sea, Killing One",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ben Gvir Calls for Escalation in Lebanon, Says 'All of Lebanon Should Burn'",
+        "title": "Russian Strike on Pavlohrad Kills 8-Year-Old Girl",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russian Tu-22m3 Bombers Redeploy to Engels-2, Prepare for Missile and Drone Attack",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
+        "source": "WAR MONITOR",
+        "title": "Russia Faces Cyber Security Certificates Revocation",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Israel Strikes Hezbollah Targets in Bekaa Valley",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
@@ -46,17 +58,5 @@
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Dutch-Owned Firm in Turkey Ships Restricted Equipment to Russian Plants",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Rostec-Linked Firm Supplies Alloys for Su-34 and Kh-101 Used Against Ukrainian Civilians",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
     }
 ]
