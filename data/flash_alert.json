@@ -1,6 +1,12 @@
 [
     {
         "source": "MONITOR THE SITUATION",
+        "title": "Israeli Strikes Kill at Least 16 in Southern Lebanon",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "US Commerce Secretary Raises Concerns Over ASML Machine Reaching China",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
@@ -9,6 +15,12 @@
         "source": "MONITOR THE SITUATION",
         "title": "Pentagon Tells US Lawmakers It Needs $80 Billion for Iran War Costs",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
     },
     {
@@ -24,39 +36,27 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Hungary Blocks EU Clause on Accelerating Ukraine Accession",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
-    },
-    {
         "source": "WAR MONITOR",
-        "title": "Oil drifts lower as Strait of Hormuz reopens, focus shifts to demand outlook",
+        "title": "Ukraine urges EU to pressure Russia to end war before winter",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "EU leaders back stronger trade defences amid Chinese export surge",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "EU won\u2019t lift key Iran sanctions until formal nuclear deal reached",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "threat_level": "CRITICAL"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "EU leaders demand von der Leyen tools up against China",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Hungary Blocks EU Clause on Accelerating Ukraine Accession",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
     }
 ]
