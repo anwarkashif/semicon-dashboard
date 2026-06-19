@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Middle East Live: White House says Vance will not travel to ...",
+        "Summary": "Middle East Live: White House says Vance will not travel to Switzerland Thursday for Iran talks",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/middle-east/20260619-middle-east-live-white-house-says-vance-will-not-travel-to-switzerland-thursday-for-iran-talks"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "UN nuclear watchdog IAEA announces it was ready to begin def...",
+        "Summary": "UN nuclear watchdog IAEA announces it was ready to begin defining \"concrete steps\" needed to implement a US-Iran deal to end Middle East War",
+        "Risk": "HIGH",
+        "Source": "https://x.com/DailySabah/status/2067778147995484414"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States",
+        "Action": "Lifts maritime blockade, reopens Strait of Hormuz",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Ukraine",
+        "Action": "Strikes Moscow oil refinery with drones",
+        "Location": "Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States",
+        "Action": "Awards contracts for AI-powered drone wingmen",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States",
+        "Action": "Warns ASML regarding China's access to chip tools",
+        "Location": "China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Pirates",
+        "Action": "Increasing attacks on ships",
+        "Location": "Gulf of Aden",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Trump says war on Iran showed 'no limits' to his power",
         "Summary": "Trump says war on Iran showed 'no limits' to his power",
         "Risk": "HIGH",
@@ -39,13 +94,6 @@
         "Action": "Expanding military presence, altering nuclear balance",
         "Location": "Pacific Ocean, Indian Ocean, Global",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States Air Force",
-        "Action": "Awards contracts for AI-powered drone wingmen",
-        "Location": "United States",
-        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-19",
@@ -148,51 +196,6 @@
         "Actor": "United States, Iran",
         "Action": "Agree deal, lift blockade, reopen Hormuz Strait.",
         "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Israel",
-        "Action": "Strikes Lebanon, plans expanded occupation post-deal.",
-        "Location": "Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Ukraine",
-        "Action": "Launches major drone attack on Moscow refinery.",
-        "Location": "Moscow, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "United States, G7",
-        "Action": "Invest in rare earths, form critical minerals alliance.",
-        "Location": "Global, Latin America",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "China",
-        "Action": "Advances dual-use drones, revives Soviet space missiles.",
-        "Location": "China, United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "U.S. partners in the region know by now that the United Stat...",
-        "Summary": "U.S. partners in the region know by now that the United States was never the steward of stability and security it claimed to be, writes columnist @stevenacook.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2067699024887451877"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "United States",
-        "Action": "US lifts Iran maritime blockade, Hormuz reopens.",
-        "Location": "Strait of Hormuz, Iran",
         "Risk": "CRITICAL"
     }
 ]
