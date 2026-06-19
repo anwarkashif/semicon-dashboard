@@ -1,33 +1,21 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "UNICEF Reports 265 Children Killed in Gaza Since Ceasefire",
+        "title": "IAEA-Brokered Ceasefire Enables Repair of Key Power Line to Zaporizhzhia Nuclear Plant",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Iran Conditions IAEA Access on Nuclear Talks",
+        "title": "Iran Says Nuclear Program Status Quo Will Continue Until US Deal Finalized",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israel Activates Air Raid Alerts Over Hostile Aircraft",
+        "title": "Israel Shells Southern Lebanon, Breaking Ceasefire",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Hezbollah Drone Alerts Sound in Zarit, Northern Israel",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "US Senators Propose Using Frozen Russian Assets for Ukraine Military",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
@@ -36,27 +24,39 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "\u2018Game Changer\u2019? Too Soon to Tell. But Ukraine Flexed in Striking Moscow.",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Israel and Hezbollah Agree to Ceasefire",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
     },
     {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russian Drone Strikes Nova Poshta Warehouse in Zaporizhzhia City",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "UNICEF Reports 265 Children Killed in Gaza Since Ceasefire",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "\u2018Game Changer\u2019? Too Soon to Tell. But Ukraine Flexed in Striking Moscow.",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Iran Conditions IAEA Access on Nuclear Talks",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     }
 ]
