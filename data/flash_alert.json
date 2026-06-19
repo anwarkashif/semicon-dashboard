@@ -18,27 +18,27 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "source": "WAR MONITOR",
+        "title": "Extraordinary Footage From Moscow Under Heavy Ukrainian Aerial Attack",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Satellite Imagery Shows 7,000 Acres of Reef Destroyed in South China Sea",
+        "title": "Hezbollah Rockets Israeli Evacuation Force in Southern Lebanon",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
         "title": "US Drone Strikes Target Hill Near Aleppo, Syria",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Hegseth renews Nato criticism and says US will review presence in Europe",
-        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
@@ -51,12 +51,12 @@
         "source": "MONITOR THE SITUATION",
         "title": "Kronstadt Installs Modular Bomb Shelters Amid Anticipated Ukrainian Drone Attacks",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
+        "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russian Tu-95MS Bomber Redeploys to Olenya Airbase",
-        "url": "https://monitor-the-situation.com/",
+        "source": "WAR MONITOR",
+        "title": "Hegseth renews Nato criticism and says US will review presence in Europe",
+        "url": "https://war-monitor.com/events",
         "threat_level": "ELEVATED"
     }
 ]
