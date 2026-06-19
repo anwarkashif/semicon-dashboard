@@ -18,12 +18,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Hegseth renews Nato criticism and says US will review presence in Europe",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -31,8 +25,8 @@
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "CRITICAL"
     },
     {
@@ -43,20 +37,26 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Kronstadt Installs Modular Bomb Shelters Amid Anticipated Ukrainian Drone Attacks",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
         "title": "US Drone Strikes Target Hill Near Aleppo, Syria",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
+        "source": "WAR MONITOR",
+        "title": "Hegseth renews Nato criticism and says US will review presence in Europe",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Lebanon Cease-Fire Bolsters U.S.-Iran Truce, After a Shaky Start",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "HIGH"
     }
 ]
