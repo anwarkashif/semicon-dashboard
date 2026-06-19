@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "'Not solid': scepticism and hope among Iranians over US-Iran...",
+        "Summary": "'Not solid': scepticism and hope among Iranians over US-Iran plan",
+        "Risk": "HIGH",
+        "Source": "https://x.com/TheNationalNews/status/2067837737504293198"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The US lifted restrictions on all maritime traffic traveling...",
+        "Summary": "The US lifted restrictions on all maritime traffic traveling to and from Iranian territories, as Iran presented a new transit framework for vessels navigating the Strait of Hormuz, requiring ships to submit passage requests.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/RudawEnglish/status/2067836827101487591"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States, Iran",
+        "Action": "US lifted blockade, reopened Strait of Hormuz.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Ukraine",
+        "Action": "Drone attack targeted Moscow refinery, flights suspended.",
+        "Location": "Moscow, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States",
+        "Action": "Awarded contracts for first autonomous drone wingmen.",
+        "Location": "United States",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Memory market surged, semiconductor prices forecast to rise.",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "United States",
+        "Action": "Launched intelligence-gathering satellites for national reconnaissance office.",
+        "Location": "California, United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-19",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israeli envoy says Israel committed to truce with Lebanon if...",
         "Summary": "Israeli envoy says Israel committed to truce with Lebanon if Hezbollah does not breach it",
         "Risk": "HIGH",
@@ -141,61 +196,6 @@
         "Actor": "United States, Iran",
         "Action": "Reached agreement; reopened Strait of Hormuz.",
         "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States Air Force, General Atomics, Anduril",
-        "Action": "Awarded contracts for AI drone wingmen.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Vietnam, Australia, South Korea",
-        "Action": "Building significant naval power; exploring submarine plans.",
-        "Location": "Southeast Asia, Indo-Pacific",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Global Semiconductor Industry, RISC-V Ecosystem",
-        "Action": "Semiconductor market rallies; RISC-V standardizing for AI/Space.",
-        "Location": "Global",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "China, United States",
-        "Action": "Farm drones identified as potential national security threat.",
-        "Location": "China, Global agriculture",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Middle East Live: White House says Vance will not travel to ...",
-        "Summary": "Middle East Live: White House says Vance will not travel to Switzerland Thursday for Iran talks",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/middle-east/20260619-middle-east-live-white-house-says-vance-will-not-travel-to-switzerland-thursday-for-iran-talks"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "UN nuclear watchdog IAEA announces it was ready to begin def...",
-        "Summary": "UN nuclear watchdog IAEA announces it was ready to begin defining \"concrete steps\" needed to implement a US-Iran deal to end Middle East War",
-        "Risk": "HIGH",
-        "Source": "https://x.com/DailySabah/status/2067778147995484414"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States",
-        "Action": "Lifts maritime blockade, reopens Strait of Hormuz",
-        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     }
 ]
