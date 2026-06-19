@@ -1,13 +1,19 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israeli Strikes Kill at Least 16 in Southern Lebanon",
+        "title": "Port of Mariupol Attacked",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "US Commerce Secretary Raises Concerns Over ASML Machine Reaching China",
+        "title": "BARS Missile-Drones Deployed Over Moscow",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Israeli Strikes Kill at Least 16 in Southern Lebanon",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -18,6 +24,18 @@
         "threat_level": "CRITICAL"
     },
     {
+        "source": "MONITOR THE SITUATION",
+        "title": "US Commerce Secretary Raises Concerns Over ASML Machine Reaching China",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Cruise Missile Strike Hits Kharkiv",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -25,38 +43,20 @@
     },
     {
         "source": "MONITOR THE SITUATION",
+        "title": "UK Announces Large Aid Package for Ukraine",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "Philippines Spots New Chinese Research Vessel Near Scarborough Shoal",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russian Soldier Fires MANPADS at Ukrainian Drone in Moscow, Misses",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Ukraine urges EU to pressure Russia to end war before winter",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "EU leaders demand von der Leyen tools up against China",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Hungary Blocks EU Clause on Accelerating Ukraine Accession",
-        "url": "https://monitor-the-situation.com/",
         "threat_level": "ELEVATED"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "\u201cWomen are in fear day and night\u201d: Untold numbers suffer conflict-related sexual violence as crisis grips South Sudan - ReliefWeb",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
     }
 ]
