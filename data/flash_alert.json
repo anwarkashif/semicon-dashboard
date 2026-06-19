@@ -1,62 +1,62 @@
 [
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Israeli Airstrike Kills Three in Lebanese Town of Jamaliyah",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
         "source": "WAR MONITOR",
         "title": "Israel-Hezbollah fighting flares up as U.S.-Iran talks delayed",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Lack of US-Iran Oversight Threatens Nuclear Deal",
-        "url": "https://monitor-the-situation.com/",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Strikes Mariupol With Drones, Hits Russian Logistics",
+        "title": "Ukraine Fires HIMARS From Kharkiv Into Russia's Belgorod Region",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russia Claims Air Defenses Performed Well During Ukrainian Drone Attack on Moscow",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Russia Reports Drones Flying Towards Moscow",
+        "title": "US curbs Anthropic AI access, raising global concerns",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Russia Faces Cyber Security Certificates Revocation",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "source": "MONITOR THE SITUATION",
+        "title": "Russian MLRS Shelling Kills 3 Civilians in Kramatorsk",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
         "title": "US-Iran talks postponed as Vance pulls out of Switzerland trip",
         "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Oil prices rise as Lebanon fighting erupts and Hormuz traffic still slow",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
+        "threat_level": "ELEVATED"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian S-400 Fires at Ukrainian Jet Over Donetsk Oblast",
+        "title": "Ukraine Strikes Mariupol With Drones, Hits Russian Logistics",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
+        "threat_level": "ELEVATED"
     }
 ]
