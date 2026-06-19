@@ -7,7 +7,19 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Tu-22m3 Bombers Redeploy to Engels-2, Prepare for Missile and Drone Attack",
+        "title": "Hezbollah Repels Israeli Attempt to Capture Ali al-Taher Hill",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Israel Strikes Hezbollah Infrastructure in Beqaa Valley",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Hezbollah Drone Strike Wounds 5 Israeli Soldiers in Southern Lebanon",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -18,16 +30,22 @@
         "threat_level": "CRITICAL"
     },
     {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russian Tu-22m3 Bombers Redeploy to Engels-2, Prepare for Missile and Drone Attack",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Cruise Missile Strike Hits Kharkiv",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Hezbollah Repels Israeli Attempt to Capture Ali al-Taher Hill",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
@@ -39,24 +57,6 @@
         "source": "MONITOR THE SITUATION",
         "title": "Rostec-Linked Firm Supplies Alloys for Su-34 and Kh-101 Used Against Ukrainian Civilians",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Drone Attack Damages Oil Pump Station in Nizhny Novgorod Region",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Russia Faces Cyber Security Certificates Revocation",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Cruise Missile Strike Hits Kharkiv",
-        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     }
 ]
