@@ -1,13 +1,13 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Forces Advance Near Sloviansk, Ukraine Launches Drone Assault on Moscow",
+        "title": "Hezbollah Fires Rocket Barrage at Northern Israel",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Hezbollah Rockets Israeli Evacuation Force in Southern Lebanon",
+        "title": "Russian Forces Advance Near Sloviansk, Ukraine Launches Drone Assault on Moscow",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -21,12 +21,6 @@
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "CRITICAL"
     },
     {
@@ -48,15 +42,21 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Lebanon Cease-Fire Bolsters U.S.-Iran Truce, After a Shaky Start",
-        "url": "https://war-monitor.com/events",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
+        "source": "MONITOR THE SITUATION",
+        "title": "Kronstadt Installs Modular Bomb Shelters Amid Anticipated Ukrainian Drone Attacks",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russian Tu-95MS Bomber Redeploys to Olenya Airbase",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
     }
 ]
