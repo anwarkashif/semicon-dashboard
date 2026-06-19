@@ -1,14 +1,26 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Su-35 Attempts to Shoot Down Ukrainian Aircraft Near Zaporizhzhia",
+        "title": "Israel Activates Air Raid Alerts Over Hostile Aircraft",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israel Rejects Ceasefire After 4 Soldiers Killed",
+        "title": "Hezbollah Drone Alerts Sound in Zarit, Northern Israel",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Russia Bombs Moscow For Two Days",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Israel Continues Operations Despite Ceasefire",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,21 +30,21 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "A statement by Iran\u2019s Khatam Al-Anbiyaa Central Command in the coming hours.",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "Ukraine Spots Russian Shahed Launch Positions at Donetsk Airport",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Afghanistan strikes targets in Pakistan, raising cross-border tension",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "Iran Conditions Final Nuclear Agreement on US MoU Implementation",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
@@ -42,21 +54,9 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Israel Accuses Hezbollah of Ceasefire Violation",
-        "url": "https://monitor-the-situation.com/",
+        "source": "WAR MONITOR",
+        "title": "\u2018Game Changer\u2019? Too Soon to Tell. But Ukraine Flexed in Striking Moscow.",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Iran Agrees to New UN Nuclear Inspections Amid Fragile Middle East Peace",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
-    },
-    {
-        "source": "CISA",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "ELEVATED"
     }
 ]
