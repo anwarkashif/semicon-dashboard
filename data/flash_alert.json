@@ -1,20 +1,14 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Iran Closes Strait of Hormuz After Israeli Strikes on Lebanon",
+        "title": "Iran Seizes Control of Both Sides of Strait of Hormuz",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "4 IDF Soldiers Killed, 5 Wounded in Overnight Hezbollah Attacks in Southern Lebanon",
+        "title": "Israeli Bombings Hit Southern Lebanese Villages, Smoke Billows",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Russia Deploys Military Assets to Moscow",
-        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
@@ -24,20 +18,26 @@
         "threat_level": "CRITICAL"
     },
     {
+        "source": "WAR MONITOR",
+        "title": "Lebanon Reports 18 Killed and 40 Injured in South",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Russia Deploys Military Assets to Moscow",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Drone Attacks Recorded in Sevastopol, Crimea",
+        "title": "Ukrainian Forces Hold Positions East of Rai-Oleksandrivka, Russian Forces Infiltrate West",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Launches Attacks Toward Russia in Kursk Region",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Israel Warns It Must Prepare to Act Alone as US Loses Interest in Iran",
+        "title": "Hezbollah Vows to Defend Land, People Against Israeli Attacks",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -48,14 +48,14 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "US curbs Anthropic AI access, raising global concerns",
-        "url": "https://war-monitor.com/events",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "AMTI Launches Island Tracker for High-Res Satellite Imagery of South China Sea",
+        "title": "Italy Hosts US Nuclear Weapons Under NATO Agreement",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "ELEVATED"
     }
