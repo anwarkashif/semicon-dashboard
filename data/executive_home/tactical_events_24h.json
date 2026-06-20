@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Donald Trump has unveiled the new Air Force One, an upgraded...",
+        "Summary": "Donald Trump has unveiled the new Air Force One, an upgraded Boeing 747 gifted by Qatar that has been converted into the official US presidential aircraft",
+        "Risk": "HIGH",
+        "Source": "https://x.com/SkyNews/status/2068290582762471796"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Landmark US-Iran peace deal halts devastating 5-week war, re...",
+        "Summary": "Landmark US-Iran peace deal halts devastating 5-week war, reopens critical shipping routes, but postponed implementation talks, lingering distrust, warnings from both Washington, Tehran underscore how fragile path to lasting peace remains",
+        "Risk": "HIGH",
+        "Source": "https://x.com/DailySabah/status/2068287882213662956"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "US, Iran, Israel, Hezbollah",
+        "Action": "Fragile peace deal jeopardized by conflict.",
+        "Location": "West Asia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Iran",
+        "Action": "Asserts control over vital Strait of Hormuz.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States (Pentagon)",
+        "Action": "Requests $80 billion for potential Iran war.",
+        "Location": "United States",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "China",
+        "Action": "Vows more sovereignty surveys east of Taiwan.",
+        "Location": "East of Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "EU",
+        "Action": "Prepares tariffs on Chinese electric vehicles.",
+        "Location": "Europe, China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Taiwan's critical centrality in semiconductor supply chains.",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "US-Iran ceasefire negociations underway in Switzerland",
         "Summary": "US-Iran ceasefire negociations underway in Switzerland",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "At least 12 dead including a Lebanese army soldier in Israeli strikes, according to our correspondent in South Lebanon.",
         "Risk": "HIGH",
         "Source": "https://x.com/LOrientLeJour/status/2068257948653019548"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States, Iran, Israel",
-        "Action": "US-Iran talks stalled amid Israeli strikes.",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Iran",
-        "Action": "Iran asserts control over Strait of Hormuz.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "China, Japan",
-        "Action": "China resumes critical gallium exports to Japan.",
-        "Location": "China, Japan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Taiwan",
-        "Action": "Taiwan maintains critical global semiconductor supply dominance.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Russia should be in G8 \u2013 Trump",
-        "Summary": "Russia should be in G8 \u2013 Trump",
-        "Risk": "HIGH",
-        "Source": "https://www.rt.com/news/641895-russia-should-be-g8-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Palestinians in Gaza say bank account closures cut off acces...",
-        "Summary": "Palestinians in Gaza say bank account closures cut off access to vital funds",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/news/palestinians-gaza-say-bank-account-closures-cut-access-vital-funds"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Iran",
-        "Action": "Asserts control over critical shipping chokepoint.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States (Pentagon)",
-        "Action": "Requests $80 billion for ongoing Iran conflict.",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
     }
 ]
