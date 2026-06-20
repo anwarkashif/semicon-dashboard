@@ -1,51 +1,33 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "UK Unveils Three Long-Range Strike Missile Prototypes for Ukraine Under Project Brakestop",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russian Source Discusses Zaporizhzhia Nuclear Power Plant Shutdown",
+        "title": "US Deploys E-3G Sentry AWACS to Prince Sultan Air Base, Saudi Arabia",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Source Advocates Guerrilla Sabotage in Ukraine",
+        "title": "Israel Breaches Gaza Ceasefire, Media Office Reports",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Indonesia Explores Transit Fee Options in Malacca Strait",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "ELEVATED"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russian Source Predicts Improved Strikes on Ukrainian Targets",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Verum Regnum Doubts Russia's Ability to 'Fight for Real'",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "WATCH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "EXCLUSIVE: Iran's Revolutionary Guards set up covert Iraqi cells to attack Gulf neighbors, sources say - Reuters",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Family, including two daughters, killed in Israeli strikes on Gaza",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
         "title": "Two roadside bombs kill at least seven in northwestern Pakistan",
         "url": "https://war-monitor.com/events",
-        "threat_level": "ELEVATED"
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Family, including two daughters, killed in Israeli strikes on Gaza",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
@@ -54,9 +36,27 @@
         "threat_level": "ELEVATED"
     },
     {
+        "source": "WAR MONITOR",
+        "title": "U.S. strike on an alleged drug boat kills 3 in the eastern Pacific Ocean",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "EXCLUSIVE: Iran's Revolutionary Guards set up covert Iraqi cells to attack Gulf neighbors, sources say - Reuters",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "HIGH"
     }
 ]
