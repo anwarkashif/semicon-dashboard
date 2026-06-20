@@ -1,6 +1,12 @@
 [
     {
         "source": "MONITOR THE SITUATION",
+        "title": "Ukraine Strikes Tavricheskaya Power Plant in Crimea",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "Pro-Ukrainian Partisans Sabotage Electric Substation in Southern Russia",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
@@ -12,15 +18,9 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Hezbollah Fires Rocket Barrage at Northern Israel",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "source": "WAR MONITOR",
+        "title": "EXCLUSIVE: Iran's Revolutionary Guards set up covert Iraqi cells to attack Gulf neighbors, sources say - Reuters",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
@@ -30,26 +30,20 @@
         "threat_level": "CRITICAL"
     },
     {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "UKMTO Defies Strait of Hormuz Order, Calls for US-Backed Route",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
         "source": "MONITOR THE SITUATION",
         "title": "Russian Forces Advance in Five Areas Near Dobropillya, Donetsk/Dnipropetrovsk Oblasts",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Drone Strikes Russian Fuel Tanker on Southern Front",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Launches Database of Russian Weapons Technical Data for Allies",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -57,6 +51,12 @@
         "source": "WAR MONITOR",
         "title": "China tightens indium export checks as AI demand increases - Reuters",
         "url": "https://war-monitor.com/events",
-        "threat_level": "ELEVATED"
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
+        "threat_level": "HIGH"
     }
 ]
