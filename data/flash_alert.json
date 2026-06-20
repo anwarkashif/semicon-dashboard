@@ -1,5 +1,35 @@
 [
     {
+        "source": "MONITOR THE SITUATION",
+        "title": "Iran Commander Warns Israel Will Be Caught in Gaza Flood",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Israeli Airstrikes Kill 12 Across Lebanon Despite Ceasefire",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Railway Bridge Destroyed in Crimea",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Satellite Images Confirm Damage to Russian Oil Pumping Station in Crimea",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Family, including two daughters, killed in Israeli strikes on Gaza",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "WAR MONITOR",
         "title": "EXCLUSIVE: Iran's Revolutionary Guards set up covert Iraqi cells to attack Gulf neighbors, sources say - Reuters",
         "url": "https://war-monitor.com/events",
@@ -13,13 +43,7 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israeli Airstrikes Kill Five in Nabatieh Despite Ceasefire",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Railway Bridge Destroyed in Crimea",
+        "title": "Ukraine Strikes Russian Fuel Depot in Bakhchysarai, Crimea",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -30,33 +54,9 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Iran Commander Warns Israel Will Be Caught in Gaza Flood",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "British Army Acquires New Drone for NATO Battlegroup in Estonia",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
-        "threat_level": "ELEVATED"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Trans-Saharan Gas Pipeline: an African dream that could reshape world energy markets",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "WATCH"
-    },
-    {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "WATCH"
+        "threat_level": "HIGH"
     }
 ]
