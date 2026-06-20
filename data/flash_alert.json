@@ -1,7 +1,7 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israeli Airstrike Hits Residential Building in Gaza City",
+        "title": "Israel Raises Military Readiness Amid Possible US-Iran Agreement Collapse",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -18,15 +18,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "source": "WAR MONITOR",
+        "title": "Extraordinary Footage From Moscow Under Heavy Ukrainian Aerial Attack",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
     },
     {
@@ -37,26 +37,26 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Recaptures Positions Near Orikhiv as Russia Stabilizes Zaporizhzhia Front",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
         "title": "Ukrainian Drone Strikes Russian Fuel Tanker on Southern Front",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "AMTI Releases Updated Map of South China Sea Energy Blocks",
+        "title": "Kronstadt Installs Modular Bomb Shelters Amid Anticipated Ukrainian Drone Attacks",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
+        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Hegseth renews Nato criticism and says US will review presence in Europe",
+        "title": "Hezbollah Repels Israeli Advance Near Ali al-Taher Hill",
         "url": "https://war-monitor.com/events",
-        "threat_level": "ELEVATED"
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "HIGH"
     }
 ]
