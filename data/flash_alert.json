@@ -6,9 +6,9 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Trump Threatens US Tolls in Strait of Hormuz if Iran Deal Not Reached",
-        "url": "https://monitor-the-situation.com/",
+        "source": "WAR MONITOR",
+        "title": "Ukraine Warns of Increased Threats Tonight and in Coming Days",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
@@ -25,7 +25,7 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Drone Strikes Passenger Vehicle in South Darfur, Kills Nine",
+        "title": "Trump Threatens US Tolls in Strait of Hormuz if Iran Deal Not Reached",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -37,26 +37,26 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Israel Announces Deaths of Two Soldiers",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
         "title": "Syrian Troops Attacked by ISIS in Aleppo",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Lebanese turtle conservationist Mona Khalil killed by Israeli strike",
+        "title": "Iran negotiators head for Switzerland but Lebanon fighting continues - Reuters",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Ukraine Warns of Increased Threats Tonight and in Coming Days",
-        "url": "https://war-monitor.com/events",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Drone Strikes Passenger Vehicle in South Darfur, Kills Nine",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     }
 ]
