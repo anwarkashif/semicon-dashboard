@@ -6,9 +6,9 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "source": "MONITOR THE SITUATION",
+        "title": "Iran's IRGC Navy Declares Strait of Hormuz Closed After Israeli Strikes on Lebanon",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
@@ -19,8 +19,20 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Israel Engages Militants in Northern Palestine",
+        "title": "Russian Forces Advance in Lyman",
         "url": "https://war-monitor.com/events",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "CRITICAL"
     },
     {
@@ -31,7 +43,7 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Iran Sends Delegation Led by Ghalibaf to Switzerland for US Talks",
+        "title": "Russia Central Bank Warns Inflation Inevitable Due to Fuel Shortages",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -43,19 +55,7 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Iran warns of \u2018reciprocal action\u2019 if US doesn\u2019t honour MOU commitments",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Ukraine Targets Asian Market with Drones",
+        "title": "Israel Engages Militants in Northern Palestine",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     }
