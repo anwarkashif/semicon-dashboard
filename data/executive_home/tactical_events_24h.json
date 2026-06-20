@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "#Lebanon | Mufti Deriane warns against \u201cthose who want to dr...",
+        "Summary": "#Lebanon | Mufti Deriane warns against \u201cthose who want to drag Syria into a conflict against Hezbollah\u201d in Lebanon",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2068389787082338555"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "US-Iran talks to kick off Sunday in Switzerland, says Pakist...",
+        "Summary": "US-Iran talks to kick off Sunday in Switzerland, says Pakistan",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/2026/6/20/us-iran-talks-to-kick-off-sunday-in-switzerland-says?traffic_source=rss"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Iran",
+        "Action": "Recloses critical oil shipping chokepoint",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States, Iran",
+        "Action": "Begin peace talks amidst regional tensions",
+        "Location": "Switzerland",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Israel",
+        "Action": "Conducts military strikes in southern Lebanon",
+        "Location": "Lebanon",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "Establishes new Army Indo-Pacific multi-domain command",
+        "Location": "Indo-Pacific",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Emphasizes Taiwan's critical role in chip production",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran shuts Strait of Hormuz as Israel tests MOU with Lebanon...",
         "Summary": "Iran shuts Strait of Hormuz as Israel tests MOU with Lebanon strikes",
         "Risk": "HIGH",
@@ -141,61 +196,6 @@
         "Actor": "Iran",
         "Action": "Closes Strait of Hormuz due to Israeli strikes.",
         "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Taiwan",
-        "Action": "Reinforces defense; remains critical semiconductor hub.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Global Defense Industry",
-        "Action": "Rapidly invests in autonomous AI-driven weapon systems.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States",
-        "Action": "Restructures military commands, deepens Indo-Pacific focus.",
-        "Location": "Indo-Pacific",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "China",
-        "Action": "Increases assertiveness in South China Sea and Taiwan.",
-        "Location": "South China Sea, Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israel strikes Lebanon despite ceasefire, at least 16 killed",
-        "Summary": "Israel strikes Lebanon despite ceasefire, at least 16 killed",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/israel-strikes-lebanon-despite-ceasefire-at-least-16-killed"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "NGOs in Lebanon denounce Israeli attacks on medics amid ceas...",
-        "Summary": "NGOs in Lebanon denounce Israeli attacks on medics amid ceasefire",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/ngos-in-lebanon-denounce-israeli-attacks-on-medics-amid-ceasefire"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Iran, United States",
-        "Action": "New US-Iran deal lifts oil sanctions.",
-        "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL"
     }
 ]
