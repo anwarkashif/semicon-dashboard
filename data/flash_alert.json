@@ -1,6 +1,12 @@
 [
     {
         "source": "MONITOR THE SITUATION",
+        "title": "Israeli Airstrikes Kill Five in Nabatieh Despite Ceasefire",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "Railway Bridge Destroyed in Crimea",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
@@ -12,26 +18,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Israel Kills Lebanese Soldier in Strike on South Lebanon",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "UKMTO Defies Strait of Hormuz Order, Calls for US-Backed Route",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
         "source": "WAR MONITOR",
         "title": "EXCLUSIVE: Iran's Revolutionary Guards set up covert Iraqi cells to attack Gulf neighbors, sources say - Reuters",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Iran Warns Israel Over Lebanon Escalation",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
@@ -42,10 +30,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "CRITICAL"
+        "source": "WAR MONITOR",
+        "title": "Family, including two daughters, killed in Israeli strikes on Gaza",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Germany Evaluates Ukrainian-Made Cruise Missiles for Long-Range Arsenal",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "China Expands Oil and Gas Operations in East China Sea, Building Three New Structures",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
@@ -54,9 +54,9 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "China Expands Oil and Gas Operations in East China Sea, Building Three New Structures",
-        "url": "https://monitor-the-situation.com/",
+        "source": "WAR MONITOR",
+        "title": "Iran Warns Israel Over Lebanon Escalation",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     }
 ]
