@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "There is a warning hidden among these things: the obsession ...",
+        "Summary": "There is a warning hidden among these things: the obsession that attacked Germany may take hold of another nation",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2068410146519216359"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israeli strike kills journalist in central Gaza",
+        "Summary": "Israeli strike kills journalist in central Gaza",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/news/israeli-strike-kills-journalist-central-gaza"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Iran",
+        "Action": "Announces Strait of Hormuz closure amid tensions.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "Pentagon seeks $80 billion for Iran war expenses.",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "Discusses potential AI export control policies.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "China",
+        "Action": "Develops advanced AI applications for undersea warfare.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Europe",
+        "Action": "Accelerates defense rearmament, focusing on drones.",
+        "Location": "Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "#Lebanon | Mufti Deriane warns against \u201cthose who want to dr...",
         "Summary": "#Lebanon | Mufti Deriane warns against \u201cthose who want to drag Syria into a conflict against Hezbollah\u201d in Lebanon",
         "Risk": "HIGH",
@@ -140,61 +195,6 @@
         "Date": "2026-06-20",
         "Actor": "Iran",
         "Action": "Closes Strait of Hormuz over Israeli strikes.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States (Pentagon)",
-        "Action": "Requests $80B for potential Iran war expenses.",
-        "Location": "West Asia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Israel",
-        "Action": "Kills 29 in Lebanon amid ceasefire violations.",
-        "Location": "Lebanon",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Taiwan",
-        "Action": "Establishes fourth unmanned systems battalion near PRC.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "D-Wave Quantum / United States",
-        "Action": "Secures $100M federal LOI for quantum computing.",
-        "Location": "United States",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran to travel to Switzerland to demand US commitments imple...",
-        "Summary": "Iran to travel to Switzerland to demand US commitments implemented, including Lebanon ceasefire",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-travel-switzerland-demand-us-commitments-implemented-including"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran says it is closing the vital Strait of Hormuz after wha...",
-        "Summary": "Iran says it is closing the vital Strait of Hormuz after what it described as Israeli ceasefire violations in Lebanon and a failure by the US to implement a tentative agreement to end the war. Follow live updates.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/cnnbrk/status/2068332168007315701"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Iran",
-        "Action": "Closes Strait of Hormuz due to Israeli strikes.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     }
