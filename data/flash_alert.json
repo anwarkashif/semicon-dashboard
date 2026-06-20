@@ -3,7 +3,7 @@
         "source": "MONITOR THE SITUATION",
         "title": "Ukraine Launches Database of Russian Weapons Technical Data for Allies",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
@@ -15,23 +15,17 @@
         "source": "MONITOR THE SITUATION",
         "title": "Russian Forces Advance in Five Areas Near Dobropillya, Donetsk/Dnipropetrovsk Oblasts",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
         "title": "Hezbollah Fires Rocket Barrage at Northern Israel",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Drone Strikes Russian Fuel Tanker on Southern Front",
-        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Recaptures Positions Near Orikhiv as Russia Stabilizes Zaporizhzhia Front",
+        "title": "Ukrainian Drone Strikes Russian Fuel Tanker on Southern Front",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -45,7 +39,7 @@
         "source": "WAR MONITOR",
         "title": "Extraordinary Footage From Moscow Under Heavy Ukrainian Aerial Attack",
         "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
@@ -57,6 +51,12 @@
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "HIGH"
     }
 ]
