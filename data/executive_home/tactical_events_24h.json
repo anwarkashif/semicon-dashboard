@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "\u2018It\u2019s a big mistake\u2019: Israelis feel betrayed and angry after...",
+        "Summary": "\u2018It\u2019s a big mistake\u2019: Israelis feel betrayed and angry after Iran peace deal",
+        "Risk": "HIGH",
+        "Source": "https://www.theguardian.com/world/2026/jun/20/israelis-betrayed-angry-after-iran-peace-deal-donald-trump"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "#Diplomacy | Qatar is trying to secure a ceasefire: what wil...",
+        "Summary": "#Diplomacy | Qatar is trying to secure a ceasefire: what will Netanyahu do? By @mounir_rabih \u00e9ch\u00e9r-un-cessez-le-feu-que-va-faire-netanyahu-.html",
+        "Risk": "HIGH",
+        "Source": "https://x.com/LOrientLeJour/status/2068197152233566506"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Iran",
+        "Action": "Asserts control, issues new transit rules.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States, Iran, Israel",
+        "Action": "US-Iran talks postponed after Israeli strikes.",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "Pentagon requests $80B for potential Iran war.",
+        "Location": "Middle East",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "US Army launches new Indo-Pacific command.",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Japan, G7",
+        "Action": "Japan seeks G7 rare earth price floors.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "China, United States",
+        "Action": "China's farm drones pose US security risk.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "No one prepared me for the attack I received when I announce...",
         "Summary": "No one prepared me for the attack I received when I announced that I wanted to surrender my dog",
         "Risk": "HIGH",
@@ -132,64 +194,5 @@
         "Summary": "Woman killed in Israeli strike on Gaza City apartment, report says",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/woman-killed-israeli-strike-gaza-city-apartment-report-says"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States, Iran",
-        "Action": "Reached agreement, ended Strait of Hormuz blockade",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Israel, Lebanon",
-        "Action": "Agreed to new ceasefire, Israeli troops remain",
-        "Location": "Lebanon",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Japan, G7",
-        "Action": "Seeks G7 action on China's rare earth grip",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Global Defense Industry",
-        "Action": "Billions poured into autonomous AI warfare systems",
-        "Location": "Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Global Semiconductor Industry, AI developers",
-        "Action": "AI reshaping semiconductor landscape, driving innovation",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States",
-        "Action": "Establishes new Indo-Pacific command, relocates assets",
-        "Location": "Indo-Pacific",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "How Iran's World Cup campaign has become an online battlegro...",
-        "Summary": "How Iran's World Cup campaign has become an online battleground for regime loyalists and dissidents",
-        "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2068146943319060682"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States, Iran",
-        "Action": "US-Iran deal reopens Hormuz, increases oil flow.",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
     }
 ]
