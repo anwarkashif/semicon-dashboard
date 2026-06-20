@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Trump says Italy's Meloni asked 'over and over' for a photo ...",
+        "Summary": "Trump says Italy's Meloni asked 'over and over' for a photo with him as diplomatic spat escalates",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/middle-east/20260620-trump-says-italy-s-meloni-asked-over-and-over-for-a-photo-with-him-as-diplomatic-spat-escalates"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Paris police arrest 20 as demonstrators defy ban on Iran opp...",
+        "Summary": "Paris police arrest 20 as demonstrators defy ban on Iran opposition rally",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2068333279292412167"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Iran",
+        "Action": "Closes Strait of Hormuz over Israeli strikes.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States (Pentagon)",
+        "Action": "Requests $80B for potential Iran war expenses.",
+        "Location": "West Asia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Israel",
+        "Action": "Kills 29 in Lebanon amid ceasefire violations.",
+        "Location": "Lebanon",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Taiwan",
+        "Action": "Establishes fourth unmanned systems battalion near PRC.",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "D-Wave Quantum / United States",
+        "Action": "Secures $100M federal LOI for quantum computing.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran to travel to Switzerland to demand US commitments imple...",
         "Summary": "Iran to travel to Switzerland to demand US commitments implemented, including Lebanon ceasefire",
         "Risk": "HIGH",
@@ -142,60 +197,5 @@
         "Action": "US-Iran talks postponed; Middle East conflict escalates",
         "Location": "Middle East, Strait of Hormuz, Lebanon",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States",
-        "Action": "Pentagon seeks $80 billion for Iran conflict",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Global semiconductor industry critically dependent on Taiwan",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "China",
-        "Action": "China's chip supply chain relies on Southeast Asia",
-        "Location": "Southeast Asia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Pirates",
-        "Action": "Pirates intensify aggressive attacks on global shipping",
-        "Location": "Global Shipping Lanes",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States",
-        "Action": "US establishes new Indo-Pacific military command",
-        "Location": "Indo-Pacific",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israeli strikes kill at least 16 in southern Lebanon despite...",
-        "Summary": "Israeli strikes kill at least 16 in southern Lebanon despite reports of renewed ceasefire",
-        "Risk": "HIGH",
-        "Source": "https://www.theguardian.com/world/2026/jun/20/israeli-strikes-southern-lebanon-reports-renewed-ceasefire"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "MSF says conditions in Lebanon\u2019s Nabatieh resemble a \u2018death ...",
-        "Summary": "MSF says conditions in Lebanon\u2019s Nabatieh resemble a \u2018death trap\u2019",
-        "Risk": "HIGH",
-        "Source": "https://www.aljazeera.com/news/2026/6/20/msf-says-conditions-in-lebanons-nabatieh-resemble-a-death-trap?traffic_source=rss"
     }
 ]
