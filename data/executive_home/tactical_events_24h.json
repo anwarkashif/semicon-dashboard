@@ -4,10 +4,62 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "No one prepared me for the attack I received when I announce...",
+        "Summary": "No one prepared me for the attack I received when I announced that I wanted to surrender my dog",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2068177259593175522"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "#Editorial | D. Trump's three-way merry-go-round By Issa Gor...",
         "Summary": "#Editorial | D. Trump's three-way merry-go-round By Issa Goraieb to read here:",
         "Risk": "HIGH",
         "Source": "https://x.com/LOrientLeJour/status/2068167381076021644"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Iran",
+        "Action": "Asserts control over Strait of Hormuz",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "Pentagon requests $80 billion for Iran war",
+        "Location": "Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States (suspected)",
+        "Action": "Suspected strike on tanker; two crew missing",
+        "Location": "Off Oman",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Global chip production critically reliant on Taiwan",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Japan",
+        "Action": "Seeks G7 action on China's rare earth dominance",
+        "Location": "Global (Rare Earth Market)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "Army launches new Indo-Pacific multi-domain command",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-20",
@@ -138,61 +190,6 @@
         "Actor": "United States, Iran",
         "Action": "US-Iran deal reopens Hormuz, increases oil flow.",
         "Location": "Strait of Hormuz, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Taiwan, Global Tech Companies",
-        "Action": "Taiwan remains central to global semiconductor, AI future.",
-        "Location": "Taiwan, Global",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Israel, Lebanon, United States",
-        "Action": "Israeli strikes in Lebanon delay US-Iran talks.",
-        "Location": "Lebanon, Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Japan, Poland, France, United States",
-        "Action": "Nations rapidly developing autonomous drones and counter-systems.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States",
-        "Action": "US reorganizes Indo-Pacific military command structure.",
-        "Location": "Indo-Pacific",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iranian lawmaker accuses US of violating first clause of MoU",
-        "Summary": "Iranian lawmaker accuses US of violating first clause of MoU",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-lawmaker-accuses-us-violating-first-clause-mou"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israeli settlers vandalise Palestinian home in West Bank, re...",
-        "Summary": "Israeli settlers vandalise Palestinian home in West Bank, report says",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-settlers-vandalise-palestinian-home-west-bank-report-says"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States, Iran, Israel",
-        "Action": "Conducted strikes, counter-fires, delayed US-Iran talks.",
-        "Location": "Middle East, Lebanon",
         "Risk": "CRITICAL"
     }
 ]
