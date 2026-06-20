@@ -4,10 +4,62 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "UKMTO lowers Strait of Hormuz threat level to moderate",
+        "Summary": "UKMTO lowers Strait of Hormuz threat level to moderate",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/ukmto-lowers-strait-hormuz-threat-level-moderate"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Woman killed in Israeli strike on Gaza City apartment, repor...",
         "Summary": "Woman killed in Israeli strike on Gaza City apartment, report says",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/woman-killed-israeli-strike-gaza-city-apartment-report-says"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States, Iran",
+        "Action": "Reached agreement, ended Strait of Hormuz blockade",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Israel, Lebanon",
+        "Action": "Agreed to new ceasefire, Israeli troops remain",
+        "Location": "Lebanon",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Japan, G7",
+        "Action": "Seeks G7 action on China's rare earth grip",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Global Defense Industry",
+        "Action": "Billions poured into autonomous AI warfare systems",
+        "Location": "Global",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Global Semiconductor Industry, AI developers",
+        "Action": "AI reshaping semiconductor landscape, driving innovation",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "Establishes new Indo-Pacific command, relocates assets",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-20",
@@ -142,60 +194,5 @@
         "Action": "Fragile US-Iran deal, Israeli strikes, Hormuz control",
         "Location": "Middle East, Strait of Hormuz, Lebanon",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "China",
-        "Action": "Tightens Indium export controls impacting global tech",
-        "Location": "Global Semiconductor Supply Chain",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States",
-        "Action": "Establishes new Indo-Pacific command, relocates drones",
-        "Location": "Indo-Pacific, Japan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Japan",
-        "Action": "Seeks G7 plan countering China's rare earth grip",
-        "Location": "Global Critical Mineral Supply Chain",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "SpaceX, National Reconnaissance Office",
-        "Action": "Launches intelligence satellites enhancing US surveillance capabilities",
-        "Location": "Low Earth Orbit",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Pirates",
-        "Action": "Aggressive pirate attacks threaten shipping lanes",
-        "Location": "Gulf of Oman, Arabian Sea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran lost one of the central assets of its regional strategy...",
-        "Summary": "Iran lost one of the central assets of its regional strategy: the presumption that war could be kept away from Iranian soil, writes Menahem Merhavy.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2068076516332769761"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Lebanon Emerges as Weak Link in U.S.-Iran Deal to End War",
-        "Summary": "Lebanon Emerges as Weak Link in U.S.-Iran Deal to End War",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/2026/06/19/world/middleeast/lebanon-us-iran-deal-ceasefire.html"
     }
 ]
