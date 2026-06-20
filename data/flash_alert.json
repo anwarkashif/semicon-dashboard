@@ -1,13 +1,7 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Strikes Tavricheskaya Power Plant in Crimea",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Pro-Ukrainian Partisans Sabotage Electric Substation in Southern Russia",
+        "title": "UKMTO Defies Strait of Hormuz Order, Calls for US-Backed Route",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -37,13 +31,13 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "UKMTO Defies Strait of Hormuz Order, Calls for US-Backed Route",
+        "title": "Ukraine Strikes Tavricheskaya Power Plant in Crimea",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Forces Advance in Five Areas Near Dobropillya, Donetsk/Dnipropetrovsk Oblasts",
+        "title": "Pro-Ukrainian Partisans Sabotage Electric Substation in Southern Russia",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -54,9 +48,15 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
+        "source": "MONITOR THE SITUATION",
+        "title": "Israeli Airstrike Kills Three in Gaza City Residential Building",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Ukraine Launches Database of Russian Weapons Technical Data for Allies",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
     }
 ]
