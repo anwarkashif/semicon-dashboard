@@ -1,5 +1,11 @@
 [
     {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russian MiG-31K Airborne From Savasleika Airbase, Kinzhal Missile Threat",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -7,20 +13,14 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Uncertainty surrounds U.S.-Iran deal as Israel strikes Lebanon",
+        "title": "Russian Forces Advance in Slavyansk Direction",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Russian Forces Advance in Lyman",
+        "title": "Israel Engages Militants in Northern Palestine",
         "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "CRITICAL"
     },
     {
@@ -31,19 +31,19 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Iran Sends Delegation to Switzerland to Press US on War-Ending Deal",
+        "title": "Iran Sends Delegation Led by Ghalibaf to Switzerland for US Talks",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Israel Engages Militants in Northern Palestine",
+        "title": "UK Tests Long-Range Weapons for Ukraine",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Ukraine Targets Asian Market with Drones",
+        "title": "Iran warns of \u2018reciprocal action\u2019 if US doesn\u2019t honour MOU commitments",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
@@ -54,9 +54,9 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "USS Tripoli Spotted in Philippine Sea by Satellite",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
+        "source": "WAR MONITOR",
+        "title": "Ukraine Targets Asian Market with Drones",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
     }
 ]
