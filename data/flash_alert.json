@@ -1,62 +1,62 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israel Breaches Gaza Ceasefire, Media Office Reports",
+        "title": "Zaporizhzhya Nuclear Plant Loses Off-Site Power for 20th Time",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "US Deploys E-3G Sentry AWACS to Prince Sultan Air Base, Saudi Arabia",
+        "title": "Ukraine Strikes Russian Fuel Infrastructure Across Occupied Crimea",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Source Discusses Zaporizhzhia Nuclear Power Plant Shutdown",
+        "title": "Hezbollah and IDF Trade Blame Over Southern Lebanon Escalation",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Shipping remains far below prewar levels in the Strait of Hormuz.",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "US and Qatar Plan to Release Frozen Iranian Funds",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
         "title": "Drone use expands in Sudan \u2013 and kills at least 1,000 civilians in 2026",
         "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "EXCLUSIVE: Iran's Revolutionary Guards set up covert Iraqi cells to attack Gulf neighbors, sources say - Reuters",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Trans-Saharan Gas Pipeline: an African dream that could reshape world energy markets",
-        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Two roadside bombs kill at least seven in northwestern Pakistan",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "Israel Breaches Gaza Ceasefire, Media Office Reports",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
+        "source": "CISA",
         "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "US Deploys E-3G Sentry AWACS to Prince Sultan Air Base, Saudi Arabia",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
     }
 ]
