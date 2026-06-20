@@ -7,55 +7,55 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Russian Forces Advance in Lyman",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Israel Engages Militants in Northern Palestine",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
         "title": "Uncertainty surrounds U.S.-Iran deal as Israel strikes Lebanon",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
-        "title": "US and Iran Maritime Tensions Rise Near Oman",
+        "title": "Russian Forces Advance in Lyman",
         "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "US Forces Remain in Strait of Hormuz, Iran Cites MOU Violation",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Iran Sends Delegation to Switzerland to Press US on War-Ending Deal",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Israel Engages Militants in Northern Palestine",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
         "title": "Ukraine Targets Asian Market with Drones",
         "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russia Threatens Treason Charges for Photographing Military Cemeteries",
-        "url": "https://monitor-the-situation.com/",
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "JD Vance Says He Expects to Go to Switzerland for Iran Talks",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russia Central Bank Warns Inflation Inevitable Due to Fuel Shortages",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Human Activity Causes Severe Ecological Damage in South China Sea",
+        "title": "USS Tripoli Spotted in Philippine Sea by Satellite",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "ELEVATED"
     }
