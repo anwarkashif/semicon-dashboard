@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israeli strike kills journalist in central Gaza",
+        "Summary": "Israeli strike kills journalist in central Gaza",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strike-kills-journalist-central-gaza-0"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israeli strikes in Lebanon kill seven",
+        "Summary": "Israeli strikes in Lebanon kill seven",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strikes-lebanon-kill-seven"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Iran, United States",
+        "Action": "Iran closes Strait; US threatens tolls",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States, Iran",
+        "Action": "Officials engage in peace talks",
+        "Location": "Switzerland",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Israel",
+        "Action": "Conducts strikes, kills civilians in Lebanon, Gaza",
+        "Location": "Lebanon, Gaza",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "G7 Nations",
+        "Action": "Aims to curb China's critical mineral control",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "Army launches new Indo-Pacific command",
+        "Location": "Indo-Pacific",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Global Semiconductor Industry",
+        "Action": "Continues critical reliance on Taiwan for semiconductors",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israeli strike near Sidon in southern Lebanon kills seven",
         "Summary": "Israeli strike near Sidon in southern Lebanon kills seven",
         "Risk": "HIGH",
@@ -132,70 +194,5 @@
         "Summary": "Vance\u2019s Defense of Iran Deal Rests on Vague and Misleading Claims",
         "Risk": "HIGH",
         "Source": "https://www.nytimes.com/2026/06/18/us/politics/vances-iran-deal-misleading-claims.html"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Vance has become the face of the interim U.S.-Iran peace dea...",
-        "Summary": "Vance has become the face of the interim U.S.-Iran peace deal, and he is set to serve as Washington\u2019s lead negotiator in upcoming nuclear talks.",
-        "Risk": "HIGH",
-        "Source": "https://x.com/ForeignPolicy/status/2067746482002776490"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "United States, Iran",
-        "Action": "US-Iran deal reopens Hormuz, lifts blockade",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Ukraine",
-        "Action": "Strikes Moscow refinery with major drone attack",
-        "Location": "Moscow, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "United States",
-        "Action": "Invests $725M to boost domestic rare earth",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "United States Air Force",
-        "Action": "Awards contracts for first AI drone wingmen",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "European Union",
-        "Action": "Extends sanctions against Russia for 12 months",
-        "Location": "European Union",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "'This was not easy': Trump and Iran sign interim ceasefire d...",
-        "Summary": "'This was not easy': Trump and Iran sign interim ceasefire deal in France",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/news/trump-and-iran-pezeshkian-electronically-sign-mou-ceasefire"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Hormuz vessels must still coordinate with IRGC navy, Iranian...",
-        "Summary": "Hormuz vessels must still coordinate with IRGC navy, Iranian state TV says",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/hormuz-vessels-must-still-coordinate-irgc-navy-iranian-state-tv-says"
     }
 ]
