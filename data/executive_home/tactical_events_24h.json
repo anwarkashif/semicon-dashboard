@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israel strikes Lebanon despite ceasefire, at least 16 killed",
+        "Summary": "Israel strikes Lebanon despite ceasefire, at least 16 killed",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/israel-strikes-lebanon-despite-ceasefire-at-least-16-killed"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "NGOs in Lebanon denounce Israeli attacks on medics amid ceas...",
+        "Summary": "NGOs in Lebanon denounce Israeli attacks on medics amid ceasefire",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/ngos-in-lebanon-denounce-israeli-attacks-on-medics-amid-ceasefire"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Iran, United States",
+        "Action": "New US-Iran deal lifts oil sanctions.",
+        "Location": "Strait of Hormuz, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Israel",
+        "Action": "Strikes Lebanon, killing 29 after ceasefire.",
+        "Location": "Lebanon",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Global Semiconductor Industry, Taiwan",
+        "Action": "Taiwan remains central as AI reshapes chip landscape.",
+        "Location": "Taiwan, Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Ukraine, Russia",
+        "Action": "Ukrainian drones cause spreading fuel shortages in Russia.",
+        "Location": "Russia, Ukraine",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Japan, G7",
+        "Action": "Japan seeks G7 price floors for rare earth.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "United States",
+        "Action": "Pentagon requests $80 billion for Iran war.",
+        "Location": "United States, Middle East",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Switzerland says US-Iran talks continue at Burgenstock",
         "Summary": "Switzerland says US-Iran talks continue at Burgenstock",
         "Risk": "HIGH",
@@ -132,67 +194,5 @@
         "Summary": "Donald Trump has unveiled the new Air Force One, an upgraded Boeing 747 gifted by Qatar that has been converted into the official US presidential aircraft",
         "Risk": "HIGH",
         "Source": "https://x.com/SkyNews/status/2068290582762471796"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Landmark US-Iran peace deal halts devastating 5-week war, re...",
-        "Summary": "Landmark US-Iran peace deal halts devastating 5-week war, reopens critical shipping routes, but postponed implementation talks, lingering distrust, warnings from both Washington, Tehran underscore how fragile path to lasting peace remains",
-        "Risk": "HIGH",
-        "Source": "https://x.com/DailySabah/status/2068287882213662956"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "US, Iran, Israel, Hezbollah",
-        "Action": "Fragile peace deal jeopardized by conflict.",
-        "Location": "West Asia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Iran",
-        "Action": "Asserts control over vital Strait of Hormuz.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States (Pentagon)",
-        "Action": "Requests $80 billion for potential Iran war.",
-        "Location": "United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "China",
-        "Action": "Vows more sovereignty surveys east of Taiwan.",
-        "Location": "East of Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "EU",
-        "Action": "Prepares tariffs on Chinese electric vehicles.",
-        "Location": "Europe, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Taiwan's critical centrality in semiconductor supply chains.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US-Iran ceasefire negociations underway in Switzerland",
-        "Summary": "US-Iran ceasefire negociations underway in Switzerland",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/us-iran-ceasefire-negociations-underway-in-switzerland"
     }
 ]
