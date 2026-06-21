@@ -19,32 +19,26 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russia Strikes Three Ukrainian Airbases With Hypersonic Missiles",
+        "title": "Ukraine Drone Attack Kills 4, Wounds 28 in Crimea; Russia Halts Public Fuel Sales",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Drone Attack Kills 4, Wounds 28 in Crimea; Russia Halts Public Fuel Sales",
+        "title": "Russia Strikes Three Ukrainian Airbases With Hypersonic Missiles",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
         "title": "Hamas Operatives Transferred Over Half Billion Shekels to Military Wing",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "China Expands Antelope Reef to 1,450 Acres in South China Sea",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Ukraine Strikes Russian Oil Terminals",
-        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
@@ -57,6 +51,12 @@
         "source": "WAR MONITOR",
         "title": "Brazil Hit by Massive Cyber Attack",
         "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russian Logistics in Crimea in Chaos, Impacting Southern Front",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     }
 ]
