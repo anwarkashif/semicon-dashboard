@@ -1,5 +1,67 @@
 [
     {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israel directs its military to limit its actions in Lebanon,...",
+        "Summary": "Israel directs its military to limit its actions in Lebanon, though tensions persist.",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon/israel-directs-its-military-to-limit-its-actions-in-lebanon-though-tensions-persist"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "JD Vance meets Pakistan delegation before Iran talks in Swit...",
+        "Summary": "JD Vance meets Pakistan delegation before Iran talks in Switzerland \u2013 video",
+        "Risk": "HIGH",
+        "Source": "https://www.theguardian.com/world/video/2026/jun/21/jd-vance-meets-pakistan-delegation-before-iran-talks-in-switzerland-video"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Iran",
+        "Action": "Threatens Strait of Hormuz closure amid US talks",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Russia",
+        "Action": "Zelenskiy warns of imminent massive attack",
+        "Location": "Ukraine",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Taiwan",
+        "Action": "Military conducts five-day combat readiness drills",
+        "Location": "Taiwan",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "China",
+        "Action": "Showcases DF-17 hypersonic missile launches",
+        "Location": "China",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "US Pentagon",
+        "Action": "Requests $80 billion for potential Iran war",
+        "Location": "Middle East",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Samsung",
+        "Action": "Secures new long-term HBM supply deals",
+        "Location": "Global",
+        "Risk": "ELEVATED"
+    },
+    {
         "Date": "2026-06-20",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
@@ -132,67 +194,5 @@
         "Summary": "Israel-Hezbollah Clashes Put Iran Deal Under Early Pressure",
         "Risk": "HIGH",
         "Source": "https://www.wsj.com/world/middle-east/israel-hezbollah-clashes-put-iran-deal-under-early-pressure-0aa5ae90"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Landmark US-Iran peace deal halts devastating 5-week war, re...",
-        "Summary": "Landmark US-Iran peace deal halts devastating 5-week war, reopens critical shipping routes, but postponed implementation talks, lingering distrust, warnings from both Washington, Tehran underscore how fragile path to lasting peace remains",
-        "Risk": "HIGH",
-        "Source": "https://x.com/DailySabah/status/2067927712329531531"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, Iran, Israel",
-        "Action": "Peace talks postponed, regional conflict escalates",
-        "Location": "West Asia, Lebanon, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, Japan, Europe",
-        "Action": "Accelerating autonomous defense technology development globally",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "China",
-        "Action": "Strengthening infrastructure for rare earth dominance",
-        "Location": "China, Global Supply Chain",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "European Union",
-        "Action": "Renews Russia sanctions for unprecedented full year",
-        "Location": "European Union, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "United States, Zambia",
-        "Action": "Strengthening critical mineral supply chain cooperation",
-        "Location": "Zambia, Global Supply Chain",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "SpaceX, United States",
-        "Action": "Launches intelligence-gathering satellites for NRO",
-        "Location": "Low Earth Orbit, United States",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-18",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Vance\u2019s Defense of Iran Deal Rests on Vague and Misleading C...",
-        "Summary": "Vance\u2019s Defense of Iran Deal Rests on Vague and Misleading Claims",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/2026/06/18/us/politics/vances-iran-deal-misleading-claims.html"
     }
 ]
