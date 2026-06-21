@@ -78,9 +78,9 @@ if st.session_state['role'] is None:
         .login-ambient-container { position: fixed; top: 0; left: 0; width: 50vw; height: 100vh; z-index: 99999; pointer-events: none; overflow: hidden; mix-blend-mode: screen; mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); }
         @media (max-width: 992px) { .login-ambient-container { display: none !important; } }
         .login-blob { position: absolute; filter: blur(100px); opacity: 0.8; border-radius: 50%; mix-blend-mode: screen; }
-        .blob-a { top: -10vh; left: -10vw; width: 50vw; height: 75vh; background: #1b60d4; animation: waveA 5s infinite alternate ease-in-out; }
-        .blob-b { top: 30vh; right: -5vw; width: 45vw; height: 80vh; background: #7f3ab7; animation: waveB 5s infinite alternate ease-in-out; }
-        .blob-c { top: 50vh; left: -5vw; width: 45vw; height: 60vh; background: #d44c5c; animation: waveC 5s infinite alternate ease-in-out; }
+        .blob-a { top: -10vh; left: -10vw; width: 50vw; height: 75vh; background: #1b60d4; animation: waveA 4s infinite alternate ease-in-out; }
+        .blob-b { top: 30vh; right: -5vw; width: 45vw; height: 80vh; background: #7f3ab7; animation: waveB 4s infinite alternate ease-in-out; }
+        .blob-c { top: 50vh; left: -5vw; width: 45vw; height: 60vh; background: #d44c5c; animation: waveC 4s infinite alternate ease-in-out; }
         .blob-4 { top: 30px; right: 20vw; width: 50vw; height: 220px; background: #FF272A; animation-delay: -1s; infinite alternate ease-in-out; }
         .blob-5 { top: -10px; left: 35vw; width: 55vw; height: 250px; background: #0ADD08; animation-delay: -3.5s; infinite alternate ease-in-out; }
         @keyframes waveA { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(12vw, 15vh) scale(1.15); } 100% { transform: translate(-5vw, 20vh) scale(0.9); } }
