@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Video: Lebanese villagers describe life under Israeli contro...",
+        "Summary": "Video: Lebanese villagers describe life under Israeli control in Halta",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/video-lebanese-villagers-describe-life-under-israeli-control-halta"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israeli attacks kill at least seven in Lebanon's Western Bek...",
+        "Summary": "Israeli attacks kill at least seven in Lebanon's Western Bekaa and Tyre",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-attacks-kill-least-seven-lebanons-western-bekaa-and-tyre"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Iran, United States",
+        "Action": "Strait of Hormuz access disputed, peace talks begin.",
+        "Location": "Strait of Hormuz, Switzerland",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Israel",
+        "Action": "Israeli strikes kill civilians, journalist in Lebanon.",
+        "Location": "Lebanon, Gaza",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States, China",
+        "Action": "US holds off DeepSeek blacklist amid rising AI tensions.",
+        "Location": "China, United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Amazon",
+        "Action": "Amazon enters market selling new AI chips.",
+        "Location": "Global",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Iran, Russia, North Korea",
+        "Action": "Nations continue evading US sanctions, hindering efforts.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States",
+        "Action": "Air Force awards contracts for drone wingman development.",
+        "Location": "United States",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Middle East live: US Vice President JD Vance arrives in Swit...",
         "Summary": "Middle East live: US Vice President JD Vance arrives in Switzerland for Iran peace talks",
         "Risk": "HIGH",
@@ -132,64 +194,5 @@
         "Action": "US engages Iran talks amid Israel-Lebanon conflict.",
         "Location": "Middle East, Switzerland",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Taiwan, Intel, Amazon, Canada",
-        "Action": "Taiwan central to chips; AI chips, advanced nodes.",
-        "Location": "Taiwan, United States, Canada",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States, Europe, Japan, Poland",
-        "Action": "Nations heavily invest in autonomous defense, drone tech.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "China, Japan, Bangladesh",
-        "Action": "China advances AI, global influence; Japan counters.",
-        "Location": "China, Asia-Pacific",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States",
-        "Action": "US military reorganizes, strengthens Indo-Pacific command.",
-        "Location": "Indo-Pacific, United States",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "This Futuristic Japanese Warship Is on the Market and Winnin...",
-        "Summary": "This Futuristic Japanese Warship Is on the Market and Winning Fans",
-        "Risk": "HIGH",
-        "Source": "https://www.wsj.com/world/asia/this-futuristic-japanese-warship-is-on-the-market-and-winning-fans-f26edc90"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Iran, United States",
-        "Action": "Iran claims Hormuz closure, US disputes.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States",
-        "Action": "Considers AI export ban following discussions.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Ukraine",
-        "Action": "Strikes Russian oil refinery with drones.",
-        "Location": "Tyumen, Russia",
-        "Risk": "HIGH"
     }
 ]
