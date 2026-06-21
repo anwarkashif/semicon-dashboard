@@ -4,6 +4,98 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Poll Finds Israelis Believe Iran Won Mideast War: Report...",
+        "Summary": "Poll Finds Israelis Believe Iran Won Mideast War: Report",
+        "Risk": "HIGH",
+        "Source": "https://www.tasnimnews.ir/en/news/2026/06/21/3623086/poll-finds-israelis-believe-iran-won-mideast-war-report",
+        "Title": "Poll Finds Israelis Believe Iran Won Mideast War: Report",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "tasnimnews.ir"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The first round of talks between the United States and Iran ...",
+        "Summary": "The first round of talks between the United States and Iran since the recent signing of a memorandum of understanding began on Sunday in Switzerland.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/RudawEnglish/status/2068681770476675545",
+        "Title": "The first round of talks between the United States and Iran since the recent signing of a memorandum of understanding began on Sunday in Switzerland.",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "US, Iran",
+        "Action": "Initiate peace talks amidst looming tensions and previous blockade threats in the Strait of Hormuz.",
+        "Location": "Switzerland (talks), Strait of Hormuz (tensions)",
+        "Risk": "High - Potential for regional conflict, disruption of global oil supply, diplomatic breakthrough or failure.",
+        "Source": "https://moderndiplomacy.eu/2026/06/21/us-iran-peace-talks-begin-in-switzerland-as-hormuz-tensions-loom/",
+        "Title": "US-Iran Peace Talks Begin in Switzerland as Hormuz Tensions Loom",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Israel",
+        "Action": "Conduct drone strikes in Lebanon and strikes/gunfire in Gaza, killing Palestinians, leading to postponement of US-Iran talks.",
+        "Location": "Lebanon, Gaza",
+        "Risk": "High - Escalation of conflict, civilian casualties, destabilization of Middle East.",
+        "Source": "https://www.worldpoliticsreview.com/us-iran-talks-postponed-israel-lebanon-strikes/",
+        "Title": "Iran-U.S. Talks Postponed After Israeli Strikes in Lebanon",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "worldpoliticsreview.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Ukraine (Zelenskiy), Russia",
+        "Action": "Warns of an imminent massive Russian attack.",
+        "Location": "Ukraine",
+        "Risk": "High - Major escalation of war, humanitarian crisis, increased regional instability.",
+        "Source": "https://moderndiplomacy.eu/2026/06/21/zelenskiy-warns-of-imminent-massive-russian-attack-on-ukraine/",
+        "Title": "Zelenskiy Warns of Imminent Massive Russian Attack on Ukraine",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Taiwan Military",
+        "Action": "Conduct five-day combat readiness drills amid heightened tensions with China.",
+        "Location": "Taiwan",
+        "Risk": "High - Heightened cross-strait tensions, potential for miscalculation, regional military escalation.",
+        "Source": "https://moderndiplomacy.eu/2026/06/21/taiwan-military-to-conduct-five-day-combat-readiness-drills/",
+        "Title": "Taiwan Military to Conduct Five-Day Combat Readiness Drills",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "US Army, Pentagon",
+        "Action": "Establishes a new Indo-Pacific multi-domain command and requests $80 billion for Iran war and other expenses.",
+        "Location": "Indo-Pacific, US",
+        "Risk": "Medium-High - Increased military footprint in a contested region, preparation for potential future conflict, significant budget implications.",
+        "Source": "https://www.defensenews.com/news/your-military/2026/06/19/army-launches-new-indo-pacific-multi-domain-command/",
+        "Title": "Army launches new Indo-Pacific multi-domain command",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "China (Alibaba, Xiaomi), Global defense industry",
+        "Action": "Develops 'farm drones' with potential dual-use capabilities, advances AI foundation models for embodied AI, and sees billions pour into autonomous defense.",
+        "Location": "China, Global",
+        "Risk": "Medium-High - Acceleration of AI arms race, technological asymmetry, potential for misuse of dual-use technologies, ethical concerns.",
+        "Source": "https://warontherocks.com/chinas-farm-drones-a-trojan-horse-washington-overlooks/",
+        "Title": "China\u2019s Farm Drones: A Trojan Horse Washington Overlooks",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "warontherocks.com"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "First Clause of Iran-US MoU Key to Success of Agreement: Off...",
         "Summary": "First Clause of Iran-US MoU Key to Success of Agreement: Official",
         "Risk": "HIGH",
@@ -135,67 +227,5 @@
         "Summary": "Four months after the horrific Iran school bombing, fears grow that Trump and Hegseth will bury the truth",
         "Risk": "HIGH",
         "Source": "https://www.theguardian.com/world/2026/jun/21/iran-school-bombing-minab-fears-trump-hegseth-bury-truth-investigation-findings"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "US, Iran",
-        "Action": "Hold peace talks amid Strait of Hormuz closure.",
-        "Location": "Switzerland, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Ukraine",
-        "Action": "Warns of Russian attack, strikes Russian logistics.",
-        "Location": "Ukraine, Crimea",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Taiwan",
-        "Action": "Conducts five-day combat readiness military drills.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Israel, Hezbollah",
-        "Action": "Trade fire, escalating regional conflict.",
-        "Location": "Lebanon",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "China",
-        "Action": "Showcases DF-17 hypersonic missile launch footage.",
-        "Location": "China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States (Pentagon)",
-        "Action": "Requests $80B for potential Iran war.",
-        "Location": "United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "War in Lebanon Casts Shadow Over Renewed Iran-U.S. Nuclear T...",
-        "Summary": "War in Lebanon Casts Shadow Over Renewed Iran-U.S. Nuclear Talks",
-        "Risk": "HIGH",
-        "Source": "https://www.wsj.com/world/middle-east/war-in-lebanon-casts-shadow-over-renewed-iran-u-s-nuclear-talks-f457c7e9"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran, US, Qatar and Pakistan to hold meeting in Switzerland",
-        "Summary": "Iran, US, Qatar and Pakistan to hold meeting in Switzerland",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-us-qatar-and-pakistan-hold-meeting-switzerland"
     }
 ]
