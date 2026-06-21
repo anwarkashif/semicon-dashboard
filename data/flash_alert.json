@@ -12,45 +12,33 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "threat_level": "CRITICAL"
-    },
-    {
         "source": "MONITOR THE SITUATION",
-        "title": "Iran President Rejects Zero Enrichment Demand",
+        "title": "Israel Will Not Withdraw From Southern Lebanon, Defense Minister Says",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Chinese Type 075 Landing Helicopter Dock Hainan Exits Maintenance in Shanghai",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
         "title": "Ukraine Strikes Russian Oil Terminals",
         "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Power Outage Hits Occupied Crimea, Disrupts Water Supply",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Fuel Shortage Disrupts Daily Life in Crimea",
+        "title": "Israeli Airstrike Kills Two Palestinians in Southern Gaza",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Russian Official Killed in Ukraine War",
+        "title": "Russia Halts Fuel Supply to Crimea Gas Stations",
         "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "HIGH"
     },
     {
@@ -58,5 +46,17 @@
         "title": "Brazil Hit by Massive Cyber Attack",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Ukraine Accused of War Crimes in Pokrovsk and Myrnohrad",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "threat_level": "ELEVATED"
     }
 ]
