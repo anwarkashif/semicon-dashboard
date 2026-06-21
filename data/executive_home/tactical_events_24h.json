@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Former Saudi intelligence chief urges stronger GCC unity",
+        "Summary": "Former Saudi intelligence chief urges stronger GCC unity",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/former-saudi-intelligence-chief-urges-stronger-gcc-unity"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iranian speaker says martyrs guide mission to Switzerland",
+        "Summary": "Iranian speaker says martyrs guide mission to Switzerland",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-speaker-says-martyrs-guide-mission-switzerland"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States, Iran",
+        "Action": "Conduct peace talks amid Strait of Hormuz dispute.",
+        "Location": "Switzerland, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Taiwan",
+        "Action": "Remains crucial hub for global semiconductor supply.",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Global Military Powers",
+        "Action": "Accelerate development of autonomous AI defense systems.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "China",
+        "Action": "Expands influence; faces dual-use tech scrutiny.",
+        "Location": "Indo-Pacific, Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Japan, Australia, G7",
+        "Action": "Seek to diversify critical minerals, rebalance energy.",
+        "Location": "Global",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-20",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran says closed Strait of Hormuz as US deal hits obstacle a...",
         "Summary": "Iran says closed Strait of Hormuz as US deal hits obstacle ahead of Swiss talks",
         "Risk": "HIGH",
@@ -140,61 +195,6 @@
         "Date": "2026-06-20",
         "Actor": "Iran",
         "Action": "Recloses critical oil shipping chokepoint",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States, Iran",
-        "Action": "Begin peace talks amidst regional tensions",
-        "Location": "Switzerland",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Israel",
-        "Action": "Conducts military strikes in southern Lebanon",
-        "Location": "Lebanon",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States",
-        "Action": "Establishes new Army Indo-Pacific multi-domain command",
-        "Location": "Indo-Pacific",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Emphasizes Taiwan's critical role in chip production",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran shuts Strait of Hormuz as Israel tests MOU with Lebanon...",
-        "Summary": "Iran shuts Strait of Hormuz as Israel tests MOU with Lebanon strikes",
-        "Risk": "HIGH",
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/20/iran-shuts-strait-of-hormuz-as-israel-tests-mou-with-lebanon-strikes?traffic_source=rss"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US forces monitoring Strait of Hormuz to ensure it stays ope...",
-        "Summary": "US forces monitoring Strait of Hormuz to ensure it stays open",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/us-forces-monitoring-strait-hormuz-ensure-it-stays-open"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Iran",
-        "Action": "Recloses Strait of Hormuz after Israeli attacks",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     }
