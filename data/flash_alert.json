@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Saudi Arabia Detains Over 15,000 in Week-Long Security Sweep",
+        "Title": "Hezbollah Rejects Lebanese Government Negotiations With US",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/21/world/middleeast/israel-directs-its-military-to-limit-its-actions-in-lebanon-though-tensions-persist.html",
-        "Title": "Israel directs its military to limit its actions in Lebanon, though tensions persist.",
+        "Source": "https://t.me/nexta_live/119161",
+        "Title": "Russia Experiences Explosions in Kerch",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,6 +28,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/Middle_East_Spectator/33818",
+        "Title": "Pakistan and India Agree to Ceasefire",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -35,8 +42,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
