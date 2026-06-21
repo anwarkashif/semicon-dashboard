@@ -4,10 +4,62 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Meloni tells Trump to mind his own popularity in \u2018photo begg...",
+        "Summary": "Meloni tells Trump to mind his own popularity in \u2018photo begging\u2019 rift",
+        "Risk": "HIGH",
+        "Source": "https://www.rt.com/news/641918-trump-meloni-photo-begging-popularity/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran submits proposal for SCO energy consortium to boost coo...",
         "Summary": "Iran submits proposal for SCO energy consortium to boost cooperation",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-submits-proposal-sco-energy-consortium-boost-cooperation"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Iran, United States",
+        "Action": "Iran threatens closure, US disputes, monitors strait.",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States, Iran, Israel",
+        "Action": "US engages Iran talks amid Israel-Lebanon conflict.",
+        "Location": "Middle East, Switzerland",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Taiwan, Intel, Amazon, Canada",
+        "Action": "Taiwan central to chips; AI chips, advanced nodes.",
+        "Location": "Taiwan, United States, Canada",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States, Europe, Japan, Poland",
+        "Action": "Nations heavily invest in autonomous defense, drone tech.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "China, Japan, Bangladesh",
+        "Action": "China advances AI, global influence; Japan counters.",
+        "Location": "China, Asia-Pacific",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States",
+        "Action": "US military reorganizes, strengthens Indo-Pacific command.",
+        "Location": "Indo-Pacific, United States",
+        "Risk": "ELEVATED"
     },
     {
         "Date": "2026-06-21",
@@ -136,60 +188,5 @@
         "Action": "Conducts airstrikes, killing 16 in Lebanon.",
         "Location": "Lebanon",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Japan, China",
-        "Action": "Chip equipment sales to China drop 10%.",
-        "Location": "Japan, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "China",
-        "Action": "Intensifies naval pressure on Taiwan.",
-        "Location": "Taiwan Strait",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States",
-        "Action": "Pentagon seeks $80B for Iran war.",
-        "Location": "United States",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Former Saudi intelligence chief urges stronger GCC unity",
-        "Summary": "Former Saudi intelligence chief urges stronger GCC unity",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/former-saudi-intelligence-chief-urges-stronger-gcc-unity"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iranian speaker says martyrs guide mission to Switzerland",
-        "Summary": "Iranian speaker says martyrs guide mission to Switzerland",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-speaker-says-martyrs-guide-mission-switzerland"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States, Iran",
-        "Action": "Conduct peace talks amid Strait of Hormuz dispute.",
-        "Location": "Switzerland, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Taiwan",
-        "Action": "Remains crucial hub for global semiconductor supply.",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
     }
 ]
