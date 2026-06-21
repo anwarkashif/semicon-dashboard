@@ -1,39 +1,27 @@
 [
     {
         "source": "MONITOR THE SITUATION",
+        "title": "Russia Strikes Three Ukrainian Airbases With Hypersonic Missiles",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Strait of Hormuz Closed to Large Vessels",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "US Officials Reject Iran Claim of Strait of Hormuz Closure",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "Hamas Operatives Transferred Over Half Billion Shekels to Military Wing",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Drones Strike Fuel Terminal in Kerch, Crimea",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "US-Iran Talks in Geneva Open With Emergency Session on Israel-Hezbollah",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "US Threatens Tolls On Strait Of Hormuz",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
@@ -43,20 +31,32 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Large Fire at Kavkaz Port in Russia's Krasnodar Krai",
+        "title": "Ukrainian Drones Strike Fuel Terminal in Kerch, Crimea",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "threat_level": "HIGH"
+    },
+    {
         "source": "WAR MONITOR",
-        "title": "Russia Restricts Fuel Supply in Occupied Crimea",
+        "title": "Russia Halts Fuel Supply to Crimea Gas Stations",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
+        "source": "WAR MONITOR",
+        "title": "Iran negotiators head for Switzerland but Lebanon fighting continues - Reuters",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Israel Soldier Killed in Incident",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     }
 ]
