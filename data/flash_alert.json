@@ -1,26 +1,8 @@
 [
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Attacks on Crimea Coordinated from Constanta and US Using AI",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russian Logistics in Crimea in Chaos, Impacting Southern Front",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukraine Drone Attack Kills 4, Wounds 28 in Crimea; Russia Halts Public Fuel Sales",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russia Strikes Three Ukrainian Airbases With Hypersonic Missiles",
-        "url": "https://monitor-the-situation.com/",
+        "source": "WAR MONITOR",
+        "title": "Britain Tests Missiles for Strikes on Moscow",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
@@ -30,9 +12,9 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Britain Tests Missiles for Strikes on Moscow",
-        "url": "https://war-monitor.com/events",
+        "source": "MONITOR THE SITUATION",
+        "title": "Ukraine Drone Attack Kills 4, Wounds 28 in Crimea; Russia Halts Public Fuel Sales",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
@@ -42,21 +24,39 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "source": "MONITOR THE SITUATION",
+        "title": "Ukrainian Attacks on Crimea Coordinated from Constanta and US Using AI",
+        "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Iran Offers Written Nuclear Assurances Ahead of US Talks",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russian Source Predicts Attack on Kerch Bridge",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Russian Logistics in Crimea in Chaos, Impacting Southern Front",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Ukraine Strikes Russian Oil Terminals",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
         "title": "Brazil Hit by Massive Cyber Attack",
         "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "NATO Secretary General Calls for Scaling Up Defense Industries",
-        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     }
 ]
