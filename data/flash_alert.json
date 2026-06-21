@@ -1,23 +1,5 @@
 [
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "Iran President Rejects Zero Enrichment Demand",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Russian Source Predicts Attack on Kerch Bridge",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Attacks on Crimea Coordinated from Constanta and US Using AI",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
-    },
-    {
         "source": "WAR MONITOR",
         "title": "US Airstrikes Hit Shiraz Air Base in Iran",
         "url": "https://war-monitor.com/events",
@@ -36,15 +18,21 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "Brazil Hit by Massive Cyber Attack",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
+        "source": "MONITOR THE SITUATION",
+        "title": "Iran President Rejects Zero Enrichment Demand",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russian Logistics in Crimea in Chaos, Impacting Southern Front",
+        "title": "Chinese Type 075 Landing Helicopter Dock Hainan Exits Maintenance in Shanghai",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Ukraine Strikes Russian Oil Terminals",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
@@ -54,9 +42,21 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "source": "MONITOR THE SITUATION",
+        "title": "Fuel Shortage Disrupts Daily Life in Crimea",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Russian Official Killed in Ukraine War",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Brazil Hit by Massive Cyber Attack",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     }
 ]
