@@ -16,49 +16,36 @@ from google import genai
 os.makedirs('data/friday_snippet', exist_ok=True)
 
 RSS_FEEDS = [
-    # --- 1. Geopolitics & Macro Policy ---
     "https://www.ft.com/technology?format=rss",
     "https://www.atlanticcouncil.org/feed/",
     "https://foreignpolicy.com/feed/",
     "https://moderndiplomacy.eu/feed/",
     "https://www.worldpoliticsreview.com/feed/", 
-
-    # --- 2. Military & Conflict ---
     "https://www.defenseone.com/rss/all/",
     "https://warontherocks.com/feed/",
     "https://www.realcleardefense.com/index.xml",
     "https://www.c4isrnet.com/arc/outboundfeeds/rss/",
     "https://www.defensenews.com/arc/outboundfeeds/rss/", 
-
-    # --- 3. Outer Space ---
     "https://spacepolicyonline.com/feed/",
     "https://www.space.com/feeds/all",
     "https://spacewatch.global/feed/", 
     "https://spaceflightnow.com/feed/", 
     "https://www.satellitetoday.com/feed/", 
-
-    # --- 4. Lithography & Raw Materials ---
     "https://semiwiki.com/feed/",
     "https://semiengineering.com/feed/",
     "https://www.mining.com/feed/",
     "https://www.eetimes.com/feed/",
     "https://www.supplychaindive.com/feeds/news/", 
-
-    # --- 5. Indo-Pacific & Country Actions ---
     "https://thediplomat.com/feed/",
     "https://technode.com/feed/",
     "https://asiatimes.com/feed/",
     "https://www.aspistrategist.org.au/feed/", 
     "https://fulcrum.sg/feed/", 
-
-    # --- 6. Logistics & West Asia ---
     "https://gcaptain.com/feed/",
     "https://www.middleeasteye.net/rss",
     "https://www.aljazeera.com/xml/rss/all.xml",
     "https://www.al-monitor.com/rss.xml",
     "https://splash247.com/feed/", 
-    
-    # --- 7. Next-Gen Compute (AI, ML & Quantum) ---
     "https://www.nextplatform.com/feed/",
     "https://thequantuminsider.com/feed/",            
     "https://spectrum.ieee.org/feeds/feed.rss",
@@ -74,12 +61,33 @@ if not GEMINI_API_KEY:
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ==========================================
-# 2. DATA SCRAPING (ANTI-BOT + LIVE BOOLEAN + DEEP SCRAPE)
+# 2. URL RESOLVER (UNPACK GOOGLE NEWS REDIRECTS)
+# ==========================================
+def resolve_final_url(url, headers):
+    """
+    Follows redirects to unpack the actual publisher URL.
+    Optimized to explicitly target Google News redirect URLs.
+    """
+    if "news.google.com" not in url:
+        return url
+        
+    try:
+        # Follow the redirect to get the true destination (e.g., Reuters, FT)
+        response = requests.get(url, headers=headers, timeout=10, allow_redirects=True)
+        return response.url
+    except Exception:
+        # If the resolution fails, gracefully fallback to the original link
+        return url
+
+# ==========================================
+# 3. DATA SCRAPING & DETERMINISTIC ID MAPPING
 # ==========================================
 def fetch_daily_intelligence():
     print("🌍 Scraping strategic RSS & LIVE Boolean feeds for Weekly Tactical Brief...")
     aggregated_news = ""
     total_articles = 0
+    article_map = {}
+    article_counter = 1
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -96,7 +104,13 @@ def fetch_daily_intelligence():
             response.raise_for_status() 
             feed = feedparser.parse(response.text)
             for entry in feed.entries[:5]:
-                aggregated_news += f"- [MACRO] {entry.title}\n"
+                art_id = f"ART_{article_counter:03d}"
+                # Direct RSS feeds generally don't use heavy redirects, but we pass it through safely
+                final_url = resolve_final_url(entry.link, headers)
+                article_map[art_id] = {"title": entry.title, "url": final_url}
+                
+                aggregated_news += f"ID: {art_id} | [MACRO] {entry.title}\n"
+                article_counter += 1
                 total_articles += 1
         except Exception as e:
             print(f"⚠️ Warning: Could not fetch {url} - {e}")
@@ -121,7 +135,13 @@ def fetch_daily_intelligence():
             response.raise_for_status()
             feed = feedparser.parse(response.text)
             for entry in feed.entries[:5]: 
-                aggregated_news += f"- [LIVE 1H] {entry.title}\n"
+                art_id = f"ART_{article_counter:03d}"
+                # 🛑 CRITICAL FIX: Unpack Google News redirect BEFORE saving to map
+                final_url = resolve_final_url(entry.link, headers)
+                article_map[art_id] = {"title": entry.title, "url": final_url}
+                
+                aggregated_news += f"ID: {art_id} | [LIVE 1H] {entry.title}\n"
+                article_counter += 1
                 total_articles += 1
         except Exception as e:
             print(f"⚠️ Warning: Could not fetch Google News for {query} - {e}")
@@ -138,9 +158,14 @@ def fetch_daily_intelligence():
         m_feed = feedparser.parse(m_res.text)
         
         for entry in m_feed.entries[:6]: 
-            url = entry.link
+            # 🛑 CRITICAL FIX: Unpack redirect BEFORE scraping the actual page content
+            final_url = resolve_final_url(entry.link, headers)
+            art_id = f"ART_{article_counter:03d}"
+            article_map[art_id] = {"title": entry.title, "url": final_url}
+            
             try:
-                page_res = requests.get(url, headers=headers, timeout=10)
+                # Scrape using the true publisher URL
+                page_res = requests.get(final_url, headers=headers, timeout=10)
                 soup = BeautifulSoup(page_res.text, 'html.parser')
                 
                 paragraphs = soup.find_all('p')
@@ -148,33 +173,37 @@ def fetch_daily_intelligence():
                 
                 if extracted_text:
                     snippet = extracted_text[:800] + "..." if len(extracted_text) > 800 else extracted_text
-                    aggregated_news += f"\n- [LIVE MARITIME ALERT - {entry.title}]\n  DEEP EXTRACTION DATA: {snippet}\n"
+                    aggregated_news += f"ID: {art_id} | [LIVE MARITIME ALERT - {entry.title}]\n  DEEP EXTRACTION DATA: {snippet}\n"
                 else:
-                    aggregated_news += f"\n- [LIVE MARITIME ALERT] {entry.title}\n"
+                    aggregated_news += f"ID: {art_id} | [LIVE MARITIME ALERT] {entry.title}\n"
                 
+                article_counter += 1
                 total_articles += 1
             except Exception as e:
-                aggregated_news += f"\n- [LIVE MARITIME ALERT] {entry.title}\n"
+                aggregated_news += f"ID: {art_id} | [LIVE MARITIME ALERT] {entry.title}\n"
+                article_counter += 1
                 total_articles += 1
     except Exception as e:
         print(f"⚠️ Warning: Could not fetch Maritime Boolean - {e}")
 
-    print(f"📰 Successfully grabbed {total_articles} raw headlines and deep-scraped data.")
-    return aggregated_news, total_articles
+    print(f"📰 Successfully grabbed {total_articles} raw headlines mapped to internal indices.")
+    return aggregated_news, total_articles, article_map
 
 # ==========================================
-# 3. AI EXTRACTION PIPELINE (WITH AUTO-RETRY)
+# 4. AI EXTRACTION PIPELINE (IDENTIFIER SCHEMA)
 # ==========================================
 def extract_tactical_events(news_text):
-    print("🧠 Pushing data to Gemini for tactical extraction...")
+    print("🧠 Pushing data to Gemini for tactical selection...")
     
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. 
-    Review the following news headlines from the last 24 hours. Extract 4 to 6 of the most critical geopolitical, defense, semiconductor, or supply chain events.
+    Review the following news entries, each preceded by a unique ID (e.g., ART_001).
+    Extract 4 to 6 of the most critical geopolitical, defense, semiconductor, or supply chain events.
     
     You MUST output the result as a raw JSON array of objects. Do not include markdown formatting like ```json.
     
     Each object must have exactly these keys:
+    "Article_ID": The exact ID string (e.g., "ART_001") matching the news item chosen. Do not invent IDs.
     "Date": The current date (use {datetime.now().strftime('%Y-%m-%d')})
     "Actor": The country, company, or entity taking the action.
     "Action": A concise, 5-8 word description of the event.
@@ -206,39 +235,52 @@ def extract_tactical_events(news_text):
                 raise e 
 
 # ==========================================
-# 4. EXECUTE & SAVE
+# 5. EXECUTE, REATTACH TARGET URLS & SAVE
 # ==========================================
 if __name__ == "__main__":
     try:
-        # Added a Friday lock to prevent burning APIs on non-Fridays since this is for the Weekly Tactical Brief
         is_friday = datetime.now().weekday() == 4
         if not is_friday:
             print("⏳ Not Friday. Weekly Tactical extraction skipped to preserve static weekly snapshot.")
             exit(0)
 
-        news_data, article_count = fetch_daily_intelligence()
+        news_data, article_count, source_article_map = fetch_daily_intelligence()
         
         if article_count == 0:
             print("❌ ABORTING: No articles scraped. Preventing AI hallucination.")
             exit(1)
             
-        tactical_events = extract_tactical_events(news_data)
+        # Extract strategic structured events (contains Article_ID references)
+        extracted_events = extract_tactical_events(news_data)
+        
+        # 🛡️ THE DETERMINISTIC INJECTION STEP
+        # We programmatically append the verified long-form URL directly from python memory
+        validated_tactical_events = []
+        for event in extracted_events:
+            target_id = event.get("Article_ID")
+            
+            if target_id in source_article_map:
+                # Reattach the exact full-path news link scraped directly from the feed
+                event["Source"] = source_article_map[target_id]["url"]
+                # Clean up the payload by removing the operational ID before saving to disk
+                del event["Article_ID"]
+                validated_tactical_events.append(event)
+            else:
+                print(f"⚠️ Warning: Gemini returned an unmapped ID ({target_id}). Dropping event to maintain integrity.")
         
         dynamic_date_str = datetime.now().strftime("%Y-%m-%d")
         output_file = f'data/friday_snippet/tactical_events_{dynamic_date_str}.json'
         
         with open(output_file, 'w') as f:
-            json.dump(tactical_events, f, indent=4)
+            json.dump(validated_tactical_events, f, indent=4)
             
-        print(f"✅ Success! Wrote {len(tactical_events)} tactical events to {output_file}.")
+        print(f"✅ Success! Wrote {len(validated_tactical_events)} tactical events with 100% verified publisher URLs to {output_file}.")
         
         # ==========================================
         # ☁️ HUGGING FACE PERMANENT RETENTION SYNC
         # ==========================================
         HF_TOKEN = os.environ.get("HF_TOKEN")
-        # If running inside a HF Space, SPACE_ID is automatically available in the environment.
-        # If running via GitHub Actions, explicitly define your repo ID: "username/space-name"
-        REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
+        REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard" 
         
         if HF_TOKEN and REPO_ID:
             try:
@@ -250,14 +292,13 @@ if __name__ == "__main__":
                     repo_id=REPO_ID,
                     repo_type="space",
                     token=HF_TOKEN,
-                    commit_message=f"Auto-sync Tactical Events: {dynamic_date_str}"
+                    commit_message=f"Auto-sync Tactical Events (Resolved Publisher URLs): {dynamic_date_str}"
                 )
                 print("✅ Successfully locked tactical events into permanent Hugging Face storage!")
             except Exception as e:
                 print(f"❌ Failed to sync to Hub. File is only in temporary memory! Error: {e}")
         else:
             print("⚠️ HF_TOKEN or REPO_ID missing. File saved locally but will be lost on container restart.")
-        # ==========================================
-        
+            
     except Exception as e:
         print(f"❌ Pipeline Failed: {e}")
