@@ -1,7 +1,7 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russia Strikes Three Ukrainian Airbases With Hypersonic Missiles",
+        "title": "Crimea Suspends Fuel Sales to Public Amid Ukrainian Attacks",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -13,13 +13,25 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "US Officials Reject Iran Claim of Strait of Hormuz Closure",
+        "title": "Russia Strikes Three Ukrainian Airbases With Hypersonic Missiles",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "CISA (GLOBAL CYBER THREATS)",
+        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Simferopol Attacked Overnight",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Hamas Operatives Transferred Over Half Billion Shekels to Military Wing",
+        "title": "NATO Secretary General Calls for Scaling Up Defense Industries",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -31,32 +43,20 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian Drones Strike Fuel Terminal in Kerch, Crimea",
+        "title": "Large Fire at Kavkaz Port in Russia's Krasnodar Krai",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
+        "source": "MONITOR THE SITUATION",
+        "title": "Hamas Operatives Transferred Over Half Billion Shekels to Military Wing",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "ELEVATED"
+    },
+    {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Russia Halts Fuel Supply to Crimea Gas Stations",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Iran negotiators head for Switzerland but Lebanon fighting continues - Reuters",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Israel Soldier Killed in Incident",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
+        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "threat_level": "ELEVATED"
     }
 ]
