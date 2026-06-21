@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Hezbollah Rejects Lebanese Government Negotiations With US",
+        "Title": "Iran Seeks to Amend Strait of Hormuz Rules",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
         "threat_level": "CRITICAL"
@@ -21,13 +21,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.npr.org/2026/06/21/g-s1-129200/ukrainian-attacks-russia-crimea-halt-gas-sales",
-        "Title": "Ukrainian attacks prompt Russian-held Crimea to halt civilian gasoline sales",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://t.me/Middle_East_Spectator/33818",
         "Title": "Pakistan and India Agree to Ceasefire",
         "Feed_Source": "WAR MONITOR",
@@ -44,6 +37,13 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
