@@ -1,16 +1,23 @@
 [
     {
+        "Source": "https://monitor-the-situation.com/",
+        "Title": "UKMTO Reports Suspicious Activity Near Bab el-Mandeb",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitor-the-situation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.npr.org/2026/06/21/g-s1-129200/ukrainian-attacks-russia-crimea-halt-gas-sales",
+        "Title": "Ukrainian attacks prompt Russian-held Crimea to halt civilian gasoline sales",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/intelslava/89252",
         "Title": "US Airstrikes Hit Shiraz Air Base in Iran",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://monitor-the-situation.com/",
-        "Title": "Israel Defense Minister Vows to Continue Violating Lebanon Ceasefire",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitor-the-situation.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,29 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119135",
-        "Title": "Brazil Hit by Massive Cyber Attack",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
-        "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
