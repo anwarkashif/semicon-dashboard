@@ -1,21 +1,28 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Iran Defence Minister Proposes Regional Security Belt",
+        "Title": "Missile and Drone Strikes Hit Railway Infrastructure in Bryansk, Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44619",
-        "Title": "Iran Negotiations Uncertain Amid Delegation Departure",
+        "Source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTjNGSEZHOXNpMGhyeDBCZThrM2VVNDV1eGExcFpiRHNoLUNxdXJQSE9VYXd1Zlc0MURwWk9VMVJCaU5fb3Y4dENGbldpcW1fZTYwOUdJLXlLTjEtN0xlQlJHZWdnRHdwWUVaN0lKUlF1bnMzWWIyWm1pbXV3U1Mxa291NFVKTWVzbjhuZ0N1LTFkR01rS2dNVFNLVTJMdDBkRUFBUklHNjJHYWhuUWFRYmxLc3JmWUhDSG05TU52T0ZyUXc?oc=5",
+        "Title": "Press Release: Hezbollah Tunnel Exposed Under Civilian Village - idf.il",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "news.google.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33851",
-        "Title": "Qatar Gas Facility Hit by Explosion",
+        "Source": "https://www.nytimes.com/2026/06/21/world/middleeast/israel-lebanon-hezbollah-fighting.html",
+        "Title": "Israel Directs Its Military to Limit Its Actions in Lebanon, but Tensions Persist",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33852",
+        "Title": "Qatar Reports Fire at Ras Laffan LNG Plant",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -37,6 +44,13 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
