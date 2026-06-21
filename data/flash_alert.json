@@ -1,6 +1,18 @@
 [
     {
         "source": "MONITOR THE SITUATION",
+        "title": "Hamas Operatives Transferred Over Half Billion Shekels to Military Wing",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Strait of Hormuz Closed to Large Vessels",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
         "title": "China Expands Antelope Reef to 1,450 Acres in South China Sea",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
@@ -9,19 +21,19 @@
         "source": "MONITOR THE SITUATION",
         "title": "Large Fire at Kavkaz Port in Russia's Krasnodar Krai",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
         "title": "Ukrainian Drones Strike Fuel Terminal in Kerch, Crimea",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "source": "WAR MONITOR",
-        "title": "US Threatens Tolls On Strait Of Hormuz",
-        "url": "https://war-monitor.com/events",
-        "threat_level": "CRITICAL"
+        "source": "MONITOR THE SITUATION",
+        "title": "US Officials Reject Iran Claim of Strait of Hormuz Closure",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
@@ -31,32 +43,20 @@
     },
     {
         "source": "WAR MONITOR",
-        "title": "Syrian Troops Attacked by ISIS in Aleppo",
+        "title": "US Threatens Tolls On Strait Of Hormuz",
         "url": "https://war-monitor.com/events",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "source": "WAR MONITOR",
-        "title": "Zelenskyy returns Poland's highest honor as row deepens",
+        "title": "Syrian Troops Attacked by ISIS in Aleppo",
         "url": "https://war-monitor.com/events",
-        "threat_level": "ELEVATED"
+        "threat_level": "HIGH"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "threat_level": "CRITICAL"
-    },
-    {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "China Maintains Regular Coastguard Presence Near Pratas Island",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "ELEVATED"
     }
 ]
