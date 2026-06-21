@@ -1,5 +1,12 @@
 [
     {
+        "Source": "https://monitor-the-situation.com/",
+        "Title": "AMTI Updates South China Sea Energy Exploration Map",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitor-the-situation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.politico.com/news/2026/06/20/iran-strait-hormuz-ceasefire-00969177?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
         "Title": "Iran announces plans to close Strait of Hormuz, alleging \u2018violations of the ceasefire\u2019",
         "Feed_Source": "WAR MONITOR",
@@ -14,34 +21,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://monitor-the-situation.com/",
-        "Title": "Trump Orders Israel to Partially Withdraw From Southern Lebanon",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitor-the-situation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89273",
-        "Title": "Israel Denies US Request for Lebanon Withdrawal",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119172",
-        "Title": "Russia Faces Disaster in Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33836",
-        "Title": "Iranian Agents Attempt Kidnap of Ex-Shin Bet Chief in UAE",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -51,6 +30,13 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
