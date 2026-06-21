@@ -4,6 +4,98 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iranian Negotiators in Geneva Oppose Joint Photo with US Del...",
+        "Summary": "Iranian Negotiators in Geneva Oppose Joint Photo with US Delegation: Source",
+        "Risk": "HIGH",
+        "Source": "https://www.tasnimnews.ir/en/news/2026/06/21/3623163/iranian-negotiators-in-geneva-oppose-joint-photo-with-us-delegation-source",
+        "Title": "Iranian Negotiators in Geneva Oppose Joint Photo with US Delegation: Source",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "tasnimnews.ir"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Police charge man after suspected anti-Muslim attacks in Edi...",
+        "Summary": "Police charge man after suspected anti-Muslim attacks in Edinburgh",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/2026/6/21/police-charge-man-after-suspected-anti-muslim-attacks-in-edinburgh?traffic_source=rss",
+        "Title": "Police charge man after suspected anti-Muslim attacks in Edinburgh",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Yemen's Houthi rebels",
+        "Action": "Attack another ship in the Red Sea, killing 3.",
+        "Location": "Red Sea",
+        "Risk": "Escalation of maritime conflict, disruption of global shipping, loss of life, regional instability.",
+        "Source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTTJrMlc4UFZ1aDlUc2ZKVGloMDJJaWk1dEF3OXFpSmNKS0lVRi1vdmVIZWZBdXBMbkJzQXVzSjBXV1Z6QklrSm5naVoyYTBaam41WjY1TFVrUlRLMVMyQ0FVQnNNemhvNkVVUFBSaUZOM3UtRENod2RfQnV6cXNnMmFOdnVVQW1vaTk4dEFoUWlJNGFULURsRg?oc=5",
+        "Title": "Yemen's Houthi rebels attack another ship in the Red Sea, killing 3 - Courthouse News",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Iran",
+        "Action": "Announces Hormuz Strait closure, sends team for Swiss talks.",
+        "Location": "Strait of Hormuz, Switzerland",
+        "Risk": "Global energy market disruption, regional conflict escalation, diplomatic leverage play.",
+        "Source": "https://gcaptain.com/iran-says-hormuz-has-been-closed-but-sends-team-for-swiss-talks/",
+        "Title": "Iran Says Hormuz Has Been Closed But Sends Team For Swiss Talks",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "gcaptain.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "US Army",
+        "Action": "Launches new Indo-Pacific multi-domain command.",
+        "Location": "Indo-Pacific",
+        "Risk": "Increased military competition, regional power balance shift, potential for escalation with China.",
+        "Source": "https://www.defensenews.com/news/your-military/2026/06/19/army-launches-new-indo-pacific-multi-domain-command/",
+        "Title": "Army launches new Indo-Pacific multi-domain command",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "China",
+        "Action": "Utilizes farm drones, seen as a 'Trojan Horse' by Washington.",
+        "Location": "N/A",
+        "Risk": "Dual-use technology exploitation, national security vulnerabilities, potential for espionage or military application.",
+        "Source": "https://warontherocks.com/chinas-farm-drones-a-trojan-horse-washington-overlooks/",
+        "Title": "China\u2019s Farm Drones: A Trojan Horse Washington Overlooks",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "warontherocks.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Taiwan (Global Semiconductor Industry)",
+        "Action": "Maintains central role in global semiconductor manufacturing.",
+        "Location": "Taiwan",
+        "Risk": "Global supply chain vulnerability, economic instability, geopolitical leverage/pressure, potential for conflict.",
+        "Source": "https://www.eetimes.com/all-semiconductor-roads-lead-to-taiwan/",
+        "Title": "All Semiconductor Roads Lead to Taiwan",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "eetimes.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "SpaceX, National Reconnaissance Office (US)",
+        "Action": "Launches intelligence-gathering satellites.",
+        "Location": "Orbital deployment",
+        "Risk": "Enhanced surveillance capabilities, space militarization concerns, competitive advantage in intelligence gathering.",
+        "Source": "https://spaceflightnow.com/2026/06/18/live-coverage-spacex-to-launch-intelligence-gathering-satellites-for-the-national-reconnaissance-office-2/",
+        "Title": "SpaceX launches intelligence-gathering satellites for the National Reconnaissance Office",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "spaceflightnow.com"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Poll Finds Israelis Believe Iran Won Mideast War: Report...",
         "Summary": "Poll Finds Israelis Believe Iran Won Mideast War: Report",
         "Risk": "HIGH",
@@ -162,70 +254,5 @@
         "Summary": "Qatar confirms launch of US-Iran talks in Switzerland",
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/qatar-confirms-launch-us-iran-talks-switzerland"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran&#039;s Tasnim news agency says Hormuz will not reopen u...",
-        "Summary": "Iran&#039;s Tasnim news agency says Hormuz will not reopen until Lebanon ceasefire holds, oil waivers issued",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/irans-tasnim-news-agency-says-hormuz-will-not-reopen-until-lebanon-ceasefire"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Iran",
-        "Action": "Threatens/closes vital Strait of Hormuz",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States, Iran",
-        "Action": "Commence peace talks amid regional strikes",
-        "Location": "Switzerland, West Asia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Taiwan",
-        "Action": "Conducts five-day combat readiness drills",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Ukraine, Russia",
-        "Action": "Ukraine warns of attack, strikes Russian oil",
-        "Location": "Ukraine, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States",
-        "Action": "Pentagon seeks $80 billion for Iran war",
-        "Location": "United States, West Asia",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Where is the outrage over US-Israeli destruction of historic...",
-        "Summary": "Where is the outrage over US-Israeli destruction of historic sites?",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/where-outrage-over-us-israeli-destruction-historic-sites"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Four months after the horrific Iran school bombing, fears gr...",
-        "Summary": "Four months after the horrific Iran school bombing, fears grow that Trump and Hegseth will bury the truth",
-        "Risk": "HIGH",
-        "Source": "https://www.theguardian.com/world/2026/jun/21/iran-school-bombing-minab-fears-trump-hegseth-bury-truth-investigation-findings"
     }
 ]
