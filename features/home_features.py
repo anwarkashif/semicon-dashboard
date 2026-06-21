@@ -1033,6 +1033,10 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         except:
             pass
 
+    # 🛡️ BULLETPROOF SAFETY CATCH (PREVENTS NONETYPE CRASHES)
+    if not isinstance(flush_data, dict):
+        flush_data = {}
+
     # Extract dynamic keys or provide secure fallbacks
     bluf_text = flush_data.get('bluf', "Scanning macro-strategic feeds. Awaiting telemetry generation cycle...")
     tactical_list = flush_data.get('tactical_indicators', ["System initiating...", "Monitoring baseline anomalies...", "Awaiting active extraction..."])
