@@ -4,6 +4,68 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Vance arrives in Switzerland for US-Iran talks",
+        "Summary": "Vance arrives in Switzerland for US-Iran talks",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/2026/6/21/vance-arrives-in-switzerland-for-us-iran-talks?traffic_source=rss"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Vance arrives in Switzerland for crunch US-Iran talks",
+        "Summary": "Vance arrives in Switzerland for crunch US-Iran talks",
+        "Risk": "HIGH",
+        "Source": "https://x.com/FT/status/2068599709208306144"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States, Iran",
+        "Action": "Initiate peace talks amidst Strait of Hormuz tensions.",
+        "Location": "Switzerland, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States (Pentagon)",
+        "Action": "Seeks $80 billion for ongoing Iran war.",
+        "Location": "United States",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "China, European Union",
+        "Action": "Increased exports create trade war tensions with Europe.",
+        "Location": "Europe",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States (Army)",
+        "Action": "Launches new Indo-Pacific multi-domain command.",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Major Defense Actors (e.g., US, Japan, Europe)",
+        "Action": "Accelerate autonomous drone and 'wingman' aircraft development.",
+        "Location": "Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Intel, PDF Solutions",
+        "Action": "Partner to optimize advanced semiconductor node yield.",
+        "Location": "Global (semiconductor industry)",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "LA Mayor Bass Declares Emergency to Secure Resources to Help...",
         "Summary": "LA Mayor Bass Declares Emergency to Secure Resources to Help Fight Warehouse Fire",
         "Risk": "HIGH",
@@ -135,67 +197,5 @@
         "Summary": "US VP Vance arrives in Switzerland for peace talks with Iran",
         "Risk": "HIGH",
         "Source": "https://www.al-monitor.com/originals/2026/06/us-vp-vance-arrives-switzerland-peace-talks-iran"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States, Iran",
-        "Action": "Hold peace talks amid Hormuz closure claims.",
-        "Location": "Switzerland, Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States",
-        "Action": "Debates AI export controls, citing national security.",
-        "Location": "United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Israel",
-        "Action": "Conducts strikes; conflict and protests persist.",
-        "Location": "Lebanon, Gaza, West Bank",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States",
-        "Action": "Restructures Indo-Pacific military and multi-domain command.",
-        "Location": "Indo-Pacific",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "MKS Inc",
-        "Action": "Invests RM400M for new semiconductor factory.",
-        "Location": "Penang, Malaysia",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israel to hold positions in Lebanon while limiting operation...",
-        "Summary": "Israel to hold positions in Lebanon while limiting operations, reports say",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-hold-positions-lebanon-while-limiting-operations-reports-say"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Meloni tells Trump to mind his own popularity in \u2018photo begg...",
-        "Summary": "Meloni tells Trump to mind his own popularity in \u2018photo begging\u2019 rift",
-        "Risk": "HIGH",
-        "Source": "https://www.rt.com/news/641918-trump-meloni-photo-begging-popularity/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Iran, United States",
-        "Action": "Engage talks amidst Strait of Hormuz claims",
-        "Location": "Switzerland, Strait of Hormuz",
-        "Risk": "CRITICAL"
     }
 ]
