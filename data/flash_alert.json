@@ -1,14 +1,20 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Switzerland Peace Talks Add Emergency Session on Israel-Hezbollah",
+        "title": "Large Fire at Kavkaz Port in Russia's Krasnodar Krai",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russia Strikes Ozerne Airbase in Zhytomyr With Kinzhal Missile",
+        "title": "Ukrainian Drones Strike Fuel Terminal in Kerch, Crimea",
         "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "US Threatens Tolls On Strait Of Hormuz",
+        "url": "https://war-monitor.com/events",
         "threat_level": "CRITICAL"
     },
     {
@@ -25,25 +31,19 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Fuel Terminal Hit at Port in Iran",
+        "title": "Switzerland Peace Talks Add Emergency Session on Israel-Hezbollah",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Trump Threatens US Tolls in Strait of Hormuz if Iran Deal Not Reached",
-        "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Iran negotiators head for Switzerland but Lebanon fighting continues - Reuters",
-        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
         "source": "WAR MONITOR",
         "title": "Syrian Troops Attacked by ISIS in Aleppo",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Israel Announces Deaths of Two Soldiers",
         "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
@@ -57,6 +57,6 @@
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "threat_level": "HIGH"
+        "threat_level": "ELEVATED"
     }
 ]
