@@ -13,7 +13,7 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israeli Airstrike Kills Al Jazeera Cameraman in Gaza",
+        "title": "Trump Threatens US Tolls in Strait of Hormuz if Iran Deal Not Reached",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -21,12 +21,6 @@
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "source": "MONITOR THE SITUATION",
-        "title": "Trump Threatens US Tolls in Strait of Hormuz if Iran Deal Not Reached",
-        "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
     {
@@ -37,7 +31,7 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Ukrainian SOF Trains With GUR-Acquired UH-60A Black Hawk",
+        "title": "MLRS Disappears in Donetsk Oblast, Ukraine",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "HIGH"
     },
@@ -48,15 +42,21 @@
         "threat_level": "HIGH"
     },
     {
-        "source": "MONITOR THE SITUATION",
-        "title": "RSF Captures Military Garrison in Sudan's Blue Nile State",
-        "url": "https://monitor-the-situation.com/",
+        "source": "WAR MONITOR",
+        "title": "Lebanese turtle conservationist Mona Khalil killed by Israeli strike",
+        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
+    },
+    {
+        "source": "WAR MONITOR",
+        "title": "Vance heads to Switzerland for Iran peace talks",
+        "url": "https://war-monitor.com/events",
+        "threat_level": "ELEVATED"
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
         "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "HIGH"
+        "threat_level": "ELEVATED"
     }
 ]
