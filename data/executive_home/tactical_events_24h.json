@@ -4,6 +4,87 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "U.S. and Iran Have Plenty to Negotiate Beyond Nuclear Issues...",
+        "Summary": "U.S. and Iran Have Plenty to Negotiate Beyond Nuclear Issues",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/21/world/middleeast/us-iran-negotiations-issues.html",
+        "Title": "U.S. and Iran Have Plenty to Negotiate Beyond Nuclear Issues",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "nytimes.com"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Secret correspondence claims suggest tensions at top of Iran...",
+        "Summary": "Secret correspondence claims suggest tensions at top of Iranian government",
+        "Risk": "HIGH",
+        "Source": "https://www.theguardian.com/world/2026/jun/21/secret-correspondence-iranian-government-tensions-supreme-leader",
+        "Title": "Secret correspondence claims suggest tensions at top of Iranian government",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "theguardian.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Iran, United States",
+        "Action": "Launched historic peace talks with a 60-day roadmap.",
+        "Location": "Switzerland",
+        "Risk": "High (Potential for de-escalation of a major regional conflict, but also high risk of failure leading to renewed hostilities and destabilization, as indicated by surrounding threats from actors like Trump and ongoing Israeli actions).",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/21/iran-u-s-launch-historic-peace-talks-with-60-day-roadmap?traffic_source=rss",
+        "Title": "Iran-U.S. launch historic peace talks with 60-day roadmap",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "aljazeera.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Israel",
+        "Action": "Conducted strikes in Lebanon after a brief lull, amidst US-Iran talks.",
+        "Location": "Lebanon",
+        "Risk": "High (Escalation of regional conflict, undermining ongoing peace efforts, increased civilian casualties, and humanitarian impact).",
+        "Source": "https://www.france24.com/en/israeli-strikes-start-again-in-lebanon-after-several-hour-lull-amid-us-iran-talks",
+        "Title": "Israeli strikes start again in Lebanon after several-hour lull, amid US-Iran talks",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "france24.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Houthi rebels",
+        "Action": "Launched missile attack on Israel, stoking fears of renewed Red Sea shipping strikes.",
+        "Location": "Israel, Red Sea",
+        "Risk": "High (Disruption of global maritime trade routes, potential for regional conflict escalation, and humanitarian crisis in affected areas).",
+        "Source": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRlZTZnRnR0tGckFFMFNyZkFpMkFYSm41Y3FmNmtWTlF0ZWZIYlpGZE04SFc4Nm9nZENQMFVNWW1kUURBSjR5Q1pfS3BIR3FFUUNTRDY5N1A4RUxRUHROTnNoLUdNX2J6ckVmNGhJM2dYaFRSQmFXX2VCM1RXcHNxeWlOR2F5VV9qQ2lQa09FS0xndw?oc=5",
+        "Title": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - AP News",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Global military powers (e.g., US, Europe, Japan, China, Poland)",
+        "Action": "Accelerating development and deployment of advanced drones and 'wingman' aircraft for military applications.",
+        "Location": "Global",
+        "Risk": "High (Accelerating technological arms race, potential for increased automation in warfare, significant shifts in military power balances, and ethical concerns regarding autonomous weapons systems).",
+        "Source": "https://www.c4isrnet.com/unmanned/2026/06/16/as-europe-rearms-wingman-aircraft-take-center-stage/",
+        "Title": "As Europe rearms, \u2018wingman\u2019 aircraft take center stage",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "c4isrnet.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Taiwan (as central actor), Global nations (e.g., US, Canada, China)",
+        "Action": "Maintaining centrality in global semiconductor production; nations strategizing for semiconductor supply chain security and independence.",
+        "Location": "Taiwan, Global",
+        "Risk": "High (Economic vulnerability due to reliance on a single geographic hub, potential for conflict over critical manufacturing infrastructure, severe global supply chain disruption, and national security implications for leading technological powers).",
+        "Source": "https://www.eetimes.com/all-semiconductor-roads-lead-to-taiwan/",
+        "Title": "All Semiconductor Roads Lead to Taiwan",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "eetimes.com"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israeli strikes start again in Lebanon after several-hour lu...",
         "Summary": "Israeli strikes start again in Lebanon after several-hour lull, amid US-Iran talks",
         "Risk": "HIGH",
@@ -208,68 +289,5 @@
         "Title": "Taiwan Military to Conduct Five-Day Combat Readiness Drills",
         "Feed_Source": "Premium RSS",
         "Publisher": "moderndiplomacy.eu"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "US Army, Pentagon",
-        "Action": "Establishes a new Indo-Pacific multi-domain command and requests $80 billion for Iran war and other expenses.",
-        "Location": "Indo-Pacific, US",
-        "Risk": "Medium-High - Increased military footprint in a contested region, preparation for potential future conflict, significant budget implications.",
-        "Source": "https://www.defensenews.com/news/your-military/2026/06/19/army-launches-new-indo-pacific-multi-domain-command/",
-        "Title": "Army launches new Indo-Pacific multi-domain command",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "China (Alibaba, Xiaomi), Global defense industry",
-        "Action": "Develops 'farm drones' with potential dual-use capabilities, advances AI foundation models for embodied AI, and sees billions pour into autonomous defense.",
-        "Location": "China, Global",
-        "Risk": "Medium-High - Acceleration of AI arms race, technological asymmetry, potential for misuse of dual-use technologies, ethical concerns.",
-        "Source": "https://warontherocks.com/chinas-farm-drones-a-trojan-horse-washington-overlooks/",
-        "Title": "China\u2019s Farm Drones: A Trojan Horse Washington Overlooks",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "warontherocks.com"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "First Clause of Iran-US MoU Key to Success of Agreement: Off...",
-        "Summary": "First Clause of Iran-US MoU Key to Success of Agreement: Official",
-        "Risk": "HIGH",
-        "Source": "https://www.tasnimnews.ir/en/news/2026/06/21/3623054/first-clause-of-iran-us-mou-key-to-success-of-agreement-official"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israeli soldiers in Lebanon are free to take action if under...",
-        "Summary": "Israeli soldiers in Lebanon are free to take action if under threat, Israel&#039;s Katz says",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/israeli-soldiers-lebanon-are-free-take-action-if-under-threat-israels-katz-says"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Iran",
-        "Action": "Threatens to close Strait of Hormuz.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States, Iran",
-        "Action": "Delegations begin peace talks in Switzerland.",
-        "Location": "Switzerland",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Israel",
-        "Action": "Continues military strikes in southern Lebanon.",
-        "Location": "Southern Lebanon",
-        "Risk": "HIGH"
     }
 ]
