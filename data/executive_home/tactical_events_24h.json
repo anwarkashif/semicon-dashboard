@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Middle East live: US Vice President JD Vance arrives in Swit...",
+        "Summary": "Middle East live: US Vice President JD Vance arrives in Switzerland for Iran peace talks",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/middle-east/20260621-middle-east-live-us-vice-president-jd-vance-arrives-in-switzerland-for-iran-peace-talks"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "US VP Vance arrives in Switzerland for peace talks with Iran",
+        "Summary": "US VP Vance arrives in Switzerland for peace talks with Iran",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/us-vp-vance-arrives-switzerland-peace-talks-iran"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States, Iran",
+        "Action": "Hold peace talks amid Hormuz closure claims.",
+        "Location": "Switzerland, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States",
+        "Action": "Debates AI export controls, citing national security.",
+        "Location": "United States",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Israel",
+        "Action": "Conducts strikes; conflict and protests persist.",
+        "Location": "Lebanon, Gaza, West Bank",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States",
+        "Action": "Restructures Indo-Pacific military and multi-domain command.",
+        "Location": "Indo-Pacific",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "MKS Inc",
+        "Action": "Invests RM400M for new semiconductor factory.",
+        "Location": "Penang, Malaysia",
+        "Risk": "ELEVATED"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israel to hold positions in Lebanon while limiting operation...",
         "Summary": "Israel to hold positions in Lebanon while limiting operations, reports say",
         "Risk": "HIGH",
@@ -135,61 +190,6 @@
         "Actor": "Ukraine",
         "Action": "Strikes Russian oil refinery with drones.",
         "Location": "Tyumen, Russia",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Israel, Iran, United States",
-        "Action": "Israel kills 16 in Lebanon, talks stall.",
-        "Location": "Lebanon, Switzerland",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States",
-        "Action": "Launches new Indo-Pacific multi-domain command.",
-        "Location": "Indo-Pacific",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "China",
-        "Action": "Major companies unveil advanced AI foundation models.",
-        "Location": "China",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Saudis seek to repeat Argentina World Cup &#039;miracle&#039...",
-        "Summary": "Saudis seek to repeat Argentina World Cup &#039;miracle&#039; against Spain",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/saudis-seek-repeat-argentina-world-cup-miracle-against-spain"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The U.S. Is Ramping Up Economic Warfare. Its Enemies Aren&#x...",
-        "Summary": "The U.S. Is Ramping Up Economic Warfare. Its Enemies Aren&#x2019;t Blinking.",
-        "Risk": "HIGH",
-        "Source": "https://www.wsj.com/world/the-u-s-is-ramping-up-economic-warfare-its-enemies-arent-blinking-fdd49238"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Iran / United States",
-        "Action": "Iran claims Strait of Hormuz closure; US disputes.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States / Iran",
-        "Action": "Hold peace talks amid escalating regional conflict.",
-        "Location": "Switzerland / Middle East",
         "Risk": "HIGH"
     }
 ]
