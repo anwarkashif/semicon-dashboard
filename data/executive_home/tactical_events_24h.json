@@ -4,6 +4,61 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Qatar confirms launch of US-Iran talks in Switzerland",
+        "Summary": "Qatar confirms launch of US-Iran talks in Switzerland",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/qatar-confirms-launch-us-iran-talks-switzerland"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran&#039;s Tasnim news agency says Hormuz will not reopen u...",
+        "Summary": "Iran&#039;s Tasnim news agency says Hormuz will not reopen until Lebanon ceasefire holds, oil waivers issued",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/irans-tasnim-news-agency-says-hormuz-will-not-reopen-until-lebanon-ceasefire"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Iran",
+        "Action": "Threatens/closes vital Strait of Hormuz",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States, Iran",
+        "Action": "Commence peace talks amid regional strikes",
+        "Location": "Switzerland, West Asia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Taiwan",
+        "Action": "Conducts five-day combat readiness drills",
+        "Location": "Taiwan",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Ukraine, Russia",
+        "Action": "Ukraine warns of attack, strikes Russian oil",
+        "Location": "Ukraine, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "United States",
+        "Action": "Pentagon seeks $80 billion for Iran war",
+        "Location": "United States, West Asia",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Where is the outrage over US-Israeli destruction of historic...",
         "Summary": "Where is the outrage over US-Israeli destruction of historic sites?",
         "Risk": "HIGH",
@@ -90,13 +145,6 @@
     },
     {
         "Date": "2026-06-21",
-        "Actor": "Taiwan",
-        "Action": "Conducts five-day combat readiness drills",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
         "Actor": "United States",
         "Action": "Pentagon requests $80B for Iran war",
         "Location": "United States, Middle East",
@@ -149,53 +197,5 @@
         "Action": "Requests $80 billion for potential Iran conflict",
         "Location": "United States, Iran",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Taiwan",
-        "Action": "Conducts five-day combat readiness military drills",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Ukraine, Russia",
-        "Action": "Strikes Russian-held Crimea, halting fuel sales",
-        "Location": "Crimea",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "SpaceX, United States (NRO)",
-        "Action": "Launches intelligence and Starlink communication satellites",
-        "Location": "Global (Space), United States",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Global Semiconductor Industry, Taiwan",
-        "Action": "Intensifies focus on AI chips, Taiwan's central role",
-        "Location": "Taiwan, Global",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US-Iran peace talks to begin, after Tehran closed Strait of ...",
-        "Summary": "US-Iran peace talks to begin, after Tehran closed Strait of Hormuz",
-        "Risk": "HIGH",
-        "Source": "https://www.france24.com/en/us-iran-peace-talks-to-begin-after-tehran-closed-strait-of-hormuz"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Neither the War Nor Trump\u2019s Deal Terminated the Main Threats...",
-        "Summary": "Neither the War Nor Trump\u2019s Deal Terminated the Main Threats in Iran, Analysts Say",
-        "Risk": "HIGH",
-        "Source": "https://www.nytimes.com/2026/06/21/us/iran-us-peace-deal-nuclear-program-threats.html"
     }
 ]
