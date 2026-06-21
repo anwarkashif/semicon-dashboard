@@ -4,6 +4,54 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israeli strikes start again in Lebanon after several-hour lu...",
+        "Summary": "Israeli strikes start again in Lebanon after several-hour lull, amid US-Iran talks",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/israeli-strikes-start-again-in-lebanon-after-several-hour-lull-amid-us-iran-talks",
+        "Title": "Israeli strikes start again in Lebanon after several-hour lull, amid US-Iran talks",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "france24.com"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Swiss US-Iran talks venue a playground of world leaders, mov...",
+        "Summary": "Swiss US-Iran talks venue a playground of world leaders, movie stars",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/swiss-us-iran-talks-venue-playground-world-leaders-movie-stars",
+        "Title": "Swiss US-Iran talks venue a playground of world leaders, movie stars",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "al-monitor.com"
+    },
+    {
+        "Date": null,
+        "Actor": "Ukraine (Zelenskiy), Russia",
+        "Action": "Warns of imminent massive Russian attack",
+        "Location": "Ukraine",
+        "Risk": "Critical (Intensification of major conflict, humanitarian catastrophe, geopolitical instability)",
+        "Source": "https://moderndiplomacy.eu/2026/06/21/zelenskiy-warns-of-imminent-massive-russian-attack-on-ukraine/",
+        "Title": "Zelenskiy Warns of Imminent Massive Russian Attack on Ukraine",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": null,
+        "Actor": "Taiwan Military",
+        "Action": "Conducts Five-Day Combat Readiness Drills",
+        "Location": "Taiwan",
+        "Risk": "High (Potential for increased tensions with China, miscalculation, regional conflict)",
+        "Source": "https://moderndiplomacy.eu/2026/06/21/taiwan-military-to-conduct-five-day-combat-readiness-drills/",
+        "Title": "Taiwan Military to Conduct Five-Day Combat Readiness Drills",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iranian Negotiators in Geneva Oppose Joint Photo with US Del...",
         "Summary": "Iranian Negotiators in Geneva Oppose Joint Photo with US Delegation: Source",
         "Risk": "HIGH",
@@ -223,36 +271,5 @@
         "Action": "Continues military strikes in southern Lebanon.",
         "Location": "Southern Lebanon",
         "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Taiwan",
-        "Action": "Stages five-day combat readiness drills.",
-        "Location": "Taiwan",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Ukraine",
-        "Action": "Strikes Russian oil facilities in Crimea.",
-        "Location": "Crimea, Russia",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "China, SpaceX",
-        "Action": "China acquired secret stakes in SpaceX.",
-        "Location": "United States, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Qatar confirms launch of US-Iran talks in Switzerland",
-        "Summary": "Qatar confirms launch of US-Iran talks in Switzerland",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/qatar-confirms-launch-us-iran-talks-switzerland"
     }
 ]
