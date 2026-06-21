@@ -4,10 +4,55 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran's Tasnim news agency says Hormuz will not reopen until ...",
+        "Summary": "Iran's Tasnim news agency says Hormuz will not reopen until Lebanon ceasefire holds, oil waivers issued",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2068656458825073138"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Israel directs its military to limit its actions in Lebanon,...",
         "Summary": "Israel directs its military to limit its actions in Lebanon, though tensions persist.",
         "Risk": "HIGH",
         "Source": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon/israel-directs-its-military-to-limit-its-actions-in-lebanon-though-tensions-persist"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "US, Iran",
+        "Action": "Negotiate deal amid Hormuz closure threats",
+        "Location": "Switzerland, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "China, Taiwan",
+        "Action": "Taiwan conducts drills as China escalates claims",
+        "Location": "Taiwan Strait",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Ukraine, Russia",
+        "Action": "Ukraine warns of imminent large-scale Russian attack",
+        "Location": "Ukraine",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Global Tech, Taiwan",
+        "Action": "Intense global competition for advanced AI chips",
+        "Location": "Taiwan, Global",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "China, SpaceX",
+        "Action": "China secretly acquired stakes in US space firm",
+        "Location": "United States",
+        "Risk": "HIGH"
     },
     {
         "Date": "2026-06-21",
@@ -149,50 +194,5 @@
         "Action": "Peace deal halts war, reopens Strait of Hormuz.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States",
-        "Action": "Pentagon requests $80B for potential Iran war.",
-        "Location": "Middle East",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "China",
-        "Action": "Navy deploys destroyers, escalating Taiwan pressure.",
-        "Location": "Taiwan Strait",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Amazon",
-        "Action": "Begins selling its own AI-specific chips.",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "European Union",
-        "Action": "EU prepares tariffs on Chinese plug-in hybrids.",
-        "Location": "Europe, China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Pirates",
-        "Action": "Pirates increase aggression, using gunfire on ships.",
-        "Location": "Global Maritime Routes",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-19",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israel-Hezbollah Clashes Put Iran Deal Under Early Pressure",
-        "Summary": "Israel-Hezbollah Clashes Put Iran Deal Under Early Pressure",
-        "Risk": "HIGH",
-        "Source": "https://www.wsj.com/world/middle-east/israel-hezbollah-clashes-put-iran-deal-under-early-pressure-0aa5ae90"
     }
 ]
