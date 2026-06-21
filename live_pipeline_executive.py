@@ -144,9 +144,21 @@ def extract_tactical_events(news_text):
 
 def generate_flush_to_brief(accumulated_events):
     prompt = f"You are an elite Geopolitics-OSINT analyst. Generate a FLASH TO BRIEF based on this data: {json.dumps(accumulated_events)}. Output ONLY a valid JSON object matching exactly: bluf, tactical_indicators, threat_narrative, risk_assessment, strategic_forecast."
+    
     for attempt in range(3):
-        try: return json.loads(client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.replace("```json", "").replace("```", "").strip())
-        except Exception: time.sleep(15 * (attempt + 1))
+        try: 
+            return json.loads(client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.replace("```json", "").replace("```", "").strip())
+        except Exception: 
+            time.sleep(15 * (attempt + 1))
+        
+    # 🛡️ DETERMINISTIC FALLBACK (Prevents 'NoneType' crashes if API fails)
+    return {
+        "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
+        "tactical_indicators": ["API Rate Limit Hit", "System Awaiting Reset", "Data Pipeline Intact"],
+        "threat_narrative": "Generation pending next scheduled cron execution.",
+        "risk_assessment": "PENDING",
+        "strategic_forecast": "PENDING"
+    }
 
 if __name__ == "__main__":
     try:

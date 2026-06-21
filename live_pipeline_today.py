@@ -98,9 +98,21 @@ def extract_tactical_events(news_text):
 
 def generate_shift_brief(accumulated_events):
     prompt = f"Synthesize a 12H Strategic Shift Brief using this data: {json.dumps(accumulated_events)}. Return JSON exactly keys: date, bluf, executive_summary, escalation_indicators, strategic_outlook, threat_level."
-    for _ in range(3):
-        try: return json.loads(client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.replace("```json", "").replace("```", "").strip())
-        except Exception: time.sleep(10)
+    for attempt in range(3):
+        try: 
+            return json.loads(client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.replace("```json", "").replace("```", "").strip())
+        except Exception: 
+            time.sleep(10)
+            
+    # 🛡️ DETERMINISTIC FALLBACK FOR TODAY'S SNIPPET
+    return {
+        "date": datetime.now().strftime('%Y-%m-%d'),
+        "bluf": "API Generation Timeout. Awaiting next cycle.",
+        "executive_summary": "System pending reset.",
+        "escalation_indicators": ["API Timeout"],
+        "strategic_outlook": "PENDING",
+        "threat_level": "UNKNOWN"
+    }
 
 if __name__ == "__main__":
     try:
