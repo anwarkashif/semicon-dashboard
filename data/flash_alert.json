@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "AMTI Updates South China Sea Energy Exploration Map",
+        "Title": "Iranian Finance Minister Sees Oil Sanctions Relief, Currency Recovery After New Deal",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89274",
+        "Title": "Iran Threatens Israel Over Lebanon Strikes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,13 +21,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89272",
-        "Title": "US Increases Air Presence Near Iran",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -28,15 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
+        "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
