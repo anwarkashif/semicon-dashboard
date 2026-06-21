@@ -4,10 +4,55 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israel to hold positions in Lebanon while limiting operation...",
+        "Summary": "Israel to hold positions in Lebanon while limiting operations, reports say",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-hold-positions-lebanon-while-limiting-operations-reports-say"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Meloni tells Trump to mind his own popularity in \u2018photo begg...",
         "Summary": "Meloni tells Trump to mind his own popularity in \u2018photo begging\u2019 rift",
         "Risk": "HIGH",
         "Source": "https://www.rt.com/news/641918-trump-meloni-photo-begging-popularity/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Iran, United States",
+        "Action": "Engage talks amidst Strait of Hormuz claims",
+        "Location": "Switzerland, Strait of Hormuz",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Israel",
+        "Action": "Escalates Lebanon conflict, Israeli soldier killed",
+        "Location": "Lebanon, Israel",
+        "Risk": "CRITICAL"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Ukraine",
+        "Action": "Strikes Russian oil refinery with long-range drone",
+        "Location": "Tyumen, Russia",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Japan",
+        "Action": "Seeks G7 rare earth price floors",
+        "Location": "Global (targeting China's grip)",
+        "Risk": "HIGH"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Samsung",
+        "Action": "Sharpens HBM semiconductor strategy for AI",
+        "Location": "South Korea, Global Semiconductor Market",
+        "Risk": "ELEVATED"
     },
     {
         "Date": "2026-06-21",
@@ -145,48 +190,6 @@
         "Actor": "United States / Iran",
         "Action": "Hold peace talks amid escalating regional conflict.",
         "Location": "Switzerland / Middle East",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States",
-        "Action": "Establishes new multi-domain command in Indo-Pacific.",
-        "Location": "Indo-Pacific",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Japan / G7",
-        "Action": "Seeks G7 strategy to counter China's rare earth grip.",
-        "Location": "Global / China",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "United States",
-        "Action": "Considers AI export ban following industry discussions.",
-        "Location": "United States / Global AI industry",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Intel",
-        "Action": "Demonstrates momentum for 18A advanced node platform.",
-        "Location": "Global semiconductor industry",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Iran, United States",
-        "Action": "Iran claims closing Strait; US disputes.",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-21",
-        "Actor": "Israel",
-        "Action": "Conducts airstrikes, killing 16 in Lebanon.",
-        "Location": "Lebanon",
         "Risk": "HIGH"
     }
 ]
