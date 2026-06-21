@@ -1,13 +1,19 @@
 [
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Russia Strikes Kyiv Oblast With Kinzhal Missile",
+        "title": "Fuel Terminal Hit at Port in Iran",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Trump Threatens US Tolls in Strait of Hormuz if Iran Deal Not Reached",
+        "title": "Russia Strikes Ozerne Airbase in Zhytomyr With Kinzhal Missile",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "source": "MONITOR THE SITUATION",
+        "title": "Israeli Airstrike Kills Al Jazeera Cameraman in Gaza",
         "url": "https://monitor-the-situation.com/",
         "threat_level": "CRITICAL"
     },
@@ -18,10 +24,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "threat_level": "CRITICAL"
+        "source": "MONITOR THE SITUATION",
+        "title": "Trump Threatens US Tolls in Strait of Hormuz if Iran Deal Not Reached",
+        "url": "https://monitor-the-situation.com/",
+        "threat_level": "HIGH"
     },
     {
         "source": "MONITOR THE SITUATION",
@@ -31,14 +37,8 @@
     },
     {
         "source": "MONITOR THE SITUATION",
-        "title": "Israeli Airstrike Kills Al Jazeera Cameraman in Gaza",
+        "title": "Ukrainian SOF Trains With GUR-Acquired UH-60A Black Hawk",
         "url": "https://monitor-the-situation.com/",
-        "threat_level": "HIGH"
-    },
-    {
-        "source": "WAR MONITOR",
-        "title": "Zelenskyy returns Poland's highest honor as row deepens",
-        "url": "https://war-monitor.com/events",
         "threat_level": "HIGH"
     },
     {
@@ -55,8 +55,8 @@
     },
     {
         "source": "CISA (GLOBAL CYBER THREATS)",
-        "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "threat_level": "HIGH"
     }
 ]
