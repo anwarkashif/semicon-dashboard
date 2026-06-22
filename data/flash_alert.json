@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Iranian Officials Travel to Oman for Talks With Sultan Haitham",
+        "Title": "Ukrainian Missile Strike Kills Five in Southwestern Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/22/aje-onl-aje_onl_lebanon_wrap-220626?traffic_source=rss",
+        "Title": "Lebanon Latest: Israeli attacks surge despite ceasefire efforts",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61441",
+        "Title": "Israel Accuses Hamas of Plotting Attacks from Turkey",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,31 +28,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119219",
-        "Title": "Russia Gas Stocks Plummet Amid New Sanctions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.com/news/articles/cnv97e42r7yo?at_medium=RSS&at_campaign=rss",
-        "Title": "Myanmar army killed over 700 civilians in six months, UN says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/22/world/middleeast/us-sanctions-reprieve-iran-oil.html",
-        "Title": "U.S. Temporarily Lifts Sanctions on Iranian Oil",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89299",
-        "Title": "Israel Shells Southern Lebanon Towns",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     }
 ]
