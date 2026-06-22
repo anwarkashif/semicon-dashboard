@@ -4,6 +4,76 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Trump threatened to restart war with Iran even as US Vice Pr...",
+        "Summary": "Trump threatened to restart war with Iran even as US Vice President JD Vance met Iranian officials for the first talks under an interim peace deal that was overshadowed \u200bby Tehran's announcement it had again closed the Strait of Hormuz",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2068835102579204134",
+        "Title": "Trump threatened to restart war with Iran even as US Vice President JD Vance met Iranian officials for the first talks under an interim peace deal that was overshadowed \u200bby Tehran's announcement it had again closed the Strait of Hormuz",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "US-Iran talks in Switzerland: What is known so far?...",
+        "Summary": "US-Iran talks in Switzerland: What is known so far?",
+        "Risk": "HIGH",
+        "Source": "https://www.rt.com/news/641945-us-iranian-talks-switzerland/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "Title": "US-Iran talks in Switzerland: What is known so far?",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "rt.com"
+    },
+    {
+        "Date": "Ongoing",
+        "Actor": "US (VP JD Vance, Trump), Iran (Iranian officials, Tehran)",
+        "Action": "US Vice President JD Vance met Iranian officials for interim peace talks. These talks were overshadowed by Iran's announcement of closing the Strait of Hormuz, and Trump threatening to restart war with Iran.",
+        "Location": "Switzerland (for talks), Strait of Hormuz, Global",
+        "Risk": "High - Escalation of regional conflict, disruption of global oil supply, diplomatic failure, increased Middle East instability.",
+        "Source": "https://x.com/Reuters/status/2068835102579204134",
+        "Title": "Trump threatened to restart war with Iran even as US Vice President JD Vance met Iranian officials for the first talks under an interim peace deal that was overshadowed \u200bby Tehran's announcement it had again closed the Strait of Hormuz",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "Recent",
+        "Actor": "Israel (Netanyahu)",
+        "Action": "Netanyahu vowed a long-term military presence across three fronts, indicating no immediate withdrawal plans.",
+        "Location": "Israel, Gaza, Lebanon, Syria (implied fronts)",
+        "Risk": "High - Prolonged regional conflict, increased military tensions with neighboring states, potential for expanded occupation.",
+        "Source": "https://www.albawaba.com/news/no-withdrawal-planned-netanyahu-vows-1630878",
+        "Title": "No Withdrawal Planned: Netanyahu vows long-term military presence across three fronts",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "albawaba.com"
+    },
+    {
+        "Date": "Recent",
+        "Actor": "UK",
+        "Action": "Unveiled new sanctions targeting Russia's shadow fleet.",
+        "Location": "UK, Russia (impact), Global (maritime trade)",
+        "Risk": "Medium - Economic pressure on Russia, potential for Russian retaliation in maritime domain, disruption to global shipping and energy markets.",
+        "Source": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPYnltQkpZRGVvUUtWM2lyWU5YajNNQWEzdnc1WkhjdmlzUXUtZjNTLS1uQXU0TEIyRDRNbnhqOUZFUGFlWEU4SFZUeWNWM3FJX1lKQnljeDYzZmFMLXRiaXVhbmdxVW10akdBZkRZckhUVk9GME4zVGpiOTJrVDFrdWR3Wk1SVkdkaVFqbkV2MENJUW16RTlrWHZNS1pFTkk0ZXZGQkVLTWJfUTkxUVlYaUhLRWxqMy1NdThZ?oc=5",
+        "Title": "UK unveils new sanctions on Russian shadow fleet as Starmer attends G7 - Bridport News",
+        "Feed_Source": "Google News Live 1H",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "Ongoing",
+        "Actor": "US (proponents)",
+        "Action": "Case made for establishing a US Northeast Asia Command.",
+        "Location": "Northeast Asia (e.g., Korea, Japan, Taiwan Strait)",
+        "Risk": "Medium - Potential for strategic military realignment, increased military presence in the region, heightened tensions with China and North Korea, but also enhanced deterrence and regional stability.",
+        "Source": "https://www.atlanticcouncil.org/in-depth-research-reports/issue-brief/the-case-for-a-us-northeast-asia-command/",
+        "Title": "The case for a US Northeast Asia Command",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "2026-06-21",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iran's Tasnim news agency says Hormuz will not reopen until ...",
         "Summary": "Iran's Tasnim news agency says Hormuz will not reopen until Lebanon ceasefire holds, oil waivers issued",
         "Risk": "HIGH",
@@ -145,54 +215,6 @@
         "Actor": "Israel",
         "Action": "Conducts strikes, kills civilians in Lebanon, Gaza",
         "Location": "Lebanon, Gaza",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "G7 Nations",
-        "Action": "Aims to curb China's critical mineral control",
-        "Location": "Global",
-        "Risk": "HIGH"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "United States",
-        "Action": "Army launches new Indo-Pacific command",
-        "Location": "Indo-Pacific",
-        "Risk": "ELEVATED"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Global Semiconductor Industry",
-        "Action": "Continues critical reliance on Taiwan for semiconductors",
-        "Location": "Taiwan",
-        "Risk": "CRITICAL"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israeli strike near Sidon in southern Lebanon kills seven",
-        "Summary": "Israeli strike near Sidon in southern Lebanon kills seven",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strike-near-sidon-southern-lebanon-kills-seven"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Pakistan's Interior Minister Mohsin Raza Naqvi has flown to ...",
-        "Summary": "Pakistan's Interior Minister Mohsin Raza Naqvi has flown to Tehran amid mediating efforts aimed at organizing negotiations between Iran and the United States on issues concerning Iran's nuclear program, the IRNA agency reported:",
-        "Risk": "HIGH",
-        "Source": "https://x.com/tassagency_en/status/2068291535825707290"
-    },
-    {
-        "Date": "2026-06-20",
-        "Actor": "US, Iran",
-        "Action": "Peace deal halts war, reopens Strait of Hormuz.",
-        "Location": "Strait of Hormuz",
         "Risk": "CRITICAL"
     }
 ]

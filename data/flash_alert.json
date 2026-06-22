@@ -1,23 +1,51 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Iranian Finance Minister Sees Oil Sanctions Relief, Currency Recovery After New Deal",
+        "Title": "Russia Launches Ballistic and Hypersonic Missile Attacks on Ukrainian Cities",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89274",
-        "Title": "Iran Threatens Israel Over Lebanon Strikes",
+        "Source": "https://www.theguardian.com/world/live/2026/jun/22/zelenskyy-ukraine-russia-drones-europe-heatwave-trump-meloni-latest-news-updates",
+        "Title": "Zelenskyy pledges to \u2018bring war back to Russia\u2019 after drones swarm toward Moscow \u2013 Europe live",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.npr.org/2026/06/22/nx-s1-5866202/china-sanctions-restricting-exports",
+        "Title": "China hits back at U.S. sanctions restricting its exports to American defense firms",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119191",
+        "Title": "Russia Attacks Civilian Ships in Black Sea",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.politico.com/news/2026/06/20/iran-strait-hormuz-ceasefire-00969177?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Iran announces plans to close Strait of Hormuz, alleging \u2018violations of the ceasefire\u2019",
+        "Source": "https://t.me/rybar_in_english/32155",
+        "Title": "Russia Expands Control Near Kharkiv",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.com",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119187",
+        "Title": "Moscow Mayor's Channel Hacked",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaTFRNGkzaENWU2dUd0hseGlKUjVhT0NlVVAwRUVlcFRPQW5BdEZhWVdwSFQ0ZGJaaTlYcXFScEdkUGFRcWdyUFpyZHhVU1dCdzE0bUk3RHQwdU5TVnZGa25IUGN1X01qRXo4SU9Nd2hKT0pEYVJNM1VLdXdaaHdrSHh6R2MySFp1RTdwc3YxUC1mN2ZrbVBLYkg2LUg1N3BOZk84TGRDX2NQcWM3M1BOSlc0eFZZZw?oc=5",
+        "Title": "China targets US rare earth and other firms with export controls - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,8 +56,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
-        "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
