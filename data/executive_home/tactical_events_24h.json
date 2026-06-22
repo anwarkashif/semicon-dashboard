@@ -4,6 +4,87 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Shipping slows after Iran says it has again shut the Strait ...",
+        "Summary": "Shipping slows after Iran says it has again shut the Strait of Hormuz",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2068904337456136672",
+        "Title": "Shipping slows after Iran says it has again shut the Strait of Hormuz",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-22",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Pakistan and Qatar, acting as mediators between the United S...",
+        "Summary": "Pakistan and Qatar, acting as mediators between the United States and Iran, announced the conclusion of the first round of negotiations in the Swiss resort of Burgenstock focused on implementing the Islamabad memorandum:",
+        "Risk": "HIGH",
+        "Source": "https://x.com/tassagency_en/status/2068904185123508393",
+        "Title": "Pakistan and Qatar, acting as mediators between the United States and Iran, announced the conclusion of the first round of negotiations in the Swiss resort of Burgenstock focused on implementing the Islamabad memorandum:",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "China",
+        "Action": "Imposes export controls on two US rare earth producers and sanctions 56 US defense firms in retaliation for US blacklisting.",
+        "Location": "China (implementing controls), US (firms affected), Global (supply chain impact)",
+        "Risk": "Escalation of US-China trade/tech/military rivalry, disruption of critical mineral supply chains, national security implications for US defense.",
+        "Source": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPcmNZUmF1T3hVMUlpd19ESFRqYW5BTVkyTWxKZXY2QnFIMGF1RFNuT1BjU2FkWkNsd3NNeVhickFab1RnR3NDQU4xSlNNMk52QlBubDlPQU1zQVExTlpFUTU5WndaWTVaclJBazFrSWlwZU1TeHFFNVhxQTdhZzRTMUlqTGptT19rUHdrZDI3ekJLdGtLcnNTTkZiazNYRk9VUkpwd3RUWm16ZFFaRURSTDM4RTFYUVJHNXM2TEZvY2tOUTh1aFBUMHlKNm14UmVyLTM4LS1qOGt2VGVvQWdBTUM0NkdlVklfYkVtNFJOd2g0d1JUcmZTRmRSWHJLakNOWk1HbGlma0ozWk1EOUVzcVh4SGZoS2940gGeAkFVX3lxTE5aQXA5cVZsV1JKZlp3ZFVKalFqRHRveDhzajFBSnRaU01VQnQzZ3ZlSGs4cjg4X1ZfYWowUU1IdmJIWUEwQ2pZYmNxT3BOUGdhRFZUQ3hLeWtvbFJQbDJxaVNoQnhSQUFsaVM2alVWVDgzeDhSQnJiZVJBX2UyRjF4TTJDTFYtSTNnSWR1ajZrdkpUVXR5cnl5NF9xZjJVc3UyZmdhZDduQkNzQkJsRTBOUmdXMzl4ZG1taExZSUlQVklmSFd2bUtESjRZOXNJbVJIRGVkWUlRdC1hU2JzWVN6UWp4UEUzSzNZamlDbXVKVnRySXM5Z3dFeFpJTnFuMW40eXR4b1RRVVpuNzdJbTdJbmpLWUsteUJsNkVTR3c?oc=5",
+        "Title": "China retaliates against US blacklist, targets defence and rare earth firms with export controls - The Times of India",
+        "Feed_Source": "Google News Live 1H",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "US, Iran, Pakistan (mediator), Qatar (mediator)",
+        "Action": "Conducted the first round of 'tense' but 'constructive' ceasefire talks in Switzerland, agreeing to create a 'de-confliction cell' for Lebanon.",
+        "Location": "Burgenstock, Switzerland (talks); Lebanon (focus of de-confliction)",
+        "Risk": "Potential for diplomatic breakthrough leading to de-escalation in Lebanon, or failure of talks leading to continued or intensified regional conflict.",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/22/us-and-iran-meet-for-tense-but-constructive-ceasefire-talks?traffic_source=rss",
+        "Title": "US and Iran meet for \u2018tense\u2019 but \u2018constructive\u2019 ceasefire talks",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "Iran",
+        "Action": "Repeatedly declares the closure of the Strait of Hormuz, causing shipping stalls.",
+        "Location": "Strait of Hormuz",
+        "Risk": "Major disruption to global oil and gas shipping, potential for military confrontation with international forces, significant impact on global energy markets and economy.",
+        "Source": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
+        "Title": "Shipping stalls in Strait of Hormuz after Iran declares key waterway shut",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "Houthi rebels (Yemen)",
+        "Action": "Claim missile attack on Israel and state Israel-affiliated vessels are again targets in the Red Sea, causing fears of renewed shipping strikes.",
+        "Location": "Red Sea, Gulf of Aden, Israel, off Yemen's coast",
+        "Risk": "Escalation of Middle East conflict, severe disruption of international maritime trade, increased regional instability, potential for international military intervention.",
+        "Source": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRlZTZnRnR0tGckFFMFNyZkFpMkFYSm41Y3FmNmtWTlF0ZWZIYlpGZE04SFc4Nm9nZENQMFVNWW1kUURBSjR5Q1pfS3BIR3FFUUNTRDY5N1A4RUxRUHROTnNoLUdNX2J6ckVmNGhJM2dYaFRSQmFXX2VCM1RXcHNxeWlOR2F5VV9qQ2lQa09FS0xndw?oc=5",
+        "Title": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - AP News",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "Ukraine",
+        "Action": "Conducts strikes in Crimea, causing fuel shortages and panic among residents in the occupied territory.",
+        "Location": "Crimea (occupied territory)",
+        "Risk": "Continued intense conflict in the Russo-Ukrainian War, humanitarian issues for residents, potential for Russian retaliation and escalation.",
+        "Source": "https://news.google.com/rss/articles/CBMic0FVX3lxTE11SWZpdGZ1UEdNVzJxNG9qdlR3TGtVTGk4SUx0SEJEcmJGXzlBdzRfYTNMeUtheFBVTmt0bnZZTUw4STRfd1o1d29oaGlZSFVvRkFyZ0V6VVlsalFicmM1X0FEbzktdmpfZUJGM0VEYW9Id2c?oc=5",
+        "Title": "Ukrainian sanctions squeeze occupied Crimea, residents report fuel panic - mezha.net",
+        "Feed_Source": "Google News Live 1H",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "2026-06-22",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "As War With U.S. Eases, Iran Steps Up Hangings of Dissidents...",
         "Summary": "As War With U.S. Eases, Iran Steps Up Hangings of Dissidents",
         "Risk": "HIGH",
@@ -184,19 +265,6 @@
         "Publisher": "gcaptain.com"
     },
     {
-        "Date": "2026-06-22",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Shipping slows after Iran says it has again shut the Strait ...",
-        "Summary": "Shipping slows after Iran says it has again shut the Strait of Hormuz",
-        "Risk": "HIGH",
-        "Source": "https://www.al-monitor.com/originals/2026/06/shipping-slows-after-iran-says-it-has-again-shut-strait-hormuz",
-        "Title": "Shipping slows after Iran says it has again shut the Strait of Hormuz",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "al-monitor.com"
-    },
-    {
         "Date": null,
         "Actor": "Pentagon (U.S. Department of Defense)",
         "Action": "Pentagon tells lawmakers it needs $80 billion for Iran war and other expenses.",
@@ -219,71 +287,5 @@
         "Title": "Football fans in Gaza gather to watch Spain-Saudi Arabia match",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "aljazeera.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Iran, US (JD Vance, Trump administration), Israel, Mediators (Switzerland)",
-        "Action": "Iran repeatedly closes and reopens the Strait of Hormuz, engages in (or postpones) peace talks with the US via mediators, while the US monitors the Strait amidst threats of renewed conflict and Israeli regional strikes.",
-        "Location": "Strait of Hormuz, Switzerland, Lebanon, Persian Gulf",
-        "Risk": "High",
-        "Source": "https://x.com/Reuters/status/2068835102579204134",
-        "Title": "Trump threatened to restart war with Iran even as US Vice President JD Vance met Iranian officials for the first talks under an interim peace deal that was overshadowed \u200bby Tehran's announcement it had again closed the Strait of Hormuz",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Yemen's Houthi rebels, Pirates, Israel, Global Shipping",
-        "Action": "Houthi rebels claim missile attacks on Israel and target Israel-affiliated vessels in the Red Sea, leading to a rise in pirate attacks and attempted assaults on commercial ships in the region.",
-        "Location": "Red Sea, Gulf of Aden, Yemen's Coast, Israel",
-        "Risk": "High",
-        "Source": "https://news.google.com/rss/articles/CBMiugJBVV95cUxQVGZJM2RtQ0R2c2RmOFk5U0FKNFlzY2pySjhUc29RRmRGbDRHeTFoUHdVWUxNTUlITlRwY3djYUt5M016Q0ljeXhJN3Zmc2F5Sk9uaDd6MVBEX0k1UHUteFRWWTJsenVldy15d2s4ay1kOGVENjdMb1JOUTZYTVV0R2lDSm5VTjVlYzhxajVrZW9jb2QyYkx2aURYUWJRQ0xWdUc5cF9XVXQzYkZVYTRWd25mdWZfZmNQU1pYanlXcFZUdU96amdacTlFTEZCMnZkb3M2TnFyMWxzUXhId3M0b3dEc1dETHdnVlhhbVZFWXZrb3F1WjVzWTBjMG53V1lwTDlORmt6U2NZNmR3clFDWVFmLU9VN3cteWV1LWoxVzFvRjRtcVpIMFpvODZ0aEJ0eV92c3lQNUNIdw?oc=5",
-        "Title": "Yemen's Houthi rebels claim missile attack on Israel and say Israel-affiliated vessels are a target again in Red Sea - KING5.com",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Israel (IDF, Netanyahu), Palestinians, Hezbollah, Lebanon",
-        "Action": "Israeli forces conduct deadly attacks in Gaza and near Hebron, carry out strikes in Lebanon, and Prime Minister Netanyahu vows a long-term military presence across three fronts, prompting threats of response from Hezbollah.",
-        "Location": "Gaza, Hebron, Lebanon, Middle East",
-        "Risk": "High",
-        "Source": "https://www.albawaba.com/news/no-withdrawal-planned-netanyahu-vows-1630878",
-        "Title": "No Withdrawal Planned: Netanyahu vows long-term military presence across three fronts",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "albawaba.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Global VCs, Defense Tech Companies, US, China, Japan, Poland, France, Ukraine, Big Tech (Alibaba, Xiaomi, Amazon, Google)",
-        "Action": "Billions in venture capital are flowing into autonomous defense and AI technologies, redefining warfare through the rapid development and deployment of drone wingmen, interceptor drones, and advanced AI systems, raising concerns about authoritarian control.",
-        "Location": "Global (US, China, Europe, Japan, Ukraine)",
-        "Risk": "Medium-High",
-        "Source": "https://www.eetimes.com/billions-pour-into-autonomous-defense-as-ai-redefines-warfare/",
-        "Title": "Billions Pour into Autonomous Defense as AI Redefines Warfare",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "eetimes.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "US Army, US Pentagon, US Congress, Finland",
-        "Action": "The US Army launches a new Indo-Pacific multi-domain command and reorganizes units, signaling a strategic realignment and enhanced presence in the region, complemented by joint military operations with allies in Europe.",
-        "Location": "Indo-Pacific, Northeast Asia, Europe (Finland)",
-        "Risk": "Medium",
-        "Source": "https://www.defensenews.com/news/your-military/2026/06/19/army-launches-new-indo-pacific-multi-domain-command/",
-        "Title": "Army launches new Indo-Pacific multi-domain command",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Taiwan, US (Defense, Intel), Canada, South Korea, China, Global Semiconductor Industry",
-        "Action": "Taiwan solidifies its central role in the global semiconductor industry amidst intense geopolitical competition, leading to strategic signals from US defense, significant industry expansions, and liquidity concerns in key production hubs.",
-        "Location": "Taiwan, US, Canada, South Korea, Global",
-        "Risk": "High",
-        "Source": "https://www.eetimes.com/all-semiconductor-roads-lead-to-taiwan/",
-        "Title": "All Semiconductor Roads Lead to Taiwan",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "eetimes.com"
     }
 ]
