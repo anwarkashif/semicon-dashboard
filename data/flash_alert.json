@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Belarusian Exiled Opposition Warns Ukraine of Minsk's Imminent War Entry",
+        "Title": "Philippine Coast Guard Challenges Chinese Vessel Near Luzon",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOUczSUFOMThyb2laVUpFcjg1OTF6bTdqM1VoZ0IwR1dCckxUR1RHQnB0bUIwSlcteVBOellQM09rQ0xfTmhhOWZxLS1uMDRGVG5WdGRfWmZnQVN0MlBPaGpHT1J0UXZuTEM1RXUtLUJfSnIxVXEwQUN0SnlyRTlQckdST3RjYzFBMnU1MDRoQmFHOWdYZ2c0NDFFcVdjNjJJdG52WmVNaXJTWlNjQUMxMkxUMUxseHdwb2pVNENCbTBjaUZK?oc=5",
+        "Title": "Thirteen dead, dozens injured, after blast inside Qatar's Ras Laffan complex - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89308",
+        "Title": "Hezbollah Targets Israeli APC in Southern Lebanon",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,24 +28,10 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/southfronteng/61442",
-        "Title": "UAE Nears Purchase of Russian-Indian BrahMos Missile",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/22/aje-onl-aje_onl_lebanon_wrap-220626?traffic_source=rss",
-        "Title": "Lebanon Latest: Israeli attacks surge despite ceasefire efforts",
+        "Source": "https://www.aljazeera.com/news/2026/6/22/marco-rubio-heads-to-middle-east-to-address-iran-mou-hormuz?traffic_source=rss",
+        "Title": "Marco Rubio heads to Middle East to address Iran MoU, Hormuz",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61441",
-        "Title": "Israel Accuses Hamas of Plotting Attacks from Turkey",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -46,27 +46,27 @@
         "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/22/lebanon-discusses-de-confliction-mechanism-ahead-of-israel-talks?traffic_source=rss",
-        "Title": "Lebanon discusses \u2018de-confliction\u2019 mechanism ahead of Israel talks",
+        "Source": "https://www.twz.com/air/turkeys-fighter-drone-teamed-with-m-346-fighter-trainer-in-autonomy-trials",
+        "Title": "Turkey\u2019s \u2018Fighter Drone\u2019 Teamed With M-346 Fighter-Trainer In Autonomy Trials",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "twz.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/22/world/asia/fire-lucknow-india-kills-14.html",
-        "Title": "At Least 14 People Killed in Fire in North India Educational Center",
+        "Source": "https://t.me/nexta_live/119232",
+        "Title": "Russia Seeks to Limit Foreign Film Showings in Theaters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/22/world/canada/montreal-shooting-manhunt-police.html",
-        "Title": "Montreal Police Launches Manhunt for Suspect After Shooting",
+        "Source": "https://t.me/warmonitors/44643",
+        "Title": "Montreal Police Officer Shot in Gunfire Exchange",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
