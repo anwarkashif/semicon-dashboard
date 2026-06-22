@@ -153,7 +153,18 @@ def generate_flush_to_brief(accumulated_events):
                 contents=prompt,
                 config={"response_mime_type": "application/json", "temperature": 0.2}
             )
-            return json.loads(response.text)
+            
+            # 🛡️ BULLETPROOF JSON CLEANER (Strips Markdown Block Quirks)
+            raw_text = response.text.strip()
+            if raw_text.startswith("```json"):
+                raw_text = raw_text[7:]
+            if raw_text.startswith("```"):
+                raw_text = raw_text[3:]
+            if raw_text.endswith("```"):
+                raw_text = raw_text[:-3]
+            raw_text = raw_text.strip()
+                
+            return json.loads(raw_text)
         except Exception as e: 
             print(f"🚨 Executive API Attempt {attempt + 1} Failed: {e}")
             time.sleep(10)

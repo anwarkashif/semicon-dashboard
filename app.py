@@ -249,13 +249,29 @@ else:
 
     @st.cache_data(ttl=60, show_spinner=False)
     def load_live_tactical_data():
-        filepath = 'data/tactical_events_24h.json'
-        if os.path.exists(filepath):
+        combined_data = []
+        
+        # 1. Load the rich executive pipeline data first
+        exec_path = 'data/executive_home/tactical_events_24h.json'
+        if os.path.exists(exec_path):
             try:
-                with open(filepath, 'r', encoding='utf-8') as f: 
-                    return json.load(f)
-            except Exception: return None
-        return None
+                with open(exec_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    if isinstance(data, list): combined_data.extend(data)
+            except Exception: pass
+            
+        # 2. Load standard tactical data
+        std_path = 'data/tactical_events_24h.json'
+        if os.path.exists(std_path):
+            try:
+                with open(std_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    if isinstance(data, list): combined_data.extend(data)
+                    elif isinstance(data, dict) and 'recent_actions' in data:
+                        combined_data.extend(data['recent_actions'])
+            except Exception: pass
+            
+        return combined_data if combined_data else None
 
     latest_filepath = stream_pipeline_data_to_disk()
     dashboard_data = load_data(latest_filepath)
@@ -398,9 +414,8 @@ else:
             df_actions = df_actions_weekly
             
         # 🛡️ GLOBAL DATAFRAME NORMALIZATION SHIELD
-        # This ensures Command Centre & other pages never hit fallback text due to key mismatches
         if not df_actions.empty:
-            # Capitalize all columns to ensure consistency (e.g., 'title' -> 'Title', 'ACTION' -> 'Action')
+            # Capitalize all columns to ensure consistency
             df_actions.columns = [str(c).strip().title() for c in df_actions.columns]
             
             # Cross-pollinate missing fields
@@ -418,6 +433,13 @@ else:
                 
             if 'Threat_Level' in df_actions.columns and 'Risk' not in df_actions.columns:
                 df_actions['Risk'] = df_actions['Threat_Level']
+                
+            # 🛑 CRITICAL FIX FOR COMMAND CENTRE REDROOM:
+            # The landing page often expects lowercase keys (action, headline). 
+            # We silently duplicate them here so it never hits "ENCRYPTED TELEMETRY"
+            for col in ['Headline', 'Action', 'Actor', 'Location', 'Risk', 'Source', 'Title']:
+                if col in df_actions.columns:
+                    df_actions[col.lower()] = df_actions[col]
                 
     except Exception as e:
         df_actions = pd.DataFrame()

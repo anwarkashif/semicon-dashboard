@@ -1047,16 +1047,30 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         flush_data = {}
 
     # Extract dynamic keys or provide secure fallbacks
-    bluf_text = flush_data.get('bluf', "Scanning macro-strategic feeds. Awaiting telemetry generation cycle...")
+    bluf_text = str(flush_data.get('bluf', "Scanning macro-strategic feeds. Awaiting telemetry generation cycle..."))
     tactical_list = flush_data.get('tactical_indicators', ["System initiating...", "Monitoring baseline anomalies...", "Awaiting active extraction..."])
-    threat_text = flush_data.get('threat_narrative', "Data currently rendering inside the strategic analysis layer...")
-    risk_text = flush_data.get('risk_assessment', "Data currently rendering inside the strategic analysis layer...")
-    forecast_text = flush_data.get('strategic_forecast', "Data currently rendering inside the strategic analysis layer...")
+    threat_text = str(flush_data.get('threat_narrative', "Data currently rendering inside the strategic analysis layer..."))
+    risk_text = str(flush_data.get('risk_assessment', "Data currently rendering inside the strategic analysis layer..."))
+    forecast_text = str(flush_data.get('strategic_forecast', "Data currently rendering inside the strategic analysis layer..."))
     
+    # 🛡️ BULLETPROOF LIST PARSER FOR TACTICAL INDICATORS
+    import ast
+    if isinstance(tactical_list, str):
+        try:
+            # If the LLM returned a string that looks like a list: "['Item 1', 'Item 2']"
+            parsed_list = ast.literal_eval(tactical_list)
+            if isinstance(parsed_list, list):
+                tactical_list = parsed_list
+            else:
+                tactical_list = [tactical_list]
+        except Exception:
+            # If it's just a raw text paragraph, wrap it in a list
+            tactical_list = [tactical_list]
+            
     if isinstance(tactical_list, list):
-        tactical_html = "<br>".join([f"• {item}" for item in tactical_list])
+        tactical_html = "<br>".join([f"<span style='color:#00bfff;'>•</span> {str(item).strip()}" for item in tactical_list])
     else:
-        tactical_html = tactical_list
+        tactical_html = str(tactical_list)
 
     # Title
     st.markdown("""
