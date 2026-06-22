@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "US SOUTHCOM Strikes Terrorist Vessel in Caribbean Sea",
+        "Title": "Russian Iskander-M Missile Strikes Near Mayaky in Odesa Oblast",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTjNGSEZHOXNpMGhyeDBCZThrM2VVNDV1eGExcFpiRHNoLUNxdXJQSE9VYXd1Zlc0MURwWk9VMVJCaU5fb3Y4dENGbldpcW1fZTYwOUdJLXlLTjEtN0xlQlJHZWdnRHdwWUVaN0lKUlF1bnMzWWIyWm1pbXV3U1Mxa291NFVKTWVzbjhuZ0N1LTFkR01rS2dNVFNLVTJMdDBkRUFBUklHNjJHYWhuUWFRYmxLc3JmWUhDSG05TU52T0ZyUXc?oc=5",
+        "Title": "Press Release: Hezbollah Tunnel Exposed Under Civilian Village - idf.il",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,13 +35,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTjNGSEZHOXNpMGhyeDBCZThrM2VVNDV1eGExcFpiRHNoLUNxdXJQSE9VYXd1Zlc0MURwWk9VMVJCaU5fb3Y4dENGbldpcW1fZTYwOUdJLXlLTjEtN0xlQlJHZWdnRHdwWUVaN0lKUlF1bnMzWWIyWm1pbXV3U1Mxa291NFVKTWVzbjhuZ0N1LTFkR01rS2dNVFNLVTJMdDBkRUFBUklHNjJHYWhuUWFRYmxLc3JmWUhDSG05TU52T0ZyUXc?oc=5",
-        "Title": "Press Release: Hezbollah Tunnel Exposed Under Civilian Village - idf.il",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -44,13 +44,6 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
