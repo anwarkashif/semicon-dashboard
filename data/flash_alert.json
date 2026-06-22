@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaTFRNGkzaENWU2dUd0hseGlKUjVhT0NlVVAwRUVlcFRPQW5BdEZhWVdwSFQ0ZGJaaTlYcXFScEdkUGFRcWdyUFpyZHhVU1dCdzE0bUk3RHQwdU5TVnZGa25IUGN1X01qRXo4SU9Nd2hKT0pEYVJNM1VLdXdaaHdrSHh6R2MySFp1RTdwc3YxUC1mN2ZrbVBLYkg2LUg1N3BOZk84TGRDX2NQcWM3M1BOSlc0eFZZZw?oc=5",
+        "Title": "China targets US rare earth and other firms with export controls - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cnbc.com/2026/06/22/us-iran-roadmap-final-deal-switzerland-talks-lebanon-deconfliction.html",
         "Title": "U.S., Iran agree on roadmap for final deal and plan to end military operations in Lebanon",
         "Feed_Source": "WAR MONITOR",
@@ -21,6 +28,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTjNGSEZHOXNpMGhyeDBCZThrM2VVNDV1eGExcFpiRHNoLUNxdXJQSE9VYXd1Zlc0MURwWk9VMVJCaU5fb3Y4dENGbldpcW1fZTYwOUdJLXlLTjEtN0xlQlJHZWdnRHdwWUVaN0lKUlF1bnMzWWIyWm1pbXV3U1Mxa291NFVKTWVzbjhuZ0N1LTFkR01rS2dNVFNLVTJMdDBkRUFBUklHNjJHYWhuUWFRYmxLc3JmWUhDSG05TU52T0ZyUXc?oc=5",
+        "Title": "Press Release: Hezbollah Tunnel Exposed Under Civilian Village - idf.il",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -28,8 +42,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
-        "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
