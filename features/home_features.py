@@ -1046,10 +1046,23 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     flush_data = {}
     if os.path.exists(flush_path):
         try:
-            with open(flush_path, 'r') as f:
-                flush_data = json.load(f)
-        except:
-            pass
+            with open(flush_path, 'r', encoding='utf-8') as f:
+                raw_content = f.read().strip()
+                
+            # 🛡️ THE ULTIMATE JSON EXTRACTOR
+            # Finds the first '{' and the last '}' to strip ALL conversational garbage and markdown
+            start_idx = raw_content.find('{')
+            end_idx = raw_content.rfind('}')
+            
+            if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+                clean_json = raw_content[start_idx:end_idx+1]
+                flush_data = json.loads(clean_json)
+            else:
+                # Fallback if no {} found, try direct load just in case
+                flush_data = json.loads(raw_content)
+                
+        except Exception:
+            flush_data = {}
 
     # 🛡️ BULLETPROOF CASE-INSENSITIVE KEY EXTRACTION
     def robust_get(data_dict, potential_keys, default):
