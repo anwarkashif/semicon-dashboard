@@ -396,6 +396,29 @@ else:
                 df_actions = clean_dataframe(pd.DataFrame(live_tactical_data.get('recent_actions', [])))
         else:
             df_actions = df_actions_weekly
+            
+        # 🛡️ GLOBAL DATAFRAME NORMALIZATION SHIELD
+        # This ensures Command Centre & other pages never hit fallback text due to key mismatches
+        if not df_actions.empty:
+            # Capitalize all columns to ensure consistency (e.g., 'title' -> 'Title', 'ACTION' -> 'Action')
+            df_actions.columns = [str(c).strip().title() for c in df_actions.columns]
+            
+            # Cross-pollinate missing fields
+            if 'Title' in df_actions.columns and 'Headline' not in df_actions.columns:
+                df_actions['Headline'] = df_actions['Title']
+            if 'Action' in df_actions.columns and 'Headline' not in df_actions.columns:
+                df_actions['Headline'] = df_actions['Action']
+            if 'Headline' in df_actions.columns and 'Action' not in df_actions.columns:
+                df_actions['Action'] = df_actions['Headline']
+                
+            if 'Url' in df_actions.columns and 'Source' not in df_actions.columns:
+                df_actions['Source'] = df_actions['Url']
+            if 'Link' in df_actions.columns and 'Source' not in df_actions.columns:
+                df_actions['Source'] = df_actions['Link']
+                
+            if 'Threat_Level' in df_actions.columns and 'Risk' not in df_actions.columns:
+                df_actions['Risk'] = df_actions['Threat_Level']
+                
     except Exception as e:
         df_actions = pd.DataFrame()
 

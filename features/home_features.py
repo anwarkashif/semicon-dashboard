@@ -234,10 +234,19 @@ def render_flash_alert():
 
     # Build the HTML for the final filtered list
     for alert in display_alerts:
-        source = alert.get('source', 'UNKNOWN SOURCE').upper()
-        title = alert.get('title', 'Intelligence Update Available')
-        url = alert.get('url', '#')
-        threat = alert.get('threat_level', 'CRITICAL').upper()
+        # 🛡️ BULLETPROOF KEY EXTRACTION (Cascades through possible key names)
+        source_val = alert.get('source', alert.get('Source', alert.get('Feed_Source', alert.get('Publisher', 'UNKNOWN SOURCE'))))
+        source = str(source_val).upper() if source_val else 'UNKNOWN SOURCE'
+        
+        title_val = alert.get('title', alert.get('Title', alert.get('Headline', alert.get('Action', alert.get('summary', 'Intelligence Update Available')))))
+        title = str(title_val) if title_val else 'Intelligence Update Available'
+        
+        url_val = alert.get('url', alert.get('Url', alert.get('Source', alert.get('link', '#'))))
+        url = str(url_val) if url_val else '#'
+        if not url.startswith('http'): url = '#'
+        
+        threat_val = alert.get('threat_level', alert.get('Threat_Level', alert.get('Risk', alert.get('risk', 'CRITICAL'))))
+        threat = str(threat_val).upper() if threat_val else 'CRITICAL'
 
         html_code += f"""
         <a href="{url}" target="_blank" class="flash-bar">
