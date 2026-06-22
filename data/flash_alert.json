@@ -7,6 +7,20 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.npr.org/2026/06/22/nx-s1-5866202/china-sanctions-restricting-exports",
+        "Title": "China hits back at U.S. sanctions restricting its exports to American defense firms",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119191",
+        "Title": "Russia Attacks Civilian Ships in Black Sea",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/rybar_in_english/32155",
         "Title": "Russia Expands Control Near Kharkiv",
         "Feed_Source": "WAR MONITOR",
@@ -18,6 +32,13 @@
         "Title": "Moscow Mayor's Channel Hacked",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/economy/2026/6/22/qatar-lng-factory-explosion-injures-54-leaves-18-missing-govt-says?traffic_source=rss",
+        "Title": "Qatar LNG factory explosion injures 54, leaves 18 missing, gov\u2019t says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -35,8 +56,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
