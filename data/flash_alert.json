@@ -1,35 +1,21 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Storm Shadow Missiles Fly Toward Saratov, Russia",
+        "Title": "Ukraine Strikes Russian Military Targets in Multiple Regions",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/22/world/europe/ukraine-donetsk-donbas-sloviansk-kramatorsk-russia.html",
-        "Title": "Thousands Are Fleeing Ukraine\u2019s Donbas Strongholds as Russia Pushes Closer",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/22/strait-of-hormuz-iran-us-shipping-oil.html",
-        "Title": "Shipping stalls in Strait of Hormuz after Iran declares key waterway closed again",
+        "Source": "https://www.cnbc.com/2026/06/22/dozens-injured-and-18-missing-after-explosion-at-qatar-lng-site.html",
+        "Title": "Dozens injured, 18 missing after blast during restart at giant Qatar LNG site",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/live/2026/jun/22/zelenskyy-ukraine-russia-drones-europe-heatwave-trump-meloni-latest-news-updates",
-        "Title": "Zelenskyy pledges to \u2018bring war back to Russia\u2019 after drones swarm toward Moscow \u2013 Europe live",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/22/india-pakistan-indus-waters-treaty-water-dispute-war-risk.html",
-        "Title": "Why a 66-year-old water treaty is becoming the latest India-Pakistan flashpoint",
+        "Source": "https://www.cnbc.com/2026/06/22/strait-of-hormuz-iran-us-shipping-oil.html",
+        "Title": "Shipping stalls in Strait of Hormuz after Iran declares key waterway closed again",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
         "threat_level": "CRITICAL"
@@ -42,8 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119187",
-        "Title": "Moscow Mayor's Channel Hacked",
+        "Source": "https://t.me/nexta_live/119191",
+        "Title": "Russia Attacks Civilian Ships in Black Sea",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -51,6 +37,13 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
