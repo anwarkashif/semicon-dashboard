@@ -158,10 +158,57 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
     st.markdown("<hr style='border: 1px solid #333; margin-top: 20px; margin-bottom: 25px;'>", unsafe_allow_html=True)
     
     if st.session_state.get('role') == 'admin':
-        colA, colB = st.columns([3, 1])
+        # Adjusted columns to fit the new Archive button
+        colA, colB, colC = st.columns([1.5, 1, 1])
+        
         with colB:
+            if st.button("💾 Archive Brief (RAG Sync)", type="secondary", use_container_width=True):
+                try:
+                    import datetime
+                    date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                    
+                    # 1. Compile the tactical text into the raw string RAG parses
+                    compiled_raw = f"EXEC: {intel_data.get('executive_summary', '')}\nTHREAT_NARRATIVE: {intel_data.get('threat_narrative', '')}\nRISK: {intel_data.get('risk_assessment', '')}\nPREDICTIVE: {intel_data.get('predictive_analysis', '')}\nRECOMMENDATIONS: {intel_data.get('recommendations', '')}"
+                    
+                    # 2. Build the exact JSON schema that your RAG engine expects
+                    archive_payload = {
+                        "date": date_str,
+                        "brief_raw": compiled_raw,
+                        "recent_actions": df_actions.to_dict('records') if df_actions is not None else []
+                    }
+                    
+                    # 3. Save into the data folder using the brief_ prefix so get_brief_mappings picks it up
+                    os.makedirs('data', exist_ok=True)
+                    archive_filename = f"data/brief_weekly_tactical_{date_str}.json"
+                    
+                    with open(archive_filename, 'w', encoding='utf-8') as f:
+                        json.dump(archive_payload, f, indent=4)
+                        
+                    st.success("✅ Brief permanently synced to RAG Archives!")
+                except Exception as e:
+                    st.error(f"Archive failed: {e}")
+
+        with colC:
             try:
+                import datetime
+                date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                
+                # 🛑 THE BULLETPROOF FIX: Inject fallbacks for ALL required DocX keys
+                intel_data.setdefault('date', date_str)
+                intel_data.setdefault('classification', 'CONFIDENTIAL // OSINT')
+                intel_data.setdefault('author', 'SemicoN Strategic Command')
+                intel_data.setdefault('title', 'Weekly Tactical Intelligence Brief')
+                    
                 docx_buffer = generate_weekly_tactical_docx(intel_data)
-                st.download_button(label="📥 Download Weekly Tactical Brief (DOCX)", data=docx_buffer, file_name=f"Weekly_Tactical_Brief.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", type="primary", use_container_width=True)
+                
+                st.download_button(
+                    label="📥 Download (DOCX)", 
+                    data=docx_buffer, 
+                    file_name=f"Weekly_Tactical_Brief_{date_str}.docx", 
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+                    type="primary", 
+                    use_container_width=True
+                )
             except Exception as e:
-                st.button("📥 Download Unavailable", disabled=True)
+                st.button("📥 Download Unavailable", disabled=True, use_container_width=True)
+                st.error(f"DocGen Error: {e}")
