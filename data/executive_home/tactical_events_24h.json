@@ -1,16 +1,27 @@
 [
     {
-        "Date": "2026-06-21",
+        "Date": "2026-06-22",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
         "Action": "Shipping slows after Iran says it has again shut the Strait ...",
         "Summary": "Shipping slows after Iran says it has again shut the Strait of Hormuz",
         "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2068842701324230993",
+        "Source": "https://www.al-monitor.com/originals/2026/06/shipping-slows-after-iran-says-it-has-again-shut-strait-hormuz",
         "Title": "Shipping slows after Iran says it has again shut the Strait of Hormuz",
         "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
+        "Publisher": "al-monitor.com"
+    },
+    {
+        "Date": null,
+        "Actor": "Pentagon (U.S. Department of Defense)",
+        "Action": "Pentagon tells lawmakers it needs $80 billion for Iran war and other expenses.",
+        "Location": "United States (Pentagon, Congress), Iran (potential conflict zone)",
+        "Risk": "High: Strong indicator of potential U.S. military action against Iran, significant financial commitment, increased likelihood of major regional war.",
+        "Source": "https://www.defensenews.com/news/pentagon-congress/2026/06/19/pentagon-tells-lawmakers-it-needs-80-billion-for-iran-war-other-expenses-wsj/",
+        "Title": "Pentagon tells lawmakers it needs $80 billion for Iran war, other expenses: WSJ",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
     },
     {
         "Date": "2026-06-21",
@@ -278,16 +289,5 @@
         "Title": "When former House majority leader Steny H. Hoyer (D) announced that he would retire his Maryland seat after 45 years, he set off a generational Democratic free-for-all that drew 24 candidates and nearly $11 million tied to cryptocurrency and pro-Israel interests.",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
-    },
-    {
-        "Date": "Not specified",
-        "Actor": "Iran, United States",
-        "Action": "Finalize draft on temporary oil sanctions relief",
-        "Location": "Switzerland (talks), Global (economic impact)",
-        "Risk": "Shifting geopolitical alignments, potential for regional power balance implications, risk of sabotage from other actors (e.g., Israel)",
-        "Source": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTGdGVm9STHJvUXZ1T04xTDcxN3c4emltWmlaNUtMSEdKVTlKZE1oM3laUDdOcHF5cEhKNTh2Rl9MdnM0ZkMwaHItaXUxTVEzTGxHUzB0cXZRYktwc2xGQlp6azRzbUhlTXhDMjZEQVVPYWRyZHA1ZHNBQ0g2VXQ3VnoyYU9CQmxjaUljSW5zUW9rQlNYY3FTM1IyNA?oc=5",
-        "Title": "Iran, US finalize draft on temporary oil sanctions relief - Yeni \u015eafak English",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
     }
 ]
