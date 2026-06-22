@@ -48,19 +48,38 @@ def fetch_and_evaluate_flash_alerts():
     article_map = {}
     article_counter = 1
     raw_intel_payload = ""
+    global_seen_titles = set() # 🛡️ NEW: TITLE DEDUPLICATION SHIELD
+
+    # Helper function to process feeds and remove title duplicates instantly
+    def add_to_payload(feed_data, source_name, max_items=15):
+        nonlocal article_counter, raw_intel_payload
+        added = 0
+        raw_intel_payload += f"\n--- {source_name} ---\n"
+        for e in feed_data:
+            title = e.get('title')
+            if not title: continue
+            
+            clean_title = str(title).strip().lower()
+            if clean_title in global_seen_titles:
+                continue # Skip exact title duplicates
+                
+            global_seen_titles.add(clean_title)
+            
+            url = e.get('url') or e.get('link') or f"https://{source_name.lower().replace(' ', '')}.com/"
+            art_id = f"ART_{article_counter:03d}"
+            article_map[art_id] = {"title": title, "url": url, "feed_source": source_name}
+            raw_intel_payload += f"ID: {art_id} | TITLE: {title}\n"
+            
+            article_counter += 1
+            added += 1
+            if added >= max_items: break
 
     # --- 1. MONITOR THE SITUATION ---
     try:
         url = "https://monitor-the-situation.com/api/events"
         res = requests.get(url, headers={'Referer': 'https://monitor-the-situation.com/', **HEADERS}, params={"range": "12h", "feed": "live"}, timeout=10)
         if res.status_code == 200:
-            raw_intel_payload += "\n--- MONITOR THE SITUATION ---\n"
-            for e in res.json()[:15]:
-                art_id = f"ART_{article_counter:03d}"
-                article_url = e.get('url') or e.get('link') or "https://monitor-the-situation.com/"
-                article_map[art_id] = {"title": e.get('title'), "url": article_url, "feed_source": "MONITOR THE SITUATION"}
-                raw_intel_payload += f"ID: {art_id} | TITLE: {e.get('title')}\n"
-                article_counter += 1
+            add_to_payload(res.json(), "MONITOR THE SITUATION")
     except Exception as e: print(f"⚠️ Failed MTS: {e}")
 
     # --- 2. WAR MONITOR ---
@@ -68,13 +87,7 @@ def fetch_and_evaluate_flash_alerts():
         url = "https://api.war-monitor.com/api/events"
         res = requests.get(url, headers={'Origin': 'https://war-monitor.com', 'Referer': 'https://war-monitor.com/', **HEADERS}, params={"page": "1", "limit": "15", "fresh_hours": "168"}, timeout=10)
         if res.status_code == 200:
-            raw_intel_payload += "\n--- WAR MONITOR ---\n"
-            for e in res.json().get('data', [])[:15]:
-                art_id = f"ART_{article_counter:03d}"
-                article_url = e.get('url') or e.get('link') or "https://war-monitor.com/events"
-                article_map[art_id] = {"title": e.get('title'), "url": article_url, "feed_source": "WAR MONITOR"}
-                raw_intel_payload += f"ID: {art_id} | TITLE: {e.get('title')}\n"
-                article_counter += 1
+            add_to_payload(res.json().get('data', []), "WAR MONITOR")
     except Exception as e: print(f"⚠️ Failed War Monitor: {e}")
 
     # --- 3. CISA ---
@@ -83,12 +96,7 @@ def fetch_and_evaluate_flash_alerts():
         res = requests.get(url, headers=HEADERS, timeout=10)
         if res.status_code == 200:
             feed = feedparser.parse(res.text)
-            raw_intel_payload += "\n--- CISA (GLOBAL CYBER THREATS) ---\n"
-            for entry in feed.entries[:15]:
-                art_id = f"ART_{article_counter:03d}"
-                article_map[art_id] = {"title": entry.title, "url": entry.link, "feed_source": "CISA"}
-                raw_intel_payload += f"ID: {art_id} | TITLE: {entry.title}\n"
-                article_counter += 1
+            add_to_payload(feed.entries, "CISA")
     except Exception as e: print(f"⚠️ Failed CISA: {e}")
 
     # --- AI EXTRACTION (ID ONLY) ---
@@ -99,12 +107,14 @@ def fetch_and_evaluate_flash_alerts():
     CRITICAL INSTRUCTIONS:
     1. Return exactly 10 objects.
     2. Do NOT invent IDs. You must use the EXACT "Article_ID" provided.
+    3. DIVERSITY MANDATE: You MUST select items from ALL THREE sources (MONITOR THE SITUATION, WAR MONITOR, CISA). Do not pick all 10 from just one source.
+    4. THREAT SCORING: You MUST assign a realistic `threat_level` based on severity: "CRITICAL" (Red-level), "HIGH" (Orange-level), or "WATCH" (Yellow-level). 
     
     Output a raw JSON array. Format exactly like this:
     [
       {{
         "Article_ID": "ART_001",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
       }}
     ]
     
@@ -126,11 +136,7 @@ def fetch_and_evaluate_flash_alerts():
             continue
             
         url = article_map[t_id]["url"]
-        if not valid_url(url):
-            print(f"⚠️ Rejected invalid URL: {url}")
-            continue
-            
-        if url in seen_urls:
+        if not valid_url(url) or url in seen_urls:
             continue
             
         seen_urls.add(url)
@@ -143,7 +149,28 @@ def fetch_and_evaluate_flash_alerts():
         })
         validated_count += 1
         
-    print(f"✅ Validated {validated_count} of {len(extracted_ids)} Gemini selections")
+        # Enforce strict 10-item limit if Gemini over-generates
+        if len(final_flash_data) == 10: 
+            break
+            
+    # --- 🚀 CRITICAL PADDING: GUARANTEE EXACTLY 10 DIVERSE ITEMS ---
+    if len(final_flash_data) < 10:
+        print(f"⚠️ Padding required. Gemini only validated {len(final_flash_data)} items. Adding {10 - len(final_flash_data)} more unique alerts.")
+        for aid, adata in article_map.items():
+            if len(final_flash_data) >= 10: 
+                break
+            url = adata["url"]
+            if url not in seen_urls:
+                seen_urls.add(url)
+                final_flash_data.append({
+                    "Source": url,
+                    "Title": adata["title"],
+                    "Feed_Source": adata["feed_source"],
+                    "Publisher": urlparse(url).netloc.replace("www.", ""),
+                    "threat_level": "WATCH"
+                })
+
+    print(f"✅ Validated exactly {len(final_flash_data)} unique Gemini/Fallback selections")
     return final_flash_data
 
 if __name__ == "__main__":

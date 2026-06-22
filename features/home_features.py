@@ -210,32 +210,35 @@ def render_flash_alert():
         <div class="flash-header"><span>🚨 EXECUTIVE GEOPOLITICS-OSINT FLASH ALERTS</span></div>
     """
 
-    # 🛑 SMART ROUTING: Extract exactly 1 from each unique source, max 3
+    # 🛑 EXECUTIVE HOME ROUTING: Exact 3 CRITICAL (Red) threats, one from each source.
     display_alerts = []
     seen_sources = set()
     
-    # First Pass: Try to grab 3 uniquely sourced items
+    # Pass 1: Grab uniquely sourced CRITICAL items
     for alert in alerts:
-        src = alert.get('source', 'UNKNOWN SOURCE').upper()
-        if src not in seen_sources:
-            display_alerts.append(alert)
-            seen_sources.add(src)
-        if len(display_alerts) == 3:
-            break
-            
-    # Fallback: If the API somehow provided 10 items but only from 1 or 2 sources,
-    # fill the remaining slots up to 3 so the dashboard isn't empty.
+        threat = str(alert.get('threat_level', alert.get('Threat_Level', alert.get('Risk', '')))).upper()
+        if threat == 'CRITICAL':
+            src = alert.get('Feed_Source', alert.get('source', 'UNKNOWN')).upper()
+            if src not in seen_sources:
+                display_alerts.append(alert)
+                seen_sources.add(src)
+            if len(display_alerts) == 3:
+                break
+                
+    # Pass 2: Fallback to HIGH or WATCH if we couldn't find a CRITICAL for a source
     if len(display_alerts) < 3:
         for alert in alerts:
-            if alert not in display_alerts:
+            src = alert.get('Feed_Source', alert.get('source', 'UNKNOWN')).upper()
+            if src not in seen_sources:
                 display_alerts.append(alert)
+                seen_sources.add(src)
             if len(display_alerts) == 3:
                 break
 
     # Build the HTML for the final filtered list
     for alert in display_alerts:
-        # 🛡️ BULLETPROOF KEY EXTRACTION (Cascades through possible key names)
-        source_val = alert.get('source', alert.get('Source', alert.get('Feed_Source', alert.get('Publisher', 'UNKNOWN SOURCE'))))
+        # FIX: Ensure the UI displays the Feed_Source name, not the URL
+        source_val = alert.get('Feed_Source', alert.get('Publisher', alert.get('source', 'UNKNOWN SOURCE')))
         source = str(source_val).upper() if source_val else 'UNKNOWN SOURCE'
         
         title_val = alert.get('title', alert.get('Title', alert.get('Headline', alert.get('Action', alert.get('summary', 'Intelligence Update Available')))))
@@ -261,6 +264,7 @@ def render_flash_alert():
     html_code += "</div>"
     
     components.html(html_code, height=270)
+
 # ==========================================
 # 3. DYNAMIC GEOCODING ENGINE
 # ==========================================
@@ -985,6 +989,8 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     # 1. Aggressively normalize global df_actions (strips hidden spaces and fixes case)
     if not df_actions.empty:
         df_actions.columns = [str(c).strip().title() for c in df_actions.columns]
+        # 🛑 FIX FOR "TOLIST" ERROR: Drop duplicate columns caused by lowercase duplication in app.py
+        df_actions = df_actions.loc[:, ~df_actions.columns.duplicated()]
 
     exec_data_path = 'data/executive_home/tactical_events_24h.json'
     if os.path.exists(exec_data_path):
@@ -996,6 +1002,8 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 if not df_exec.empty:
                     # 2. Aggressively normalize local df_exec
                     df_exec.columns = [str(c).strip().title() for c in df_exec.columns]
+                    # 🛑 FIX FOR "TOLIST" ERROR: Strip potential duplicate columns
+                    df_exec = df_exec.loc[:, ~df_exec.columns.duplicated()]
                     
                     # 3. Cross-fill Action and Headline in df_exec if one is missing entirely
                     if 'Action' in df_exec.columns and 'Headline' not in df_exec.columns:
@@ -1008,6 +1016,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                         df_actions = df_exec
                     else:
                         df_actions = pd.concat([df_exec, df_actions], ignore_index=True)
+                        
         except Exception as e:
             pass
 
@@ -1042,16 +1051,19 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         except:
             pass
 
-    # 🛡️ BULLETPROOF SAFETY CATCH (PREVENTS NONETYPE CRASHES)
-    if not isinstance(flush_data, dict):
-        flush_data = {}
+    # 🛡️ BULLETPROOF CASE-INSENSITIVE KEY EXTRACTION
+    def robust_get(data_dict, potential_keys, default):
+        if not isinstance(data_dict, dict): return default
+        for k in data_dict.keys():
+            if k.lower() in [pk.lower() for pk in potential_keys]:
+                return data_dict[k]
+        return default
 
-    # Extract dynamic keys or provide secure fallbacks
-    bluf_text = str(flush_data.get('bluf', "Scanning macro-strategic feeds. Awaiting telemetry generation cycle..."))
-    tactical_list = flush_data.get('tactical_indicators', ["System initiating...", "Monitoring baseline anomalies...", "Awaiting active extraction..."])
-    threat_text = str(flush_data.get('threat_narrative', "Data currently rendering inside the strategic analysis layer..."))
-    risk_text = str(flush_data.get('risk_assessment', "Data currently rendering inside the strategic analysis layer..."))
-    forecast_text = str(flush_data.get('strategic_forecast', "Data currently rendering inside the strategic analysis layer..."))
+    bluf_text = str(robust_get(flush_data, ['bluf', 'bottom_line_up_front'], "Scanning macro-strategic feeds. Awaiting telemetry generation cycle..."))
+    tactical_list = robust_get(flush_data, ['tactical_indicators', 'tacticalindicators', 'indicators'], ["System initiating...", "Monitoring baseline anomalies...", "Awaiting active extraction..."])
+    threat_text = str(robust_get(flush_data, ['threat_narrative', 'threatnarrative', 'narrative'], "Data currently rendering inside the strategic analysis layer..."))
+    risk_text = str(robust_get(flush_data, ['risk_assessment', 'riskassessment', 'risk'], "Data currently rendering inside the strategic analysis layer..."))
+    forecast_text = str(robust_get(flush_data, ['strategic_forecast', 'strategicforecast', 'forecast'], "Data currently rendering inside the strategic analysis layer..."))
     
     # 🛡️ BULLETPROOF LIST PARSER FOR TACTICAL INDICATORS
     import ast
