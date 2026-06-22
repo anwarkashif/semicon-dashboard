@@ -1,16 +1,23 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Russian Iskander-M Missile Strikes Near Mayaky in Odesa Oblast",
+        "Title": "RSF Drone Strikes Fuel Station in Kosti, Sudan",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTjNGSEZHOXNpMGhyeDBCZThrM2VVNDV1eGExcFpiRHNoLUNxdXJQSE9VYXd1Zlc0MURwWk9VMVJCaU5fb3Y4dENGbldpcW1fZTYwOUdJLXlLTjEtN0xlQlJHZWdnRHdwWUVaN0lKUlF1bnMzWWIyWm1pbXV3U1Mxa291NFVKTWVzbjhuZ0N1LTFkR01rS2dNVFNLVTJMdDBkRUFBUklHNjJHYWhuUWFRYmxLc3JmWUhDSG05TU52T0ZyUXc?oc=5",
-        "Title": "Press Release: Hezbollah Tunnel Exposed Under Civilian Village - idf.il",
+        "Source": "https://t.me/nexta_live/119187",
+        "Title": "Moscow Mayor's Channel Hacked",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/economy/2026/6/22/qatar-lng-factory-explosion-injures-54-leaves-18-missing-govt-says?traffic_source=rss",
+        "Title": "Qatar LNG factory explosion injures 54, leaves 18 missing, gov\u2019t says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,13 +25,6 @@
         "Title": "China targets US rare earth and other firms with export controls - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/22/us-iran-roadmap-final-deal-switzerland-talks-lebanon-deconfliction.html",
-        "Title": "U.S., Iran agree on roadmap for final deal and plan to end military operations in Lebanon",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -37,13 +37,6 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
