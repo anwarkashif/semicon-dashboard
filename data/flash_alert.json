@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Rubio to Travel to UAE, Kuwait, and Bahrain for Iran Nuclear Talks",
+        "Title": "Trump Lifts Naval Blockade on Iran, Makes Concessions",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.bbc.com/news/articles/cnv97e42r7yo?at_medium=RSS&at_campaign=rss",
+        "Title": "Myanmar army killed over 700 civilians in six months, UN says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,13 +28,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security",
-        "Title": "AI models that can take down governments and business months away, rare Five Eyes statement warns",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -35,8 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
