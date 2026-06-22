@@ -191,27 +191,30 @@ else:
 
     @st.cache_data(ttl=60, show_spinner=False)
     def stream_pipeline_data_to_disk():
+        # Added flash_alert.json and psyopoly_alerts.json to the array!
         files_to_sync = [
             'tactical_events_24h.json', 'rss_accumulator.txt', 'live_alert.json', 'sitrep_history.json',
             'weekly_tactical_live.json', 'executive_home/tactical_events_24h.json', 'executive_home/flush_brief_24h.json',
-            'today_snippet/tactical_events_24h.json', 'today_snippet/shift_brief.json', 'friday_snippet/tactical_events_24h.json'
+            'today_snippet/tactical_events_24h.json', 'today_snippet/shift_brief.json', 'friday_snippet/tactical_events_24h.json',
+            'flash_alert.json', 'psyopoly_alerts.json' 
         ]
         
         for filename in files_to_sync:
             local_path = f"data/{filename}"
-            
-            # 🛡️ DATA PROTECTION SHIELD
-            # Prevents GitHub's empty files from erasing the rich data pushed to Hugging Face
-            if os.path.exists(local_path) and os.path.getsize(local_path) > 10:
-                continue
-
             url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/{filename}"
+            
             try:
                 resp = requests.get(url, headers=auth_headers, timeout=5)
                 if resp.status_code == 200:
-                    os.makedirs(os.path.dirname(local_path), exist_ok=True)
-                    with open(local_path, 'w', encoding='utf-8') as f:
-                        f.write(resp.text)
+                    text_data = resp.text.strip()
+                    
+                    # 🛡️ THE SMARTER SHIELD
+                    # If GitHub has a tiny/empty file (like [] or {}), it ignores it.
+                    # If GitHub has your rich data (> 25 characters), it accepts and updates the dashboard!
+                    if len(text_data) > 25:
+                        os.makedirs(os.path.dirname(local_path), exist_ok=True)
+                        with open(local_path, 'w', encoding='utf-8') as f:
+                            f.write(text_data)
             except Exception: pass
 
         api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/data"

@@ -98,10 +98,18 @@ def extract_tactical_events(news_text):
 
 def generate_shift_brief(accumulated_events):
     prompt = f"Synthesize a 12H Strategic Shift Brief using this data: {json.dumps(accumulated_events)}. Return JSON exactly keys: date, bluf, executive_summary, escalation_indicators, strategic_outlook, threat_level."
+    
     for attempt in range(3):
         try: 
-            return json.loads(client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.replace("```json", "").replace("```", "").strip())
-        except Exception: 
+            # 🛠️ FORCE GEMINI TO OUTPUT STRICT JSON
+            response = client.models.generate_content(
+                model='gemini-2.5-flash', 
+                contents=prompt,
+                config={"response_mime_type": "application/json", "temperature": 0.2}
+            )
+            return json.loads(response.text)
+        except Exception as e: 
+            print(f"🚨 Today's Snippet API Attempt {attempt + 1} Failed: {e}")
             time.sleep(10)
             
     # 🛡️ DETERMINISTIC FALLBACK FOR TODAY'S SNIPPET

@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Storm Shadow Missiles Fly Toward Saratov, Russia",
+        "Title": "China Maintains Regular Coastguard Presence Near Pratas Island",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119206",
+        "Title": "Russia Claims Zelensky Threatens Belarus Sovereignty",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/22/world/europe/ukraine-donetsk-donbas-sloviansk-kramatorsk-russia.html",
+        "Title": "Thousands Are Fleeing Ukraine\u2019s Donbas Strongholds as Russia Pushes Closer",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,27 +32,6 @@
         "Title": "Zelenskyy pledges to \u2018bring war back to Russia\u2019 after drones swarm toward Moscow \u2013 Europe live",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.npr.org/2026/06/22/nx-s1-5866202/china-sanctions-restricting-exports",
-        "Title": "China hits back at U.S. sanctions restricting its exports to American defense firms",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119187",
-        "Title": "Moscow Mayor's Channel Hacked",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/economy/2026/6/22/qatar-lng-factory-explosion-injures-54-leaves-18-missing-govt-says?traffic_source=rss",
-        "Title": "Qatar LNG factory explosion injures 54, leaves 18 missing, gov\u2019t says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {

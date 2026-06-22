@@ -147,11 +147,18 @@ def generate_flush_to_brief(accumulated_events):
     
     for attempt in range(3):
         try: 
-            return json.loads(client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.replace("```json", "").replace("```", "").strip())
-        except Exception: 
-            time.sleep(15 * (attempt + 1))
+            # 🛠️ FORCE GEMINI TO OUTPUT STRICT JSON
+            response = client.models.generate_content(
+                model='gemini-2.5-flash', 
+                contents=prompt,
+                config={"response_mime_type": "application/json", "temperature": 0.2}
+            )
+            return json.loads(response.text)
+        except Exception as e: 
+            print(f"🚨 Executive API Attempt {attempt + 1} Failed: {e}")
+            time.sleep(10)
         
-    # 🛡️ DETERMINISTIC FALLBACK (Prevents 'NoneType' crashes if API fails)
+    # 🛡️ DETERMINISTIC FALLBACK
     return {
         "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
         "tactical_indicators": ["API Rate Limit Hit", "System Awaiting Reset", "Data Pipeline Intact"],
