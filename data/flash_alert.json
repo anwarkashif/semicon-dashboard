@@ -1,14 +1,21 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Shadow Fleet Tankers Transit Strait of Hormuz",
+        "Title": "Vance Warns Iran Over Trash Talk During Nuclear Talks",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44636",
-        "Title": "Iran Agrees to IAEA Inspectors Return",
+        "Source": "https://t.me/nexta_live/119210",
+        "Title": "Russia's Dubna Space Center Hit by Drone Attack",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89295",
+        "Title": "North Korea Develops Advanced Ballistic Missile",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -24,19 +31,19 @@
         "Source": "https://t.me/Middle_East_Spectator/33866",
         "Title": "UK Develops New Cruise Missile For Ukraine",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119202",
-        "Title": "Russia Declares Rocket Alert Across Six Regions",
-        "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
