@@ -153,11 +153,25 @@ def render_redroom_landing(df_actions):
         html_str = "<div class='glass-panel'><div class='panel-header'>MUST WATCH</div>"
         if alerts and isinstance(alerts, list):
             for alert in alerts[:10]:
-                src = alert.get('source', 'INTEL')
-                tit = alert.get('title', 'Encrypted Telemetry')
-                url = alert.get('url', '#')
-                thr = alert.get('threat_level', 'WATCH').upper()
-                tc = f"tag-{thr.lower()}"
+                # 🛡️ BULLETPROOF KEY EXTRACTION (Matches your home_features.py logic)
+                src = alert.get('Feed_Source', alert.get('Publisher', alert.get('source', alert.get('Source', 'INTEL'))))
+                tit = alert.get('title', alert.get('Title', alert.get('Headline', alert.get('Action', alert.get('summary', 'Encrypted Telemetry')))))
+                url = alert.get('url', alert.get('Url', alert.get('link', alert.get('Link', '#'))))
+                
+                # Enforce valid URLs to prevent the '#' redirect bug
+                url = str(url) if str(url).startswith('http') else '#'
+
+                # Robust Threat Level parsing
+                thr_val = alert.get('threat_level', alert.get('Threat_Level', alert.get('Risk', alert.get('risk', 'WATCH'))))
+                thr = str(thr_val).upper() if thr_val else 'WATCH'
+                
+                # Dynamic CSS Class mapping based on threat level
+                if 'CRITICAL' in thr: tc = 'tag-critical'
+                elif 'HIGH' in thr: tc = 'tag-high'
+                elif 'ELEVATED' in thr or 'MODERATE' in thr: tc = 'tag-elevated'
+                elif 'NOMINAL' in thr or 'LOW' in thr: tc = 'tag-nominal'
+                else: tc = 'tag-watch'
+                
                 html_str += f"<a href='{url}' target='_blank' class='flash-link'><span style='font-size: 0.75rem; color: #8a7373; font-family: monospace;'>{src}</span><br><span class='{tc}'>[{thr}]</span> {tit}</a>"
         else:
             html_str += "<p style='color: #64748b; text-align: center; margin-top: 50px;'>No active flashes in current cycle.</p>"

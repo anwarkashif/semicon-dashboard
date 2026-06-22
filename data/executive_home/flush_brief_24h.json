@@ -1,22 +1,11 @@
 {
-    "bluf": "Immediate de-escalation in US-Iran tensions, marked by temporary sanctions relief and ongoing nuclear/Strait of Hormuz talks, is tempered by persistent regional instability from Houthi attacks and Israeli actions. Simultaneously, global geopolitical competition intensifies with China's retaliatory export restrictions against the US, while emerging AI and space-based threats pose significant, near-term national security risks.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "Iranian officials are in Oman for Strait of Hormuz talks, following an MOU signing and commencement of formal deal negotiations between the U.S. and Iran.",
-        "The U.S. has temporarily lifted sanctions on Iranian oil, leading to a fall in oil prices, with indications from Trump that Iran will accept sweeping weapons inspections.",
-        "China has restricted rare-earth exports to U.S. defense and AI firms in retaliation for U.S. sanctions on Chinese tech giants.",
-        "Houthi rebels continue pirate attacks in the Gulf of Aden and missile attacks on Israel-affiliated vessels in the Red Sea, impacting global shipping and creating tensions in the Strait of Hormuz, where traffic remains below pre-war levels.",
-        "The Five Eyes alliance warns that AI-powered threats may succeed in critical systems 'within months'.",
-        "A blast at a giant Qatar LNG site killed 13 and injured dozens, raising concerns about energy supply disruption.",
-        "Israel maintains a military presence in southern Lebanon and is reshaping life in southern Syria, while the humanitarian situation in Gaza remains dire.",
-        "SpaceX continues launching intelligence-gathering satellites for the NRO, and the Pentagon contracts for orbital refueling demonstrations, indicating increased militarization of space."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "A complex and volatile geopolitical landscape is unfolding. In the Middle East, a fragile de-escalation between the U.S. and Iran, driven by a temporary lifting of oil sanctions and progress in nuclear/Strait of Hormuz talks, is a critical development. However, this positive momentum is undermined by continued Houthi aggression in the Red Sea and Gulf of Aden, threatening global shipping and potentially reigniting broader regional conflict. Israel's persistent military posture in southern Lebanon and Syria further complicates regional stability, while the humanitarian crisis in Gaza remains acute. The recent blast at a Qatari LNG facility adds an element of energy supply vulnerability. Concurrently, the U.S.-China strategic rivalry is escalating beyond economic tariffs into critical supply chains, with China weaponizing rare-earth exports in retaliation for U.S. tech sanctions, signaling a deepening technological decoupling. Overlaying these traditional geopolitical flashpoints are rapidly evolving threats: the Five Eyes alliance warns of AI-powered cyber and kinetic threats materializing within months, and the increasing militarization and congestion of space, evidenced by intelligence satellite launches and orbital refueling initiatives, foreshadows a new domain of potential conflict and resource competition.",
-    "risk_assessment": {
-        "Middle East Instability": "HIGH - Despite U.S.-Iran de-escalation, Houthi attacks pose an immediate, severe threat to maritime security and global energy trade, risking regional conflict escalation. Israeli actions in Lebanon and Syria maintain high geopolitical tension. The Qatar LNG blast highlights energy supply vulnerabilities.",
-        "U.S.-China Economic/Technological Warfare": "HIGH - China's rare-earth export restrictions directly threaten U.S. defense and AI supply chains, escalating trade tensions into a critical national security domain and accelerating technological decoupling.",
-        "Emerging AI/Cyber Threats": "HIGH - The Five Eyes warning signifies an imminent, severe risk of AI-powered cyber and kinetic attacks on critical infrastructure and national security systems, demanding urgent defensive and regulatory responses.",
-        "Space Militarization": "HIGH - Increased deployment of military space assets and orbital activities raises the risk of orbital conflict, threats to critical space infrastructure, and a new arms race in space.",
-        "Economic Volatility": "MODERATE - Oil price fluctuations due to U.S.-Iran talks, coupled with potential disruptions from Houthi actions and the Qatar LNG incident, contribute to global economic uncertainty."
-    },
-    "strategic_forecast": "In the short term, the U.S.-Iran rapprochement, if sustained, could temporarily stabilize oil markets and reduce immediate tensions around the Strait of Hormuz, but a formal, verifiable deal remains uncertain. However, the broader Middle East will likely remain volatile due to persistent Houthi actions and Israeli regional security operations. The U.S.-China rivalry is set to intensify, with further retaliatory measures and a deepening of technological decoupling, particularly in critical sectors like AI and defense. Over the next few months, the global security landscape will be increasingly shaped by the rapid advancement and weaponization of AI, as warned by the Five Eyes alliance, necessitating a global push for AI safety and cyber resilience. The militarization of space will continue unabated, transforming it into a contested domain with significant implications for national security and global power projection. Nations will increasingly invest in autonomous systems and counter-drone technologies, signaling a new era of warfare."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }

@@ -263,7 +263,7 @@ def render_flash_alert():
         
     html_code += "</div>"
     
-    components.html(html_code, height=270)
+    components.html(html_code, height=300)
 
 # ==========================================
 # 3. DYNAMIC GEOCODING ENGINE
