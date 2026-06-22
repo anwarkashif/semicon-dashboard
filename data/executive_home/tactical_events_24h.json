@@ -4,6 +4,32 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Moscow shoots down nearly 60 drones; Russian attacks kill fi...",
+        "Summary": "Moscow shoots down nearly 60 drones; Russian attacks kill five in Ukraine",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/moscow-shoots-down-nearly-60-drones-russian-attacks-kill-five-ukraine",
+        "Title": "Moscow shoots down nearly 60 drones; Russian attacks kill five in Ukraine",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "al-monitor.com"
+    },
+    {
+        "Date": "2026-06-22",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Araghchi hails major progress in first round of direct US-Ir...",
+        "Summary": "Araghchi hails major progress in first round of direct US-Iran talks",
+        "Risk": "HIGH",
+        "Source": "https://x.com/euronews/status/2068952403940958284",
+        "Title": "Araghchi hails major progress in first round of direct US-Iran talks",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-22",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Belgium was left with 10 players, and finished 0:0 against I...",
         "Summary": "Belgium was left with 10 players, and finished 0:0 against Iran",
         "Risk": "HIGH",
@@ -265,29 +291,5 @@
         "Title": "As War With U.S. Eases, Iran Steps Up Hangings of Dissidents",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "wsj.com"
-    },
-    {
-        "Date": "2026-06-22",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The first round of talks between high-ranking US and Iranian...",
-        "Summary": "The first round of talks between high-ranking US and Iranian officials in Switzerland ended, mediators said, after a tense opening marked by Tehran's announcement it had again closed the Strait of Hormuz and President Trump repeating his threats to resume attacks on Iran",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2068875367851688079",
-        "Title": "The first round of talks between high-ranking US and Iranian officials in Switzerland ended, mediators said, after a tense opening marked by Tehran's announcement it had again closed the Strait of Hormuz and President Trump repeating his threats to resume attacks on Iran",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": null,
-        "Actor": "China",
-        "Action": "Imposed sanctions on 56 U.S. defense companies in retaliation.",
-        "Location": "United States (companies affected)",
-        "Risk": "Escalation of U.S.-China economic and strategic tensions, potential supply chain disruption in defense sector, economic warfare.",
-        "Source": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPbGVLSkVRMDBlV1Qta1JfeXp4ZmZ2Q1lJYktCeWY1QjhLTUpkOFRYbHRXZmdXWC1CLU90VGhVOEZKT0FBVU1WdlBIVFk2emxQaDVaTGlVaG5fbWZLUFVmaVc1VVltOHQ3UWdETnNVVFEzYXlfd2VPTnE0Z1ZKWFlfOEVHd3I?oc=5",
-        "Title": "China Sanctions 56 US Defense Companies in Retaliation - \uc870\uc120\uc77c\ubcf4",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
     }
 ]
