@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitor-the-situation.com/",
-        "Title": "Ukrainian Missile Strike Kills Five in Southwestern Russia",
+        "Title": "Trump Says Iran Will Accept Weapons Inspections for Nuclear Honesty",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitor-the-situation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/air/russia-is-building-huge-protective-shelters-for-its-strategic-bombers",
+        "Title": "Russia Is Building Huge Protective Shelters For Its Strategic Bombers",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61442",
+        "Title": "UAE Nears Purchase of Russian-Indian BrahMos Missile",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,20 +32,6 @@
         "Title": "Ukraine Ex-Employee Leaks Sensitive Documents",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119219",
-        "Title": "Russia Gas Stocks Plummet Amid New Sanctions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/22/world/middleeast/us-sanctions-reprieve-iran-oil.html",
-        "Title": "U.S. Temporarily Lifts Sanctions on Iranian Oil",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
     },
     {
