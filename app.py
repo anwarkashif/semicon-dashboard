@@ -198,11 +198,17 @@ else:
         ]
         
         for filename in files_to_sync:
+            local_path = f"data/{filename}"
+            
+            # 🛡️ DATA PROTECTION SHIELD
+            # Prevents GitHub's empty files from erasing the rich data pushed to Hugging Face
+            if os.path.exists(local_path) and os.path.getsize(local_path) > 10:
+                continue
+
             url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/{filename}"
             try:
                 resp = requests.get(url, headers=auth_headers, timeout=5)
                 if resp.status_code == 200:
-                    local_path = f"data/{filename}"
                     os.makedirs(os.path.dirname(local_path), exist_ok=True)
                     with open(local_path, 'w', encoding='utf-8') as f:
                         f.write(resp.text)
