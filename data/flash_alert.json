@@ -1,10 +1,24 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Trump Privately Urges Zelensky to Act More Boldly Against Russia",
+        "Title": "Netherlands Joins US-Led Pax Silica Alliance for AI and Semiconductor Supply Chains",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/cz750q5e3w3o?at_medium=RSS&at_campaign=rss",
+        "Title": "Ethiopia PM's party wins landslide as fears grow of new conflict",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/c3vy3nr63gxo?at_medium=RSS&at_campaign=rss",
+        "Title": "Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.nytimes.com/2026/06/23/world/middleeast/iran-control-strait-of-hormuz.html",
@@ -14,27 +28,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/23/israels-deliberate-targeting-of-gaza-children-part-of-genocide-un-inquiry?traffic_source=rss",
-        "Title": "Israel\u2019s deliberate targeting of Gaza children part of genocide: UN inquiry",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119250",
-        "Title": "Russia Imposes New eSIM Restrictions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32179",
-        "Title": "US Accelerates Post-Quantum Cryptography Transition",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -42,31 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
+        "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Treasury yields fall despite rate hike concerns hitting tech stocks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c3vy3nr63gxo?at_medium=RSS&at_campaign=rss",
-        "Title": "Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back",
+        "Source": "https://www.bbc.co.uk/news/videos/c802denngxeo?at_medium=RSS&at_campaign=rss",
+        "Title": "Parisians cool off in canal amid 'red alert' heatwave",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/23/world/europe/mark-rutte-nato-trump.html",
-        "Title": "How Mark Rutte of NATO Manages an Unpredictable Trump",
+        "Source": "https://t.me/rybar_in_english/32181",
+        "Title": "Ukraine Doubles Military Budget",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119257",
+        "Title": "Ukraine Drone Debris Hits Woman on Beach in Odessa",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
