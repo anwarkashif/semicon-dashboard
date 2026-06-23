@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drones Strike Electrical Substation in Crimea",
+        "Title": "Pentagon Seeks $80 Billion Supplemental for Iran War",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,25 +14,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61472",
-        "Title": "Ukraine Threatens Children Camps In Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds?traffic_source=rss",
-        "Title": "Iran war live: Tehran to access billions in frozen funds",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://t.me/southfronteng/61462",
         "Title": "Russia Breaks Through Ukrainian Line in Zaporozhye",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.twz.com/sea/where-are-the-aircraft-carriers-june-22-2026",
+        "Title": "Where Are The Aircraft Carriers: June 22, 2026",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -60,6 +53,13 @@
         "Title": "Australia politics live: Labor reaches deal with Greens to pass tax reforms through Senate; Hanson explains stance on paid parental leave",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61472",
+        "Title": "Ukraine Threatens Children Camps In Crimea",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
