@@ -1,40 +1,5 @@
 [
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Strategic Railway Bridge Near Rozdolne, Crimea",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cbsnews.com/video/how-israeli-strikes-on-lebanon-could-impact-us-iran-talks/",
-        "Title": "How Israeli strikes on Lebanon could impact U.S.-Iran talks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44649",
-        "Title": "US Mediates Fifth Round of Israel-Lebanon Talks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32188",
-        "Title": "Intelligence Agencies Warn of AI-Driven Cyber Threats",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/23/former-pm-says-israel-smuggled-starlink-internet-systems-into-iran?traffic_source=rss",
-        "Title": "Former PM says Israel smuggled Starlink internet systems into Iran",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -56,17 +21,52 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "NATO delivers training for Ukraine\u2019s public affairs teams - North Atlantic Treaty Organization",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-06",
+        "Title": "Mitsubishi Electric Co.'s MELSEC iQ-F Series FX5-ENET/IP Ethernet Module",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32188",
+        "Title": "Intelligence Agencies Warn of AI-Driven Cyber Threats",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/live/2026/06/23/world/iran-us-trump-lebanon",
+        "Title": "Mideast Live Updates: U.S. and Iran Offer Conflicting Accounts of Nuclear Discussions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cbsnews.com/video/how-israeli-strikes-on-lebanon-could-impact-us-iran-talks/",
+        "Title": "How Israeli strikes on Lebanon could impact U.S.-Iran talks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Ukraine Strikes Strategic Railway Bridge Near Rozdolne, Crimea",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWnN3T3ZZN0NCbWxuQjE1dHo0cEFHNUkwUHRnTXNPYzg4YnBDaGxwcjU1Szl3QzYzdzdLTHRxR01wX2JfaEw3UDg5TGpQaTBFczQwQWJmV2F1QVY1eUJFM3JVVzZST3U3RGlzYmh5cDNZdW9HR29LVXlEZll0TlB0R2FYZ1YxT1pUV2U1b1VLcWY4c0hFZWhZVWpFc3VtbUk?oc=5",
+        "Title": "German state election draws Bauhaus into AfD culture war - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/23/energy-fuels-to-buy-magnet-manufacturer-vacuumschmelze-gmbh.html",
-        "Title": "Energy Fuels to buy Germany's VAC as rare earths magnet race heats up",
+        "Source": "https://t.me/rybar_in_english/32189",
+        "Title": "Tucker Carlson Leaves Republican Party",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
