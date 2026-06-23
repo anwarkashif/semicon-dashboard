@@ -1,31 +1,24 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Claims Regional Countries Participated in US-Israeli War",
+        "Title": "Ukraine Drones Strike Russian Convoy on Pontoon Bridge Near Chonhar",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119250",
-        "Title": "Russia Imposes New eSIM Restrictions",
+        "Source": "https://t.me/rybar_in_english/32181",
+        "Title": "Ukraine Doubles Military Budget",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/nexta_live/119247",
-        "Title": "Russia Strikes Grain Factory in Alexeyevka",
+        "Source": "https://www.bbc.co.uk/news/articles/c3vy3nr63gxo?at_medium=RSS&at_campaign=rss",
+        "Title": "Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119244",
-        "Title": "Ukraine Drone Unit Works Effectively in Kerch",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "bbc.co.uk",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -35,6 +28,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
+        "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32179",
-        "Title": "US Accelerates Post-Quantum Cryptography Transition",
+        "Source": "https://t.me/rybar_in_english/32182",
+        "Title": "US Intelligence Director Requests List for Dismissals",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/23/apollo-private-credit-fund-withdrawals-redemptions.html",
-        "Title": "Apollo curbs withdrawals after exit requests hit 17%, reigniting fears over private credit liquidity",
+        "Source": "https://www.bbc.co.uk/news/articles/c07yp02mxyjo?at_medium=RSS&at_campaign=rss",
+        "Title": "Tesla crash that killed a woman under US federal investigation",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "China's import of custard apples is sparking fears in Taiwan",
+        "Source": "https://t.me/nexta_live/119259",
+        "Title": "Russian Woman Demands Putin Resign",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/europe/20260623-afghan-taliban-set-for-eu-migration-talks-slammed-by-rights-groups",
-        "Title": "Afghan Taliban set for EU migration talks slammed by rights groups",
+        "Source": "https://t.me/nexta_live/119258",
+        "Title": "Passenger Cruise Hits Severe Storm",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
