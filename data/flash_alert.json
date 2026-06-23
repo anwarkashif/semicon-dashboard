@@ -1,14 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Air Force Deploys Refueling Aircraft to Al Udeid Base in Qatar",
+        "Title": "Ukraine Launches Massive Drone Raid on Southern Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89315",
-        "Title": "Russia Advances in Konstantinovka and Krasny Liman",
+        "Source": "https://www.cnbc.com/2026/06/23/indias-tata-electronics-hit-by-cyber-breach-claiming-to-expose-apple-tesla-trade-secrets.html",
+        "Title": "India's Tata Electronics hit by cyber breach claiming to expose Apple, Tesla trade secrets",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61472",
+        "Title": "Ukraine Threatens Children Camps In Crimea",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -21,15 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/22/palestinian-children-unprotected-as-ngos-forced-out-of-gaza-and-west-bank?traffic_source=rss",
-        "Title": "Palestinian children \u2018unprotected\u2019 as NGOs forced out of Gaza and West Bank",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.twz.com/air/turkeys-fighter-drone-teamed-with-m-346-fighter-trainer-in-autonomy-trials",
-        "Title": "Turkey\u2019s \u2018Fighter Drone\u2019 Teamed With M-346 Fighter-Trainer In Autonomy Trials",
+        "Source": "https://www.twz.com/sea/where-are-the-aircraft-carriers-june-22-2026",
+        "Title": "Where Are The Aircraft Carriers: June 22, 2026",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "twz.com",
         "threat_level": "HIGH"
@@ -42,29 +42,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/23/china-tech-crackdown-antitrust-tripcom-meituan-food-delivery-anti-involution-deflation-.html",
-        "Title": "Beijing is summoning executives again, but here's why that's causing less worry than in 2021",
+        "Source": "https://warmonitor.com/",
+        "Title": "Australia politics live: Labor reaches deal with Greens to pass tax reforms through Senate; Hanson explains stance on paid parental leave",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.twz.com/sea/where-are-the-aircraft-carriers-june-22-2026",
-        "Title": "Where Are The Aircraft Carriers: June 22, 2026",
+        "Source": "https://www.cbsnews.com/video/062126-face-the-nation/",
+        "Title": "6/21: Face The Nation",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/22/video-shows-deadly-shooting-in-montreal-canada?traffic_source=rss",
-        "Title": "Video shows deadly shooting in Montreal, Canada",
+        "Source": "https://www.aljazeera.com/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds?traffic_source=rss",
+        "Title": "Iran war live: Tehran to access billions in frozen funds",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
