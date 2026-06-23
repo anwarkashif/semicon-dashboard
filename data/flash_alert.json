@@ -1,24 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Strikes Kharkiv Oblast With Iskander-M Missile",
+        "Title": "Russia Strikes Kryvyi Rih With Iskander Missile",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/europe/20260623-afghan-taliban-set-for-eu-migration-talks-slammed-by-rights-groups",
-        "Title": "Afghan Taliban set for EU migration talks slammed by rights groups",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119247",
-        "Title": "Russia Strikes Grain Factory in Alexeyevka",
+        "Source": "https://t.me/rybar_in_english/32179",
+        "Title": "US Accelerates Post-Quantum Cryptography Transition",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.aljazeera.com/news/2026/6/23/palestine-weekly-wrap-israels-quiet-annexation-grows-louder?traffic_source=rss",
@@ -26,6 +19,13 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119250",
+        "Title": "Russia Imposes New eSIM Restrictions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -39,14 +39,21 @@
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
         "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/23/apollo-private-credit-fund-withdrawals-redemptions.html",
+        "Title": "Apollo curbs withdrawals after exit requests hit 17%, reigniting fears over private credit liquidity",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://warmonitor.com/",
@@ -56,17 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.com/news/articles/cwyde73w680o?at_medium=RSS&at_campaign=rss",
-        "Title": "Inquiry ordered after building fire kills 15 in north India city",
+        "Source": "https://www.france24.com/en/europe/20260623-afghan-taliban-set-for-eu-migration-talks-slammed-by-rights-groups",
+        "Title": "Afghan Taliban set for EU migration talks slammed by rights groups",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119244",
-        "Title": "Ukraine Drone Unit Works Effectively in Kerch",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
