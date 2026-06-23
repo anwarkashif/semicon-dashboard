@@ -1,5 +1,97 @@
 [
     {
+        "Date": "2026-06-23",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Trump: 'I will do what I have to do' if Iran does not stick ...",
+        "Summary": "Trump: 'I will do what I have to do' if Iran does not stick to deal",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2069223983539507240",
+        "Title": "Trump: 'I will do what I have to do' if Iran does not stick to deal",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-23",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Mbappe leads France to win over Iraq in lightning-delayed Wo...",
+        "Summary": "Mbappe leads France to win over Iraq in lightning-delayed World Cup tie",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/sports/2026/6/23/mbappe-leads-france-to-win-over-iraq-in-lightening-delayed-world-cup-tie?traffic_source=rss",
+        "Title": "Mbappe leads France to win over Iraq in lightning-delayed World Cup tie",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "China",
+        "Action": "Implements new export controls on rare earth materials and sanctions US defense firms in retaliation.",
+        "Location": "China (impacting global supply chains, US particularly)",
+        "Risk": "High - Economic warfare, critical supply chain disruption (especially for defense and tech sectors), escalation of US-China trade tensions, national security implications for US.",
+        "Source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPNnVjbnBoV2F5Tk4tNzhtT0pQN0haOGdPOXN6d29MWGxDTGhNMm1mMmtaaFc4LUNpVUxyTmxNc1Y2OVZnbEJ2dE9HRDljdUREdU1EeldfTXRBRTBWNUN3YTVSbFlUdjdXRzdWdXMzeVN3aGIwcWg4d0JaVFJLOTZMYTlyX0tUYUJpbzgxS1k5cy1EcDJWNW1jV0dJUTVCSGFJeENxa3IzVjN1cHB6aEM5czI3NjZYSnFfZ1lrTGlSZlNrMlU?oc=5",
+        "Title": "China takes aim at U.S. rare earth companies with new export controls - The Washington Post",
+        "Feed_Source": "Google News Live 1H",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "United States",
+        "Action": "Eases sanctions on Iranian oil and releases frozen funds.",
+        "Location": "United States (impacting Iran and global oil markets)",
+        "Risk": "Medium to High - Regional instability (Middle East), shifts in global energy markets, potential for nuclear proliferation (if Iran non-compliance), US foreign policy unpredictability, US-Israel tensions.",
+        "Source": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1Nd2paNC1kanF0d2V6aWlYd2tLYUpFLXRXRWVwUmN1MTNyYlNlR3dsNDFQNkc2ZDdGSVd3UXh5djQtWV9UNENCSnlydkEyNTh2Z2YtdDhaUGptVFVveFlOOTZvZTF5amhVMXF1X1hLVTdyNGxYZGc?oc=5",
+        "Title": "U.S. Eases Sanctions on Iranian Oil, but Progress on Nuclear Issues Is Muddy - The New York Times",
+        "Feed_Source": "Google News Live 1H",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "Houthi rebels (Yemen), Unspecified Pirates",
+        "Action": "Conducts missile attacks on Israel-affiliated vessels and increases pirate attacks.",
+        "Location": "Red Sea, Gulf of Aden",
+        "Risk": "High - Significant disruption to global maritime trade routes (chokepoints), escalation of regional conflicts (Middle East), increased shipping costs, humanitarian aid blockage, potential for broader international military intervention.",
+        "Source": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcGtRNnZ0MmpsZFY3blpINU1xc3VDZlBoeFBSZWJ5dnFzNTFhOHJlQkpOWWwwRzdEekpuV2pxUGVRdUZLaVRwSXBGVUdOT1FXTXduX003S1VrdGp4cWMxSzFvcVpnMnpTeWtWTnRDZEd6aVJkWDh0VkNsNUpwbUJfN0piLWtaYnQxbkRWYkhYSnpmMzRYcTYwUm1QX1hTa083dFE?oc=5",
+        "Title": "Pirate attacks on ships in the Gulf of Aden are on the rise - Foundation for Defense of Democracies",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "United States (study findings)",
+        "Action": "Study finds the US cannot repair battle-damaged ships in a war with China.",
+        "Location": "United States (naval repair facilities), Indo-Pacific (implications for potential conflict zone)",
+        "Risk": "High - Severe military readiness deficit, strategic vulnerability in a major power conflict (e.g., with China), erosion of deterrence capability, potential for prolonged conflict or unfavorable outcomes.",
+        "Source": "https://www.defensenews.com/news/pentagon-congress/2026/06/22/us-couldnt-repair-battle-damaged-ships-in-war-with-china-study-finds/",
+        "Title": "US couldn\u2019t repair battle-damaged ships in war with China, study finds",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "Chinese investors",
+        "Action": "Secretly acquired stakes in SpaceX before its IPO.",
+        "Location": "United States (SpaceX), China (investors)",
+        "Risk": "High - National security concerns (foreign influence/espionage in critical space technology), intellectual property theft, potential for supply chain vulnerabilities, challenges to US technological leadership.",
+        "Source": "https://www.defenseone.com/threats/2026/06/spacex-ipo-investors-china-secretly-acquired-stakes/414275/",
+        "Title": "Before SpaceX IPO, investors in China secretly acquired stakes",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defenseone.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "Five Eyes (intelligence alliance: US, UK, Canada, Australia, New Zealand)",
+        "Action": "Warns that AI-powered threats may succeed 'within months'.",
+        "Location": "Global",
+        "Risk": "High - Imminent and rapid escalation of sophisticated cyber and intelligence threats, potential for widespread disruption of critical infrastructure, national security breaches, and challenges to democratic processes.",
+        "Source": "https://www.ft.com/content/df50c416-9308-46cc-af14-8f069bba9aa6",
+        "Title": "AI-powered threats may succeed \u2018within months\u2019, Five Eyes warns",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "ft.com"
+    },
+    {
         "Date": "2026-06-22",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
@@ -197,97 +289,5 @@
         "Title": "Syria has made no progress on Sweida reintegration plan, UN says",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "al-monitor.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Five Eyes intelligence alliance",
-        "Action": "Warns of AI-powered threats succeeding 'within months'",
-        "Location": "Global",
-        "Risk": "National security, cyber warfare, systemic disruption",
-        "Source": "https://www.ft.com/content/df50c416-9308-46cc-af14-8f069bba9aa6",
-        "Title": "AI-powered threats may succeed \u2018within months\u2019, Five Eyes warns",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "United States",
-        "Action": "Temporarily lifts oil sanctions against Iran, citing 'productive' talks",
-        "Location": "Iran, Global (energy markets)",
-        "Risk": "Geopolitical realignment, potential for increased Iranian revenue, regional instability",
-        "Source": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPeE9NSGVjUEtnSWVnMDMzRjJrd2R5X1FYaHl1NUhxb0toRzhTZGc0SFpuTW1xT21raVBEOU9NanRNMXIwRldOMlp4cVFOc0NsUkc5U1lOS05hd3ZNMXR2bEZLcHFZQW9SYUtWYkxBQTYwbFF4SXM5U3E5MlJKeWNzNS1hMXI?oc=5",
-        "Title": "U.S. Temporarily Lifts Oil Sanctions Against Iran, Citing \u2018Productive\u2019 Talks - The New York Times",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "China",
-        "Action": "Sanctions US defense and rare earth firms in retaliation",
-        "Location": "China, United States",
-        "Risk": "Escalation of trade and tech war, supply chain disruption, economic impact",
-        "Source": "https://asiatimes.com/2026/06/china-sanctions-us-defense-rare-earth-firms-in-retaliation/",
-        "Title": "China sanctions US defense, rare earth firms in retaliation",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "asiatimes.com"
-    },
-    {
-        "Date": "Recent Study",
-        "Actor": "United States (military capability)",
-        "Action": "Study finds US inability to repair battle-damaged ships in war with China",
-        "Location": "United States, Indo-Pacific (implication)",
-        "Risk": "US military vulnerability, reduced operational readiness, strategic disadvantage",
-        "Source": "https://www.defensenews.com/news/pentagon-congress/2026/06/22/us-couldnt-repair-battle-damaged-ships-in-war-with-china-study-finds/",
-        "Title": "US couldn\u2019t repair battle-damaged ships in war with China, study finds",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Houthis, Pirates",
-        "Action": "Missile attack on Israel; increased attacks on Red Sea/Gulf of Aden shipping",
-        "Location": "Red Sea, Gulf of Aden, Israel, Yemen",
-        "Risk": "Disruption of global shipping, increased regional conflict, energy security threats, economic impact",
-        "Source": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRlZTZnRnR0tGckFFMFNyZkFpMkFYSm41Y3FmNmtWTlF0ZWZIYlpGZE04SFc4Nm9nZENQMFVNWW1kUURBSjR5Q1pfS3BIR3FFUUNTRDY5N1A4RUxRUHROTnNoLUdNX2J6ckVmNGhJM2dYaFRSQmFXX2VCM1RXcHNxeWlOR2F5VV9qQ2lQa09FS0xndw?oc=5",
-        "Title": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - AP News",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "United States (Trump Administration)",
-        "Action": "Signs Executive Orders to bolster quantum computing",
-        "Location": "United States",
-        "Risk": "Accelerating global tech race, national security implications, technological advantage",
-        "Source": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUHFaRzIzV1o3Rzloc08zSlo5OHM3UUpPLW5mdFNQNU5xUktHSHpUdTM0NUhGbVBuSmFsNjQwd1JaQzU2eUw2UWZudi1jelB0cWFkdVdVR2hpZ1dtUG1sZG9kMWVfd2hueElWRHh2TXRaQ0h1RFl5UFlTTzZ6bjlLZTVOOHdISFBDVjMwaklyV2RLRnNHdFhndThR?oc=5",
-        "Title": "Trump Signs 2 Executive Orders to Bolster Quantum Computing - MeriTalk",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "2026-06-22",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Turkish president warns of efforts to undermine US-Iran deal...",
-        "Summary": "Turkish president warns of efforts to undermine US-Iran deal",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/turkish-president-warns-efforts-undermine-us-iran-deal",
-        "Title": "Turkish president warns of efforts to undermine US-Iran deal",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "2026-06-22",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "The two square off in Iraq's second World Cup group stage ma...",
-        "Summary": "The two square off in Iraq's second World Cup group stage match",
-        "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2069144613307527403",
-        "Title": "The two square off in Iraq's second World Cup group stage match",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
     }
 ]
