@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Releases Footage of Secret Sea-Based Ballistic Missile Project",
+        "Title": "Trump Warns Iran: 'Finish the Job' If Not Reasonable",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44655",
+        "Title": "Israel Bombs Gaza City",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,17 +21,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119283",
-        "Title": "Russia Faces Gasoline Shortages",
+        "Source": "https://news.sky.com/story/vladimir-putin-says-russia-ready-for-peace-talks-after-ukraine-refinery-strikes-13557152",
+        "Title": "Putin says Russia 'ready for peace talks' after Ukraine refinery strikes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/23/strait-hormuz-persian-gulf-ship-tanker-evacuation.html",
-        "Title": "Strait of Hormuz evacuation plan to begin for ships stranded in Persian Gulf, maritime organization says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "news.sky.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -32,7 +32,7 @@
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/tv-shows/the-debate/20260623-air-conditioning-for-all-france-divided-over-response-to-record-breaking-heatwave",
-        "Title": "Air conditioning for all? France divided over response to record-breaking heatwave",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-02",
+        "Title": "Siemens SIPROTEC 5 Using DIGSI5 Protocol",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119287",
+        "Title": "Russian Occupier Shows Destroyed Equipment in Donbas",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOTFXcmRzVmtEY3NiX2hNUkhfRXdOTDJta1ViejBLd3VDajlPWVktS0gyeFdRT2M1bTctTG1Bb28xcnhqTE1WT3hTd3dhNTRINDdlSi0wMzRXcjNVZ1h2d09hb2pYYm9FN2tCbjQyMlJqcUZKUVFZaldmbU1GWDI0NkZTdF93N2JRQll4VXJReGROUUIycXlTUXFOYTdZMDF2MnVYZWdTdw?oc=5",
-        "Title": "Sudan crisis: How families are restoring water and healthcare in Khartoum - ReliefWeb",
+        "Source": "https://www.cbsnews.com/news/senate-house-pass-iran-war-powers-resolution-trump/",
+        "Title": "Senate adopts House-passed Iran resolution in symbolic rebuke of Trump",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "US Supreme Court backs Trump policy on green card holder rights",
+        "Source": "https://www.twz.com/air/air-forces-fightertown-alaska-plan-takes-shape",
+        "Title": "Air Force\u2019s Fightertown Alaska Plan Takes Shape",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/economy/2026/6/23/us-supreme-court-oks-exxonmobil-lawsuit-over-castro-era-property-seizure?traffic_source=rss",
-        "Title": "US Supreme Court OKs ExxonMobil lawsuit over Castro-era property seizure",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "twz.com",
         "threat_level": "WATCH"
     }
 ]
