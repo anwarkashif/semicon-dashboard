@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Strikes Knock Out Half of Crimea's Power",
+        "Title": "Ukrainian Drone Strikes Trigger Ammunition Blast in Kirovskoye, Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -18,6 +18,13 @@
         "Title": "China Launches Hypersonic Missiles in Gobi Desert",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/ckg0258vpvqo?at_medium=RSS&at_campaign=rss",
+        "Title": "E-commerce giant Alibaba sues US government over defence blacklist ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
         "threat_level": "HIGH"
     },
     {
@@ -28,11 +35,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/23/irans-president-arrives-in-pakistan-for-peace-talks?traffic_source=rss",
-        "Title": "Iran\u2019s president arrives in Pakistan for peace talks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -42,31 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "Source": "https://www.aljazeera.com/news/2026/6/23/protesters-sentenced-to-decades-in-us-prison-over-alleged-antifa-ties?traffic_source=rss",
+        "Title": "Protesters sentenced to decades in US prison over alleged antifa ties",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.sky.com/story/german-railway-network-comes-to-halt-due-to-problem-with-communication-system-13557238",
+        "Title": "Trains across Germany halted due to problem with communication system",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.sky.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cbsnews.com/news/drug-boat-strike-kills-2-leaves-6-survivors-eastern-pacific/",
         "Title": "U.S. strike on alleged drug boat kills 2, leaves 6 survivors, in the Caribbean",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cbsnews.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/france-record-heatwave-sees-hairdryer-effect-threaten-crops",
-        "Title": "France record heatwave sees 'hairdryer effect' threaten crops",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33890",
-        "Title": "Houthi Leader Comments On Conflict",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
