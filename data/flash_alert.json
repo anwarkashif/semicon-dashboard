@@ -1,7 +1,21 @@
 [
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Trump Warns Iran: 'Finish the Job' If Not Reasonable",
+        "Title": "Ukrainian Strikes Knock Out Half of Crimea's Power",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,59 +28,45 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33889",
-        "Title": "IAEA Considers Inspecting Iranian Nuclear Facilities",
+        "Source": "https://t.me/southfronteng/61489",
+        "Title": "Russia Upgrades T-90M Tank Electronic Warfare",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://news.sky.com/story/vladimir-putin-says-russia-ready-for-peace-talks-after-ukraine-refinery-strikes-13557152",
-        "Title": "Putin says Russia 'ready for peace talks' after Ukraine refinery strikes",
+        "Source": "https://www.aljazeera.com/news/2026/6/23/alibaba-sues-us-military-over-labelling-it-a-chinese-military?traffic_source=rss",
+        "Title": "Alibaba sues US military over labelling it a \u2018Chinese military company\u2019",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-02",
-        "Title": "Siemens SIPROTEC 5 Using DIGSI5 Protocol",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119287",
-        "Title": "Russian Occupier Shows Destroyed Equipment in Donbas",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/news/senate-house-pass-iran-war-powers-resolution-trump/",
-        "Title": "Senate adopts House-passed Iran resolution in symbolic rebuke of Trump",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "WATCH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.twz.com/air/air-forces-fightertown-alaska-plan-takes-shape",
         "Title": "Air Force\u2019s Fightertown Alaska Plan Takes Shape",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "twz.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/6/23/un-starts-evacuating-11000-stranded-sailors-from-strait-of-hormuz?traffic_source=rss",
+        "Title": "UN starts evacuating 11,000 stranded sailors from Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/23/trump-allies-reassure-israelis-amid-tensions-on-us-iran-deal?traffic_source=rss",
+        "Title": "Trump allies reassure Israelis amid tensions on US-Iran deal",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/c24yr796emzo?at_medium=RSS&at_campaign=rss",
+        "Title": "UN says it will evacuate sailors stranded in Strait of Hormuz, as Rubio warns against tolls",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
