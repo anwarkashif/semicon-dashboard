@@ -1037,49 +1037,68 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     # ==========================================
     flush_path = 'data/executive_home/flush_brief_24h.json'
     flush_data = {}
+    
     if os.path.exists(flush_path):
         try:
             with open(flush_path, 'r', encoding='utf-8') as f:
                 raw_content = f.read().strip()
                 
-            # Regex force extraction to bypass markdown formatting corruptions
             match = re.search(r'\{.*\}', raw_content, re.DOTALL)
             if match:
                 flush_data = json.loads(match.group(0))
             else:
                 flush_data = json.loads(raw_content)
                 
-            # If the LLM drifted and returned an array containing the dict
             if isinstance(flush_data, list) and len(flush_data) > 0:
                 flush_data = flush_data[0]
                 
         except Exception:
             flush_data = {}
 
-    # Fully robust dictionary extraction to handle nested LLM drifting (e.g. {"brief": {...}})
+    # HTML Sanitizer: Prevents rogue LLM formatting from crashing Streamlit <div> tags
+    def sanitize_html(text):
+        if text is None: return ""
+        return str(text).replace("<", "&lt;").replace(">", "&gt;")
+
+    # Fully robust dictionary extraction to handle nested LLM drifting
     def robust_get(data_dict, potential_keys, default):
         if not isinstance(data_dict, dict): return default
         
+        def extract_string(val):
+            if isinstance(val, dict):
+                for v in val.values():
+                    if isinstance(v, str): return v
+                return str(val)
+            return val
+
         # 1. Top-Level Hit
         for k in data_dict.keys():
-            if k.lower() in [pk.lower() for pk in potential_keys]:
-                return data_dict[k]
+            if str(k).lower() in [str(pk).lower() for pk in potential_keys]:
+                v = data_dict[k]
+                return extract_string(v) if potential_keys[0] != 'tactical_indicators' else v
                 
-        # 2. Nested Dict Search (Bypasses LLM Wrapper Keys)
+        # 2. Nested Dict Search
         for k, v in data_dict.items():
             if isinstance(v, dict):
                 for sub_k in v.keys():
-                    if sub_k.lower() in [pk.lower() for pk in potential_keys]:
-                        return v[sub_k]
+                    if str(sub_k).lower() in [str(pk).lower() for pk in potential_keys]:
+                        sub_v = v[sub_k]
+                        return extract_string(sub_v) if potential_keys[0] != 'tactical_indicators' else sub_v
                         
         return default
 
-    bluf_text = str(robust_get(flush_data, ['bluf', 'bottom_line_up_front'], "Scanning macro-strategic feeds. Awaiting telemetry generation cycle..."))
-    tactical_list = robust_get(flush_data, ['tactical_indicators', 'tacticalindicators', 'indicators'], ["System initiating...", "Monitoring baseline anomalies...", "Awaiting active extraction..."])
-    threat_text = str(robust_get(flush_data, ['threat_narrative', 'threatnarrative', 'narrative'], "Data currently rendering inside the strategic analysis layer..."))
-    risk_text = str(robust_get(flush_data, ['risk_assessment', 'riskassessment', 'risk'], "Data currently rendering inside the strategic analysis layer..."))
-    forecast_text = str(robust_get(flush_data, ['strategic_forecast', 'strategicforecast', 'forecast'], "Data currently rendering inside the strategic analysis layer..."))
+    bluf_raw = robust_get(flush_data, ['bluf', 'bottom_line_up_front'], "Scanning macro-strategic feeds. Awaiting telemetry generation cycle...")
+    threat_raw = robust_get(flush_data, ['threat_narrative', 'threatnarrative', 'narrative'], "Data currently rendering inside the strategic analysis layer...")
+    risk_raw = robust_get(flush_data, ['risk_assessment', 'riskassessment', 'risk'], "Data currently rendering inside the strategic analysis layer...")
+    forecast_raw = robust_get(flush_data, ['strategic_forecast', 'strategicforecast', 'forecast'], "Data currently rendering inside the strategic analysis layer...")
     
+    bluf_text = sanitize_html(bluf_raw)
+    threat_text = sanitize_html(threat_raw)
+    risk_text = sanitize_html(risk_raw)
+    forecast_text = sanitize_html(forecast_raw)
+
+    tactical_list = robust_get(flush_data, ['tactical_indicators', 'tacticalindicators', 'indicators'], ["System initiating...", "Monitoring baseline anomalies..."])
+
     import ast
     if isinstance(tactical_list, str):
         try:
@@ -1087,14 +1106,18 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
             if isinstance(parsed_list, list):
                 tactical_list = parsed_list
             else:
-                tactical_list = [tactical_list]
+                raise ValueError()
         except Exception:
-            tactical_list = [tactical_list]
-            
+            # Handle LLMs that return bulleted strings instead of arrays
+            if "\n" in tactical_list:
+                tactical_list = [item.strip() for item in tactical_list.split("\n") if item.strip()]
+            else:
+                tactical_list = [tactical_list]
+                
     if isinstance(tactical_list, list):
-        tactical_html = "<br>".join([f"<span style='color:#00bfff;'>•</span> {str(item).strip()}" for item in tactical_list])
+        tactical_html = "<br>".join([f"<span style='color:#00bfff;'>•</span> {sanitize_html(item).strip()}" for item in tactical_list])
     else:
-        tactical_html = str(tactical_list)
+        tactical_html = sanitize_html(tactical_list)
 
     # Title
     st.markdown("""
@@ -1278,7 +1301,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
         **Strategic Interpretation:** Semiconductor ecosystems are highly dependent on uninterrupted maritime
         and mineral logistics. Even small disruptions in one chokepoint can create
-        cascading second-order effects across fabrication, assembly, testing,
+        cascasding second-order effects across fabrication, assembly, testing,
         and downstream electronics manufacturing.
         """)
 

@@ -10,9 +10,20 @@ from urllib.parse import urlparse
 from datetime import datetime
 from google import genai
 from huggingface_hub import HfApi
-import re # 🛑 THE FIX: Guaranteeing JSON Extraction
+import re
+import logging
 
+# ==========================================
+# 0. INITIALIZATION & LOGGING
+# ==========================================
 os.makedirs('data/executive_home', exist_ok=True)
+
+# Set up logging so you can track API failures directly in your HuggingFace Space
+logging.basicConfig(
+    filename='data/pipeline_log.txt',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 RSS_FEEDS = [
     "https://www.ft.com/technology?format=rss", "https://www.atlanticcouncil.org/feed/", "https://foreignpolicy.com/feed/",
@@ -140,8 +151,23 @@ def extract_tactical_events(news_text):
     """
     for attempt in range(3):
         try: 
-            raw_txt = client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.strip()
-            # 🛑 THE FIX: STRICT REGEX ARRAY EXTRACTION
+            response = client.models.generate_content(
+                model='gemini-2.5-flash', 
+                contents=prompt,
+                config={
+                    "response_mime_type": "application/json",
+                    "temperature": 0.1,
+                    "safety_settings": [
+                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+                    ]
+                }
+            )
+            raw_txt = getattr(response, 'text', '').strip()
+            if not raw_txt: raise ValueError("Empty response blocked by unknown filter")
+            
             match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
             if match:
                 return json.loads(match.group(0))
@@ -150,28 +176,49 @@ def extract_tactical_events(news_text):
     raise Exception("Max retries reached.")
 
 def generate_flush_to_brief(accumulated_events):
-    prompt = f"You are an elite Geopolitics-OSINT analyst. Generate a FLASH TO BRIEF based on this data: {json.dumps(accumulated_events)}. Output ONLY a valid JSON object matching exactly: bluf, tactical_indicators, threat_narrative, risk_assessment, strategic_forecast."
+    # Trim prompt payload to avoid token limit issues
+    trimmed = accumulated_events[:10]
+    prompt = (
+        "You are an elite Geopolitics-OSINT analyst. "
+        f"Generate a FLASH TO BRIEF from this data: {json.dumps(trimmed)}. "
+        "Output ONLY a valid JSON object with these exact keys: "
+        "bluf, tactical_indicators, threat_narrative, risk_assessment, strategic_forecast. "
+        "tactical_indicators must be a JSON array of strings."
+    )
     
     for attempt in range(3):
         try: 
-            # 🛠️ FORCE GEMINI TO OUTPUT STRICT JSON
             response = client.models.generate_content(
                 model='gemini-2.5-flash', 
                 contents=prompt,
-                config={"response_mime_type": "application/json", "temperature": 0.2}
+                config={
+                    "response_mime_type": "application/json", 
+                    "temperature": 0.2,
+                    "safety_settings": [
+                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+                    ]
+                }
             )
             
-            raw_text = response.text.strip()
+            raw_text = getattr(response, 'text', '').strip()
+            if not raw_text: 
+                raise ValueError("Empty response — possible safety block or quota exhaustion")
             
-            # 🛑 THE FIX: STRICT REGEX OBJECT EXTRACTION
             match = re.search(r'\{.*\}', raw_text, re.DOTALL)
             if match:
                 return json.loads(match.group(0))
                 
             return json.loads(raw_text)
         except Exception as e: 
-            print(f"🚨 Executive API Attempt {attempt + 1} Failed: {e}")
-            time.sleep(10)
+            wait = 30 * (attempt + 1)  # 30s, 60s, 90s — exponential backoff
+            error_msg = f"FLASH TO BRIEF Attempt {attempt + 1} failed: {type(e).__name__}: {e}"
+            print(f"🚨 {error_msg}")
+            logging.error(error_msg)
+            print(f"⏳ Waiting {wait}s before retry {attempt + 2}...")
+            time.sleep(wait)
         
     # 🛡️ DETERMINISTIC FALLBACK
     return {
@@ -239,7 +286,14 @@ if __name__ == "__main__":
                 
         unique_master = unique_master[:25]
         json.dump(unique_master, open(output_file_tactical, 'w'), indent=4)
-        json.dump(generate_flush_to_brief(unique_master), open('data/executive_home/flush_brief_24h.json', 'w'), indent=4)
+        
+        # 🛑 ADD THIS: Let the rate-limit window reset before the second Gemini call
+        print("⏳ Cooling down 60s before FLASH TO BRIEF generation to allow API rate limits to reset...")
+        time.sleep(60)
+
+        # Trim payload — 25 events is too large; top 10 is enough for a brief
+        brief_input = unique_master[:10]
+        json.dump(generate_flush_to_brief(brief_input), open('data/executive_home/flush_brief_24h.json', 'w'), indent=4)
         
         HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
         if HF_TOKEN and REPO_ID:
@@ -247,4 +301,6 @@ if __name__ == "__main__":
             api.upload_file(path_or_fileobj=output_file_tactical, path_in_repo=output_file_tactical, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Executive Home Tactical (100% Provenance)")
             api.upload_file(path_or_fileobj='data/executive_home/flush_brief_24h.json', path_in_repo='data/executive_home/flush_brief_24h.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
             
-    except Exception as e: print(f"❌ Pipeline Failed: {e}")
+    except Exception as e: 
+        print(f"❌ Pipeline Failed: {e}")
+        logging.error(f"Pipeline Failed: {e}")
