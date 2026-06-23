@@ -7,36 +7,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89315",
-        "Title": "Russia Advances in Konstantinovka and Krasny Liman",
+        "Source": "https://www.cnbc.com/2026/06/23/indias-tata-electronics-hit-by-cyber-breach-claiming-to-expose-apple-tesla-trade-secrets.html",
+        "Title": "India's Tata Electronics hit by cyber breach claiming to expose Apple, Tesla trade secrets",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61472",
+        "Title": "Ukraine Threatens Children Camps In Crimea",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/23/indias-tata-electronics-hit-by-cyber-breach-claiming-to-expose-apple-tesla-trade-secrets.html",
-        "Title": "India's Tata Electronics hit by cyber breach claiming to expose Apple, Tesla trade secrets",
+        "Source": "https://www.twz.com/sea/where-are-the-aircraft-carriers-june-22-2026",
+        "Title": "Where Are The Aircraft Carriers: June 22, 2026",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds?traffic_source=rss",
-        "Title": "Iran war live: Tehran to access billions in frozen funds",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "twz.com",
         "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,22 +42,29 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/22/stock-market-today-live-updates.html",
-        "Title": "S&P 500 futures decline after tech sell-off drags down broad market index; South Korea's Kospi falls over 6%: Live updates",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/23/colombias-leftist-presidential-candidate-vows-to-challenge-election-result?traffic_source=rss",
+        "Title": "Colombia\u2019s leftist presidential candidate vows to challenge election result",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/23/4-billion-startup-cred-meta-whatsapp.html",
-        "Title": "How a $4 billion Indian startup won Meta's backing but lost its founder to WhatsApp",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/australia-news/live/2026/jun/23/australia-politics-live-nsw-queensland-budget-capital-gains-tax-negative-gearing-ndis-senate-question-time-labor-coalition-anthony-albanese-angus-taylor-ntwnfb",
-        "Title": "Australia politics live: Labor reaches deal with Greens to pass tax reforms through Senate; Hanson explains stance on paid parental leave",
+        "Source": "https://www.theguardian.com/world/live/2026/jun/23/europe-heatwave-live-news-updates-uk-red-temperature-warnings-40-degrees-france-heat-deaths-crisis-meeting",
+        "Title": "Europe heatwave live: UK issues rare red temperature warnings; French PM to hold crisis meeting after heat deaths",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
         "threat_level": "WATCH"
