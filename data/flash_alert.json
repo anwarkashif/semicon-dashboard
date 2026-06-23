@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israel Strikes Hezbollah Cell in Southern Lebanon, Hezbollah Claims Civilian Casualties",
+        "Title": "Hamas Urges Palestinians to Confront Settlement Projects in West Bank",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61474",
+        "Title": "Egypt Cracks Down On Illegal Gold Mining Near Sudan Border",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/nexta_live/119262",
@@ -14,8 +21,22 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.dw.com/en/turkey-arrests-more-than-200-in-crackdown-before-nato-summit/a-77669771?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Turkey arrests more than 200 in crackdown before NATO summit",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -28,45 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/turkey-arrests-more-than-200-in-crackdown-before-nato-summit/a-77669771?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Turkey arrests more than 200 in crackdown before NATO summit",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32182",
-        "Title": "US Intelligence Director Requests List for Dismissals",
+        "Source": "https://t.me/nexta_live/119266",
+        "Title": "Russia Destroys Railway Bridge Across North Crimean Canal",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Lebanon Experiences Heavy Rain",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.france24.com/en/europe/20260623-france-issues-red-alert-as-heatwave-breaks-records-and-death-toll-mounts",
         "Title": "France issues red alert as heatwave breaks records and death toll mounts",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61474",
-        "Title": "Egypt Cracks Down On Illegal Gold Mining Near Sudan Border",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/23/world/europe/heat-wave-france-drowning-deaths.html",
-        "Title": "Forty People Drown in France as Heat Wave Persists",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/22/tesla-nhtsa-model-3-crash-autopilot-katy-texas.html",
-        "Title": "Tesla faces federal probe after Model 3 slams into Texas home, killing 76-year-old",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
