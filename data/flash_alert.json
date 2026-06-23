@@ -1,5 +1,33 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "IMO Plans Evacuation of 11,000 Seafarers from Strait of Hormuz Ships",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/23/world/africa/sudan-war-rsf-atrocities.html",
+        "Title": "U.S. Warns of \u2018Imminent\u2019 Atrocities in El Obeid, Sudan",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/23/world/middleeast/diverging-accounts-iran-nuclear-inspections.html",
+        "Title": "Clashing U.S. and Iranian Claims on Nuclear Inspection Show Challenge Ahead",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcUVJWGNQNDBvMWJCdDFYODRDX2VkRnJKNTNPazAzdzZwVkxtTUR2THpXTktPSTdXb0hDVVlpWEFDWVBpYnoySFdVTVRxSzhDYTlRb3J5d1RWX2RCdlVTSkdEalNza0ZrRHB4eExsWTlKLTZnRmNGVlk3TGRLcUpSQXZuVWxxWUdGUWhEUmh5SjBFQkxad0tnUw?oc=5",
+        "Title": "Lebanon: Conflict Intensity Snapshot (2 March - 22 June 2026) - ReliefWeb",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -14,31 +42,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/23/world/middleeast/diverging-accounts-iran-nuclear-inspections.html",
-        "Title": "Clashing U.S. and Iranian Claims on Nuclear Inspection Show Challenge Ahead",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "IMO Plans Evacuation of 11,000 Seafarers from Strait of Hormuz Ships",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/23/oil-prices-rise-as-investors-mull-middle-east-developments-.html",
-        "Title": "Oil prices are lower as market monitors tanker traffic through Strait of Hormuz",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcUVJWGNQNDBvMWJCdDFYODRDX2VkRnJKNTNPazAzdzZwVkxtTUR2THpXTktPSTdXb0hDVVlpWEFDWVBpYnoySFdVTVRxSzhDYTlRb3J5d1RWX2RCdlVTSkdEalNza0ZrRHB4eExsWTlKLTZnRmNGVlk3TGRLcUpSQXZuVWxxWUdGUWhEUmh5SjBFQkxad0tnUw?oc=5",
-        "Title": "Lebanon: Conflict Intensity Snapshot (2 March - 22 June 2026) - ReliefWeb",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
@@ -58,13 +65,6 @@
     {
         "Source": "https://www.france24.com/en/france-s-elderlies-particularly-at-risk-as-heatwave-suffocates-country",
         "Title": "France's elderlies particularly at risk as heatwave suffocates country",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/video/20260623-sky-glows-red-as-storms-sweep-russia",
-        "Title": "Sky glows red as storms sweep Russia",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
         "threat_level": "WATCH"
