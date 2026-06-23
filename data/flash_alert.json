@@ -1,16 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Drone Strikes Electrical Substation in Stary Saltiv, Ukraine",
+        "Title": "Russia Strikes Kharkiv Oblast With Iskander-M Missile",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/lebanon-damage-estimated-at-1-3-billion-but-who-will-foot-the-bill",
-        "Title": "Lebanon war damage estimated at $1.3 billion, but who will foot the bill?",
+        "Source": "https://www.france24.com/en/europe/20260623-afghan-taliban-set-for-eu-migration-talks-slammed-by-rights-groups",
+        "Title": "Afghan Taliban set for EU migration talks slammed by rights groups",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119247",
+        "Title": "Russia Strikes Grain Factory in Alexeyevka",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -18,14 +25,7 @@
         "Title": "Palestine weekly wrap: Israel\u2019s \u2018quiet annexation\u2019 grows louder",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/23/indias-tata-electronics-hit-by-cyber-breach-claiming-to-expose-apple-tesla-trade-secrets.html",
-        "Title": "India's Tata Electronics hit by cyber breach claiming to expose Apple, Tesla trade secrets",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -46,25 +46,25 @@
         "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "China's import of custard apples is sparking fears in Taiwan",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.com/news/articles/cwyde73w680o?at_medium=RSS&at_campaign=rss",
+        "Title": "Inquiry ordered after building fire kills 15 in north India city",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/nexta_live/119244",
         "Title": "Ukraine Drone Unit Works Effectively in Kerch",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/23/daily-open-tech-rout-mag7-brexit-anniversary.html",
-        "Title": "CNBC Daily Open: Tech-tonic shift or buying opportunity?",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119242",
-        "Title": "Russia Hit by Tornado in Sverdlovsk Region",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
