@@ -1,18 +1,11 @@
 {
-    "bluf": "The Middle East is experiencing severe escalation, marked by humanitarian crises, advanced military technology proliferation, and covert operations, while global powers navigate economic and space-based geopolitical competition.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "UN warns Palestinian children 'defenceless' amid Israeli crackdown on NGOs.",
-        "Israeli forces set olive trees on fire in occupied West Bank.",
-        "Lebanon-Syria passenger ferry service resumes after years of disruption.",
-        "Israel allegedly smuggled Starlink devices into Iran to aid protesters.",
-        "Fiber-optic killer drone technology arrived in southern Lebanon, frustrating Israel.",
-        "IMO launches mass evacuation of 11,000 seafarers trapped in Persian Gulf.",
-        "Houthi escalation calculus following cautious entry into the Iran War.",
-        "Trump states Iran is wrong about no plans for IAEA to inspect nuclear sites.",
-        "Alibaba sues Pentagon over inclusion on Chinese military blacklist.",
-        "China's space plane appears to have released a mystery object in orbit."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The Middle East is a flashpoint with escalating humanitarian crises (Palestinian children, trapped seafarers) and direct military confrontations (West Bank actions, advanced drone tech in Lebanon). Covert operations (Starlink in Iran) and nuclear proliferation concerns (Iran/IAEA) further destabilize the region. Maritime security is severely compromised, impacting global trade. Concurrently, US-China geopolitical tensions manifest in economic sanctions (Alibaba) and a burgeoning space race, indicating a broader, multi-domain competition.",
-    "risk_assessment": "HIGH. The confluence of direct military actions, humanitarian emergencies, advanced weapon proliferation, and covert operations in the Middle East presents an immediate and severe risk of regional conflict expansion, potentially drawing in external actors. Maritime security is critically compromised. US-China relations are strained by economic and technological competition, with implications for global stability and space security.",
-    "strategic_forecast": "Continued regional instability in the Middle East is highly probable, with increased humanitarian suffering and a heightened risk of direct military confrontation involving state and non-state actors. The proliferation of advanced military technology will complicate conflict resolution. US-China competition will intensify across economic, technological, and space domains, leading to further decoupling efforts and potential for miscalculation. Global maritime trade routes, particularly in the Persian Gulf and Red Sea, will remain high-risk zones."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
