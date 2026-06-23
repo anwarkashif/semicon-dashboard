@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Netherlands Joins US-Led Pax Silica Alliance for AI and Semiconductor Supply Chains",
+        "Title": "Ukraine Drones Strike Russian Convoy on Pontoon Bridge Near Chonhar",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/cz750q5e3w3o?at_medium=RSS&at_campaign=rss",
-        "Title": "Ethiopia PM's party wins landslide as fears grow of new conflict",
+        "Source": "https://t.me/rybar_in_english/32181",
+        "Title": "Ukraine Doubles Military Budget",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -18,13 +18,6 @@
         "Title": "Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/23/world/middleeast/iran-control-strait-of-hormuz.html",
-        "Title": "Iran Makes Moves to Assert Control Over the Strait of Hormuz",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -39,7 +32,7 @@
         "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
@@ -49,22 +42,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/videos/c802denngxeo?at_medium=RSS&at_campaign=rss",
-        "Title": "Parisians cool off in canal amid 'red alert' heatwave",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32181",
-        "Title": "Ukraine Doubles Military Budget",
+        "Source": "https://t.me/rybar_in_english/32182",
+        "Title": "US Intelligence Director Requests List for Dismissals",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119257",
-        "Title": "Ukraine Drone Debris Hits Woman on Beach in Odessa",
+        "Source": "https://www.bbc.co.uk/news/articles/c07yp02mxyjo?at_medium=RSS&at_campaign=rss",
+        "Title": "Tesla crash that killed a woman under US federal investigation",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119259",
+        "Title": "Russian Woman Demands Putin Resign",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119258",
+        "Title": "Passenger Cruise Hits Severe Storm",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
