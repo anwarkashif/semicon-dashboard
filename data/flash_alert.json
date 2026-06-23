@@ -1,24 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Drones Strike Russian Convoy on Pontoon Bridge Near Chonhar",
+        "Title": "Hamas Urges Palestinians to Confront Settlement Projects in West Bank",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32181",
-        "Title": "Ukraine Doubles Military Budget",
+        "Source": "https://t.me/southfronteng/61474",
+        "Title": "Egypt Cracks Down On Illegal Gold Mining Near Sudan Border",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c3vy3nr63gxo?at_medium=RSS&at_campaign=rss",
-        "Title": "Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back",
+        "Source": "https://t.me/nexta_live/119262",
+        "Title": "Russia Prepares Biological Disaster in Occupied Kherson",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.dw.com/en/turkey-arrests-more-than-200-in-crackdown-before-nato-summit/a-77669771?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Turkey arrests more than 200 in crackdown before NATO summit",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -28,11 +35,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
-        "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
@@ -42,31 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32182",
-        "Title": "US Intelligence Director Requests List for Dismissals",
+        "Source": "https://t.me/nexta_live/119266",
+        "Title": "Russia Destroys Railway Bridge Across North Crimean Canal",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c07yp02mxyjo?at_medium=RSS&at_campaign=rss",
-        "Title": "Tesla crash that killed a woman under US federal investigation",
+        "Source": "https://warmonitor.com/",
+        "Title": "Lebanon Experiences Heavy Rain",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119259",
-        "Title": "Russian Woman Demands Putin Resign",
+        "Source": "https://www.france24.com/en/europe/20260623-france-issues-red-alert-as-heatwave-breaks-records-and-death-toll-mounts",
+        "Title": "France issues red alert as heatwave breaks records and death toll mounts",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119258",
-        "Title": "Passenger Cruise Hits Severe Storm",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]

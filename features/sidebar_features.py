@@ -117,12 +117,10 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         if st.sidebar.button("Logout"):
             st.session_state['role'] = None
             st.rerun()
-        # Admin gets the base options PLUS backend features
         view_options = base_options + ["Trend Timelines", "Archives", "Global Threat Intercept (ShadowBroker)", "Clean Archives", "Trash"]
     else:
         st.sidebar.info("Access Level: **Guest Viewer**")
         st.sidebar.caption("*(System Access Restricted)*")
-        # Guests get the base options PLUS Archives
         view_options = base_options + ["Archives"]
 
     st.sidebar.markdown("---")
@@ -130,7 +128,7 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
     st.sidebar.markdown("---")
 
     # ==========================================
-    # 🔍 STEP 2: ISOLATED & DIVERSE GLOBAL FILTER LOGIC
+    # 🔍 STEP 2: ISOLATED THEMATIC GLOBAL FILTER LOGIC
     # ==========================================
     selected_actor = "All" 
     
@@ -139,61 +137,59 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         
         actor_set = set()
         
-        # Highly targeted geopolitical and technological dictionary
-        strategic_keywords = [
-            "Semiconductor", "Supply Chain", "Rare Earth", "Chokepoint", 
-            "Indo-Pacific", "West Asia", "MENA", "EUV Lithography", "Tape-out", 
-            "Foundry", "Fabless", "Export Controls", "Maritime Security", 
-            "AI Chip", "Order of Battle", "Geopolitics", "TSMC", "ASML", 
-            "Nvidia", "SMIC", "Intel", "Sanctions", "Blockade"
+        # 📊 THE 15-FACTOR VITAL ASPECT SYSTEM DICTIONARY
+        strategic_taxonomy = [
+            # 1 & 2. Countries and Regions
+            "United States", "US", "China", "Taiwan", "India", "Iran", "Russia", "Ukraine", "Israel", "Lebanon", "Germany", "Djibouti", "Thailand", "Eritrea", "Ethiopia",
+            "Indo-Pacific", "West Asia", "Middle East", "MENA", "Africa", "Europe", "Americas", "Gaza", "Horn of Africa",
+            # 3. Government Departments & Agencies
+            "CISA", "DoD", "MoD", "State Department", "Ministry", "Government",
+            # 4 & 5 & 11. Vital Events, Geo-Economics, Agreements, MoUs & Summits
+            "Trade deal", "Tariff", "Export controls", "Agreement", "Embargo", "Sanctions", "Summit", "Bilateral", "Multilateral", "Visit",
+            # 6 & 7. Semiconductor, Rare Earth and Supply Chain News
+            "Semiconductor", "Rare Earth", "Lithography", "Tape-out", "Foundry", "Fabless", "TSMC", "ASML", "Nvidia", "SMIC", "Intel", "Samsung", "Lithium", "Indium", "Cobalt", "Aluminium", "Supply Chain", "Vulnerabilities", "Disruption", "Shortage",
+            # 8. AI News and Developments
+            "AI", "Artificial Intelligence", "Anthropic", "OpenAI", "AI Chip",
+            # 9. Loan, Subsidy, Financials, MoU, MoC
+            "Loan", "Subsidy", "Financial Assistance", "MoU", "MoC", "Funding", "Investment",
+            # 10. Global Institutions, Blocks & Missions
+            "NATO", "UN", "BRICS", "SCO", "ASEAN", "BRI", "Hormuz mission",
+            # 12 & 13 & 14. Humanitarian, War, Conflict, Tensions & Flashpoints
+            "Humanitarian", "Rights groups", "Peace deal", "War", "Conflict", "Incursion", "Attack", "Drone strike", "Confrontation", "Kinetic action", "Troop movements", "Clashes", "Tensions", "Flashpoints", "Brink-of-war", "Standoff", "Threat", "Volatility",
+            # 15. Shipping Straits & Maritime News
+            "Shipping strait", "Maritime", "Port", "Naval", "Strait of Hormuz", "Malacca Strait", "Suez Canal", "Chokepoint"
         ]
         
-        # --- LIST 1: Weekly Intelligence Brief ---
-        if view_selection == "Weekly Intelligence Brief":
-            # 1. Scrape specific Entities/Locations
-            if dashboard_data and 'recent_actions' in dashboard_data:
-                for row in dashboard_data['recent_actions']:
-                    for key in ['Actor', 'actor', 'Location', 'location']:
-                        val = str(row.get(key, '')).strip()
-                        if val and val.lower() not in ['unknown', 'none', 'system', 'global']:
-                            # Split entities if they are comma-separated (e.g. "China, Taiwan")
-                            for item in val.split(','):
-                                clean_item = item.strip()
-                                if len(clean_item) > 2: actor_set.add(clean_item)
-            
-            # 2. Scrape Strategic Keywords if they appear in the Brief
-            full_text = str(raw_text).lower()
-            for kw in strategic_keywords:
-                if kw.lower() in full_text:
-                    actor_set.add(kw)
-                        
-        # --- LIST 2: Weekly Tactical Brief ---
-        elif view_selection == "Weekly Tactical Brief":
-            tac_path = 'data/weekly_tactical/tactical_events_24h.json'
-            tac_text_pool = ""
-            
-            if os.path.exists(tac_path):
-                try:
-                    with open(tac_path, 'r', encoding='utf-8') as f:
-                        tac_data = json.load(f)
-                        tac_text_pool += json.dumps(tac_data).lower()
-                        if isinstance(tac_data, list):
-                            for row in tac_data:
-                                for key in ['Actor', 'actor', 'Location', 'location']:
-                                    val = str(row.get(key, '')).strip()
-                                    if val and val.lower() not in ['unknown', 'none', 'system', 'global']:
-                                        for item in val.split(','):
-                                            clean_item = item.strip()
-                                            if len(clean_item) > 2: actor_set.add(clean_item)
-                except Exception:
-                    pass
-            
-            # 2. Scrape Strategic Keywords if they appear in the Tactical Brief
-            for kw in strategic_keywords:
-                if kw.lower() in tac_text_pool:
-                    actor_set.add(kw)
+        text_to_scan = ""
         
-        # Sort alphabetically to keep the dropdown clean
+        # --- COLLECT RAW TEXT BASED ON SELECTION ---
+        if view_selection == "Weekly Intelligence Brief":
+            text_to_scan = str(raw_text)
+            
+        elif view_selection == "Weekly Tactical Brief":
+            from utils.snippet_templates import get_weekly_tactical_template
+            tac_brief = get_weekly_tactical_template()
+            # Combine all core generated strategic fields into one text block to parse
+            text_to_scan = " ".join([str(tac_brief.get(k, '')) for k in ['bluf', 'executive_summary', 'risk_assessment', 'threat_narrative', 'predictive_analysis', 'recommendations', 'tactical_indicators']])
+
+        # --- EXECUTE THEMATIC KEYWORD SEARCH SCANNERS ---
+        lower_scan_pool = text_to_scan.lower()
+        for keyword in strategic_taxonomy:
+            if keyword.lower() in lower_scan_pool:
+                actor_set.add(keyword)
+        
+        # Clean up components from data frames if any are missing
+        if view_selection == "Weekly Intelligence Brief" and dashboard_data and 'recent_actions' in dashboard_data:
+            for row in dashboard_data['recent_actions']:
+                for key in ['Actor', 'actor', 'Location', 'location']:
+                    val = str(row.get(key, '')).strip()
+                    if val and val.lower() not in ['unknown', 'none', 'system', 'global']:
+                        for item in val.split(','):
+                            clean_item = item.strip()
+                            if len(clean_item) > 2 and clean_item.lower() in lower_scan_pool:
+                                actor_set.add(clean_item)
+                                
+        # Sort values alphabetically
         actor_list = sorted(list(actor_set))
         
         selected_actor = st.sidebar.selectbox("🔍 Highlight & Filter by Keyword:", ["All"] + actor_list)

@@ -55,18 +55,36 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
     """, unsafe_allow_html=True)
     
     # ==========================================
-    # 🎯 THE FIX: DYNAMIC KEYWORD HIGHLIGHTER
+    # 🎯 THE FIX: INTELLIGENT COMPONENT HIGHLIGHTER
     # ==========================================
     def format_html_text(text):
         text = str(text)
         text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text) # Markdown bold to HTML bold
         
-        # If a specific keyword is selected in the Global Filter, wrap it in a glowing neon span
         if selected_actor and selected_actor != "All":
-            escaped_term = re.escape(selected_actor)
-            # (?i) makes it case-insensitive, so selecting "China" also highlights "china" or "CHINA"
-            pattern = re.compile(rf'(?i)({escaped_term})')
-            text = pattern.sub(r"<span style='background-color: #ff007f; color: #ffffff; padding: 1px 4px; border-radius: 4px; font-weight: bold; box-shadow: 0 0 8px rgba(255, 0, 127, 0.8);'>\1</span>", text)
+            terms_to_match = []
+            
+            # If compound string with commas exists, break it down to component parts
+            raw_parts = [p.strip() for p in selected_actor.split(',') if p.strip()]
+            
+            for part in raw_parts:
+                terms_to_match.append(part)
+                # Map strategic abbreviation aliases so "United States" catches "US" and "U.S."
+                if part.lower() in ["united states", "us", "usa"]:
+                    terms_to_match.extend(["United States", "USA", "US", "U\.S\."])
+                elif part.lower() in ["united kingdom", "uk"]:
+                    terms_to_match.extend(["United Kingdom", "UK", "U\.K\."])
+                elif part.lower() in ["middle east", "west asia"]:
+                    terms_to_match.extend(["Middle East", "West Asia"])
+            
+            # Deduplicate items while keeping string length descending order (prevents regex collision)
+            terms_to_match = sorted(list(set(terms_to_match)), key=len, reverse=True)
+            
+            # Compile robust matching pattern
+            pattern_str = "|".join([rf"\b{re.escape(t)}\b" if not t.startswith("U\\.") else re.escape(t) for t in terms_to_match])
+            if pattern_str:
+                pattern = re.compile(rf'(?i)({pattern_str})')
+                text = pattern.sub(r"<span style='background-color: #ff007f; color: #ffffff; padding: 2px 4px; border-radius: 4px; font-weight: bold; box-shadow: 0 0 8px rgba(255, 0, 127, 0.8);'>\1</span>", text)
             
         return text.replace('\n', '<br>')
 
