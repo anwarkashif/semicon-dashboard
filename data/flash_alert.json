@@ -1,16 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Zelensky Prioritizes Air Defense Deliveries and Long-Range Strikes",
+        "Title": "Iran Releases Footage of Secret Sea-Based Ballistic Missile Project",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.sky.com/story/vladimir-putin-says-russia-ready-for-peace-talks-after-ukraine-refinery-strikes-13557152",
-        "Title": "Putin says Russia 'ready for peace talks' after Ukraine refinery strikes",
+        "Source": "https://t.me/Middle_East_Spectator/33889",
+        "Title": "IAEA Considers Inspecting Iranian Nuclear Facilities",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119283",
+        "Title": "Russia Faces Gasoline Shortages",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -21,29 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/23/world/africa/sudan-war-rsf-atrocities.html",
-        "Title": "U.S. Warns of \u2018Imminent\u2019 Atrocities in El Obeid, Sudan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03",
-        "Title": "Siemens Products using OpenSSL",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
-        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
@@ -56,17 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/environment/2026/jun/23/searing-uk-heat-leaves-schools-hospitals-and-transport-networks-struggling-to-cope",
-        "Title": "Searing UK heat leaves schools, hospitals and transport networks struggling to cope",
+        "Source": "https://www.france24.com/en/tv-shows/the-debate/20260623-air-conditioning-for-all-france-divided-over-response-to-record-breaking-heatwave",
+        "Title": "Air conditioning for all? France divided over response to record-breaking heatwave",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOTFXcmRzVmtEY3NiX2hNUkhfRXdOTDJta1ViejBLd3VDajlPWVktS0gyeFdRT2M1bTctTG1Bb28xcnhqTE1WT3hTd3dhNTRINDdlSi0wMzRXcjNVZ1h2d09hb2pYYm9FN2tCbjQyMlJqcUZKUVFZaldmbU1GWDI0NkZTdF93N2JRQll4VXJReGROUUIycXlTUXFOYTdZMDF2MnVYZWdTdw?oc=5",
+        "Title": "Sudan crisis: How families are restoring water and healthcare in Khartoum - ReliefWeb",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     },
     {
         "Source": "https://warmonitor.com/",
-        "Title": "US Eases Travel Restrictions on Iran World Cup Team",
+        "Title": "US Supreme Court backs Trump policy on green card holder rights",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/economy/2026/6/23/us-supreme-court-oks-exxonmobil-lawsuit-over-castro-era-property-seizure?traffic_source=rss",
+        "Title": "US Supreme Court OKs ExxonMobil lawsuit over Castro-era property seizure",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
