@@ -1,30 +1,30 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Pentagon Seeks $80 Billion Supplemental for Iran War",
+        "Title": "Russian Drone Strikes Electrical Substation in Stary Saltiv, Ukraine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/lebanon-damage-estimated-at-1-3-billion-but-who-will-foot-the-bill",
+        "Title": "Lebanon war damage estimated at $1.3 billion, but who will foot the bill?",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/6/23/palestine-weekly-wrap-israels-quiet-annexation-grows-louder?traffic_source=rss",
+        "Title": "Palestine weekly wrap: Israel\u2019s \u2018quiet annexation\u2019 grows louder",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cnbc.com/2026/06/23/indias-tata-electronics-hit-by-cyber-breach-claiming-to-expose-apple-tesla-trade-secrets.html",
         "Title": "India's Tata Electronics hit by cyber breach claiming to expose Apple, Tesla trade secrets",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61472",
-        "Title": "Ukraine Threatens Children Camps In Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.twz.com/sea/where-are-the-aircraft-carriers-june-22-2026",
-        "Title": "Where Are The Aircraft Carriers: June 22, 2026",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
         "threat_level": "HIGH"
     },
     {
@@ -35,18 +35,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-06",
-        "Title": "Mitsubishi Electric Co.'s MELSEC iQ-F Series FX5-ENET/IP Ethernet Module",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
@@ -56,17 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/23/colombias-leftist-presidential-candidate-vows-to-challenge-election-result?traffic_source=rss",
-        "Title": "Colombia\u2019s leftist presidential candidate vows to challenge election result",
+        "Source": "https://t.me/nexta_live/119244",
+        "Title": "Ukraine Drone Unit Works Effectively in Kerch",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/world/live/2026/jun/23/europe-heatwave-live-news-updates-uk-red-temperature-warnings-40-degrees-france-heat-deaths-crisis-meeting",
-        "Title": "Europe heatwave live: UK issues rare red temperature warnings; French PM to hold crisis meeting after heat deaths",
+        "Source": "https://www.cnbc.com/2026/06/23/daily-open-tech-rout-mag7-brexit-anniversary.html",
+        "Title": "CNBC Daily Open: Tech-tonic shift or buying opportunity?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119242",
+        "Title": "Russia Hit by Tornado in Sverdlovsk Region",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
