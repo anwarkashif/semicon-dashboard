@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Netanyahu Says Israel Must Reduce Reliance on US Arms Support",
+        "Title": "Trump Privately Urges Zelensky to Act More Boldly Against Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "HIGH"
@@ -46,27 +46,27 @@
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://warmonitor.com/",
+        "Title": "Treasury yields fall despite rate hike concerns hitting tech stocks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/c3vy3nr63gxo?at_medium=RSS&at_campaign=rss",
+        "Title": "Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.nytimes.com/2026/06/23/world/europe/mark-rutte-nato-trump.html",
         "Title": "How Mark Rutte of NATO Manages an Unpredictable Trump",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/23/tech-stocks-sell-off-mag7-samsung-sk-hynix.html",
-        "Title": "Tech rout intensifies as selloff grips global stocks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
