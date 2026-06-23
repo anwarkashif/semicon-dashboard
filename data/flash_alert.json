@@ -14,59 +14,59 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
-        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-06",
-        "Title": "Mitsubishi Electric Co.'s MELSEC iQ-F Series FX5-ENET/IP Ethernet Module",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32188",
-        "Title": "Intelligence Agencies Warn of AI-Driven Cyber Threats",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/live/2026/06/23/world/iran-us-trump-lebanon",
-        "Title": "Mideast Live Updates: U.S. and Iran Offer Conflicting Accounts of Nuclear Discussions",
+        "Source": "https://www.nytimes.com/2026/06/23/world/middleeast/diverging-accounts-iran-nuclear-inspections.html",
+        "Title": "Clashing U.S. and Iranian Claims on Nuclear Inspection Show Challenge Ahead",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/video/how-israeli-strikes-on-lebanon-could-impact-us-iran-talks/",
-        "Title": "How Israeli strikes on Lebanon could impact U.S.-Iran talks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Strategic Railway Bridge Near Rozdolne, Crimea",
+        "Title": "IMO Plans Evacuation of 11,000 Seafarers from Strait of Hormuz Ships",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/23/oil-prices-rise-as-investors-mull-middle-east-developments-.html",
+        "Title": "Oil prices are lower as market monitors tanker traffic through Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWnN3T3ZZN0NCbWxuQjE1dHo0cEFHNUkwUHRnTXNPYzg4YnBDaGxwcjU1Szl3QzYzdzdLTHRxR01wX2JfaEw3UDg5TGpQaTBFczQwQWJmV2F1QVY1eUJFM3JVVzZST3U3RGlzYmh5cDNZdW9HR29LVXlEZll0TlB0R2FYZ1YxT1pUV2U1b1VLcWY4c0hFZWhZVWpFc3VtbUk?oc=5",
-        "Title": "German state election draws Bauhaus into AfD culture war - Reuters",
+        "Source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcUVJWGNQNDBvMWJCdDFYODRDX2VkRnJKNTNPazAzdzZwVkxtTUR2THpXTktPSTdXb0hDVVlpWEFDWVBpYnoySFdVTVRxSzhDYTlRb3J5d1RWX2RCdlVTSkdEalNza0ZrRHB4eExsWTlKLTZnRmNGVlk3TGRLcUpSQXZuVWxxWUdGUWhEUmh5SjBFQkxad0tnUw?oc=5",
+        "Title": "Lebanon: Conflict Intensity Snapshot (2 March - 22 June 2026) - ReliefWeb",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Merz backs plans to raise Germany\u2019s retirement age in pension reforms",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32189",
-        "Title": "Tucker Carlson Leaves Republican Party",
+        "Source": "https://www.politico.eu/podcast/playbook-paris-podcast/canicule-la-france-inadaptee/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Canicule : la France inadapt\u00e9e",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "politico.eu",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/france-s-elderlies-particularly-at-risk-as-heatwave-suffocates-country",
+        "Title": "France's elderlies particularly at risk as heatwave suffocates country",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/video/20260623-sky-glows-red-as-storms-sweep-russia",
+        "Title": "Sky glows red as storms sweep Russia",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
