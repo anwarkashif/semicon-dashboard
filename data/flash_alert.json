@@ -4,7 +4,7 @@
         "Title": "Ukrainian Drones Strike Electrical Substation in Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cnbc.com/2026/06/23/indias-tata-electronics-hit-by-cyber-breach-claiming-to-expose-apple-tesla-trade-secrets.html",
@@ -49,10 +49,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03",
+        "Title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/australia-news/live/2026/jun/23/australia-politics-live-nsw-queensland-budget-capital-gains-tax-negative-gearing-ndis-senate-question-time-labor-coalition-anthony-albanese-angus-taylor-ntwnfb",
         "Title": "Australia politics live: Labor reaches deal with Greens to pass tax reforms through Senate; Hanson explains stance on paid parental leave",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
@@ -60,13 +67,6 @@
         "Title": "6/21: Face The Nation",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cbsnews.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/23/china-tech-crackdown-antitrust-tripcom-meituan-food-delivery-anti-involution-deflation-.html",
-        "Title": "Beijing is summoning executives again, but here's why that's causing less worry than in 2021",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
