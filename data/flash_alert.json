@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Detains Suspect in Russian-Backed Assassination Plot",
+        "Title": "Zelensky Prioritizes Air Defense Deliveries and Long-Range Strikes",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.sky.com/story/vladimir-putin-says-russia-ready-for-peace-talks-after-ukraine-refinery-strikes-13557152",
+        "Title": "Putin says Russia 'ready for peace talks' after Ukraine refinery strikes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.sky.com",
         "threat_level": "HIGH"
     },
     {
@@ -21,17 +28,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcUVJWGNQNDBvMWJCdDFYODRDX2VkRnJKNTNPazAzdzZwVkxtTUR2THpXTktPSTdXb0hDVVlpWEFDWVBpYnoySFdVTVRxSzhDYTlRb3J5d1RWX2RCdlVTSkdEalNza0ZrRHB4eExsWTlKLTZnRmNGVlk3TGRLcUpSQXZuVWxxWUdGUWhEUmh5SjBFQkxad0tnUw?oc=5",
-        "Title": "Lebanon: Conflict Intensity Snapshot (2 March - 22 June 2026) - ReliefWeb",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03",
+        "Title": "Siemens Products using OpenSSL",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32190",
-        "Title": "US and Iran Reach Agreement on Frozen Assets",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119279",
-        "Title": "Ukraine Experiences Extreme Heat",
+        "Source": "https://www.theguardian.com/environment/2026/jun/23/searing-uk-heat-leaves-schools-hospitals-and-transport-networks-struggling-to-cope",
+        "Title": "Searing UK heat leaves schools, hospitals and transport networks struggling to cope",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/france/20260623-extreme-heat-forces-early-closure-of-paris-tourist-attractions",
-        "Title": "Extreme heat forces early closure of Paris tourist attractions",
+        "Source": "https://warmonitor.com/",
+        "Title": "US Eases Travel Restrictions on Iran World Cup Team",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/economy/2026/6/23/spacex-shares-drop-below-debut-price-before-jumping-amid-600bn-sell-off?traffic_source=rss",
-        "Title": "SpaceX shares drop below debut price before jumping amid $600bn sell-off",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
