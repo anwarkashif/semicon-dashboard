@@ -1,10 +1,18 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import os
 import warnings
 
-# 🔇 AGGRESSIVE SYSTEM-LEVEL WARNING SUPPRESSION
+# 🔇 AGGRESSIVE SYSTEM-LEVEL WARNING SUPPRESSION & STABILITY FLAGS
 os.environ["PYTHONWARNINGS"] = "ignore"
 os.environ["STREAMLIT_DATA_FRAME_SERIALIZATION"] = "legacy"
+
+# 🛡️ HUGGING FACE ANTI-FREEZE & WEBSOCKET CONFIGURATION
+# Prevents tab-switching disconnects and proxy routing errors on HF Spaces
+os.environ["STREAMLIT_SERVER_ENABLE_CORS"] = "false"
+os.environ["STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION"] = "false"
+os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
+
 warnings.filterwarnings("ignore")
 
 from features.ui_features import inject_early_css, inject_global_theme, render_login_screen
@@ -17,6 +25,19 @@ st.set_page_config(
     page_icon="logo.jpg",  
     layout="wide", 
     initial_sidebar_state="collapsed"
+)
+
+# 🫀 SILENT JS HEARTBEAT TO PREVENT BACKGROUND TAB FREEZING
+# This runs invisibly and stops the browser/HF from closing the WebSocket
+components.html(
+    """
+    <script>
+        setInterval(() => {
+            window.parent.postMessage('hf-stay-alive-ping', '*');
+        }, 30000);
+    </script>
+    """,
+    height=0, width=0
 )
 
 # ⬛ DEFAULT UI RESET CSS

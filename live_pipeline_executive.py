@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 from datetime import datetime
 from google import genai
 from huggingface_hub import HfApi
+import re # 🛑 THE FIX: Guaranteeing JSON Extraction
 
 os.makedirs('data/executive_home', exist_ok=True)
 
@@ -138,7 +139,13 @@ def extract_tactical_events(news_text):
     Data: {news_text}
     """
     for attempt in range(3):
-        try: return json.loads(client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.replace("```json", "").replace("```", "").strip())
+        try: 
+            raw_txt = client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.strip()
+            # 🛑 THE FIX: STRICT REGEX ARRAY EXTRACTION
+            match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
+            if match:
+                return json.loads(match.group(0))
+            return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
         except Exception: time.sleep(15 * (attempt + 1))
     raise Exception("Max retries reached.")
 
@@ -154,15 +161,12 @@ def generate_flush_to_brief(accumulated_events):
                 config={"response_mime_type": "application/json", "temperature": 0.2}
             )
             
-            # 🛡️ BULLETPROOF JSON CLEANER (Strips Markdown Block Quirks)
             raw_text = response.text.strip()
-            if raw_text.startswith("```json"):
-                raw_text = raw_text[7:]
-            if raw_text.startswith("```"):
-                raw_text = raw_text[3:]
-            if raw_text.endswith("```"):
-                raw_text = raw_text[:-3]
-            raw_text = raw_text.strip()
+            
+            # 🛑 THE FIX: STRICT REGEX OBJECT EXTRACTION
+            match = re.search(r'\{.*\}', raw_text, re.DOTALL)
+            if match:
+                return json.loads(match.group(0))
                 
             return json.loads(raw_text)
         except Exception as e: 

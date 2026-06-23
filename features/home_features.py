@@ -9,6 +9,7 @@ import time
 from datetime import datetime, timezone
 import streamlit.components.v1 as components
 from geopy.geocoders import Nominatim
+import re
 
 # --- Newly added imports for Folium Combo Feature ---
 import folium
@@ -572,7 +573,6 @@ def fetch_live_maritime_intel():
     import requests
     import urllib.parse
     import time
-    import re
     
     feed_data = []
     headers = {
@@ -986,10 +986,8 @@ def render_tactical_conflict_overlay(df_actions):
 # 5. MAIN EXECUTIVE HOME RENDER
 # ==========================================
 def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox_token):
-    # 1. Aggressively normalize global df_actions (strips hidden spaces and fixes case)
     if not df_actions.empty:
         df_actions.columns = [str(c).strip().title() for c in df_actions.columns]
-        # 🛑 FIX FOR "TOLIST" ERROR: Drop duplicate columns caused by lowercase duplication in app.py
         df_actions = df_actions.loc[:, ~df_actions.columns.duplicated()]
 
     exec_data_path = 'data/executive_home/tactical_events_24h.json'
@@ -1000,18 +998,14 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 df_exec = pd.DataFrame(exec_events)
                 
                 if not df_exec.empty:
-                    # 2. Aggressively normalize local df_exec
                     df_exec.columns = [str(c).strip().title() for c in df_exec.columns]
-                    # 🛑 FIX FOR "TOLIST" ERROR: Strip potential duplicate columns
                     df_exec = df_exec.loc[:, ~df_exec.columns.duplicated()]
                     
-                    # 3. Cross-fill Action and Headline in df_exec if one is missing entirely
                     if 'Action' in df_exec.columns and 'Headline' not in df_exec.columns:
                         df_exec['Headline'] = df_exec['Action']
                     elif 'Headline' in df_exec.columns and 'Action' not in df_exec.columns:
                         df_exec['Action'] = df_exec['Headline']
                         
-                    # 4. Safe Concatenation
                     if df_actions.empty:
                         df_actions = df_exec
                     else:
@@ -1029,7 +1023,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     </div>
     """, unsafe_allow_html=True)
     
-    # ⚠️ REPLACED LINE: Calling the newly defined function without arguments
     render_flash_alert()
 
     st.markdown("### 🚨 Live Strategic Alert Monitor")
@@ -1040,7 +1033,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     st.caption("Autonomous geopolitical synthesis aggregating threat velocity, maritime telemetry, and multi-domain actor posturing.")
     
     # ==========================================
-    # --- NEW FLASH TO BRIEF UI ---
+    # 🎯 THE FIX: BULLETPROOF FLASH TO BRIEF UI
     # ==========================================
     flush_path = 'data/executive_home/flush_brief_24h.json'
     flush_data = {}
@@ -1049,27 +1042,36 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
             with open(flush_path, 'r', encoding='utf-8') as f:
                 raw_content = f.read().strip()
                 
-            # 🛡️ THE ULTIMATE JSON EXTRACTOR
-            # Finds the first '{' and the last '}' to strip ALL conversational garbage and markdown
-            start_idx = raw_content.find('{')
-            end_idx = raw_content.rfind('}')
-            
-            if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
-                clean_json = raw_content[start_idx:end_idx+1]
-                flush_data = json.loads(clean_json)
+            # Regex force extraction to bypass markdown formatting corruptions
+            match = re.search(r'\{.*\}', raw_content, re.DOTALL)
+            if match:
+                flush_data = json.loads(match.group(0))
             else:
-                # Fallback if no {} found, try direct load just in case
                 flush_data = json.loads(raw_content)
+                
+            # If the LLM drifted and returned an array containing the dict
+            if isinstance(flush_data, list) and len(flush_data) > 0:
+                flush_data = flush_data[0]
                 
         except Exception:
             flush_data = {}
 
-    # 🛡️ BULLETPROOF CASE-INSENSITIVE KEY EXTRACTION
+    # Fully robust dictionary extraction to handle nested LLM drifting (e.g. {"brief": {...}})
     def robust_get(data_dict, potential_keys, default):
         if not isinstance(data_dict, dict): return default
+        
+        # 1. Top-Level Hit
         for k in data_dict.keys():
             if k.lower() in [pk.lower() for pk in potential_keys]:
                 return data_dict[k]
+                
+        # 2. Nested Dict Search (Bypasses LLM Wrapper Keys)
+        for k, v in data_dict.items():
+            if isinstance(v, dict):
+                for sub_k in v.keys():
+                    if sub_k.lower() in [pk.lower() for pk in potential_keys]:
+                        return v[sub_k]
+                        
         return default
 
     bluf_text = str(robust_get(flush_data, ['bluf', 'bottom_line_up_front'], "Scanning macro-strategic feeds. Awaiting telemetry generation cycle..."))
@@ -1078,18 +1080,15 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     risk_text = str(robust_get(flush_data, ['risk_assessment', 'riskassessment', 'risk'], "Data currently rendering inside the strategic analysis layer..."))
     forecast_text = str(robust_get(flush_data, ['strategic_forecast', 'strategicforecast', 'forecast'], "Data currently rendering inside the strategic analysis layer..."))
     
-    # 🛡️ BULLETPROOF LIST PARSER FOR TACTICAL INDICATORS
     import ast
     if isinstance(tactical_list, str):
         try:
-            # If the LLM returned a string that looks like a list: "['Item 1', 'Item 2']"
             parsed_list = ast.literal_eval(tactical_list)
             if isinstance(parsed_list, list):
                 tactical_list = parsed_list
             else:
                 tactical_list = [tactical_list]
         except Exception:
-            # If it's just a raw text paragraph, wrap it in a list
             tactical_list = [tactical_list]
             
     if isinstance(tactical_list, list):
@@ -1171,9 +1170,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     with col3: st.metric(label="🛰️ Geopolitical Shifts", value=geo_val, delta="Live Updated", delta_color="normal")
     with col4: st.metric(label="🛡️ System Status", value=status_val, delta="Monitoring Active")
 
-    # ==========================================
-    # 📊 GLOBAL THREAT POSTURE ANALYSIS ENGINE
-    # ==========================================
     with st.expander("📖 Global Threat Posture Intelligence Analysis & Strategic Interpretation"):
 
         st.markdown("""
@@ -1225,9 +1221,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         </div>
         """, unsafe_allow_html=True)
 
-        # ==========================================
-        # 🔴 ACTIVE Escalations
-        # ==========================================
         st.markdown("""
         ### 🔴 Active Escalations
 
@@ -1259,9 +1252,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         kinetic events.
         """)
 
-        # ==========================================
-        # 🚢 SUPPLY CHAIN CHOKEPOINTS
-        # ==========================================
         st.markdown("""
         ### 🚢 Supply Chain Chokepoints
 
@@ -1292,9 +1282,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         and downstream electronics manufacturing.
         """)
 
-        # ==========================================
-        # 🛰️ GEOPOLITICAL SHIFTS
-        # ==========================================
         st.markdown("""
         ### 🛰️ Geopolitical Shifts
 
@@ -1323,9 +1310,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         investment restrictions, technology-access controls, and alliance restructuring.
         """)
 
-        # ==========================================
-        # 🛡️ SYSTEM STATUS
-        # ==========================================
         st.markdown(f"""
         ### 🛡️ System Status — {status_val}
 
@@ -1411,10 +1395,8 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     if not df_actions.empty:
         temp_df = df_actions.copy()
         
-        # 1. Target exact columns to map directly to the backend
         target_cols = ['Date', 'Actor', 'Action', 'Location', 'Risk']
         
-        # 2. Ensure target columns exist safely
         for col in target_cols:
             if col not in temp_df.columns:
                 if col == 'Action' and 'Headline' in temp_df.columns:
@@ -1424,10 +1406,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 else:
                     temp_df[col] = "Pending Data"
                     
-        # 3. Clean, Sort, and Enforce Diversity via Deduplication
         display_df = temp_df[target_cols].copy()
-        
-        # Drop identical actions to prevent one event flooding the board
         display_df = display_df.drop_duplicates(subset=['Action'], keep='first')
         
         if 'Date' in display_df.columns:
@@ -1436,11 +1415,9 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
             display_df['Date'] = display_df['Date'].astype(str)
             display_df = display_df.drop(columns=['Parsed_Date'])
             
-        # 4. Lock in exactly 10 diverse rows
         display_df = display_df.head(10)
         display_df = display_df.fillna("")
         
-        # 5. Intense Dynamic Styling for CRITICAL Risk Elements
         def color_risk(val):
             val_str = str(val).upper()
             if 'CRITICAL' in val_str:
@@ -1453,13 +1430,11 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 return 'color: #4ade80;'
             return ''
 
-        # Apply styling dynamically
         try:
             styled_df = display_df.style.map(color_risk, subset=['Risk'])
         except AttributeError:
             styled_df = display_df.style.applymap(color_risk, subset=['Risk'])
             
-        # Expanded height slightly to perfectly frame 10 rows
         st.dataframe(styled_df, use_container_width=True, hide_index=True, height=400)
     else:
         st.write("No tactical alerts logged in the current operational cycle.")
@@ -1584,7 +1559,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     maritime_intel = fetch_live_maritime_intel()
     
-    # --- NEW SORTING LOGIC ---
     try:
         def parse_feed_time(item):
             dt = pd.to_datetime(item.get('time', ''), errors='coerce', utc=True)
@@ -1593,7 +1567,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         maritime_intel = sorted(maritime_intel, key=parse_feed_time, reverse=True)
     except Exception:
         pass
-    # -------------------------
 
     st.markdown("""
     <style>
@@ -1688,5 +1661,4 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # This is your Intelligence Note at the absolute bottom
     render_executive_deep_intelligence_note()
