@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "IMO Plans Evacuation of 11,000 Seafarers from Strait of Hormuz Ships",
+        "Title": "Ukraine Detains Suspect in Russian-Backed Assassination Plot",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/23/strait-hormuz-persian-gulf-ship-tanker-evacuation.html",
+        "Title": "Strait of Hormuz evacuation plan to begin for ships stranded in Persian Gulf, maritime organization says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,17 +21,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/23/world/middleeast/diverging-accounts-iran-nuclear-inspections.html",
-        "Title": "Clashing U.S. and Iranian Claims on Nuclear Inspection Show Challenge Ahead",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcUVJWGNQNDBvMWJCdDFYODRDX2VkRnJKNTNPazAzdzZwVkxtTUR2THpXTktPSTdXb0hDVVlpWEFDWVBpYnoySFdVTVRxSzhDYTlRb3J5d1RWX2RCdlVTSkdEalNza0ZrRHB4eExsWTlKLTZnRmNGVlk3TGRLcUpSQXZuVWxxWUdGUWhEUmh5SjBFQkxad0tnUw?oc=5",
         "Title": "Lebanon: Conflict Intensity Snapshot (2 March - 22 June 2026) - ReliefWeb",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32190",
+        "Title": "US and Iran Reach Agreement on Frozen Assets",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
-        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Merz backs plans to raise Germany\u2019s retirement age in pension reforms",
+        "Source": "https://t.me/nexta_live/119279",
+        "Title": "Ukraine Experiences Extreme Heat",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.politico.eu/podcast/playbook-paris-podcast/canicule-la-france-inadaptee/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Canicule : la France inadapt\u00e9e",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/france-s-elderlies-particularly-at-risk-as-heatwave-suffocates-country",
-        "Title": "France's elderlies particularly at risk as heatwave suffocates country",
+        "Source": "https://www.france24.com/en/france/20260623-extreme-heat-forces-early-closure-of-paris-tourist-attractions",
+        "Title": "Extreme heat forces early closure of Paris tourist attractions",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/economy/2026/6/23/spacex-shares-drop-below-debut-price-before-jumping-amid-600bn-sell-off?traffic_source=rss",
+        "Title": "SpaceX shares drop below debut price before jumping amid $600bn sell-off",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
