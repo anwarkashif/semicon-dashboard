@@ -55,11 +55,19 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
     """, unsafe_allow_html=True)
     
     # ==========================================
-    # Helper: Convert AI Markdown to HTML for the custom gradient boxes
+    # 🎯 THE FIX: DYNAMIC KEYWORD HIGHLIGHTER
     # ==========================================
     def format_html_text(text):
         text = str(text)
         text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text) # Markdown bold to HTML bold
+        
+        # If a specific keyword is selected in the Global Filter, wrap it in a glowing neon span
+        if selected_actor and selected_actor != "All":
+            escaped_term = re.escape(selected_actor)
+            # (?i) makes it case-insensitive, so selecting "China" also highlights "china" or "CHINA"
+            pattern = re.compile(rf'(?i)({escaped_term})')
+            text = pattern.sub(r"<span style='background-color: #ff007f; color: #ffffff; padding: 1px 4px; border-radius: 4px; font-weight: bold; box-shadow: 0 0 8px rgba(255, 0, 127, 0.8);'>\1</span>", text)
+            
         return text.replace('\n', '<br>')
 
     # ==========================================
@@ -150,7 +158,6 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
         
     if df_actions is not None and not df_actions.empty:
         render_event_correlation_and_timeline_weekly(df_actions)
-        # VISUAL FIX: Removed trailing st.markdown("---") from inside here to prevent duplicate line wrapping
 
     # ==========================================
     # --- CLEANED FOOTER & DOWNLOAD BLOCK ---
@@ -158,7 +165,6 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
     st.markdown("<hr style='border: 1px solid #333; margin-top: 20px; margin-bottom: 25px;'>", unsafe_allow_html=True)
     
     if st.session_state.get('role') == 'admin':
-        # Adjusted columns to fit the new Archive button
         colA, colB, colC = st.columns([1.5, 1, 1])
         
         with colB:
@@ -167,17 +173,14 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
                     import datetime
                     date_str = datetime.datetime.now().strftime("%Y-%m-%d")
                     
-                    # 1. Compile the tactical text into the raw string RAG parses
                     compiled_raw = f"EXEC: {intel_data.get('executive_summary', '')}\nTHREAT_NARRATIVE: {intel_data.get('threat_narrative', '')}\nRISK: {intel_data.get('risk_assessment', '')}\nPREDICTIVE: {intel_data.get('predictive_analysis', '')}\nRECOMMENDATIONS: {intel_data.get('recommendations', '')}"
                     
-                    # 2. Build the exact JSON schema that your RAG engine expects
                     archive_payload = {
                         "date": date_str,
                         "brief_raw": compiled_raw,
                         "recent_actions": df_actions.to_dict('records') if df_actions is not None else []
                     }
                     
-                    # 3. Save into the data folder using the brief_ prefix so get_brief_mappings picks it up
                     os.makedirs('data', exist_ok=True)
                     archive_filename = f"data/brief_weekly_tactical_{date_str}.json"
                     
@@ -193,7 +196,6 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
                 import datetime
                 date_str = datetime.datetime.now().strftime("%Y-%m-%d")
                 
-                # 🛑 THE BULLETPROOF FIX: Inject fallbacks for ALL required DocX keys
                 intel_data.setdefault('date', date_str)
                 intel_data.setdefault('classification', 'CONFIDENTIAL // OSINT')
                 intel_data.setdefault('author', 'SemicoN Strategic Command')
