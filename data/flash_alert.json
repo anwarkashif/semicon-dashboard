@@ -1,31 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Key Power Substation in Occupied Crimea",
+        "Title": "Lavrov Says Russia Will Not Halt at Front Line for Ukraine Talks",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119306",
-        "Title": "Russian Forces Strike Theater in Konotop",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89333",
-        "Title": "North Korea Commissions New Guided-Missile Frigate",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/videos/c4gyenl6nz0o?at_medium=RSS&at_campaign=rss",
-        "Title": "Why was JD Vance in a luxury Swiss resort for talks with Iran?",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -42,31 +21,52 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-02",
-        "Title": "Siemens SIPROTEC 5 Using DIGSI5 Protocol",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://www.npr.org/2026/06/23/g-s1-129603/up-first-newsletter-iran-oil-sanctions-trump-economy-minnesota-subpoenas-save-voter-info",
+        "Title": "U.S. lifts Iran oil sanctions. And, federal judge rules SAVE voter tool unlawful",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/business/2026/jun/24/heatwave-great-britain-grid-operator-extra-electricity-power-plants",
-        "Title": "Heatwave pushes Great Britain\u2019s grid operator to call for extra electricity from power plants",
+        "Source": "https://www.theguardian.com/australia-news/2026/jun/24/australian-citizen-working-as-spy-for-iran-orchestrated-bondi-firebombing-asio-boss-says",
+        "Title": "Australian citizen working as spy for Iran \u2018orchestrated\u2019 Bondi firebombing, Asio boss says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89338",
+        "Title": "Ukraine Destroys Russian Unmanned Vessel in Black Sea",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32207",
+        "Title": "US Builds Training Grounds for Ukraine",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/24/sk-hynix-nasdaq-adr-listing-south-korea.html",
+        "Title": "South Korea\u2019s biggest chipmaker SK Hynix plans to raise $29 billion via Nasdaq listing",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119307",
-        "Title": "Russian Soldier Loses Legs in Meat Grinder Assault",
+        "Source": "https://t.me/Middle_East_Spectator/33892",
+        "Title": "Lebanese Army Fires Warning Shots at Migrant Vehicle",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Massive AI spending and higher interest rates: What's behind the tech sell-off?",
+        "Source": "https://t.me/Middle_East_Spectator/33891",
+        "Title": "US Embassy in Beirut Reports Gunfire",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
