@@ -9,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UNIVERSAL_POOL_PATH = os.path.join(BASE_DIR, 'data', 'tactical_events_24h.json')
 STANDALONE_PSYOPOLY_PATH = os.path.join(BASE_DIR, 'data', 'psyopoly_alerts.json')
 
-SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news?select=id%2Cheadline%2Cposted_at%2Curl&order=posted_at.desc&limit=40"
+SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news"
 ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxvamlyb2x6a3Nob3FnY2Nyd3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODQyNjQsImV4cCI6MjA4OTY2MDI2NH0.DzdBr_d69SSlRxtnxH8DRqc0hLNQfb4wL5t1Qe96UMo"
 
 headers = {
@@ -17,7 +17,14 @@ headers = {
     "authorization": f"Bearer {ANON_KEY}",
     "accept": "application/json",
     "origin": "https://www.psyopoly.pro",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    "referer": "https://www.psyopoly.pro/",
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+}
+
+params = {
+    "select": "id,headline,posted_at,url",
+    "order": "posted_at.desc",
+    "limit": "40"
 }
 
 def valid_url(url):
@@ -28,7 +35,7 @@ def valid_url(url):
 def extract_psyopoly_intel():
     print("🔍 Initiating Psyopoly Supabase Extraction...")
     try:
-        response = requests.get(SUPABASE_URL, headers=headers)
+        response = requests.get(SUPABASE_URL, headers=headers, params=params, timeout=15)
         if response.status_code == 200:
             raw_data = response.json()
             formatted_events = []
@@ -40,13 +47,19 @@ def extract_psyopoly_intel():
                     continue
                 seen_urls.add(url)
                 
-                headline = item.get("headline", "No Headline Provided")
+                headline = item.get("headline", "No Headline Provided").strip()
+                
+                # 🚨 THE FIX: Appended exact keys required by live_pipeline_executive 
+                # (Action, Headline, Risk) to ensure the deduplication engine doesn't strip them.
                 formatted_events.append({
-                    "Date": item.get("posted_at", "").split("T")[0],
+                    "Date": item.get("posted_at", "").split("T")[0] if item.get("posted_at") else datetime.now().strftime("%Y-%m-%d"),
                     "Actor": "Psyopoly/West Asia",
                     "Location": "Middle East",
                     "Event": "Strategic Update",
+                    "Action": headline,      
+                    "Headline": headline,    
                     "Summary": headline,
+                    "Risk": "HIGH",          
                     "Source": url,
                     "Title": headline,
                     "Feed_Source": "Psyopoly Supabase",
@@ -54,12 +67,16 @@ def extract_psyopoly_intel():
                 })
             print(f"✅ SUCCESS: Siphoned {len(formatted_events)} verified intelligence events.")
             return formatted_events
+        else:
+            print(f"❌ API Request Failed: {response.status_code} - {response.text}")
     except Exception as e:
         print(f"⚠️ CRITICAL FAILURE: {e}")
     return []
 
 def merge_and_sync(new_events):
-    if not new_events: return
+    if not new_events: 
+        print("⚠️ No events extracted. Sync aborted.")
+        return
         
     os.makedirs(os.path.dirname(STANDALONE_PSYOPOLY_PATH), exist_ok=True)
     with open(STANDALONE_PSYOPOLY_PATH, 'w', encoding='utf-8') as f:
@@ -70,13 +87,24 @@ def merge_and_sync(new_events):
         try: existing_events = json.load(open(UNIVERSAL_POOL_PATH, 'r', encoding='utf-8'))
         except Exception: pass
 
-    existing_summaries = {event.get("Summary") for event in existing_events}
+    # Refined deduplication logic to align with new data structures
+    existing_signatures = {str(e.get("Summary", e.get("Action", ""))).strip().lower() for e in existing_events}
+    
+    added_count = 0
     for event in new_events:
-        if event["Summary"] not in existing_summaries:
+        signature = str(event.get("Headline", "")).strip().lower()
+        if signature and signature not in existing_signatures:
             existing_events.insert(0, event)
+            existing_signatures.add(signature)
+            added_count += 1
+            
+    # Cap file size to prevent token limit breach in downstream LLM processing
+    existing_events = existing_events[:80]
             
     with open(UNIVERSAL_POOL_PATH, 'w', encoding='utf-8') as f:
         json.dump(existing_events, f, indent=4)
+        
+    print(f"✅ Merged {added_count} new unique Psyopoly events into Universal Pool.")
 
     HF_TOKEN = os.environ.get("HF_TOKEN")
     REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
