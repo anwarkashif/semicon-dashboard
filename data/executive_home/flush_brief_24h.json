@@ -1,18 +1,11 @@
 {
-    "bluf": "Global geopolitical tensions are escalating across multiple critical theaters. The Middle East faces immediate military escalation risks with advanced drone technology deployed in Southern Lebanon, Israeli strikes, and Houthi attacks on Israel and Red Sea shipping. Concurrently, major powers are raising alarms over increased Chinese military patrols off Eastern Taiwan, signaling heightened Indo-Pacific instability. Maritime security remains a key concern in the Strait of Hormuz, while localized conflicts persist in Ukraine and democratic norms erode in Zimbabwe.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "Israeli army struck two individuals in southern Lebanon.",
-        "Fiber-optic killer drone technology deployed in southern Lebanon.",
-        "Houthis attacked Israel and announced a ban on Israeli vessels in the Red Sea.",
-        "UK Minehunting Force arrived in the Middle East for a multinational Hormuz mission.",
-        "More stranded oil tankers exited the Strait of Hormuz.",
-        "US, UK, France, and Germany raised alarm over Chinese military patrols off Eastern Taiwan.",
-        "Drone strikes killed at least three people in Russian-controlled Horlivka, Ukraine.",
-        "Palestinian activist fainted after release from Israeli prison.",
-        "Zimbabwe's Senate approved an amendment extending the presidential term.",
-        "Discussion on the Trump administration's deal with Iran regarding oil revenue and sanctions."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The Middle East is experiencing a multi-front escalation. The introduction of fiber-optic killer drone technology in Southern Lebanon represents a significant qualitative shift in capabilities for non-state actors, directly challenging Israeli security and increasing the likelihood of more sophisticated cross-border engagements. Houthi aggression against Israel and maritime targets in the Red Sea broadens the conflict's geographical scope and poses a direct threat to global shipping lanes. The deployment of multinational naval forces to the Strait of Hormuz underscores the fragility of energy security and the potential for wider regional conflict. Simultaneously, the Indo-Pacific is witnessing a dangerous increase in major power competition, with Chinese military assertiveness around Taiwan prompting strong condemnation from Western allies, raising the specter of a high-stakes confrontation. These regional flashpoints, coupled with ongoing conflicts in Ukraine and democratic backsliding in Africa, paint a picture of a highly volatile and interconnected global security environment.",
-    "risk_assessment": "HIGH. The immediate risk of military escalation in the Middle East is severe, particularly along the Israel-Lebanon border and in the Red Sea, with potential for advanced weaponry deployment and significant disruption to global maritime trade and energy supplies. The heightened military activity in the Taiwan Strait carries a substantial risk of miscalculation or accidental conflict between major powers, with profound global economic and geopolitical consequences. Overall, the global environment is characterized by elevated geopolitical instability, increasing the likelihood of regional conflicts expanding and challenging international security frameworks.",
-    "strategic_forecast": "Expect continued and potentially intensified military engagements in the Middle East, with a focus on countering advanced drone capabilities and protecting maritime routes. International naval presence in critical choke points like Hormuz and the Red Sea will likely increase. In the Indo-Pacific, China's assertive military posture around Taiwan is projected to persist, leading to sustained diplomatic pressure, increased surveillance, and a heightened risk of regional confrontation. The interconnected nature of these crises suggests that developments in one region could rapidly impact others, demanding agile diplomatic and security responses to prevent broader destabilization. Global supply chains, especially for energy, will remain highly vulnerable to these geopolitical shocks."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
