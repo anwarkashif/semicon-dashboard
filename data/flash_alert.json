@@ -1,28 +1,7 @@
 [
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
-        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Air Force and Iranian Naval Forces Engage in Cat-and-Mouse Game Over Strait of Hormuz",
+        "Title": "MiG-31K With Kinzhal Missiles Raises Threat to Ukraine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -32,7 +11,14 @@
         "Title": "Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/europe/20260624-europe-leaders-reaffirm-unity-after-tensions-ahead-of-nato-summit-ankara",
+        "Title": "Europe leaders reaffirm unity on defence ahead of Ankara NATO summit",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cbsnews.com/news/iran-war-supplemental-funding-request-pentagon-trump-congress/",
@@ -49,6 +35,27 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/france-experiences-its-hottest-day-since-measurements-began-in-1947",
+        "Title": "France experiences its hottest day since measurements began in 1947",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.bbc.co.uk/news/articles/cz0j87vpz79o?at_medium=RSS&at_campaign=rss",
         "Title": "From cool-down spots to chalk on windows - how Europe is coping with the heat",
         "Feed_Source": "WAR MONITOR",
@@ -60,13 +67,6 @@
         "Title": "Australia politics live: Australian woman with Isis links issued return permit from Syria, Tony Burke says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/24/palestinian-activist-faints-after-his-release-from-israeli-prison?traffic_source=rss",
-        "Title": "Palestinian activist faints after his release from Israeli prison",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
