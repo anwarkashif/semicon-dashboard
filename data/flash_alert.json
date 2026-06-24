@@ -1,37 +1,37 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Energy Secretary Says Iran Can No Longer Close Strait of Hormuz",
+        "Title": "Russian Strikes Hit Ukrainian Gas Facilities Across Four Oblasts",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.twz.com/air/mq-28-ghost-bat-drone-debuts-in-large-force-combat-exercise-in-the-pacific",
-        "Title": "MQ-28 Ghost Bat Drone Debuts In Large-Force Combat Exercise In The Pacific",
+        "Source": "https://www.france24.com/en/kyiv-using-ai-powered-hornet-drones-to-strike-deep-into-russian-territory",
+        "Title": "Kyiv using AI-powered Hornet drones to strike deep into Russian territory",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
-        "threat_level": "HIGH"
+        "Publisher": "france24.com",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMGpGdHVrT2lwc0tVRWtocW9CUmNVQ3FST2N6TU9IZ3pSMEU0SmkyTUhielZfVmJNZmRZYTlpckNOcWllLVlnUTQ4eTdrMG1KZkg5Q3haV05CMjZnb0N6eHRJUmdzdDh4UXhOMlZBdjM2LUNmSll1TF9PN0Y0NlhqRGVWeWNzb3RDUlhidFdRSkFYUlh6aEh6YjdJUjZLQkJ2a0NVRGNR?oc=5",
-        "Title": "Taiwan says warning time for any China attack is shortening - Reuters",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/24/palestinian-boy-amongst-dead-in-israeli-strike-on-displaced-tent-in-gaza?traffic_source=rss",
+        "Title": "Palestinian boy amongst dead in Israeli strike on displaced tent in Gaza",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxORHZBcXlkVU9EbDhWVWgyV0tpTDlTUndYdnNpZk1vMzFuQXBGTHdGTFB2WWVFdkFpeGNPQXFManowX1NHdWxqTjZFVU9NSG9DaGk5ODRBNmhNNE9sSl8tX3FTdmdxUGpjeWxQa2RMb2ZFdm1uZDlWYTNNWE44M1hzeVY5NnVxU1RLTTVyQ0hXazN2em9fMjV5SnZlLUo5V3BPVEUxSE5QVTY5cHZXQW54VUFsYXpJY3NnV0hIQWJTLXZlcW5HY004?oc=5",
+        "Title": "EXCLUSIVE: US to move forward with Turkey jet engine sales ahead of NATO summit, sources say - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/nexta_live/119324",
-        "Title": "Russia Prepares for Mobilization Amid War Efforts",
+        "Source": "https://t.me/southfronteng/61510",
+        "Title": "Syria Deploys Military Reinforcements Along Lebanon Border",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
-        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
@@ -39,34 +39,34 @@
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://warmonitor.com/",
-        "Title": "Greta Thunberg pleads not guilty in trespassing case over 2024 pro-Palestin",
+        "Title": "Sweltering France sees jump in coastal waters' temperatures",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/counting-the-cost/2026/6/24/has-the-worst-of-the-hormuz-crisis-passed?traffic_source=rss",
-        "Title": "Has the worst of the Hormuz crisis passed?",
+        "Source": "https://www.aljazeera.com/features/2026/6/24/our-life-stops-west-bank-childhood-shattered-by-israeli-military-raids?traffic_source=rss",
+        "Title": "Our life stops\u2019: West Bank childhood shattered by Israeli military raids",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/warmonitors/44662",
-        "Title": "US Pledges Support to Lebanon Against Hezbollah",
+        "Source": "https://www.nytimes.com/2026/06/24/world/europe/trump-sanctions-judges-lawsuit.html",
+        "Title": "ICC Judges Hit Back Against Trump Sanctions",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
