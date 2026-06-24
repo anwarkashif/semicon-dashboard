@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drones Strike Orenburg Gas Plant, Sparking Fires",
+        "Title": "QatarEnergy Suspends LNG Production Amid US-Israel Military Action Against Iran",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,17 +14,17 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.bbc.co.uk/news/articles/ce8j6g3v3r4o?at_medium=RSS&at_campaign=rss",
+        "Title": "Congress passes war powers measure for first time, rebuking Trump's war with Iran",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.france24.com/en/asia-pacific/20260624-kim-jong-un-unveils-5-000-ton-destroyer-touting-nuclear-capabilities",
         "Title": "Kim Jong Un unveils 5,000-ton destroyer, touting nuclear capabilities",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/23/anthropics-mythos-model-found-vulnerabilities-in-classified-us-government-systems-official-says.html",
-        "Title": "Anthropic\u2019s Mythos model found vulnerabilities in classified U.S. government systems, official says: AP",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -42,11 +42,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://warmonitor.com/",
+        "Title": "Latvia Becomes Largest Foreign Vodka Supplier to Russia",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.france24.com/en/france/20260624-france-latest-heatwave-temperatures-will-fall-and-we-talk-about-anymore-gemmene-un-climate-change",
