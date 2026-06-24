@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drone Strikes Trigger Ammunition Blast in Kirovskoye, Crimea",
+        "Title": "North Korea Commissions New Destroyer Choe Hyon",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/ckg0258vpvqo?at_medium=RSS&at_campaign=rss",
+        "Title": "E-commerce giant Alibaba sues US government over defence blacklist ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/crm0ek4z7ggo?at_medium=RSS&at_campaign=rss",
@@ -21,13 +28,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/ckg0258vpvqo?at_medium=RSS&at_campaign=rss",
-        "Title": "E-commerce giant Alibaba sues US government over defence blacklist ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.aljazeera.com/news/2026/6/23/un-starts-evacuating-11000-stranded-sailors-from-strait-of-hormuz?traffic_source=rss",
         "Title": "UN starts evacuating 11,000 stranded sailors from Strait of Hormuz",
         "Feed_Source": "WAR MONITOR",
@@ -39,7 +39,7 @@
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -47,6 +47,13 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/24/train-service-resuming-after-nationwide-it-disruption-fixed-german-railway-operator-says.html",
+        "Title": "Train service resuming after nationwide IT disruption fixed, German railway operator says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.aljazeera.com/news/2026/6/23/protesters-sentenced-to-decades-in-us-prison-over-alleged-antifa-ties?traffic_source=rss",
@@ -60,13 +67,6 @@
         "Title": "Trains across Germany halted due to problem with communication system",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.sky.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/news/drug-boat-strike-kills-2-leaves-6-survivors-eastern-pacific/",
-        "Title": "U.S. strike on alleged drug boat kills 2, leaves 6 survivors, in the Caribbean",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     }
 ]
