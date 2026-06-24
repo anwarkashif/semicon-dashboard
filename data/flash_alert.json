@@ -1,30 +1,9 @@
 [
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Kim Jong Un Unveils Plans to Modernize North Korean Navy",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.twz.com/news-features/nato-and-ukraine-turning-to-private-sector-to-help-crater-russian-airfields",
-        "Title": "NATO And Ukraine Turning To Private Sector To Help Crater Russian Airfields",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/kyiv-using-ai-powered-hornet-drones-to-strike-deep-into-russian-territory",
-        "Title": "Kyiv using AI-powered Hornet drones to strike deep into Russian territory",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61511",
-        "Title": "Israel Strikes Rocket Launchers in Gaza Strip",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -32,14 +11,7 @@
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
@@ -49,24 +21,52 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/24/top-european-leaders-vow-strong-support-for-ukraine-ahead-of-nato-summit?traffic_source=rss",
-        "Title": "Top European leaders vow \u2018strong\u2019 support for Ukraine ahead of NATO summit",
+        "Source": "https://monitorthesituation.com/",
+        "Title": "US Air Force and Iranian Naval Forces Engage in Cat-and-Mouse Game Over Strait of Hormuz",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html",
+        "Title": "Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cbsnews.com/news/iran-war-supplemental-funding-request-pentagon-trump-congress/",
+        "Title": "Trump admin asks Congress for $88B in supplemental funding for Iran war, other needs",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/news-features/nato-and-ukraine-turning-to-private-sector-to-help-crater-russian-airfields",
+        "Title": "NATO And Ukraine Turning To Private Sector To Help Crater Russian Airfields",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/cz0j87vpz79o?at_medium=RSS&at_campaign=rss",
+        "Title": "From cool-down spots to chalk on windows - how Europe is coping with the heat",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.theguardian.com/australia-news/live/2026/jun/25/australia-politics-live-aemo-power-grid-teal-independent-labor-coalition-question-time-anthony-albanese-angus-taylor-pauline-hanson-one-nation-ntwnfb",
+        "Title": "Australia politics live: Australian woman with Isis links issued return permit from Syria, Tony Burke says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/24/palestinian-activist-faints-after-his-release-from-israeli-prison?traffic_source=rss",
+        "Title": "Palestinian activist faints after his release from Israeli prison",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "De la Espriella pledges to restore Colombia\u2019s relations with Israel",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119340",
-        "Title": "Russian Forces Question Ukrainian Vehicle Movements Near Debaltsevo",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
