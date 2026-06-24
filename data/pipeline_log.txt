@@ -139,3 +139,10 @@
 2026-06-24 05:18:20,076 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
 2026-06-24 05:19:20,084 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-24 05:19:30,894 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-24 06:02:12,132 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 06:02:12,306 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-24 06:02:27,313 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 06:02:27,437 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-24 06:02:57,469 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 06:02:57,596 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-24 06:03:42,608 - ERROR - Pipeline Failed: Max retries reached.
