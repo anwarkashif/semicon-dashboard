@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Strikes Hit Ukrainian Gas Facilities Across Four Oblasts",
+        "Title": "Kim Jong Un Unveils Plans to Modernize North Korean Navy",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/news-features/nato-and-ukraine-turning-to-private-sector-to-help-crater-russian-airfields",
+        "Title": "NATO And Ukraine Turning To Private Sector To Help Crater Russian Airfields",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,27 +28,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61510",
-        "Title": "Syria Deploys Military Reinforcements Along Lebanon Border",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/24/palestinian-boy-amongst-dead-in-israeli-strike-on-displaced-tent-in-gaza?traffic_source=rss",
-        "Title": "Palestinian boy amongst dead in Israeli strike on displaced tent in Gaza",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.twz.com/news-features/nato-and-ukraine-turning-to-private-sector-to-help-crater-russian-airfields",
-        "Title": "NATO And Ukraine Turning To Private Sector To Help Crater Russian Airfields",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
@@ -56,17 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/6/24/top-european-leaders-vow-strong-support-for-ukraine-ahead-of-nato-summit?traffic_source=rss",
+        "Title": "Top European leaders vow \u2018strong\u2019 support for Ukraine ahead of NATO summit",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "De la Espriella pledges to restore Colombia\u2019s relations with Israel",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://t.me/nexta_live/119340",
         "Title": "Russian Forces Question Ukrainian Vehicle Movements Near Debaltsevo",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.politico.eu/article/european-leaders-e5-stronger-role-nato-donald-trump-mark-rutte-talks/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "European leaders pledge stronger role in NATO before Trump-Rutte talks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     }
 ]
