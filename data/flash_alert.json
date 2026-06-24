@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Forces Advance to Within 14 km of Sumy",
+        "Title": "Ukrainian Drones Strike Orenburg Gas Plant, Sparking Fires",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -28,18 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/24/china-detains-2-japanese-nationals-suspected-of-smuggling-banned-goods.html",
-        "Title": "China detains two Japanese nationals suspected of smuggling banned goods",
+        "Source": "https://www.bbc.co.uk/news/articles/ckg0258vpvqo?at_medium=RSS&at_campaign=rss",
+        "Title": "E-commerce giant Alibaba sues US government over defence blacklist ",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "bbc.co.uk",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/24/train-service-resuming-after-nationwide-it-disruption-fixed-german-railway-operator-says.html",
-        "Title": "Train service resuming after nationwide IT disruption fixed, German railway operator says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -53,7 +46,7 @@
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/cy8drk2dk3no?at_medium=RSS&at_campaign=rss",
@@ -67,6 +60,13 @@
         "Title": "Congress passes war powers measure for first time, rebuking Trump's war with Iran",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/24/china-detains-2-japanese-nationals-suspected-of-smuggling-banned-goods.html",
+        "Title": "China detains two Japanese nationals suspected of smuggling banned goods",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
