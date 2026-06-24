@@ -354,3 +354,7 @@
 2026-06-24 17:18:31,669 - WARNING - API Key 1 Attempt 2 Failed: ServerError - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
 2026-06-24 17:18:31,669 - INFO - Rotating to API Key 2
 2026-06-24 17:18:34,673 - ERROR - FLASH TO BRIEF Final Failure: All API keys exhausted via rotation.
+2026-06-24 18:02:28,832 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 18:02:48,391 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-24 18:02:48,428 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 18:02:57,557 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
