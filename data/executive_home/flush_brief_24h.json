@@ -1,11 +1,17 @@
 {
-    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
+    "bluf": "The Middle East is experiencing heightened tensions driven by Iran's nuclear program, Hezbollah's military advancements and defiant rhetoric against Israel, and Israel's potential for unilateral action. Diplomatic efforts to manage Iran's nuclear ambitions are strained by inspection disputes, while global powers are also navigating technological decoupling from China.",
     "tactical_indicators": [
-        "API Rate Limit Hit",
-        "System Awaiting Reset",
-        "Data Pipeline Intact"
+        "Hezbollah deploying fiber-optic killer drones in Southern Lebanon.",
+        "Hezbollah leader Kassem's rhetoric against 'Israeli entity' supporters and call for national 'understanding' to prevent Israeli intelligence.",
+        "US-Iran clashes over IAEA nuclear inspections, straining a 'fragile peace deal'.",
+        "Israeli minister Ben-Gvir threatening unilateral action against Iran, creating a rift with the US.",
+        "Houthi rebels claiming missile attacks on Israel.",
+        "400% surge in cyberattacks on the space sector, linked to an 'Iran War'.",
+        "Former US chief negotiator Wendy Sherman emphasizing the key role of IAEA inspections for any lasting agreement with Iran.",
+        "US Senate and House voting to halt war on Iran, rebuking Trump.",
+        "Senator Rubio's Middle East trip seeking answers on Iran from allies."
     ],
-    "threat_narrative": "Generation pending next scheduled cron execution.",
-    "risk_assessment": "PENDING",
-    "strategic_forecast": "PENDING"
+    "threat_narrative": "The Middle East is on a knife-edge, characterized by escalating military posturing and a breakdown of trust. Hezbollah is actively enhancing its offensive capabilities and consolidating internal support against Israel, while simultaneously seeking to obscure its future actions. Iran's nuclear program remains a flashpoint, with a 'fragile peace deal' under severe strain due to disputes over IAEA inspections. This is compounded by Israel's willingness to consider unilateral military action against Iran, potentially diverging from US policy. The broader conflict environment is evidenced by Houthi missile claims against Israel and a significant increase in cyberattacks on critical space infrastructure, suggesting a multi-domain, regional proxy conflict is already underway or intensifying.",
+    "risk_assessment": "CRITICAL. The confluence of Hezbollah's advanced weaponry and defiant stance, Iran's nuclear opacity and diplomatic friction, and Israel's potential for pre-emptive strikes creates an extremely high risk of regional military escalation. The breakdown of nuclear verification mechanisms could lead to proliferation concerns. Cyberattacks on space infrastructure indicate a widening scope of conflict. US-Israel diplomatic strains over Iran policy further complicate de-escalation efforts. The region is poised for significant instability and potential for direct conflict.",
+    "strategic_forecast": "In the near-to-medium term, expect continued high-stakes diplomatic maneuvering around Iran's nuclear program, likely without significant breakthroughs unless inspection disputes are resolved. Hezbollah will likely continue to project strength and enhance its military capabilities, maintaining a high state of readiness against Israel. Israel's leadership will face increasing pressure to act against perceived Iranian threats, potentially leading to further friction with the US. The 'Iran War' (proxy or undeclared conflict) will likely intensify, manifesting in cyberattacks, regional proxy actions (e.g., Houthis), and potential for direct military engagements. Global powers will continue to navigate technological decoupling from China, a separate but significant geopolitical trend. The risk of a major regional conflict remains elevated, with potential for broader international involvement."
 }
