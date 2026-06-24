@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Venezuela Operation Zaraza Bombards Rural Communities",
+        "Title": "Ukraine Strikes Baltic Fleet Near Saint Petersburg and Factory in Cheboksary",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,31 +14,17 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.france24.com/en/europe/20260624-europe-leaders-reaffirm-unity-after-tensions-ahead-of-nato-summit-ankara",
-        "Title": "Europe leaders reaffirm unity on defence ahead of Ankara NATO summit",
+        "Source": "https://www.theguardian.com/world/2026/jun/25/last-is-linked-australian-woman-from-syrian-camp-to-return-despite-previous-ban",
+        "Title": "Last IS-linked Australian woman from Syrian camp to return despite previous ban",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "theguardian.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cbsnews.com/news/iran-war-supplemental-funding-request-pentagon-trump-congress/",
-        "Title": "Trump admin asks Congress for $88B in supplemental funding for Iran war, other needs",
+        "Source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeHlOSy1RQVNCdks4TlFKbm1TajIwQTd6T19rYVVYTzBETWlYTDRxYkFmb080QWh6RTNUdk8wSjNkN0lqUXVxWjZlTmMxUFVsaFE5cXdhNEdMLTkyY19zNENRcWRpU1NfTzNqR2Q1YnNXTFE0N3RCaXdUeXJpZE8zeDZrZXctWnl0MTZDNlRXU1hZUDRwTGo5RzRyT3B0Z0hmZmZ4TWVkRnNUNU9ZV1JfOQ?oc=5",
+        "Title": "World court judges sue Trump administration over sanctions - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119340",
-        "Title": "Russian Forces Question Ukrainian Vehicle Movements Near Debaltsevo",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
-        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Publisher": "news.google.com",
         "threat_level": "HIGH"
     },
     {
@@ -56,17 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeHlOSy1RQVNCdks4TlFKbm1TajIwQTd6T19rYVVYTzBETWlYTDRxYkFmb080QWh6RTNUdk8wSjNkN0lqUXVxWjZlTmMxUFVsaFE5cXdhNEdMLTkyY19zNENRcWRpU1NfTzNqR2Q1YnNXTFE0N3RCaXdUeXJpZE8zeDZrZXctWnl0MTZDNlRXU1hZUDRwTGo5RzRyT3B0Z0hmZmZ4TWVkRnNUNU9ZV1JfOQ?oc=5",
-        "Title": "World court judges sue Trump administration over sanctions - Reuters",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNc09ZREJlMlRMQTdKeWM3QUI4RmpVbHBtWl9zamk2V1lxU2NESnVPaXZYa2pWdllSWGpHZ3hpWVMxbzV5OUJLN084ZDNtWEJSV1R5d3Fqb29GajBGbTFGaldHWmxaM1phOEw4YUdUYklTTEo3cU0tVHNDMmsyVTZ1Q3JrcThUeUZkajl3ZVlGYw?oc=5",
+        "Title": "Earthquakes shake Venezuela capital - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jun/25/last-is-linked-australian-woman-from-syrian-camp-to-return-despite-previous-ban",
-        "Title": "Last IS-linked Australian woman from Syrian camp to return despite previous ban",
+        "Source": "https://warmonitor.com/",
+        "Title": "U.S. crude oil briefly dips below $70 as tankers transit Strait of Hormuz",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBSaHpuTWFtQWFCdDVtVzNZdkZ3MFloeHZ2OVQ1MHktS2Z5VnAyNWVZV3Vxajh5NG9WakU3YWpBNl9RUkhJT1J5ZXlsX3ptYnNvcFhLY0doeGJEb0FjUnFsWVh1NnE4ZHpXa3FPNUt5bw?oc=5",
+        "Title": "Hubbell Aclara Metrum Cellular Web Interface - cisa.gov",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
