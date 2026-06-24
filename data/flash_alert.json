@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "MiG-31K With Kinzhal Missiles Raises Threat to Ukraine",
+        "Title": "Venezuela Operation Zaraza Bombards Rural Communities",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -28,10 +28,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.twz.com/news-features/nato-and-ukraine-turning-to-private-sector-to-help-crater-russian-airfields",
-        "Title": "NATO And Ukraine Turning To Private Sector To Help Crater Russian Airfields",
+        "Source": "https://t.me/nexta_live/119340",
+        "Title": "Russian Forces Question Ukrainian Vehicle Movements Near Debaltsevo",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
@@ -49,22 +56,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/france-experiences-its-hottest-day-since-measurements-began-in-1947",
-        "Title": "France experiences its hottest day since measurements began in 1947",
+        "Source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeHlOSy1RQVNCdks4TlFKbm1TajIwQTd6T19rYVVYTzBETWlYTDRxYkFmb080QWh6RTNUdk8wSjNkN0lqUXVxWjZlTmMxUFVsaFE5cXdhNEdMLTkyY19zNENRcWRpU1NfTzNqR2Q1YnNXTFE0N3RCaXdUeXJpZE8zeDZrZXctWnl0MTZDNlRXU1hZUDRwTGo5RzRyT3B0Z0hmZmZ4TWVkRnNUNU9ZV1JfOQ?oc=5",
+        "Title": "World court judges sue Trump administration over sanctions - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/cz0j87vpz79o?at_medium=RSS&at_campaign=rss",
-        "Title": "From cool-down spots to chalk on windows - how Europe is coping with the heat",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/australia-news/live/2026/jun/25/australia-politics-live-aemo-power-grid-teal-independent-labor-coalition-question-time-anthony-albanese-angus-taylor-pauline-hanson-one-nation-ntwnfb",
-        "Title": "Australia politics live: Australian woman with Isis links issued return permit from Syria, Tony Burke says",
+        "Source": "https://www.theguardian.com/world/2026/jun/25/last-is-linked-australian-woman-from-syrian-camp-to-return-despite-previous-ban",
+        "Title": "Last IS-linked Australian woman from Syrian camp to return despite previous ban",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
         "threat_level": "WATCH"
