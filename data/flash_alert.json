@@ -1,21 +1,35 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Commanders Accused of Failing to Curb Neo-Nazi Insignia",
+        "Title": "US Energy Secretary Says Iran Can No Longer Close Strait of Hormuz",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32210",
-        "Title": "US Supports Ukraine Strikes on Russian Refineries",
+        "Source": "https://www.twz.com/air/mq-28-ghost-bat-drone-debuts-in-large-force-combat-exercise-in-the-pacific",
+        "Title": "MQ-28 Ghost Bat Drone Debuts In Large-Force Combat Exercise In The Pacific",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMGpGdHVrT2lwc0tVRWtocW9CUmNVQ3FST2N6TU9IZ3pSMEU0SmkyTUhielZfVmJNZmRZYTlpckNOcWllLVlnUTQ4eTdrMG1KZkg5Q3haV05CMjZnb0N6eHRJUmdzdDh4UXhOMlZBdjM2LUNmSll1TF9PN0Y0NlhqRGVWeWNzb3RDUlhidFdRSkFYUlh6aEh6YjdJUjZLQkJ2a0NVRGNR?oc=5",
+        "Title": "Taiwan says warning time for any China attack is shortening - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119324",
+        "Title": "Russia Prepares for Mobilization Amid War Efforts",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03",
-        "Title": "Siemens Products using OpenSSL",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
@@ -25,7 +39,7 @@
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -35,38 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://warmonitor.com/",
-        "Title": "Paris opens canal to swimmers looking to cool off in heatwave",
+        "Title": "Greta Thunberg pleads not guilty in trespassing case over 2024 pro-Palestin",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260624-us-military-says-senior-islamic-state-group-leader-killed-syria-air-strike",
-        "Title": "US military says senior Islamic State group leader killed in Syria air strike",
+        "Source": "https://www.aljazeera.com/video/counting-the-cost/2026/6/24/has-the-worst-of-the-hormuz-crisis-passed?traffic_source=rss",
+        "Title": "Has the worst of the Hormuz crisis passed?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/video/20260624-nigeria-s-waterfront-communities-push-back-against-evictions",
-        "Title": "Nigeria's waterfront communities push back against evictions",
+        "Source": "https://t.me/warmonitors/44662",
+        "Title": "US Pledges Support to Lebanon Against Hezbollah",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/video/20260624-anger-mounts-as-sudan-s-army-takes-in-darfur-paramilitary-defectors",
-        "Title": "Anger mounts as Sudan's army takes in Darfur paramilitary defectors",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
