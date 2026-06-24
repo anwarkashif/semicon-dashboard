@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Announces Shift to Aggressive Military Doctrine",
+        "Title": "JS Amagiri Returns to Yokosuka, Japan",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/middle-east/20260624-middle-east-live-oman-announces-temporary-maritime-corridor-through-strait-of-hormuz",
+        "Title": "Middle East live: Oman announces temporary maritime corridor through Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/asia-pacific/20260624-kim-jong-un-unveils-5-000-ton-destroyer-touting-nuclear-capabilities",
+        "Title": "Kim Jong Un unveils 5,000-ton destroyer, touting nuclear capabilities",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,18 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89326",
-        "Title": "China Launches Hypersonic Missiles in Gobi Desert",
+        "Source": "https://www.bbc.co.uk/news/articles/ckg0258vpvqo?at_medium=RSS&at_campaign=rss",
+        "Title": "E-commerce giant Alibaba sues US government over defence blacklist ",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/23/un-starts-evacuating-11000-stranded-sailors-from-strait-of-hormuz?traffic_source=rss",
-        "Title": "UN starts evacuating 11,000 stranded sailors from Strait of Hormuz",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "bbc.co.uk",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/crm0ek4z7ggo?at_medium=RSS&at_campaign=rss",
@@ -35,18 +42,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cbsnews.com/news/drug-boat-strike-kills-2-leaves-6-survivors-eastern-pacific/",
-        "Title": "U.S. strike on alleged drug boat kills 2, leaves 6 survivors, in the Caribbean",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33890",
-        "Title": "Houthi Leader Comments On Conflict",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cbsnews.com/video/062326-cbs-evening-news/",
-        "Title": "6/23: CBS Evening News",
+        "Source": "https://warmonitor.com/",
+        "Title": "London climate week disrupted by \u2026 the climate",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Asian tech stocks rebound after global rout; Samsung up 9%",
+        "Source": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOcXU0QzJaVG02TFBIM29McmY0MXdHYTNDVGFrTEt4RkZxYmg5R3BaM2htRlFIZDY3WXJUTk1UR1NkY1dlMzJzaG1CUTB1ek5GMkZKcTdXTEs4NWh4TzZKVUZIQ2pWR05HU1JhVHJNeEVXUDNUVzRwYUF3emxhN1g5aUdoa1MtUDI0SFFTcER6Qjd1NTZhTXJZV2lVSDFIN0tGZ0pIclA0a2k0eHNpWUhjbmlQSFdJdEVjUEk1RTB0WWNpOGx2aDQ3SXpwUzlaWEFSb2pxWnMwN2UwekU?oc=5",
+        "Title": "Ebola cases in Congo reach highest first-month total of any outbreak, WHO says - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
