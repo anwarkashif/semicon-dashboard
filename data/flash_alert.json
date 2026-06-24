@@ -1,10 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "QatarEnergy Suspends LNG Production Amid US-Israel Military Action Against Iran",
+        "Title": "European Embassies in Taipei Warn on Chinese Coast Guard Patrols",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/24/rheinmetall-stock-defense-germany-warship-scrap-plans.html",
+        "Title": "Defense stocks plummet after Germany to scrap warship plans; Rheinmetall stock down 13%",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89330",
+        "Title": "US Tests Golden Dome Missile Defense System",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32203",
+        "Title": "Japan Supports Ukraine Through Drone Production",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -21,25 +42,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89330",
-        "Title": "US Tests Golden Dome Missile Defense System",
+        "Source": "https://www.theguardian.com/environment/2026/jun/24/leah-stewart-shark-attack-victim-coogee-beach-wakes-from-coma",
+        "Title": "Woman attacked by shark at Coogee beach wakes briefly from coma to say three words",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/features/2026/6/24/diabetes-patients-in-gaza-face-survival-battle-amid-war-shortages?traffic_source=rss",
-        "Title": "Diabetes patients in Gaza face survival battle amid war shortages",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32203",
-        "Title": "Japan Supports Ukraine Through Drone Production",
+        "Source": "https://t.me/rybar_in_english/32204",
+        "Title": "UK Government Plans to Promote BBC on Social Media",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/nexta_live/119297",
@@ -53,20 +67,6 @@
         "Title": "Bird flu confirmed in South Australia as infected petrel brings deadly H5N1 cases to three",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/live/2026/jun/24/europe-heatwave-live-news-updates-uk-record-breaking-temperatures-italy-red-alert",
-        "Title": "Europe heatwave live: UK braces for record-breaking temperatures; Italy issues red alert for 16 cities",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/europe/20260624-france-outage-leaves-68000-homes-without-power-record-heatwave-spreads-north-brittany",
-        "Title": "France outage leaves 68,000 homes without power as record heatwave spreads north",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
