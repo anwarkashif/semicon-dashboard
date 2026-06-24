@@ -10,8 +10,17 @@ from urllib.parse import urlparse
 from datetime import datetime
 from google import genai
 from huggingface_hub import HfApi
+import logging
+import re
 
 os.makedirs('data/today_snippet', exist_ok=True)
+
+# 🚨 FIX 1: Dedicated Logging for Today's Snippet
+logging.basicConfig(
+    filename='data/pipeline_today_log.txt',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 RSS_FEEDS = [
     "https://www.ft.com/technology?format=rss", "https://www.atlanticcouncil.org/feed/", "https://foreignpolicy.com/feed/",
@@ -38,21 +47,36 @@ def resolve_final_url(url, headers):
 def fetch_psyopoly_data():
     SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news?select=id%2Cheadline%2Cposted_at%2Curl&order=posted_at.desc&limit=20"
     ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxvamlyb2x6a3Nob3FnY2Nyd3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODQyNjQsImV4cCI6MjA4OTY2MDI2NH0.DzdBr_d69SSlRxtnxH8DRqc0hLNQfb4wL5t1Qe96UMo"
-    headers = {"apikey": ANON_KEY, "authorization": f"Bearer {ANON_KEY}", "accept": "application/json"}
+    
+    headers = {
+        "apikey": ANON_KEY, 
+        "authorization": f"Bearer {ANON_KEY}", 
+        "accept": "application/json",
+        "origin": "https://www.psyopoly.pro",
+        "referer": "https://www.psyopoly.pro/"
+    }
     
     formatted_events = []; raw_psy_items = []
     try:
         for item in requests.get(SUPABASE_URL, headers=headers, timeout=10).json():
-            headline = item.get("headline", "No Headline Provided")
+            headline = item.get("headline", "No Headline Provided").strip()
             url = item.get("url", "https://www.psyopoly.pro/middle-east")
             if not valid_url(url): continue
             
             raw_psy_items.append({"headline": headline, "url": url})
+            
             formatted_events.append({
-                "Date": item.get("posted_at", "").split("T")[0], "Actor": "Psyopoly/West Asia",
-                "Location": "Middle East", "Event": "Strategic Update", "Action": headline[:60] + "...",
-                "Summary": headline, "Risk": "HIGH", "Source": url,
-                "Title": headline, "Feed_Source": "Psyopoly Supabase",
+                "Date": item.get("posted_at", "").split("T")[0] if item.get("posted_at") else datetime.now().strftime("%Y-%m-%d"),
+                "Actor": "Psyopoly/West Asia",
+                "Location": "Middle East", 
+                "Event": "Strategic Update", 
+                "Action": headline,
+                "Headline": headline,
+                "Summary": headline, 
+                "Risk": "HIGH", 
+                "Source": url,
+                "Title": headline, 
+                "Feed_Source": "Psyopoly Supabase",
                 "Publisher": urlparse(url).netloc.replace("www.", "")
             })
         return formatted_events, raw_psy_items
@@ -92,25 +116,73 @@ def fetch_daily_intelligence():
 
 def extract_tactical_events(news_text):
     prompt = f"You are an elite Geopolitics-OSINT analyst. Review entries preceded by IDs. Extract 4-6 critical events. Output raw JSON array. Keys exactly: Article_ID, Date, Actor, Action, Location, Risk. Data: {news_text}"
-    for _ in range(3):
-        try: return json.loads(client.models.generate_content(model='gemini-2.5-flash', contents=prompt).text.replace("```json", "").replace("```", "").strip())
-        except Exception: time.sleep(10)
+    for attempt in range(3):
+        try: 
+            response = client.models.generate_content(
+                model='gemini-2.5-flash', 
+                contents=prompt,
+                config={
+                    "response_mime_type": "application/json",
+                    "temperature": 0.1,
+                    "safety_settings": [
+                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+                    ]
+                }
+            )
+            raw_txt = getattr(response, 'text', '').strip()
+            if not raw_txt: raise ValueError("Empty response blocked by unknown filter")
+            
+            match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
+            if match:
+                return json.loads(match.group(0))
+            return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
+        except Exception as e: 
+            wait = 15 * (attempt + 1)
+            error_msg = f"Extraction Attempt {attempt + 1} failed: {type(e).__name__}: {e}"
+            print(f"🚨 {error_msg}")
+            logging.error(error_msg)
+            time.sleep(wait)
+    raise Exception("Max retries reached.")
 
 def generate_shift_brief(accumulated_events):
     prompt = f"Synthesize a 12H Strategic Shift Brief using this data: {json.dumps(accumulated_events)}. Return JSON exactly keys: date, bluf, executive_summary, escalation_indicators, strategic_outlook, threat_level."
     
     for attempt in range(3):
         try: 
-            # 🛠️ FORCE GEMINI TO OUTPUT STRICT JSON
             response = client.models.generate_content(
                 model='gemini-2.5-flash', 
                 contents=prompt,
-                config={"response_mime_type": "application/json", "temperature": 0.2}
+                config={
+                    "response_mime_type": "application/json", 
+                    "temperature": 0.2,
+                    "safety_settings": [
+                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+                    ]
+                }
             )
-            return json.loads(response.text)
+            raw_text = getattr(response, 'text', '').strip()
+            if not raw_text: 
+                raise ValueError("Empty response — possible safety block or quota exhaustion")
+            
+            match = re.search(r'\{.*\}', raw_text, re.DOTALL)
+            if match:
+                return json.loads(match.group(0))
+                
+            return json.loads(raw_text)
+            
         except Exception as e: 
-            print(f"🚨 Today's Snippet API Attempt {attempt + 1} Failed: {e}")
-            time.sleep(10)
+            # 🚨 FIX 2: Implement Exponential Backoff on Generation Failure
+            wait = 30 * (attempt + 1)
+            error_msg = f"Today's Snippet API Attempt {attempt + 1} Failed: {type(e).__name__}: {e}"
+            print(f"🚨 {error_msg}")
+            logging.error(error_msg)
+            time.sleep(wait)
             
     # 🛡️ DETERMINISTIC FALLBACK FOR TODAY'S SNIPPET
     return {
@@ -127,7 +199,14 @@ if __name__ == "__main__":
         news_data, article_count, psy_events, source_map = fetch_daily_intelligence()
         if article_count == 0: exit(1)
         
-        extracted_events = extract_tactical_events(news_data)
+        # 🚨 FIX 3: Graceful Degradation Bypass
+        extracted_events = []
+        try:
+            extracted_events = extract_tactical_events(news_data)
+        except Exception as e:
+            error_txt = f"Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: {e}"
+            print(f"⚠️ {error_txt}")
+            logging.warning(error_txt)
         
         # 🛡️ DETERMINISTIC INJECTION
         validated_events = []; seen_urls = set(); validated_count = 0
@@ -149,7 +228,7 @@ if __name__ == "__main__":
             
         print(f"✅ Validated {validated_count} of {len(extracted_events)} Gemini selections")
                 
-        if psy_events: validated_events = psy_events[:2] + validated_events
+        if psy_events: validated_events = psy_events[:3] + validated_events
         
         output_file_tactical = 'data/today_snippet/tactical_events_24h.json'
         master_events = json.load(open(output_file_tactical, 'r')) if os.path.exists(output_file_tactical) else []
@@ -161,6 +240,11 @@ if __name__ == "__main__":
             if iden and iden not in seen: seen.add(iden); unique.append(e)
                 
         json.dump(unique[:25], open(output_file_tactical, 'w'), indent=4)
+
+        # 🚨 FIX 4: Add Cooldown Before Generating the Brief
+        print("⏳ Cooling down 60s before Shift Brief generation to allow API rate limits to reset...")
+        time.sleep(60)
+
         json.dump(generate_shift_brief(unique[:25]), open('data/today_snippet/shift_brief.json', 'w'), indent=4)
         
         HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
@@ -168,4 +252,7 @@ if __name__ == "__main__":
             HfApi().upload_file(path_or_fileobj=output_file_tactical, path_in_repo=output_file_tactical, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Today Snippet Provenance Data")
             HfApi().upload_file(path_or_fileobj='data/today_snippet/shift_brief.json', path_in_repo='data/today_snippet/shift_brief.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
             print("✅ Today Snippet Synced with Precise URLs!")
-    except Exception as e: print(f"❌ Error: {e}")
+            
+    except Exception as e: 
+        print(f"❌ Error: {e}")
+        logging.error(f"Pipeline Failed: {e}")
