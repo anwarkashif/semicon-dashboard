@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "JS Amagiri Returns to Yokosuka, Japan",
+        "Title": "Russian Forces Advance to Within 14 km of Sumy",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "WATCH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260624-middle-east-live-oman-announces-temporary-maritime-corridor-through-strait-of-hormuz",
-        "Title": "Middle East live: Oman announces temporary maritime corridor through Strait of Hormuz",
+        "Source": "https://www.nytimes.com/2026/06/24/world/asia/myanmar-war-rebels-airstrikes.html",
+        "Title": "Myanmar\u2019s Civil War Has Become an Apocalypse",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,45 +28,45 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/ckg0258vpvqo?at_medium=RSS&at_campaign=rss",
-        "Title": "E-commerce giant Alibaba sues US government over defence blacklist ",
+        "Source": "https://www.cnbc.com/2026/06/24/china-detains-2-japanese-nationals-suspected-of-smuggling-banned-goods.html",
+        "Title": "China detains two Japanese nationals suspected of smuggling banned goods",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "cnbc.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/crm0ek4z7ggo?at_medium=RSS&at_campaign=rss",
-        "Title": "Germany rail network comes to complete halt nationwide due to IT malfunction",
+        "Source": "https://www.cnbc.com/2026/06/24/train-service-resuming-after-nationwide-it-disruption-fixed-german-railway-operator-says.html",
+        "Title": "Train service resuming after nationwide IT disruption fixed, German railway operator says",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "London climate week disrupted by \u2026 the climate",
+        "Source": "https://www.bbc.co.uk/news/articles/cy8drk2dk3no?at_medium=RSS&at_campaign=rss",
+        "Title": "Sydney woman wakes from induced coma more than a week after shark attack",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOcXU0QzJaVG02TFBIM29McmY0MXdHYTNDVGFrTEt4RkZxYmg5R3BaM2htRlFIZDY3WXJUTk1UR1NkY1dlMzJzaG1CUTB1ek5GMkZKcTdXTEs4NWh4TzZKVUZIQ2pWR05HU1JhVHJNeEVXUDNUVzRwYUF3emxhN1g5aUdoa1MtUDI0SFFTcER6Qjd1NTZhTXJZV2lVSDFIN0tGZ0pIclA0a2k0eHNpWUhjbmlQSFdJdEVjUEk1RTB0WWNpOGx2aDQ3SXpwUzlaWEFSb2pxWnMwN2UwekU?oc=5",
-        "Title": "Ebola cases in Congo reach highest first-month total of any outbreak, WHO says - Reuters",
+        "Source": "https://www.bbc.co.uk/news/articles/ce8j6g3v3r4o?at_medium=RSS&at_campaign=rss",
+        "Title": "Congress passes war powers measure for first time, rebuking Trump's war with Iran",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
