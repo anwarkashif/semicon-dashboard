@@ -1,0 +1,12 @@
+2026-06-24 10:00:37,253 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 10:00:46,798 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-24 10:00:46,799 - ERROR - Extraction Attempt 1 failed: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 10:01:01,814 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 10:01:02,404 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-24 10:01:02,404 - ERROR - Extraction Attempt 2 failed: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 10:01:32,435 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 10:01:33,203 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-24 10:01:33,204 - ERROR - Extraction Attempt 3 failed: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 10:02:18,236 - WARNING - Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: Max retries reached.
+2026-06-24 10:03:18,247 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 10:03:35,850 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
