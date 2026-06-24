@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "North Korea Commissions New Destroyer Choe Hyon",
+        "Title": "Iran Announces Shift to Aggressive Military Doctrine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/ckg0258vpvqo?at_medium=RSS&at_campaign=rss",
@@ -28,11 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/23/un-starts-evacuating-11000-stranded-sailors-from-strait-of-hormuz?traffic_source=rss",
-        "Title": "UN starts evacuating 11,000 stranded sailors from Strait of Hormuz",
+        "Source": "https://www.bbc.co.uk/news/articles/c24yr796emzo?at_medium=RSS&at_campaign=rss",
+        "Title": "UN says it will evacuate sailors stranded in Strait of Hormuz, as Rubio warns against tolls",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
+        "Publisher": "bbc.co.uk",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -49,6 +49,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.bbc.co.uk/news/articles/clyedgnyn4mo?at_medium=RSS&at_campaign=rss",
+        "Title": "Eight sentenced to 450 years in prison over anti-ICE riot where officer was shot",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.cnbc.com/2026/06/24/train-service-resuming-after-nationwide-it-disruption-fixed-german-railway-operator-says.html",
         "Title": "Train service resuming after nationwide IT disruption fixed, German railway operator says",
         "Feed_Source": "WAR MONITOR",
@@ -60,13 +67,6 @@
         "Title": "Protesters sentenced to decades in US prison over alleged antifa ties",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.sky.com/story/german-railway-network-comes-to-halt-due-to-problem-with-communication-system-13557238",
-        "Title": "Trains across Germany halted due to problem with communication system",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
         "threat_level": "WATCH"
     }
 ]
