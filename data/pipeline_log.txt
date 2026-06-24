@@ -185,3 +185,12 @@
 2026-06-24 09:20:13,523 - ERROR - FLASH TO BRIEF Attempt 1 failed: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
 2026-06-24 09:20:43,548 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-24 09:20:58,093 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-24 10:02:34,248 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 10:02:34,947 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-24 10:02:49,963 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 10:02:50,114 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-24 10:03:20,146 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 10:03:20,255 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-24 10:04:05,285 - WARNING - Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: Max retries reached.
+2026-06-24 10:05:05,342 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 10:05:16,264 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
