@@ -15,7 +15,6 @@ import re
 
 os.makedirs('data/today_snippet', exist_ok=True)
 
-# 🚨 FIX 1: Dedicated Logging for Today's Snippet
 logging.basicConfig(
     filename='data/pipeline_today_log.txt',
     level=logging.INFO,
@@ -29,7 +28,65 @@ RSS_FEEDS = [
     "https://gcaptain.com/feed/", "https://www.aljazeera.com/xml/rss/all.xml", "https://thequantuminsider.com/feed/"
 ]
 
-client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+# 🚨 THE ARSENAL: API Key Rotation List
+AVAILABLE_KEYS = [
+    os.environ.get("GEMINI_API_KEY"),
+    os.environ.get("RAG_GEMINI_API_KEY"),
+    os.environ.get("RAG_GEMINI_API_KEY_2"),
+    os.environ.get("RAG_GEMINI_API_KEY_3"),
+    os.environ.get("RAG_GEMINI_API_KEY_4"),
+    os.environ.get("RAG_GEMINI_API_KEY_5")
+]
+VALID_KEYS = [k for k in AVAILABLE_KEYS if k and k.strip()]
+
+# 🚨 THE ENGINE: Seamless Failover Generation
+def generate_with_rotation(prompt, temperature=0.1):
+    if not VALID_KEYS:
+        raise Exception("CRITICAL: No valid API keys found in environment.")
+        
+    current_idx = 0
+    failures = 0
+    
+    while current_idx < len(VALID_KEYS):
+        current_key = VALID_KEYS[current_idx]
+        client = genai.Client(api_key=current_key)
+        
+        try:
+            response = client.models.generate_content(
+                model='gemini-2.5-flash', 
+                contents=prompt,
+                config={
+                    "response_mime_type": "application/json",
+                    "temperature": temperature,
+                    "safety_settings": [
+                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+                    ]
+                }
+            )
+            raw_txt = getattr(response, 'text', '').strip()
+            if not raw_txt: raise ValueError("Empty response blocked by unknown filter")
+            return raw_txt
+            
+        except Exception as e:
+            failures += 1
+            err_msg = str(e)
+            log_msg = f"API Key {current_idx + 1} Attempt {failures} Failed: {type(e).__name__} - {err_msg[:100]}"
+            print(f"⚠️ {log_msg}")
+            logging.warning(log_msg)
+            
+            if failures >= 2:
+                print(f"🔄 Rotating to API Key {current_idx + 2}...")
+                logging.info(f"Rotating to API Key {current_idx + 2}")
+                current_idx += 1
+                failures = 0
+                time.sleep(3)
+            else:
+                time.sleep(10)
+                
+    raise Exception("All API keys exhausted via rotation.")
 
 def valid_url(url):
     if not url: return False
@@ -116,90 +173,34 @@ def fetch_daily_intelligence():
 
 def extract_tactical_events(news_text):
     prompt = f"You are an elite Geopolitics-OSINT analyst. Review entries preceded by IDs. Extract 4-6 critical events. Output raw JSON array. Keys exactly: Article_ID, Date, Actor, Action, Location, Risk. Data: {news_text}"
-    for attempt in range(3):
-        try: 
-            response = client.models.generate_content(
-                model='gemini-2.5-flash', 
-                contents=prompt,
-                config={
-                    "response_mime_type": "application/json",
-                    "temperature": 0.1,
-                    "safety_settings": [
-                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
-                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
-                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
-                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
-                    ]
-                }
-            )
-            raw_txt = getattr(response, 'text', '').strip()
-            if not raw_txt: raise ValueError("Empty response blocked by unknown filter")
-            
-            match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
-            if match:
-                return json.loads(match.group(0))
-            return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
-        except Exception as e: 
-            wait = 15 * (attempt + 1)
-            error_msg = f"Extraction Attempt {attempt + 1} failed: {type(e).__name__}: {e}"
-            print(f"🚨 {error_msg}")
-            logging.error(error_msg)
-            time.sleep(wait)
-    raise Exception("Max retries reached.")
+    raw_txt = generate_with_rotation(prompt, temperature=0.1)
+    match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
+    if match: return json.loads(match.group(0))
+    return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
 
 def generate_shift_brief(accumulated_events):
     prompt = f"Synthesize a 12H Strategic Shift Brief using this data: {json.dumps(accumulated_events)}. Return JSON exactly keys: date, bluf, executive_summary, escalation_indicators, strategic_outlook, threat_level."
-    
-    for attempt in range(3):
-        try: 
-            response = client.models.generate_content(
-                model='gemini-2.5-flash', 
-                contents=prompt,
-                config={
-                    "response_mime_type": "application/json", 
-                    "temperature": 0.2,
-                    "safety_settings": [
-                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
-                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
-                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
-                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
-                    ]
-                }
-            )
-            raw_text = getattr(response, 'text', '').strip()
-            if not raw_text: 
-                raise ValueError("Empty response — possible safety block or quota exhaustion")
-            
-            match = re.search(r'\{.*\}', raw_text, re.DOTALL)
-            if match:
-                return json.loads(match.group(0))
-                
-            return json.loads(raw_text)
-            
-        except Exception as e: 
-            # 🚨 FIX 2: Implement Exponential Backoff on Generation Failure
-            wait = 30 * (attempt + 1)
-            error_msg = f"Today's Snippet API Attempt {attempt + 1} Failed: {type(e).__name__}: {e}"
-            print(f"🚨 {error_msg}")
-            logging.error(error_msg)
-            time.sleep(wait)
-            
-    # 🛡️ DETERMINISTIC FALLBACK FOR TODAY'S SNIPPET
-    return {
-        "date": datetime.now().strftime('%Y-%m-%d'),
-        "bluf": "API Generation Timeout. Awaiting next cycle.",
-        "executive_summary": "System pending reset.",
-        "escalation_indicators": ["API Timeout"],
-        "strategic_outlook": "PENDING",
-        "threat_level": "UNKNOWN"
-    }
+    try:
+        raw_txt = generate_with_rotation(prompt, temperature=0.2)
+        match = re.search(r'\{.*\}', raw_txt, re.DOTALL)
+        if match: return json.loads(match.group(0))
+        return json.loads(raw_txt)
+    except Exception as e:
+        logging.error(f"Shift Brief Final Failure: {e}")
+        return {
+            "date": datetime.now().strftime('%Y-%m-%d'),
+            "bluf": "API Generation Timeout. Awaiting next cycle.",
+            "executive_summary": "System pending reset.",
+            "escalation_indicators": ["API Timeout"],
+            "strategic_outlook": "PENDING",
+            "threat_level": "UNKNOWN"
+        }
 
 if __name__ == "__main__":
     try:
         news_data, article_count, psy_events, source_map = fetch_daily_intelligence()
         if article_count == 0: exit(1)
         
-        # 🚨 FIX 3: Graceful Degradation Bypass
         extracted_events = []
         try:
             extracted_events = extract_tactical_events(news_data)
@@ -208,7 +209,6 @@ if __name__ == "__main__":
             print(f"⚠️ {error_txt}")
             logging.warning(error_txt)
         
-        # 🛡️ DETERMINISTIC INJECTION
         validated_events = []; seen_urls = set(); validated_count = 0
         for event in extracted_events:
             target_id = event.get("Article_ID")
@@ -241,10 +241,7 @@ if __name__ == "__main__":
                 
         json.dump(unique[:25], open(output_file_tactical, 'w'), indent=4)
 
-        # 🚨 FIX 4: Add Cooldown Before Generating the Brief
-        print("⏳ Cooling down 60s before Shift Brief generation to allow API rate limits to reset...")
-        time.sleep(60)
-
+        print("⏳ Pooling data before Shift Brief generation...")
         json.dump(generate_shift_brief(unique[:25]), open('data/today_snippet/shift_brief.json', 'w'), indent=4)
         
         HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
