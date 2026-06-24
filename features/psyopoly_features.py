@@ -6,6 +6,10 @@ from datetime import datetime
 # 🔍 GEOPOLITICAL VARIABLE CLASSIFICATION ENGINE
 # ==========================================
 def classify_geopolitical_variable(summary_text):
+    # Fallback if the data pipeline injects a null/missing summary
+    if not isinstance(summary_text, str):
+        return "Strategic Intelligence Log"
+        
     text = summary_text.lower()
     
     if any(keyword in text for keyword in ['irgc', 'iran', 'tehran', 'persian']):

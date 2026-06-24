@@ -18,7 +18,6 @@ import logging
 # ==========================================
 os.makedirs('data/executive_home', exist_ok=True)
 
-# Set up logging so you can track API failures directly in your HuggingFace Space
 logging.basicConfig(
     filename='data/pipeline_log.txt',
     level=logging.INFO,
@@ -64,7 +63,7 @@ def fetch_psyopoly_data():
     SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news?select=id%2Cheadline%2Cposted_at%2Curl&order=posted_at.desc&limit=20"
     ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxvamlyb2x6a3Nob3FnY2Nyd3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODQyNjQsImV4cCI6MjA4OTY2MDI2NH0.DzdBr_d69SSlRxtnxH8DRqc0hLNQfb4wL5t1Qe96UMo"
     
-    # 🚨 SYNCHRONIZED HEADERS
+    # 🚨 FIX 1: Fully Synchronized Headers to bypass the block inside the main pipeline
     headers = {
         "apikey": ANON_KEY, 
         "authorization": f"Bearer {ANON_KEY}", 
@@ -82,7 +81,7 @@ def fetch_psyopoly_data():
             
             raw_psy_items.append({"headline": headline, "url": url})
             
-            # 🚨 SYNCHRONIZED DATA STRUCTURE
+            # 🚨 FIX 2: Synchronized Data Structure (Action, Headline, Risk keys appended)
             formatted_events.append({
                 "Date": item.get("posted_at", "").split("T")[0] if item.get("posted_at") else datetime.now().strftime("%Y-%m-%d"),
                 "Actor": "Psyopoly/West Asia", 
@@ -192,7 +191,6 @@ def extract_tactical_events(news_text):
     raise Exception("Max retries reached.")
 
 def generate_flush_to_brief(accumulated_events):
-    # Trim prompt payload to avoid token limit issues
     trimmed = accumulated_events[:10]
     prompt = (
         "You are an elite Geopolitics-OSINT analyst. "
@@ -229,14 +227,12 @@ def generate_flush_to_brief(accumulated_events):
                 
             return json.loads(raw_text)
         except Exception as e: 
-            wait = 30 * (attempt + 1)  # 30s, 60s, 90s — exponential backoff
+            wait = 30 * (attempt + 1)
             error_msg = f"FLASH TO BRIEF Attempt {attempt + 1} failed: {type(e).__name__}: {e}"
             print(f"🚨 {error_msg}")
             logging.error(error_msg)
-            print(f"⏳ Waiting {wait}s before retry {attempt + 2}...")
             time.sleep(wait)
         
-    # 🛡️ DETERMINISTIC FALLBACK
     return {
         "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
         "tactical_indicators": ["API Rate Limit Hit", "System Awaiting Reset", "Data Pipeline Intact"],
@@ -250,26 +246,25 @@ if __name__ == "__main__":
         news_data, article_count, psy_events, source_map = fetch_daily_intelligence()
         if article_count == 0: exit(1)
             
-        extracted_events = extract_tactical_events(news_data)
+        # 🚨 FIX 3: Graceful Degradation. Catch Gemini 429 Quota crashes so the script survives!
+        extracted_events = []
+        try:
+            extracted_events = extract_tactical_events(news_data)
+        except Exception as e:
+            error_txt = f"Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: {e}"
+            print(f"⚠️ {error_txt}")
+            logging.warning(error_txt)
         
-        # 🛡️ DETERMINISTIC INJECTION & METADATA HYDRATION
         validated_tactical_events = []
         seen_urls = set()
         validated_count = 0
         
         for event in extracted_events:
             target_id = event.get("Article_ID")
-            if target_id not in source_map:
-                print(f"⚠️ Rejected invalid ID: {target_id}")
-                continue
+            if target_id not in source_map: continue
                 
             url = source_map[target_id]["url"]
-            if not valid_url(url):
-                print(f"⚠️ Rejected invalid URL: {url}")
-                continue
-                
-            if url in seen_urls:
-                continue
+            if not valid_url(url) or url in seen_urls: continue
             seen_urls.add(url)
             
             event["Source"] = url
@@ -283,8 +278,9 @@ if __name__ == "__main__":
             
         print(f"✅ Validated {validated_count} of {len(extracted_events)} Gemini selections")
         
+        # 🚨 This will now successfully execute even if Gemini crashed!
         if psy_events:
-            validated_tactical_events = psy_events[:2] + validated_tactical_events
+            validated_tactical_events = psy_events[:3] + validated_tactical_events
             
         output_file_tactical = 'data/executive_home/tactical_events_24h.json'
         master_events = []
@@ -303,11 +299,9 @@ if __name__ == "__main__":
         unique_master = unique_master[:25]
         json.dump(unique_master, open(output_file_tactical, 'w'), indent=4)
         
-        # 🛑 ADD THIS: Let the rate-limit window reset before the second Gemini call
         print("⏳ Cooling down 60s before FLASH TO BRIEF generation to allow API rate limits to reset...")
         time.sleep(60)
 
-        # Trim payload — 25 events is too large; top 10 is enough for a brief
         brief_input = unique_master[:10]
         json.dump(generate_flush_to_brief(brief_input), open('data/executive_home/flush_brief_24h.json', 'w'), indent=4)
         
