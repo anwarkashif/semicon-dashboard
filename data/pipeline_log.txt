@@ -174,3 +174,14 @@
 2026-06-24 08:18:34,704 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
 2026-06-24 08:19:34,728 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-24 08:19:47,389 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-24 09:17:59,152 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 09:18:01,126 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-24 09:18:16,142 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 09:18:17,795 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-24 09:18:47,826 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 09:19:12,690 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-24 09:20:12,702 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 09:20:13,522 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-24 09:20:13,523 - ERROR - FLASH TO BRIEF Attempt 1 failed: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 09:20:43,548 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-24 09:20:58,093 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
