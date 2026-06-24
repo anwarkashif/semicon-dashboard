@@ -1,42 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Lavrov Says Russia Will Not Halt at Front Line for Ukraine Talks",
+        "Title": "Russian Commanders Accused of Failing to Curb Neo-Nazi Insignia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32210",
+        "Title": "US Supports Ukraine Strikes on Russian Refineries",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.npr.org/2026/06/23/g-s1-129603/up-first-newsletter-iran-oil-sanctions-trump-economy-minnesota-subpoenas-save-voter-info",
-        "Title": "U.S. lifts Iran oil sanctions. And, federal judge rules SAVE voter tool unlawful",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89338",
-        "Title": "Ukraine Destroys Russian Unmanned Vessel in Black Sea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32207",
-        "Title": "US Builds Training Grounds for Ukraine",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33891",
-        "Title": "US Embassy in Beirut Reports Gunfire",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03",
+        "Title": "Siemens Products using OpenSSL",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
@@ -46,27 +25,48 @@
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOS212RDBjVUtYcENVTlBPSHc3MmgtWnd6eGNQTnlwY0JiOUVZYzJKbzNnWDI4MEliVENONkhqV01hb1Nza1laRG9DaFJuYVh4bVQ3U0RjQ2tDMC1JbkdVM2V0MjlfSXAyUFhlTDRkTnZTM1RFT2RWVVRPWEVtcHB6YmVlY1JTcUx4Z29MbzNmdy1uc2pyUExXYktPX21kMEZFOUtoYUxkWnFNSGF0?oc=5",
-        "Title": "Tzu Chi Relief Efforts in Lebanon: Blankets Delivered Amid Ongoing Conflict - ReliefWeb",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://warmonitor.com/",
-        "Title": "North Korean soldier crosses border to South",
+        "Title": "Paris opens canal to swimmers looking to cool off in heatwave",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/24/us-treasury-will-oversee-frozen-iranian-funds-when-theyre-released-bessent-says.html",
-        "Title": "U.S. Treasury will oversee frozen Iranian funds when they're released, Bessent says",
+        "Source": "https://www.france24.com/en/middle-east/20260624-us-military-says-senior-islamic-state-group-leader-killed-syria-air-strike",
+        "Title": "US military says senior Islamic State group leader killed in Syria air strike",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/video/20260624-nigeria-s-waterfront-communities-push-back-against-evictions",
+        "Title": "Nigeria's waterfront communities push back against evictions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/video/20260624-anger-mounts-as-sudan-s-army-takes-in-darfur-paramilitary-defectors",
+        "Title": "Anger mounts as Sudan's army takes in Darfur paramilitary defectors",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
