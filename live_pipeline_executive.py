@@ -63,22 +63,38 @@ def resolve_final_url(url, headers):
 def fetch_psyopoly_data():
     SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news?select=id%2Cheadline%2Cposted_at%2Curl&order=posted_at.desc&limit=20"
     ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxvamlyb2x6a3Nob3FnY2Nyd3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODQyNjQsImV4cCI6MjA4OTY2MDI2NH0.DzdBr_d69SSlRxtnxH8DRqc0hLNQfb4wL5t1Qe96UMo"
-    headers = {"apikey": ANON_KEY, "authorization": f"Bearer {ANON_KEY}", "accept": "application/json"}
+    
+    # 🚨 SYNCHRONIZED HEADERS
+    headers = {
+        "apikey": ANON_KEY, 
+        "authorization": f"Bearer {ANON_KEY}", 
+        "accept": "application/json",
+        "origin": "https://www.psyopoly.pro",
+        "referer": "https://www.psyopoly.pro/"
+    }
     
     formatted_events = []; raw_psy_items = []
     try:
         for item in requests.get(SUPABASE_URL, headers=headers, timeout=10).json():
-            headline = item.get("headline", "No Headline Provided")
+            headline = item.get("headline", "No Headline Provided").strip()
             url = item.get("url", "https://www.psyopoly.pro/middle-east")
             if not valid_url(url): continue
             
             raw_psy_items.append({"headline": headline, "url": url})
+            
+            # 🚨 SYNCHRONIZED DATA STRUCTURE
             formatted_events.append({
-                "Date": item.get("posted_at", "").split("T")[0],
-                "Actor": "Psyopoly/West Asia", "Location": "Middle East",
-                "Event": "Strategic Update", "Action": headline[:60] + "...",
-                "Summary": headline, "Risk": "HIGH", "Source": url,
-                "Title": headline, "Feed_Source": "Psyopoly Supabase",
+                "Date": item.get("posted_at", "").split("T")[0] if item.get("posted_at") else datetime.now().strftime("%Y-%m-%d"),
+                "Actor": "Psyopoly/West Asia", 
+                "Location": "Middle East",
+                "Event": "Strategic Update", 
+                "Action": headline,
+                "Headline": headline,
+                "Summary": headline, 
+                "Risk": "HIGH", 
+                "Source": url,
+                "Title": headline, 
+                "Feed_Source": "Psyopoly Supabase",
                 "Publisher": urlparse(url).netloc.replace("www.", "")
             })
         return formatted_events, raw_psy_items
