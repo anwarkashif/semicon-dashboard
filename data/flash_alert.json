@@ -1,9 +1,44 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Dubna Space Communications Center in Moscow Region",
+        "Title": "Lavrov Says Russia Will Not Halt at Front Line for Ukraine Talks",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.npr.org/2026/06/23/g-s1-129603/up-first-newsletter-iran-oil-sanctions-trump-economy-minnesota-subpoenas-save-voter-info",
+        "Title": "U.S. lifts Iran oil sanctions. And, federal judge rules SAVE voter tool unlawful",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89338",
+        "Title": "Ukraine Destroys Russian Unmanned Vessel in Black Sea",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32207",
+        "Title": "US Builds Training Grounds for Ukraine",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33891",
+        "Title": "US Embassy in Beirut Reports Gunfire",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
@@ -11,62 +46,27 @@
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89330",
-        "Title": "US Tests Golden Dome Missile Defense System",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/nexta_live/119295",
-        "Title": "Ukraine Deploys New Guided Bomb",
+        "Source": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOS212RDBjVUtYcENVTlBPSHc3MmgtWnd6eGNQTnlwY0JiOUVZYzJKbzNnWDI4MEliVENONkhqV01hb1Nza1laRG9DaFJuYVh4bVQ3U0RjQ2tDMC1JbkdVM2V0MjlfSXAyUFhlTDRkTnZTM1RFT2RWVVRPWEVtcHB6YmVlY1JTcUx4Z29MbzNmdy1uc2pyUExXYktPX21kMEZFOUtoYUxkWnFNSGF0?oc=5",
+        "Title": "Tzu Chi Relief Efforts in Lebanon: Blankets Delivered Amid Ongoing Conflict - ReliefWeb",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32203",
-        "Title": "Japan Supports Ukraine Through Drone Production",
+        "Source": "https://warmonitor.com/",
+        "Title": "North Korean soldier crosses border to South",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/24/oil-prices-wti-brent-crude-trump-doj-gasoline-prices-strait-of-hormuz.html",
-        "Title": "Brent falls below $76, notching its lowest level since day before U.S.-Iran war",
+        "Source": "https://www.cnbc.com/2026/06/24/us-treasury-will-oversee-frozen-iranian-funds-when-theyre-released-bessent-says.html",
+        "Title": "U.S. Treasury will oversee frozen Iranian funds when they're released, Bessent says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/24/rheinmetall-stock-defense-germany-warship-scrap-plans.html",
-        "Title": "Defense stocks plummet after Germany to scrap warship plans; Rheinmetall stock down 13%",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/environment/2026/jun/24/leah-stewart-shark-attack-victim-coogee-beach-wakes-from-coma",
-        "Title": "Woman attacked by shark at Coogee beach wakes briefly from coma to say three words",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32204",
-        "Title": "UK Government Plans to Promote BBC on Social Media",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
