@@ -1,37 +1,30 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Drone Strike Kills Palestinian Child in Southern Gaza",
+        "Title": "Ukraine Strikes Key Power Substation in Occupied Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cbsnews.com/news/north-korea-soldier-suspected-defection-south-korea/",
-        "Title": "North Korean soldier crosses border in suspected defection, report says",
+        "Source": "https://t.me/nexta_live/119306",
+        "Title": "Russian Forces Strike Theater in Konotop",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "WATCH"
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/24/north-korea-commissions-largest-ever-warship?traffic_source=rss",
-        "Title": "North Korea commissions largest-ever warship",
+        "Source": "https://t.me/intelslava/89333",
+        "Title": "North Korea Commissions New Guided-Missile Frigate",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/video/world/asia/100000010633558/myanmar-civil-war.html",
-        "Title": "On the Front Lines of Myanmar\u2019s Forgotten War",
+        "Source": "https://www.bbc.co.uk/news/videos/c4gyenl6nz0o?at_medium=RSS&at_campaign=rss",
+        "Title": "Why was JD Vance in a luxury Swiss resort for talks with Iran?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03",
-        "Title": "Siemens Products using OpenSSL",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Publisher": "bbc.co.uk",
         "threat_level": "HIGH"
     },
     {
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119304",
-        "Title": "Polish Deputy Calls for Deportation of Ukrainians",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-02",
+        "Title": "Siemens SIPROTEC 5 Using DIGSI5 Protocol",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/business/2026/jun/24/heatwave-great-britain-grid-operator-extra-electricity-power-plants",
+        "Title": "Heatwave pushes Great Britain\u2019s grid operator to call for extra electricity from power plants",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119307",
+        "Title": "Russian Soldier Loses Legs in Meat Grinder Assault",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
         "Source": "https://warmonitor.com/",
-        "Title": "Tankmaker KNDS lays out IPO plans amid defense selloff in Europe",
+        "Title": "Massive AI spending and higher interest rates: What's behind the tech sell-off?",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89333",
-        "Title": "North Korea Commissions New Guided-Missile Frigate",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
