@@ -1,9 +1,37 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Dubna Space Communications Center in Moscow Region",
+        "Title": "Israeli Drone Strike Kills Palestinian Child in Southern Gaza",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cbsnews.com/news/north-korea-soldier-suspected-defection-south-korea/",
+        "Title": "North Korean soldier crosses border in suspected defection, report says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/24/north-korea-commissions-largest-ever-warship?traffic_source=rss",
+        "Title": "North Korea commissions largest-ever warship",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.nytimes.com/video/world/asia/100000010633558/myanmar-civil-war.html",
+        "Title": "On the Front Lines of Myanmar\u2019s Forgotten War",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03",
+        "Title": "Siemens Products using OpenSSL",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
@@ -21,50 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89330",
-        "Title": "US Tests Golden Dome Missile Defense System",
+        "Source": "https://t.me/nexta_live/119304",
+        "Title": "Polish Deputy Calls for Deportation of Ukrainians",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119295",
-        "Title": "Ukraine Deploys New Guided Bomb",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32203",
-        "Title": "Japan Supports Ukraine Through Drone Production",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/24/oil-prices-wti-brent-crude-trump-doj-gasoline-prices-strait-of-hormuz.html",
-        "Title": "Brent falls below $76, notching its lowest level since day before U.S.-Iran war",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/24/rheinmetall-stock-defense-germany-warship-scrap-plans.html",
-        "Title": "Defense stocks plummet after Germany to scrap warship plans; Rheinmetall stock down 13%",
+        "Source": "https://warmonitor.com/",
+        "Title": "Tankmaker KNDS lays out IPO plans amid defense selloff in Europe",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/environment/2026/jun/24/leah-stewart-shark-attack-victim-coogee-beach-wakes-from-coma",
-        "Title": "Woman attacked by shark at Coogee beach wakes briefly from coma to say three words",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32204",
-        "Title": "UK Government Plans to Promote BBC on Social Media",
+        "Source": "https://t.me/intelslava/89333",
+        "Title": "North Korea Commissions New Guided-Missile Frigate",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
