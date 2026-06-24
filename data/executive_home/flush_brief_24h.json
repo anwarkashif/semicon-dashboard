@@ -1,17 +1,11 @@
 {
-    "bluf": "Global geopolitical tensions are escalating across multiple fronts, marked by increased military actions, economic decoupling, and shifts in international alliances. Key flashpoints include the Middle East, Taiwan Strait, and the ongoing Russia-Ukraine conflict, while major powers like the US and China are actively reshaping global economic and technological landscapes.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "Markets are closely monitoring former President Trump's influence on US foreign policy and economic stability, particularly concerning the Middle East, following reports of his 'divorce' threat to Netanyahu.",
-        "The US has imposed new sanctions on Cuban companies, exacerbating economic instability and humanitarian concerns on the island.",
-        "Houthi forces in Yemen continue to threaten and conduct missile attacks against Israel and shipping in the Red Sea and Gulf of Aden, raising risks of regional conflict escalation and maritime trade disruption.",
-        "The US and EU allies have formed a pact to reduce reliance on Chinese AI supply chains, signaling a major move towards technological decoupling and increased economic competition.",
-        "Ukraine has targeted a critical Russian semiconductor plant, disrupting missile production lines and indicating an escalation in the conflict.",
-        "China is actively promoting the Yuan to circumvent Western sanctions and challenge the dollar's hegemony in the global financial system.",
-        "Taiwan warns of a shrinking response time amid rising Chinese military pressure in the Taiwan Strait, increasing the risk of potential military conflict.",
-        "The Iranian President has called for a stronger strategic partnership with Pakistan, potentially shifting regional power dynamics in West Asia.",
-        "Heightened security concerns are reported in Israeli Arava settlements following warnings of a potential invasion of Eilat."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The global landscape is characterized by intensifying geopolitical competition and regional instability. In the Middle East, potential shifts in US policy under figures like Trump are creating uncertainty, while Iran seeks stronger regional alliances, and Israel faces direct threats from actors like the Houthis. Economically, the US and EU are actively pursuing technological decoupling from China, which, in turn, is strategically promoting the Yuan to challenge dollar hegemony and circumvent Western sanctions. Military tensions are rising in critical areas, with Ukraine striking Russian military production facilities and Taiwan warning of imminent threats from increased Chinese military pressure. These developments collectively point to a fragmented international order with heightened risks of conflict and economic disruption.",
-    "risk_assessment": "HIGH. The confluence of military escalations (Ukraine, Taiwan Strait, Red Sea), economic warfare (sanctions, AI decoupling, Yuan promotion), and shifting alliances (Iran-Pakistan) creates a volatile environment. Specific risks include regional conflict expansion, significant maritime trade disruption, global economic instability, technological supply chain vulnerabilities, and a potential challenge to the existing international financial order. The humanitarian impact of sanctions and conflicts remains a persistent concern.",
-    "strategic_forecast": "Expect continued fragmentation of global supply chains, particularly in critical technologies like AI. The challenge to dollar dominance by the Yuan will likely intensify, leading to a more multipolar financial system. Regional conflicts, especially in the Middle East and the Taiwan Strait, are poised for further escalation, potentially drawing in major powers. US foreign policy, particularly concerning the Middle East, may become more unpredictable, influencing market stability and alliance structures. The overall trend points towards increased geopolitical rivalry and a higher probability of localized conflicts with global repercussions."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
