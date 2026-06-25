@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Italy Refuses US Requests to Launch Iran Strike Missions From Its Bases",
+        "Title": "Ukrainian Drone Strike Damages Russia's NORSI Refinery",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33907",
+        "Title": "Israel Confronted by Hezbollah in Southern Lebanon",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,6 +21,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/nexta_live/119395",
+        "Title": "Russia May Block Foreign Services",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUTJIcHFraGQ3ODc4NXBwaElXUWhuOTJadEk0VDUyOWg0ZkJjYWJ0Q09halFFTXN6OWZOVmVsYzFjZW5hR3d6bDlSV0t6bGFXVVRwbFYwRzJoenR2UTY3R19HYWo0ay1IRWxKbzA1OVU3b1hWRkphUWVPZk8tYWhSa0Y3LTlaQ1cxOVdJdm9FRU9QTGNPZXlfdldXaGtyMGVhUDZFbldXemM1LXoxNFFfODhiTGVQLVRrWEF1RUMyaFBtd1B6N3hWUWZTSkpqRWRMbnh4NWxtRQ?oc=5",
         "Title": "Operational Update: IDF Response Regarding IDF Activity Near Humanitarian Aid Distribution Sites in Gaza - idf.il",
         "Feed_Source": "WAR MONITOR",
@@ -21,22 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119394",
-        "Title": "France Says US No Longer Neutral in Russia-Ukraine War",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
         "Title": "Schneider Electric PowerLogic P7",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/liveuamap/12188",
+        "Title": "US Sends Rescue Teams to Venezuela After Earthquakes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Syria Resumes Flights to Amsterdam",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://t.me/nexta_live/119396",
         "Title": "Russia Oil Refinery Stops Production After Damage",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119395",
-        "Title": "Russia May Block Foreign Services",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/25/concrete-breaking-off-walls-survivors-describe-venezuelas-earthquakes?traffic_source=rss",
-        "Title": "\u2018Concrete breaking off walls\u2019: Survivors describe Venezuela\u2019s earthquakes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
