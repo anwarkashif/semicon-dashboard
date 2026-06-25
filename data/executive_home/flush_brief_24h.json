@@ -1,16 +1,11 @@
 {
-    "bluf": "Immediate geopolitical tensions are critically high, primarily driven by escalating maritime security threats in the Middle East (Hormuz, Red Sea) amid US preparations for a potential war with Iran, and heightened military activity in the Taiwan Strait. Global trade and energy markets face significant disruption risks.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "Iran warns against Hormuz crossings without authorisation.",
-        "Rubio warns ship transit fees in Hormuz would 'spread like contagion' to other waterways.",
-        "White House requests $87.6 billion from Congress, mostly for Iran war.",
-        "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea.",
-        "US, UK, France, Germany raise alarm over Chinese military patrols off eastern Taiwan.",
-        "Bahrain foreign minister welcomes Oman corridor for safe passage through Hormuz.",
-        "Iraq considers quitting OPEC if production quota dispute escalates.",
-        "Anthropic accuses Alibaba of obtaining illicit access to Claude AI."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The Middle East is on the brink of significant escalation, with Iran asserting control over the Strait of Hormuz and the US actively seeking substantial funding for a potential war. This is compounded by Houthi attacks and a ban on Israeli vessels in the Red Sea, severely impacting maritime security and global trade routes, despite a failed US-Iran ceasefire pact. Concurrently, major powers are alarmed by increased Chinese military patrols off eastern Taiwan, signaling a heightened risk of conflict in the Indo-Pacific. Economic stability is further threatened by Iraq's potential withdrawal from OPEC, which could destabilize global oil markets. Underlying these geopolitical flashpoints is an intensifying US-China tech rivalry, evidenced by allegations of AI intellectual property theft.",
-    "risk_assessment": "HIGH risk of major military conflict in the Middle East, with potential for direct US-Iran confrontation and widespread regional instability. This carries a HIGH probability of severe disruption to global energy supplies and maritime trade through critical chokepoints like Hormuz and the Red Sea. The situation in the Taiwan Strait presents a HIGH risk of geopolitical tensions escalating into a conflict with international implications. Global economic stability faces MODERATE-HIGH risk from oil market volatility if Iraq exits OPEC. Cyber and intellectual property theft risks remain HIGH, fueling US-China strategic competition.",
-    "strategic_forecast": "The current trajectory suggests a prolonged period of instability and militarization across key global maritime routes. US-Iran tensions are likely to persist and potentially escalate, leading to further military buildups and a heightened risk of miscalculation. China's assertive posture around Taiwan will continue, challenging regional security and potentially leading to a more confrontational stance from Western allies. Global trade and energy security will remain precarious, necessitating alternative routes and supply chain resilience measures. The US-China strategic competition, encompassing military, economic, and technological domains, is set to intensify, shaping the future geopolitical landscape. Regional diplomatic efforts, such as the Oman corridor, may offer temporary relief but are unlikely to resolve fundamental power struggles."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
