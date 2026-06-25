@@ -1,23 +1,37 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Rejects Omani Maritime Transit Framework, Threatens Shipping",
+        "Title": "Philippines Launches Indigenous MULA Satellite",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cbsnews.com/video/what-know-us-iran-contradict-publicly/",
-        "Title": "What we know as U.S., Iran contradict each other publicly",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html",
-        "Title": "Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities",
+        "Source": "https://www.bbc.co.uk/news/articles/cwyklykn5dwo?at_medium=RSS&at_campaign=rss",
+        "Title": "Anthropic accuses Chinese rival Alibaba of illicitly extracting AI capabilities",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/24/world/asia/myanmar-civil-war-explained.html",
+        "Title": "What to Know About Myanmar\u2019s Chaotic War",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQmNUWnFjQnYyeTFsUTdyWjY5VjBlWF9zZXVrRUtKU0pjcnFocVdUcnJrWU1sRTZxTldCSWl0b3d5alBoRzhwMWpvdTBVWWpwNzhtY2dNWFdzTnZadm9CVS1td243SmJSNzdveFdUcVRJcVI2OHVZazNsZTJBVWR2NnlSckxacTBqU2dBOTZmX3FXX0V4bDk3b2Jxdi1YVXlKdGpfMFd0SEgwOGZPa1pzaG10NWlLSnpPaVVtUg?oc=5",
+        "Title": "China says it has a right to target people overseas with new ethnic unity law - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/iranians-mark-first-ashura-since-khameneis-killing-in-the-us-iran-war?traffic_source=rss",
+        "Title": "Iranians mark first Ashura since Khamenei\u2019s killing in the US-Iran war",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
@@ -32,41 +46,27 @@
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-07",
-        "Title": "Hubbell Aclara Metrum Cellular Web Interface",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-02",
-        "Title": "Siemens SIPROTEC 5 Using DIGSI5 Protocol",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/buildings-collapse-in-venezuelan-capital-after-powerful-earthquakes-hit?traffic_source=rss",
-        "Title": "Buildings collapse in Venezuelan capital after powerful earthquakes hit",
+        "Source": "https://warmonitor.com/",
+        "Title": "Anthropic's latest hiring spree reveals where it's building AI data centers next",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cbsnews.com/news/7-1-magnitude-earthquake-venezuela-tsunami-advisory-puerto-rico-virgin-islands/",
-        "Title": "Two 7+ magnitude earthquakes strike Venezuela, heavy damage reported in Caracas",
+        "Source": "https://www.theguardian.com/world/2026/jun/25/french-heat-trap-homes-climate-inequality-grows",
+        "Title": "\u2018It\u2019s like a furnace\u2019: French struggle with heat-trap homes as climate inequality grows",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/25/buildings-collapse-as-quakes-rock-venezuela-high-casualties-likely.html",
-        "Title": "Buildings collapse as quakes rock Venezuela, 'high casualties' likely",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
