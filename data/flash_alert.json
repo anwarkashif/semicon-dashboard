@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Twin Earthquakes Kill 32, Injure 700 in Venezuela, Fires Rage in La Guaira",
+        "Title": "Iran Warns Ships to Avoid Oman Route, Orders Coordination",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/24/world/asia/myanmar-civil-war-explained.html",
-        "Title": "What to Know About Myanmar\u2019s Chaotic War",
+        "Source": "https://t.me/nexta_live/119344",
+        "Title": "Ukrainian Drones Hit Russian Oil Base",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,7 +18,7 @@
         "Title": "Anthropic accuses Chinese rival Alibaba of illicitly extracting AI capabilities",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cnbc.com/2026/06/25/venezuela-earthquakes-casualties-trump-pledges-support-aids-oil-.html",
@@ -26,6 +26,13 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/thousands-feared-dead-as-twin-earthquakes-cause-devastation-across-venezuel?traffic_source=rss",
+        "Title": "Thousands feared dead as twin earthquakes cause devastation across Venezuel",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -42,29 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
-        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/warmonitors/44671",
-        "Title": "Venezuela Earthquake Causes Destruction",
+        "Source": "https://t.me/nexta_live/119348",
+        "Title": "Venezuela Faces Devastating Destruction",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/warmonitors/44670",
-        "Title": "Venezuela Hit by Severe Earthquake",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119346",
-        "Title": "Venezuela Earthquakes Kill 32, Injure 700",
+        "Source": "https://t.me/warmonitors/44672",
+        "Title": "US Deploys Aid to Venezuela",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
