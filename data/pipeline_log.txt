@@ -614,3 +614,10 @@
 2026-06-25 10:18:35,719 - WARNING - Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: All API keys exhausted via rotation.
 2026-06-25 10:18:35,756 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-25 10:18:45,007 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-25 11:18:06,369 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 11:18:06,524 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-25 11:18:06,525 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-25 11:18:16,571 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 11:18:33,116 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-25 11:18:33,152 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 11:18:49,162 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
