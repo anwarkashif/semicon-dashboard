@@ -1,16 +1,9 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Baltic Fleet Near Saint Petersburg and Factory in Cheboksary",
+        "Title": "Iran Rejects Omani Maritime Transit Framework, Threatens Shipping",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html",
-        "Title": "Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,10 +14,10 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "U.S. crude oil briefly dips below $70 as tankers transit Strait of Hormuz",
+        "Source": "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html",
+        "Title": "Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "cnbc.com",
         "threat_level": "HIGH"
     },
     {
@@ -39,7 +32,14 @@
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-07",
+        "Title": "Hubbell Aclara Metrum Cellular Web Interface",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-02",
