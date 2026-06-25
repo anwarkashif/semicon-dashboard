@@ -1,17 +1,11 @@
 {
-    "bluf": "Global geopolitical tensions are escalating across multiple critical theaters. The US-Iran conflict remains volatile, marked by diplomatic ambiguity, significant financial demands, and internal US political division. Concurrently, China is increasing military pressure on Taiwan and escalating economic warfare with the US through rare earth export controls. Maritime security in the Red Sea and Strait of Hormuz is severely compromised by Houthi attacks, prompting multinational military deployments. Russia continues its internal crackdown on dissent.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "Confusing language in the U.S.-Iran cease-fire agreement makes its legal status unclear.",
-        "President Trump states culpability for the strike on a girls' school in Iran may never be known.",
-        "President Trump hails a 'unified party' despite a closed-door Senate meeting devolving into a shouting match over the Iran war.",
-        "The Trump administration requests nearly $88 billion for the war in Iran, facing contentious negotiations and Congressional rebuke.",
-        "Russian opposition leader jailed over anti-war social media posts.",
-        "Western powers (US, UK, France, Germany) raise alarm over Chinese patrols off eastern Taiwan.",
-        "China targets US rare earth firms with export controls, escalating trade war.",
-        "Houthi rebels claim missile attack on Israel and target Israel-affiliated vessels in Red Sea and Strait of Hormuz.",
-        "UK minehunting force arrives in the Middle East as a multinational mission takes shape in Hormuz."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The ongoing US-Iran conflict is characterized by a lack of clear diplomatic resolution, evidenced by ambiguous cease-fire language and presidential statements downplaying accountability for attacks. This conflict is proving financially burdensome for the US, with the administration requesting substantial funding amidst internal political division and criticism from NATO allies. Simultaneously, China is aggressively asserting its regional influence through increased military patrols off eastern Taiwan, raising alarms among Western powers, and escalating economic warfare with the US by imposing export controls on critical rare earth materials. In the Middle East, Houthi rebels continue to pose a significant threat to maritime security, targeting Israel and affiliated vessels in vital shipping lanes, which has prompted the deployment of multinational forces, including a UK minehunting contingent, to secure the Strait of Hormuz. Domestically, Russia continues to suppress dissent, jailing opposition leaders for anti-war social media posts.",
-    "risk_assessment": "HIGH. The confluence of these events indicates a high risk of prolonged regional conflicts, particularly in the Middle East and potentially the Indo-Pacific. The US-Iran situation carries significant risks of miscalculation, internal political instability within the US, and strain on international alliances. Escalating tensions around Taiwan and the US-China trade war over strategic resources elevate the risk of direct military confrontation and severe global supply chain disruptions. Persistent maritime insecurity in the Red Sea and Strait of Hormuz threatens global trade and energy supplies, with a high potential for further military escalation. Russia's internal repression signals continued authoritarianism and potential for domestic instability.",
-    "strategic_forecast": "The US-Iran conflict is likely to remain a protracted and costly engagement, with continued diplomatic uncertainty and internal US political friction. China's assertive posture in the Indo-Pacific and its use of economic coercion will intensify, increasing the probability of regional flashpoints and further fragmenting global trade. The Middle East will remain a critical theater for maritime security, necessitating sustained international military presence and risking broader regional escalation. Overall, global geopolitical competition will intensify across military, economic, and diplomatic domains, leading to a more volatile and unpredictable international environment."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
