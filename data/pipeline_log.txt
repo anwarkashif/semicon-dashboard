@@ -729,3 +729,13 @@
 2026-06-25 17:18:16,912 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
 2026-06-25 17:18:16,949 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-25 17:18:29,732 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-25 18:02:26,067 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 18:02:28,040 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-25 18:02:28,040 - WARNING - API Key 1 Attempt 1 Failed: ServerError - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
+2026-06-25 18:02:38,072 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 18:02:38,956 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-25 18:02:38,957 - WARNING - API Key 1 Attempt 2 Failed: ServerError - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
+2026-06-25 18:02:38,957 - INFO - Rotating to API Key 2
+2026-06-25 18:02:41,960 - WARNING - Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: All API keys exhausted via rotation.
+2026-06-25 18:02:41,987 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 18:02:53,459 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
