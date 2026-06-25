@@ -4,14 +4,28 @@
         "Title": "Israeli Military Burns Houses in Southern Lebanese Village",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89358",
+        "Title": "France Seizes Russian Tanker Off Sicily Coast",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.dw.com/en/trump-offers-iran-an-economic-lifeline-with-strings/a-77621800?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Trump offers Iran an economic lifeline \u2014 with strings",
+        "Source": "https://t.me/nexta_live/119373",
+        "Title": "Russia Withdraws from Kynburnska Spit",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "HIGH"
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/liveuamap/12184",
+        "Title": "Israel Conducts Airstrike Near Zawtar and Mayfadoun",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/Middle_East_Spectator/33899",
@@ -19,20 +33,6 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61518",
-        "Title": "Iran To Receive Used Su-30SM2 Fighter Jets From Russia",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/25/world/middleeast/iraq-militias-state-control.html",
-        "Title": "Iraq\u2019s New Leader Faces Resistance Trying to Bring Militias Under State Control",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
-        "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.dw.com/en/family-seeks-justice-after-indian-sailor-killed-in-us-strike/a-77706371?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Family seeks justice after Indian sailor killed in US strike",
+        "Source": "https://www.nytimes.com/2026/06/25/world/americas/car-ramming-mexico-world-cup-cabo-san-lucas.html",
+        "Title": "Driver Plows Into Crowd of World Cup Fans in Mexico, Authorities Say",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-trump-strait-of-hormuz-oil-prices/",
-        "Title": "Oil prices keep dropping as Oman rules out Strait of Hormuz \"transit fees\"",
+        "Source": "https://news.sky.com/story/australias-highest-paid-tv-presenter-faces-backlash-over-tommy-robinson-interview-13557660",
+        "Title": "Australia's highest-paid TV presenter faces backlash over Tommy Robinson interview",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "news.sky.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89357",
+        "Title": "Germany Calls for Ceasefire in Ukraine",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
