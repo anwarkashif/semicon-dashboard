@@ -1,52 +1,45 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Mercenaries Mutilate Two Men in Mali",
+        "Title": "Italy Refuses US Requests to Launch Iran Strike Missions From Its Bases",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/features/2026/6/25/hard-headed-pragmatism-israels-war-backfires-as-gulf-backs-us-iran-mou?traffic_source=rss",
-        "Title": "Pragmatic choice: Israel\u2019s war backfires as Gulf backs US-Iran deal",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/25/ukrainian-attack-on-crimea-kills-five-russian-officials-say?traffic_source=rss",
-        "Title": "Ukrainian attack on Crimea kills five, Russian officials say",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32235",
-        "Title": "Ukraine Call Centers Target EU Citizens",
+        "Source": "https://t.me/warmonitors/44684",
+        "Title": "UN Pauses Ship Evacuation Plan After Vessel Attacked in Hormuz",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/sudan-warnings-mount-over-the-risk-of-new-mass-atrocities/a-77709377?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Sudan: Warnings mount over the risk of new mass atrocities",
+        "Source": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUTJIcHFraGQ3ODc4NXBwaElXUWhuOTJadEk0VDUyOWg0ZkJjYWJ0Q09halFFTXN6OWZOVmVsYzFjZW5hR3d6bDlSV0t6bGFXVVRwbFYwRzJoenR2UTY3R19HYWo0ay1IRWxKbzA1OVU3b1hWRkphUWVPZk8tYWhSa0Y3LTlaQ1cxOVdJdm9FRU9QTGNPZXlfdldXaGtyMGVhUDZFbldXemM1LXoxNFFfODhiTGVQLVRrWEF1RUMyaFBtd1B6N3hWUWZTSkpqRWRMbnh4NWxtRQ?oc=5",
+        "Title": "Operational Update: IDF Response Regarding IDF Activity Near Humanitarian Aid Distribution Sites in Gaza - idf.il",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Publisher": "news.google.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61530",
-        "Title": "Iran Warns Vessels Near Hormuz After Cargo Ship Hit",
+        "Source": "https://t.me/nexta_live/119394",
+        "Title": "France Says US No Longer Neutral in Russia-Ukraine War",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
         "Title": "Schneider Electric PowerLogic P7",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -56,17 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "World stocks climb on chip rally; dollar steadies near one-year high - Reuters",
+        "Source": "https://t.me/nexta_live/119396",
+        "Title": "Russia Oil Refinery Stops Production After Damage",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/25/world/americas/survivor-search-venezuela-earthquake.html",
-        "Title": "On the ground and online, Venezuelans desperately search for missing relatives.",
+        "Source": "https://t.me/nexta_live/119395",
+        "Title": "Russia May Block Foreign Services",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/6/25/concrete-breaking-off-walls-survivors-describe-venezuelas-earthquakes?traffic_source=rss",
+        "Title": "\u2018Concrete breaking off walls\u2019: Survivors describe Venezuela\u2019s earthquakes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
