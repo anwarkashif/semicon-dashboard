@@ -1,5 +1,40 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Israeli Military Burns Houses in Southern Lebanese Village",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.dw.com/en/trump-offers-iran-an-economic-lifeline-with-strings/a-77621800?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Trump offers Iran an economic lifeline \u2014 with strings",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33899",
+        "Title": "Iran Warns Vessels in Persian Gulf and Sea of Oman",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61518",
+        "Title": "Iran To Receive Used Su-30SM2 Fighter Jets From Russia",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/25/world/middleeast/iraq-militias-state-control.html",
+        "Title": "Iraq\u2019s New Leader Faces Resistance Trying to Bring Militias Under State Control",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
@@ -14,59 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61518",
-        "Title": "Iran To Receive Used Su-30SM2 Fighter Jets From Russia",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89354",
-        "Title": "US and Russia Fail to Reach Agreements in Anchorage",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07",
+        "Title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/25/world/middleeast/iraq-militias-state-control.html",
-        "Title": "Iraq\u2019s New Leader Faces Resistance Trying to Bring Militias Under State Control",
+        "Source": "https://www.dw.com/en/family-seeks-justice-after-indian-sailor-killed-in-us-strike/a-77706371?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Family seeks justice after Indian sailor killed in US strike",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/israeli-forces-kill-palestinian-man-during-raid-on-his-home?traffic_source=rss",
-        "Title": "Israeli forces kill Palestinian man during raid on his home",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Rubio Says Iran-Funded Militias Hinder Regional Peace",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/features/2026/6/25/us-push-for-unified-libyan-government-tests-tripoli-factions?traffic_source=rss",
-        "Title": "US push for unified Libyan government tests Tripoli factions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "dw.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/europe/20260625-france-spain-germany-europe-swelters-as-heatwave-drags-on",
-        "Title": "France, Spain, Germany: Europe swelters as heatwave drags on",
+        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-trump-strait-of-hormuz-oil-prices/",
+        "Title": "Oil prices keep dropping as Oman rules out Strait of Hormuz \"transit fees\"",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/25/world/americas/venezuela-earthquakes-infrastructure.html",
-        "Title": "Venezuela Earthquakes Hammer Infrastructure, Making Aid Efforts Harder",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     }
 ]
