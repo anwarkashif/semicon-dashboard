@@ -1,9 +1,44 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drones Strike Oil Refinery in Ufa, Russia",
+        "Title": "Iraq Faces Critical Financial Crisis After Oil Decline From Iran War",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/liveuamap/12182",
+        "Title": "Iraq Considers Withdrawing From OPEC",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119350",
+        "Title": "Russia Blocks Fuel Shortage Chats in MAX Messenger",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119346",
+        "Title": "Venezuela Earthquakes Kill 32, Injure 700",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,57 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119350",
-        "Title": "Russia Blocks Fuel Shortage Chats in MAX Messenger",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44672",
-        "Title": "US Deploys Aid to Venezuela",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/articles/cwyklykn5dwo?at_medium=RSS&at_campaign=rss",
-        "Title": "Anthropic accuses Chinese rival Alibaba of illicitly extracting AI capabilities",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1GQS1STHdDNDl6QnV4NW9YMVJ0RzhxRmY4LVctdlYxUW13OW1ySXRZN3pqaHg5SWpraFAxUGlsQ09rR3hodnV3eDNSU2I2X2UyWjJNcVMycTNnbTFvYVIxaHhkZjRwRnd5RlNmLTR1RWxvR09ycHc?oc=5",
-        "Title": "Doctors (Syria - Homs Mobile Clinics ) - ReliefWeb",
+        "Source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQmQxaUZCVzgzRUFZMmN6aTFPOHl4WVlZMmVFZWxvWkc5ME5pb05tLTY0TFI4V3VoYzlnQmZOcTFvZTJ2OTZtZlhPaTEzenROdlZsa2RxdXF0UVZpV2I2NTY3ZGdjN2p3bmpqSlJYRkdhWVZCYm0teGVYY043OE1IZlNXMElvVXBkMS1FaXZIMmdSNXpZS2diRm9JaFpZdnFLSUhlR2xpSG84TDJubXc?oc=5",
+        "Title": "EXCLUSIVE: Comcast-owned Sky reaches terms to buy ITV's broadcast unit, sources say - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/24/world/americas/venezuela-earthquake-international-response.html",
-        "Title": "Venezuela\u2019s Neighbors Offer Aid in Earthquake Response",
+        "Source": "https://www.cnbc.com/2026/06/25/india-rajesh-exports-investigation-accounting-irregularities-valcambi.html",
+        "Title": "One of India's largest gold exporters paid its managing director just $180 a month, investigators say in accounting probe",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/france/20260625-paris-dream-turns-to-nightmare-as-rooftop-dwellers-bake-in-historic-heatwave",
-        "Title": "Paris dream turns to nightmare as rooftop dwellers bake in historic heatwave",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119348",
-        "Title": "Venezuela Faces Devastating Destruction",
+        "Source": "https://t.me/nexta_live/119352",
+        "Title": "Venezuela Resident Escapes Building During Earthquake",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
