@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Military Burns Houses in Southern Lebanese Village",
+        "Title": "Italy Denies US Used Air Bases in Call With Iran",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89359",
+        "Title": "Sudanese Forces Down UAE-Backed Drone in El-Obeid",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/featured-documentaries/2026/6/25/iran-israel-and-the-bomb?traffic_source=rss",
+        "Title": "Iran, Israel and the Bomb",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,21 +32,7 @@
         "Title": "Russia Withdraws from Kynburnska Spit",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/liveuamap/12184",
-        "Title": "Israel Conducts Airstrike Near Zawtar and Mayfadoun",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33899",
-        "Title": "Iran Warns Vessels in Persian Gulf and Sea of Oman",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/25/world/americas/car-ramming-mexico-world-cup-cabo-san-lucas.html",
-        "Title": "Driver Plows Into Crowd of World Cup Fans in Mexico, Authorities Say",
+        "Source": "https://www.cbsnews.com/video/europeans-endure-blistering-heat-wave-and-many-without-air-conditioning/",
+        "Title": "Europeans endure blistering heat wave - and many without air conditioning",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.sky.com/story/australias-highest-paid-tv-presenter-faces-backlash-over-tommy-robinson-interview-13557660",
-        "Title": "Australia's highest-paid TV presenter faces backlash over Tommy Robinson interview",
+        "Source": "https://www.politico.eu/article/german-police-fear-unrest-afd-conference/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "German police brace for unrest at far-right AfD conference",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/intelslava/89357",
-        "Title": "Germany Calls for Ceasefire in Ukraine",
+        "Source": "https://www.france24.com/en/video/20260625-brutal-paris-tourists-struggle-in-extreme-heat-as-sites-close-early",
+        "Title": "'Brutal': Paris tourists struggle in extreme heat as sites close early",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
