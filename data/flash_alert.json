@@ -1,9 +1,30 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israel Opposes Withdrawal from Security Zones in Lebanon, Syria, Gaza",
+        "Title": "Houthi Attack Targets Vessel in Bab el-Mandeb",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119388",
+        "Title": "Ukraine Orders Intelligence Operation Against Russia",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.dw.com/en/sudan-warnings-mount-over-the-risk-of-new-mass-atrocities/a-77709377?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Sudan: Warnings mount over the risk of new mass atrocities",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61530",
+        "Title": "Iran Warns Vessels Near Hormuz After Cargo Ship Hit",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -11,28 +32,14 @@
         "Title": "Russian Soldier Threatens Coup in Video Message to Putin",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/warmonitors/44682",
         "Title": "British Cargo Ship Hit Off Oman",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/25/us-supreme-court-paves-way-for-government-to-block-asylum-seekers-at-border?traffic_source=rss",
-        "Title": "US Supreme Court paves way for government to block asylum seekers at border",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
@@ -42,31 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44683",
-        "Title": "\u26a1\ufe0f#UPDATE Scenes from La Guaira, Venezuela",
+        "Source": "https://www.politico.eu/article/the-eu-targets-somalia-next-in-its-anti-migration-push/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "EU targets Somalia in its anti-migration push",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE82dzJiQjAxeGo5aWduSG1qeVNvbEI3UkZVWUNsa2RUb1FXZHg5V0FJOFlEMjlRSGpPclhMSV96MnhRNnhaQVQyS1RQZlNUU0NCZVZWV2FRRVZNVWFEc0Q0bk91aG54VE5EeW1obnhNSQ?oc=5",
-        "Title": "H.VIEW HV-500S6 IP Camera - CISA (.gov)",
+        "Source": "https://www.nytimes.com/2026/06/25/world/europe/france-children-heat-cars-deaths.html",
+        "Title": "Latest Victims of France\u2019s Heat Wave: Children Locked in Family Cars",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5GcDJrNkowVV9zLTNORmQyNmJNTlUwdmQ3dnczR3VfeGtXRjZ3dEpGTmFOOGtXQnUyN1Y3ODJQOXo2TTJscU1GM2NSem5aTEdmaFY2UnZoWDNoTnpSOXduM1dZYmJzUFBfdmtHQjIybw?oc=5",
-        "Title": "Horner Automation Cscape - CISA (.gov)",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
