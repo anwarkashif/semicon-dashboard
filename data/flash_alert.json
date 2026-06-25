@@ -1,17 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Warns Ships to Avoid Oman Route, Orders Coordination",
+        "Title": "Ukrainian Strikes Destroy Fuel Terminal in Kerch, Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119344",
-        "Title": "Ukrainian Drones Hit Russian Oil Base",
+        "Source": "https://t.me/nexta_live/119350",
+        "Title": "Russia Blocks Fuel Shortage Chats in MAX Messenger",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/cwyklykn5dwo?at_medium=RSS&at_campaign=rss",
@@ -21,17 +21,10 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/25/venezuela-earthquakes-casualties-trump-pledges-support-aids-oil-.html",
-        "Title": "Trump pledges rapid U.S. response for Venezuela after historic earthquakes kill dozens",
+        "Source": "https://t.me/nexta_live/119344",
+        "Title": "Ukrainian Drones Hit Russian Oil Base",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/thousands-feared-dead-as-twin-earthquakes-cause-devastation-across-venezuel?traffic_source=rss",
-        "Title": "Thousands feared dead as twin earthquakes cause devastation across Venezuel",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,11 +42,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "Source": "https://www.france24.com/en/france/20260625-paris-dream-turns-to-nightmare-as-rooftop-dwellers-bake-in-historic-heatwave",
+        "Title": "Paris dream turns to nightmare as rooftop dwellers bake in historic heatwave",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/nexta_live/119348",
@@ -67,6 +60,13 @@
         "Title": "US Deploys Aid to Venezuela",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/gallery/2026/6/25/venezuela-grapples-with-deadly-twin-quakes-over-700-injured-so-far?traffic_source=rss",
+        "Title": "In pictures: Venezuela hit by twin earthquakes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
