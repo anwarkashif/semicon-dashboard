@@ -1,18 +1,11 @@
 {
-    "bluf": "The global geopolitical landscape is marked by escalating conflict in the Middle East, evidenced by a significant US financial commitment to the 'Iran war' and volatile oil prices. Concurrently, US domestic political challenges are impacting foreign policy, while great power competition intensifies across technology, maritime, and space domains, particularly between the US and China.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "US White House requests $87.6 billion, primarily for the Iran war.",
-        "Brent crude oil prices fall below $74, a first since the Iran war began.",
-        "Former President Trump suggests uncertainty regarding culpability for a strike on a girls' school in Iran.",
-        "NATO's Rutte attempts to ease tensions with Trump over Iran policy at the White House.",
-        "US, UK, France, and Germany express alarm over Chinese patrols off eastern Taiwan.",
-        "A think tank advises US Space Force to prepare for 'all-out warfare' in space.",
-        "Anthropic accuses Alibaba of 'illicitly' accessing its Claude AI.",
-        "Trump's presidential power faces a Supreme Court test.",
-        "An opinion piece advocates against aiding Iran in propping up Hezbollah.",
-        "A powerful earthquake strikes Caracas, Venezuela."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The 'Iran war' is the central immediate threat, driving substantial US military expenditure and creating significant instability in the Middle East, impacting global energy markets. This regional conflict is compounded by a complex US domestic political environment, where presidential authority and foreign policy decisions are under scrutiny, potentially straining alliances. Simultaneously, a broader great power competition is unfolding, with the US and its allies confronting China's assertiveness in the Indo-Pacific (Taiwan Strait) and a global race for technological dominance (AI chips, IP theft). The militarization of space represents an emerging frontier for potential conflict, adding another layer of complexity to the global security environment.",
-    "risk_assessment": "HIGH. The risk of direct or proxy escalation in the Middle East remains critically high, with potential for broader regional conflict and severe economic repercussions, including sustained oil price volatility and disruptions to global shipping. US domestic political polarization and legal challenges to presidential power introduce uncertainty into foreign policy decision-making, potentially undermining alliance cohesion. The intensifying US-China rivalry carries a high risk of miscalculation in contested areas like the Taiwan Strait and a heightened threat of cyber espionage and intellectual property theft in the technology sector. The emerging domain of space warfare presents a new, high-stakes arena for potential conflict.",
-    "strategic_forecast": "The US will likely remain deeply engaged in the Middle East, with significant resource allocation to the 'Iran war,' potentially diverting attention and resources from other strategic priorities. Global energy markets will continue to experience volatility influenced by regional conflicts. The US-China strategic competition is set to intensify across military, economic, and technological fronts, leading to further decoupling and increased military posturing in the Indo-Pacific and the militarization of space. Domestic political dynamics in the US will continue to exert a strong influence on its foreign policy, alliance management, and global leadership role, potentially leading to unpredictable shifts in international relations. The role of non-state actors and proxy conflicts will remain a persistent feature of Middle Eastern instability."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
