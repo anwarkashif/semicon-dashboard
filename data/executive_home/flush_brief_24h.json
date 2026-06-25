@@ -1,11 +1,15 @@
 {
-    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
+    "bluf": "Global geopolitical tensions are critically high across multiple flashpoints. The Middle East faces imminent escalation due to Iran's assertive stance on the Strait of Hormuz and a significant US budget request for potential conflict with Iran. Concurrently, the Israel-Lebanon border remains volatile, and Chinese military patrols off Taiwan are raising international alarm, signaling a heightened risk of regional and potentially broader international conflict.",
     "tactical_indicators": [
-        "API Rate Limit Hit",
-        "System Awaiting Reset",
-        "Data Pipeline Intact"
+        "Tehran rejects Rubio\u2019s interpretation of peace deal, indicating diplomatic impasse.",
+        "Iran warns against Hormuz crossings without authorisation, asserting control over vital waterway.",
+        "Rubio warns ship transit fees in Hormuz would 'spread like contagion', highlighting economic implications.",
+        "UN data shows 57 ships sailed through Hormuz since 23 June, indicating continued maritime activity amidst warnings.",
+        "White House requests $87.6 billion from Congress, mostly for Iran war, signaling US preparation for potential military action.",
+        "Israeli officials deny any withdrawal from the 'buffer zone' in South Lebanon, maintaining ambiguity and potential for conflict.",
+        "US, UK, France, Germany, China raise alarm over Chinese military patrols off eastern Taiwan, indicating escalating tensions in the Indo-Pacific."
     ],
-    "threat_narrative": "Generation pending next scheduled cron execution.",
-    "risk_assessment": "PENDING",
-    "strategic_forecast": "PENDING"
+    "threat_narrative": "The Middle East is on the precipice of significant escalation. Iran's increasingly assertive posture regarding maritime control in the Strait of Hormuz, coupled with its rejection of peace deal interpretations, directly clashes with international shipping norms and US interests. The substantial US budget request for an 'Iran war' underscores a tangible shift towards potential military confrontation. Simultaneously, the Israel-Lebanon border remains a critical flashpoint, with conflicting reports on troop movements maintaining a high risk of localized conflict. Beyond the Middle East, the Indo-Pacific is experiencing heightened tensions as Chinese military patrols off eastern Taiwan draw alarm from major global powers, indicating a potential for broader international confrontation over Taiwan's sovereignty.",
+    "risk_assessment": "HIGH. The convergence of escalating tensions in the Middle East (Iran/Hormuz, Israel/Lebanon) and the Indo-Pacific (Taiwan) presents a severe global security risk. The US's financial commitment to a potential Iran conflict, combined with Iran's warnings regarding Hormuz, creates an immediate threat of military engagement and significant disruption to global energy markets. The unresolved situation in South Lebanon adds another layer of instability. Any miscalculation in these regions could trigger widespread conflict, economic instability, and humanitarian crises, with global repercussions.",
+    "strategic_forecast": "Expect continued hardening of positions from Iran regarding maritime control in the Strait of Hormuz, likely leading to increased friction with international shipping and naval forces. The US will likely maintain its military posture and diplomatic pressure against Iran, with the possibility of limited engagements or proxy conflicts increasing. The Israel-Lebanon border will remain a zone of high alert, with potential for localized skirmishes or misinterpretations leading to broader conflict. China's military assertiveness around Taiwan is projected to intensify, challenging regional stability and potentially leading to a more robust international response, including increased military presence and exercises by allied nations in the Indo-Pacific. Global energy prices and supply chains will remain highly vulnerable to developments in the Middle East."
 }
