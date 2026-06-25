@@ -1,17 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Houthi Attack Targets Vessel in Bab el-Mandeb",
+        "Title": "Zelenskyy Approves SBU Special Operation \"Forcing Peace\" Against Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119388",
-        "Title": "Ukraine Orders Intelligence Operation Against Russia",
+        "Source": "https://www.aljazeera.com/news/2026/6/25/ukrainian-attack-on-crimea-kills-five-russian-officials-say?traffic_source=rss",
+        "Title": "Ukrainian attack on Crimea kills five, Russian officials say",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.dw.com/en/sudan-warnings-mount-over-the-risk-of-new-mass-atrocities/a-77709377?maca=en-rss-en-world-4025-xml-mrss",
@@ -32,21 +32,7 @@
         "Title": "Russian Soldier Threatens Coup in Video Message to Putin",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44682",
-        "Title": "British Cargo Ship Hit Off Oman",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -56,17 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.politico.eu/article/the-eu-targets-somalia-next-in-its-anti-migration-push/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "EU targets Somalia in its anti-migration push",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89364",
+        "Title": "Ukraine Launches Special Operation Against Russia",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/25/world/europe/france-children-heat-cars-deaths.html",
-        "Title": "Latest Victims of France\u2019s Heat Wave: Children Locked in Family Cars",
+        "Source": "https://www.aljazeera.com/features/2026/6/25/hard-headed-pragmatism-israels-war-backfires-as-gulf-backs-us-iran-mou?traffic_source=rss",
+        "Title": "Pragmatic choice: Israel\u2019s war backfires as Gulf backs US-Iran deal",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
