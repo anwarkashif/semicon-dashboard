@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Closes Strait of Hormuz, Warns Vessels",
+        "Title": "Ukraine Strikes Russian Logistics on Kostiantynivka Front",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/25/world/middleeast/iraq-militias-state-control.html",
+        "Title": "Iraq\u2019s New Leader Faces Resistance Trying to Bring Militias Under State Control",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/americas/20260625-venezuela-earthquakes-live-caracas-us-immediately-deploying-rescuers-marco-rubio",
+        "Title": "\ud83d\udd34 Venezuela earthquakes live: Death toll jumps to at least 164, nearly 1,000 injured",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -11,21 +25,7 @@
         "Title": "Israel Suffers Defeat in Lebanon's Ali Al-Taher Height",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119359",
-        "Title": "Russia Apps Disappear from App Store",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.npr.org/2026/06/25/nx-s1-5869503/how-is-moscow-dealing-with-ukraines-stepped-up-drone-attacks",
-        "Title": "How is Moscow dealing with Ukraine's stepped-up drone attacks?",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
@@ -42,6 +42,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03",
+        "Title": "Siemens Products using OpenSSL",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
@@ -49,24 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/india-braces-for-drought-as-el-nino-threatens-monsoon-rains/a-77704414?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "India braces for drought as El Nino threatens monsoon rains",
+        "Source": "https://www.theguardian.com/business/2026/jun/25/rome-airports-threaten-to-suspend-new-eu-passport-system-to-avoid-summer-disaster",
+        "Title": "Rome airports threaten to suspend new EU passport system to avoid summer \u2018disaster\u2019",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/live/2026/06/25/weather/europe-heat-wave-uk-france",
-        "Title": "Live Updates: Spain Warns of High Death Toll in Heat Wave",
+        "Source": "https://www.aljazeera.com/news/2026/6/25/venezuela-earthquakes-why-is-central-america-so-vulnerable-to-tremors?traffic_source=rss",
+        "Title": "Venezuela earthquakes: Why is Central America so vulnerable to tremors?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/americas/20260625-venezuela-earthquakes-live-caracas-us-immediately-deploying-rescuers-marco-rubio",
-        "Title": "\ud83d\udd34 Venezuela earthquakes live: Death toll jumps to at least 164, nearly 1,000 injured",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
