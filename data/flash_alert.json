@@ -1,17 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Russian Logistics on Kostiantynivka Front",
+        "Title": "Ukraine Strikes Vladimir Space Communications Center in Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.nytimes.com/2026/06/25/world/middleeast/iraq-militias-state-control.html",
         "Title": "Iraq\u2019s New Leader Faces Resistance Trying to Bring Militias Under State Control",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.france24.com/en/americas/20260625-venezuela-earthquakes-live-caracas-us-immediately-deploying-rescuers-marco-rubio",
@@ -21,17 +21,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61517",
-        "Title": "Israel Suffers Defeat in Lebanon's Ali Al-Taher Height",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/israeli-forces-kill-palestinian-man-during-raid-on-his-home?traffic_source=rss",
+        "Title": "Israeli forces kill Palestinian man during raid on his home",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
-        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://www.theguardian.com/business/2026/jun/25/uk-to-halve-tariff-free-steel-imports-to-counter-glut-of-cheap-chinese-metal",
+        "Title": "UK to halve tariff-free steel imports to counter glut of cheap Chinese metal",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
         "threat_level": "HIGH"
     },
     {
@@ -42,18 +42,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03",
-        "Title": "Siemens Products using OpenSSL",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
+        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
-        "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.nytimes.com/2026/06/25/world/americas/venezuela-earthquakes-infrastructure.html",
+        "Title": "Venezuela Earthquakes Hammer Infrastructure, Making Aid Efforts Harder",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.theguardian.com/business/2026/jun/25/rome-airports-threaten-to-suspend-new-eu-passport-system-to-avoid-summer-disaster",
