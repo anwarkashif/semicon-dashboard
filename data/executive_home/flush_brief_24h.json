@@ -1,17 +1,11 @@
 {
-    "bluf": "The Middle East remains highly volatile, marked by ongoing US-Iran nuclear negotiations, Iranian maritime aggression in the Strait of Hormuz, and Houthi attacks on Israel impacting Red Sea shipping. Concurrently, China is exploring resuming Iranian oil imports, while global tensions escalate with US-Philippines naval drone deployments in the South China Sea, French actions against Russian 'Shadow Fleet' tankers, and significant NATO defense spending.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "US commitment to inform Gulf allies on Iran nuclear talks.",
-        "Trump administration's pursuit of a \"strong nuclear deal\" with Iran.",
-        "Iran's IRGC attacking a cargo ship and issuing warnings for 'Iran-approved routes' in the Strait of Hormuz.",
-        "Houthi missile attacks on Israel and declaration of a ban on Israeli vessels in the Red Sea.",
-        "China state refiners considering resuming Iran oil imports.",
-        "Bedouin protests against Israeli home demolition policy in the Negev desert.",
-        "Philippines deploying US-made Triton naval drones in its western waters (South China Sea).",
-        "France seizing a 'Shadow Fleet' tanker in Europe.",
-        "NATO announcing billions in new defense contracts at its summit."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The Middle East is experiencing a complex interplay of diplomatic efforts and overt aggression. While the US and Iran are engaged in a fragile ceasefire pact and nuclear negotiations, Iran's IRGC is simultaneously testing these diplomatic boundaries with maritime attacks in the Strait of Hormuz. This is compounded by Houthi rebels escalating regional conflict through attacks on Israel and threats to Red Sea shipping, posing significant risks to global trade and energy security. The potential resumption of Iranian oil imports by China adds another layer of complexity to the geopolitical and economic landscape. Domestically, Israel faces internal dissent over its home demolition policies. Beyond the Middle East, maritime security is challenged in the South China Sea by US-Philippines drone deployments, while Europe sees an escalation of economic warfare against Russia and a significant NATO defense buildup, indicating a broader militarization trend and heightened great power competition.",
-    "risk_assessment": "HIGH. The confluence of ongoing nuclear negotiations, direct maritime aggression, and regional proxy conflicts creates a highly unstable environment in the Middle East with significant potential for escalation. Risks include:\n*   Regional Conflict Escalation: Direct military confrontation between regional actors or major powers.\n*   Global Trade Disruption: Severe impact on maritime shipping lanes (Strait of Hormuz, Red Sea, South China Sea) affecting energy and goods supply chains.\n*   Energy Market Volatility: Disruptions to oil supply and pricing due to Iranian actions and potential shifts in import policies.\n*   Diplomatic Breakdown: Collapse of US-Iran nuclear talks leading to renewed tensions and proliferation concerns.\n*   Humanitarian Crisis: Exacerbation of existing crises due to conflict and trade disruptions.\n*   Increased Militarization: Heightened tensions in disputed waters and between major blocs (NATO-Russia, US-China).",
-    "strategic_forecast": "The immediate future will likely see continued delicate negotiations between the US and Iran, with the potential for a \"strong nuclear deal\" being a critical determinant of regional stability. However, this diplomatic path remains vulnerable to disruptive actions by Iran's IRGC and its proxies, particularly the Houthis, who will likely continue to challenge maritime security. China's decision on Iranian oil imports could significantly alter global energy dynamics and US leverage. In the South China Sea, US-Philippines cooperation will likely increase tensions with China, while Europe will continue to see a hardening stance against Russia, marked by economic pressure and NATO's defense expansion. The overall trajectory points towards sustained geopolitical friction, with a high probability of localized flare-ups impacting global economic and security interests."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
