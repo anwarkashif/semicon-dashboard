@@ -1,21 +1,14 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Cargo Ship Hit by Projectile in Strait of Hormuz",
+        "Title": "At Least 17 Civilians Killed in Ukraine and Russia Strikes Over 24 Hours",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/25/deconfliction-and-disarmament-can-both-be-pursued-in-lebanon?traffic_source=rss",
-        "Title": "Deconfliction and disarmament: Can both be pursued in Lebanon?",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89361",
-        "Title": "Ukraine Prepares for Attack from Belarus",
+        "Source": "https://t.me/Middle_East_Spectator/33905",
+        "Title": "Iranian Navy Strikes Vessel Off Oman Coast",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -28,10 +21,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
-        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://t.me/intelslava/89361",
+        "Title": "Ukraine Prepares for Attack from Belarus",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33906",
+        "Title": "Iran Informs US of Tanker Bombing",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONy1MNmhRUmg4S1YtS2ctRWVtUU1jNk51LUJLWFBVQnJKZU4zQnRtSzdyM3MxZVFPUElBdDQzem01UkRHc0hadm53bnQzbGFDVGo0QzhXQXpHLVUwTlpBdWVzVW82bllqSzVuVTFmTEx0VHdZT1ZacVFmS29LMDdfaHl3MVpIanQ4S2RjMVltVS15MkdwNHU4ZE1HcWRkeTdzUTRPMlVR?oc=5",
-        "Title": "VEN: Earthquake - 06-2026 - Earthquake ( 2026-06-25) - ReliefWeb",
+        "Source": "https://www.france24.com/en/video/20260625-venezuelans-search-rubble-for-quake-survivors-with-thousands-feared-dead",
+        "Title": "Venezuelans search rubble for quake survivors with thousands feared dead",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cbsnews.com/news/venezuela-earthquake-caracas-la-guaira-catia-la-mar-witnesses/",
-        "Title": "Venezuela quake survivors describe devastation: \"Everything collapsed\"",
+        "Source": "https://www.france24.com/en/europe/20260625-pro-russian-accounts-fake-proof-ukraine-behind-burning-kyiv-cathedral",
+        "Title": "Pro-Russian accounts share fake proof that Ukraine is behind the burning of Kyiv cathedral",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119378",
-        "Title": "Russian Occupiers Face Consequences",
+        "Source": "https://www.aljazeera.com/news/2026/6/25/israel-kills-three-in-lebanon-as-rubio-praises-progress-in-washington-talks?traffic_source=rss",
+        "Title": "Israel kills three in Lebanon as Rubio praises progress in Washington talks",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
