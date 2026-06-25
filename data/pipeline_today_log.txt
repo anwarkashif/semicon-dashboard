@@ -42,3 +42,16 @@
 2026-06-24 23:31:38,173 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
 2026-06-24 23:31:48,219 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-24 23:31:57,762 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-25 11:31:26,671 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 11:31:26,864 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-25 11:31:26,865 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-25 11:31:36,911 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 11:31:54,383 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-25 11:31:54,422 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 11:31:54,566 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-25 11:31:54,566 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-25 11:32:04,613 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 11:32:04,756 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-25 11:32:04,757 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-25 11:32:04,757 - INFO - Rotating to API Key 2
+2026-06-25 11:32:07,760 - ERROR - Shift Brief Final Failure: All API keys exhausted via rotation.
