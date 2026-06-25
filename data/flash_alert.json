@@ -1,37 +1,30 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Philippines Launches Indigenous MULA Satellite",
+        "Title": "Twin Earthquakes Kill 32, Injure 700 in Venezuela, Fires Rage in La Guaira",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/articles/cwyklykn5dwo?at_medium=RSS&at_campaign=rss",
-        "Title": "Anthropic accuses Chinese rival Alibaba of illicitly extracting AI capabilities",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.nytimes.com/2026/06/24/world/asia/myanmar-civil-war-explained.html",
         "Title": "What to Know About Myanmar\u2019s Chaotic War",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQmNUWnFjQnYyeTFsUTdyWjY5VjBlWF9zZXVrRUtKU0pjcnFocVdUcnJrWU1sRTZxTldCSWl0b3d5alBoRzhwMWpvdTBVWWpwNzhtY2dNWFdzTnZadm9CVS1td243SmJSNzdveFdUcVRJcVI2OHVZazNsZTJBVWR2NnlSckxacTBqU2dBOTZmX3FXX0V4bDk3b2Jxdi1YVXlKdGpfMFd0SEgwOGZPa1pzaG10NWlLSnpPaVVtUg?oc=5",
-        "Title": "China says it has a right to target people overseas with new ethnic unity law - Reuters",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/iranians-mark-first-ashura-since-khameneis-killing-in-the-us-iran-war?traffic_source=rss",
-        "Title": "Iranians mark first Ashura since Khamenei\u2019s killing in the US-Iran war",
+        "Source": "https://www.bbc.co.uk/news/articles/cwyklykn5dwo?at_medium=RSS&at_campaign=rss",
+        "Title": "Anthropic accuses Chinese rival Alibaba of illicitly extracting AI capabilities",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/25/venezuela-earthquakes-casualties-trump-pledges-support-aids-oil-.html",
+        "Title": "Trump pledges rapid U.S. response for Venezuela after historic earthquakes kill dozens",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
         "threat_level": "HIGH"
     },
     {
@@ -56,17 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Anthropic's latest hiring spree reveals where it's building AI data centers next",
+        "Source": "https://t.me/warmonitors/44671",
+        "Title": "Venezuela Earthquake Causes Destruction",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jun/25/french-heat-trap-homes-climate-inequality-grows",
-        "Title": "\u2018It\u2019s like a furnace\u2019: French struggle with heat-trap homes as climate inequality grows",
+        "Source": "https://t.me/warmonitors/44670",
+        "Title": "Venezuela Hit by Severe Earthquake",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119346",
+        "Title": "Venezuela Earthquakes Kill 32, Injure 700",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
