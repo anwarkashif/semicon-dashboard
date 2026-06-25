@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian An-124 Cargo Plane Flies to Iran",
+        "Title": "Iran Reports $60 Billion in Regional Energy Facility War Damage",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/nexta_live/119359",
@@ -14,18 +14,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c0jy7d7wzv4o?at_medium=RSS&at_campaign=rss",
-        "Title": "Oil price falls to levels not seen since before Iran war",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.npr.org/2026/06/25/nx-s1-5869503/how-is-moscow-dealing-with-ukraines-stepped-up-drone-attacks",
         "Title": "How is Moscow dealing with Ukraine's stepped-up drone attacks?",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "npr.org",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.nytimes.com/2026/06/25/world/asia/north-korea-destroyer-nuclear.html",
@@ -49,6 +42,20 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/25/amazon-investment-billion-ai-india.html",
+        "Title": "Amazon adds new funding, lifting India AI and cloud investment to $48 billion ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.france24.com/en/video/20260625-tourists-on-champs-%C3%A9lys%C3%A9es-seek-refuge-from-heat-as-more-records-tumble",
         "Title": "Tourists on Champs-\u00c9lys\u00e9es seek refuge from heat as more records tumble",
         "Feed_Source": "WAR MONITOR",
@@ -60,13 +67,6 @@
         "Title": "'I thought I was going to die' - Venezuelans describe earthquake panic",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/magnitude-6-9-earthquake-strikes-northern-japan?traffic_source=rss",
-        "Title": "Magnitude 6.9 earthquake strikes northern Japan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
