@@ -39,6 +39,11 @@ jobs:
       if: github.event.action == 'trigger_executive_radar'
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        RAG_GEMINI_API_KEY: ${{ secrets.RAG_GEMINI_API_KEY }}
+        RAG_GEMINI_API_KEY_2: ${{ secrets.RAG_GEMINI_API_KEY_2 }}
+        RAG_GEMINI_API_KEY_3: ${{ secrets.RAG_GEMINI_API_KEY_3 }}
+        RAG_GEMINI_API_KEY_4: ${{ secrets.RAG_GEMINI_API_KEY_4 }}
+        RAG_GEMINI_API_KEY_5: ${{ secrets.RAG_GEMINI_API_KEY_5 }}
       run: python live_pipeline_executive.py
 
     - name: Commit and Push (Executive Radar)
@@ -164,6 +169,11 @@ jobs:
       if: github.event.action == 'trigger_shift_brief'
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        RAG_GEMINI_API_KEY: ${{ secrets.RAG_GEMINI_API_KEY }}
+        RAG_GEMINI_API_KEY_2: ${{ secrets.RAG_GEMINI_API_KEY_2 }}
+        RAG_GEMINI_API_KEY_3: ${{ secrets.RAG_GEMINI_API_KEY_3 }}
+        RAG_GEMINI_API_KEY_4: ${{ secrets.RAG_GEMINI_API_KEY_4 }}
+        RAG_GEMINI_API_KEY_5: ${{ secrets.RAG_GEMINI_API_KEY_5 }}
       run: python live_pipeline_today.py
 
     - name: Commit and Push (Shift Brief)

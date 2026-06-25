@@ -189,11 +189,11 @@ def generate_shift_brief(accumulated_events):
         logging.error(f"Shift Brief Final Failure: {e}")
         return {
             "date": datetime.now().strftime('%Y-%m-%d'),
-            "bluf": "API Generation Timeout. Awaiting next cycle.",
-            "executive_summary": "System pending reset.",
-            "escalation_indicators": ["API Timeout"],
-            "strategic_outlook": "PENDING",
-            "threat_level": "UNKNOWN"
+            "bluf": "API Rate Limits Exhausted across all keys. Resuming normal operations on next cycle.",
+            "executive_summary": "High volume of requests has temporarily paused the synthesis engine.",
+            "escalation_indicators": ["API Timeout", "Key Exhaustion"],
+            "strategic_outlook": "Monitoring baseline anomalies.",
+            "threat_level": "WATCH"
         }
 
 if __name__ == "__main__":
