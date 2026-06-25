@@ -1,16 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Italy Denies US Used Air Bases in Call With Iran",
+        "Title": "Ukrenergo Warns of Daily 5-Hour Power Cuts in Summer if Russian Attacks Continue",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89359",
-        "Title": "Sudanese Forces Down UAE-Backed Drone in El-Obeid",
+        "Source": "https://t.me/nexta_live/119376",
+        "Title": "Russia Declares Rocket Danger in Moscow Region",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/2026/jun/25/russia-used-israeli-tool-to-crack-phone-months-after-contract-cancelled-report-finds",
+        "Title": "Russia used Israeli firm\u2019s tool to crack phone months after ties severed, report finds",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,15 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89358",
-        "Title": "France Seizes Russian Tanker Off Sicily Coast",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119373",
-        "Title": "Russia Withdraws from Kynburnska Spit",
+        "Source": "https://t.me/intelslava/89359",
+        "Title": "Sudanese Forces Down UAE-Backed Drone in El-Obeid",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
@@ -49,22 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cbsnews.com/video/europeans-endure-blistering-heat-wave-and-many-without-air-conditioning/",
-        "Title": "Europeans endure blistering heat wave - and many without air conditioning",
+        "Source": "https://warmonitor.com/",
+        "Title": "Starmer to reject plea from Burnham to join defense bank",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.politico.eu/article/german-police-fear-unrest-afd-conference/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "German police brace for unrest at far-right AfD conference",
+        "Source": "https://www.bellingcat.com/resources/2026/06/25/how-to-use-ai-to-help-find-civilian-harm-conflict-report-monitor-war-machine-learning-telegram/",
+        "Title": "How to Use AI to Help Find Civilian Harm",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
+        "Publisher": "bellingcat.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/video/20260625-brutal-paris-tourists-struggle-in-extreme-heat-as-sites-close-early",
-        "Title": "'Brutal': Paris tourists struggle in extreme heat as sites close early",
+        "Source": "https://www.france24.com/en/video/20260625-as-temperatures-soar-france-s-totalenergies-awaits-ruling-in-climate-trial",
+        "Title": "As temperatures soar, France's TotalEnergies awaits ruling in climate trial",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
         "threat_level": "WATCH"
