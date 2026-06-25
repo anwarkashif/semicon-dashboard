@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Launches Missile and 90 Drones at Ukraine Overnight",
+        "Title": "Ukraine and FBI Expose Russian Cyberattacks on Messengers",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -39,7 +39,21 @@
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
+        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119356",
+        "Title": "Russian Court Sentences Ukrainian Pensioner to Prison",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/warmonitors/44674",
@@ -53,20 +67,6 @@
         "Title": "Venezuela Residents Describe Terror as Deadly Earthquake Struck",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/25/we-hugged-each-other-and-ran-venezuelans-recount-earthquake-horror?traffic_source=rss",
-        "Title": "\u2018We hugged each other and ran\u2019: Venezuelans recount earthquake horror",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/rescuers-pull-survivors-from-rubble-after-venezuela-earthquakes?traffic_source=rss",
-        "Title": "Rescuers pull survivors from rubble after Venezuela earthquakes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
