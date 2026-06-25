@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iraq Faces Critical Financial Crisis After Oil Decline From Iran War",
+        "Title": "Russia Launches Missile and 90 Drones at Ukraine Overnight",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/25/world/asia/north-korea-destroyer-nuclear.html",
+        "Title": "North Korea Deploys Its First Destroyer, Vowing to Project Nuclear Power by Sea",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/liveuamap/12182",
@@ -21,20 +28,6 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/nexta_live/119346",
-        "Title": "Venezuela Earthquakes Kill 32, Injure 700",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06",
-        "Title": "Impact of Linux Kernel vulnerabilities on B&R products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
@@ -46,27 +39,34 @@
         "Title": "CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQmQxaUZCVzgzRUFZMmN6aTFPOHl4WVlZMmVFZWxvWkc5ME5pb05tLTY0TFI4V3VoYzlnQmZOcTFvZTJ2OTZtZlhPaTEzenROdlZsa2RxdXF0UVZpV2I2NTY3ZGdjN2p3bmpqSlJYRkdhWVZCYm0teGVYY043OE1IZlNXMElvVXBkMS1FaXZIMmdSNXpZS2diRm9JaFpZdnFLSUhlR2xpSG84TDJubXc?oc=5",
-        "Title": "EXCLUSIVE: Comcast-owned Sky reaches terms to buy ITV's broadcast unit, sources say - Reuters",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/25/india-rajesh-exports-investigation-accounting-irregularities-valcambi.html",
-        "Title": "One of India's largest gold exporters paid its managing director just $180 a month, investigators say in accounting probe",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119352",
-        "Title": "Venezuela Resident Escapes Building During Earthquake",
+        "Source": "https://t.me/warmonitors/44674",
+        "Title": "\u26a1\ufe0fTerrifying video from Venezuela",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/25/world/americas/venezuela-earthquake-caracas.html",
+        "Title": "Venezuela Residents Describe Terror as Deadly Earthquake Struck",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/6/25/we-hugged-each-other-and-ran-venezuelans-recount-earthquake-horror?traffic_source=rss",
+        "Title": "\u2018We hugged each other and ran\u2019: Venezuelans recount earthquake horror",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/rescuers-pull-survivors-from-rubble-after-venezuela-earthquakes?traffic_source=rss",
+        "Title": "Rescuers pull survivors from rubble after Venezuela earthquakes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
