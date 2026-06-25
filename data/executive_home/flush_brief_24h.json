@@ -1,11 +1,16 @@
 {
-    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
+    "bluf": "Global geopolitical tensions are escalating across multiple critical theaters, marked by direct maritime attacks in the Middle East, a hardening of regional military postures, and an expansion of conflict potential in Europe and the Indo-Pacific. Key choke points are under direct threat, and major powers are adjusting policies with significant international repercussions.",
     "tactical_indicators": [
-        "API Rate Limit Hit",
-        "System Awaiting Reset",
-        "Data Pipeline Intact"
+        "International Maritime Organization (IMO) has paused/suspended its evacuation plan for ships in the Strait of Hormuz following a vessel attack near Oman.",
+        "Yemen's Houthi rebels are actively threatening Red Sea shipping and claim a missile attack on Israel.",
+        "The US Supreme Court has allowed former President Trump to end protections for Haitian and Syrian migrants.",
+        "Egypt is calling for accelerated international efforts to advance the US President's Gaza plan.",
+        "Israeli Prime Minister Netanyahu stated intent to maintain presence in Lebanon, Syria, and Gaza 'as long as required'.",
+        "Belarus is reportedly preparing to increase its role in Russia's war in Ukraine.",
+        "The Philippines has deployed US-made Triton naval drones in its western waters to scout for intruders.",
+        "Europe is facing acknowledged radiological and nuclear threats, necessitating a response."
     ],
-    "threat_narrative": "Generation pending next scheduled cron execution.",
-    "risk_assessment": "PENDING",
-    "strategic_forecast": "PENDING"
+    "threat_narrative": "Maritime security is severely deteriorating in the Middle East, with direct attacks in the Strait of Hormuz and persistent threats to Red Sea shipping by Iran-aligned Houthis, jeopardizing global trade and energy supplies. Concurrently, the Middle East remains a volatile flashpoint, with Israel asserting a long-term presence in contested territories and diplomatic efforts around the Gaza plan facing complex dynamics. In Europe, the potential for escalation in the Ukraine conflict is rising with Belarus's increased involvement, alongside a growing awareness of radiological and nuclear threats. Tensions are also mounting in the Indo-Pacific as the Philippines deploys advanced US surveillance assets in disputed waters. US domestic policy shifts regarding migrant protections add another layer of instability, impacting international humanitarian efforts and regional demographics.",
+    "risk_assessment": "HIGH. The confluence of these events indicates a significant and immediate risk of regional conflict escalation in the Middle East, Europe, and the Indo-Pacific. Specific risks include widespread maritime insecurity and disruption of global trade (especially oil), potential for WMD use in Europe, increased humanitarian crises due to conflict and migration policy shifts, and a heightened probability of diplomatic breakdowns and military confrontations between state and non-state actors.",
+    "strategic_forecast": "The current trajectory suggests a prolonged period of instability and militarization across key geopolitical regions. Critical maritime choke points will likely remain contested, requiring increased international naval presence and potentially leading to direct confrontations. The Middle East will continue to be a theater of proxy conflicts and assertive state actions, with the 'Trump Gaza plan' and Israel's regional posture shaping future dynamics. In Europe, the Ukraine conflict risks broader regional involvement, while the specter of nuclear threats will drive defense policy. The Indo-Pacific will see continued strategic competition and military buildups, increasing the risk of miscalculation. US policy shifts on migration could strain international relations and exacerbate humanitarian challenges globally."
 }

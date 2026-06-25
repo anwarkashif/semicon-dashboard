@@ -4,6 +4,20 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "US Supreme Court allows Trump to end protections for Haitian and Syrian migrants",
+        "Headline": "US Supreme Court allows Trump to end protections for Haitian and Syrian migrants",
+        "Summary": "US Supreme Court allows Trump to end protections for Haitian and Syrian migrants",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/us-supreme-court-allows-trump-end-protections-haitian-and-syrian",
+        "Title": "US Supreme Court allows Trump to end protections for Haitian and Syrian migrants",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-06-25",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "The International Maritime Organization has paused its evacuation plan for ships stuck in the Strait of Hormuz after a vessel passing through the waterway was attacked on Thursday.",
         "Headline": "The International Maritime Organization has paused its evacuation plan for ships stuck in the Strait of Hormuz after a vessel passing through the waterway was attacked on Thursday.",
         "Summary": "The International Maritime Organization has paused its evacuation plan for ships stuck in the Strait of Hormuz after a vessel passing through the waterway was attacked on Thursday.",
@@ -26,6 +40,72 @@
         "Title": "Egypt calls for greater international efforts to complete first phase of US President Donald Trump's Gaza plan and launch its second phase, urging renewed momentum to advance next stage of process",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
+    },
+    {
+        "Date": "Undated",
+        "Actor": "Belarus, Russia",
+        "Action": "Preparing to play a larger role in Russia\u2019s Ukraine war",
+        "Location": "Ukraine",
+        "Risk": "Escalation of conflict, regional instability, increased humanitarian crisis",
+        "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/belarus-is-quietly-preparing-to-play-a-larger-role-in-russias-ukraine-war/",
+        "Title": "Belarus is quietly preparing to play a larger role in Russia\u2019s Ukraine war",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "Undated",
+        "Actor": "Europe (facing threat), Implied State Actors (source of threat)",
+        "Action": "Facing radiological and nuclear threats, requiring response",
+        "Location": "Europe",
+        "Risk": "Nuclear proliferation, regional conflict, WMD use, widespread devastation",
+        "Source": "https://www.atlanticcouncil.org/dispatches/radiological-and-nuclear-threats-are-no-longer-hypothetical-europe-needs-to-respond/",
+        "Title": "Radiological and nuclear threats are no longer hypothetical. Europe needs to respond.",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "Undated",
+        "Actor": "Iran",
+        "Action": "Attacking cargo ship, testing Trump\u2019s Hormuz Strait deal, threatening safe passage",
+        "Location": "Strait of Hormuz, Gulf of Oman",
+        "Risk": "Maritime insecurity, disruption of global oil trade, regional conflict, diplomatic breakdown",
+        "Source": "https://www.al-monitor.com/originals/2026/06/iran-attacks-cargo-ship-oman-testing-trumps-hormuz-strait-deal",
+        "Title": "Iran attacks cargo ship off Oman, testing Trump\u2019s Hormuz Strait deal",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "al-monitor.com"
+    },
+    {
+        "Date": "Undated",
+        "Actor": "Philippines, US (supplier)",
+        "Action": "Deploying US-made Triton naval drones to scout for intruders",
+        "Location": "Western waters (implied South China Sea)",
+        "Risk": "Increased tensions with China, maritime disputes, potential for confrontation, regional arms race",
+        "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
+        "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "c4isrnet.com"
+    },
+    {
+        "Date": "Undated",
+        "Actor": "Yemen\u2019s Houthi rebels (Iran-aligned)",
+        "Action": "Threatening Red Sea shipping, claiming missile attack on Israel",
+        "Location": "Red Sea, Israel",
+        "Risk": "Maritime insecurity, disruption of global trade (especially oil), regional conflict escalation, humanitarian crisis",
+        "Source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZndSZ05Ec0xibk5xQ0JPWjFrM2ZzOGhyTDgtR01HOVhuY3J6THhKMVU3UXZxbnlKOUJma041dUJmcTlTNlJ2Q19PREcxWmc3b2pyV2dXVGFNSTJ5aXVTMG9RdDVEUk5CU0luTE9Hc19ESnBBMm5KWVZOblR6NzU0ejdJX1JPSzNQS0tlUzZLYXh3c1FRMjdYbUZ2dmJ5ajE0UU16eTBtYW9vQm9pQXJvM213RWVhLWpURkxPSDNkd1lmUEE1TXc?oc=5",
+        "Title": "Explainer: Why the Iran-aligned Houthis threatening Red Sea shipping could mean more for the oil market this time - Reuters",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "Undated",
+        "Actor": "Benjamin Netanyahu (Israel)",
+        "Action": "Stating intent to remain in Lebanon, Syria, and Gaza",
+        "Location": "Lebanon, Syria, Gaza",
+        "Risk": "Prolonged occupation, regional conflict, international condemnation, humanitarian impact",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/netanyahu-we-will-remain-in-lebanon-syria-and-gaza-as-long-as?traffic_source=rss",
+        "Title": "Netanyahu: \u2018We will remain in Lebanon, Syria, and Gaza as long as required\u2019",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
     },
     {
         "Date": "2026-06-25",
@@ -151,17 +231,6 @@
     },
     {
         "Date": "2026",
-        "Actor": "Belarus, Russia",
-        "Action": "Preparing to play a larger role in Russia\u2019s Ukraine war",
-        "Location": "Ukraine",
-        "Risk": "Escalation of Ukraine war, regional instability",
-        "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/belarus-is-quietly-preparing-to-play-a-larger-role-in-russias-ukraine-war/",
-        "Title": "Belarus is quietly preparing to play a larger role in Russia\u2019s Ukraine war",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "2026",
         "Actor": "Israel (Netanyahu)",
         "Action": "Stating intent to maintain military presence",
         "Location": "Lebanon, Syria, Gaza",
@@ -228,77 +297,5 @@
         "Title": "Iran has attacked a cargo ship in the Strait of Hormuz, US officials said. In a major test of the fragile week-long peace deal, the Islamic Revolutionary Guards Corps damaged the vessel\u2019s bridge near the Omani coast.",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
-    },
-    {
-        "Date": "2026-06-25",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "IMF says prices have eased since US-Iran agreement but Gulf trade remains disrupted",
-        "Headline": "IMF says prices have eased since US-Iran agreement but Gulf trade remains disrupted",
-        "Summary": "IMF says prices have eased since US-Iran agreement but Gulf trade remains disrupted",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/imf-says-prices-have-eased-us-iran-agreement-gulf-trade-remains",
-        "Title": "IMF says prices have eased since US-Iran agreement but Gulf trade remains disrupted",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "2026-06-25",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Out on the Water With U.S. Forces Racing to Develop Sea Drones",
-        "Headline": "Out on the Water With U.S. Forces Racing to Develop Sea Drones",
-        "Summary": "Out on the Water With U.S. Forces Racing to Develop Sea Drones",
-        "Risk": "HIGH",
-        "Source": "https://www.wsj.com/politics/national-security/out-on-the-water-with-u-s-forces-racing-to-develop-sea-drones-e63e1e8e",
-        "Title": "Out on the Water With U.S. Forces Racing to Develop Sea Drones",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "wsj.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Belarus, Russia",
-        "Action": "Preparing to increase involvement in Ukraine war",
-        "Location": "Ukraine, Belarus",
-        "Risk": "Escalation of Ukraine conflict, regional instability",
-        "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/belarus-is-quietly-preparing-to-play-a-larger-role-in-russias-ukraine-war/",
-        "Title": "Belarus is quietly preparing to play a larger role in Russia\u2019s Ukraine war",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Houthis (Yemen), Israel",
-        "Action": "Attacking Israel and banning Israeli vessels in Red Sea",
-        "Location": "Red Sea, Israel, Yemen",
-        "Risk": "Escalation of regional conflict, disruption of global maritime trade",
-        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - The Long War Journal",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "IRGC (Iran), Unidentified Actor",
-        "Action": "Attacking cargo ship and issuing transit warnings in Strait of Hormuz",
-        "Location": "Strait of Hormuz, Gulf of Oman",
-        "Risk": "Maritime security threat, disruption of global energy supply, regional conflict",
-        "Source": "https://gcaptain.com/ship-hit-off-oman-after-irgc-renewed-hormuz-transit-warnings/",
-        "Title": "Ship Hit Off Oman After IRGC Renewed Hormuz Transit Warnings",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Philippines, US",
-        "Action": "Deploying US-made naval drones to scout for intruders",
-        "Location": "Western Philippine waters (South China Sea)",
-        "Risk": "Escalation of maritime disputes, increased regional tensions",
-        "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
-        "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "c4isrnet.com"
     }
 ]
