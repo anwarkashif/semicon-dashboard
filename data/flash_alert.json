@@ -1,17 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Report Details Severe Ecological Damage in South China Sea",
+        "Title": "Russian Iskander-M Ballistic Missile Hits Kremenchuk Thermal Power Plant",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.france24.com/en/middle-east/20260625-us-seeks-iran-deal-not-at-any-price-rubio",
-        "Title": "US seeks Iran deal, but 'not at any price,' Rubio says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/southfronteng/61537",
@@ -35,6 +28,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.france24.com/en/middle-east/20260625-us-seeks-iran-deal-not-at-any-price-rubio",
+        "Title": "US seeks Iran deal, but 'not at any price,' Rubio says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
@@ -49,22 +49,22 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.twz.com/air/in-an-ironic-turn-of-events-white-house-wants-to-raid-navy-e-2-account-to-pay-for-usaf-e-7s",
+        "Title": "In An Ironic Turn Of Events, White House Wants To Raid Navy E-2 Account To Pay For USAF E-7s",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.nytimes.com/2026/06/25/world/africa/africa-cdc-congo-ebola.html",
         "Title": "Congo Ebola Crisis: Contact Tracing Is Dangerously Behind, Officials Warn",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/25/economic-losses-mount-as-venezuela-earthquake-death-toll-grows?traffic_source=rss",
-        "Title": "Economic losses mount as Venezuela earthquake death toll grows",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/live/2026/06/25/world/venezuela-earthquake/aid-official-says-groups-are-mobilizing-to-provide-shelter-and-water-to-quake-victims",
-        "Title": "Aid official says groups are mobilizing to provide shelter and water to quake victims.",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
         "threat_level": "WATCH"
