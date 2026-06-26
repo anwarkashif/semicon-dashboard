@@ -7,20 +7,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32244",
-        "Title": "Ukraine Strikes Zaporozhye and Kherson Regions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119404",
-        "Title": "Italy and France Oppose EU Travel Ban on Russians",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.theguardian.com/world/2026/jun/26/russia-provocation-baltic-states-poland",
         "Title": "Russia preparing possible \u2018provocation\u2019 in Baltic states or Poland, sources say",
         "Feed_Source": "WAR MONITOR",
@@ -28,45 +14,59 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/europe/jaguar-russia-hack.html",
-        "Title": "A $2.5 Billion Whodunit: The Hack That Dented the U.K. Economy",
+        "Source": "https://www.theguardian.com/world/2026/jun/26/south-korea-drone-warriors-military-training",
+        "Title": "South Korea to train half a million military personnel to become \u2018drone warriors\u2019",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "theguardian.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32245",
+        "Title": "Russia Repels Mass Air Raid on Moscow",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Russian Blogger Cancels Protest",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89375",
+        "Title": "Poland Considers Blocking Ukraine EU Membership Talks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.theguardian.com/australia-news/2026/jun/26/blue-mountains-highway-closed-for-another-year-victoria-pass-new-bridge",
         "Title": "Vital Blue Mountains highway to be closed for another year as NSW reveals bridge plans",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/technology/2026/jun/26/apple-ipad-macbook-price-rise-australia",
-        "Title": "Australians to pay at least 20% more for iPads and Macbooks after Apple hikes prices citing AI",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119403",
-        "Title": "France Experiences Extreme Heatwave",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
