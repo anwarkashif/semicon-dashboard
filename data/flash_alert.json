@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Security Services Seek Intelligence for Assassination Strikes in Kyiv",
+        "Title": "Philippines Calls on UN to Reaffirm UNCLOS on South China Sea Award Anniversary",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260626-lebanon-israel-us-sign-framework-agreement-in-washington",
-        "Title": "Middle East War: Lebanon, Israel and US sign framework agreement in Washington",
+        "Source": "https://t.me/nexta_live/119453",
+        "Title": "Russia to Create Database of All Mobile Phones",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -21,10 +21,10 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/26/openai-limits-new-ai-models-to-trusted-partners-request-us-government.html",
-        "Title": "OpenAI limits new AI models to 'trusted partners' at request of U.S. government",
+        "Source": "https://www.aljazeera.com/news/2026/6/26/us-announces-framework-agreement-between-israel-and-lebanon?traffic_source=rss",
+        "Title": "US announces framework agreement between Israel and Lebanon",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
@@ -35,38 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119451",
-        "Title": "Russian Propagandist Calls for Repression Against Armenians",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/26/on-semi-stock-synaptics-ceo-hassane-el-khoury.html",
-        "Title": "ON Semi tanks 24% following Synaptics deal as CEO defends core business",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOOGxnX1JMS2VvbjU1dHc5WjBjQldNdUFHb09qeV81M05DODFTQnpXRy1fQmVoemdjSGxQUUlTUmIzLWJvTWRTclN0SDlaWWdSa1B1ellMNFBKZG9VWkJMSUpIaDBxLXB4MXRtVGo5Vy1aWkNiRDlacUZfX201TkpLUXB6SVU4V1pNaG9ZdU41dWk5NUdLV0paNldnOHNnaVUtM1JuTkt6QzJ0N1pqOU02X0V6WVJWZ29Sc3pxdmxDZ2JOZHBj?oc=5",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications - CISA (.gov)",
+        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTEJIajBuMHpYal9NQlE4WFJkQTE4TXNYNWkwYlRfMlE1OEVHMl80TTAwSEd2OHB0NzJiMnpZNWM0bFB2c3F4b1RuenVBQXZVYUVsMF9pOWp5Z1laQ1J6M3dGd1hRT2dhVHJRdkdocVBQUDd3TjhzLUpNalA1Z0NHelg0T0VRTW1JdDhSWjVrM2dURWtSaEFhcmZXeV9Sek91clpOUU1TUlFXOUZQdFo3MG9ZN0ZNb1dadFowc0NlRG5YQQ?oc=5",
+        "Title": "Earthquakes in Venezuela: Situation Report #1 (June 25, 2026, Time: 3:00 am) - ReliefWeb",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/ckg7z5dvxnzo?at_medium=RSS&at_campaign=rss",
+        "Title": "Women alleging rape and sexual assault in France call to abolish statute of limitations",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.twz.com/news-features/c-17-globemaster-iii-jets-flowing-to-caribbean-for-venezuela-earthquake-relief-effort",
+        "Title": "C-17 Cargo Jets Flowing To Caribbean For Venezuela Earthquake Relief Effort",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/middle-east/20260626-lebanon-israel-us-sign-framework-agreement-in-washington",
+        "Title": "Middle East War: Lebanon, Israel and US sign framework agreement in Washington",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]

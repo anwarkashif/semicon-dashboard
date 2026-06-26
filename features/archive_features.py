@@ -16,8 +16,12 @@ def render_trend_timelines():
         trend_data = []
         for f_path in sorted_brief_paths:
             try:
-                with open(f_path, 'r') as file:
+                with open(f_path, 'r', encoding='utf-8') as file:
                     d = json.load(file)
+                    # Safely handle if 'd' is a list rather than a dictionary
+                    if isinstance(d, list):
+                        continue
+                        
                     b_date = d.get('date', 'Unknown')
                     
                     actions = d.get('recent_actions', [])
@@ -48,10 +52,26 @@ def render_archives():
     if archive_mapping:
         selected_brief = st.selectbox("Select Past Brief:", list(archive_mapping.keys()))
         st.info(f"Displaying: {selected_brief}")
-        with open(archive_mapping[selected_brief], 'r') as f:
+        
+        with open(archive_mapping[selected_brief], 'r', encoding='utf-8') as f:
             archived_data = json.load(f)
         
-        arch_raw = archived_data.get('brief_raw', '')
+        # 🛑 THE FIX: Bulletproof extraction that handles lists or missing keys gracefully
+        arch_raw = ""
+        if isinstance(archived_data, dict):
+            arch_raw = archived_data.get('brief_raw', '')
+            
+            # If the user selected an Executive Flash Brief or Today's Snippet
+            if not arch_raw and 'bluf' in archived_data:
+                bluf = archived_data.get('bluf', '')
+                exec_sum = archived_data.get('executive_summary', '')
+                narrative = archived_data.get('threat_narrative', '')
+                risk = archived_data.get('risk_assessment', '')
+                forecast = archived_data.get('strategic_forecast', '')
+                arch_raw = f"**BLUF:**\n{bluf}\n\n**EXECUTIVE SUMMARY:**\n{exec_sum}\n\n**THREAT NARRATIVE:**\n{narrative}\n\n**RISK ASSESSMENT:**\n{risk}\n\n**FORECAST:**\n{forecast}"
+        elif isinstance(archived_data, list):
+            arch_raw = "Raw tactical event data log (No synthesized brief text available for this file)."
+            
         t1 = extract_tag('EXEC', arch_raw) or arch_raw
         st.markdown(t1.replace('$', r'\$'))
     else:
