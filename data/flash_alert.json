@@ -1,16 +1,9 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Drone Strike Targets Azot Chemical Plant in Novomoskovsk",
+        "Title": "Drone Strike in Strait of Hormuz Revives Supply Fears",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/2026/jun/26/xi-jinping-china-host-of-world-leaders-middle-powers",
-        "Title": "Xi Jinping has hosted more than a dozen leaders this year, as \u2018middle powers\u2019 look beyond the US",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,11 +14,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.theguardian.com/world/2026/jun/26/xi-jinping-china-host-of-world-leaders-middle-powers",
+        "Title": "Xi Jinping has hosted more than a dozen leaders this year, as \u2018middle powers\u2019 look beyond the US",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.twz.com/air/in-an-ironic-turn-of-events-white-house-wants-to-raid-navy-e-2-account-to-pay-for-usaf-e-7s",
@@ -35,11 +28,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
@@ -49,24 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQeDFtYW9yOWNWMTR1ME15TmxqeWU1RnJzU0E1ZmQ4WUhZQm1VWGQ2cnpmWDR6VE1GRDFia3VwUHJveTNtU3RGSGN6UzluTVNneVJIbmJNVWVibU1BLVhKZEVldW1makdDLTRhWElNcDEzU1JvSnRaRjg1bUI3ZmxmSXQyc21pYXlLdkNsbUFNRjE2MUV6SWJTa2UwQ01NeGNFbDllaXBZaW5SVUNsOURCM3ZJM0l4VFRxZG83SUxTVEdpOWlCQXNycTM1dmJwWFhJRm5QUjR6SQ?oc=5",
-        "Title": "Secretary General meets President Trump in Washington: \u201cEurope is stepping up\u201d - North Atlantic Treaty Organization",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQmRQX2pHQ3FHQndxVE5USW9pVDItN1ZxN2YwakhSbHM5aS14bmRCYVhkekpOR1g0aG9XOEdYNkVoSzlUTUpEMnRQY2J2MWE5TTkzVmNNbXhBcm84NF83Q1c5elZSZ1BxWjM2SUp6dllsQ2t0R3I2N1I3SFktUkRxOVBheWZoYmdfcU9JZ0dpRHkwUFQtY3ZBWmZsOUM3eEZqZEV0blkyZGJtaG1uWXc?oc=5",
+        "Title": "M 7.5 - 28 km SE of Yumare, Venezuela | Shake MMI Impact Zones - ReliefWeb",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "HIGH"
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/economy/2026/6/26/oil-prices-climb-after-attack-in-strait-of-hormuz-halts-evacuation-plan?traffic_source=rss",
+        "Title": "Oil prices climb after attack in Strait of Hormuz halts evacuation plan",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.france24.com/en/americas/20260626-venezuela-earthquakes-live-us-says-sending-military-ships-planes-to-provide-aid-to-venezuela",
         "Title": "Death toll from Venezuela earthquakes rises to around 235, health minister says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/26/cnbc-daily-open-oil-worries-flare-as-techs-winners-split-from-the-pack.html",
-        "Title": "CNBC Daily Open: Oil worries flare as tech's winners split from the pack",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
