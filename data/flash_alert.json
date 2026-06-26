@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Hungary Blocks EU Approval of Ukraine and Moldova Accession Screening",
+        "Title": "Israel Strikes Hezbollah Fighters Near Southern Lebanon Buffer Zone",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89384",
+        "Title": "Russia Returns Nuclear Cruiser Admiral Nakhimov to Service",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/intelslava/89379",
@@ -18,14 +25,7 @@
         "Title": "Russia Imposes Emergency Mode in Crimea",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/middle-east/20260626-hezbollah-fpv-drones-iron-dome-decoy-launchers",
-        "Title": "Hezbollah claims hits on Israel\u2019s Iron Dome but videos show strikes on decoys",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.france24.com/en/live-news/20260626-un-says-iran-nuclear-pledge-needs-very-strong-verification",
@@ -39,34 +39,34 @@
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "Source": "https://www.nytimes.com/2026/06/26/world/asia/china-plane-crash-beijing.html",
+        "Title": "Small Plane Crashes Into Tallest Building in Beijing",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/paris-pride-parade-postponed-to-not-stretch-already-overwhelmed-emergency-services",
+        "Title": "Paris Pride parade postponed to not stretch already overwhelmed emergency services",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/increased-health-risks-limited-resources-french-hospitals-overwhelmed-by-heatwave",
+        "Title": "Increased health risks, limited resources: French hospitals overwhelmed by heatwave",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cbsnews.com/video/heat-wave-smothers-europe-some-hospital-rooms-lack-ac/",
         "Title": "As heat wave smothers Europe, some hospital rooms lack AC",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cbsnews.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/video/europeans-seek-relief-from-extreme-temperatures/",
-        "Title": "Europeans seek relief from extreme temperatures amid deadly heat wave",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.politico.eu/article/volkswagen-reportedly-looks-to-axe-100000-jobs-amidst-financial-woes/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "VW reportedly looks to axe 100,000 jobs amid financial woes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     }
 ]
