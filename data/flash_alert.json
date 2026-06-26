@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Trump Says He Will Use Unfrozen Iranian Assets to Buy US Agricultural Products",
+        "Title": "Ukraine Launches Dozens of Drones Toward Moscow",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -12,6 +12,13 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/air/in-an-ironic-turn-of-events-white-house-wants-to-raid-navy-e-2-account-to-pay-for-usaf-e-7s",
+        "Title": "In An Ironic Turn Of Events, White House Wants To Raid Navy E-2 Account To Pay For USAF E-7s",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/southfronteng/61537",
@@ -28,18 +35,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260625-us-seeks-iran-deal-not-at-any-price-rubio",
-        "Title": "US seeks Iran deal, but 'not at any price,' Rubio says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/using-sase-modern-tic-30-solution",
-        "Title": "Using SASE in a Modern TIC 3.0 Solution",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cbsnews.com/video/062526-cbs-evening-news/",
@@ -60,13 +67,6 @@
         "Title": "Experts say three recent powerful earthquakes are not related",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQeDFtYW9yOWNWMTR1ME15TmxqeWU1RnJzU0E1ZmQ4WUhZQm1VWGQ2cnpmWDR6VE1GRDFia3VwUHJveTNtU3RGSGN6UzluTVNneVJIbmJNVWVibU1BLVhKZEVldW1makdDLTRhWElNcDEzU1JvSnRaRjg1bUI3ZmxmSXQyc21pYXlLdkNsbUFNRjE2MUV6SWJTa2UwQ01NeGNFbDllaXBZaW5SVUNsOURCM3ZJM0l4VFRxZG83SUxTVEdpOWlCQXNycTM1dmJwWFhJRm5QUjR6SQ?oc=5",
-        "Title": "Secretary General meets President Trump in Washington: \u201cEurope is stepping up\u201d - North Atlantic Treaty Organization",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
