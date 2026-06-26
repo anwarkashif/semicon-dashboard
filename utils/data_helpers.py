@@ -6,20 +6,44 @@ import pandas as pd
 import streamlit as st
 
 def get_brief_mappings(directory):
-    files = glob.glob(f'{directory}/brief_*.json')
-    files.sort(reverse=True)
+    # 🛑 THE FIX: Expand the search scope to catch all your generated JSON formats
+    files = []
+    files.extend(glob.glob(f'{directory}/brief_*.json'))
+    files.extend(glob.glob(f'{directory}/flush_brief_*.json'))
+    files.extend(glob.glob(f'{directory}/shift_brief*.json'))
+    files.extend(glob.glob(f'{directory}/tactical_events_*.json'))
+    
+    # Sort files by modification time so the newest are at the top
+    files.sort(key=os.path.getmtime, reverse=True)
+    
     mapping = {}
     for f in files:
         try:
             with open(f, 'r', encoding='utf-8') as file:
                 d = json.load(file)
-                # Ensure we pull a clean date, falling back to a safe string if missing
-                b_date = d.get('date', 'Unknown Date')
+                
+                # Handle both Dictionary returns and List returns (for tactical_events)
+                if isinstance(d, dict):
+                    b_date = d.get('date', 'Unknown Date')
+                elif isinstance(d, list) and len(d) > 0 and isinstance(d[0], dict):
+                    b_date = d[0].get('Date', 'Unknown Date')
+                else:
+                    b_date = 'Unknown Date'
+                
                 filename = os.path.basename(f)
                 
-                # 🛑 THE FIX: Use safe string parsing that doesn't break on multiple underscores
-                if 'weekly_tactical' in filename:
+                # If the JSON doesn't have a date key, try to extract it from the filename
+                if b_date == 'Unknown Date':
+                    date_match = re.search(r'\d{4}-\d{2}-\d{2}', filename)
+                    b_date = date_match.group(0) if date_match else "Unknown Date"
+                
+                # 🏷️ Intelligent Labeling based on the filename structure
+                if 'weekly_tactical' in filename or 'tactical_events' in filename:
                     display_name = f"Weekly Tactical Brief - {b_date}"
+                elif 'flush_brief' in filename:
+                    display_name = f"Executive Flash Brief - {b_date}"
+                elif 'shift_brief' in filename:
+                    display_name = f"Today's Shift Snippet - {b_date}"
                 else:
                     display_name = f"Weekly Intelligence Brief - {b_date}"
                     
@@ -31,6 +55,7 @@ def get_brief_mappings(directory):
                 mapping[display_name] = f
         except Exception: 
             pass
+            
     return mapping
 
 def clean_dataframe(df):

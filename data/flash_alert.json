@@ -1,16 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drones Strike Russian S-300 Launchers in Donetsk Oblast",
+        "Title": "Russian Security Services Seek Intelligence for Assassination Strikes in Kyiv",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/middle-east/20260626-lebanon-israel-us-sign-framework-agreement-in-washington",
+        "Title": "Middle East War: Lebanon, Israel and US sign framework agreement in Washington",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/26/us-announces-framework-agreement-between-israel-and-lebanon?traffic_source=rss",
-        "Title": "US announces framework agreement between Israel and Lebanon",
+        "Source": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPb3BUcFZiUVdJUDE2bjdWMlh2djVlaEUyZkxZZk9YcXdzSmFaWlg2cnlRcExlNXAydWE3amdyZ3lRRnFvNG1rb2RWbHFZLVBBR05ETHl3QzJ6UG91MDZWSnBkLVo1TWUzWjhqdmdwWGFIREU1emtvNHVRZ1pXdE1ObFlGMDl0Tkdrel9WS0kyU0FqdHBaWk40UTF5ckphSlZpOGd5dEZYaVVMd3Y1TUp0eGhlSW8wVnlES2ozbU5LYUlGRlZaZERGZkwtYUR1T2VpUmRfaUtsWHQ3X2NjakJRYWp4UkFaNHNPdlhrU0laMC1YLU1NbWc?oc=5",
+        "Title": "NATO Deputy Secretary General highlights innovation and support for Ukraine at Recovery Conference - North Atlantic Treaty Organization",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "news.google.com",
         "threat_level": "HIGH"
     },
     {
@@ -19,13 +26,6 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPMGZMSmFzYWJzeEdZVzMyclEtS044VDV4bGNxZTZuVkJOUUJlSGtxVHY4b01lNjlPd2RGSVVEWjdZM1VIX1AyRUtSQjBsYzR4M2FXZ0tmZFJFRFk0dDdpY2lpbGliOGs5TTVYWTlxQ21aNHI5eEhEUVV2MFF5dlNqNXE4RXMyMkEtZnpRVDNFMERhM2hhZkg2ZFdfRXJnMnM4UExqdENXUXZpOUN5QVdocXdWNl9kRTNVYUYxbnhsU3dWNGdPQ3k4MjlEdXN4elh0Z0QyeGU4QmFTX0VEZ0E?oc=5",
-        "Title": "Russia\u2019s war of aggression against Ukraine: Council extends economic sanctions for another year - EEAS",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -46,25 +46,25 @@
         "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "New York City freezes rents for one million regulated apartments",
+        "Source": "https://t.me/nexta_live/119451",
+        "Title": "Russian Propagandist Calls for Repression Against Armenians",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/26/nine-people-killed-in-building-collapse-in-lagos-nigeria?traffic_source=rss",
-        "Title": "Nine people killed in building collapse in Lagos, Nigeria",
+        "Source": "https://www.cnbc.com/2026/06/26/on-semi-stock-synaptics-ceo-hassane-el-khoury.html",
+        "Title": "ON Semi tanks 24% following Synaptics deal as CEO defends core business",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ3plX1VFX3pHcHl4UU1KTVJQbE9QSjdINDd3MGRIZU1JQlhkS19CRl9zbnVKWGpyN0ZBMEZsS1BUSzlMVHJlUFotX09QN3FXeFQyS3dtUlVaYmh3dm54QkQ0VTNMWlRoTjVURXVsMEdZTEpQU1d1YWF0amVsMjRKdHlncw?oc=5",
-        "Title": "World stocks edge lower as tech selloff drags markets - Reuters",
+        "Source": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOOGxnX1JMS2VvbjU1dHc5WjBjQldNdUFHb09qeV81M05DODFTQnpXRy1fQmVoemdjSGxQUUlTUmIzLWJvTWRTclN0SDlaWWdSa1B1ellMNFBKZG9VWkJMSUpIaDBxLXB4MXRtVGo5Vy1aWkNiRDlacUZfX201TkpLUXB6SVU4V1pNaG9ZdU41dWk5NUdLV0paNldnOHNnaVUtM1JuTkt6QzJ0N1pqOU02X0V6WVJWZ29Sc3pxdmxDZ2JOZHBj?oc=5",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications - CISA (.gov)",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
         "threat_level": "WATCH"

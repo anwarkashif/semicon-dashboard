@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 import json
-import re  # <-- Added to properly parse markdown bolding in HTML
+import re  
 
 # --- UPDATED IMPORTS ---
 from utils.snippet_templates import get_weekly_tactical_template
@@ -199,6 +199,7 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
                         "recent_actions": df_actions.to_dict('records') if df_actions is not None else []
                     }
                     
+                    # 🛑 THE FIX: Saving the file DIRECTLY into 'data/' instead of 'data/weekly_tactical/'
                     os.makedirs('data', exist_ok=True)
                     archive_filename = f"data/brief_weekly_tactical_{date_str}.json"
                     
