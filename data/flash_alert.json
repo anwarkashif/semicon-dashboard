@@ -1,72 +1,72 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Container Ships and Oil Tankers Transit Strait of Hormuz Under US Air Force Escort",
+        "Title": "Ukrainian Drones Strike Russian Ships and S-400 System in Kerch",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/asia/iran-war-korea-jet-fuel.html",
-        "Title": "How a Jet Fuel Refinery Is Scrambling After the Iran War Oil Shock",
+        "Source": "https://www.bbc.co.uk/news/articles/c1eydwldzdjo?at_medium=RSS&at_campaign=rss",
+        "Title": "Trump asks Congress for billions for Iran war, after tension with Republicans",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/26/world/europe/zelensky-belarus-drones-relay.html",
+        "Title": "Zelensky Steps Up Threats Against Belarus for Aiding Drone Attacks",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/gulf-changed-forever-iran-war.html",
-        "Title": "How Three Months of War Changed the Gulf Forever",
+        "Source": "https://www.cnbc.com/2026/06/26/strait-of-hormuz-shipping-oil-us-iran.html",
+        "Title": "Shipping rebounds in Strait of Hormuz one week after U.S.-Iran deal \u2013 but fragile confidence threatens recovery",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/26/north-korea-conducts-major-weapons-tests-south-training-drone-warriors?traffic_source=rss",
-        "Title": "North Korea conducts major weapons tests; South training \u2018drone warriors\u2019",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119412",
-        "Title": "Ukraine Strikes Russia With Large-Scale Attack",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "cnbc.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "I Was Kicked Out of China",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/paris-bans-public-alcohol-consumption-as-heatwave-overwhelms-emergency-services",
+        "Title": "Paris bans public alcohol consumption as heatwave overwhelms emergency services",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119416",
-        "Title": "Russia Considers Reinstating Death Penalty",
+        "Source": "https://www.france24.com/en/europe/20260626-live-paris-pride-europe-record-heatwave",
+        "Title": "Live: Paris Pride postponed, drowning death toll rises as Europe swelters in record heatwave",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/uk-news/2026/jun/26/heathrow-expects-fall-in-passengers-and-profits-this-year-because-of-iran-war",
-        "Title": "Heathrow expects fall in passengers and profits this year because of Iran war",
+        "Source": "https://www.france24.com/en/scorching-record-breaking-heatwave-unequivocally-due-to-climate-change",
+        "Title": "Scorching record-breaking heatwave 'unequivocally' due to climate change",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
