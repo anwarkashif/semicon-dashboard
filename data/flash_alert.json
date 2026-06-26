@@ -1,24 +1,38 @@
 [
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drones Strike Russian Ships and S-400 System in Kerch",
+        "Title": "Israeli Drone Strike Kills Two in Gaza",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c1eydwldzdjo?at_medium=RSS&at_campaign=rss",
-        "Title": "Trump asks Congress for billions for Iran war, after tension with Republicans",
+        "Source": "https://t.me/southfronteng/61542",
+        "Title": "US Considers Relocating Gulf Bases After Iranian Strikes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/europe/zelensky-belarus-drones-relay.html",
-        "Title": "Zelensky Steps Up Threats Against Belarus for Aiding Drone Attacks",
+        "Source": "https://t.me/nexta_live/119419",
+        "Title": "Russia Blocks Multiple Online Services",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32249",
+        "Title": "Japan Tests Palantir AI in Military Exercise with US",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cnbc.com/2026/06/26/strait-of-hormuz-shipping-oil-us-iran.html",
@@ -28,43 +42,29 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/26/mother-gives-birth-amid-venezuela-earthquake-devastation?traffic_source=rss",
+        "Title": "Mother gives birth amid Venezuela earthquake devastation",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.bbc.co.uk/news/articles/cn947pxxz4yo?at_medium=RSS&at_campaign=rss",
+        "Title": "Housing board votes to freeze New York rents in victory for Mamdani",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.france24.com/en/paris-bans-public-alcohol-consumption-as-heatwave-overwhelms-emergency-services",
-        "Title": "Paris bans public alcohol consumption as heatwave overwhelms emergency services",
+        "Source": "https://www.france24.com/en/venezuela-hunts-for-survivors-of-twin-quakes-as-it-waits-for-foreign-aid",
+        "Title": "Venezuela hunts for survivors of twin quakes as it waits for foreign aid",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/europe/20260626-live-paris-pride-europe-record-heatwave",
-        "Title": "Live: Paris Pride postponed, drowning death toll rises as Europe swelters in record heatwave",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/scorching-record-breaking-heatwave-unequivocally-due-to-climate-change",
-        "Title": "Scorching record-breaking heatwave 'unequivocally' due to climate change",
+        "Source": "https://www.france24.com/en/paris-police-asks-major-festivals-be-cancelled-due-to-relentless-heatwave",
+        "Title": "Paris police asks major festivals be cancelled due to relentless heatwave",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
         "threat_level": "WATCH"
