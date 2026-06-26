@@ -1,30 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Navy Ohio-Class Submarine Spotted Off Key West, Florida",
+        "Title": "Repairs Completed on Key Power Line at Zaporizhzhia Nuclear Plant",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/2026/jun/26/russia-provocation-baltic-states-poland",
+        "Title": "Russia preparing possible \u2018provocation\u2019 in Baltic states or Poland, sources say",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.nytimes.com/2026/06/26/world/europe/jaguar-russia-hack.html",
         "Title": "A $2.5 Billion Whodunit: The Hack That Dented the U.K. Economy",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/26/forever-wars-israels-conflict-cycle-shows-no-finish-line?traffic_source=rss",
-        "Title": "Forever wars: Israel\u2019s cycle of conflict shows no finish line",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/economy/2026/6/26/oil-prices-climb-after-attack-in-strait-of-hormuz-halts-evacuation-plan?traffic_source=rss",
-        "Title": "Oil prices climb after attack in Strait of Hormuz halts evacuation plan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -35,38 +28,45 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/economy/2026/6/26/apple-microsoft-hike-prices-over-surging-chip-costs?traffic_source=rss",
+        "Title": "Apple, Microsoft hike prices over surging chip costs",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/26/airwallex-series-h-funding-11-billion-valuation-ai-finance.html",
+        "Title": "Airwallex hits $11 billion valuation with $320 million raise as fintech pushes into finance run by AI agents ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.nytimes.com/live/2026/06/25/world/venezuela-earthquake",
+        "Title": "Search for Venezuela Quake Survivors Grows More Urgent",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://warmonitor.com/",
         "Title": "World Cups Fans in Myanmar Boycott Junta-Linked Broadcasts",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/26/satellite-images-show-venezuelas-la-guaira-before-and-after-twin-quakes?traffic_source=rss",
-        "Title": "Satellite images show Venezuela\u2019s La Guaira before and after twin quakes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1xdkxKSXZsMzBGUmJzYjJTdlFXWjdQZC1PMFg1NUw2bi1xWEpBSlVhRDVNSnNRSDRSdk9ZSGNPOUlFUVljRmYtSXBvcVRHbjM5WVJDdVhoZEVadHBadWc?oc=5",
-        "Title": "Venezuela: Earthquakes - Jun 2026 - ReliefWeb",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
