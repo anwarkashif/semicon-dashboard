@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Kerch Bridge With Drone",
+        "Title": "Ukrainian Drones Strike Russian Ammunition Site",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/26/world/europe/zelensky-belarus-drones-relay.html",
+        "Title": "Zelensky Steps Up Threats Against Belarus for Aiding Drone Attacks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/6/26/north-korea-conducts-major-weapons-tests-south-training-drone-warriors?traffic_source=rss",
+        "Title": "North Korea conducts major weapons tests; South training \u2018drone warriors\u2019",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,45 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jun/26/south-korea-drone-warriors-military-training",
-        "Title": "South Korea to train half a million military personnel to become \u2018drone warriors\u2019",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/25/world/europe/paris-canal-swimming-heatwave-france.html",
+        "Title": "To Escape the Heat, Parisians Jump into an Old Industrial Canal",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32248",
+        "Title": "Russia Accuses Ukraine of Recruiting Minors for Terrorist Attacks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.theguardian.com/environment/2026/jun/26/weather-tracker-heatwave-germany-poland-40c-temperatures",
+        "Title": "Weather tracker: Heatwave on course to tip temperatures over 40C in Germany and Poland",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89375",
-        "Title": "Poland Considers Blocking Ukraine EU Membership Talks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://news.sky.com/story/man-who-killed-six-in-car-attack-on-magdeburg-christmas-market-sentenced-to-life-in-prison-13557910",
-        "Title": "Man who killed six at Christmas market in Germany sentenced to life in prison",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119411",
-        "Title": "Russia Sees Record Traffic Jam Exiting Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "SK Hynix prepares U.S. listing at $166 per share \u2014 here's why HSBC says it could be worth 20% more",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/26/cnbc-daily-open-one-session-two-major-sell-offs.html",
-        "Title": "CNBC Daily Open: One session, two major sell-offs",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
