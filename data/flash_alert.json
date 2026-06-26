@@ -1,17 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Crimea Ferries, Triggering State of Emergency",
+        "Title": "Hungary Blocks EU Approval of Ukraine and Moldova Accession Screening",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32252",
-        "Title": "Russia Imposes Emergency Mode in Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89379",
@@ -21,22 +14,29 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cbsnews.com/news/iranian-national-us-alleged-3-4-billion-hacking-attacks-arrested-montenegro/",
-        "Title": "Iranian national U.S. sought for $3.4 billion in hacking attacks arrested",
+        "Source": "https://t.me/rybar_in_english/32252",
+        "Title": "Russia Imposes Emergency Mode in Crimea",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "HIGH"
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/middle-east/20260626-hezbollah-fpv-drones-iron-dome-decoy-launchers",
+        "Title": "Hezbollah claims hits on Israel\u2019s Iron Dome but videos show strikes on decoys",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/live-news/20260626-un-says-iran-nuclear-pledge-needs-very-strong-verification",
+        "Title": "UN says Iran nuclear pledge needs 'very strong' verification",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
@@ -49,24 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.dw.com/en/flights-disrupted-in-japan-as-2-tropical-storms-move-in/a-77720286?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Flights disrupted in Japan as 2 tropical storms move in",
+        "Source": "https://www.cbsnews.com/video/heat-wave-smothers-europe-some-hospital-rooms-lack-ac/",
+        "Title": "As heat wave smothers Europe, some hospital rooms lack AC",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.dw.com/en/balochistan-activist-s-life-sentence-raises-fear-of-unrest/a-77721686?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Balochistan activist's life sentence raises fear of unrest",
+        "Source": "https://www.cbsnews.com/video/europeans-seek-relief-from-extreme-temperatures/",
+        "Title": "Europeans seek relief from extreme temperatures amid deadly heat wave",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260626-hezbollah-fpv-drones-iron-dome-decoy-launchers",
-        "Title": "Hezbollah claims hits on Israel\u2019s Iron Dome but videos show strikes on decoys",
+        "Source": "https://www.politico.eu/article/volkswagen-reportedly-looks-to-axe-100000-jobs-amidst-financial-woes/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "VW reportedly looks to axe 100,000 jobs amid financial woes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     }
 ]
