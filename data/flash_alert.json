@@ -1,38 +1,38 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israel Strikes Hezbollah Fighters Near Southern Lebanon Buffer Zone",
+        "Title": "Israel Warns Iran Against Attacking Its Territory",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33915",
+        "Title": "Iran Launches Drones Towards Shipping in Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33914",
+        "Title": "Iranian Missile Alerts Hit Dubai",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQN291MU1rQWJWVkxMQ0JLN3VYeldzSFBhZExDOEhybXoxcTZYYkw5WjNjejJNdTZhRzlEdnFOWUIwN1hGTmg1LS1rSndPczRaVGlfR0xucl9xTGgtT0JvcHlEclRaZ3Jvb1FMVml1bko5TUZ1WEloYXFVajV1bFRBVUN4M0JySnpCUUdJdjJIbGZhNDJqWjdZMVJlNTI?oc=5",
+        "Title": "Russian-installed authorities declare economic emergency in Crimea - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89384",
         "Title": "Russia Returns Nuclear Cruiser Admiral Nakhimov to Service",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89379",
-        "Title": "EU Refuses Asylum to Ukrainians Fit for Frontline",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32252",
-        "Title": "Russia Imposes Emergency Mode in Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.france24.com/en/live-news/20260626-un-says-iran-nuclear-pledge-needs-very-strong-verification",
-        "Title": "UN says Iran nuclear pledge needs 'very strong' verification",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/asia/china-plane-crash-beijing.html",
-        "Title": "Small Plane Crashes Into Tallest Building in Beijing",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89385",
+        "Title": "China Light Aircraft Crashes Into Beijing Skyscraper",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/paris-pride-parade-postponed-to-not-stretch-already-overwhelmed-emergency-services",
-        "Title": "Paris Pride parade postponed to not stretch already overwhelmed emergency services",
+        "Source": "https://t.me/Middle_East_Spectator/33917",
+        "Title": "UKMTO Report Expected After UAE Siren Incident",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/increased-health-risks-limited-resources-french-hospitals-overwhelmed-by-heatwave",
-        "Title": "Increased health risks, limited resources: French hospitals overwhelmed by heatwave",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/video/heat-wave-smothers-europe-some-hospital-rooms-lack-ac/",
-        "Title": "As heat wave smothers Europe, some hospital rooms lack AC",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
