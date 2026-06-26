@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Iskander-M Ballistic Missile Hits Kremenchuk Thermal Power Plant",
+        "Title": "Trump Says He Will Use Unfrozen Iranian Assets to Buy US Agricultural Products",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/cjwg9np904qo?at_medium=RSS&at_campaign=rss",
+        "Title": "UN pauses Strait of Hormuz evacuation plan after cargo ship attacked",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,17 +21,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/25/netanyahu-we-will-remain-in-lebanon-syria-and-gaza-as-long-as?traffic_source=rss",
-        "Title": "Netanyahu: \u2018We will remain in Lebanon, Syria, and Gaza as long as required\u2019",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33907",
-        "Title": "Israel Confronted by Hezbollah in Southern Lebanon",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -35,38 +35,38 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/resources-tools/resources/using-sase-modern-tic-30-solution",
+        "Title": "Using SASE in a Modern TIC 3.0 Solution",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.twz.com/air/in-an-ironic-turn-of-events-white-house-wants-to-raid-navy-e-2-account-to-pay-for-usaf-e-7s",
-        "Title": "In An Ironic Turn Of Events, White House Wants To Raid Navy E-2 Account To Pay For USAF E-7s",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/25/world/africa/africa-cdc-congo-ebola.html",
-        "Title": "Congo Ebola Crisis: Contact Tracing Is Dangerously Behind, Officials Warn",
+        "Source": "https://www.cbsnews.com/video/062526-cbs-evening-news/",
+        "Title": "6/25: CBS Evening News",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "cbsnews.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUno0WHNodTRaUXlfeS1vTXZieFY4ZXRIdDBvY3BNRjA5Z1RYYUlobVVDVjJGZ2tYRWg3cElKU2lKVGN4STVBRVFJeUFtNEhZNm44ckw3eWFCM1VjX0hrTDloWVh2MkhxOHlwYl91WHVkZ3NWaTN4ZUpxaTRBbFZ5MEFBZHJ0Zmo1UTQ3ZDY4T25rckl5?oc=5",
+        "Title": "Ukraine Crisis Response Situation | May 2026 Fact Sheet - ReliefWeb",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/2026/jun/25/three-recent-powerful-earthquakes-not-related",
+        "Title": "Experts say three recent powerful earthquakes are not related",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQeDFtYW9yOWNWMTR1ME15TmxqeWU1RnJzU0E1ZmQ4WUhZQm1VWGQ2cnpmWDR6VE1GRDFia3VwUHJveTNtU3RGSGN6UzluTVNneVJIbmJNVWVibU1BLVhKZEVldW1makdDLTRhWElNcDEzU1JvSnRaRjg1bUI3ZmxmSXQyc21pYXlLdkNsbUFNRjE2MUV6SWJTa2UwQ01NeGNFbDllaXBZaW5SVUNsOURCM3ZJM0l4VFRxZG83SUxTVEdpOWlCQXNycTM1dmJwWFhJRm5QUjR6SQ?oc=5",
+        "Title": "Secretary General meets President Trump in Washington: \u201cEurope is stepping up\u201d - North Atlantic Treaty Organization",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
