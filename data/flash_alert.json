@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Lebanon Toll From Israeli Attacks Reaches 4,243 Dead",
+        "Title": "Trump Threatens 100% Tariff on Countries With Digital Services Tax",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,17 +14,17 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cnbc.com/2026/06/26/openai-limits-new-ai-models-to-trusted-partners-request-us-government.html",
+        "Title": "OpenAI limits new AI models to 'trusted partners' at request of U.S. government",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.twz.com/air/canada-throws-a-curveball-as-it-signals-interest-in-joining-gcap-sixth-gen-fighter-program",
         "Title": "Canada Throws A Curveball As It Signals Interest In Joining GCAP Sixth-Gen Fighter Program",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "twz.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119442",
-        "Title": "Russian Relatives Block Bus Carrying Soldiers",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/warmonitors/44697",
-        "Title": "Israel and Lebanon Expect Framework Agreement",
+        "Source": "https://www.nytimes.com/2026/06/26/world/americas/venezuela-earthquake-shortages-doctors.html",
+        "Title": "The Venezuela Earthquakes Hit a Health System Already in Crisis",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/warmonitors/44696",
-        "Title": "US Threatens 100 Percent Tax on European Imports",
+        "Source": "https://www.bbc.co.uk/news/articles/c0jydyz8z6jo?at_medium=RSS&at_campaign=rss",
+        "Title": "Mother dies saving daughter in Venezuela earthquakes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Citi cuts tech stock weighting: 'Difficult to see how everyone in AI/Tech path wins'",
+        "Source": "https://www.france24.com/en/video/20260626-venezuela-earthquakes-before-and-after-images-reveal-scale-of-devastation",
+        "Title": "Venezuela earthquakes: Before and after images reveal scale of devastation",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
