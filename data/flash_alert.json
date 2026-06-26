@@ -1,72 +1,72 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Mercenaries Mutilate Two Men in Mali",
+        "Title": "Ukrainian Drones Strike Russian S-300 Launchers in Donetsk Oblast",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/features/2026/6/25/hard-headed-pragmatism-israels-war-backfires-as-gulf-backs-us-iran-mou?traffic_source=rss",
-        "Title": "Pragmatic choice: Israel\u2019s war backfires as Gulf backs US-Iran deal",
+        "Source": "https://www.aljazeera.com/news/2026/6/26/us-announces-framework-agreement-between-israel-and-lebanon?traffic_source=rss",
+        "Title": "US announces framework agreement between Israel and Lebanon",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/25/ukrainian-attack-on-crimea-kills-five-russian-officials-say?traffic_source=rss",
-        "Title": "Ukrainian attack on Crimea kills five, Russian officials say",
+        "Source": "https://www.cnbc.com/2026/06/26/openai-limits-new-ai-models-to-trusted-partners-request-us-government.html",
+        "Title": "OpenAI limits new AI models to 'trusted partners' at request of U.S. government",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "cnbc.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32235",
-        "Title": "Ukraine Call Centers Target EU Citizens",
+        "Source": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPMGZMSmFzYWJzeEdZVzMyclEtS044VDV4bGNxZTZuVkJOUUJlSGtxVHY4b01lNjlPd2RGSVVEWjdZM1VIX1AyRUtSQjBsYzR4M2FXZ0tmZFJFRFk0dDdpY2lpbGliOGs5TTVYWTlxQ21aNHI5eEhEUVV2MFF5dlNqNXE4RXMyMkEtZnpRVDNFMERhM2hhZkg2ZFdfRXJnMnM4UExqdENXUXZpOUN5QVdocXdWNl9kRTNVYUYxbnhsU3dWNGdPQ3k4MjlEdXN4elh0Z0QyeGU4QmFTX0VEZ0E?oc=5",
+        "Title": "Russia\u2019s war of aggression against Ukraine: Council extends economic sanctions for another year - EEAS",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "news.google.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/sudan-warnings-mount-over-the-risk-of-new-mass-atrocities/a-77709377?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Sudan: Warnings mount over the risk of new mass atrocities",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61530",
-        "Title": "Iran Warns Vessels Near Hormuz After Cargo Ship Hit",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://warmonitor.com/",
-        "Title": "World stocks climb on chip rally; dollar steadies near one-year high - Reuters",
+        "Title": "New York City freezes rents for one million regulated apartments",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/25/world/americas/survivor-search-venezuela-earthquake.html",
-        "Title": "On the ground and online, Venezuelans desperately search for missing relatives.",
+        "Source": "https://www.aljazeera.com/news/2026/6/26/nine-people-killed-in-building-collapse-in-lagos-nigeria?traffic_source=rss",
+        "Title": "Nine people killed in building collapse in Lagos, Nigeria",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ3plX1VFX3pHcHl4UU1KTVJQbE9QSjdINDd3MGRIZU1JQlhkS19CRl9zbnVKWGpyN0ZBMEZsS1BUSzlMVHJlUFotX09QN3FXeFQyS3dtUlVaYmh3dm54QkQ0VTNMWlRoTjVURXVsMEdZTEpQU1d1YWF0amVsMjRKdHlncw?oc=5",
+        "Title": "World stocks edge lower as tech selloff drags markets - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
