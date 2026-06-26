@@ -17,7 +17,7 @@ def get_brief_mappings(directory):
                 b_date = d.get('date', 'Unknown Date')
                 filename = os.path.basename(f)
                 
-                # 🛑 THE FIX: Dynamically label the brief based on its filename
+                # 🛑 THE FIX: Use safe string parsing that doesn't break on multiple underscores
                 if 'weekly_tactical' in filename:
                     display_name = f"Weekly Tactical Brief - {b_date}"
                 else:
