@@ -1,10 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Three Explosions Hit Port of Sirik on Strait of Hormuz",
+        "Title": "US CENTCOM Strikes Iranian Missile and Drone Storage Locations",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/middle-east/20260626-lebanon-israel-us-sign-framework-agreement-in-washington",
+        "Title": "Middle East War: Lebanon, Israel and US sign framework agreement in Washington",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119453",
+        "Title": "Russia to Create Database of All Mobile Phones",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/strait-of-hormuz-iran-attack.html",
+        "Title": "Trump Says Iran Attack on Cargo Ship Violated the Cease-fire",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -14,59 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119455",
-        "Title": "Russia Tightens Website Authentication Rules",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.france24.com/en/middle-east/20260626-lebanon-israel-us-sign-framework-agreement-in-washington",
-        "Title": "Middle East War: Lebanon, Israel and US sign framework agreement in Washington",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89393",
-        "Title": "Iran Reports Explosion in Taheruyeh, Sirik",
+        "Source": "https://t.me/Middle_East_Spectator/33919",
+        "Title": "US Conducts Airstrikes in Southern Iran",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/us/politics/trump-venezuela-earthquake-aid.html",
-        "Title": "Earthquake Tests Growing Ties Between U.S. and Venezuela",
+        "Source": "https://t.me/warmonitors/44704",
+        "Title": "US to Renew $30 Million Transfer to Lebanese Army",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/strait-of-hormuz-iran-attack.html",
-        "Title": "Trump Says Iran Attack on Cargo Ship Violated the Cease-fire",
+        "Source": "https://t.me/warmonitors/44703",
+        "Title": "Iran Experiences Explosions in Sirik Port City",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/americas/20260626-venezuelans-search-for-missing-as-earthquake-death-toll-climbs",
-        "Title": "Venezuelans search for missing as earthquake death toll climbs",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
