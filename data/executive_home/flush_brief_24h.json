@@ -1,14 +1,11 @@
 {
-    "bluf": "Global geopolitical tensions are escalating across multiple critical theaters. The Middle East faces immediate, critical maritime threats from Iran's assertion over the Strait of Hormuz and Houthi actions in the Red Sea, prompting potential US strategic realignment. Concurrently, Russia is expanding its military posture in the Arctic and preparing for deeper involvement in Ukraine, while China increases its influence in Southeast Asia.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "Iran insists on the right to control shipping in the Strait of Hormuz following a ship incident near Oman.",
-        "Houthis are attacking and threatening Israeli vessels, announcing a ban on Israeli ships in the Red Sea.",
-        "The US is considering relocating Gulf bases, potentially to Israel, due to damage attributed to Iran.",
-        "Belarus is reportedly preparing to play a larger role in Russia's war in Ukraine.",
-        "China and Cambodia are strengthening their security partnership, with China testing Scarborough Shoal.",
-        "Russia is expanding its military power and challenging NATO's defense capabilities in the Arctic."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The Middle East remains a primary flashpoint, with Iran directly challenging international maritime norms in the Strait of Hormuz and the Gulf of Oman, evidenced by recent ship incidents and its insistence on control. This is compounded by Houthi attacks on Israeli-linked shipping in the Red Sea, collectively posing a critical threat to global trade and energy security. The US is actively considering strategic adjustments, including relocating military assets, in response to Iranian actions. Elsewhere, Russia is signaling an escalation in the Ukraine conflict through Belarusian involvement and is aggressively expanding its military footprint in the Arctic, directly challenging NATO's defense capabilities. Concurrently, China is deepening security ties with Cambodia and asserting territorial claims in the South China Sea, indicating a broader pattern of increasing global power competition and regional destabilization. Separately, Europe faces significant long-term strategic challenges from a warming climate impacting its historic cities.",
-    "risk_assessment": "Critical risk of maritime conflict and significant disruption to global shipping and energy markets in the Middle East. High risk of escalation in the Ukraine conflict and increased military confrontation between Russia and NATO in the Arctic. Elevated risk of regional instability and potential conflict in the South China Sea. Long-term, high strategic risk from climate change impacting urban resilience in Europe.",
-    "strategic_forecast": "Expect continued maritime incidents and potential for direct confrontation in the Strait of Hormuz and Red Sea, possibly leading to a significant shift in US military posture in the Gulf. The Ukraine conflict is likely to intensify with Belarus's increased involvement. Geopolitical competition will sharpen in the Arctic and South China Sea, potentially leading to more frequent military exercises and territorial disputes. The long-term implications of climate change will increasingly factor into European stability and infrastructure planning."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
