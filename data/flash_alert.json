@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US CENTCOM Strikes Iranian Missile Sites, Radar Stations After Hormuz Attack",
+        "Title": "Iran's Revolutionary Guards Vow Response to Alleged US Strike on Sirik Island",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33927",
+        "Title": "Lebanese Civil War Warning",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,6 +21,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/warmonitors/44707",
+        "Title": "US Military Conducts Strikes Near Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -21,50 +35,36 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33921",
-        "Title": "Lebanon Protests Erupt Over Israel Talks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/26/world/americas/rescue-teams-and-residents-alike-race-to-save-survivors-of-venezuelas-earthquakes.html",
-        "Title": "In Venezuela\u2019s Rubble, Listening for Whispers And Longing for Help",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-israel-hezbollah-strait-of-hormuz-peace-deal-talks/",
-        "Title": "U.S. strikes Iran after Trump accuses Tehran of \"foolish violation\" of ceasefire",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44707",
-        "Title": "US Military Conducts Strikes Near Strait of Hormuz",
+        "Source": "https://t.me/Middle_East_Spectator/33932",
+        "Title": "Hezbollah Supporters Rally in Beirut",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33919",
-        "Title": "US Conducts Airstrikes in Southern Iran",
+        "Source": "https://t.me/Middle_East_Spectator/33930",
+        "Title": "Lebanese Army Clashes with Protesters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/warmonitors/44704",
-        "Title": "US to Renew $30 Million Transfer to Lebanese Army",
+        "Source": "https://www.aljazeera.com/news/2026/6/26/un-rights-chief-calls-for-probe-into-migrant-deaths-in-us-detention-centres?traffic_source=rss",
+        "Title": "UN rights chief calls for probe into migrant deaths in US detention centres",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33928",
+        "Title": "Lebanon Deploys Military Against Citizens",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
