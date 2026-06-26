@@ -1,16 +1,24 @@
 [
     {
         "Date": "2026-06-26",
-        "Actor": "Iran (accused)",
-        "Action": "Drone attack on cargo ship 'Ever Lovely'.",
+        "Actor": "United States",
+        "Action": "Strikes Iran over attack on Hormuz ship.",
+        "Location": "Strait of Hormuz, Iran",
+        "Risk": "CRITICAL",
+        "Source": "https://foreignpolicy.com/2026/06/26/us-strikes-iran-cease-fire-violation-hormuz-ever-lovely-mou-trump/"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "UN, IMO",
+        "Action": "Pauses Hormuz evacuation after ship attack.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL",
-        "Source": "https://gcaptain.com/drone-strike-on-ever-lovely-exposes-the-fiction-of-a-free-strait/"
+        "Source": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE56TTl2a0NjUWo4eEMyQXdzdmkyUFE0dnhaaG1zcWtyU1dNYXZpZzlPV1l5aWVhUmlfTWtoa0JCQTJQZWZLdXRFb1FqOE56QjJmYmowUWk3TmJRdw?oc=5&hl=en-US&gl=US&ceid=US:en"
     },
     {
         "Date": "2026-06-26",
         "Actor": "Taiwan",
-        "Action": "To build chip and EV factories in Poland.",
+        "Action": "Builds chip and EV factories in Poland.",
         "Location": "Poland",
         "Risk": "HIGH",
         "Source": "https://thediplomat.com/2026/06/taiwan-to-build-chip-and-ev-factories-in-poland-replacing-china-and-the-us/"
@@ -18,8 +26,8 @@
     {
         "Date": "2026-06-26",
         "Actor": "United States (Trump)",
-        "Action": "Threatens 100% tariffs over digital services tax.",
-        "Location": "Europe",
+        "Action": "Threatens 100% tariffs on digital tax countries.",
+        "Location": "Global",
         "Risk": "HIGH",
         "Source": "https://www.ft.com/content/5d886d47-c509-44a4-9077-bcd25158b61e"
     },
@@ -27,24 +35,16 @@
         "Date": "2026-06-26",
         "Actor": "China",
         "Action": "Plans to double Tiangong space station size.",
-        "Location": "Space",
+        "Location": "Global Space",
         "Risk": "HIGH",
         "Source": "https://www.space.com/space-exploration/launches-spacecraft/china-plans-to-double-the-size-of-its-tiangong-space-station-while-the-iss-nears-its-end"
     },
     {
         "Date": "2026-06-26",
-        "Actor": "Israel, Lebanon, Hezbollah",
-        "Action": "Sign peace deal; Hezbollah rejects agreement.",
-        "Location": "Israel, Lebanon",
+        "Actor": "South Korea",
+        "Action": "Repurposes reservoirs for semiconductor water needs.",
+        "Location": "South Korea",
         "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-lebanon-sign-framework-peace-deal-after-us-mediated-talks"
-    },
-    {
-        "Date": "2026-06-26",
-        "Actor": "United States",
-        "Action": "Navy identifies subsea rare earth vulnerability.",
-        "Location": "Global oceans",
-        "Risk": "CRITICAL",
-        "Source": "https://warontherocks.com/cogs-of-war/the-u-s-navys-subsea-rare-earth-vulnerability/"
+        "Source": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRW5rM09BcE9fUGNSZzJQWXQ0eW5JckVaOGw2QUE0WTJQa1ZnS2RVR2xEWVN3Mi1xYm5xZ3hZYU5xNG10bHN3QXBaa245TTN2d1dTQmdJUVFYWHVkQWtvWVdZcC1HOW9QRnBPTGRQYVNyZU9LMG9NRjA5TGQtSm0zMGZheG5qUjYx?oc=5&hl=en-US&gl=US&ceid=US:en"
     }
 ]
