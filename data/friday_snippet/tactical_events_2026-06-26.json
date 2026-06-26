@@ -1,50 +1,50 @@
 [
     {
         "Date": "2026-06-26",
-        "Actor": "Iran",
-        "Action": "Attacks commercial vessel in Strait of Hormuz",
+        "Actor": "Iran (accused)",
+        "Action": "Drone attack on cargo ship 'Ever Lovely'.",
         "Location": "Strait of Hormuz",
         "Risk": "CRITICAL",
-        "Source": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbEpDNnp1T01SRk1IdERHT2RoczdCMHh6V1pmR3JFZXBTRnhjV3Z6UWlJbURRT1g0dVhCZ2VwMWowTUtXLXA3MEh5bGNhUkczZklTZHR3WkxMU1Z4dDRxT3p5aDNTU2FLdzdFVUhCNExFMnV3S0F3UVg0RkNSSzRwYl92OS1IcS1Vckg5aDEtY3BpWFZlU3dFdy1SQTR5Sk9GdXNxYjhwU2xOLUFEaGZuZU5IT3NNQ3VPc2Z1Sm5JY9IBxAFBVV95cUxQcWlCblRPdDNrZ2V2X1VQVFpIRzJ6TUEtenJ4M0pTTEpQOW9fLXFXOWVKN2poVXZtSi1rX3Fnb0ZSbEwzc2JhZDB2WWgyRk5Ha1daQlVuNTIzX25iMDh5ODl4aE1CWDZJb2RLVVM5ZU5FVk9RbExxOEFNWFR5ZXZGR1RjOFA0ZU1USUxSRnNYSjZTM0FQUU1EczQ0WGVlbWVxTllqelVFdUJNMklDZndYVW9ETWs5bmQ4RzBYNVpmSm5NVndn?oc=5&hl=en-US&gl=US&ceid=US:en"
+        "Source": "https://gcaptain.com/drone-strike-on-ever-lovely-exposes-the-fiction-of-a-free-strait/"
     },
     {
         "Date": "2026-06-26",
-        "Actor": "DeepSeek (China)",
-        "Action": "Plans hiring spree in AI talent war",
-        "Location": "China",
+        "Actor": "Taiwan",
+        "Action": "To build chip and EV factories in Poland.",
+        "Location": "Poland",
         "Risk": "HIGH",
-        "Source": "https://www.ft.com/content/e0b071ad-d3ea-4b9d-834e-84b23b48b385"
+        "Source": "https://thediplomat.com/2026/06/taiwan-to-build-chip-and-ev-factories-in-poland-replacing-china-and-the-us/"
     },
     {
         "Date": "2026-06-26",
-        "Actor": "Philippines",
-        "Action": "Deploys US-made naval drones in western waters",
-        "Location": "South China Sea",
+        "Actor": "United States (Trump)",
+        "Action": "Threatens 100% tariffs over digital services tax.",
+        "Location": "Europe",
         "Risk": "HIGH",
-        "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/"
+        "Source": "https://www.ft.com/content/5d886d47-c509-44a4-9077-bcd25158b61e"
     },
     {
         "Date": "2026-06-26",
-        "Actor": "Belarus",
-        "Action": "Preparing larger role in Russia\u2019s Ukraine war",
-        "Location": "Ukraine",
+        "Actor": "China",
+        "Action": "Plans to double Tiangong space station size.",
+        "Location": "Space",
         "Risk": "HIGH",
-        "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/belarus-is-quietly-preparing-to-play-a-larger-role-in-russias-ukraine-war/"
+        "Source": "https://www.space.com/space-exploration/launches-spacecraft/china-plans-to-double-the-size-of-its-tiangong-space-station-while-the-iss-nears-its-end"
     },
     {
         "Date": "2026-06-26",
-        "Actor": "United States Navy",
-        "Action": "Identified subsea rare earth supply chain vulnerability",
-        "Location": "Global",
+        "Actor": "Israel, Lebanon, Hezbollah",
+        "Action": "Sign peace deal; Hezbollah rejects agreement.",
+        "Location": "Israel, Lebanon",
         "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-lebanon-sign-framework-peace-deal-after-us-mediated-talks"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "United States",
+        "Action": "Navy identifies subsea rare earth vulnerability.",
+        "Location": "Global oceans",
+        "Risk": "CRITICAL",
         "Source": "https://warontherocks.com/cogs-of-war/the-u-s-navys-subsea-rare-earth-vulnerability/"
-    },
-    {
-        "Date": "2026-06-26",
-        "Actor": "Intel",
-        "Action": "Details 18A semiconductor manufacturing technology importance",
-        "Location": "Global",
-        "Risk": "ELEVATED",
-        "Source": "https://semiwiki.com/semiconductor-manufacturers/intel/370512-intel-18a-vs-intel-18a-p-what-is-the-difference-and-why-does-it-matter/"
     }
 ]
