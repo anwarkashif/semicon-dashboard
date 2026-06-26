@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Targets US Military Positions in Middle East",
+        "Title": "Russian Drones Strike Energy Infrastructure in Okhtyrka, Ukraine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,13 +14,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89407",
-        "Title": "Iranian Forces Strike US Military Positions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://t.me/Middle_East_Spectator/33934",
         "Title": "US Strikes Iranian Targets in Sirik",
         "Feed_Source": "WAR MONITOR",
@@ -28,11 +21,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33927",
-        "Title": "Lebanese Civil War Warning",
+        "Source": "https://t.me/Middle_East_Spectator/33932",
+        "Title": "Hezbollah Supporters Rally in Beirut",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,22 +42,29 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/warmonitors/44709",
-        "Title": "Iran Signs Ceasefire Agreement",
+        "Source": "https://www.aljazeera.com/news/2026/6/26/4-9-earthquake-detected-in-venezuela-just-days-after-major-quakes?traffic_source=rss",
+        "Title": "Venezuela shaken by 4.9-magnitude tremor days after major earthquakes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.cbsnews.com/news/venezuela-earthquakes-la-guaira-death-toll-race-to-find-missing-survivors/",
+        "Title": "Race to find survivors as Venezuela's earthquake death toll soars",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33935",
+        "Title": "Iran Strikes US Army Positions in Southern Iran",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/americas/scenes-of-collapse-the-emergency-at-venezuelas-hospitals.html",
-        "Title": "Scenes of Collapse: The Emergency at Venezuela\u2019s Hospitals",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89408",
-        "Title": "Iran May Strike Soon",
+        "Source": "https://t.me/warmonitors/44709",
+        "Title": "Iran Signs Ceasefire Agreement",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
