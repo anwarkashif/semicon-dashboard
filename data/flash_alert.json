@@ -1,14 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drones Strike Russian Ammunition Site",
+        "Title": "Container Ships and Oil Tankers Transit Strait of Hormuz Under US Air Force Escort",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/europe/zelensky-belarus-drones-relay.html",
-        "Title": "Zelensky Steps Up Threats Against Belarus for Aiding Drone Attacks",
+        "Source": "https://www.nytimes.com/2026/06/26/world/asia/iran-war-korea-jet-fuel.html",
+        "Title": "How a Jet Fuel Refinery Is Scrambling After the Iran War Oil Shock",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/gulf-changed-forever-iran-war.html",
+        "Title": "How Three Months of War Changed the Gulf Forever",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
@@ -28,43 +35,36 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32245",
-        "Title": "Russia Repels Mass Air Raid on Moscow",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/25/world/europe/paris-canal-swimming-heatwave-france.html",
-        "Title": "To Escape the Heat, Parisians Jump into an Old Industrial Canal",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "I Was Kicked Out of China",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32248",
-        "Title": "Russia Accuses Ukraine of Recruiting Minors for Terrorist Attacks",
+        "Source": "https://t.me/nexta_live/119416",
+        "Title": "Russia Considers Reinstating Death Penalty",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/environment/2026/jun/26/weather-tracker-heatwave-germany-poland-40c-temperatures",
-        "Title": "Weather tracker: Heatwave on course to tip temperatures over 40C in Germany and Poland",
+        "Source": "https://www.theguardian.com/uk-news/2026/jun/26/heathrow-expects-fall-in-passengers-and-profits-this-year-because-of-iran-war",
+        "Title": "Heathrow expects fall in passengers and profits this year because of Iran war",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
         "threat_level": "WATCH"
