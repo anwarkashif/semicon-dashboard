@@ -1,16 +1,30 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "State of Emergency Declared in Crimea and Sevastopol",
+        "Title": "Iran Rejects GCC Allegations on Nuclear Program, Urges Nuclear-Free Middle East",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61542",
-        "Title": "US Considers Relocating Gulf Bases After Iranian Strikes",
+        "Source": "https://t.me/intelslava/89378",
+        "Title": "Hezbollah Launches Missiles At IDF Positions In Lebanon",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cbsnews.com/news/iranian-national-us-alleged-3-4-billion-hacking-attacks-arrested-montenegro/",
+        "Title": "Iranian national U.S. sought for $3.4 billion in hacking attacks arrested",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/cg4w3wyxzzno?at_medium=RSS&at_campaign=rss",
+        "Title": "Senior Ukrainian intelligence official jailed for life for spying for Russia",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,52 +35,38 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32249",
-        "Title": "Japan Tests Palantir AI in Military Exercise with US",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
         "Title": "Schneider Electric PowerLogic P7",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/nexta_live/119421",
-        "Title": "Russia Imposes Emergency Regime in Occupied Crimea",
+        "Source": "https://www.cnbc.com/2026/06/26/eu-commission-opens-antitrust-probe-into-sanofis-flu-vaccine-campaign.html",
+        "Title": "EU Commission opens antitrust probe into Sanofi's flu vaccine campaign",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/nigeria-s-major-police-reform-edges-forward-after-senate-approval",
-        "Title": "Nigeria's major police reform edges forward after senate approval",
+        "Source": "https://www.theguardian.com/business/2026/jun/26/vw-cut-jobs-shut-plants-volkswagen-china",
+        "Title": "VW plans to cut up to 10,000 jobs and shut plants, report says",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/26/baby-pulled-alive-from-rubble-after-venezuela-earthquake?traffic_source=rss",
-        "Title": "Baby pulled alive from rubble after Venezuela earthquake",
+        "Source": "https://www.bbc.co.uk/news/videos/c75y1kd16qdo?at_medium=RSS&at_campaign=rss",
+        "Title": "Aerial footage reveals destruction in coastal Venezuela",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
