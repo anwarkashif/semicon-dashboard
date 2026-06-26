@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Considers Relocating Gulf Bases Damaged by Iran to Israel",
+        "Title": "Iran Strikes US Naval Base in Bahrain with Missiles and Drones",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32244",
+        "Title": "Ukraine Strikes Zaporozhye and Kherson Regions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,45 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/economy/2026/6/26/oil-prices-climb-after-attack-in-strait-of-hormuz-halts-evacuation-plan?traffic_source=rss",
-        "Title": "Oil prices climb after attack in Strait of Hormuz halts evacuation plan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.theguardian.com/australia-news/2026/jun/26/blue-mountains-highway-closed-for-another-year-victoria-pass-new-bridge",
+        "Title": "Vital Blue Mountains highway to be closed for another year as NSW reveals bridge plans",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.theguardian.com/technology/2026/jun/26/apple-ipad-macbook-price-rise-australia",
+        "Title": "Australians to pay at least 20% more for iPads and Macbooks after Apple hikes prices citing AI",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/nexta_live/119403",
         "Title": "France Experiences Extreme Heatwave",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.politico.eu/podcast/berlin-playbook-podcast/steuerreform-merz-klingbeil-und-die-milliardenfrage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Steuerreform: Merz, Klingbeil und die Milliardenfrage",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/economy/2026/6/26/apple-microsoft-hike-prices-over-surging-chip-costs?traffic_source=rss",
-        "Title": "Apple, Microsoft hike prices over surging chip costs",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
