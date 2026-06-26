@@ -1,31 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US CENTCOM Strikes Iranian Missile and Drone Storage Locations",
+        "Title": "US CENTCOM Strikes Iranian Missile Sites, Radar Stations After Hormuz Attack",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260626-lebanon-israel-us-sign-framework-agreement-in-washington",
-        "Title": "Middle East War: Lebanon, Israel and US sign framework agreement in Washington",
+        "Source": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNa2RHT1ZuY0F0TGVheWxhUHVvVEFyV29lZGR6dGtncGlXUEtxOXF2eVE1Vm95NTBsakRNM1BDaG5HVWtwUUdVT0ZmcGVtZFE0ZlZsZFAxYUEzRjBhN3RkaDBnTUZVaGFHSUlVRkVYZTV1X2hpNE9OSzZlZGxuVnlYeWdfUmp4c2xuSGxmeVdXMXhPSXZrOWxCRmpBTG1nYzMzX0F1OUp0SndOaDVLd2Y4WUVJUkRpRXlJaGs4em93?oc=5",
+        "Title": "U.S. Strikes Iran in Response to Attack on Commercial Vessel - centcom.mil",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "news.google.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119453",
-        "Title": "Russia to Create Database of All Mobile Phones",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/strait-of-hormuz-iran-attack.html",
-        "Title": "Trump Says Iran Attack on Cargo Ship Violated the Cease-fire",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,11 +28,32 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://t.me/Middle_East_Spectator/33921",
+        "Title": "Lebanon Protests Erupt Over Israel Talks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/26/world/americas/rescue-teams-and-residents-alike-race-to-save-survivors-of-venezuelas-earthquakes.html",
+        "Title": "In Venezuela\u2019s Rubble, Listening for Whispers And Longing for Help",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-israel-hezbollah-strait-of-hormuz-peace-deal-talks/",
+        "Title": "U.S. strikes Iran after Trump accuses Tehran of \"foolish violation\" of ceasefire",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44707",
+        "Title": "US Military Conducts Strikes Near Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/Middle_East_Spectator/33919",
@@ -58,13 +65,6 @@
     {
         "Source": "https://t.me/warmonitors/44704",
         "Title": "US to Renew $30 Million Transfer to Lebanese Army",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44703",
-        "Title": "Iran Experiences Explosions in Sirik Port City",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
