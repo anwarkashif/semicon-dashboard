@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/strait-of-hormuz-iran-attack.html",
+        "Title": "After Attacking Cargo Ship, Iran Presses Its Claim to Authority Over Strait",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/Middle_East_Spectator/33915",
         "Title": "Iran Launches Drones Towards Shipping in Strait of Hormuz",
         "Feed_Source": "WAR MONITOR",
@@ -14,24 +21,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33914",
-        "Title": "Iranian Missile Alerts Hit Dubai",
+        "Source": "https://t.me/intelslava/89387",
+        "Title": "China Builds Copy of US Arleigh Burke Destroyer",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQN291MU1rQWJWVkxMQ0JLN3VYeldzSFBhZExDOEhybXoxcTZYYkw5WjNjejJNdTZhRzlEdnFOWUIwN1hGTmg1LS1rSndPczRaVGlfR0xucl9xTGgtT0JvcHlEclRaZ3Jvb1FMVml1bko5TUZ1WEloYXFVajV1bFRBVUN4M0JySnpCUUdJdjJIbGZhNDJqWjdZMVJlNTI?oc=5",
-        "Title": "Russian-installed authorities declare economic emergency in Crimea - Reuters",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89384",
-        "Title": "Russia Returns Nuclear Cruiser Admiral Nakhimov to Service",
+        "Source": "https://www.bbc.co.uk/news/articles/c9d268xy90xo?at_medium=RSS&at_campaign=rss",
+        "Title": "US sanctions Rwanda gold refinery accused of smuggling DR Congo's minerals",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "bbc.co.uk",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
         "Title": "Schneider Electric PowerLogic P7",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89385",
-        "Title": "China Light Aircraft Crashes Into Beijing Skyscraper",
+        "Source": "https://www.politico.eu/article/germany-joins-push-to-delay-eu-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Germany joins push to delay EU methane rules",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33917",
-        "Title": "UKMTO Report Expected After UAE Siren Incident",
+        "Source": "https://www.politico.eu/article/recep-tayyip-erdogan-launches-crackdown-eu-nato-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Erdo\u011fan launches crackdown ahead of NATO summit",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     }
 ]
