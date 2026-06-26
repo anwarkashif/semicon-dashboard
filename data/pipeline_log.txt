@@ -881,3 +881,19 @@
 2026-06-26 01:18:35,881 - INFO - Rotating to API Key 2
 2026-06-26 01:18:38,908 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-26 01:18:48,903 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-26 02:03:53,433 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 02:03:53,579 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-26 02:03:53,580 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-26 02:04:03,624 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 02:04:03,723 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-26 02:04:03,724 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-26 02:04:03,724 - INFO - Rotating to API Key 2
+2026-06-26 02:04:06,727 - WARNING - Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: All API keys exhausted via rotation.
+2026-06-26 02:04:06,762 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 02:04:06,893 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-26 02:04:06,894 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-26 02:04:16,938 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 02:04:19,815 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-26 02:04:19,816 - WARNING - API Key 1 Attempt 2 Failed: ServerError - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
+2026-06-26 02:04:19,816 - INFO - Rotating to API Key 2
+2026-06-26 02:04:22,819 - ERROR - FLASH TO BRIEF Final Failure: All API keys exhausted via rotation.
