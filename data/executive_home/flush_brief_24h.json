@@ -1,14 +1,11 @@
 {
-    "bluf": "Global geopolitical tensions are escalating across multiple critical theaters. The Middle East faces immediate, high-risk maritime and regional conflict, with Iran implicated in a Strait of Hormuz attack, Houthi aggression in the Red Sea, and ongoing Israel-Hezbollah clashes, against a backdrop of hardening US rhetoric and potential military preparations. Europe is bracing for a potential expansion of the Ukraine conflict with Belarus's increased involvement and a heightened awareness of radiological/nuclear threats. In the Asia-Pacific, the Philippines' deployment of US naval drones signals rising tensions in the South China Sea.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "UN suspends Strait of Hormuz evacuation after ship 'hit by projectile'.",
-        "Hezbollah reports Israeli strike killed two civilians in southern Lebanon.",
-        "Houthis attack Israel and announce ban on Israeli vessels in Red Sea.",
-        "Philippines deploys US-made Triton naval drones to scout for intruders in western waters (South China Sea).",
-        "Belarus is quietly preparing to play a larger role in Russia\u2019s Ukraine war.",
-        "US Supreme Court allows Trump to end protections for Haitian and Syrian migrants."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The Middle East is experiencing a rapid escalation of hostilities. An attack on a cargo ship in the Strait of Hormuz, attributed to Iran, has disrupted maritime security and led to the suspension of UN evacuation plans. Concurrently, Houthi forces have attacked Israel and banned Israeli vessels in the Red Sea, while Hezbollah reports civilian casualties from an Israeli strike in southern Lebanon. These actions occur amidst US statements seeking an Iran deal 'not at any price' and reports of potential US military funding for a war in Iran, indicating a volatile and potentially explosive environment. Separately, Europe faces an intensifying security crisis as Belarus prepares for a larger role in Russia's Ukraine war, prompting renewed calls for responses to radiological and nuclear threats. In the Asia-Pacific, the Philippines' deployment of advanced US naval drones in the South China Sea signals a hardening stance against territorial incursions, increasing regional friction.",
-    "risk_assessment": "HIGH. The confluence of events in the Middle East presents an immediate and severe risk of direct military conflict, maritime trade disruption, and regional destabilization. The potential for US-Iran confrontation, coupled with existing Israel-Hezbollah and Houthi-Israel hostilities, could rapidly expand. In Europe, the risk of escalation in the Ukraine conflict, potentially involving unconventional warfare, remains high. The Asia-Pacific faces a medium-to-high risk of increased tensions and localized confrontations in the South China Sea.",
-    "strategic_forecast": "Over the near-to-medium term, the Middle East is highly likely to see continued and potentially intensified military engagements, with a significant risk of a broader regional conflict involving major powers. Maritime security in critical waterways will remain compromised, impacting global trade. In Europe, the Ukraine conflict is expected to escalate, with Belarus's involvement potentially opening new fronts or increasing the conflict's intensity, while the threat of radiological/nuclear incidents will persist. The South China Sea will likely experience sustained elevated tensions, increased military presence, and a higher probability of incidents as regional actors and the US assert their interests."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
