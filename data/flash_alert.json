@@ -1,14 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Attack Kills Three in Maghazi Camp, Central Gaza",
+        "Title": "Trump Says Iran Violates Ceasefire, Strikes Ship in Strait of Hormuz",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119438",
-        "Title": "US Reimposes Sanctions on Russian Oil",
+        "Source": "https://warmonitor.com/",
+        "Title": "Russia Grants Residence to Foreign Fighters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32258",
+        "Title": "Ukraine Advances in Zaporizhia Direction",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -21,20 +28,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/strait-of-hormuz-iran-attack.html",
-        "Title": "After Attacking Cargo Ship, Iran Presses Its Claim to Authority Over Strait",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89387",
-        "Title": "China Builds Copy of US Arleigh Burke Destroyer",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
@@ -42,31 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-06",
+        "Title": "Delta Electronics DTM Soft",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.france24.com/en/americas/20260626-why-venezuela-s-doublet-earthquakes-were-so-devastating",
-        "Title": "Why Venezuela\u2019s \u2018doublet\u2019 earthquakes were so devastating",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32258",
-        "Title": "Ukraine Advances in Zaporizhia Direction",
+        "Source": "https://t.me/intelslava/89391",
+        "Title": "South Korea to Train Drone Operators",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/intelslava/89390",
-        "Title": "China Increases Car Sales in Europe",
+        "Source": "https://t.me/nexta_live/119441",
+        "Title": "Russia Has Enough Fuel for Domestic Market",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.nytimes.com/live/2026/06/26/world/venezuela-earthquake/survivors-la-guaira-hospital",
+        "Title": "Survivors in quake-hit La Guaira tell of loss and rescue.",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
