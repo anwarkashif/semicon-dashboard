@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Rejects GCC Allegations on Nuclear Program, Urges Nuclear-Free Middle East",
+        "Title": "Russian Attacks Kill 4, Injure 38 in Ukraine; Romania Scrambles Helicopter at Border",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,24 +14,24 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.france24.com/en/live-news/20260626-un-says-iran-nuclear-pledge-needs-very-strong-verification",
+        "Title": "UN says Iran nuclear pledge needs 'very strong' verification",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cbsnews.com/news/iranian-national-us-alleged-3-4-billion-hacking-attacks-arrested-montenegro/",
         "Title": "Iranian national U.S. sought for $3.4 billion in hacking attacks arrested",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cbsnews.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/cg4w3wyxzzno?at_medium=RSS&at_campaign=rss",
         "Title": "Senior Ukrainian intelligence official jailed for life for spying for Russia",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119419",
-        "Title": "Russia Blocks Multiple Online Services",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -49,24 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/26/eu-commission-opens-antitrust-probe-into-sanofis-flu-vaccine-campaign.html",
-        "Title": "EU Commission opens antitrust probe into Sanofi's flu vaccine campaign",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/business/2026/jun/26/vw-cut-jobs-shut-plants-volkswagen-china",
-        "Title": "VW plans to cut up to 10,000 jobs and shut plants, report says",
+        "Source": "https://www.theguardian.com/world/live/2026/jun/26/venezuela-earthquakes-search-survivors-death-toll-rodriguez-rubio-latest-news-updates",
+        "Title": "Venezuela earthquakes: international rescue teams arrive, as 235 confirmed dead so far \u2013 latest updates",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/videos/c75y1kd16qdo?at_medium=RSS&at_campaign=rss",
-        "Title": "Aerial footage reveals destruction in coastal Venezuela",
+        "Source": "https://www.npr.org/2026/06/25/g-s1-130184/up-first-newsletter-venezuela-earthquakes-trump-senate-tensions-chris-donahue",
+        "Title": "2 earthquakes in Venezuela kill at least 164. And, Trump cancels housing bill signing",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "npr.org",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.theguardian.com/global-development/2026/jun/26/whereabouts-of-nearly-300-people-with-ebola-unknown-in-drc",
+        "Title": "Whereabouts of nearly 300 people with Ebola unknown in DRC",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
