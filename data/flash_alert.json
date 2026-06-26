@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israel Warns Iran Against Attacking Its Territory",
+        "Title": "IMO Says Shipping Disruption Halts Passage Through Strait of Hormuz",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/strait-of-hormuz-iran-attack.html",
-        "Title": "After Attacking Cargo Ship, Iran Presses Its Claim to Authority Over Strait",
+        "Source": "https://t.me/nexta_live/119436",
+        "Title": "Ukraine Considers Military Option to Free Crimea",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,10 +28,10 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c9d268xy90xo?at_medium=RSS&at_campaign=rss",
-        "Title": "US sanctions Rwanda gold refinery accused of smuggling DR Congo's minerals",
+        "Source": "https://www.politico.eu/article/recep-tayyip-erdogan-launches-crackdown-eu-nato-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Erdo\u011fan launches crackdown ahead of NATO summit",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "politico.eu",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-06",
+        "Title": "Delta Electronics DTM Soft",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
         "Title": "Siemens WinCC Certificate Manager",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.politico.eu/article/germany-joins-push-to-delay-eu-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Germany joins push to delay EU methane rules",
+        "Source": "https://warmonitor.com/",
+        "Title": "Praying for Rescues as Hope Fades After Venezuela\u2019s Double Quake",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.politico.eu/article/recep-tayyip-erdogan-launches-crackdown-eu-nato-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Erdo\u011fan launches crackdown ahead of NATO summit",
+        "Source": "https://t.me/rybar_in_english/32257",
+        "Title": "Russia Implements Biometric Border Control",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
