@@ -4,6 +4,34 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran warns ships against using unauthorised Hormuz routes",
+        "Headline": "Iran warns ships against using unauthorised Hormuz routes",
+        "Summary": "Iran warns ships against using unauthorised Hormuz routes",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-warns-ships-against-using-unauthorised-hormuz-routes",
+        "Title": "Iran warns ships against using unauthorised Hormuz routes",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran fired on cargo ship, US officials tell Reuters",
+        "Headline": "Iran fired on cargo ship, US officials tell Reuters",
+        "Summary": "Iran fired on cargo ship, US officials tell Reuters",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Reuters/status/2070301072996929633",
+        "Title": "Iran fired on cargo ship, US officials tell Reuters",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "UN suspends Hormuz evacuation mission after reported ship attack",
         "Headline": "UN suspends Hormuz evacuation mission after reported ship attack",
         "Summary": "UN suspends Hormuz evacuation mission after reported ship attack",
@@ -278,27 +306,5 @@
         "Title": "Iran attacks cargo ship off Oman, testing Trump\u2019s Hormuz Strait deal",
         "Feed_Source": "Premium RSS",
         "Publisher": "al-monitor.com"
-    },
-    {
-        "Date": "Undated",
-        "Actor": "Philippines, US (supplier)",
-        "Action": "Deploying US-made Triton naval drones to scout for intruders",
-        "Location": "Western waters (implied South China Sea)",
-        "Risk": "Increased tensions with China, maritime disputes, potential for confrontation, regional arms race",
-        "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
-        "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "c4isrnet.com"
-    },
-    {
-        "Date": "Undated",
-        "Actor": "Yemen\u2019s Houthi rebels (Iran-aligned)",
-        "Action": "Threatening Red Sea shipping, claiming missile attack on Israel",
-        "Location": "Red Sea, Israel",
-        "Risk": "Maritime insecurity, disruption of global trade (especially oil), regional conflict escalation, humanitarian crisis",
-        "Source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZndSZ05Ec0xibk5xQ0JPWjFrM2ZzOGhyTDgtR01HOVhuY3J6THhKMVU3UXZxbnlKOUJma041dUJmcTlTNlJ2Q19PREcxWmc3b2pyV2dXVGFNSTJ5aXVTMG9RdDVEUk5CU0luTE9Hc19ESnBBMm5KWVZOblR6NzU0ejdJX1JPSzNQS0tlUzZLYXh3c1FRMjdYbUZ2dmJ5ajE0UU16eTBtYW9vQm9pQXJvM213RWVhLWpURkxPSDNkd1lmUEE1TXc?oc=5",
-        "Title": "Explainer: Why the Iran-aligned Houthis threatening Red Sea shipping could mean more for the oil market this time - Reuters",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
     }
 ]
