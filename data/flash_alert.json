@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/nexta_live/119438",
+        "Title": "US Reimposes Sanctions on Russian Oil",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://t.me/nexta_live/119436",
         "Title": "Ukraine Considers Military Option to Free Crimea",
         "Feed_Source": "WAR MONITOR",
@@ -14,10 +21,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33915",
-        "Title": "Iran Launches Drones Towards Shipping in Strait of Hormuz",
+        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/strait-of-hormuz-iran-attack.html",
+        "Title": "After Attacking Cargo Ship, Iran Presses Its Claim to Authority Over Strait",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,13 +35,6 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.politico.eu/article/recep-tayyip-erdogan-launches-crackdown-eu-nato-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Erdo\u011fan launches crackdown ahead of NATO summit",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
@@ -42,29 +42,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-06",
-        "Title": "Delta Electronics DTM Soft",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Praying for Rescues as Hope Fades After Venezuela\u2019s Double Quake",
+        "Source": "https://www.france24.com/en/americas/20260626-why-venezuela-s-doublet-earthquakes-were-so-devastating",
+        "Title": "Why Venezuela\u2019s \u2018doublet\u2019 earthquakes were so devastating",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32257",
-        "Title": "Russia Implements Biometric Border Control",
+        "Source": "https://t.me/rybar_in_english/32258",
+        "Title": "Ukraine Advances in Zaporizhia Direction",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89390",
+        "Title": "China Increases Car Sales in Europe",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
