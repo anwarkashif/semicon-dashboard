@@ -1,6 +1,7 @@
 import glob
 import json
 import re
+import os
 import pandas as pd
 import streamlit as st
 
@@ -10,14 +11,26 @@ def get_brief_mappings(directory):
     mapping = {}
     for f in files:
         try:
-            with open(f, 'r') as file:
+            with open(f, 'r', encoding='utf-8') as file:
                 d = json.load(file)
-                b_date = d.get('date', f.split('_')[1].split('.json')[0])
-                display_name = f"SemicoN Weekly Brief - {b_date}"
+                # Ensure we pull a clean date, falling back to a safe string if missing
+                b_date = d.get('date', 'Unknown Date')
+                filename = os.path.basename(f)
+                
+                # 🛑 THE FIX: Dynamically label the brief based on its filename
+                if 'weekly_tactical' in filename:
+                    display_name = f"Weekly Tactical Brief - {b_date}"
+                else:
+                    display_name = f"Weekly Intelligence Brief - {b_date}"
+                    
+                # Prevent dictionary overwriting if multiple briefs trigger on the exact same date
                 if display_name in mapping:
-                    display_name = f"{display_name} (File: {f.split('_')[1].split('.json')[0]})"
+                    clean_filename = filename.replace('.json', '')
+                    display_name = f"{display_name} (File: {clean_filename})"
+                    
                 mapping[display_name] = f
-        except: pass
+        except Exception: 
+            pass
     return mapping
 
 def clean_dataframe(df):
