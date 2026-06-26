@@ -4,6 +4,59 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran\u2019s Long World Cup Journey Defined by War and Political Tension",
+        "Headline": "Iran\u2019s Long World Cup Journey Defined by War and Political Tension",
+        "Summary": "Iran\u2019s Long World Cup Journey Defined by War and Political Tension",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/world-cup-iran-mexico.html",
+        "Title": "Iran\u2019s Long World Cup Journey Defined by War and Political Tension",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "nytimes.com"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "How Three Months of War Changed the Gulf Forever",
+        "Headline": "How Three Months of War Changed the Gulf Forever",
+        "Summary": "How Three Months of War Changed the Gulf Forever",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/26/world/middleeast/gulf-changed-forever-iran-war.html",
+        "Title": "How Three Months of War Changed the Gulf Forever",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "nytimes.com"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "How a Jet Fuel Refinery Is Scrambling After the Iran War Oil Shock",
+        "Headline": "How a Jet Fuel Refinery Is Scrambling After the Iran War Oil Shock",
+        "Summary": "How a Jet Fuel Refinery Is Scrambling After the Iran War Oil Shock",
+        "Risk": "HIGH",
+        "Source": "https://www.nytimes.com/2026/06/26/world/asia/iran-war-korea-jet-fuel.html",
+        "Title": "How a Jet Fuel Refinery Is Scrambling After the Iran War Oil Shock",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "nytimes.com"
+    },
+    {
+        "Date": "",
+        "Actor": "Belarus, Russia",
+        "Action": "Preparing to play a larger role in Russia\u2019s Ukraine war",
+        "Location": "Belarus, Ukraine",
+        "Risk": "High (Escalation of major conflict)",
+        "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/belarus-is-quietly-preparing-to-play-a-larger-role-in-russias-ukraine-war/",
+        "Title": "Belarus is quietly preparing to play a larger role in Russia\u2019s Ukraine war",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Saudi doctor given life sentence for deadly car rampage on German Christmas market",
         "Headline": "Saudi doctor given life sentence for deadly car rampage on German Christmas market",
         "Summary": "Saudi doctor given life sentence for deadly car rampage on German Christmas market",
@@ -137,17 +190,6 @@
     },
     {
         "Date": "Undated",
-        "Actor": "Belarus, Russia",
-        "Action": "Preparing to play a larger role in Russia\u2019s Ukraine war",
-        "Location": "Belarus, Ukraine",
-        "Risk": "High",
-        "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/belarus-is-quietly-preparing-to-play-a-larger-role-in-russias-ukraine-war/",
-        "Title": "Belarus is quietly preparing to play a larger role in Russia\u2019s Ukraine war",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "Undated",
         "Actor": "Europe",
         "Action": "Facing radiological and nuclear threats, needs to respond",
         "Location": "Europe",
@@ -264,38 +306,5 @@
         "Title": "Radiological and nuclear threats are no longer hypothetical. Europe needs to respond.",
         "Feed_Source": "Premium RSS",
         "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Israeli forces",
-        "Action": "Continuing military operation and bulldozing homes in Lebanon",
-        "Location": "Southern Lebanon",
-        "Risk": "High",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-bulldoze-homes-continue-military-operation-lebanon",
-        "Title": "Israeli forces bulldoze homes, continue military operation in Lebanon",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Houthis",
-        "Action": "Attacking Israel and announcing ban on Israeli vessels in the Red Sea",
-        "Location": "Red Sea, Israel",
-        "Risk": "High",
-        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - The Long War Journal",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Trump (United States)",
-        "Action": "Seeking $87.6 billion for potential war in Iran",
-        "Location": "Iran, United States",
-        "Risk": "High",
-        "Source": "https://asiatimes.com/2026/06/trump-wants-87-6-billion-to-pay-for-his-war-in-iran-etc/",
-        "Title": "Trump wants $87.6 billion to pay for his war in Iran, etc.",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "asiatimes.com"
     }
 ]
