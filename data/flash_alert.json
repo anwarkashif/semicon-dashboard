@@ -1,31 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Trump Says Iran Violates Ceasefire, Strikes Ship in Strait of Hormuz",
+        "Title": "Lebanon Toll From Israeli Attacks Reaches 4,243 Dead",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Russia Grants Residence to Foreign Fighters",
+        "Source": "https://t.me/southfronteng/61555",
+        "Title": "Houthis Vow To Target Israeli Presence In Somalia",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/air/canada-throws-a-curveball-as-it-signals-interest-in-joining-gcap-sixth-gen-fighter-program",
+        "Title": "Canada Throws A Curveball As It Signals Interest In Joining GCAP Sixth-Gen Fighter Program",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32258",
-        "Title": "Ukraine Advances in Zaporizhia Direction",
+        "Source": "https://t.me/nexta_live/119442",
+        "Title": "Russian Relatives Block Bus Carrying Soldiers",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119436",
-        "Title": "Ukraine Considers Military Option to Free Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -35,13 +35,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-06",
-        "Title": "Delta Electronics DTM Soft",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
         "Title": "Schneider Electric PowerLogic P7",
         "Feed_Source": "CISA",
@@ -49,24 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89391",
-        "Title": "South Korea to Train Drone Operators",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44697",
+        "Title": "Israel and Lebanon Expect Framework Agreement",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119441",
-        "Title": "Russia Has Enough Fuel for Domestic Market",
+        "Source": "https://t.me/warmonitors/44696",
+        "Title": "US Threatens 100 Percent Tax on European Imports",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/live/2026/06/26/world/venezuela-earthquake/survivors-la-guaira-hospital",
-        "Title": "Survivors in quake-hit La Guaira tell of loss and rescue.",
+        "Source": "https://warmonitor.com/",
+        "Title": "Citi cuts tech stock weighting: 'Difficult to see how everyone in AI/Tech path wins'",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
