@@ -1,35 +1,28 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Launches Kh-59/69 Cruise Missile Into Ukraine From Belgorod",
+        "Title": "Iran Targets US Military Positions in Middle East",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33930",
-        "Title": "Lebanese Army Clashes with Protesters",
+        "Source": "https://t.me/Middle_East_Spectator/33934",
+        "Title": "US Strikes Iranian Targets in Sirik",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89409",
+        "Title": "Iran Expected to Launch Missile at Bahrain",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/Middle_East_Spectator/33927",
         "Title": "Lebanese Civil War Warning",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNa2RHT1ZuY0F0TGVheWxhUHVvVEFyV29lZGR6dGtncGlXUEtxOXF2eVE1Vm95NTBsakRNM1BDaG5HVWtwUUdVT0ZmcGVtZFE0ZlZsZFAxYUEzRjBhN3RkaDBnTUZVaGFHSUlVRkVYZTV1X2hpNE9OSzZlZGxuVnlYeWdfUmp4c2xuSGxmeVdXMXhPSXZrOWxCRmpBTG1nYzMzX0F1OUp0SndOaDVLd2Y4WUVJUkRpRXlJaGs4em93?oc=5",
-        "Title": "U.S. Strikes Iran in Response to Attack on Commercial Vessel - centcom.mil",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44703",
-        "Title": "Iran Experiences Explosions in Sirik Port City",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -49,22 +42,29 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Venezuela Live Updates: Trump\u2019s Vow to \u2018Run\u2019 Venezuela Is Tested After Quakes",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89408",
+        "Title": "Iran May Strike Soon",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.npr.org/2026/06/26/nx-s1-5872209/the-venezuelan-diaspora-is-rallying-to-send-aid-after-earthquakes",
-        "Title": "The Venezuelan diaspora is rallying to send aid after earthquakes",
+        "Source": "https://t.me/intelslava/89407",
+        "Title": "Iranian Forces Strike US Military Positions",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33932",
-        "Title": "Hezbollah Supporters Rally in Beirut",
+        "Source": "https://t.me/intelslava/89406",
+        "Title": "Venezuela Hit by 5.4 Magnitude Earthquake",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
