@@ -867,3 +867,17 @@
 2026-06-26 00:34:10,511 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
 2026-06-26 00:34:10,511 - INFO - Rotating to API Key 2
 2026-06-26 00:34:13,514 - ERROR - FLASH TO BRIEF Final Failure: All API keys exhausted via rotation.
+2026-06-26 01:18:01,351 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 01:18:01,498 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-26 01:18:01,498 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-26 01:18:11,530 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 01:18:25,447 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-26 01:18:25,470 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 01:18:25,553 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-26 01:18:25,554 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-26 01:18:35,585 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 01:18:35,880 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-26 01:18:35,881 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-26 01:18:35,881 - INFO - Rotating to API Key 2
+2026-06-26 01:18:38,908 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 01:18:48,903 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
