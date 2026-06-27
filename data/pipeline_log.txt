@@ -1539,3 +1539,16 @@
 2026-06-27 17:18:19,961 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
 2026-06-27 17:18:19,997 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-27 17:18:29,302 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-27 18:02:13,915 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 18:02:14,033 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 18:02:14,034 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 18:02:24,078 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 18:02:43,518 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-27 18:02:43,554 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 18:02:43,693 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 18:02:43,694 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 18:02:53,739 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 18:02:53,874 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 18:02:53,875 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 18:02:53,875 - INFO - Rotating to API Key 2
+2026-06-27 18:02:56,878 - ERROR - FLASH TO BRIEF Final Failure: All API keys exhausted via rotation.
