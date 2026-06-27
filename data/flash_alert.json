@@ -1,23 +1,30 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Zelensky Reports One of Largest Russian Attack Campaigns on Ukraine",
+        "Title": "Iran Strikes US Bases in Bahrain in Retaliation for Strike on Sirik",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/live/2026/06/27/world/us-iran-strikes-hormuz",
+        "Title": "Live Updates: Mideast Hostilities Flare, Testing Fragile U.S.-Iran Truce",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44713",
+        "Title": "Bahrain Accuses Iran of Drone Attack",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.dw.com/en/military-age-ukrainian-men-could-lose-eu-protection/a-77729285?maca=en-rss-en-world-4025-xml-mrss",
         "Title": "Military-age Ukrainian men could lose EU protection",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "dw.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119467",
-        "Title": "Russia Warns of Saboteurs in Murmansk Region",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/warmonitors/44713",
-        "Title": "Bahrain Accuses Iran of Drone Attack",
+        "Source": "https://www.theguardian.com/world/live/2026/jun/27/europe-heatwave-germany-poland-france-uk-temperature-heat-latest-news-updates",
+        "Title": "Europe heatwave live: Germany braced for temperatures \u2018well over 40C\u2019; extreme heat warnings for England",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/video/world/africa/100000010952237/an-attack-on-ebolas-first-responders.html",
-        "Title": "An Attack on Ebola\u2019s First Responders",
+        "Source": "https://www.france24.com/en/venezuela-tens-of-thousands-still-missing-after-twin-earthquakes",
+        "Title": "Venezuela: Tens of thousands still missing after twin earthquakes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/27/world/africa/ebola-outbreak-congo-volunteers-burials-backlash.html",
-        "Title": "Volunteers Are Risking Their Lives to Stop Ebola. They Aren\u2019t Always Welcome.",
+        "Source": "https://warmonitor.com/",
+        "Title": "Russia Proposes Ban on Migrant Doctors and Nurses",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/27/world/americas/venezuelas-economy-earthquake.html",
-        "Title": "Venezuela\u2019s Economy Was On the Rise. Then the Earthquakes Struck.",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
