@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Unconfirmed US Airstrikes Hit Qeshm Island, Iran",
+        "Title": "Drones Strike Oil Refinery in Slavyansk-on-Kuban, Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -11,20 +11,13 @@
         "Title": "US Airstrike Hits Iranian Naval Base",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/Middle_East_Spectator/33944",
         "Title": "Iran Warns of Continued Attacks",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVVkzd25wT0xoa2RFR04xcUxtaXpYOTN4OUNRNGEyQ3hzQ1lkeW5Pazk0WWNQOTJneVNVTHotTVViOG9rUE53b3BFMS0ya0NiNDFaTXMtMWt3OER5bjc3YjFPNXVnbVpaU19UdlFLckd6ay1DVlVDVGk2Ql9IZFVsSzNhYlF0OV85UVUzMThscnlLSENHbUJILVVlS0RmZGI1ellubjJFQkprQWdIUUhFT1BQeUg?oc=5",
-        "Title": "France considers measures after Burkina Faso breaks off relations - Reuters",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +35,38 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/videos/cm2d0vzp3ngo?at_medium=RSS&at_campaign=rss",
+        "Title": "Newborn baby rescued from Venezuela earthquake rubble",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/videos/cm2d0rjg4l3o?at_medium=RSS&at_campaign=rss",
+        "Title": "Panic attacks and fractures - Venezuela hospital treats earthquake victims",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://t.me/intelslava/89443",
         "Title": "Explosions Reported at Sirik Naval Base",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89441",
-        "Title": "US Conducts Airstrike on Qeshm Island",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89438",
-        "Title": "Iran Reports Explosion Near Tahroyeh Port",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/27/videos-show-israeli-settlers-trying-to-seize-house-in-occupied-west-bank?traffic_source=rss",
-        "Title": "Videos show Israeli settlers trying to seize house in occupied West Bank",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
