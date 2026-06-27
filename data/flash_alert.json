@@ -28,13 +28,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44709",
-        "Title": "Iran Signs Ceasefire Agreement",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
@@ -42,11 +35,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVUlEZTVZVWFkRXdVUVVQRGpMemNEcUI4dFhwWTVMajFGbUE1LVgwQUM5SVE5S3ZnM2RDbzM0SXFCcEtPWWc3V19LOWFGdklHLVBwV0hScnIzWVRuSjR4X3FNdGxjTEg3NEU4LTlJRmpVTTdOdjFna3NVTjIzd1NHOXRHbU44VEV3eXR2Vml5QU9UTFF3RnFZT1dDMzZDSUJ3YUw3Mk9aWTVfSWVHTG5abUM3NnBfbE5OQ0xZdTEzYXdNWnE5?oc=5",
@@ -67,6 +60,13 @@
         "Title": "Samsung readies $648 billion bet, report says, as AI boom reshapes South Korea - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.cbsnews.com/video/062626-cbs-evening-news/",
+        "Title": "6/26: CBS Evening News",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     }
 ]
