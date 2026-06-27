@@ -7,17 +7,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89429",
-        "Title": "Ukraine Loses Two MiG Aircraft Overnight",
+        "Source": "https://t.me/rybar_in_english/32277",
+        "Title": "Myanmar Armed Forces Shift Tactics in Rakhine State",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/27/pick-up-the-phone-irgc-appears-to-rebuff-us-strait-of-hormuz-hotline?traffic_source=rss",
-        "Title": "\u2018Pick up the phone\u2019: IRGC appears to rebuff US Strait of Hormuz \u2018hotline\u2019",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
@@ -26,6 +19,13 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89429",
+        "Title": "Ukraine Loses Two MiG Aircraft Overnight",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,13 +42,6 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
         "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
@@ -56,17 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPWUM4SGNrMGFfZ1BoN05MaVdXX1k3U3p0QkdaUWpNNGNfNG9TLWNvcjlpUGdvYnI2dHJQMkRuQWhkWXB1cXhUOWVZTkxFdTlBYnJpaERjaThhRWQ2TWFJNlo2djVqOUJpNGltOHNkRl83NjBFejUxN1c1VktMQzhpS1NqWHk5c0hwN2FKeTJlM0YtTXp3SkFGcEIyQlI3a29IWkRaUU9TUkxKOUVoQmlmTXpoV3NfQ1htdC04S3A2X2NiMm9yc1V1WDA3MUx1am5NbWlzN3JaN19iZC1UblEwWl9DNVhiZlZqNmRBT0hrN0x3WGVISHpoRDRXZTh0NUZ3elIteHlCdk9UZVBod1VV?oc=5",
-        "Title": "Venezuela earthquakes: IFRC launches emergency appeal to assist 300,000 people and dispatches first 17 tonnes of humanitarian cargo - ReliefWeb",
+        "Source": "https://t.me/nexta_live/119487",
+        "Title": "Ukrainian Forces Encounter Occupiers",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/live/2026/06/27/world/venezuela-earthquake/heres-the-latest",
-        "Title": "Here\u2019s the latest.",
+        "Source": "https://www.cbsnews.com/news/europe-heat-wave-switzerland-denmark-germany/",
+        "Title": "Germany, Denmark, Switzerland hit heat records as Europe sizzles",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "cbsnews.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119486",
+        "Title": "China TV Shows Burning Moscow Oil Refinery",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
