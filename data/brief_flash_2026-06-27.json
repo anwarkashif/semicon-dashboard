@@ -1,8 +1,105 @@
 {
     "date": "2026-06-27",
     "title": "Flash to Brief - 2026-06-27",
-    "brief_raw": "**\ud83c\udfaf BLUF:**\nAPI Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nGeneration pending next scheduled cron execution.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nPENDING\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nPENDING",
+    "brief_raw": "**\ud83c\udfaf BLUF:**\nThe Middle East is experiencing heightened instability marked by simultaneous diplomatic efforts and military escalations. US-Iran peace talks are underway, yet a US strike on Iran and a drone attack in Iraq indicate persistent conflict. Concurrently, Israel's announced occupation of southern Lebanon and Houthi attacks on Israeli vessels exacerbate regional tensions, despite ongoing UK-Lebanon ceasefire talks. Global tech dynamics also show US-China friction and US control over advanced AI.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nThe Middle East is a crucible of conflicting diplomatic and military actions. While the US and Iran are reportedly engaged in preliminary peace talks that could provide Tehran with an economic lifeline, the region simultaneously witnesses direct US military action against Iran following a cargo ship strike, and an explosive drone attack on an Iranian Kurdish opposition camp in Iraq. This suggests a complex environment where de-escalation attempts are undermined by ongoing hostilities. In the Levant, Israel's declared intent to occupy southern Lebanon directly contradicts efforts by the Lebanese army to manage internal protests over an Israel deal and ongoing UK-Lebanon ceasefire discussions. The Houthi attacks on Israel and their Red Sea vessel ban further complicate maritime security and regional stability, linking the Red Sea to the broader Israel-Lebanon conflict. Beyond the Middle East, global geopolitical tensions are evident in US-China tech friction, with Apple's pursuit of blacklisted Chinese chips, and the US government's tight control over advanced AI releases, indicating a strategic competition for technological dominance and national security.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nHIGH. The confluence of direct military engagements (US bombing Iran, drone attack in Iraq, Houthi attacks, Israeli occupation plans) and fragile diplomatic initiatives (US-Iran peace talks, Lebanon-UK ceasefire talks) creates an extremely volatile environment. There is a high risk of rapid escalation in the US-Iran conflict, potentially disrupting global shipping via the Strait of Hormuz. The announced Israeli occupation of southern Lebanon carries a high risk of regional conflict, humanitarian crisis, and destabilization of any US-brokered deals, directly violating Lebanese sovereignty. Houthi actions pose a significant maritime security threat in the Red Sea, impacting global trade. Broader risks include the erosion of international sanctions regimes (Apple's actions) and the weaponization/control of advanced AI, with national security implications for global power dynamics.\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nThe immediate future points to continued high-stakes maneuvering in the Middle East. The US-Iran relationship will likely remain a mix of covert conflict and overt diplomatic overtures, with the potential for either a breakthrough peace deal or a significant escalation. The Israel-Lebanon border will remain a flashpoint, with Israel's declared occupation plans threatening to ignite a wider conflict, potentially drawing in other regional actors. Maritime security in the Red Sea will continue to be challenged by Houthi actions. Globally, the competition for technological supremacy, particularly in AI, and the enforcement of sanctions will intensify, shaping future international alliances and rivalries. The current environment suggests a period of sustained geopolitical flux, with localized conflicts having broader international repercussions.",
     "recent_actions": [
+        {
+            "Date": "2026-06-27",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Lebanese army urges calm as protests grow over Israel deal",
+            "Headline": "Lebanese army urges calm as protests grow over Israel deal",
+            "Summary": "Lebanese army urges calm as protests grow over Israel deal",
+            "Risk": "HIGH",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/lebanese-army-urges-calm-protests-grow-over-israel-deal",
+            "Title": "Lebanese army urges calm as protests grow over Israel deal",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "2026-06-27",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Explosive drone targets Iranian Kurdish opposition camp north of Iraq's Erbil, security sources say",
+            "Headline": "Explosive drone targets Iranian Kurdish opposition camp north of Iraq's Erbil, security sources say",
+            "Summary": "Explosive drone targets Iranian Kurdish opposition camp north of Iraq's Erbil, security sources say",
+            "Risk": "HIGH",
+            "Source": "https://x.com/Reuters/status/2070930265829003272",
+            "Title": "Explosive drone targets Iranian Kurdish opposition camp north of Iraq's Erbil, security sources say",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "2026-06-27",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "The preliminary peace agreement between the United States and Iran, which is still taking shape in early talks, hands Iran\u2019s leadership a major economic lifeline as Tehran looks to consolidate strategic gains after months of war with Israel and the U.S.",
+            "Headline": "The preliminary peace agreement between the United States and Iran, which is still taking shape in early talks, hands Iran\u2019s leadership a major economic lifeline as Tehran looks to consolidate strategic gains after months of war with Israel and the U.S.",
+            "Summary": "The preliminary peace agreement between the United States and Iran, which is still taking shape in early talks, hands Iran\u2019s leadership a major economic lifeline as Tehran looks to consolidate strategic gains after months of war with Israel and the U.S.",
+            "Risk": "HIGH",
+            "Source": "https://x.com/washingtonpost/status/2070930213626642863",
+            "Title": "The preliminary peace agreement between the United States and Iran, which is still taking shape in early talks, hands Iran\u2019s leadership a major economic lifeline as Tehran looks to consolidate strategic gains after months of war with Israel and the U.S.",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "N/A",
+            "Actor": "Trump administration (US)",
+            "Action": "Bombs Iran after strike on cargo ship",
+            "Location": "Iran, Strait of Hormuz",
+            "Risk": "Escalation of US-Iran conflict, disruption of global shipping, regional instability.",
+            "Source": "https://asiatimes.com/2026/06/trump-bombs-iran-after-strike-on-cargo-ship-in-strait-of-hormuz/",
+            "Title": "Trump bombs Iran after strike on cargo ship in Strait of Hormuz",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "asiatimes.com"
+        },
+        {
+            "Date": "N/A",
+            "Actor": "Israel",
+            "Action": "Announces troops will occupy southern Lebanon",
+            "Location": "Southern Lebanon",
+            "Risk": "Regional conflict, humanitarian crisis, violation of Lebanese sovereignty, destabilization of US-brokered deals.",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-says-troops-will-occupy-southern-lebanon",
+            "Title": "Israel says troops will occupy southern Lebanon",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "N/A",
+            "Actor": "Houthis",
+            "Action": "Attack Israel and announce ban on Israeli vessels",
+            "Location": "Red Sea, Israel",
+            "Risk": "Maritime security threat, disruption of global shipping, regional conflict escalation.",
+            "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
+            "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
+            "Feed_Source": "Maritime Deep Scrape",
+            "Publisher": "news.google.com"
+        },
+        {
+            "Date": "N/A",
+            "Actor": "Apple",
+            "Action": "Seeks to buy memory chips from blacklisted Chinese company",
+            "Location": "China",
+            "Risk": "Violation of US sanctions, supply chain security concerns, exacerbation of US-China tech tensions.",
+            "Source": "https://www.ft.com/content/d72a25e2-7bde-4aa9-bd8d-0c4f3d6cb2cb",
+            "Title": "Apple seeks to buy memory chips from blacklisted Chinese company",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "ft.com"
+        },
+        {
+            "Date": "N/A",
+            "Actor": "OpenAI, US government",
+            "Action": "Releases GPT-5.6 to select users vetted by US government",
+            "Location": "N/A (Global impact, US-controlled)",
+            "Risk": "AI governance and control, national security implications, potential for technological advantage/disadvantage among nations.",
+            "Source": "https://www.ft.com/content/33a306c2-5aaa-45b1-9386-1716fa6a128e",
+            "Title": "OpenAI releases GPT-5.6 to select users vetted by US government",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "ft.com"
+        },
         {
             "Date": "2026-06-27",
             "Actor": "Psyopoly/West Asia",
@@ -213,109 +310,41 @@
             "Title": "Trump bombs Iran after strike on cargo ship in Strait of Hormuz",
             "Feed_Source": "Premium RSS",
             "Publisher": "asiatimes.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Houthis",
-            "Action": "Attack Israel and announce ban on Israeli vessels in the Red Sea.",
-            "Location": "Red Sea, Israel",
-            "Risk": "High - Maritime security, regional conflict expansion, global trade disruption.",
-            "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-            "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
-            "Feed_Source": "Maritime Deep Scrape",
-            "Publisher": "news.google.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "U.S.",
-            "Action": "Sanctions networks supplying both sides of Sudan civil war.",
-            "Location": "Sudan",
-            "Risk": "Medium - Prolongation/intensification of civil war, humanitarian crisis, US foreign policy impact.",
-            "Source": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE92VzhrMlZCcVlaamRYbkZJVGVlTm9BY2tKSHhtUzl1MTFTRHFUcHUtLVNxdU9EeTJWcjlvV1ZVaEUtakpPcXN1NHpib2ZBQ0ZJ?oc=5",
-            "Title": "U.S. sanctions networks supplying both sides of Sudan civil war - Sudan Tribune",
-            "Feed_Source": "Google News Live 1H",
-            "Publisher": "news.google.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "OpenAI, US government",
-            "Action": "Releases GPT-5.6 to select users vetted by US government.",
-            "Location": "Global (AI release), US (government vetting)",
-            "Risk": "Medium-High - AI governance challenges, national security implications of advanced AI, US control over critical technology.",
-            "Source": "https://www.ft.com/content/33a306c2-5aaa-45b1-9386-1716fa6a128e",
-            "Title": "OpenAI releases GPT-5.6 to select users vetted by US government",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "ft.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Apple",
-            "Action": "Seeks to buy memory chips from blacklisted Chinese company.",
-            "Location": "China (blacklisted company), Global (Apple supply chain)",
-            "Risk": "Medium-High - US-China tech rivalry, sanctions enforcement, supply chain security, corporate compliance.",
-            "Source": "https://www.ft.com/content/d72a25e2-7bde-4aa9-bd8d-0c4f3d6cb2cb",
-            "Title": "Apple seeks to buy memory chips from blacklisted Chinese company",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "ft.com"
-        },
-        {
-            "Date": "2026-06-27",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "Hezbollah Secretary General Na\u00efm Kassem on Saturday described as a \u201cserious error\u201d the agreement signed the day before by Lebanon and Israel under the aegis of the United States at the end of the fifth round of negotiations in Washington, proclaiming that it was \u201cnull and void\u201d. More info:",
-            "Headline": "Hezbollah Secretary General Na\u00efm Kassem on Saturday described as a \u201cserious error\u201d the agreement signed the day before by Lebanon and Israel under the aegis of the United States at the end of the fifth round of negotiations in Washington, proclaiming that it was \u201cnull and void\u201d. More info:",
-            "Summary": "Hezbollah Secretary General Na\u00efm Kassem on Saturday described as a \u201cserious error\u201d the agreement signed the day before by Lebanon and Israel under the aegis of the United States at the end of the fifth round of negotiations in Washington, proclaiming that it was \u201cnull and void\u201d. More info:",
-            "Risk": "HIGH",
-            "Source": "https://x.com/LOrientLeJour/status/2070896531893264890",
-            "Title": "Hezbollah Secretary General Na\u00efm Kassem on Saturday described as a \u201cserious error\u201d the agreement signed the day before by Lebanon and Israel under the aegis of the United States at the end of the fifth round of negotiations in Washington, proclaiming that it was \u201cnull and void\u201d. More info:",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "x.com"
-        },
-        {
-            "Date": "2026-06-27",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "The framework agreement prepares the ground for turning South Lebanon into a second Gaza Strip",
-            "Headline": "The framework agreement prepares the ground for turning South Lebanon into a second Gaza Strip",
-            "Summary": "The framework agreement prepares the ground for turning South Lebanon into a second Gaza Strip",
-            "Risk": "HIGH",
-            "Source": "https://x.com/Haaretz/status/2070896314112414029",
-            "Title": "The framework agreement prepares the ground for turning South Lebanon into a second Gaza Strip",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "x.com"
-        },
-        {
-            "Date": "2026-06-27",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "Damascus races to reassure Beirut as Trump pushes Syria to take on Hezbollah",
-            "Headline": "Damascus races to reassure Beirut as Trump pushes Syria to take on Hezbollah",
-            "Summary": "Damascus races to reassure Beirut as Trump pushes Syria to take on Hezbollah",
-            "Risk": "HIGH",
-            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/damascus-races-reassure-beirut-trump-pushes-syria-take-hezbollah",
-            "Title": "Damascus races to reassure Beirut as Trump pushes Syria to take on Hezbollah",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "middleeasteye.net"
-        },
-        {
-            "Date": "2026-06-27",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "Several Palestinians injured in Israeli drone strike on Gaza City tent",
-            "Headline": "Several Palestinians injured in Israeli drone strike on Gaza City tent",
-            "Summary": "Several Palestinians injured in Israeli drone strike on Gaza City tent",
-            "Risk": "HIGH",
-            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/several-palestinians-injured-israeli-drone-strike-gaza-city-tent",
-            "Title": "Several Palestinians injured in Israeli drone strike on Gaza City tent",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "middleeasteye.net"
         }
     ],
     "sources": [
+        {
+            "title": "Lebanese army urges calm as protests grow over Israel deal",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/lebanese-army-urges-calm-protests-grow-over-israel-deal"
+        },
+        {
+            "title": "Explosive drone targets Iranian Kurdish opposition camp north of Iraq's Erbil, security sources say",
+            "url": "https://x.com/Reuters/status/2070930265829003272"
+        },
+        {
+            "title": "The preliminary peace agreement between the United States and Iran, which is still taking shape in early talks, hands Iran\u2019s leadership a major economic lifeline as Tehran looks to consolidate strategic gains after months of war with Israel and the U.S.",
+            "url": "https://x.com/washingtonpost/status/2070930213626642863"
+        },
+        {
+            "title": "Trump bombs Iran after strike on cargo ship in Strait of Hormuz",
+            "url": "https://asiatimes.com/2026/06/trump-bombs-iran-after-strike-on-cargo-ship-in-strait-of-hormuz/"
+        },
+        {
+            "title": "Israel says troops will occupy southern Lebanon",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-says-troops-will-occupy-southern-lebanon"
+        },
+        {
+            "title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5"
+        },
+        {
+            "title": "Apple seeks to buy memory chips from blacklisted Chinese company",
+            "url": "https://www.ft.com/content/d72a25e2-7bde-4aa9-bd8d-0c4f3d6cb2cb"
+        },
+        {
+            "title": "OpenAI releases GPT-5.6 to select users vetted by US government",
+            "url": "https://www.ft.com/content/33a306c2-5aaa-45b1-9386-1716fa6a128e"
+        },
         {
             "title": "Lebanon army chief holds UK talks on ceasefire and border security",
             "url": "https://www.middleeasteye.net/live-blog/live-blog-update/lebanon-army-chief-holds-uk-talks-ceasefire-and-border-security"
@@ -383,38 +412,6 @@
         {
             "title": "Trump bombs Iran after strike on cargo ship in Strait of Hormuz",
             "url": "https://asiatimes.com/2026/06/trump-bombs-iran-after-strike-on-cargo-ship-in-strait-of-hormuz/"
-        },
-        {
-            "title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
-            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5"
-        },
-        {
-            "title": "U.S. sanctions networks supplying both sides of Sudan civil war - Sudan Tribune",
-            "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE92VzhrMlZCcVlaamRYbkZJVGVlTm9BY2tKSHhtUzl1MTFTRHFUcHUtLVNxdU9EeTJWcjlvV1ZVaEUtakpPcXN1NHpib2ZBQ0ZJ?oc=5"
-        },
-        {
-            "title": "OpenAI releases GPT-5.6 to select users vetted by US government",
-            "url": "https://www.ft.com/content/33a306c2-5aaa-45b1-9386-1716fa6a128e"
-        },
-        {
-            "title": "Apple seeks to buy memory chips from blacklisted Chinese company",
-            "url": "https://www.ft.com/content/d72a25e2-7bde-4aa9-bd8d-0c4f3d6cb2cb"
-        },
-        {
-            "title": "Hezbollah Secretary General Na\u00efm Kassem on Saturday described as a \u201cserious error\u201d the agreement signed the day before by Lebanon and Israel under the aegis of the United States at the end of the fifth round of negotiations in Washington, proclaiming that it was \u201cnull and void\u201d. More info:",
-            "url": "https://x.com/LOrientLeJour/status/2070896531893264890"
-        },
-        {
-            "title": "The framework agreement prepares the ground for turning South Lebanon into a second Gaza Strip",
-            "url": "https://x.com/Haaretz/status/2070896314112414029"
-        },
-        {
-            "title": "Damascus races to reassure Beirut as Trump pushes Syria to take on Hezbollah",
-            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/damascus-races-reassure-beirut-trump-pushes-syria-take-hezbollah"
-        },
-        {
-            "title": "Several Palestinians injured in Israeli drone strike on Gaza City tent",
-            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/several-palestinians-injured-israeli-drone-strike-gaza-city-tent"
         }
     ]
 }
