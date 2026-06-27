@@ -1480,3 +1480,17 @@
 2026-06-27 14:02:38,200 - WARNING - Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: All API keys exhausted via rotation.
 2026-06-27 14:02:38,235 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-27 14:02:49,098 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-27 14:18:17,610 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 14:18:17,832 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 14:18:17,833 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 14:18:27,879 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 14:18:28,010 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 14:18:28,010 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 14:18:28,010 - INFO - Rotating to API Key 2
+2026-06-27 14:18:31,050 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 14:18:44,401 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-27 14:18:44,438 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 14:18:44,556 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 14:18:44,557 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 14:18:54,604 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 14:19:06,089 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
