@@ -1,5 +1,12 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Russian Forces Advance in Khotin Direction, Sumy Oblast",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/Middle_East_Spectator/33935",
         "Title": "Iran Strikes US Army Positions in Southern Iran",
         "Feed_Source": "WAR MONITOR",
@@ -7,17 +14,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89409",
-        "Title": "Iran Expected to Launch Missile at Bahrain",
+        "Source": "https://t.me/intelslava/89412",
+        "Title": "Russian Geran Arrives in Izyum",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/warmonitors/44709",
-        "Title": "Iran Signs Ceasefire Agreement",
+        "Source": "https://warmonitor.com/",
+        "Title": "Trump admin allows Anthropic to release Mythos AI model to some companies, government agencies",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "warmonitor.com",
         "threat_level": "HIGH"
     },
     {
@@ -35,6 +42,13 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
         "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
@@ -42,31 +56,17 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Forces Enter Kozacha Lopan in Kharkiv Oblast",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "Source": "https://www.politico.eu/article/trump-administration-asks-high-court-to-ok-its-unprecedented-immigration-detention-policy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Trump administration asks high court to OK its unprecedented immigration detention policy",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/27/rescue-efforts-turn-to-recovery-as-aftershocks-shake-venezuela?traffic_source=rss",
-        "Title": "Rescue efforts turn to recovery as aftershocks shake Venezuela",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/27/fishermen-capture-the-moment-earthquake-hits-venezuelan-coast?traffic_source=rss",
+        "Title": "Fishermen capture the moment earthquake hits Venezuelan coast",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVUlEZTVZVWFkRXdVUVVQRGpMemNEcUI4dFhwWTVMajFGbUE1LVgwQUM5SVE5S3ZnM2RDbzM0SXFCcEtPWWc3V19LOWFGdklHLVBwV0hScnIzWVRuSjR4X3FNdGxjTEg3NEU4LTlJRmpVTTdOdjFna3NVTjIzd1NHOXRHbU44VEV3eXR2Vml5QU9UTFF3RnFZT1dDMzZDSUJ3YUw3Mk9aWTVfSWVHTG5abUM3NnBfbE5OQ0xZdTEzYXdNWnE5?oc=5",
-        "Title": "Terremoto en Venezuela Panorama de la situaci\u00f3n (25 de junio de 2026) - ReliefWeb",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/articles/ckg8m2xkg84o?at_medium=RSS&at_campaign=rss",
-        "Title": "Religion row as Texas makes Bible stories required reading in schools",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
