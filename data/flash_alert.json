@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Warns of Return to War Over Strait of Hormuz Corridor",
+        "Title": "Security Officials Warn of Possible Russian Provocation in Baltic States",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -42,6 +42,20 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89417",
+        "Title": "US Allows Anthropic AI Model Access",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://warmonitor.com/",
         "Title": "Chinese Dissident Who Fled to South Korea by Rubber Boat Lands in Canada",
         "Feed_Source": "WAR MONITOR",
@@ -53,20 +67,6 @@
         "Title": "Europe heatwave live: Germany braced for temperatures \u2018well over 40C\u2019; extreme heat warnings for England",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/venezuela-tens-of-thousands-still-missing-after-twin-earthquakes",
-        "Title": "Venezuela: Tens of thousands still missing after twin earthquakes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44713",
-        "Title": "Bahrain Accuses Iran of Drone Attack",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
