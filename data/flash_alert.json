@@ -1,5 +1,33 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Civilian Infrastructure Strikes Kill 11 in Ukraine, Russia Over 24 Hours",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89425",
+        "Title": "Russia Captures Novoskelivate in Dnipropetrovsk Region",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89418",
+        "Title": "Iranian Drones Target Bahrain",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89427",
+        "Title": "Germany Considers Reinstating Compulsory Military Service",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -14,59 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Security Officials Warn of Possible Russian Provocation in Baltic States",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.nytimes.com/live/2026/06/27/world/us-iran-strikes-hormuz",
-        "Title": "Live Updates: Mideast Hostilities Flare, Testing Fragile U.S.-Iran Truce",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119467",
-        "Title": "Russia Warns of Saboteurs in Murmansk Region",
+        "Source": "https://t.me/nexta_live/119479",
+        "Title": "Russian Man Protests Gas Shortage in Novgorod",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.dw.com/en/military-age-ukrainian-men-could-lose-eu-protection/a-77729285?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Military-age Ukrainian men could lose EU protection",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "HIGH"
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://warmonitor.com/",
-        "Title": "SpaceX to join the Nasdaq-100 in a fast-tracked process that will drive huge ETF buying demand",
+        "Title": "Europe heatwave live: drought fears in Italy, records broken in Slovakia and Denmark, and 700 flights delayed in England",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/intelslava/89419",
-        "Title": "IRGC Plans Attack on Bahrain",
+        "Source": "https://www.cnbc.com/2026/06/27/memory-crunch-shaking-apple-and-microsoft-existential-for-small-guys.html",
+        "Title": "The memory shortage shaking Apple and Microsoft is 'existential crisis' for smaller players",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89418",
-        "Title": "Iranian Drones Target Bahrain",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89417",
-        "Title": "US Allows Anthropic AI Model Access",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
