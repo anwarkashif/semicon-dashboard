@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Smotrich Says Israel Deepens Infrastructure Destruction in Lebanon",
+        "Title": "Russia Places Air Defense System on Moscow Residential Tower",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61575",
+        "Title": "Ukraine Reports Ongoing Conflict Across Eastern Regions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/27/two-killed-dozens-injured-in-israeli-strike-on-displacement-tents-in-gaza?traffic_source=rss",
@@ -21,18 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32279",
-        "Title": "Russian Forces Advance in Kostyantynivka",
+        "Source": "https://www.aljazeera.com/news/2026/6/27/explosion-and-gunfire-reported-in-pakistans-karachi?traffic_source=rss",
+        "Title": "Explosion and gunfire reported in Pakistan\u2019s Karachi",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/articles/c8724zn3491o?at_medium=RSS&at_campaign=rss",
-        "Title": "DR Congo takes Rwanda to international court over decades of conflict",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/2026/jun/27/venezuela-earthquakes-death-toll-rises-jorge-rodriguez",
-        "Title": "Venezuela earthquakes: death toll rises again to more than 1,400",
+        "Source": "https://www.npr.org/2026/06/26/nx-s1-5872204/u-s-pledges-generous-earthquake-relief-to-venezuela",
+        "Title": "U.S. pledges generous earthquake relief to Venezuela",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "npr.org",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33941",
-        "Title": "Iranians Rally in Support of Supreme Leader",
+        "Source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVVkzd25wT0xoa2RFR04xcUxtaXpYOTN4OUNRNGEyQ3hzQ1lkeW5Pazk0WWNQOTJneVNVTHotTVViOG9rUE53b3BFMS0ya0NiNDFaTXMtMWt3OER5bjc3YjFPNXVnbVpaU19UdlFLckd6ay1DVlVDVGk2Ql9IZFVsSzNhYlF0OV85UVUzMThscnlLSENHbUJILVVlS0RmZGI1ellubjJFQkprQWdIUUhFT1BQeUg?oc=5",
+        "Title": "France considers measures after Burkina Faso breaks off relations - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/cp8l451420zo?at_medium=RSS&at_campaign=rss",
+        "Title": "'Every person saved is a miracle': Families call to trapped loved ones in region devastated by Venezuela quakes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
