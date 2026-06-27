@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Civilian Infrastructure Strikes Kill 11 in Ukraine, Russia Over 24 Hours",
+        "Title": "Ukrainian Strike Collapses Road Bridge Near Rozdolne in Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -42,13 +42,6 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://t.me/nexta_live/119479",
         "Title": "Russian Man Protests Gas Shortage in Novgorod",
         "Feed_Source": "WAR MONITOR",
@@ -67,6 +60,13 @@
         "Title": "The memory shortage shaking Apple and Microsoft is 'existential crisis' for smaller players",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/27/world/europe/heat-wave-central-eastern-europe.html",
+        "Title": "Central and Eastern Europe Are Feeling the Heat Now",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
