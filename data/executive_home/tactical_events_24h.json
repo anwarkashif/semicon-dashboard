@@ -4,6 +4,20 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "A framework agreement between Israel and Lebanon: the IDF will gradually withdraw, a joint coordination mechanism will be established",
+        "Headline": "A framework agreement between Israel and Lebanon: the IDF will gradually withdraw, a joint coordination mechanism will be established",
+        "Summary": "A framework agreement between Israel and Lebanon: the IDF will gradually withdraw, a joint coordination mechanism will be established",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2070689039540260965",
+        "Title": "A framework agreement between Israel and Lebanon: the IDF will gradually withdraw, a joint coordination mechanism will be established",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-27",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "UN aid chief outlines \u2018six asks\u2019 after Israel-Lebanon deal",
         "Headline": "UN aid chief outlines \u2018six asks\u2019 after Israel-Lebanon deal",
         "Summary": "UN aid chief outlines \u2018six asks\u2019 after Israel-Lebanon deal",
@@ -26,6 +40,72 @@
         "Title": "US diesel refining economics remain firm despite Iran war truce",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "US, Iran (IRGC)",
+        "Action": "US strikes Iranian missile, drone, radar sites in response to Iranian attacks on vessels/US forces; Iran targets US forces.",
+        "Location": "Iran, Strait of Hormuz",
+        "Risk": "High (Direct military conflict, regional instability, oil supply disruption)",
+        "Source": "https://foreignpolicy.com/2026/06/26/us-strikes-iran-cease-fire-violation-hormuz-ever-lovely-mou-trump/",
+        "Title": "U.S. Strikes Iran Over Attack on Hormuz Ship",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "foreignpolicy.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Trump administration (US)",
+        "Action": "Warns of 100% tariffs on countries implementing digital services tax.",
+        "Location": "Global (targeting countries like those in Europe)",
+        "Risk": "Medium-High (Trade war, economic friction, strained international relations)",
+        "Source": "https://www.ft.com/content/5d886d47-c509-44a4-9077-bcd25158b61e",
+        "Title": "Trump warns of 100% tariff on countries implementing digital services tax",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "ft.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Israel, Lebanon, Hezbollah",
+        "Action": "Establish framework agreement for IDF withdrawal and joint coordination; Hezbollah supporters protest the deal.",
+        "Location": "Israel, Lebanon (Beirut)",
+        "Risk": "Medium-High (Internal instability in Lebanon, potential for renewed conflict, regional tensions)",
+        "Source": "https://x.com/Haaretz/status/2070689039540260965",
+        "Title": "A framework agreement between Israel and Lebanon: the IDF will gradually withdraw, a joint coordination mechanism will be established",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Houthi rebels",
+        "Action": "Attack and threaten Israeli vessels, announce ban on Israeli vessels in Red Sea.",
+        "Location": "Red Sea, Gulf of Oman",
+        "Risk": "High (Maritime security threat, disruption of global shipping, regional conflict spillover)",
+        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
+        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - The Long War Journal",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "US government, OpenAI, Anthropic",
+        "Action": "US government vets select users for access to advanced AI models (GPT-5.6, Mythos).",
+        "Location": "US",
+        "Risk": "Medium (Technological control, national security implications, AI ethics and governance)",
+        "Source": "https://www.ft.com/content/33a306c2-5aaa-45b1-9386-1716fa6a128e",
+        "Title": "OpenAI releases GPT-5.6 to select users vetted by US government",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "ft.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "China",
+        "Action": "Plans to double the size of its Tiangong space station.",
+        "Location": "Low Earth Orbit",
+        "Risk": "Low-Medium (Increased space competition, strategic advantage in space, potential dual-use technology)",
+        "Source": "https://www.space.com/space-exploration/launches-spacecraft/china-plans-to-double-the-size-of-its-tiangong-space-station-while-the-iss-nears-its-end",
+        "Title": "China plans to double the size of its Tiangong space station while the ISS nears its end",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "space.com"
     },
     {
         "Date": "2026-06-27",
@@ -104,17 +184,6 @@
         "Title": "Lebanon and Israel sign 'framework agreement' to end war",
         "Feed_Source": "Premium RSS",
         "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "",
-        "Actor": "Trump administration",
-        "Action": "Warns of 100% tariffs on countries implementing digital services tax.",
-        "Location": "Global (targeting countries, implicitly Europe)",
-        "Risk": "Trade wars, economic instability, strained international relations.",
-        "Source": "https://www.ft.com/content/5d886d47-c509-44a4-9077-bcd25158b61e",
-        "Title": "Trump warns of 100% tariff on countries implementing digital services tax",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
     },
     {
         "Date": "",
@@ -231,86 +300,5 @@
         "Title": "IMO Estimates There Are 80 Mines in Hormuz\u2019s Shipping Lanes",
         "Feed_Source": "Premium RSS",
         "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "Lebanon, Israel, Hezbollah",
-        "Action": "Lebanon and Israel sign 'framework agreement' to end war; Hezbollah supporters protest in Beirut",
-        "Location": "Lebanon, Israel, Beirut",
-        "Risk": "Internal instability in Lebanon, potential for renewed conflict, regional tensions",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/lebanon-and-israel-sign-framework-agreement-end-war",
-        "Title": "Lebanon and Israel sign 'framework agreement' to end war",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "2026-06-26",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Hezbollah supporters block Beirut road to protest Israel-Lebanon agreement",
-        "Headline": "Hezbollah supporters block Beirut road to protest Israel-Lebanon agreement",
-        "Summary": "Hezbollah supporters block Beirut road to protest Israel-Lebanon agreement",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-supporters-block-beirut-road-burn-tires-protest-israel-lebanon",
-        "Title": "Hezbollah supporters block Beirut road to protest Israel-Lebanon agreement",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "2026-06-26",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Protests erupt in Beirut over deal with Israel (VIDEOS)",
-        "Headline": "Protests erupt in Beirut over deal with Israel (VIDEOS)",
-        "Summary": "Protests erupt in Beirut over deal with Israel (VIDEOS)",
-        "Risk": "HIGH",
-        "Source": "https://www.rt.com/news/642254-lebanon-protests-deal-israel/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-        "Title": "Protests erupt in Beirut over deal with Israel (VIDEOS)",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "rt.com"
-    },
-    {
-        "Date": "2026-06-26",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US launches strikes in Iran for first time since peace agreement",
-        "Headline": "US launches strikes in Iran for first time since peace agreement",
-        "Summary": "US launches strikes in Iran for first time since peace agreement",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Telegraph/status/2070645395600871503",
-        "Title": "US launches strikes in Iran for first time since peace agreement",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "2026-06-26",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Ukrainian Strikes Turn Crimea From Prize Asset to Liability for Putin",
-        "Headline": "Ukrainian Strikes Turn Crimea From Prize Asset to Liability for Putin",
-        "Summary": "Ukrainian Strikes Turn Crimea From Prize Asset to Liability for Putin",
-        "Risk": "HIGH",
-        "Source": "https://www.wsj.com/world/russia/crimea-ukraine-russia-war-484d7827",
-        "Title": "Ukrainian Strikes Turn Crimea From Prize Asset to Liability for Putin",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "wsj.com"
-    },
-    {
-        "Date": "2026-06-26",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Sudan's UN envoy has strongly rejected U.S. accusations regarding the military's alleged use of chemical weapons, calling the claims baseless after a year of joint probes. The denial came as U.S. adviser Massad Boulos announced fresh sanctions. #Sudan #UNSC #U_S_Sanctions",
-        "Headline": "Sudan's UN envoy has strongly rejected U.S. accusations regarding the military's alleged use of chemical weapons, calling the claims baseless after a year of joint probes. The denial came as U.S. adviser Massad Boulos announced fresh sanctions. #Sudan #UNSC #U_S_Sanctions",
-        "Summary": "Sudan's UN envoy has strongly rejected U.S. accusations regarding the military's alleged use of chemical weapons, calling the claims baseless after a year of joint probes. The denial came as U.S. adviser Massad Boulos announced fresh sanctions. #Sudan #UNSC #U_S_Sanctions",
-        "Risk": "HIGH",
-        "Source": "https://x.com/SudanTribune_EN/status/2070643503433232533",
-        "Title": "Sudan's UN envoy has strongly rejected U.S. accusations regarding the military's alleged use of chemical weapons, calling the claims baseless after a year of joint probes. The denial came as U.S. adviser Massad Boulos announced fresh sanctions. #Sudan #UNSC #U_S_Sanctions",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
     }
 ]
