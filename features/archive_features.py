@@ -18,12 +18,9 @@ def render_trend_timelines():
             try:
                 with open(f_path, 'r', encoding='utf-8') as file:
                     d = json.load(file)
-                    # Safely handle if 'd' is a list rather than a dictionary
-                    if isinstance(d, list):
-                        continue
+                    if isinstance(d, list): continue
                         
                     b_date = d.get('date', 'Unknown')
-                    
                     actions = d.get('recent_actions', [])
                     risks = d.get('supply_chain_risk', [])
                     
@@ -56,22 +53,30 @@ def render_archives():
         with open(archive_mapping[selected_brief], 'r', encoding='utf-8') as f:
             archived_data = json.load(f)
         
-        # 🛑 THE FIX: Bulletproof extraction that handles lists or missing keys gracefully
+        # 🛑 THE FIX: Auto-stitch the brief if 'brief_raw' isn't explicitly defined
         arch_raw = ""
         if isinstance(archived_data, dict):
-            arch_raw = archived_data.get('brief_raw', '')
-            
-            # If the user selected an Executive Flash Brief or Today's Snippet
-            if not arch_raw and 'bluf' in archived_data:
-                bluf = archived_data.get('bluf', '')
+            if 'brief_raw' in archived_data and archived_data['brief_raw']:
+                arch_raw = archived_data['brief_raw']
+            else:
+                bluf = archived_data.get('bluf', archived_data.get('bottom_line_up_front', ''))
                 exec_sum = archived_data.get('executive_summary', '')
                 narrative = archived_data.get('threat_narrative', '')
                 risk = archived_data.get('risk_assessment', '')
-                forecast = archived_data.get('strategic_forecast', '')
-                arch_raw = f"**BLUF:**\n{bluf}\n\n**EXECUTIVE SUMMARY:**\n{exec_sum}\n\n**THREAT NARRATIVE:**\n{narrative}\n\n**RISK ASSESSMENT:**\n{risk}\n\n**FORECAST:**\n{forecast}"
-        elif isinstance(archived_data, list):
-            arch_raw = "Raw tactical event data log (No synthesized brief text available for this file)."
-            
+                forecast = archived_data.get('strategic_forecast', archived_data.get('strategic_outlook', ''))
+                
+                parts = []
+                if bluf: parts.append(f"**🎯 BLUF:**\n{bluf}")
+                if exec_sum: parts.append(f"**📋 EXECUTIVE SUMMARY:**\n{exec_sum}")
+                if narrative: parts.append(f"**🕸️ THREAT NARRATIVE:**\n{narrative}")
+                if risk: parts.append(f"**⚖️ RISK ASSESSMENT:**\n{risk}")
+                if forecast: parts.append(f"**🔭 STRATEGIC FORECAST:**\n{forecast}")
+                
+                arch_raw = "\n\n---\n\n".join(parts)
+                
+                if not arch_raw:
+                    arch_raw = "*(No synthesized text keys found in this payload)*"
+                    
         t1 = extract_tag('EXEC', arch_raw) or arch_raw
         st.markdown(t1.replace('$', r'\$'))
     else:
@@ -81,7 +86,6 @@ def render_clean_archives():
     st.title("Clean Archives")
     st.info("Move outdated or incorrect briefs to the Trash. Guests cannot see this tool.")
     
-    # --- CSS FIX: Forces primary button text to be black for readability ---
     st.markdown("""
     <style>
         div[data-testid="stButton"] > button[kind="primary"] * {
@@ -109,7 +113,6 @@ def render_trash():
     st.title("Trash Bin")
     st.warning("Items here are completely hidden from the public dashboard.")
     
-    # --- CSS FIX: Forces primary button text to be black for readability ---
     st.markdown("""
     <style>
         div[data-testid="stButton"] > button[kind="primary"] * {
