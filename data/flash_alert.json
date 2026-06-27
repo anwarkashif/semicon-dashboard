@@ -1,28 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Strikes US Bases in Bahrain in Retaliation for Strike on Sirik",
+        "Title": "Zelensky Reports One of Largest Russian Attack Campaigns on Ukraine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44713",
-        "Title": "Bahrain Accuses Iran of Drone Attack",
+        "Source": "https://www.dw.com/en/military-age-ukrainian-men-could-lose-eu-protection/a-77729285?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Military-age Ukrainian men could lose EU protection",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "dw.com",
         "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/nexta_live/119467",
         "Title": "Russia Warns of Saboteurs in Murmansk Region",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119462",
-        "Title": "Russia Faces Gasoline Shortages in Chita",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
@@ -42,11 +35,18 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44713",
+        "Title": "Bahrain Accuses Iran of Drone Attack",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.nytimes.com/video/world/africa/100000010952237/an-attack-on-ebolas-first-responders.html",
