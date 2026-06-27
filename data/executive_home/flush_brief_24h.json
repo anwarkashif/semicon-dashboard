@@ -1,22 +1,11 @@
 {
-    "bluf": "The Middle East is currently experiencing significant military escalation, with direct US-Iran strikes and Houthi attacks in the Red Sea, alongside severe internal instability in Lebanon challenging a proposed Israel-Lebanon agreement. While future projections (mid-2026) indicate potential peace agreements, current realities suggest these will face immense hurdles. Concurrently, global strategic competition intensifies in space and tech supply chains, and Sudan's civil war shows no signs of abating.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "US and Iran engaged in direct military strikes.",
-        "Hezbollah actively protesting and threatening civil unrest over the proposed Israel-Lebanon agreement in Beirut.",
-        "Houthis conducting attacks on Israel and imposing maritime bans on Israeli vessels in the Red Sea.",
-        "Sudanese army chief ruling out peace negotiations with the RSF, signaling prolonged civil war.",
-        "China advancing its Tiangong space station expansion, intensifying space competition.",
-        "Apple seeking to buy memory chips from a blacklisted Chinese company, highlighting supply chain vulnerabilities and sanctions challenges.",
-        "German court sentencing an immigrant to life for a deadly Christmas market attack, underscoring persistent extremist threats."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The immediate geopolitical landscape is dominated by escalating military tensions in the Middle East, evidenced by direct US-Iran strikes and Houthi aggression in the Red Sea. This is compounded by severe internal instability in Lebanon, where Hezbollah's strong opposition threatens to derail a proposed Israel-Lebanon framework agreement. Sudan's civil war shows no signs of abating, promising continued humanitarian crisis. While future scenarios (mid-2026) project potential US-Iran peace and Israel-Lebanon agreements, the current environment suggests these diplomatic efforts will be highly fragile and contested. The underlying sentiment of war-weariness among Iranians indicates internal pressure points. Beyond regional conflicts, global powers are engaged in strategic competition, with China expanding its space capabilities and tech supply chains facing challenges from sanctions and corporate actions. The persistent threat of extremist violence, as seen in Germany, remains a concern.",
-    "risk_assessment": {
-        "Military Escalation in Middle East": "CRITICAL",
-        "Internal Instability/Civil War in Lebanon": "HIGH",
-        "Prolonged Civil War/Humanitarian Crisis in Sudan": "HIGH",
-        "Maritime Security Threats in Red Sea": "HIGH",
-        "Geopolitical Competition (Space/Tech Supply Chains)": "MEDIUM-HIGH",
-        "Extremist Attacks in Western Nations": "MEDIUM"
-    },
-    "strategic_forecast": "The Middle East is poised for continued high-intensity conflict in the near term, with current military engagements and strong opposition to peace deals undermining any immediate de-escalation. While future projections (mid-2026) suggest potential diplomatic breakthroughs like a US-Iran peace agreement and an Israel-Lebanon framework, these will likely be met with significant resistance and face a high probability of failure or severe challenges given the current volatile environment. The internal dynamics within Iran (war-weariness) could be a long-term factor, but current actions point to continued confrontation. Globally, strategic competition, particularly between the US and China in space and technology, will intensify, creating new areas of friction. The Sudanese civil war is expected to persist, deepening the humanitarian crisis and contributing to regional instability. The overall outlook is one of sustained geopolitical tension and localized conflicts, with diplomatic solutions remaining elusive or highly fragile."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }

@@ -4,6 +4,48 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran carried out retaliatory strikes against US military bases following attacks by Washington, the Islamic Revolutionary Guard Corps (IRGC, the elite units of the Iranian Armed Forces) reported:",
+        "Headline": "Iran carried out retaliatory strikes against US military bases following attacks by Washington, the Islamic Revolutionary Guard Corps (IRGC, the elite units of the Iranian Armed Forces) reported:",
+        "Summary": "Iran carried out retaliatory strikes against US military bases following attacks by Washington, the Islamic Revolutionary Guard Corps (IRGC, the elite units of the Iranian Armed Forces) reported:",
+        "Risk": "HIGH",
+        "Source": "https://x.com/tassagency_en/status/2070717472764780983",
+        "Title": "Iran carried out retaliatory strikes against US military bases following attacks by Washington, the Islamic Revolutionary Guard Corps (IRGC, the elite units of the Iranian Armed Forces) reported:",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-27",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The discourse on a civil war in Israel no longer sounds like a rhetorical exaggeration",
+        "Headline": "The discourse on a civil war in Israel no longer sounds like a rhetorical exaggeration",
+        "Summary": "The discourse on a civil war in Israel no longer sounds like a rhetorical exaggeration",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2070714197466378280",
+        "Title": "The discourse on a civil war in Israel no longer sounds like a rhetorical exaggeration",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-27",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Key points from US-Israel-Lebanon agreement",
+        "Headline": "Key points from US-Israel-Lebanon agreement",
+        "Summary": "Key points from US-Israel-Lebanon agreement",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/key-points-us-israel-lebanon-agreement",
+        "Title": "Key points from US-Israel-Lebanon agreement",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "al-monitor.com"
+    },
+    {
+        "Date": "2026-06-27",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Immigrant behind deadly German Christmas market attack gets life sentence",
         "Headline": "Immigrant behind deadly German Christmas market attack gets life sentence",
         "Summary": "Immigrant behind deadly German Christmas market attack gets life sentence",
@@ -270,38 +312,5 @@
         "Title": "Iran war live: US strikes Iran after attack on vessel in Strait of Hormuz",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "aljazeera.com"
-    },
-    {
-        "Date": "",
-        "Actor": "U.S.",
-        "Action": "Conducted military strikes against Iran in retaliation for a vessel attack in the Strait of Hormuz.",
-        "Location": "Iran, Strait of Hormuz",
-        "Risk": "Escalation of conflict, regional instability, disruption of global shipping.",
-        "Source": "https://foreignpolicy.com/2026/06/26/us-strikes-iran-cease-fire-violation-hormuz-ever-lovely-mou-trump/",
-        "Title": "U.S. Strikes Iran Over Attack on Hormuz Ship",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "foreignpolicy.com"
-    },
-    {
-        "Date": "",
-        "Actor": "Israel, Lebanon, Hezbollah supporters",
-        "Action": "Signed a 'framework agreement' to end war, leading to protests by Hezbollah supporters in Beirut.",
-        "Location": "Lebanon (Beirut), Israel",
-        "Risk": "Internal instability in Lebanon, potential for renewed conflict, regional tensions.",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/lebanon-and-israel-sign-framework-agreement-end-war",
-        "Title": "Lebanon and Israel sign 'framework agreement' to end war",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "",
-        "Actor": "OpenAI, Anthropic, US government",
-        "Action": "OpenAI releases GPT-5.6 to select US-vetted users; Trump administration allows access to Anthropic\u2019s Mythos.",
-        "Location": "US (global impact)",
-        "Risk": "Geopolitical competition in AI, ethical concerns, regulatory challenges, technological dominance shifts.",
-        "Source": "https://www.ft.com/content/33a306c2-5aaa-45b1-9386-1716fa6a128e",
-        "Title": "OpenAI releases GPT-5.6 to select users vetted by US government",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
     }
 ]
