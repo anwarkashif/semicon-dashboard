@@ -1,30 +1,30 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Forces Advance in Khotin Direction, Sumy Oblast",
+        "Title": "Russian Forces Enter Kozacha Lopan in Kharkiv Oblast",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33935",
-        "Title": "Iran Strikes US Army Positions in Southern Iran",
+        "Source": "https://www.cnbc.com/2026/06/26/us-iran-peace-deal-nuclear-access.html",
+        "Title": "U.S.-Iran peace deal grants access to Tehran's nuclear sites, UN watchdog says",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "cnbc.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89412",
-        "Title": "Russian Geran Arrives in Izyum",
+        "Source": "https://t.me/nexta_live/119460",
+        "Title": "Russia Factory Hit by Explosions and Fire",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Trump admin allows Anthropic to release Mythos AI model to some companies, government agencies",
+        "Source": "https://t.me/rybar_in_english/32266",
+        "Title": "US Restricts Release of OpenAI GPT-5.6 Model",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -33,13 +33,6 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
@@ -56,17 +49,24 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://www.cnbc.com/2026/06/27/venezuela-quake-toll-tops-900-search-intensifies-for-hundreds-trapped.html",
+        "Title": "Venezuela quake toll tops 900, search intensifies for hundreds trapped",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89412",
+        "Title": "Russian Geran Arrives in Izyum",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.politico.eu/article/trump-administration-asks-high-court-to-ok-its-unprecedented-immigration-detention-policy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
         "Title": "Trump administration asks high court to OK its unprecedented immigration detention policy",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "politico.eu",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/27/fishermen-capture-the-moment-earthquake-hits-venezuelan-coast?traffic_source=rss",
-        "Title": "Fishermen capture the moment earthquake hits Venezuelan coast",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
