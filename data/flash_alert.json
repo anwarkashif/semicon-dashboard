@@ -1,31 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Russian Oil Pumping Station in Vladimir Region",
+        "Title": "Bahrain Reports Iranian Drone Attack on Territory",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/26/us-iran-peace-deal-nuclear-access.html",
-        "Title": "U.S.-Iran peace deal grants access to Tehran's nuclear sites, UN watchdog says",
+        "Source": "https://t.me/nexta_live/119467",
+        "Title": "Russia Warns of Saboteurs in Murmansk Region",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119461",
+        "Title": "Russia Launches Flamingo Missiles At Volgograd",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119460",
-        "Title": "Russia Factory Hit by Explosions and Fire",
+        "Source": "https://t.me/nexta_live/119462",
+        "Title": "Russia Faces Gasoline Shortages in Chita",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32266",
-        "Title": "US Restricts Release of OpenAI GPT-5.6 Model",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,31 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Watch: Lightning strikes seen across UK",
+        "Source": "https://www.nytimes.com/video/world/africa/100000010952237/an-attack-on-ebolas-first-responders.html",
+        "Title": "An Attack on Ebola\u2019s First Responders",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/videos/cwy0lw84p3go?at_medium=RSS&at_campaign=rss",
-        "Title": "Watch: BBC reports from La Guaira, one of Venezuela's worst-hit areas",
+        "Source": "https://www.nytimes.com/2026/06/27/world/africa/ebola-outbreak-congo-volunteers-burials-backlash.html",
+        "Title": "Volunteers Are Risking Their Lives to Stop Ebola. They Aren\u2019t Always Welcome.",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/europe/20260627-germany-braces-for-record-temperatures-as-heatwave-moves-east",
-        "Title": "Germany braces for record temperatures as heatwave moves east",
+        "Source": "https://www.nytimes.com/2026/06/27/world/americas/venezuelas-economy-earthquake.html",
+        "Title": "Venezuela\u2019s Economy Was On the Rise. Then the Earthquakes Struck.",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
