@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Strikes US Bases in Bahrain in Retaliation for Strike on Sirik",
+        "Title": "Iran Attacks Tanker in Strait of Hormuz, Fires Drones Toward Bahrain",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -12,13 +12,6 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44713",
-        "Title": "Bahrain Accuses Iran of Drone Attack",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.dw.com/en/military-age-ukrainian-men-could-lose-eu-protection/a-77729285?maca=en-rss-en-world-4025-xml-mrss",
@@ -42,11 +35,18 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Chinese Dissident Who Fled to South Korea by Rubber Boat Lands in Canada",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.theguardian.com/world/live/2026/jun/27/europe-heatwave-germany-poland-france-uk-temperature-heat-latest-news-updates",
@@ -63,10 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Russia Proposes Ban on Migrant Doctors and Nurses",
+        "Source": "https://t.me/warmonitors/44713",
+        "Title": "Bahrain Accuses Iran of Drone Attack",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
