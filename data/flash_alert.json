@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Attack on Gaza City Wounds Several",
+        "Title": "Ukrainian Drones Collapse Key Bridge on Russian E58 Supply Route",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89429",
+        "Title": "Ukraine Loses Two MiG Aircraft Overnight",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/6/27/pick-up-the-phone-irgc-appears-to-rebuff-us-strait-of-hormuz-hotline?traffic_source=rss",
+        "Title": "\u2018Pick up the phone\u2019: IRGC appears to rebuff US Strait of Hormuz \u2018hotline\u2019",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
@@ -12,27 +26,6 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/27/pick-up-the-phone-irgc-appears-to-rebuff-us-strait-of-hormuz-hotline?traffic_source=rss",
-        "Title": "\u2018Pick up the phone\u2019: IRGC appears to rebuff US Strait of Hormuz \u2018hotline\u2019",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89427",
-        "Title": "Germany Considers Reinstating Compulsory Military Service",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89425",
-        "Title": "Russia Captures Novoskelivate in Dnipropetrovsk Region",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/cdjk8zwe7z3o?at_medium=RSS&at_campaign=rss",
-        "Title": "In Caracas, this feels like the hardest moment in Venezuela's modern history",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPWUM4SGNrMGFfZ1BoN05MaVdXX1k3U3p0QkdaUWpNNGNfNG9TLWNvcjlpUGdvYnI2dHJQMkRuQWhkWXB1cXhUOWVZTkxFdTlBYnJpaERjaThhRWQ2TWFJNlo2djVqOUJpNGltOHNkRl83NjBFejUxN1c1VktMQzhpS1NqWHk5c0hwN2FKeTJlM0YtTXp3SkFGcEIyQlI3a29IWkRaUU9TUkxKOUVoQmlmTXpoV3NfQ1htdC04S3A2X2NiMm9yc1V1WDA3MUx1am5NbWlzN3JaN19iZC1UblEwWl9DNVhiZlZqNmRBT0hrN0x3WGVISHpoRDRXZTh0NUZ3elIteHlCdk9UZVBod1VV?oc=5",
+        "Title": "Venezuela earthquakes: IFRC launches emergency appeal to assist 300,000 people and dispatches first 17 tonnes of humanitarian cargo - ReliefWeb",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/intelslava/89429",
-        "Title": "Ukraine Loses Two MiG Aircraft Overnight",
+        "Source": "https://www.nytimes.com/live/2026/06/27/world/venezuela-earthquake/heres-the-latest",
+        "Title": "Here\u2019s the latest.",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
