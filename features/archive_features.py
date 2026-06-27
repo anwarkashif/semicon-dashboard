@@ -43,7 +43,6 @@ def render_trend_timelines():
     else:
         st.warning("No archives available to generate trend timelines.")
 
-# --- NEW: Dedicated Renderer for Archived Weekly Intelligence Briefs ---
 def render_archived_intel_brief(dashboard_data):
     from features.tactical_features import render_verified_sources
     
@@ -91,10 +90,60 @@ def render_archived_intel_brief(dashboard_data):
     st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Strategic Conclusion</h3>", unsafe_allow_html=True)
     if text_final: render_highlighted_text(text_final, "All")
 
-    # Render the Verified Intelligence Sources table with working URLs
+    # 🛑 THE FIX: Safely parse sources to prevent rendering crashes
     sources_list = dashboard_data.get('sources', [])
     if sources_list:
-        render_verified_sources(sources_list)
+        clean_sources = []
+        for src in sources_list:
+            if isinstance(src, dict):
+                clean_sources.append(src)
+            elif isinstance(src, str):
+                clean_sources.append({"title": src[:50] + "...", "url": src})
+        if clean_sources:
+            render_verified_sources(clean_sources)
+
+# --- Dedicated Cleaner Renderer for Archived Executive Flash Briefs ---
+def render_archived_flash_brief(dashboard_data):
+    from features.tactical_features import render_verified_sources
+    
+    st.markdown("<h2 style='color: #a855f7; margin-bottom: 15px; margin-top: 10px; font-size: 2em; letter-spacing: 1.5px; border-bottom: 2px solid #a855f7; padding-bottom: 5px;'>FLASH TO BRIEF ARCHIVE</h2>", unsafe_allow_html=True)
+    
+    raw_text = dashboard_data.get('brief_raw', '')
+    
+    # 🛑 THE FIX: Specific wording replacement requested
+    if "[Not Extracted]" in raw_text:
+        raw_text = raw_text.replace("[Not Extracted]", "*(Not part of the Brief due to presence of BLUF)*")
+        
+    # 🛑 THE FIX: Upgrade Markdown headers to perfectly match Weekly Intelligence Brief style
+    raw_text = raw_text.replace("**🎯 BLUF:**", "<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>🎯 BLUF (Bottom Line Up Front)</h3>")
+    raw_text = raw_text.replace("**📋 EXECUTIVE SUMMARY:**", "<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>📋 Executive Summary</h3>")
+    raw_text = raw_text.replace("**🕸️ THREAT NARRATIVE:**", "<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>🕸️ Threat Narrative</h3>")
+    raw_text = raw_text.replace("**⚖️ RISK ASSESSMENT:**", "<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>⚖️ Risk Assessment</h3>")
+    raw_text = raw_text.replace("**🔭 STRATEGIC FORECAST:**", "<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>🔭 Strategic Forecast</h3>")
+    
+    def format_markdown_to_html(text):
+        text = str(text)
+        text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
+        return text.replace('\n', '<br>')
+        
+    st.markdown(f"""
+    <div style="background: rgba(17, 17, 17, 0.4); padding: 20px; border-radius: 8px; border: 1px solid #333; line-height: 1.6; color: #e2e8f0;">
+        {format_markdown_to_html(raw_text)}
+    </div>
+    """, unsafe_allow_html=True)
+    
+    sources_list = dashboard_data.get('sources', [])
+    if sources_list:
+        st.markdown("<br>", unsafe_allow_html=True)
+        clean_sources = []
+        for src in sources_list:
+            if isinstance(src, dict) and 'title' in src and 'url' in src:
+                clean_sources.append(src)
+            elif isinstance(src, str):
+                clean_sources.append({"title": src[:60] + "...", "url": src})
+                
+        if clean_sources:
+            render_verified_sources(clean_sources)
 
 def render_archives():
     st.title("Archives")
@@ -107,12 +156,13 @@ def render_archives():
         with open(archive_mapping[selected_brief], 'r', encoding='utf-8') as f:
             archived_data = json.load(f)
         
-        # 🛑 ROUTING LOGIC: Determine how to display based on the file type
         if "Weekly Intelligence Brief" in selected_brief:
             render_archived_intel_brief(archived_data)
             
+        elif "Executive Flash Brief" in selected_brief:
+            render_archived_flash_brief(archived_data)
+            
         elif "Weekly Tactical Brief" in selected_brief:
-            # Tactical Briefs use standard text rendering
             arch_raw = ""
             if isinstance(archived_data, dict):
                 if 'brief_raw' in archived_data and archived_data['brief_raw']:
@@ -123,11 +173,9 @@ def render_archives():
                 text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
                 return text.replace('\n', '<br>')
             
-            # Format cleanly without throwing errors if data is slightly malformed
             st.markdown(format_html_text(arch_raw), unsafe_allow_html=True)
-            
+                
         else:
-            # Executive Flash & Today's Snippet
             arch_raw = ""
             if isinstance(archived_data, dict):
                 bluf = archived_data.get('bluf', archived_data.get('bottom_line_up_front', ''))

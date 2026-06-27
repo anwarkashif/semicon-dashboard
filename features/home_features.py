@@ -11,211 +11,71 @@ import streamlit.components.v1 as components
 from geopy.geocoders import Nominatim
 import re
 
-# --- Newly added imports for Folium Combo Feature ---
 import folium
 from folium.plugins import HeatMap, MarkerCluster
 from streamlit_folium import st_folium
+from huggingface_hub import HfApi
 
-# --- Strategic Constants Import ---
 try:
     from utils.constants import INFRASTRUCTURE_DATA, COUNTRY_INFO
 except ImportError:
     INFRASTRUCTURE_DATA = {}
     COUNTRY_INFO = {}
 
-# --- Existing imports for Decision Support Engine ---
 from features.tactical_features import render_decision_support_engine
 from features.executive_intelligence_note import render_executive_deep_intelligence_note
+from utils.snippet_docx_generator import generate_weekly_tactical_docx
 
-# ==========================================
-# 1. CSS INJECTION (Self-Contained)
-# ==========================================
 def inject_executive_home_css():
     st.markdown("""
     <style>
-    .sector-card {
-        background-color: #111827;
-        border: 1px solid #1f2937;
-        border-left: 5px solid #00bfff;
-        padding: 14px;
-        border-radius: 12px;
-        margin-bottom: 10px;
-    }
-    .hot-actor-box {
-        background-color: #0f172a;
-        border: 1px solid #334155;
-        padding: 12px;
-        border-radius: 12px;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .intel-box {
-        background-color: #111827;
-        border: 1px solid #374151;
-        border-radius: 14px;
-        padding: 18px;
-        margin-top: 10px;
-    }
+    .sector-card { background-color: #111827; border: 1px solid #1f2937; border-left: 5px solid #00bfff; padding: 14px; border-radius: 12px; margin-bottom: 10px; }
+    .hot-actor-box { background-color: #0f172a; border: 1px solid #334155; padding: 12px; border-radius: 12px; margin-bottom: 10px; text-align: center; }
+    .intel-box { background-color: #111827; border: 1px solid #374151; border-radius: 14px; padding: 18px; margin-top: 10px; }
     </style>
     """, unsafe_allow_html=True)
 
-# ==========================================
-# 2. HELPER COMPONENTS (Self-Contained)
-# ==========================================
 def render_velocity_chart(title, values):
     fig = go.Figure()
-    fig.add_trace(go.Scatter(
-        y=values,
-        mode='lines+markers',
-        line=dict(width=3, color='#00bfff'),
-        marker=dict(size=6, color='#00bfff'),
-        fill='tozeroy',
-        fillcolor='rgba(0, 191, 255, 0.1)'
-    ))
-    
-    fig.update_layout(
-        height=180,
-        margin=dict(l=10, r=10, t=30, b=20),
-        template="plotly_dark",
-        paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
-        title=dict(text=title, font=dict(size=14, color="#d1d5db")),
-        xaxis=dict(
-            showgrid=True, 
-            gridcolor='#334155', 
-            visible=True, 
-            tickvals=[0,1,2,3,4,5,6], 
-            ticktext=['D-6','D-5','D-4','D-3','D-2','D-1','Today'],
-            tickfont=dict(size=10, color='#9ca3af')
-        ),
-        yaxis=dict(
-            showgrid=True, 
-            gridcolor='#334155', 
-            visible=True, 
-            title=dict(text="Risk Score", font=dict(size=10, color='#9ca3af')), 
-            range=[0, 100],
-            tickfont=dict(size=10, color='#9ca3af')
-        )
-    )
+    fig.add_trace(go.Scatter(y=values, mode='lines+markers', line=dict(width=3, color='#00bfff'), marker=dict(size=6, color='#00bfff'), fill='tozeroy', fillcolor='rgba(0, 191, 255, 0.1)'))
+    fig.update_layout(height=180, margin=dict(l=10, r=10, t=30, b=20), template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', title=dict(text=title, font=dict(size=14, color="#d1d5db")), xaxis=dict(showgrid=True, gridcolor='#334155', visible=True, tickvals=[0,1,2,3,4,5,6], ticktext=['D-6','D-5','D-4','D-3','D-2','D-1','Today'], tickfont=dict(size=10, color='#9ca3af')), yaxis=dict(showgrid=True, gridcolor='#334155', visible=True, title=dict(text="Risk Score", font=dict(size=10, color='#9ca3af')), range=[0, 100], tickfont=dict(size=10, color='#9ca3af')))
     st.plotly_chart(fig, use_container_width=True)
 
 def get_hot_actors(df_actions):
-    if df_actions.empty:
-        return []
-    if 'Actor' not in df_actions.columns:
-        return []
+    if df_actions.empty: return []
+    if 'Actor' not in df_actions.columns: return []
     actor_counts = Counter(df_actions['Actor'].dropna())
     return actor_counts.most_common(5)
 
 def render_flash_alert():
     flash_path = 'data/flash_alert.json'
-    
-    # --- Sleek Fallback UI ---
     fallback_html = """
-    <style>
-        .flash-container { margin-bottom: 25px; font-family: system-ui, -apple-system, sans-serif; }
-        .flash-header { color: #ef4444; font-size: 1.2em; font-weight: 900; letter-spacing: 2px; margin-bottom: 15px; display: flex; align-items: center; }
-        .flash-header span { animation: blinkText 1.5s infinite; }
-        @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-        .flash-placeholder { background: rgba(17, 24, 39, 0.6); border: 1px dashed #374151; border-left: 5px solid #374151; padding: 20px; border-radius: 6px; color: #9ca3af; font-family: 'Courier New', monospace; font-size: 13px; letter-spacing: 1px; }
-    </style>
-    <div class="flash-container">
-        <div class="flash-header"><span>🚨 EXECUTIVE GEOPOLITICS-OSINT FLASH ALERTS</span></div>
-        <div class="flash-placeholder">📡 STANDBY: Awaiting initial flash telemetry payload from global Geopolitics-OSINT nodes...</div>
-    </div>
+    <style>.flash-container { margin-bottom: 25px; font-family: system-ui, -apple-system, sans-serif; } .flash-header { color: #ef4444; font-size: 1.2em; font-weight: 900; letter-spacing: 2px; margin-bottom: 15px; display: flex; align-items: center; } .flash-header span { animation: blinkText 1.5s infinite; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } .flash-placeholder { background: rgba(17, 24, 39, 0.6); border: 1px dashed #374151; border-left: 5px solid #374151; padding: 20px; border-radius: 6px; color: #9ca3af; font-family: 'Courier New', monospace; font-size: 13px; letter-spacing: 1px; }</style>
+    <div class="flash-container"><div class="flash-header"><span>🚨 EXECUTIVE GEOPOLITICS-OSINT FLASH ALERTS</span></div><div class="flash-placeholder">📡 STANDBY: Awaiting initial flash telemetry payload from global Geopolitics-OSINT nodes...</div></div>
     """
 
-    # Check if the automated file exists
     if not os.path.exists(flash_path):
         components.html(fallback_html, height=120)
         return
 
     try:
-        with open(flash_path, 'r') as f:
-            alerts = json.load(f)
+        with open(flash_path, 'r') as f: alerts = json.load(f)
     except:
         components.html(fallback_html, height=120)
         return
 
-    # Skip rendering if empty or invalid
     if not alerts or not isinstance(alerts, list):
         components.html(fallback_html, height=120)
         return
 
     html_code = """
-    <style>
-        .flash-container {
-            margin-bottom: 25px;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-        .flash-header {
-            color: #ef4444;
-            font-size: 1.2em;
-            font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        .flash-header span {
-            animation: blinkText 1.5s infinite;
-        }
-        
-        /* THE NEW FLASHY RED DEFCON BAR OVERRIDE */
-        .flash-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 20px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-            text-decoration: none !important;
-            color: #ffffff !important;
-            background: linear-gradient(90deg, #8b0000 0%, #ff0000 50%, #8b0000 100%); 
-            background-size: 200% 200%; 
-            animation: pulseBackground 2s infinite; 
-            border: 2px solid #ff4b4b; 
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-            transition: transform 0.2s;
-        }
-        .flash-bar:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
-        }
-        
-        @keyframes pulseBackground { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-        
-        .flash-source {
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            color: #fca5a5;
-            margin-bottom: 4px;
-        }
-        .flash-title {
-            font-size: 15px;
-            font-weight: 800;
-            line-height: 1.3;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-        }
-        .flash-arrow {
-            font-size: 20px;
-            opacity: 0.9;
-            margin-left: 15px;
-        }
-    </style>
-    
-    <div class="flash-container">
-        <div class="flash-header"><span>🚨 EXECUTIVE GEOPOLITICS-OSINT FLASH ALERTS</span></div>
+    <style>.flash-container { margin-bottom: 25px; font-family: system-ui, -apple-system, sans-serif; } .flash-header { color: #ef4444; font-size: 1.2em; font-weight: 900; letter-spacing: 2px; margin-bottom: 15px; display: flex; align-items: center; } .flash-header span { animation: blinkText 1.5s infinite; } .flash-bar { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; margin-bottom: 10px; border-radius: 6px; text-decoration: none !important; color: #ffffff !important; background: linear-gradient(90deg, #8b0000 0%, #ff0000 50%, #8b0000 100%); background-size: 200% 200%; animation: pulseBackground 2s infinite; border: 2px solid #ff4b4b; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); transition: transform 0.2s; } .flash-bar:hover { transform: translateY(-2px); box-shadow: 0 0 25px rgba(255, 0, 0, 0.8); } @keyframes pulseBackground { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } .flash-source { font-family: 'Courier New', monospace; font-weight: bold; font-size: 11px; letter-spacing: 1.5px; color: #fca5a5; margin-bottom: 4px; } .flash-title { font-size: 15px; font-weight: 800; line-height: 1.3; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); } .flash-arrow { font-size: 20px; opacity: 0.9; margin-left: 15px; }</style>
+    <div class="flash-container"><div class="flash-header"><span>🚨 EXECUTIVE GEOPOLITICS-OSINT FLASH ALERTS</span></div>
     """
 
-    # 🛑 EXECUTIVE HOME ROUTING: Exact 3 CRITICAL (Red) threats, one from each source.
     display_alerts = []
     seen_sources = set()
     
-    # Pass 1: Grab uniquely sourced CRITICAL items
     for alert in alerts:
         threat = str(alert.get('threat_level', alert.get('Threat_Level', alert.get('Risk', '')))).upper()
         if threat == 'CRITICAL':
@@ -223,56 +83,35 @@ def render_flash_alert():
             if src not in seen_sources:
                 display_alerts.append(alert)
                 seen_sources.add(src)
-            if len(display_alerts) == 3:
-                break
+            if len(display_alerts) == 3: break
                 
-    # Pass 2: Fallback to HIGH or WATCH if we couldn't find a CRITICAL for a source
     if len(display_alerts) < 3:
         for alert in alerts:
             src = alert.get('Feed_Source', alert.get('source', 'UNKNOWN')).upper()
             if src not in seen_sources:
                 display_alerts.append(alert)
                 seen_sources.add(src)
-            if len(display_alerts) == 3:
-                break
+            if len(display_alerts) == 3: break
 
-    # Build the HTML for the final filtered list
     for alert in display_alerts:
-        # FIX: Ensure the UI displays the Feed_Source name, not the URL
         source_val = alert.get('Feed_Source', alert.get('Publisher', alert.get('source', 'UNKNOWN SOURCE')))
         source = str(source_val).upper() if source_val else 'UNKNOWN SOURCE'
-        
         title_val = alert.get('title', alert.get('Title', alert.get('Headline', alert.get('Action', alert.get('summary', 'Intelligence Update Available')))))
         title = str(title_val) if title_val else 'Intelligence Update Available'
-        
         url_val = alert.get('url', alert.get('Url', alert.get('Source', alert.get('link', '#'))))
         url = str(url_val) if url_val else '#'
         if not url.startswith('http'): url = '#'
-        
         threat_val = alert.get('threat_level', alert.get('Threat_Level', alert.get('Risk', alert.get('risk', 'CRITICAL'))))
         threat = str(threat_val).upper() if threat_val else 'CRITICAL'
 
-        html_code += f"""
-        <a href="{url}" target="_blank" class="flash-bar">
-            <div>
-                <div class="flash-source">[{source}] // THREAT: {threat}</div>
-                <div class="flash-title">{title}</div>
-            </div>
-            <div class="flash-arrow">➡️</div>
-        </a>
-        """
+        html_code += f'<a href="{url}" target="_blank" class="flash-bar"><div><div class="flash-source">[{source}] // THREAT: {threat}</div><div class="flash-title">{title}</div></div><div class="flash-arrow">➡️</div></a>'
         
     html_code += "</div>"
-    
     components.html(html_code, height=300)
 
-# ==========================================
-# 3. DYNAMIC GEOCODING ENGINE
-# ==========================================
 @st.cache_data(show_spinner=False, ttl=86400) 
 def resolve_location(query):
-    if not query or not isinstance(query, str):
-        return None, None, "Unknown"
+    if not query or not isinstance(query, str): return None, None, "Unknown"
 
     if INFRASTRUCTURE_DATA:
         for category, sites in INFRASTRUCTURE_DATA.items():
@@ -294,8 +133,7 @@ def resolve_location(query):
     }
     
     for key, data in baseline.items():
-        if key.lower() in query.lower():
-            return data[0], data[1], data[2]
+        if key.lower() in query.lower(): return data[0], data[1], data[2]
 
     try:
         geolocator = Nominatim(user_agent="semicon_tactical_osint_local")
@@ -304,28 +142,18 @@ def resolve_location(query):
         if loc:
             clean_name = loc.address.split(',')[0]
             return loc.latitude, loc.longitude, clean_name
-    except Exception:
-        pass 
+    except Exception: pass 
     
     return None, None, query
 
-
-# ==========================================
-# 4. EXACT DEFCON LOGIC FROM APP.PY
-# ==========================================
 def get_active_live_alert():
-    if not os.path.exists('data/live_alert.json'): 
-        return None
+    if not os.path.exists('data/live_alert.json'): return None
     try:
-        with open('data/live_alert.json', 'r') as f:
-            alert = json.load(f)
+        with open('data/live_alert.json', 'r') as f: alert = json.load(f)
         alert_time = datetime.fromisoformat(alert['timestamp'].replace("Z", "+00:00"))
         time_diff = datetime.now(timezone.utc) - alert_time
-        
-        if time_diff.total_seconds() < 7200: 
-            return alert
-    except Exception:
-        pass 
+        if time_diff.total_seconds() < 7200: return alert
+    except Exception: pass 
     return None
 
 def get_deployment_timestamp():
@@ -333,17 +161,13 @@ def get_deployment_timestamp():
     file_path = 'data/nominal_timer.txt'
     if os.path.exists(file_path):
         try:
-            with open(file_path, 'r') as f:
-                return int(f.read().strip())
-        except Exception:
-            pass
+            with open(file_path, 'r') as f: return int(f.read().strip())
+        except Exception: pass
             
     now_ms = int(time.time() * 1000)
     try:
-        with open(file_path, 'w') as f:
-            f.write(str(now_ms))
-    except Exception:
-        pass
+        with open(file_path, 'w') as f: f.write(str(now_ms))
+    except Exception: pass
         
     return now_ms
 
@@ -356,8 +180,7 @@ def check_early_warnings():
                     st.success("Alert cleared! Refreshing...")
                     time.sleep(1)
                     st.rerun()
-                except Exception as e:
-                    st.error(f"Failed to clear: {e}")
+                except Exception as e: st.error(f"Failed to clear: {e}")
 
         alert = get_active_live_alert()
         box_bg_color = "#000000"
@@ -369,10 +192,8 @@ def check_early_warnings():
                 if 'timestamp' in alert:
                     dt = datetime.fromisoformat(alert['timestamp'].replace("Z", "+00:00"))
                     start_timestamp_ms = int(dt.timestamp() * 1000)
-                else:
-                    start_timestamp_ms = fallback_time_ms
-            except:
-                start_timestamp_ms = fallback_time_ms
+                else: start_timestamp_ms = fallback_time_ms
+            except: start_timestamp_ms = fallback_time_ms
             
             elapsed_ms = max(0, int(time.time() * 1000) - start_timestamp_ms)
             h, m, s = elapsed_ms // 3600000, (elapsed_ms % 3600000) // 60000, (elapsed_ms % 60000) // 1000
@@ -382,50 +203,22 @@ def check_early_warnings():
             html_code = f"""
             <style>
                 body {{ font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: {box_bg_color}; overflow: hidden; }}
-                .defcon-box {{
-                    background: linear-gradient(90deg, #8b0000 0%, #ff0000 50%, #8b0000 100%); 
-                    background-size: 200% 200%; 
-                    animation: pulseBackground 2s infinite; 
-                    border: 2px solid #ff4b4b; 
-                    padding: 15px; 
-                    border-radius: 8px; 
-                    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-                    color: #ffffff;
-                    min-height: 185px;
-                    max-height: 240px; 
-                    height: auto;
-                    box-sizing: border-box;
-                    overflow-y: auto; 
-                    -webkit-overflow-scrolling: touch; 
-                }}
-                :fullscreen {{
-                    background-color: rgba(20, 20, 20, 0.95);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }}
+                .defcon-box {{ background: linear-gradient(90deg, #8b0000 0%, #ff0000 50%, #8b0000 100%); background-size: 200% 200%; animation: pulseBackground 2s infinite; border: 2px solid #ff4b4b; padding: 15px; border-radius: 8px; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); color: #ffffff; min-height: 185px; max-height: 240px; height: auto; box-sizing: border-box; overflow-y: auto; -webkit-overflow-scrolling: touch; }}
+                :fullscreen {{ background-color: rgba(20, 20, 20, 0.95); display: flex; align-items: center; justify-content: center; }}
                 :fullscreen .defcon-box {{ width: 90vw; max-height: 90vh; height: auto; padding: 40px; border-width: 4px; }}
                 :fullscreen .title {{ font-size: 2.5em; }}
                 :fullscreen .timer {{ font-size: 1.5em; }}
                 :fullscreen .headline {{ font-size: 2em; line-height: 1.2; margin-top: 20px; }}
                 :fullscreen .summary {{ font-size: 1.5em; line-height: 1.4; margin-top: 20px; }}
-                
                 @keyframes pulseBackground {{ 0% {{ background-position: 0% 50%; }} 50% {{ background-position: 100% 50%; }} 100% {{ background-position: 0% 50%; }} }}
                 @keyframes blinkText {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
-                
                 .header-flex {{ display: flex; justify-content: space-between; align-items: center; margin-top: 0px; margin-bottom: 8px; flex-wrap: wrap; gap: 10px; }}
                 .title {{ font-size: 1.17em; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin:0; display:flex; align-items:center; flex: 1 1 100%; }}
                 .timer-container {{ display: flex; align-items: center; flex: 1 1 100%; justify-content: flex-start; margin-bottom: 5px; }}
-                
-                @media (min-width: 600px) {{
-                    .title {{ flex: 1; }}
-                    .timer-container {{ flex: 1; justify-content: flex-end; margin-bottom: 0px; }}
-                }}
-                
+                @media (min-width: 600px) {{ .title {{ flex: 1; }} .timer-container {{ flex: 1; justify-content: flex-end; margin-bottom: 0px; }} }}
                 .timer {{ font-size: 15px; font-weight: bold; background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; border: 1px solid rgba(255,255,255,0.4); }}
                 .headline {{ font-weight: 800; font-size: 16px; margin-bottom: 8px; margin-top:0; }}
                 .summary {{ font-size: 14px; color: #f8f8f8; margin-bottom: 0px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 10px; }}
-                
                 .magnify-btn {{ background: rgba(0,0,0,0.6); color: white; border: 1px solid white; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; margin-left: 10px; }}
                 .magnify-btn:hover {{ background: rgba(255,255,255,0.2); }}
                 :fullscreen .magnify-btn {{ display: none; }} 
@@ -504,12 +297,8 @@ def check_early_warnings():
             """
             components.html(html_code, height=95)
 
-    except Exception as e:
-        pass 
+    except Exception as e: pass 
 
-# ==========================================
-# NEW DYNAMIC ANALYTICS HELPER ENGINES
-# ==========================================
 def calculate_dynamic_posture(df_actions):
     active_escalations = 0
     chokepoints = 0
@@ -521,10 +310,8 @@ def calculate_dynamic_posture(df_actions):
             text_parts = [str(row.get(col, '')) for col in ['Action', 'Headline', 'Location', 'Event'] if col in row]
             text = " ".join(text_parts).lower()
             
-            if risk == 'CRITICAL':
-                active_escalations += 1
-            elif risk == 'HIGH':
-                geo_shifts += 1
+            if risk == 'CRITICAL': active_escalations += 1
+            elif risk == 'HIGH': geo_shifts += 1
                 
             if any(kw in text for kw in ['supply', 'semiconductor', 'chip', 'export', 'tsmc', 'asml', 'mineral', 'material', 'foundry', 'node', 'logistics', 'transit', 'strait']):
                 chokepoints += 1
@@ -564,9 +351,6 @@ def calculate_dynamic_risk(df_actions, keywords, base_val):
     else: level = "Low"
     return val, f"{level} ({int(val*100)}%)"
 
-# ==========================================
-# NEW AUTONOMOUS MARITIME SCRAPER ENGINE
-# ==========================================
 @st.cache_data(show_spinner=False, ttl=600) 
 def fetch_live_maritime_intel():
     import feedparser
@@ -603,21 +387,15 @@ def fetch_live_maritime_intel():
                     type_val = "⚠️ Incident Report"
                     
                 pub_date = entry.get('published', 'Recent')
-                if pub_date.endswith(" GMT"):
-                    pub_date = pub_date[:-4] 
+                if pub_date.endswith(" GMT"): pub_date = pub_date[:-4] 
                     
                 feed_data.append({
-                    "source": source,
-                    "type": type_val,
-                    "time": pub_date,
-                    "details": clean_title, 
-                    "url": entry.link
+                    "source": source, "type": type_val, "time": pub_date,
+                    "details": clean_title, "url": entry.link
                 })
-    except Exception as e:
-        pass
+    except Exception as e: pass
 
-    if feed_data:
-        return feed_data
+    if feed_data: return feed_data
         
     try:
         res = requests.get("https://gcaptain.com/feed/", headers=headers, timeout=10)
@@ -625,63 +403,41 @@ def fetch_live_maritime_intel():
             feed = feedparser.parse(res.text)
             for entry in feed.entries[:5]:
                 feed_data.append({
-                    "source": "⚓ gCaptain Network",
-                    "type": "Maritime Dispatch",
-                    "time": entry.get('published', 'Recent')[:22],
-                    "details": entry.title,
-                    "url": entry.link
+                    "source": "⚓ gCaptain Network", "type": "Maritime Dispatch",
+                    "time": entry.get('published', 'Recent')[:22], "details": entry.title, "url": entry.link
                 })
-    except:
-        pass
+    except: pass
         
-    if feed_data:
-        return feed_data
+    if feed_data: return feed_data
 
     return [{
-        "source": "System",
-        "type": "Monitoring Active",
-        "time": "Live",
+        "source": "System", "type": "Monitoring Active", "time": "Live",
         "details": "Scanning global maritime frequencies. No major kinetic incidents reported in the last cycle.",
         "url": "#"
     }]
 
-# ==========================================
-# 🌍 AUTONOMOUS GEOCODER FOR FOLIUM
-# ==========================================
 folium_geolocator = Nominatim(user_agent="semicon_intel_dashboard")
 
 GEOCODER_MAP = {
-    "Strait of Hormuz": [26.56, 56.25],
-    "China": [35.86, 104.19],
-    "Vietnam": [14.05, 108.27],
-    "Africa": [-8.78, 34.50],
-    "Global (referencing China)": [35.86, 104.19],
-    "Taiwan": [23.69, 120.96],
-    "United States": [37.09, -95.71],
-    "India": [20.59, 78.96]
+    "Strait of Hormuz": [26.56, 56.25], "China": [35.86, 104.19],
+    "Vietnam": [14.05, 108.27], "Africa": [-8.78, 34.50],
+    "Global (referencing China)": [35.86, 104.19], "Taiwan": [23.69, 120.96],
+    "United States": [37.09, -95.71], "India": [20.59, 78.96]
 }
 
 @st.cache_data(ttl=86400, show_spinner=False)
 def intelligent_geocode(location_name):
-    if not location_name or pd.isna(location_name):
-        return None
-
-    if location_name in GEOCODER_MAP:
-        return GEOCODER_MAP[location_name]
-
+    if not location_name or pd.isna(location_name): return None
+    if location_name in GEOCODER_MAP: return GEOCODER_MAP[location_name]
     try:
         time.sleep(0.5)
         location = folium_geolocator.geocode(location_name)
-        if location:
-            return [location.latitude, location.longitude]
-    except Exception:
-        return None
-
+        if location: return [location.latitude, location.longitude]
+    except Exception: return None
     return None
 
 def get_strategic_asset_match(row):
-    if not INFRASTRUCTURE_DATA:
-        return None, None
+    if not INFRASTRUCTURE_DATA: return None, None
         
     headline = str(row.get('Headline', '')).lower()
     action = str(row.get('Action', '')).lower()
@@ -697,124 +453,61 @@ def get_strategic_asset_match(row):
     for category, sites in INFRASTRUCTURE_DATA.items():
         for site in sites:
             site_name_lower = site['name'].lower()
-            
-            if len(loc) > 3 and loc in site_name_lower:
-                return site, category
-            if len(actor) > 2 and actor in site_name_lower:
-                return site, category
-                
+            if len(loc) > 3 and loc in site_name_lower: return site, category
+            if len(actor) > 2 and actor in site_name_lower: return site, category
             for identifier in key_identifiers:
                 if identifier in combined_text and identifier in site_name_lower:
                     return site, category
-
     return None, None
 
-
 def render_tactical_conflict_overlay(df_actions):
-    st.markdown("""
-    ### 🗺️ Multi-Domain Conflict & Thermal Radar Overlay
-    """)
-    
-    st.caption(
-        "Live geopolitical telemetry mapping with maritime disruption zones, semiconductor chokepoints, and strategic conflict overlays."
-    )
+    st.markdown("""### 🗺️ Multi-Domain Conflict & Thermal Radar Overlay""")
+    st.caption("Live geopolitical telemetry mapping with maritime disruption zones, semiconductor chokepoints, and strategic conflict overlays.")
 
-    m = folium.Map(
-        location=[25.0, 60.0],
-        zoom_start=3,
-        tiles="CartoDB dark_matter"
-    )
+    m = folium.Map(location=[25.0, 60.0], zoom_start=3, tiles="CartoDB dark_matter")
 
     folium.raster_layers.WmsTileLayer(
         url="https://firms.modaps.eosdis.nasa.gov/mapserver/wms/fires",
-        layers="fires_viirs_24",
-        name="NASA Active Thermal Signatures",
-        fmt="image/png",
-        transparent=True,
-        overlay=True,
-        control=True
+        layers="fires_viirs_24", name="NASA Active Thermal Signatures", fmt="image/png",
+        transparent=True, overlay=True, control=True
     ).add_to(m)
 
     folium.TileLayer(
         tiles="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-        attr="Carto",
-        name="Maritime Shipping Density",
-        overlay=True,
-        control=True
+        attr="Carto", name="Maritime Shipping Density", overlay=True, control=True
     ).add_to(m)
 
     conflict_zones = [
-        {
-            "name": "Red Sea Disruption Zone",
-            "coords": [[12.0, 42.0], [16.0, 42.0], [16.0, 46.0], [12.0, 46.0]],
-            "color": "red"
-        },
-        {
-            "name": "South China Sea Strategic Friction Zone",
-            "coords": [[8.0, 109.0], [20.0, 109.0], [20.0, 121.0], [8.0, 121.0]],
-            "color": "orange"
-        },
-        {
-            "name": "Black Sea / Ukraine Theater",
-            "coords": [[42.0, 27.0], [47.0, 27.0], [47.0, 40.0], [42.0, 40.0]],
-            "color": "darkred"
-        },
-        {
-            "name": "Persian Gulf / Iran Tension Zone",
-            "coords": [[24.0, 48.0], [30.0, 48.0], [30.0, 57.0], [24.0, 57.0]],
-            "color": "crimson"
-        }
+        {"name": "Red Sea Disruption Zone", "coords": [[12.0, 42.0], [16.0, 42.0], [16.0, 46.0], [12.0, 46.0]], "color": "red"},
+        {"name": "South China Sea Strategic Friction Zone", "coords": [[8.0, 109.0], [20.0, 109.0], [20.0, 121.0], [8.0, 121.0]], "color": "orange"},
+        {"name": "Black Sea / Ukraine Theater", "coords": [[42.0, 27.0], [47.0, 27.0], [47.0, 40.0], [42.0, 40.0]], "color": "darkred"},
+        {"name": "Persian Gulf / Iran Tension Zone", "coords": [[24.0, 48.0], [30.0, 48.0], [30.0, 57.0], [24.0, 57.0]], "color": "crimson"}
     ]
 
     for zone in conflict_zones:
-        folium.Polygon(
-            locations=zone["coords"],
-            color=zone["color"],
-            fill=True,
-            fill_opacity=0.15,
-            popup=zone["name"]
-        ).add_to(m)
+        folium.Polygon(locations=zone["coords"], color=zone["color"], fill=True, fill_opacity=0.15, popup=zone["name"]).add_to(m)
 
     if INFRASTRUCTURE_DATA:
         asset_colors = {
-            "Semiconductor Fabs": "#00bfff",
-            "Critical Mineral Sites": "#10b981",
-            "Maritime Chokepoints": "#3b82f6",
-            "Gulf FDI & Capital Diplomacy": "#f59e0b",
-            "Naval Order of Battle & Strategic Bases": "#8b5cf6",
+            "Semiconductor Fabs": "#00bfff", "Critical Mineral Sites": "#10b981", "Maritime Chokepoints": "#3b82f6",
+            "Gulf FDI & Capital Diplomacy": "#f59e0b", "Naval Order of Battle & Strategic Bases": "#8b5cf6",
             "Aerospace & Space Force Installations": "#f43f5e"
         }
-
         for category, sites in INFRASTRUCTURE_DATA.items():
             fg = folium.FeatureGroup(name=f"📍 {category}", show=False)
             color = asset_colors.get(category, "#ffffff")
-            
             for site in sites:
                 folium.CircleMarker(
-                    location=[site["lat"], site["lon"]],
-                    radius=5,
-                    popup=f"<b>{category}</b><br>{site['name']}",
-                    tooltip=f"{category}: {site['name']}",
-                    color=color,
-                    fill=True,
-                    fill_opacity=0.7,
-                    weight=1
+                    location=[site["lat"], site["lon"]], radius=5, popup=f"<b>{category}</b><br>{site['name']}",
+                    tooltip=f"{category}: {site['name']}", color=color, fill=True, fill_opacity=0.7, weight=1
                 ).add_to(fg)
-            
             fg.add_to(m)
 
-    marker_cluster = MarkerCluster(
-        name="🚨 Verified Strategic Events (Live)"
-    ).add_to(m)
-
+    marker_cluster = MarkerCluster(name="🚨 Verified Strategic Events (Live)").add_to(m)
     event_points = []
     heat_data = []
 
-    if (
-        df_actions is not None
-        and not df_actions.empty
-        and 'Location' in df_actions.columns
-    ):
+    if df_actions is not None and not df_actions.empty and 'Location' in df_actions.columns:
         for _, row in df_actions.iterrows():
             location_str = str(row.get('Location', '')).strip()
             actor = str(row.get('Actor', 'Unknown Actor'))
@@ -826,41 +519,15 @@ def render_tactical_conflict_overlay(df_actions):
             if matched_site:
                 lat, lon = matched_site['lat'], matched_site['lon']
                 site_name = matched_site['name']
-                
-                popup_html = f"""
-                <div style='min-width: 250px; font-family: sans-serif;'>
-                    <h4 style='color: #ef4444; margin-top: 0px; margin-bottom: 8px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>🎯 STRATEGIC ASSET ALERT</h4>
-                    <b style='color: #000;'>📍 The Spot:</b> <span style='color: #333;'>{site_name}</span><br><br>
-                    <b style='color: #000;'>⚡ What is happening:</b> <span style='color: #333;'>{headline}</span><br><br>
-                    <b style='color: #000;'>🛡️ Why it's important:</b> <span style='color: #333;'>This location is tracked as a critical node in <b>{matched_category}</b>. Disruption here has immediate macro-strategic ripple effects.</span>
-                </div>
-                """
-                
-                event_points.append({
-                    "name": site_name,
-                    "lat": lat,
-                    "lon": lon,
-                    "risk": risk_val,
-                    "is_asset_match": True,
-                    "popup_html": popup_html
-                })
+                popup_html = f"<div style='min-width: 250px; font-family: sans-serif;'><h4 style='color: #ef4444; margin-top: 0px; margin-bottom: 8px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>🎯 STRATEGIC ASSET ALERT</h4><b style='color: #000;'>📍 The Spot:</b> <span style='color: #333;'>{site_name}</span><br><br><b style='color: #000;'>⚡ What is happening:</b> <span style='color: #333;'>{headline}</span><br><br><b style='color: #000;'>🛡️ Why it's important:</b> <span style='color: #333;'>This location is tracked as a critical node in <b>{matched_category}</b>. Disruption here has immediate macro-strategic ripple effects.</span></div>"
+                event_points.append({"name": site_name, "lat": lat, "lon": lon, "risk": risk_val, "is_asset_match": True, "popup_html": popup_html})
                 heat_data.append([lat, lon, 1.0])
-
             else:
                 coords = intelligent_geocode(location_str)
-
                 if coords:
                     lat, lon = coords
                     popup_html = f"<b>{actor}:</b> {headline} <br><i>(General Vicinity: {location_str})</i>"
-
-                    event_points.append({
-                        "name": f"{actor}: {headline}",
-                        "lat": lat,
-                        "lon": lon,
-                        "risk": risk_val,
-                        "is_asset_match": False,
-                        "popup_html": popup_html
-                    })
+                    event_points.append({"name": f"{actor}: {headline}", "lat": lat, "lon": lon, "risk": risk_val, "is_asset_match": False, "popup_html": popup_html})
                     heat_data.append([lat, lon, 0.8])
 
     if len(event_points) == 0:
@@ -872,50 +539,16 @@ def render_tactical_conflict_overlay(df_actions):
 
     for event in event_points:
         color = "red" if event["risk"] == "CRITICAL" else "orange" if event["risk"] == "HIGH" else "yellow"
-
         if event.get("is_asset_match", False):
-            folium.Marker(
-                location=[event["lat"], event["lon"]],
-                popup=folium.Popup(event["popup_html"], max_width=350),
-                icon=folium.Icon(color='red', icon='crosshairs', prefix='fa')
-            ).add_to(marker_cluster)
-            
-            folium.CircleMarker(
-                location=[event["lat"], event["lon"]],
-                radius=18,
-                color="red",
-                fill=True,
-                fill_opacity=0.3,
-                weight=3
-            ).add_to(marker_cluster)
+            folium.Marker(location=[event["lat"], event["lon"]], popup=folium.Popup(event["popup_html"], max_width=350), icon=folium.Icon(color='red', icon='crosshairs', prefix='fa')).add_to(marker_cluster)
+            folium.CircleMarker(location=[event["lat"], event["lon"]], radius=18, color="red", fill=True, fill_opacity=0.3, weight=3).add_to(marker_cluster)
         else:
-            folium.CircleMarker(
-                location=[event["lat"], event["lon"]],
-                radius=9,
-                popup=folium.Popup(event["popup_html"], max_width=300),
-                color=color,
-                fill=True,
-                fill_opacity=0.8,
-                weight=2
-            ).add_to(marker_cluster)
+            folium.CircleMarker(location=[event["lat"], event["lon"]], radius=9, popup=folium.Popup(event["popup_html"], max_width=300), color=color, fill=True, fill_opacity=0.8, weight=2).add_to(marker_cluster)
 
-    if heat_data:
-        HeatMap(
-            heat_data,
-            name="Geopolitical Tension Heatmap",
-            radius=35,
-            blur=20,
-            max_zoom=5
-        ).add_to(m)
+    if heat_data: HeatMap(heat_data, name="Geopolitical Tension Heatmap", radius=35, blur=20, max_zoom=5).add_to(m)
 
     folium.LayerControl().add_to(m)
-
-    st_folium(
-        m,
-        width="100%",
-        height=650,
-        returned_objects=[]
-    )
+    st_folium(m, width="100%", height=650, returned_objects=[])
 
     active_locations = []
     for e in event_points:
@@ -927,60 +560,29 @@ def render_tactical_conflict_overlay(df_actions):
 
     if len(active_locations) > 0:
         top_locs = ", ".join(active_locations[:3])
-        if len(active_locations) > 3:
-            top_locs += " and other emerging theaters"
-    else:
-        top_locs = "Global Baseline Supply Routes"
+        if len(active_locations) > 3: top_locs += " and other emerging theaters"
+    else: top_locs = "Global Baseline Supply Routes"
 
     event_count = len(event_points)
 
     st.markdown(f"""
-    <div style="
-        background: rgba(17,17,17,0.85);
-        padding:18px;
-        border-radius:10px;
-        border-left:4px solid #00bfff;
-        margin-top:15px;
-        box-shadow:0 4px 15px rgba(0,191,255,0.15);
-    ">
-    <b style="
-        color:#00bfff;
-        letter-spacing:1px;
-    ">
-    INTELLIGENCE NOTE:
-    </b>
-    <br><br>
+    <div style="background: rgba(17,17,17,0.85); padding:18px; border-radius:10px; border-left:4px solid #00bfff; margin-top:15px; box-shadow:0 4px 15px rgba(0,191,255,0.15);">
+    <b style="color:#00bfff; letter-spacing:1px;">INTELLIGENCE NOTE:</b><br><br>
     The Geospatial Intelligence Layer correlates:
-    <ul style="
-        color:#d1d5db;
-        margin-top:8px;
-    ">
+    <ul style="color:#d1d5db; margin-top:8px;">
         <li>Semiconductor manufacturing chokepoints</li>
-        <li>
-        Maritime disruption zones, shipping telemetry,
-        and strategic conflict polygons
-        </li>
+        <li>Maritime disruption zones, shipping telemetry, and strategic conflict polygons</li>
         <li>Rare earth concentration regions</li>
     </ul>
-    
-    <div style="
-        background: rgba(0, 0, 0, 0.4);
-        padding: 12px;
-        border-radius: 6px;
-        border-left: 3px solid #ef4444;
-        margin-top: 15px;
-    ">
+    <div style="background: rgba(0, 0, 0, 0.4); padding: 12px; border-radius: 6px; border-left: 3px solid #ef4444; margin-top: 15px;">
         <span style="color: #ef4444; font-weight: bold; font-size: 13px; letter-spacing: 0.5px;">LIVE CYCLE ASSESSMENT:</span><br>
         <span style="color: #e2e8f0; font-size: 14px; line-height: 1.5; display: inline-block; margin-top: 5px;">
             The autonomous geocoder has successfully verified and plotted <b>{event_count}</b> critical strategic events originating from the most recent Geopolitics-OSINT data feed. Current kinetic and regulatory anomalies are predominantly clustered near <b>{top_locs}</b>. 
             <br><br>
             <i>What this conveys:</i> The Multi-Domain Radar is designed to cross-reference physical ground-truth anomalies (via NASA FIRMS thermal imaging) directly against these fresh textual intelligence drops, verifying if digital reports of infrastructural damage or maritime friction correlate with actual thermal spikes in those specific zones.
         </span>
-    </div>
-    
-    </div>
+    </div></div>
     """, unsafe_allow_html=True)
-
 
 # ==========================================
 # 5. MAIN EXECUTIVE HOME RENDER
@@ -1006,13 +608,9 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                     elif 'Headline' in df_exec.columns and 'Action' not in df_exec.columns:
                         df_exec['Action'] = df_exec['Headline']
                         
-                    if df_actions.empty:
-                        df_actions = df_exec
-                    else:
-                        df_actions = pd.concat([df_exec, df_actions], ignore_index=True)
-                        
-        except Exception as e:
-            pass
+                    if df_actions.empty: df_actions = df_exec
+                    else: df_actions = pd.concat([df_exec, df_actions], ignore_index=True)
+        except Exception as e: pass
 
     inject_executive_home_css()
 
@@ -1032,9 +630,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     st.markdown("### 📝 Strategic Command Analysis")
     st.caption("Autonomous geopolitical synthesis aggregating threat velocity, maritime telemetry, and multi-domain actor posturing.")
     
-    # ==========================================
-    # 🎯 THE FIX: BULLETPROOF FLASH TO BRIEF UI
-    # ==========================================
     flush_path = 'data/executive_home/flush_brief_24h.json'
     flush_data = {}
     
@@ -1044,26 +639,19 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 raw_content = f.read().strip()
                 
             match = re.search(r'\{.*\}', raw_content, re.DOTALL)
-            if match:
-                flush_data = json.loads(match.group(0))
-            else:
-                flush_data = json.loads(raw_content)
+            if match: flush_data = json.loads(match.group(0))
+            else: flush_data = json.loads(raw_content)
                 
             if isinstance(flush_data, list) and len(flush_data) > 0:
                 flush_data = flush_data[0]
-                
-        except Exception:
-            flush_data = {}
+        except Exception: flush_data = {}
 
-    # HTML Sanitizer: Prevents rogue LLM formatting from crashing Streamlit <div> tags
     def sanitize_html(text):
         if text is None: return ""
         return str(text).replace("<", "&lt;").replace(">", "&gt;")
 
-    # Fully robust dictionary extraction to handle nested LLM drifting
     def robust_get(data_dict, potential_keys, default):
         if not isinstance(data_dict, dict): return default
-        
         def extract_string(val):
             if isinstance(val, dict):
                 for v in val.values():
@@ -1071,20 +659,17 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 return str(val)
             return val
 
-        # 1. Top-Level Hit
         for k in data_dict.keys():
             if str(k).lower() in [str(pk).lower() for pk in potential_keys]:
                 v = data_dict[k]
                 return extract_string(v) if potential_keys[0] != 'tactical_indicators' else v
                 
-        # 2. Nested Dict Search
         for k, v in data_dict.items():
             if isinstance(v, dict):
                 for sub_k in v.keys():
                     if str(sub_k).lower() in [str(pk).lower() for pk in potential_keys]:
                         sub_v = v[sub_k]
                         return extract_string(sub_v) if potential_keys[0] != 'tactical_indicators' else sub_v
-                        
         return default
 
     bluf_raw = robust_get(flush_data, ['bluf', 'bottom_line_up_front'], "Scanning macro-strategic feeds. Awaiting telemetry generation cycle...")
@@ -1103,28 +688,17 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     if isinstance(tactical_list, str):
         try:
             parsed_list = ast.literal_eval(tactical_list)
-            if isinstance(parsed_list, list):
-                tactical_list = parsed_list
-            else:
-                raise ValueError()
+            if isinstance(parsed_list, list): tactical_list = parsed_list
+            else: raise ValueError()
         except Exception:
-            # Handle LLMs that return bulleted strings instead of arrays
-            if "\n" in tactical_list:
-                tactical_list = [item.strip() for item in tactical_list.split("\n") if item.strip()]
-            else:
-                tactical_list = [tactical_list]
+            if "\n" in tactical_list: tactical_list = [item.strip() for item in tactical_list.split("\n") if item.strip()]
+            else: tactical_list = [tactical_list]
                 
-    if isinstance(tactical_list, list):
-        tactical_html = "<br>".join([f"<span style='color:#00bfff;'>•</span> {sanitize_html(item).strip()}" for item in tactical_list])
-    else:
-        tactical_html = sanitize_html(tactical_list)
+    if isinstance(tactical_list, list): tactical_html = "<br>".join([f"<span style='color:#00bfff;'>•</span> {sanitize_html(item).strip()}" for item in tactical_list])
+    else: tactical_html = sanitize_html(tactical_list)
 
-    # Title
-    st.markdown("""
-    <h2 style='color: #a855f7; margin-bottom: 15px; margin-top: 10px; font-size: 2em; letter-spacing: 1.5px; border-bottom: 2px solid #a855f7; padding-bottom: 5px; display: inline-block;'>FLASH TO BRIEF</h2>
-    """, unsafe_allow_html=True)
+    st.markdown("""<h2 style='color: #a855f7; margin-bottom: 15px; margin-top: 10px; font-size: 2em; letter-spacing: 1.5px; border-bottom: 2px solid #a855f7; padding-bottom: 5px; display: inline-block;'>FLASH TO BRIEF</h2>""", unsafe_allow_html=True)
     
-    # 1. BLUF Box
     st.markdown(f"""
     <div style="background: linear-gradient(135deg, #141e30 0%, #243b55 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #00bfff; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
         <h3 style="margin-top: 0; color: #ffffff;">🎯 BLUF (Bottom Line Up Front)</h3>
@@ -1132,7 +706,6 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     </div>
     """, unsafe_allow_html=True)
 
-    # 2. Side-By-Side Triple Columns
     col1, col2, col3 = st.columns(3)
     
     with col1:
@@ -1161,13 +734,80 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # 3. Forecast Box
     st.markdown(f"""
     <div style="background: linear-gradient(135deg, #093028 0%, #1b4b36 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #10b981; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
         <h3 style="margin-top: 0; color: #ffffff;">🔭 Strategic Recommendations/Strategic Forecast (Within 24 Hours)</h3>
         <p style="color: #e2e8f0; font-size: 1.05em; margin-bottom: 0; line-height: 1.5;">{forecast_text}</p>
     </div>
     """, unsafe_allow_html=True)
+
+    # 🚨 FIX: ADDING MANUAL ARCHIVE AND DOWNLOAD BUTTONS TO FLASH TO BRIEF
+    st.markdown("<hr style='border: 1px solid #333; margin-top: 20px; margin-bottom: 25px;'>", unsafe_allow_html=True)
+    
+    if st.session_state.get('role') == 'admin':
+        colA, colB, colC = st.columns([1.5, 1, 1])
+        
+        with colB:
+            if st.button("💾 Archive Brief (RAG Sync)", key="flash_archive_btn", type="secondary", use_container_width=True):
+                try:
+                    import datetime
+                    date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                    
+                    compiled_raw = f"**🎯 BLUF:**\n{bluf_text}\n\n---\n\n**📋 EXECUTIVE SUMMARY:**\n[Not Extracted]\n\n---\n\n**🕸️ THREAT NARRATIVE:**\n{threat_text}\n\n---\n\n**⚖️ RISK ASSESSMENT:**\n{risk_text}\n\n---\n\n**🔭 STRATEGIC FORECAST:**\n{forecast_text}"
+                    
+                    archive_payload = {
+                        "date": date_str,
+                        "title": f"Flash to Brief - {date_str}",
+                        "brief_raw": compiled_raw,
+                        "recent_actions": df_actions.to_dict('records') if df_actions is not None else [],
+                        "sources": [{"title": a.get('Headline', a.get('Action', '')), "url": a.get('Source', '#')} for a in df_actions.to_dict('records')] if df_actions is not None else []
+                    }
+                    
+                    os.makedirs('data', exist_ok=True)
+                    archive_filename = f"data/brief_flash_{date_str}.json"
+                    
+                    with open(archive_filename, 'w', encoding='utf-8') as f:
+                        json.dump(archive_payload, f, indent=4)
+                        
+                    st.success("✅ Flash Brief synced to RAG Archives!")
+                except Exception as e:
+                    st.error(f"Archive failed: {e}")
+
+        with colC:
+            try:
+                import datetime
+                date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                
+                # 🛑 THE FIX: Map the UI variables precisely to the keys expected by the Docx Generator
+                doc_data = {
+                    "date": date_str,
+                    "classification": "CONFIDENTIAL // EXECUTIVE FLASH",
+                    "author": "SemicoN Strategic Command",
+                    "title": f"Flash to Brief - {date_str}",
+                    "bluf": bluf_text,
+                    "bottom_line_up_front": bluf_text,  # Fallback for DocGen
+                    "executive_summary": "Executive Summary omitted for Flash Brief format. Proceed to Threat Narrative.",
+                    "threat_narrative": threat_text,
+                    "risk_assessment": risk_text,
+                    "predictive_analysis": forecast_text, # 🚨 THE FIX: Map forecast_text to predictive_analysis
+                    "recommendations": forecast_text,
+                    "tactical_indicators": tactical_list if isinstance(tactical_list, list) else [tactical_list]
+                }
+                    
+                docx_buffer = generate_weekly_tactical_docx(doc_data)
+                
+                st.download_button(
+                    label="📥 Download (DOCX)", 
+                    data=docx_buffer, 
+                    file_name=f"Flash_To_Brief_{date_str}.docx", 
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+                    type="primary", 
+                    key="flash_download_btn",
+                    use_container_width=True
+                )
+            except Exception as e:
+                st.button("📥 Download Unavailable", key="flash_fail_btn", disabled=True, use_container_width=True)
+                st.error(f"DocGen Error: {e}")
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
     
@@ -1664,16 +1304,12 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
 
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # ==========================================
-    # 🌍 HEGEMON GLOBAL EMBED
-    # ==========================================
     st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
     
     st.markdown("### 🌐 Hegemon Global Monitor")
     st.caption("Live external intelligence platform. **Credit & Rights:** [Hegemon Global](https://hegemonglobal.com) and its original creators. All embedded interactivity is preserved below.")
 
     try:
-        # We set scrolling=True so you can navigate their site from within your dashboard
         components.iframe(
             "https://hegemonglobal.com",
             height=700, 

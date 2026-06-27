@@ -495,19 +495,39 @@ def render_verified_sources(sources_list):
         }
 
         for src in sources_list:
-            title_lower = src.get('title', '').lower()
+            # 🛑 THE FIX: Bulletproof parsing to handle Pandas NaNs and Legacy Strings
+            if isinstance(src, dict):
+                raw_title = src.get('title', 'Verified Source')
+                raw_url = src.get('url', '#')
+                
+                # If Pandas injected 'nan' because a headline was missing, fall back to URL
+                if pd.isna(raw_title) or str(raw_title).strip().lower() == 'nan':
+                    raw_title = raw_url if raw_url != '#' else 'Verified Source'
+                    
+                title_lower = str(raw_title).lower()
+                clean_title = str(raw_title).replace('"', '&quot;').replace("'", "&#39;")
+                src_url = str(raw_url)
+                
+            elif isinstance(src, str):
+                if pd.isna(src) or str(src).strip().lower() == 'nan':
+                    continue
+                title_lower = str(src).lower()
+                clean_title = (str(src)[:50] + "...") if len(str(src)) > 50 else str(src)
+                src_url = str(src)
+            else:
+                continue
+
             placed = False
-            
             for t_name, t_data in themes.items():
                 if t_name == "General Strategic Intelligence":
                     continue
                 if any(kw in title_lower for kw in t_data["keywords"]):
-                    t_data["sources"].append(src)
+                    t_data["sources"].append({"title": clean_title, "url": src_url})
                     placed = True
                     break
             
             if not placed:
-                themes["General Strategic Intelligence"]["sources"].append(src)
+                themes["General Strategic Intelligence"]["sources"].append({"title": clean_title, "url": src_url})
 
         src_cols = st.columns(2)
         col_idx = 0
@@ -521,9 +541,8 @@ def render_verified_sources(sources_list):
                         <h5 style="color: {t_data['color']}; margin-top: 0; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">{t_data['icon']} {t_name}</h5>
                         <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #d1d5db; line-height: 1.6;">
                     """
-                    for src in t_data["sources"]:
-                        clean_title = src['title'].replace('"', '&quot;').replace("'", "&#39;")
-                        theme_html += f"<li style='margin-bottom: 5px;'><a href='{src['url']}' target='_blank' style='color: #e0e0e0; text-decoration: none; transition: 0.3s;' onmouseover=\"this.style.color='{t_data['color']}'\" onmouseout=\"this.style.color='#e0e0e0'\">{clean_title}</a></li>"
+                    for formatted_src in t_data["sources"]:
+                        theme_html += f"<li style='margin-bottom: 5px;'><a href='{formatted_src['url']}' target='_blank' style='color: #e0e0e0; text-decoration: none; transition: 0.3s;' onmouseover=\"this.style.color='{t_data['color']}'\" onmouseout=\"this.style.color='#e0e0e0'\">{formatted_src['title']}</a></li>"
                     
                     theme_html += "</ul></div>"
                     st.markdown(theme_html, unsafe_allow_html=True)

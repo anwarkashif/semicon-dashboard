@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 from urllib.parse import urlparse
-from datetime import datetime
+from datetime import datetime, timezone
 from google import genai
 from huggingface_hub import HfApi
 import re
@@ -47,7 +47,6 @@ AVAILABLE_KEYS = [
 ]
 VALID_KEYS = [k for k in AVAILABLE_KEYS if k and k.strip()]
 
-# 🚨 THE ENGINE: Seamless Failover Generation
 def generate_with_rotation(prompt, temperature=0.1):
     if not VALID_KEYS:
         raise Exception("CRITICAL: No valid API keys found in environment.")
@@ -302,13 +301,54 @@ if __name__ == "__main__":
         
         print("⏳ Pooling data before FLASH TO BRIEF generation...")
         brief_input = unique_master[:10]
-        json.dump(generate_flush_to_brief(brief_input), open('data/executive_home/flush_brief_24h.json', 'w'), indent=4)
         
+        # 🚨 GEN & SAVE: The Live Transient File
+        flush_brief_data = generate_flush_to_brief(brief_input)
+        json.dump(flush_brief_data, open('data/executive_home/flush_brief_24h.json', 'w'), indent=4)
+        
+        # 🚨 DATA AGGREGATION: Stitching the Daily Flash Archive for RAG (Includes URLs)
+        date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        
+        bluf = flush_brief_data.get('bluf', '')
+        exec_sum = flush_brief_data.get('executive_summary', '')
+        narrative = flush_brief_data.get('threat_narrative', '')
+        risk = flush_brief_data.get('risk_assessment', '')
+        forecast = flush_brief_data.get('strategic_forecast', '')
+        
+        parts = []
+        if bluf: parts.append(f"**🎯 BLUF:**\n{bluf}")
+        if exec_sum: parts.append(f"**📋 EXECUTIVE SUMMARY:**\n{exec_sum}")
+        if narrative: parts.append(f"**🕸️ THREAT NARRATIVE:**\n{narrative}")
+        if risk: parts.append(f"**⚖️ RISK ASSESSMENT:**\n{risk}")
+        if forecast: parts.append(f"**🔭 STRATEGIC FORECAST:**\n{forecast}")
+        compiled_raw = "\n\n---\n\n".join(parts)
+        
+        # Extract direct verified sources from unique_master
+        daily_sources = []
+        for event in unique_master:
+            if "Source" in event and "Title" in event:
+                daily_sources.append({"title": event["Title"], "url": event["Source"]})
+        
+        archive_payload = {
+            "date": date_str,
+            "title": f"Flash to Brief - {date_str}",
+            "brief_raw": compiled_raw,
+            "recent_actions": unique_master,
+            "sources": daily_sources
+        }
+        
+        archive_filename = f"data/brief_flash_{date_str}.json"
+        with open(archive_filename, 'w', encoding='utf-8') as f:
+            json.dump(archive_payload, f, indent=4)
+        
+        # ☁️ HUGGING FACE PERMANENT RETENTION SYNC
         HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
         if HF_TOKEN and REPO_ID:
             api = HfApi()
-            api.upload_file(path_or_fileobj=output_file_tactical, path_in_repo=output_file_tactical, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Executive Home Tactical (100% Provenance)")
+            api.upload_file(path_or_fileobj=output_file_tactical, path_in_repo=output_file_tactical, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Executive Home Tactical")
             api.upload_file(path_or_fileobj='data/executive_home/flush_brief_24h.json', path_in_repo='data/executive_home/flush_brief_24h.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
+            api.upload_file(path_or_fileobj=archive_filename, path_in_repo=archive_filename, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
+            print("✅ Executive Flash Archive Synced securely with Source URLs!")
             
     except Exception as e: 
         print(f"❌ Pipeline Failed: {e}")
