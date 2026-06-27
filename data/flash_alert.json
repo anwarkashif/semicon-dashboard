@@ -1,12 +1,5 @@
 [
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Volgograd Missile Factory with Flamingo Cruise Missile",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://t.me/Middle_East_Spectator/33935",
         "Title": "Iran Strikes US Army Positions in Southern Iran",
         "Feed_Source": "WAR MONITOR",
@@ -42,10 +35,17 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Russian Forces Enter Kozacha Lopan in Kharkiv Oblast",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
         "threat_level": "HIGH"
     },
     {
