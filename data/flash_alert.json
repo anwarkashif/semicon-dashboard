@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Air Strike Hits Nabatieh al-Fawqa in Southern Lebanon",
+        "Title": "Russia and China Conduct Joint Patrol Around Japan",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.dw.com/en/ukraine-strikes-russian-weapons-plant-moscow-fuel-hub/a-77735059?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Ukraine strikes Russian weapons plant, Moscow fuel hub",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -11,25 +18,11 @@
         "Title": "Russia Bridge Collapses on R-280 Highway to Crimea",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61567",
-        "Title": "Iran Experiences Military Activity",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/rybar_in_english/32277",
         "Title": "Myanmar Armed Forces Shift Tactics in Rakhine State",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61566",
-        "Title": "Iraq Discovers Mysterious Interceptor Drone Near Baghdad",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
@@ -49,24 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jun/26/hunt-survivors-brutal-venezuela-earthquake",
-        "Title": "Survivors tell of \u2018brutal and fast\u2019 Venezuela quake as hunt for survivors goes on",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119487",
-        "Title": "Ukrainian Forces Encounter Occupiers",
+        "Source": "https://t.me/nexta_live/119491",
+        "Title": "Turkey Offers to Host Ukraine-Russia Peace Talks",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cbsnews.com/news/europe-heat-wave-switzerland-denmark-germany/",
-        "Title": "Germany, Denmark, Switzerland hit heat records as Europe sizzles",
+        "Source": "https://www.france24.com/en/venezuela-survivors-say-rescue-effort-too-slow",
+        "Title": "Venezuela: Survivors say rescue effort too slow",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/france-current-heatwave-recalls-2003-casualties",
+        "Title": "France: Current heatwave recalls 2003 casualties",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
