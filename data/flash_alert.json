@@ -1,21 +1,28 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Drones Strike Energy Infrastructure in Okhtyrka, Ukraine",
+        "Title": "Ukraine Strikes Volgograd with Flamingo Cruise Missile",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89409",
-        "Title": "Iran Expected to Launch Missile at Bahrain",
+        "Source": "https://www.cbsnews.com/news/venezuela-earthquakes-la-guaira-death-toll-race-to-find-missing-survivors/",
+        "Title": "Race to find survivors as Venezuela's earthquake death toll soars",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33935",
+        "Title": "Iran Strikes US Army Positions in Southern Iran",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89407",
-        "Title": "Iranian Forces Strike US Military Positions",
+        "Source": "https://t.me/intelslava/89409",
+        "Title": "Iran Expected to Launch Missile at Bahrain",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -28,13 +35,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33932",
-        "Title": "Hezbollah Supporters Rally in Beirut",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/26/4-9-earthquake-detected-in-venezuela-just-days-after-major-quakes?traffic_source=rss",
-        "Title": "Venezuela shaken by 4.9-magnitude tremor days after major earthquakes",
+        "Source": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOY2F3d094MUpXQUcxZUloQzFSYVNpRWRjUWhSSEtQZ2RMVDdGdU1hZnl4VnFGSjd4emtNYm5FTkFITFByZXpFX3BQNmstbDZDVDJITjgtYnBIN1NiQ3RfSG5CbEdaQnlqaXFva2RRcDZqUDdFTGlZck1rcmtadU96R0hETkk1bnlNNGgwTGs2N3JYQl9jMVJGWlo3OXlhTzBwa2UtOWhQUDJrdGExaTZnTGRRbEJXVF9o?oc=5",
+        "Title": "Samsung readies $648 billion bet, report says, as AI boom reshapes South Korea - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cbsnews.com/news/venezuela-earthquakes-la-guaira-death-toll-race-to-find-missing-survivors/",
-        "Title": "Race to find survivors as Venezuela's earthquake death toll soars",
+        "Source": "https://www.cbsnews.com/video/062626-cbs-evening-news/",
+        "Title": "6/26: CBS Evening News",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33935",
-        "Title": "Iran Strikes US Army Positions in Southern Iran",
+        "Source": "https://www.cbsnews.com/video/062626-the-takeout-with-major-garrett/",
+        "Title": "6/26: The Takeout with Major Garrett",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     }
 ]
