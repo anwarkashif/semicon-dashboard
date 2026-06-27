@@ -1,21 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Strike Collapses Road Bridge Near Rozdolne in Crimea",
+        "Title": "Russian Lawmaker Threatens Finland Over US Rocket Maintenance Center",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89425",
-        "Title": "Russia Captures Novoskelivate in Dnipropetrovsk Region",
+        "Source": "https://www.aljazeera.com/news/2026/6/27/pick-up-the-phone-irgc-appears-to-rebuff-us-strait-of-hormuz-hotline?traffic_source=rss",
+        "Title": "\u2018Pick up the phone\u2019: IRGC appears to rebuff US Strait of Hormuz \u2018hotline\u2019",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89418",
-        "Title": "Iranian Drones Target Bahrain",
+        "Source": "https://t.me/intelslava/89419",
+        "Title": "IRGC Plans Attack on Bahrain",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -35,11 +35,25 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/americas/20260627-nearly-6-8-mn-people-may-be-affected-by-venezuela-quakes-un-says",
+        "Title": "\ud83d\udd34Nearly 6.8 million people may be affected by Venezuela quakes, UN says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/nexta_live/119479",
@@ -53,20 +67,6 @@
         "Title": "Europe heatwave live: drought fears in Italy, records broken in Slovakia and Denmark, and 700 flights delayed in England",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/27/memory-crunch-shaking-apple-and-microsoft-existential-for-small-guys.html",
-        "Title": "The memory shortage shaking Apple and Microsoft is 'existential crisis' for smaller players",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/27/world/europe/heat-wave-central-eastern-europe.html",
-        "Title": "Central and Eastern Europe Are Feeling the Heat Now",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
