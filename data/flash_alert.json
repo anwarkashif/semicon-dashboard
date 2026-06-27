@@ -1,38 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Places Air Defense System on Moscow Residential Tower",
+        "Title": "Unconfirmed US Airstrikes Hit Qeshm Island, Iran",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61575",
-        "Title": "Ukraine Reports Ongoing Conflict Across Eastern Regions",
+        "Source": "https://t.me/intelslava/89439",
+        "Title": "US Airstrike Hits Iranian Naval Base",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33944",
+        "Title": "Iran Warns of Continued Attacks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVVkzd25wT0xoa2RFR04xcUxtaXpYOTN4OUNRNGEyQ3hzQ1lkeW5Pazk0WWNQOTJneVNVTHotTVViOG9rUE53b3BFMS0ya0NiNDFaTXMtMWt3OER5bjc3YjFPNXVnbVpaU19UdlFLckd6ay1DVlVDVGk2Ql9IZFVsSzNhYlF0OV85UVUzMThscnlLSENHbUJILVVlS0RmZGI1ellubjJFQkprQWdIUUhFT1BQeUg?oc=5",
+        "Title": "France considers measures after Burkina Faso breaks off relations - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/27/two-killed-dozens-injured-in-israeli-strike-on-displacement-tents-in-gaza?traffic_source=rss",
-        "Title": "Two killed, dozens injured in Israeli strike on displacement tents in Gaza",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.twz.com/air/its-official-f-35s-are-now-being-delivered-without-radars",
-        "Title": "It\u2019s Official: F-35s Are Now Being Delivered Without Radars",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/27/explosion-and-gunfire-reported-in-pakistans-karachi?traffic_source=rss",
-        "Title": "Explosion and gunfire reported in Pakistan\u2019s Karachi",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.npr.org/2026/06/26/nx-s1-5872204/u-s-pledges-generous-earthquake-relief-to-venezuela",
-        "Title": "U.S. pledges generous earthquake relief to Venezuela",
+        "Source": "https://t.me/intelslava/89443",
+        "Title": "Explosions Reported at Sirik Naval Base",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVVkzd25wT0xoa2RFR04xcUxtaXpYOTN4OUNRNGEyQ3hzQ1lkeW5Pazk0WWNQOTJneVNVTHotTVViOG9rUE53b3BFMS0ya0NiNDFaTXMtMWt3OER5bjc3YjFPNXVnbVpaU19UdlFLckd6ay1DVlVDVGk2Ql9IZFVsSzNhYlF0OV85UVUzMThscnlLSENHbUJILVVlS0RmZGI1ellubjJFQkprQWdIUUhFT1BQeUg?oc=5",
-        "Title": "France considers measures after Burkina Faso breaks off relations - Reuters",
+        "Source": "https://t.me/intelslava/89441",
+        "Title": "US Conducts Airstrike on Qeshm Island",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/cp8l451420zo?at_medium=RSS&at_campaign=rss",
-        "Title": "'Every person saved is a miracle': Families call to trapped loved ones in region devastated by Venezuela quakes",
+        "Source": "https://t.me/intelslava/89438",
+        "Title": "Iran Reports Explosion Near Tahroyeh Port",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/27/videos-show-israeli-settlers-trying-to-seize-house-in-occupied-west-bank?traffic_source=rss",
+        "Title": "Videos show Israeli settlers trying to seize house in occupied West Bank",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
