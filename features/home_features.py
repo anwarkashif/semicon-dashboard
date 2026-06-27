@@ -682,7 +682,10 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
     risk_text = sanitize_html(risk_raw)
     forecast_text = sanitize_html(forecast_raw)
 
-    tactical_list = robust_get(flush_data, ['tactical_indicators', 'tacticalindicators', 'indicators'], ["System initiating...", "Monitoring baseline anomalies..."])
+    # Ensure all data renders cleanly as a string, no longer expecting lists
+    tactical_list = robust_get(flush_data, ['tactical_indicators', 'tacticalindicators', 'indicators'], "System initiating. Monitoring baseline anomalies.")
+    
+    tactical_html = sanitize_html(tactical_list)
 
     import ast
     if isinstance(tactical_list, str):

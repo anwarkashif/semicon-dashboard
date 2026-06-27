@@ -220,12 +220,14 @@ def extract_tactical_events(news_text):
 
 def generate_flush_to_brief(accumulated_events):
     trimmed = accumulated_events[:10]
+    
+    # 🛑 THE FIX: Explicitly instructing the LLM to format EVERY section as a professionally written paragraph.
     prompt = (
         "You are an elite Geopolitics-OSINT analyst. "
         f"Generate a FLASH TO BRIEF from this data: {json.dumps(trimmed)}. "
         "Output ONLY a valid JSON object with these exact keys: "
         "bluf, tactical_indicators, threat_narrative, risk_assessment, strategic_forecast. "
-        "tactical_indicators must be a JSON array of strings."
+        "CRITICAL: ALL values must be comprehensive, professionally graded analytical paragraphs. Do NOT use bullet points or JSON arrays for any section."
     )
     
     try:
@@ -237,7 +239,7 @@ def generate_flush_to_brief(accumulated_events):
         logging.error(f"FLASH TO BRIEF Final Failure: {e}")
         return {
             "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
-            "tactical_indicators": ["API Rate Limit Hit", "System Awaiting Reset", "Data Pipeline Intact"],
+            "tactical_indicators": "System Awaiting Reset. Data Pipeline Intact.",
             "threat_narrative": "Generation pending next scheduled cron execution.",
             "risk_assessment": "PENDING",
             "strategic_forecast": "PENDING"
@@ -302,28 +304,26 @@ if __name__ == "__main__":
         print("⏳ Pooling data before FLASH TO BRIEF generation...")
         brief_input = unique_master[:10]
         
-        # 🚨 GEN & SAVE: The Live Transient File
         flush_brief_data = generate_flush_to_brief(brief_input)
         json.dump(flush_brief_data, open('data/executive_home/flush_brief_24h.json', 'w'), indent=4)
         
-        # 🚨 DATA AGGREGATION: Stitching the Daily Flash Archive for RAG (Includes URLs)
         date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         
+        # 🛑 THE FIX: Ensured tactical_indicators is successfully passed into the Archive payload
         bluf = flush_brief_data.get('bluf', '')
-        exec_sum = flush_brief_data.get('executive_summary', '')
+        tactical = flush_brief_data.get('tactical_indicators', '')
         narrative = flush_brief_data.get('threat_narrative', '')
         risk = flush_brief_data.get('risk_assessment', '')
         forecast = flush_brief_data.get('strategic_forecast', '')
         
         parts = []
         if bluf: parts.append(f"**🎯 BLUF:**\n{bluf}")
-        if exec_sum: parts.append(f"**📋 EXECUTIVE SUMMARY:**\n{exec_sum}")
+        if tactical: parts.append(f"**🚩 TACTICAL INDICATORS:**\n{tactical}")
         if narrative: parts.append(f"**🕸️ THREAT NARRATIVE:**\n{narrative}")
         if risk: parts.append(f"**⚖️ RISK ASSESSMENT:**\n{risk}")
         if forecast: parts.append(f"**🔭 STRATEGIC FORECAST:**\n{forecast}")
         compiled_raw = "\n\n---\n\n".join(parts)
         
-        # Extract direct verified sources from unique_master
         daily_sources = []
         for event in unique_master:
             if "Source" in event and "Title" in event:
@@ -341,7 +341,6 @@ if __name__ == "__main__":
         with open(archive_filename, 'w', encoding='utf-8') as f:
             json.dump(archive_payload, f, indent=4)
         
-        # ☁️ HUGGING FACE PERMANENT RETENTION SYNC
         HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
         if HF_TOKEN and REPO_ID:
             api = HfApi()
