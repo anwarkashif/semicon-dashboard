@@ -4,6 +4,48 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "JD Vance defends US strikes, warns Iran against escalation",
+        "Headline": "JD Vance defends US strikes, warns Iran against escalation",
+        "Summary": "JD Vance defends US strikes, warns Iran against escalation",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/jd-vance-defends-us-strikes-warns-iran-against-escalation",
+        "Title": "JD Vance defends US strikes, warns Iran against escalation",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Hezbollah supporters block Beirut road to protest Israel-Lebanon agreement",
+        "Headline": "Hezbollah supporters block Beirut road to protest Israel-Lebanon agreement",
+        "Summary": "Hezbollah supporters block Beirut road to protest Israel-Lebanon agreement",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-supporters-block-beirut-road-burn-tires-protest-israel-lebanon",
+        "Title": "Hezbollah supporters block Beirut road to protest Israel-Lebanon agreement",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Protests erupt in Beirut over deal with Israel (VIDEOS)",
+        "Headline": "Protests erupt in Beirut over deal with Israel (VIDEOS)",
+        "Summary": "Protests erupt in Beirut over deal with Israel (VIDEOS)",
+        "Risk": "HIGH",
+        "Source": "https://www.rt.com/news/642254-lebanon-protests-deal-israel/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "Title": "Protests erupt in Beirut over deal with Israel (VIDEOS)",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "rt.com"
+    },
+    {
+        "Date": "2026-06-26",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "US launches strikes in Iran for first time since peace agreement",
         "Headline": "US launches strikes in Iran for first time since peace agreement",
         "Summary": "US launches strikes in Iran for first time since peace agreement",
@@ -276,38 +318,5 @@
         "Title": "U.S. strikes Iranian targets near strait after Iran fires at ships",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "US Military",
-        "Action": "Conducted strikes against Iranian missile/drone storage and coastal radar sites in retaliation for vessel attack",
-        "Location": "Iran (Sirik Island, near Strait of Hormuz)",
-        "Risk": "Escalation of US-Iran conflict, regional instability, potential disruption of global energy supplies",
-        "Source": "https://x.com/AP/status/2070615380658131282",
-        "Title": "The U.S. strikes Iran to respond to drone attack on ship that President Trump said violated the ceasefire, the U.S. military says.",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Iran, Houthi rebels",
-        "Action": "Attacked commercial ships, asserted right to control shipping, threatened Israeli vessels",
-        "Location": "Strait of Hormuz, Gulf of Oman, Red Sea",
-        "Risk": "Maritime security threats, disruption of global trade routes, increased regional tensions",
-        "Source": "https://gcaptain.com/iran-reasserts-its-right-to-control-shipping-in-strait-of-hormuz-after-ship-hit-near-oman/",
-        "Title": "Iran\u00a0Reasserts\u00a0Its Right to Control Shipping in Strait of Hormuz After Ship Hit Near Oman",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Lebanon, Israel, Hezbollah",
-        "Action": "Signed framework agreement; Hezbollah rejected the deal and protested",
-        "Location": "Lebanon, Israel, Washington D.C.",
-        "Risk": "Internal political instability in Lebanon, continued Israel-Hezbollah tensions, stalled peace efforts",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/lebanon-president-says-israel-deal-first-step-restoring-sovereignty",
-        "Title": "Lebanon president says Israel deal first step to restoring sovereignty",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "middleeasteye.net"
     }
 ]
