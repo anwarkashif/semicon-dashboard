@@ -1368,3 +1368,17 @@
 2026-06-27 04:02:47,850 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
 2026-06-27 04:02:47,850 - INFO - Rotating to API Key 2
 2026-06-27 04:02:50,854 - ERROR - FLASH TO BRIEF Final Failure: All API keys exhausted via rotation.
+2026-06-27 04:18:01,930 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 04:18:02,158 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 04:18:02,159 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 04:18:12,203 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 04:18:12,361 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 04:18:12,361 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 04:18:12,361 - INFO - Rotating to API Key 2
+2026-06-27 04:18:15,399 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 04:18:27,816 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-27 04:18:27,852 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 04:18:27,979 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 04:18:27,980 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 04:18:38,024 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 04:18:46,402 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
