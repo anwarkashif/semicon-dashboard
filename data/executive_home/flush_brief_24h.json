@@ -1,17 +1,11 @@
 {
-    "bluf": "The Middle East is experiencing a rapid and severe escalation across multiple fronts, marked by direct US-Iran military confrontation, intensified Israeli actions in Gaza and Lebanon, critical maritime security threats in the Strait of Hormuz and Red Sea, and complex internal regional pressures. The risk of broader regional conflict and significant global economic disruption is extremely high.",
+    "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
     "tactical_indicators": [
-        "US strikes Iran over attack on Hormuz ship, bombing missile, drone, and radar sites.",
-        "Tanker struck in Strait of Hormuz; Navies raise threat level; IMO estimates 80 mines in shipping lanes.",
-        "US-Iran ceasefire threatened by renewed strikes.",
-        "Iran says it hits US-linked targets; Bahrain reports drone attack.",
-        "Israeli drone strike hits southern Lebanon day after security deal tying ceasefire to Hezbollah disarmament.",
-        "Several Palestinians injured in Israeli drone strike on Gaza City tent.",
-        "Israel attack on Gaza refugee camp kills two, including a young girl.",
-        "Damascus races to reassure Beirut as Trump pushes Syria to take on Hezbollah.",
-        "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea."
+        "API Rate Limit Hit",
+        "System Awaiting Reset",
+        "Data Pipeline Intact"
     ],
-    "threat_narrative": "The Middle East is on the brink of a full-scale regional war. Direct military engagement between the US and Iran has commenced following a ceasefire violation and an attack on a vessel in the Strait of Hormuz, with Iran retaliating against US-linked targets in Bahrain. Concurrently, Israel has intensified its military operations in Gaza, resulting in civilian casualties, and conducted a drone strike in Southern Lebanon, immediately after a security deal aimed at de-escalation. Maritime security is critically compromised, with a tanker strike in Hormuz, increased naval threat levels, and Houthi attacks on Israel and a ban on Israeli vessels in the Red Sea, threatening global shipping and oil supplies. Adding to this volatility, the Trump administration is exerting pressure on Syria to confront Hezbollah, further destabilizing the Lebanese-Syrian border and potentially igniting another front. These interconnected events signal a dangerous and rapidly deteriorating security landscape.",
-    "risk_assessment": "HIGH. The confluence of direct US-Iran military action, persistent Israeli-Palestinian/Lebanese conflict, and critical maritime security threats creates an extremely high risk of a broader regional war. This includes the potential for expanded proxy conflicts, direct state-on-state engagements, and severe disruption to global energy markets and supply chains. The breakdown of ceasefires and security deals indicates a low probability of de-escalation in the immediate future. Civilian populations face extreme humanitarian risks.",
-    "strategic_forecast": "The current trajectory points towards a sustained period of high-intensity conflict across the Middle East. Direct military confrontations between major regional and international actors are likely to escalate, potentially drawing in more parties. Maritime trade routes, particularly the Strait of Hormuz and the Red Sea, will remain highly contested and dangerous, leading to significant global economic repercussions. The internal dynamics within Syria and Lebanon, exacerbated by external pressures, suggest a deepening of existing conflicts and the potential for new fronts to emerge. The region is entering a phase of profound instability with long-term geopolitical consequences, including potential shifts in alliances and a re-evaluation of international security postures."
+    "threat_narrative": "Generation pending next scheduled cron execution.",
+    "risk_assessment": "PENDING",
+    "strategic_forecast": "PENDING"
 }
