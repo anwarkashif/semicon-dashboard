@@ -1442,3 +1442,17 @@
 2026-06-27 12:02:38,566 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
 2026-06-27 12:02:38,603 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-27 12:02:48,598 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-27 12:17:58,755 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 12:17:58,964 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 12:17:58,965 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 12:18:09,003 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 12:18:26,209 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-27 12:18:26,250 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 12:18:26,385 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 12:18:26,386 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 12:18:36,423 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 12:18:36,563 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-27 12:18:36,564 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-27 12:18:36,564 - INFO - Rotating to API Key 2
+2026-06-27 12:18:39,602 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-27 12:18:53,500 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"

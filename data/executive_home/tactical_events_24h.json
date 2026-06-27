@@ -4,6 +4,20 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "\"From 7.10 I feel that we have to come out of the closet as Jews who love Israel\"",
+        "Headline": "\"From 7.10 I feel that we have to come out of the closet as Jews who love Israel\"",
+        "Summary": "\"From 7.10 I feel that we have to come out of the closet as Jews who love Israel\"",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2070840346813022688",
+        "Title": "\"From 7.10 I feel that we have to come out of the closet as Jews who love Israel\"",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-27",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "A UAE school has been shortlisted for a global education award after pupils created an AI-powered vending machine designed to improve student health",
         "Headline": "A UAE school has been shortlisted for a global education award after pupils created an AI-powered vending machine designed to improve student health",
         "Summary": "A UAE school has been shortlisted for a global education award after pupils created an AI-powered vending machine designed to improve student health",
@@ -26,6 +40,50 @@
         "Title": "US and Iran exchange strikes for first time since ceasefire",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "rt.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Apple, blacklisted Chinese company",
+        "Action": "Apple seeks to buy memory chips from a blacklisted Chinese company.",
+        "Location": "China (company origin), Global (Apple's supply chain)",
+        "Risk": "Medium-High - Geopolitical tensions, supply chain security, potential sanctions enforcement, reputational damage.",
+        "Source": "https://www.ft.com/content/d72a25e2-7bde-4aa9-bd8d-0c4f3d6cb2cb",
+        "Title": "Apple seeks to buy memory chips from blacklisted Chinese company",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "ft.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "NATO Secretary General Mark Rutte, NATO",
+        "Action": "NATO expects deals in Ankara and delivers a sharp message to Moscow.",
+        "Location": "Ankara (Turkey), Moscow (Russia)",
+        "Risk": "Medium-High - Alliance cohesion, regional security, diplomatic pressure, potential for increased tensions with Russia.",
+        "Source": "https://www.atlanticcouncil.org/commentary/event-recap/nato-secretary-general-mark-rutte-expect-deals-in-ankara-plus-a-sharp-message-to-moscow/",
+        "Title": "NATO Secretary General Mark Rutte: Expect deals in Ankara, plus a sharp message to Moscow",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "OpenAI, US government",
+        "Action": "OpenAI releases GPT-5.6 to select users vetted by the US government.",
+        "Location": "United States (implied)",
+        "Risk": "Medium - AI governance, national security implications of advanced AI, technological control, ethical considerations.",
+        "Source": "https://www.ft.com/content/33a306c2-5aaa-45b1-9386-1716fa6a128e",
+        "Title": "OpenAI releases GPT-5.6 to select users vetted by US government",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "ft.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Cairo (Egypt)",
+        "Action": "Egypt doubles down on support for Sudan's Army.",
+        "Location": "Sudan, Egypt",
+        "Risk": "Medium - Prolongation of civil conflict, regional instability, humanitarian crisis, potential for proxy conflict.",
+        "Source": "https://moderndiplomacy.eu/2026/06/27/cairo-doubles-down-on-sudans-army-but-backs-a-fading-bet/",
+        "Title": "Cairo Doubles Down on Sudan\u2019s Army \u2013 but Backs a Fading Bet",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
     },
     {
         "Date": "2026-06-27",
@@ -245,60 +303,5 @@
         "Title": "An Israeli army drone dropped a sound bomb near a Lebanese army checkpoint in Nabatiy\u00e9 el-Faouqa, in South Lebanon, according to our correspondent Mountasser Abdallah.",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
-    },
-    {
-        "Date": "",
-        "Actor": "U.S.",
-        "Action": "Conducted military strikes against Iranian military sites after a ship was hit in the Strait of Hormuz.",
-        "Location": "Iran, Strait of Hormuz",
-        "Risk": "Escalation of U.S.-Iran conflict, regional instability, maritime security threats.",
-        "Source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQZE5FZXRUMFlMa2d1OWJhZW11RFJjeUw3Z1lzbEM4c3NQQXA3MDRYbFI2SW5KU3Bac3A2bDE1dGt5ZkV1UTg5dml2VXNFZHlwSEJLaXZMRVZOamwtOFNMSmtHYkNjazdidVpUZDRoWjB2ak5McGNndHdoZEdhMklSTmlvQWtRaDV6RDRBWTI4RzVwek5CQUtDZXZzQzZEVklSaXdKekNQU25mZlpndEhYbDNGMVdhblhmc1E5bXFELXJBMTdidHc?oc=5",
-        "Title": "U.S. strikes Iranian military sites after ship was hit in Strait of Hormuz - The Washington Post",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Saturday",
-        "Actor": "Iran, Unidentified",
-        "Action": "Accused of launching drone attacks on Bahrain; Tanker hit by unidentified projectile in Strait of Hormuz; Reasserted control over shipping.",
-        "Location": "Bahrain, Strait of Hormuz, Gulf of Oman",
-        "Risk": "Regional conflict escalation, disruption of global oil trade, maritime security threats.",
-        "Source": "https://x.com/AP/status/2070802110103343587",
-        "Title": "Bahrain accuses Iran of launching a drone attack targeting the island kingdom. Iran has not acknowledged the attack.",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "",
-        "Actor": "Houthis (Yemen)",
-        "Action": "Attacked Israel and announced a ban on Israeli vessels in the Red Sea.",
-        "Location": "Red Sea, Israel",
-        "Risk": "Maritime security threats, regional conflict escalation, disruption of shipping lanes.",
-        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "",
-        "Actor": "Trump (Former US President)",
-        "Action": "Threatened 100% tariffs on European goods over digital services tax.",
-        "Location": "Europe, U.S.",
-        "Risk": "Trade war, economic instability, strained transatlantic relations.",
-        "Source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQaU5sbG0yWUZOY2JTYVRLc0FHVDNoOER1U2s0TF8wMHZRbThHbG9UekFIN0d3LUNPbzFuLS1LSlhkeWdFUXoxZk1VQjVCazBYWlF5aGpzR2p2OU5iRXcxM3NXNDJqYmpJeTlzUnpRSTFlVC03R2t2YXlKcHcwWWhtaWxsUlM2bjc0VHRCaXZWd9IBlAFBVV95cUxPSmlzV2R6V0F2X2NZWTRHaUhGYkV2VUc4ZGVKb0pnNVZnNW9FckRXM25tNGFXejhwVFN5YnZDblhrd2dMbkpvWlFBVEhMaS13RFYxVVlBTC1DWjRwZVdPWExCMmVIbUtWWk15T1pjUUZieHp5VmV2RjJrQzFPY3BHV2tOMmtjdDZRemgtcmhvLW1qMU40?oc=5",
-        "Title": "Why Is Trump Threatening 100% Tariffs on Europe? - The Business Standard",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "",
-        "Actor": "China",
-        "Action": "Tightens grip on critical rare earth resources, accelerating global competition.",
-        "Location": "Global market, China",
-        "Risk": "Supply chain disruption, geopolitical competition, economic leverage.",
-        "Source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVGNJVlBNSm1rWHpVZDBZNlAzNko5T3ZtZlpnVkJBR0k0dTYySFdfT2Y1UWdwU0NqTFI0UnhzU0ZUQmtGT2lJZkFrRzhHOXZkQjU0UkVNOFZqMFJlVElWMTE2SURTRWZhMDRhaUc1bEtQendZR0pGc1N3SkJxbUczdVBBTWpMejJ6MndzWTFNd3c2ZmcxMXZmSW9EWVJ0ZTZZRURwbw?oc=5",
-        "Title": "Critical Rare Earth Race To Accelerate As China Tightens Grip - Seeking Alpha",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
     }
 ]
