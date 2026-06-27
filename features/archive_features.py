@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import json
 import os
-from utils.data_helpers import get_brief_mappings, extract_tag
+import re
+from utils.data_helpers import get_brief_mappings, extract_tag, render_highlighted_text
 
 def render_trend_timelines():
     st.title("Macro Trends & Timelines")
@@ -42,6 +43,59 @@ def render_trend_timelines():
     else:
         st.warning("No archives available to generate trend timelines.")
 
+# --- NEW: Dedicated Renderer for Archived Weekly Intelligence Briefs ---
+def render_archived_intel_brief(dashboard_data):
+    from features.tactical_features import render_verified_sources
+    
+    raw_text = dashboard_data.get('brief_raw', '')
+    text_summary = extract_tag('SUMMARY', raw_text) or ""
+    text_section_1 = extract_tag('EXEC', raw_text) or ""
+    text_section_2 = extract_tag('LITHO', raw_text) or ""
+    text_section_3 = extract_tag('REE', raw_text) or ""
+    text_section_4 = extract_tag('GEO', raw_text) or ""
+    text_military = extract_tag('MILITARY', raw_text) or ""
+    text_section_5 = extract_tag('CONCLUSION', raw_text) or ""
+    text_india = extract_tag('INDIA', raw_text) or ""
+    text_wa = extract_tag('WEST_ASIA', raw_text) or ""
+    text_final = extract_tag('FINAL_CONCLUSION', raw_text) or ""
+
+    st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Executive Summary</h3>", unsafe_allow_html=True)
+    if text_summary: render_highlighted_text(text_summary, "All")
+
+    st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Global Foundry Market & Geopolitical Positioning</h3>", unsafe_allow_html=True)
+    if text_section_1: render_highlighted_text(text_section_1, "All")
+
+    st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>AI Chip Demand, Manufacturing & Processing</h3>", unsafe_allow_html=True)
+    if text_section_2: render_highlighted_text(text_section_2, "All")
+    
+    st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Critical Minerals: Rare Earth Reserves & Supply Chains</h3>", unsafe_allow_html=True)
+    if text_section_3: render_highlighted_text(text_section_3, "All")
+
+    st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Export Controls & Geopolitical Impact</h3>", unsafe_allow_html=True)
+    if text_section_4: render_highlighted_text(text_section_4, "All")
+    
+    st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>AI, Chips and Rare Earth in Military and Outer Space Domain</h3>", unsafe_allow_html=True)
+    if text_military: render_highlighted_text(text_military, "All")
+    
+    st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Lithography Chokepoints & State Actions</h3>", unsafe_allow_html=True)
+    if text_section_5: render_highlighted_text(text_section_5, "All")
+
+    if text_india and text_india.strip() != "": 
+        st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>India: Domestic & Strategic Developments</h3>", unsafe_allow_html=True)
+        render_highlighted_text(text_india, "All")
+        
+    if text_wa and text_wa.strip() != "": 
+        st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>West Asia/Middle East: Domestic & Strategic Developments</h3>", unsafe_allow_html=True)
+        render_highlighted_text(text_wa, "All")
+
+    st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Strategic Conclusion</h3>", unsafe_allow_html=True)
+    if text_final: render_highlighted_text(text_final, "All")
+
+    # Render the Verified Intelligence Sources table with working URLs
+    sources_list = dashboard_data.get('sources', [])
+    if sources_list:
+        render_verified_sources(sources_list)
+
 def render_archives():
     st.title("Archives")
     archive_mapping = get_brief_mappings('data')
@@ -53,12 +107,29 @@ def render_archives():
         with open(archive_mapping[selected_brief], 'r', encoding='utf-8') as f:
             archived_data = json.load(f)
         
-        # 🛑 THE FIX: Auto-stitch the brief if 'brief_raw' isn't explicitly defined
-        arch_raw = ""
-        if isinstance(archived_data, dict):
-            if 'brief_raw' in archived_data and archived_data['brief_raw']:
-                arch_raw = archived_data['brief_raw']
-            else:
+        # 🛑 ROUTING LOGIC: Determine how to display based on the file type
+        if "Weekly Intelligence Brief" in selected_brief:
+            render_archived_intel_brief(archived_data)
+            
+        elif "Weekly Tactical Brief" in selected_brief:
+            # Tactical Briefs use standard text rendering
+            arch_raw = ""
+            if isinstance(archived_data, dict):
+                if 'brief_raw' in archived_data and archived_data['brief_raw']:
+                    arch_raw = archived_data['brief_raw']
+                    
+            def format_html_text(text):
+                text = str(text)
+                text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
+                return text.replace('\n', '<br>')
+            
+            # Format cleanly without throwing errors if data is slightly malformed
+            st.markdown(format_html_text(arch_raw), unsafe_allow_html=True)
+            
+        else:
+            # Executive Flash & Today's Snippet
+            arch_raw = ""
+            if isinstance(archived_data, dict):
                 bluf = archived_data.get('bluf', archived_data.get('bottom_line_up_front', ''))
                 exec_sum = archived_data.get('executive_summary', '')
                 narrative = archived_data.get('threat_narrative', '')
@@ -77,8 +148,8 @@ def render_archives():
                 if not arch_raw:
                     arch_raw = "*(No synthesized text keys found in this payload)*"
                     
-        t1 = extract_tag('EXEC', arch_raw) or arch_raw
-        st.markdown(t1.replace('$', r'\$'))
+            t1 = extract_tag('EXEC', arch_raw) or arch_raw
+            st.markdown(t1.replace('$', r'\$'))
     else:
         st.warning("No active archives found.")
 

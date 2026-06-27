@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Forces Enter Kozacha Lopan in Kharkiv Oblast",
+        "Title": "Damage to Russian Warship Confirmed in Sevastopol, Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,17 +14,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119460",
-        "Title": "Russia Factory Hit by Explosions and Fire",
+        "Source": "https://t.me/nexta_live/119461",
+        "Title": "Russia Launches Flamingo Missiles At Volgograd",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32266",
-        "Title": "US Restricts Release of OpenAI GPT-5.6 Model",
+        "Source": "https://www.politico.com/news/2026/06/26/white-house-makes-peace-with-anthropic-for-now-00965675?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Trump administration partially lifts Anthropic\u2019s AI export ban",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "politico.com",
         "threat_level": "HIGH"
     },
     {
@@ -35,6 +35,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
         "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
@@ -42,11 +49,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "Source": "https://t.me/nexta_live/119462",
+        "Title": "Russia Faces Gasoline Shortages in Chita",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cnbc.com/2026/06/27/venezuela-quake-toll-tops-900-search-intensifies-for-hundreds-trapped.html",
@@ -56,17 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/intelslava/89412",
-        "Title": "Russian Geran Arrives in Izyum",
+        "Source": "https://t.me/nexta_live/119460",
+        "Title": "Russia Factory Hit by Explosions and Fire",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.politico.eu/article/trump-administration-asks-high-court-to-ok-its-unprecedented-immigration-detention-policy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Trump administration asks high court to OK its unprecedented immigration detention policy",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     }
 ]
