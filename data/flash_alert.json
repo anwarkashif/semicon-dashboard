@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Damage to Russian Warship Confirmed in Sevastopol, Crimea",
+        "Title": "Iran Condemns US Attacks on Its Southern Coast",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119462",
+        "Title": "Russia Faces Gasoline Shortages in Chita",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cnbc.com/2026/06/26/us-iran-peace-deal-nuclear-access.html",
@@ -14,18 +21,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119461",
-        "Title": "Russia Launches Flamingo Missiles At Volgograd",
+        "Source": "https://t.me/nexta_live/119460",
+        "Title": "Russia Factory Hit by Explosions and Fire",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.politico.com/news/2026/06/26/white-house-makes-peace-with-anthropic-for-now-00965675?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Trump administration partially lifts Anthropic\u2019s AI export ban",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,29 +42,29 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119462",
-        "Title": "Russia Faces Gasoline Shortages in Chita",
+        "Source": "https://www.france24.com/en/europe/20260627-germany-braces-for-record-temperatures-as-heatwave-moves-east",
+        "Title": "Germany braces for record temperatures as heatwave moves east",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/27/venezuela-quake-toll-tops-900-search-intensifies-for-hundreds-trapped.html",
-        "Title": "Venezuela quake toll tops 900, search intensifies for hundreds trapped",
+        "Source": "https://www.cnbc.com/2026/06/27/saudi-aramco-resumes-oil-loading-at-ras-tanura-in-boost-to-supply.html",
+        "Title": "Saudi Aramco resumes oil loading at Ras Tanura in boost to supply",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119460",
-        "Title": "Russia Factory Hit by Explosions and Fire",
+        "Source": "https://t.me/nexta_live/119461",
+        "Title": "Russia Launches Flamingo Missiles At Volgograd",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
