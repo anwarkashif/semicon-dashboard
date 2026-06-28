@@ -14,11 +14,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33968",
-        "Title": "\u2014 \ud83c\uddee\ud83c\uddf6 NEW: Bengen Rekani, the Iraqi Minister of Construction, Housing, Municipalities and Public Works, has been arrested",
+        "Source": "https://t.me/nexta_live/119514",
+        "Title": "Russia Detains Lugin Over Coup Threats",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/rybar_in_english/32285",
@@ -42,31 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.npr.org/2026/06/27/nx-s1-5872951/venezuela-earthquakes-colombia-aid",
+        "Title": "Venezuelans in Colombia scramble to send aid as earthquakes death toll increases",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44722",
+        "Title": "Israel Experiences Car Explosions in Multiple Cities",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://warmonitor.com/",
         "Title": "Venezuela Government Accused of Politicizing Quake Relief",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/venezuela-search-enters-its-third-day-the-window-for-finding-survivors-is-rapidly-closing",
-        "Title": "Venezuela: Search enters its third day, the window for finding survivors is rapidly closing",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.npr.org/2026/06/28/nx-s1-5873413/venezuela-earthquake",
-        "Title": "\"If you are alive, make any noise\": Venezuela searches rubble on day four",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
         "threat_level": "WATCH"
     }
 ]
