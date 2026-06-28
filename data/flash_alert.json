@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Black Spark Agents Infiltrate Shahed Drone Plant in Alabuga, Russia",
+        "Title": "Iran State Media Says Country Must Pursue Atomic Bomb",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -49,24 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89484",
-        "Title": "Russian Drones Destroy Ukrainian Vehicles",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89487",
+        "Title": "Russia Advances in Krasny Liman",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119522",
-        "Title": "Ukraine President Zelensky Speaks on Constitution Day",
+        "Source": "https://www.aljazeera.com/news/longform/2026/6/28/satellite-images-show-scale-of-destruction-in-venezuela-earthquakes?traffic_source=rss",
+        "Title": "Satellite images show scale of destruction in Venezuela earthquakes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/articles/c5yz9yj9x74o?at_medium=RSS&at_campaign=rss",
-        "Title": "Eleven killed in civilian aircraft crash in  north-eastern France, authorities say",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
