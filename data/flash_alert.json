@@ -7,25 +7,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44732",
-        "Title": "Detonations Start in Southern Lebanon",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://t.me/warmonitors/44731",
         "Title": "Israel Attacks Neighborhood in Southern Lebanon",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/warmonitors/44730",
         "Title": "Jordan Intercepts Missiles Over Northern Region",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -35,6 +28,20 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeUx1R2hLeUZxU3ZHcmhpVTR1NC1WNGlEbXFMeHJMci0zMFZPSFdjbjRyNzRZM1plWUtmZW5IVkwyWmYySE94dWZranJTM3Q4dmhrQXZNTTFtNjlsSGcxSXBablJ5TUhvWWJZVW5RQmxyWmY5UXVfOW55NHhwY1FIRlh0X05JLUJNS0lBcE9vWHdXR2I0elBoMmJoSDRaX2hSVG45T0ZmOUJqeHlXc3ZfS2t4ZG56TzREd0JuYzc3RzRoSk5GdzVHMFhUdFM?oc=5",
+        "Title": "Press Release: Weapons Located in UNRWA Bags in Khan Yunis - idf.il",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
@@ -42,31 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.npr.org/2026/06/27/nx-s1-5872799/venezuela-races-to-find-survivors",
-        "Title": "Venezuela races to find survivors",
+        "Source": "https://www.france24.com/en/armed-conflict-threatens-ethiopia-s-ancient-monasteries",
+        "Title": "Armed conflict threatens Ethiopia\u2019s ancient monasteries",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/cx2vdydz31no?at_medium=RSS&at_campaign=rss",
-        "Title": "Heatwave breaks records in Germany, Denmark and Czech Republic",
+        "Source": "https://www.nytimes.com/2026/06/28/world/americas/venezuela-earthquake-caracas-morgue.html",
+        "Title": "At a Caracas Morgue, Families and Officials Try to Identify More Than 100 Victims",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/cr47dvywvy5o?at_medium=RSS&at_campaign=rss",
+        "Title": "Two boys rescued from Venezuela earthquake rubble after days of being trapped",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Australia politics live: Vanuatu PM in Canberra as hopes rise over treaty; fossil fuel companies accused of marketing to children",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/news/pakistan-29-militants-killed-afghan-border/",
-        "Title": "Pakistan says its security forces killed 29 militants along Afghan border",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     }
 ]
