@@ -42,6 +42,61 @@
         "Publisher": "wsj.com"
     },
     {
+        "Date": "N/A",
+        "Actor": "US",
+        "Action": "Carries out fresh strikes against Iran after tanker struck in Hormuz",
+        "Location": "Iran (after tanker struck in Hormuz)",
+        "Risk": "Escalating hostilities, regional conflict, disruption of oil supply",
+        "Source": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/",
+        "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "gcaptain.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Unknown (implied Iran/proxies)",
+        "Action": "Second Tanker Struck",
+        "Location": "Strait of Hormuz",
+        "Risk": "Deepening U.S.-Iran shipping crisis, disruption of global oil trade, regional conflict",
+        "Source": "https://gcaptain.com/second-tanker-struck-in-strait-of-hormuz-as-u-s-iran-shipping-crisis-deepens/",
+        "Title": "Second Tanker Struck in Strait of Hormuz as U.S.-Iran Shipping Crisis Deepens",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "gcaptain.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Houthis",
+        "Action": "Attack Israel and announce ban on Israeli vessels",
+        "Location": "Red Sea, Israel",
+        "Risk": "Regional conflict, disruption of maritime trade, humanitarian crisis",
+        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
+        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Iran",
+        "Action": "Launched missile and drone strikes on US bases",
+        "Location": "Kuwait and Bahrain",
+        "Risk": "Escalation of tensions, breakdown of peace deal, regional conflict",
+        "Source": "https://x.com/Reuters/status/2071287512065347620",
+        "Title": "Iran said it launched missile and drone strikes on US bases in Kuwait and Bahrain, escalating tensions days after both sides agreed to an interim deal to end their conflict",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "Iran",
+        "Action": "Missile strike on residential apartment",
+        "Location": "Bahrain",
+        "Risk": "Civilian casualties, breakdown of peace deal, regional conflict, increased instability",
+        "Source": "https://x.com/Telegraph/status/2071277603453902926",
+        "Title": "An Iranian missile smashed into a residential apartment in Bahrain as Donald Trump\u2019s interim peace deal began to unravel.",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
         "Date": "Recent",
         "Actor": "U.S., Iran, Iran-backed forces (e.g., Houthis)",
         "Action": "U.S. conducts strikes against Iran; Iran-backed forces attack ships and U.S. bases; Escalation of hostilities and threats to shipping.",
@@ -242,60 +297,5 @@
         "Title": "Trump bombs Iran after strike on cargo ship in Strait of Hormuz",
         "Feed_Source": "Premium RSS",
         "Publisher": "asiatimes.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Israel, Houthis, Lebanon",
-        "Action": "Israel strikes Lebanon, testing peace deal; Houthis attack Israel and ban Israeli vessels in Red Sea, leading to Israel's multi-front conflict.",
-        "Location": "Lebanon, Red Sea, Israel, Yemen",
-        "Risk": "Extremely High - Regional war, humanitarian crisis, maritime security",
-        "Source": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBlRERNdFN5d3ZjOHpOR0RkQ1FpV181NTNXOUNQSGwyaFA2dWJFVzc5Wmg2dEZ0TmRPcE8yM1RjWHJjd2FMSWxzWGVCcVltZ21HcEYwcWFYenRrbUJqS2Jfd3p3eEpzYVJWbnJhX0dR?oc=5",
-        "Title": "As Yemen's Houthis enter war, Israel is again in active conflict on four fronts - The Jerusalem Post",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Nigeria",
-        "Action": "Identifies major new critical minerals district, including a large lithium discovery.",
-        "Location": "Nigeria",
-        "Risk": "Medium - Economic opportunity, resource competition, potential for internal conflict",
-        "Source": "https://www.mining.com/nigeria-identifies-major-new-critical-minerals-district-large-lithium-discovery/",
-        "Title": "Nigeria identifies major new critical minerals district, large lithium discovery",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "mining.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Iraq",
-        "Action": "Government launches anti-corruption raids, arresting senior officials.",
-        "Location": "Iraq",
-        "Risk": "Medium - Political instability, governance reform, potential for backlash",
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/iraq-arrests-senior-officials-in-anti-corruption-raids?traffic_source=rss",
-        "Title": "Iraq arrests senior officials in anti-corruption raids",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "aljazeera.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Trump (US), European Union",
-        "Action": "US threatens EU with 100% tariffs over digital tax.",
-        "Location": "US, European Union",
-        "Risk": "High - Trade war, economic tension, transatlantic relations strain",
-        "Source": "https://news.google.com/rss/articles/CBMiigFBVV95cUxORExlVUlaWUVwUDRLMWZ6VGdBTzVhR0hwcm05ZTd5YmctZ2ZFVlFzWXRJbjRvRDFHaUk0QWotTC1Oc3BOcndYZllZMnppUUp4bEVfSXNRTkZoc2loMmI3Z0pTUFdUckhodjA2RE1uNUJEbUkwM3dJbmhNWW9LNEltdkJfTEpkbnM0ZGfSAYgBQVVfeXFMTm1OczBVbVh0Yjgzc3l3T1FQUUZfNDQ3RFhmTFdtQXBEWWR2T050QWNjQVRfdGR0Szk3SXpYczgxZHF5cHAxcnRwZVdBS1IwWGcwc29NYXU4cTNwVlp4UlFWTmhvSnVfUjA3SWNZUjVOQS16dXQ3Znk2Rk1RVVljYVdpaGMtZTJabg?oc=5",
-        "Title": "Trump threatens EU with 100% tariffs over digital tax - \u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0456 \u041d\u0430\u0446\u0456\u043e\u043d\u0430\u043b\u044c\u043d\u0456 \u041d\u043e\u0432\u0438\u043d\u0438 (\u0423\u041d\u041d)",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Sweden",
-        "Action": "Fits guns to Coast Guard vessels amidst rising Baltic Sea tensions.",
-        "Location": "Baltic Sea",
-        "Risk": "High - Regional militarization, increased tension with Russia",
-        "Source": "https://gcaptain.com/sweden-fits-guns-to-coast-guard-vessels-as-baltic-tensions-rise/",
-        "Title": "Sweden Fits Guns To Coast Guard Vessels As Baltic Tensions Rise",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "gcaptain.com"
     }
 ]
