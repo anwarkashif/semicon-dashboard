@@ -1,21 +1,35 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Threatens to Fire at US-Forced Oil Tankers in Strait of Hormuz",
+        "Title": "Lebanese Speaker Rejects US-Israeli-Lebanese Agreement in Current Form",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/warmonitors/44731",
-        "Title": "Israel Attacks Neighborhood in Southern Lebanon",
+        "Source": "https://t.me/intelslava/89505",
+        "Title": "Israel Destroys Iranian Missile Launcher in Strike",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44730",
-        "Title": "Jordan Intercepts Missiles Over Northern Region",
+        "Source": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeUx1R2hLeUZxU3ZHcmhpVTR1NC1WNGlEbXFMeHJMci0zMFZPSFdjbjRyNzRZM1plWUtmZW5IVkwyWmYySE94dWZranJTM3Q4dmhrQXZNTTFtNjlsSGcxSXBablJ5TUhvWWJZVW5RQmxyWmY5UXVfOW55NHhwY1FIRlh0X05JLUJNS0lBcE9vWHdXR2I0elBoMmJoSDRaX2hSVG45T0ZmOUJqeHlXc3ZfS2t4ZG56TzREd0JuYzc3RzRoSk5GdzVHMFhUdFM?oc=5",
+        "Title": "Press Release: Weapons Located in UNRWA Bags in Khan Yunis - idf.il",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cbsnews.com/news/pakistan-29-militants-killed-afghan-border/",
+        "Title": "Pakistan says its security forces killed 29 militants along Afghan border",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44731",
+        "Title": "Israel Attacks Neighborhood in Southern Lebanon",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -26,20 +40,6 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeUx1R2hLeUZxU3ZHcmhpVTR1NC1WNGlEbXFMeHJMci0zMFZPSFdjbjRyNzRZM1plWUtmZW5IVkwyWmYySE94dWZranJTM3Q4dmhrQXZNTTFtNjlsSGcxSXBablJ5TUhvWWJZVW5RQmxyWmY5UXVfOW55NHhwY1FIRlh0X05JLUJNS0lBcE9vWHdXR2I0elBoMmJoSDRaX2hSVG45T0ZmOUJqeHlXc3ZfS2t4ZG56TzREd0JuYzc3RzRoSk5GdzVHMFhUdFM?oc=5",
-        "Title": "Press Release: Weapons Located in UNRWA Bags in Khan Yunis - idf.il",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
