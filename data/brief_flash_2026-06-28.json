@@ -1,8 +1,36 @@
 {
     "date": "2026-06-28",
     "title": "Flash to Brief - 2026-06-28",
-    "brief_raw": "**\ud83c\udfaf BLUF:**\nAPI Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nSystem Awaiting Reset. Data Pipeline Intact.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nGeneration pending next scheduled cron execution.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nPENDING\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nPENDING",
+    "brief_raw": "**\ud83c\udfaf BLUF:**\nThe Middle East is experiencing a critical escalation, with direct military exchanges between Iran and the United States in the Gulf region, including missile and drone attacks on US military sites in Bahrain and Kuwait, and retaliatory US strikes. Concurrently, the Israeli-Palestinian conflict remains highly volatile, underscored by Prime Minister Netanyahu's rejection of a two-state solution and ongoing Israeli military actions in Lebanon, which Hezbollah rejects. These regional flashpoints are compounded by broader global trends of technological competition, trade disputes, and increased militarization in strategic maritime zones, signaling a significant deterioration of international security and stability.\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nImmediate tactical indicators include Bahrain's call for residents to seek shelter following warnings, confirmed US reports of Iranian attacks on military sites in Bahrain and Kuwait, and subsequent US retaliatory strikes against Iranian targets. Further, the striking of tankers in the Strait of Hormuz and the subsequent raising of naval threat levels signify an active maritime conflict zone. In the Levant, an Israeli drone strike in southern Lebanon, occurring shortly after a security deal, and Hezbollah's rejection of that deal, coupled with Prime Minister Netanyahu's explicit statement that \"there is no room for two states,\" point to an immediate and intractable conflict dynamic.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nThe prevailing threat narrative centers on a rapidly escalating, multi-front conflict in the Middle East, characterized by direct military engagement between the US and Iran, and intensified Israeli-Palestinian/Lebanese hostilities. Iran's IRGC has launched ballistic missile and drone operations against US military installations, framed as retaliation for prior US strikes, directly challenging US presence and regional stability. This is occurring amidst a backdrop of maritime attacks in the Strait of Hormuz, raising the specter of significant disruption to global energy markets. Simultaneously, Israel's hardline stance on a two-state solution and its military actions in Lebanon, despite diplomatic efforts, indicate a deepening and broadening of the conflict, potentially drawing in more regional actors. Beyond the Middle East, a narrative of intensifying geopolitical competition for technological dominance, particularly in chip manufacturing and AI, and a resurgence of protectionist trade policies (e.g., Trump's tariff threats) are creating a more fragmented and confrontational global environment.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nThe risk assessment is HIGH across multiple domains. The immediate and most severe risk is a direct, large-scale military conflict between the United States and Iran, with potential for significant regional spillover, leading to widespread instability, humanitarian crises, and severe disruption of global energy supplies and trade routes through the Strait of Hormuz. The intractable nature of the Israeli-Palestinian conflict, exacerbated by Netanyahu's statements and ongoing actions in Lebanon, carries a high risk of further regional escalation, potentially involving Hezbollah and other proxy forces, leading to a broader war in the Levant. Globally, the intensifying geopolitical competition for technological supremacy, coupled with protectionist trade policies and the potential weakening of alliances like NATO, poses a substantial risk to the existing international order, potentially leading to economic fragmentation, supply chain vulnerabilities, and increased national security threats. The ongoing militarization of strategic maritime areas also elevates the risk of localized conflicts and arms races.\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nThe strategic forecast points towards a sustained period of heightened global instability, with the Middle East remaining the primary flashpoint. Direct military confrontations between the US and Iran are likely to continue, driven by a cycle of retaliation and perceived provocations, making a de-escalation difficult in the short to medium term. The Israeli-Palestinian conflict is projected to remain unresolved and highly volatile, with a high probability of continued violence and regional spillover, especially into Lebanon, further complicating any peace efforts. Globally, the competition for technological dominance, particularly in semiconductors and AI, will intensify, leading to further decoupling efforts and the formation of distinct technological blocs. Trade relations are expected to become more contentious, with a potential resurgence of protectionist measures under future administrations, challenging multilateral frameworks. The ongoing militarization of key maritime regions, such as the South China Sea, Baltic, and Black Sea, suggests a future characterized by increased naval presence, drone warfare, and a higher propensity for localized confrontations, reflecting a broader shift towards a more multipolar and less predictable international security landscape.",
     "recent_actions": [
+        {
+            "Date": "2026-06-28",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Bahrain calls on residents to seek shelter after warning",
+            "Headline": "Bahrain calls on residents to seek shelter after warning",
+            "Summary": "Bahrain calls on residents to seek shelter after warning",
+            "Risk": "HIGH",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/bahrain-sounds-sirens-after-iranian-claims-gulf-attacks",
+            "Title": "Bahrain calls on residents to seek shelter after warning",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "2026-06-28",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Netanyahu says 'there is no room for two states'",
+            "Headline": "Netanyahu says 'there is no room for two states'",
+            "Summary": "Netanyahu says 'there is no room for two states'",
+            "Risk": "HIGH",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/netanyahu-says-there-no-room-two-states",
+            "Title": "Netanyahu says 'there is no room for two states'",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "middleeasteye.net"
+        },
         {
             "Date": "2026-06-28",
             "Actor": "Psyopoly/West Asia",
@@ -15,6 +43,72 @@
             "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/us-says-no-casualties-reported-bahrain-and-kuwait-attacks-iran",
             "Title": "US says no casualties reported in Bahrain and Kuwait attacks by Iran",
             "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Iran's IRGC, US",
+            "Action": "IRGC launches ballistic missile and drone operation against US military sites (Ali Al Salem Air Base in Kuwait, US Fifth Fleet in Bahrain\u2019s Salman Port) in response to earlier US strikes on Iranian targets.",
+            "Location": "Kuwait, Bahrain, Strait of Hormuz region",
+            "Risk": "Direct military conflict, regional instability, disruption of global energy markets.",
+            "Source": "https://x.com/RudawEnglish/status/2071034224170188901",
+            "Title": "#LATEST: Iran\u2019s IRGC said it carried out a joint ballistic missile and drone operation on Sunday morning against eight US military sites at Ali Al Salem Air Base in Kuwait and the US Fifth Fleet in Bahrain\u2019s Salman Port, in response to earlier US strikes on five Iranian targets.",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "US, Iran, Houthi (implied)",
+            "Action": "US carries out fresh strikes against Iran after tanker struck in Hormuz, escalating hostilities; Tankers struck in Strait of Hormuz; Navies raise threat level.",
+            "Location": "Strait of Hormuz, Iranian coast",
+            "Risk": "Escalation of hostilities, maritime security threats, global trade disruption.",
+            "Source": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/",
+            "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "gcaptain.com"
+        },
+        {
+            "Date": "Ongoing",
+            "Actor": "India, US, China, OpenAI, Trump administration, various tech companies",
+            "Action": "India approves 12 chip manufacturing projects; OpenAI releases GPT-5.6 to US-vetted users; Apple seeks chips from blacklisted Chinese company; Trump administration allows access to Anthropic\u2019s Mythos.",
+            "Location": "India, US, China, Global",
+            "Risk": "Geopolitical competition for technological dominance, supply chain vulnerabilities, national security implications, economic shifts.",
+            "Source": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxONmQ1YnBFelFsQjZoNTl1MEhLRW1INWROZ19BSkNwTDN0UkVtaEQzTFJvc0diX05rbm5WRVhCUlV4MFVVRXJiQmJfNUNrX0dYYzhEV1NCTGJIWC1WRGlDSmFBbzJjMmpHMWdaN21tNjNhZmxvS3NJQ3FGY2RoRGNhRlYzdmM3NWc3SnU2OG1raFp3Q3NPRmx0NTVaQnVCWXBFTTZXTFVtSTBzQVF5T2ZaclItMXZyaDlS0gG4AUFVX3lxTE42ZDVicEV6UWxCNmg1OXUwSEtFbUg1ZE5nX0FKQ3BMM3RSRW1oRDNMUm9zR2JfTmtublZFWEJSVXgwVVVFcmJCYl81Q2tfR1hjOERXU0JMYkhYLVZEaUNKYUFvMmMyakcxZ1o3bW02M2FmbG9Lc0lDcUZjZGhEY2FGVjN2Yzc1ZzdKdTY4bWtoWndDc09GbHQ1NVpCdUJZcEVNNldMVW1JMHNBUXlPZlpyUi0xdnJoOVI?oc=5",
+            "Title": "India approves 12 chip manufacturing projects with Rs 1.64 lakh crore investment pipeline - orissapost.com",
+            "Feed_Source": "Google News Live 1H",
+            "Publisher": "news.google.com"
+        },
+        {
+            "Date": "Ongoing",
+            "Actor": "Trump administration, European countries, NATO",
+            "Action": "Trump threatens 100% tariff on European countries imposing digital tax; NATO Secretary General discusses future of NATO and messages to Moscow.",
+            "Location": "Europe, US, NATO",
+            "Risk": "Transatlantic trade disputes, weakening of NATO alliance, shifts in global power dynamics.",
+            "Source": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMk9wTTc4MVlkc2M1TU83Q0UtMjI4UUFuUllwV01IQ0RxXzhCa3ZZaXBfX0dxOFFjanU5TElTSl9CV1NfX3VTLXNxeW14TFRPWjB4NlFkMldmNXVjaF9wd2lKbkJIRXh4NnFCRHAtaDNfRUprRk90cGV3M1lKY2NvUG1rMmpmQUY2R1kwc3hlWnE5eVhIYWJmUVA2a1p0VDBBNVFCZ2JPTmQ?oc=5",
+            "Title": "Trump threatens 100% tariff on European countries imposing digital tax - 1News",
+            "Feed_Source": "Google News Live 1H",
+            "Publisher": "news.google.com"
+        },
+        {
+            "Date": "Ongoing",
+            "Actor": "Philippines, US, Poland, Sweden, Romania, Germany",
+            "Action": "Philippines deploys US-made Triton naval drones in its western waters; Poland buys V-BAT drones for Baltic Sea; Sweden fits guns to Coast Guard vessels; Romania bolsters Black Sea fleet.",
+            "Location": "Philippines (western waters), Baltic Sea, Black Sea",
+            "Risk": "Increased regional tensions, maritime security concerns, arms race, potential for localized conflicts.",
+            "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
+            "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "c4isrnet.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Netanyahu (Israel), Hezbollah, US, Lebanon",
+            "Action": "Netanyahu states 'there is no room for two states'; Israeli drone strike hits southern Lebanon day after security deal; Hezbollah rejects deal.",
+            "Location": "Israel, Lebanon, Gaza",
+            "Risk": "Continued regional conflict, political instability, humanitarian crisis, potential for wider escalation.",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/netanyahu-says-there-no-room-two-states",
+            "Title": "Netanyahu says 'there is no room for two states'",
+            "Feed_Source": "Premium RSS",
             "Publisher": "middleeasteye.net"
         },
         {
@@ -207,109 +301,44 @@
             "Title": "Israeli drone strike hits southern Lebanon day after security deal",
             "Feed_Source": "Premium RSS",
             "Publisher": "al-monitor.com"
-        },
-        {
-            "Date": "2026-06-28",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "Report: Iraqi army enters Baghdad's Green Zone, tanks deployed",
-            "Headline": "Report: Iraqi army enters Baghdad's Green Zone, tanks deployed",
-            "Summary": "Report: Iraqi army enters Baghdad's Green Zone, tanks deployed",
-            "Risk": "HIGH",
-            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/report-iraqi-army-enters-baghdads-green-zone-tanks-deployed",
-            "Title": "Report: Iraqi army enters Baghdad's Green Zone, tanks deployed",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "middleeasteye.net"
-        },
-        {
-            "Date": "2026-06-28",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "Iran is learning that threats to global energy markets and vulnerable U.S. partners can generate pressure on the United States more quickly and reliably than Hezbollah rockets or militia attacks, writes @dbyman.",
-            "Headline": "Iran is learning that threats to global energy markets and vulnerable U.S. partners can generate pressure on the United States more quickly and reliably than Hezbollah rockets or militia attacks, writes @dbyman.",
-            "Summary": "Iran is learning that threats to global energy markets and vulnerable U.S. partners can generate pressure on the United States more quickly and reliably than Hezbollah rockets or militia attacks, writes @dbyman.",
-            "Risk": "HIGH",
-            "Source": "https://x.com/ForeignPolicy/status/2071051018071093626",
-            "Title": "Iran is learning that threats to global energy markets and vulnerable U.S. partners can generate pressure on the United States more quickly and reliably than Hezbollah rockets or militia attacks, writes @dbyman.",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "x.com"
-        },
-        {
-            "Date": "2026-06-28",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "Bahrain confirms alarm as Iran claims attacks on Gulf bases",
-            "Headline": "Bahrain confirms alarm as Iran claims attacks on Gulf bases",
-            "Summary": "Bahrain confirms alarm as Iran claims attacks on Gulf bases",
-            "Risk": "HIGH",
-            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/bahrain-confirms-alarm-iran-claims-attacks-gulf-bases",
-            "Title": "Bahrain confirms alarm as Iran claims attacks on Gulf bases",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "middleeasteye.net"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "U.S.",
-            "Action": "Conducted strikes against Iran over an attack on a Hormuz ship.",
-            "Location": "Iran, Strait of Hormuz",
-            "Risk": "Military escalation, regional instability, shipping disruption",
-            "Source": "https://foreignpolicy.com/2026/06/26/us-strikes-iran-cease-fire-violation-hormuz-ever-lovely-mou-trump/",
-            "Title": "U.S. Strikes Iran Over Attack on Hormuz Ship",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "foreignpolicy.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Unidentified (implied Iran/proxies)",
-            "Action": "Struck a second tanker, deepening the U.S.-Iran shipping crisis.",
-            "Location": "Strait of Hormuz",
-            "Risk": "Maritime security threat, economic impact, military escalation",
-            "Source": "https://gcaptain.com/second-tanker-struck-in-strait-of-hormuz-as-u-s-iran-shipping-crisis-deepens/",
-            "Title": "Second Tanker Struck in Strait of Hormuz as U.S.-Iran Shipping Crisis Deepens",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "gcaptain.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "U.S.",
-            "Action": "Launched a second night of strikes against Iran after a ship was hit by a drone.",
-            "Location": "Iran",
-            "Risk": "Sustained military conflict, increased regional tensions",
-            "Source": "https://www.aljazeera.com/news/2026/6/27/us-launches-second-night-of-strikes-against-iran-after-ship-struck-by-drone?traffic_source=rss",
-            "Title": "US launches second night of strikes on Iran after ship hit by drone",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "aljazeera.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Iran's IRGC",
-            "Action": "Claimed ballistic missile and drone operation against eight US military sites.",
-            "Location": "Kuwait (Ali Al Salem Air Base), Bahrain (US Fifth Fleet in Salman Port)",
-            "Risk": "Direct military confrontation, regional war, threat to US assets",
-            "Source": "https://x.com/RudawEnglish/status/2071034224170188901",
-            "Title": "#LATEST: Iran\u2019s IRGC said it carried out a joint ballistic missile and drone operation on Sunday morning against eight US military sites at Ali Al Salem Air Base in Kuwait and the US Fifth Fleet in Bahrain\u2019s Salman Port, in response to earlier US strikes on five Iranian targets.",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "x.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Houthis",
-            "Action": "Attacked Israel and announced a ban on Israeli vessels in the Red Sea.",
-            "Location": "Red Sea, Israel",
-            "Risk": "Maritime trade disruption, regional conflict expansion, humanitarian crisis",
-            "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-            "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
-            "Feed_Source": "Maritime Deep Scrape",
-            "Publisher": "news.google.com"
         }
     ],
     "sources": [
         {
+            "title": "Bahrain calls on residents to seek shelter after warning",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/bahrain-sounds-sirens-after-iranian-claims-gulf-attacks"
+        },
+        {
+            "title": "Netanyahu says 'there is no room for two states'",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/netanyahu-says-there-no-room-two-states"
+        },
+        {
             "title": "US says no casualties reported in Bahrain and Kuwait attacks by Iran",
             "url": "https://www.middleeasteye.net/live-blog/live-blog-update/us-says-no-casualties-reported-bahrain-and-kuwait-attacks-iran"
+        },
+        {
+            "title": "#LATEST: Iran\u2019s IRGC said it carried out a joint ballistic missile and drone operation on Sunday morning against eight US military sites at Ali Al Salem Air Base in Kuwait and the US Fifth Fleet in Bahrain\u2019s Salman Port, in response to earlier US strikes on five Iranian targets.",
+            "url": "https://x.com/RudawEnglish/status/2071034224170188901"
+        },
+        {
+            "title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
+            "url": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/"
+        },
+        {
+            "title": "India approves 12 chip manufacturing projects with Rs 1.64 lakh crore investment pipeline - orissapost.com",
+            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxONmQ1YnBFelFsQjZoNTl1MEhLRW1INWROZ19BSkNwTDN0UkVtaEQzTFJvc0diX05rbm5WRVhCUlV4MFVVRXJiQmJfNUNrX0dYYzhEV1NCTGJIWC1WRGlDSmFBbzJjMmpHMWdaN21tNjNhZmxvS3NJQ3FGY2RoRGNhRlYzdmM3NWc3SnU2OG1raFp3Q3NPRmx0NTVaQnVCWXBFTTZXTFVtSTBzQVF5T2ZaclItMXZyaDlS0gG4AUFVX3lxTE42ZDVicEV6UWxCNmg1OXUwSEtFbUg1ZE5nX0FKQ3BMM3RSRW1oRDNMUm9zR2JfTmtublZFWEJSVXgwVVVFcmJCYl81Q2tfR1hjOERXU0JMYkhYLVZEaUNKYUFvMmMyakcxZ1o3bW02M2FmbG9Lc0lDcUZjZGhEY2FGVjN2Yzc1ZzdKdTY4bWtoWndDc09GbHQ1NVpCdUJZcEVNNldMVW1JMHNBUXlPZlpyUi0xdnJoOVI?oc=5"
+        },
+        {
+            "title": "Trump threatens 100% tariff on European countries imposing digital tax - 1News",
+            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMk9wTTc4MVlkc2M1TU83Q0UtMjI4UUFuUllwV01IQ0RxXzhCa3ZZaXBfX0dxOFFjanU5TElTSl9CV1NfX3VTLXNxeW14TFRPWjB4NlFkMldmNXVjaF9wd2lKbkJIRXh4NnFCRHAtaDNfRUprRk90cGV3M1lKY2NvUG1rMmpmQUY2R1kwc3hlWnE5eVhIYWJmUVA2a1p0VDBBNVFCZ2JPTmQ?oc=5"
+        },
+        {
+            "title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
+            "url": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/"
+        },
+        {
+            "title": "Netanyahu says 'there is no room for two states'",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/netanyahu-says-there-no-room-two-states"
         },
         {
             "title": "Netanyahu calls Lebanon deal a \u2018massive blow\u2019 to Iran",
@@ -374,38 +403,6 @@
         {
             "title": "Israeli drone strike hits southern Lebanon day after security deal",
             "url": "https://www.al-monitor.com/originals/2026/06/israeli-drone-strike-hits-southern-lebanon-day-after-security-deal"
-        },
-        {
-            "title": "Report: Iraqi army enters Baghdad's Green Zone, tanks deployed",
-            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/report-iraqi-army-enters-baghdads-green-zone-tanks-deployed"
-        },
-        {
-            "title": "Iran is learning that threats to global energy markets and vulnerable U.S. partners can generate pressure on the United States more quickly and reliably than Hezbollah rockets or militia attacks, writes @dbyman.",
-            "url": "https://x.com/ForeignPolicy/status/2071051018071093626"
-        },
-        {
-            "title": "Bahrain confirms alarm as Iran claims attacks on Gulf bases",
-            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/bahrain-confirms-alarm-iran-claims-attacks-gulf-bases"
-        },
-        {
-            "title": "U.S. Strikes Iran Over Attack on Hormuz Ship",
-            "url": "https://foreignpolicy.com/2026/06/26/us-strikes-iran-cease-fire-violation-hormuz-ever-lovely-mou-trump/"
-        },
-        {
-            "title": "Second Tanker Struck in Strait of Hormuz as U.S.-Iran Shipping Crisis Deepens",
-            "url": "https://gcaptain.com/second-tanker-struck-in-strait-of-hormuz-as-u-s-iran-shipping-crisis-deepens/"
-        },
-        {
-            "title": "US launches second night of strikes on Iran after ship hit by drone",
-            "url": "https://www.aljazeera.com/news/2026/6/27/us-launches-second-night-of-strikes-against-iran-after-ship-struck-by-drone?traffic_source=rss"
-        },
-        {
-            "title": "#LATEST: Iran\u2019s IRGC said it carried out a joint ballistic missile and drone operation on Sunday morning against eight US military sites at Ali Al Salem Air Base in Kuwait and the US Fifth Fleet in Bahrain\u2019s Salman Port, in response to earlier US strikes on five Iranian targets.",
-            "url": "https://x.com/RudawEnglish/status/2071034224170188901"
-        },
-        {
-            "title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
-            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5"
         }
     ]
 }
