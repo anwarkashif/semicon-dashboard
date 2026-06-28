@@ -7,32 +7,18 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/Middle_East_Spectator/33977",
+        "Title": "Iran Targets Kurdish Separatists in Iraqi Kurdistan",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/nexta_live/119536",
         "Title": "Ukrainian Brigade Commander Found Dead",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44727",
-        "Title": "US Requests Israel Modify Agreement",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33977",
-        "Title": "Iran Targets Kurdish Separatists in Iraqi Kurdistan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33972",
-        "Title": "Yemen Houthis Mobilize Against Saudi-Backed Forces",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,11 +28,32 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Louisiana primary win puts Trump endorsee Letlow on path to US Senate",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/the-aftermath-of-venezuelas-deadly-earthquake?traffic_source=rss",
+        "Title": "The aftermath of Venezuela\u2019s deadly earthquake",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.france24.com/en/new-caledonia-provisional-results-show-anti-independence-parties-lead",
@@ -56,17 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32298",
-        "Title": "Russia Liberalizes Firearms Law",
+        "Source": "https://t.me/warmonitors/44727",
+        "Title": "US Requests Israel Modify Agreement",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss",
-        "Title": "Europe's heatwave linked to 1,300 deaths, WHO says, as Germany hits record 41.7C",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
