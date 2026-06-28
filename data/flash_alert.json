@@ -7,20 +7,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33955",
-        "Title": "Airstrikes Hit Issa Airbase in Bahrain and Ali Al-Salem Airbase in Kuwait",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33962",
-        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://t.me/Middle_East_Spectator/33956",
         "Title": "US Forces Shut Down Baghdad Green Zone",
         "Feed_Source": "WAR MONITOR",
@@ -30,6 +16,13 @@
     {
         "Source": "https://t.me/Middle_East_Spectator/33960",
         "Title": "Iraq Arrests Parliament Members in Green Zone",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33955",
+        "Title": "Airstrikes Hit Issa Airbase in Bahrain and Ali Al-Salem Airbase in Kuwait",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -49,6 +42,20 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://www.cisa.gov/resources-tools/resources/using-sase-modern-tic-30-solution",
+        "Title": "Using SASE in a Modern TIC 3.0 Solution",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89470",
+        "Title": "Bahrain Residents Report Hearing Explosion",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://t.me/intelslava/89463",
         "Title": "Iraqi Security Forces Detain People in Baghdad",
         "Feed_Source": "WAR MONITOR",
@@ -60,13 +67,6 @@
         "Title": "Iraq Deploys Intensive Security Near Baghdad Airport",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/2026/jun/28/new-caledonia-polls-open-in-first-local-vote-in-the-french-territory-since-2019",
-        "Title": "New Caledonia polls open in first local vote in the French territory since 2019",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
