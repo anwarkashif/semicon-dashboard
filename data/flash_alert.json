@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Strikes Zaporizhzhia, Injuring 8 Including 2 Children",
+        "Title": "Iran Says Strait of Hormuz Passage Requires IRGC Coordination",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61582",
+        "Title": "Israel Kills Gunmen in Southern Syria",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cnbc.com/2026/06/28/trump-threatens-iran-with-annihilation-kuwait-bahrain-report-attacks.html",
@@ -28,13 +35,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119512",
-        "Title": "Russia Prepares New Mobilization After Elections",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -49,24 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/southfronteng/61582",
-        "Title": "Israel Kills Gunmen in Southern Syria",
+        "Source": "https://www.nytimes.com/live/2026/06/28/world/venezuela-earthquake",
+        "Title": "Venezuela Live Updates: Rescuers Battle Through Aftershocks in Search for Survivors",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/28/iraq-security-forces-arrest-several-officials-in-anticorruption-crackdown?traffic_source=rss",
-        "Title": "Iraq security forces arrest several officials in anticorruption crackdown",
+        "Source": "https://t.me/nexta_live/119519",
+        "Title": "Russia Introduces Emergency Measures Amid Fuel Crisis",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
