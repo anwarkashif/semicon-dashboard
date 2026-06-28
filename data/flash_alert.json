@@ -7,8 +7,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33962",
-        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
+        "Source": "https://t.me/nexta_live/119512",
+        "Title": "Russia Prepares New Mobilization After Elections",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33968",
+        "Title": "\u2014 \ud83c\uddee\ud83c\uddf6 NEW: Bengen Rekani, the Iraqi Minister of Construction, Housing, Municipalities and Public Works, has been arrested",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -16,13 +23,6 @@
     {
         "Source": "https://t.me/rybar_in_english/32285",
         "Title": "US Pentagon Expands AI Role in Military Operations",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89462",
-        "Title": "Iraq Deploys Intensive Security Near Baghdad Airport",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
@@ -42,31 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.politico.eu/article/about-1000-deaths-in-france-attributable-to-heatwave/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "About 1,000 deaths in France attributable to heat wave",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Venezuela Government Accused of Politicizing Quake Relief",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/features/2026/6/28/between-pain-and-fear-gaza-children-bear-cost-of-ongoing-israeli-attacks?traffic_source=rss",
-        "Title": "\u2018Between pain and fear\u2019: Gaza children bear cost of ongoing Israeli attacks",
+        "Source": "https://www.france24.com/en/venezuela-search-enters-its-third-day-the-window-for-finding-survivors-is-rapidly-closing",
+        "Title": "Venezuela: Search enters its third day, the window for finding survivors is rapidly closing",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/venezuelan-earthquake-death-toll-rises-amid-increasingly-dire-search?traffic_source=rss",
-        "Title": "Venezuelan earthquake death toll rises amid increasingly dire search",
+        "Source": "https://www.npr.org/2026/06/28/nx-s1-5873413/venezuela-earthquake",
+        "Title": "\"If you are alive, make any noise\": Venezuela searches rubble on day four",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/live/2026/06/27/world/venezuela-earthquake",
-        "Title": "Venezuela Live Updates: Chaotic Rush to Help Victims Delays Some Rescues",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "npr.org",
         "threat_level": "WATCH"
     }
 ]
