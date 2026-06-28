@@ -1,14 +1,14 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran State Media Says Country Must Pursue Atomic Bomb",
+        "Title": "Putin Claims West Failing to Inflict Strategic Defeat on Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/araghchi-strait-of-hormuz-remains-under-iranian-control-for-30-days?traffic_source=rss",
-        "Title": "Araghchi: Strait of Hormuz remains under Iranian control for 30 days",
+        "Source": "https://www.aljazeera.com/news/2026/6/28/ukraine-says-it-attacked-two-russian-oil-refineries?traffic_source=rss",
+        "Title": "Ukraine says it attacked two Russian oil refineries",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
@@ -21,8 +21,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/28/ukraine-says-it-attacked-two-russian-oil-refineries?traffic_source=rss",
-        "Title": "Ukraine says it attacked two Russian oil refineries",
+        "Source": "https://www.aljazeera.com/news/2026/6/28/why-is-article-5-of-mou-causing-confrontations-in-the-strait-of-hormuz?traffic_source=rss",
+        "Title": "Why is Article 5 of MoU causing confrontations in the Strait of Hormuz?",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/araghchi-strait-of-hormuz-remains-under-iranian-control-for-30-days?traffic_source=rss",
+        "Title": "Araghchi: Strait of Hormuz remains under Iranian control for 30 days",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
@@ -42,31 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119527",
-        "Title": "Russians Clash Over Gasoline in Moscow",
+        "Source": "https://t.me/Middle_East_Spectator/33972",
+        "Title": "Yemen Houthis Mobilize Against Saudi-Backed Forces",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.dw.com/en/saudi-aramco-helicopter-crashes-all-14-passengers-killed/a-77744020?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Saudi Aramco helicopter crashes, all 14 passengers killed",
+        "Source": "https://www.nytimes.com/2026/06/28/world/americas/rescue-dogs-canine-units-earthquake-venezuela.html",
+        "Title": "Dozens of Dogs Join Search for Venezuela Quake Survivors",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/28/why-is-article-5-of-mou-causing-confrontations-in-the-strait-of-hormuz?traffic_source=rss",
-        "Title": "Why is Article 5 of MoU causing confrontations in the Strait of Hormuz?",
+        "Source": "https://t.me/rybar_in_english/32295",
+        "Title": "UK Police Use AI to Assign Risk Scores to Residents",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
