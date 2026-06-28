@@ -1,10 +1,24 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iranian Attack Damages Residential Building in Bahrain",
+        "Title": "Iranian Attack Damages Residential Building in Muharraq, Bahrain",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32285",
+        "Title": "US Pentagon Expands AI Role in Military Operations",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33962",
+        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89453",
@@ -12,27 +26,6 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33960",
-        "Title": "Iraq Arrests Parliament Members in Green Zone",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33956",
-        "Title": "US Forces Shut Down Baghdad Green Zone",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33968",
-        "Title": "\u2014 \ud83c\uddee\ud83c\uddf6 NEW: Bengen Rekani, the Iraqi Minister of Construction, Housing, Municipalities and Public Works, has been arrested",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -65,6 +58,13 @@
     {
         "Source": "https://t.me/intelslava/89470",
         "Title": "Bahrain Residents Report Hearing Explosion",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89463",
+        "Title": "Iraqi Security Forces Detain People in Baghdad",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
