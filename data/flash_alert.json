@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Strike Damages Key Railway Bridge in Luhansk Oblast",
+        "Title": "Iran Claims Sole Control of Strait of Hormuz for 30 Days",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33962",
+        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,18 +21,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33968",
-        "Title": "\u2014 \ud83c\uddee\ud83c\uddf6 NEW: Bengen Rekani, the Iraqi Minister of Construction, Housing, Municipalities and Public Works, has been arrested",
+        "Source": "https://t.me/intelslava/89462",
+        "Title": "Iraq Deploys Intensive Security Near Baghdad Airport",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33962",
-        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,11 +42,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "Source": "https://www.politico.eu/article/about-1000-deaths-in-france-attributable-to-heatwave/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "About 1,000 deaths in France attributable to heat wave",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.aljazeera.com/features/2026/6/28/between-pain-and-fear-gaza-children-bear-cost-of-ongoing-israeli-attacks?traffic_source=rss",
