@@ -1,24 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iranian Lawmakers: Strait of Hormuz Will Not Return to Pre-War State",
+        "Title": "Hezbollah Drone Destroys Israeli Merkava Tank in Southern Lebanon",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33977",
-        "Title": "Iran Targets Kurdish Separatists in Iraqi Kurdistan",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/israeli-forces-bulldoze-olive-groves-in-the-occupied-west-bank?traffic_source=rss",
+        "Title": "Israeli forces bulldoze olive groves in the occupied West Bank",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44728",
+        "Title": "Israel Threatens Lebanese Villages in South",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119536",
-        "Title": "Ukrainian Brigade Commander Found Dead",
+        "Source": "https://t.me/intelslava/89504",
+        "Title": "Russian Troops Approach Slavyansk",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -35,38 +42,31 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Louisiana primary win puts Trump endorsee Letlow on path to US Senate",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/the-aftermath-of-venezuelas-deadly-earthquake?traffic_source=rss",
-        "Title": "The aftermath of Venezuela\u2019s deadly earthquake",
+        "Source": "https://www.aljazeera.com/video/inside-story/2026/6/28/can-the-icj-help-end-the-war-in-the-eastern-drc?traffic_source=rss",
+        "Title": "Can the ICJ help end the war in the eastern DRC?",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/new-caledonia-provisional-results-show-anti-independence-parties-lead",
-        "Title": "New Caledonia: Provisional results show anti-independence parties lead",
+        "Source": "https://www.nytimes.com/2026/06/28/world/europe/iran-us-strait-of-hormuz-peace-talks.html",
+        "Title": "Iran Risks Peace Talks With U.S. to Maintain Leverage Over Strait",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/warmonitors/44727",
-        "Title": "US Requests Israel Modify Agreement",
+        "Source": "https://www.nytimes.com/2026/06/27/world/americas/us-officials-frustrated-with-exiled-venezuelan-leaders-call-for-help.html",
+        "Title": "U.S. Officials Said to Be Frustrated With Machado\u2019s Call for Help",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
