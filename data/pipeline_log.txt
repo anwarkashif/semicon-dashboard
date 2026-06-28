@@ -1879,3 +1879,14 @@
 2026-06-28 14:18:27,683 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
 2026-06-28 14:18:37,719 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-28 14:18:50,818 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-28 15:18:02,886 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-28 15:18:17,101 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-28 15:18:17,140 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-28 15:18:17,225 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-28 15:18:17,226 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-28 15:18:27,274 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-28 15:18:27,362 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-28 15:18:27,364 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-28 15:18:27,364 - INFO - Rotating to API Key 2
+2026-06-28 15:18:30,403 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-28 15:18:46,045 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
