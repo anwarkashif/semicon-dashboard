@@ -4,6 +4,48 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Iran and Lebanon speakers discuss Israel\u2019s war",
+        "Headline": "Iran and Lebanon speakers discuss Israel\u2019s war",
+        "Summary": "Iran and Lebanon speakers discuss Israel\u2019s war",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-and-lebanon-speakers-discuss-israels-war",
+        "Title": "Iran and Lebanon speakers discuss Israel\u2019s war",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-06-28",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Captain David Chazot's mother cried at his funeral: \"Enough with this bogus war\"",
+        "Headline": "Captain David Chazot's mother cried at his funeral: \"Enough with this bogus war\"",
+        "Summary": "Captain David Chazot's mother cried at his funeral: \"Enough with this bogus war\"",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2071258641106100527",
+        "Title": "Captain David Chazot's mother cried at his funeral: \"Enough with this bogus war\"",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-28",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran Asserts Sole Control of Hormuz, Warns Challenges Will Bring More Violence",
+        "Headline": "Iran Asserts Sole Control of Hormuz, Warns Challenges Will Bring More Violence",
+        "Summary": "Iran Asserts Sole Control of Hormuz, Warns Challenges Will Bring More Violence",
+        "Risk": "HIGH",
+        "Source": "https://www.wsj.com/world/middle-east/iran-asserts-sole-control-of-hormuz-warns-challenges-will-bring-more-violence-5abea3c7",
+        "Title": "Iran Asserts Sole Control of Hormuz, Warns Challenges Will Bring More Violence",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "wsj.com"
+    },
+    {
+        "Date": "2026-06-28",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Helicopter Crash Near Major Saudi Oil Refinery Kills 14 People",
         "Headline": "Helicopter Crash Near Major Saudi Oil Refinery Kills 14 People",
         "Summary": "Helicopter Crash Near Major Saudi Oil Refinery Kills 14 People",
@@ -267,38 +309,5 @@
         "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
         "Feed_Source": "Premium RSS",
         "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "US Military (Army, Marines), Defense Industry (Germany, Philippines)",
-        "Action": "Developing and deploying Agentic-AI tools for target options; algorithmic decision-making in warfare; Marines expanding AI operational reporting; German counter-drone startup scaling production; Philippines deploying US-made naval drones.",
-        "Location": "Global (US, Germany, Philippines defense initiatives)",
-        "Risk": "Autonomous warfare ethics, accelerated decision cycles in conflict, new arms race, potential for miscalculation, cyber vulnerabilities.",
-        "Source": "https://www.defenseone.com/technology/2026/06/agentic-ai-tool-aims-give-us-commanders-new-target-options-within-seconds/414491/",
-        "Title": "Agentic-AI tool aims to give US commanders new target options \u2018within seconds\u2019",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defenseone.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Bank for International Settlements (BIS), Global Investors, AI Industry (Google, Meta, Samsung, SK)",
-        "Action": "BIS warns of potential 'lengthy investment bust' due to AI 'exuberance'; AI demand strains capacity; Samsung and SK investing heavily in chip clusters for AI.",
-        "Location": "Global Economy, Financial Markets, South Korea (chip clusters)",
-        "Risk": "Economic instability, market correction, tech bubble burst, impact on global financial systems, supply chain vulnerabilities.",
-        "Source": "https://www.ft.com/content/e81ce414-e4bd-4e8c-bac7-94f7bf17def4",
-        "Title": "AI \u2018exuberance\u2019 risks ending in lengthy investment bust, BIS warns",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
-    },
-    {
-        "Date": "Ongoing",
-        "Actor": "Israel, Hezbollah, Lebanese Minister, Syrian forces, Palestinian groups",
-        "Action": "Israeli soldier killed in Southern Lebanon; Israeli forces damage heritage sites in Lebanon; Israeli soldiers shoot journalists in Syria; Israeli extremists terrorizing Palestinian Christians; Israel making war on West Bank farmers.",
-        "Location": "Southern Lebanon, Syrian village, West Bank, Palestinian Christian sites",
-        "Risk": "Regional conflict escalation, humanitarian crisis, destabilization of Levant, international condemnation, increased civilian casualties.",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-soldier-killed-southern-lebanon",
-        "Title": "Israeli soldier killed in southern Lebanon",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "middleeasteye.net"
     }
 ]
