@@ -1,17 +1,24 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drone Strike Collapses Bridge in Crimea's Rozdolne",
+        "Title": "Explosion Reported Near Kirovske, Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44727",
+        "Title": "US Requests Israel Modify Agreement",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/Middle_East_Spectator/33977",
         "Title": "Iran Targets Kurdish Separatists in Iraqi Kurdistan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/nexta_live/119530",
@@ -25,20 +32,6 @@
         "Title": "Yemen Houthis Mobilize Against Saudi-Backed Forces",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/28/ukraine-says-it-attacked-two-russian-oil-refineries?traffic_source=rss",
-        "Title": "Ukraine says it attacked two Russian oil refineries",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89489",
-        "Title": "US Prepares for War of Attrition with Mass Missile Production",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,22 +42,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.npr.org/2026/06/28/nx-s1-5872458/brazil-trade-us-tariffs-europe",
-        "Title": "Trade tensions shake up Brazil's caipirinha spirit",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/new-caledonia-provisional-results-show-anti-independence-parties-lead",
+        "Title": "New Caledonia: Provisional results show anti-independence parties lead",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/iraq-arrests-senior-officials-in-anti-corruption-raids?traffic_source=rss",
-        "Title": "Iraq arrests senior officials in anti-corruption raids",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119531",
-        "Title": "Poland Seeks Annual Payments from Germany for Nazi Victims",
+        "Source": "https://t.me/rybar_in_english/32298",
+        "Title": "Russia Liberalizes Firearms Law",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
