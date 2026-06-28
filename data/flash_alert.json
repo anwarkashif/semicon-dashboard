@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Explosion Reported Near Kirovske, Crimea",
+        "Title": "Iranian Lawmakers: Strait of Hormuz Will Not Return to Pre-War State",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119536",
+        "Title": "Ukrainian Brigade Commander Found Dead",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -16,13 +23,6 @@
     {
         "Source": "https://t.me/Middle_East_Spectator/33977",
         "Title": "Iran Targets Kurdish Separatists in Iraqi Kurdistan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119530",
-        "Title": "Russians Withdraw Billions from Banks",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
@@ -49,13 +49,6 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.france24.com/en/new-caledonia-provisional-results-show-anti-independence-parties-lead",
         "Title": "New Caledonia: Provisional results show anti-independence parties lead",
         "Feed_Source": "WAR MONITOR",
@@ -67,6 +60,13 @@
         "Title": "Russia Liberalizes Firearms Law",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss",
+        "Title": "Europe's heatwave linked to 1,300 deaths, WHO says, as Germany hits record 41.7C",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
