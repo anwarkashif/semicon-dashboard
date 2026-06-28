@@ -3,6 +3,7 @@ import pandas as pd
 import json
 import os
 import re
+import glob # 🛑 THE FIX: Restored glob to fix the Trash crash
 from utils.data_helpers import get_brief_mappings, extract_tag, render_highlighted_text
 
 def render_trend_timelines():
@@ -134,7 +135,17 @@ def render_archived_flash_brief(dashboard_data, brief_title="ARCHIVE"):
     </div>
     """, unsafe_allow_html=True)
     
+    # Extract direct publisher URLs from structural dictionary payload items
     sources_list = dashboard_data.get('sources', [])
+    if not sources_list and dashboard_data.get('recent_actions'):
+        sources_list = []
+        for act in dashboard_data.get('recent_actions', []):
+            if isinstance(act, dict):
+                headline = act.get('Title') or act.get('Headline') or act.get('Action') or 'Verified Source'
+                url = act.get('Source') or act.get('Url') or '#'
+                if url != '#':
+                    sources_list.append({"title": headline, "url": url})
+
     if sources_list:
         st.markdown("<br>", unsafe_allow_html=True)
         clean_sources = []
@@ -145,7 +156,7 @@ def render_archived_flash_brief(dashboard_data, brief_title="ARCHIVE"):
                 clean_sources.append(src)
             elif isinstance(src, str):
                 if src.strip().lower() != 'nan':
-                    clean_sources.append({"title": src[:60] + "...", "url": src})
+                    clean_sources.append({"title": src[:50] + "...", "url": src})
                 
         if clean_sources:
             render_verified_sources(clean_sources)
@@ -187,12 +198,12 @@ def render_weekly_archives():
         if "Weekly Intelligence Brief" in selected_brief:
             render_archived_intel_brief(archived_data)
         elif "Weekly Tactical Brief" in selected_brief:
-            # 🛑 THE FIX: Dynamically auto-stitch the text and URLs without needing the sync button
+            # Dynamically auto-stitch the text and URLs 
             from utils.snippet_templates import get_weekly_tactical_template
             
             reconstructed_data = {"brief_raw": "", "sources": []}
             
-            # 1. Fetch text natively from the template engine
+            # Fetch text natively from the template engine
             live_intel = get_weekly_tactical_template()
             bluf = live_intel.get('bluf', '')
             exec_sum = live_intel.get('executive_summary', '')
@@ -216,7 +227,7 @@ def render_weekly_archives():
             
             reconstructed_data['brief_raw'] = "\n\n---\n\n".join(parts)
             
-            # 2. Automatically grab the URLs directly from the active live list
+            # Automatically grab the URLs directly from the active live list
             events_list = archived_data if isinstance(archived_data, list) else archived_data.get('recent_actions', [])
             
             derived_sources = []
@@ -229,7 +240,7 @@ def render_weekly_archives():
                         
             reconstructed_data['sources'] = derived_sources
 
-            # 3. Render it beautifully
+            # Render it beautifully
             render_archived_flash_brief(reconstructed_data, brief_title=selected_brief)
     else:
         st.warning("No Weekly Archives found.")
@@ -250,6 +261,7 @@ def render_monthly_archives():
         render_archived_intel_brief(archived_data)
     else:
         st.info("The Monthly Archive is currently empty. Reports will appear here upon completion of a monthly cycle.")
+
 
 def render_clean_archives():
     st.title("Clean Archives")
