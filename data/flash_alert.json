@@ -1,10 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Says Strait of Hormuz Passage Requires IRGC Coordination",
+        "Title": "Israel Confirms Continued Military Operations in Lebanon",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/middle-east/20260628-us-strikes-more-targets-in-iran-as-fragile-ceasefire-comes-under-renewed-strain",
+        "Title": "US strikes Iran again as Tehran hits Bahrain and Kuwait",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89479",
+        "Title": "Mines in Strait of Hormuz Block Shipping",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119519",
+        "Title": "Russia Introduces Emergency Measures Amid Fuel Crisis",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/southfronteng/61582",
@@ -14,36 +35,8 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/28/trump-threatens-iran-with-annihilation-kuwait-bahrain-report-attacks.html",
-        "Title": "Trump again threatens Iran with annihilation as Kuwait and Bahrain report attacks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/live/2026/06/28/world/us-iran-strikes-hormuz",
-        "Title": "Mideast Live Updates: U.S. and Iran Trade Attacks With Few Signs of De-escalation",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44722",
-        "Title": "Israel Experiences Car Explosions in Multiple Cities",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
@@ -56,6 +49,13 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://www.nytimes.com/2026/06/28/world/europe/trump-lutnick-sons-kazakhstan.html",
+        "Title": "Trump Cut a Billion-Dollar Mining Deal. His Sons Stand to Profit.",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.nytimes.com/live/2026/06/28/world/venezuela-earthquake",
         "Title": "Venezuela Live Updates: Rescuers Battle Through Aftershocks in Search for Survivors",
         "Feed_Source": "WAR MONITOR",
@@ -63,10 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119519",
-        "Title": "Russia Introduces Emergency Measures Amid Fuel Crisis",
+        "Source": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQLWZrOHJxWE02S0tsQWRVS1k3VHFkMzdHSV92bUhyZXpGNEt5VG5NT0tiM0tlYllwVE55Mm5pVWF3MS1xTWVjRlFValFRUlc2ZjdLb2J5V0lDY3RzNnkxcE5ub1NvMXZxODg5VzBQbU80M09PaEdOckpCbDZEVTItNlNOSUxNNlN4MHRqbnpPUGN3OG9aUEFrTWFzX1I4YTR4Y09weTVNeFU5MjV4WlZETXhGTElIekVVUjhEY3p2M1NyWHFNMHhkVFRn?oc=5",
+        "Title": "Multi-country Bundibugyo Ebola Virus Disease Outbreak - Situation Report No. 6 - ReliefWeb",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
