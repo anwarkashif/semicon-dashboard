@@ -9,7 +9,7 @@ def render_trend_timelines():
     st.title("Macro Trends & Timelines")
     st.markdown("Tracking the volume of Geopolitical Actions and Supply Chain Risks across historical briefs.")
     
-    archive_mapping = get_brief_mappings('data')
+    archive_mapping, _ = get_brief_mappings('data', "Archive")
     if archive_mapping:
         sorted_brief_paths = list(archive_mapping.values())
         sorted_brief_paths.reverse() 
@@ -90,31 +90,20 @@ def render_archived_intel_brief(dashboard_data):
     st.markdown("<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>Strategic Conclusion</h3>", unsafe_allow_html=True)
     if text_final: render_highlighted_text(text_final, "All")
 
-    # 🛑 THE FIX: Safely parse sources to prevent rendering crashes
     sources_list = dashboard_data.get('sources', [])
     if sources_list:
-        clean_sources = []
-        for src in sources_list:
-            if isinstance(src, dict):
-                clean_sources.append(src)
-            elif isinstance(src, str):
-                clean_sources.append({"title": src[:50] + "...", "url": src})
-        if clean_sources:
-            render_verified_sources(clean_sources)
+        render_verified_sources(sources_list)
 
-# --- Dedicated Cleaner Renderer for Archived Executive Flash Briefs ---
-def render_archived_flash_brief(dashboard_data):
+def render_archived_flash_brief(dashboard_data, brief_title="ARCHIVE"):
     from features.tactical_features import render_verified_sources
     
-    st.markdown("<h2 style='color: #a855f7; margin-bottom: 15px; margin-top: 10px; font-size: 2em; letter-spacing: 1.5px; border-bottom: 2px solid #a855f7; padding-bottom: 5px;'>FLASH TO BRIEF ARCHIVE</h2>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='color: #a855f7; margin-bottom: 15px; margin-top: 10px; font-size: 2em; letter-spacing: 1.5px; border-bottom: 2px solid #a855f7; padding-bottom: 5px; text-transform: uppercase;'>{brief_title}</h2>", unsafe_allow_html=True)
     
     raw_text = dashboard_data.get('brief_raw', '')
     
-    # 🛑 THE FIX: Specific wording replacement requested
     if "[Not Extracted]" in raw_text:
         raw_text = raw_text.replace("[Not Extracted]", "*(Not part of the Brief due to presence of BLUF)*")
         
-    # 🛑 THE FIX: Upgrade Markdown headers to perfectly match Weekly Intelligence Brief style
     raw_text = raw_text.replace("**🎯 BLUF:**", "<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>🎯 BLUF (Bottom Line Up Front)</h3>")
     raw_text = raw_text.replace("**📋 EXECUTIVE SUMMARY:**", "<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>📋 Executive Summary</h3>")
     raw_text = raw_text.replace("**🕸️ THREAT NARRATIVE:**", "<h3 style='color:#00bfff; font-size:22px; margin-top: 20px; margin-bottom: 0px;'>🕸️ Threat Narrative</h3>")
@@ -135,22 +124,37 @@ def render_archived_flash_brief(dashboard_data):
     sources_list = dashboard_data.get('sources', [])
     if sources_list:
         st.markdown("<br>", unsafe_allow_html=True)
-        clean_sources = []
-        for src in sources_list:
-            if isinstance(src, dict) and 'title' in src and 'url' in src:
-                clean_sources.append(src)
-            elif isinstance(src, str):
-                clean_sources.append({"title": src[:60] + "...", "url": src})
-                
-        if clean_sources:
-            render_verified_sources(clean_sources)
+        render_verified_sources(sources_list)
+
+# ==========================================
+# 🛑 NEW: TRI-ARCHIVE RENDERING SYSTEM
+# ==========================================
+
+def render_daily_archives():
+    st.title("Daily Archive")
+    st.caption("Access historical Executive Flash Briefs, Today's Snippets, and West Asia Intelligence.")
+    
+    archive_mapping, ordered_keys = get_brief_mappings('data', archive_category="Daily Archive")
+    
+    if archive_mapping and ordered_keys:
+        selected_brief = st.selectbox("Select Daily Brief:", ordered_keys)
+        st.info(f"Displaying: {selected_brief}")
+        
+        with open(archive_mapping[selected_brief], 'r', encoding='utf-8') as f:
+            archived_data = json.load(f)
+            
+        render_archived_flash_brief(archived_data, brief_title=selected_brief)
+    else:
+        st.warning("No Daily Archives found.")
 
 def render_archives():
-    st.title("Archives")
-    archive_mapping = get_brief_mappings('data')
+    st.title("Archive")
+    st.caption("Access historical Weekly Intelligence Briefs and Weekly Tactical Briefs.")
     
-    if archive_mapping:
-        selected_brief = st.selectbox("Select Past Brief:", list(archive_mapping.keys()))
+    archive_mapping, ordered_keys = get_brief_mappings('data', archive_category="Archive")
+    
+    if archive_mapping and ordered_keys:
+        selected_brief = st.selectbox("Select Weekly Brief:", ordered_keys)
         st.info(f"Displaying: {selected_brief}")
         
         with open(archive_mapping[selected_brief], 'r', encoding='utf-8') as f:
@@ -158,48 +162,36 @@ def render_archives():
         
         if "Weekly Intelligence Brief" in selected_brief:
             render_archived_intel_brief(archived_data)
-            
-        elif "Executive Flash Brief" in selected_brief:
-            render_archived_flash_brief(archived_data)
-            
         elif "Weekly Tactical Brief" in selected_brief:
             arch_raw = ""
             if isinstance(archived_data, dict):
                 if 'brief_raw' in archived_data and archived_data['brief_raw']:
                     arch_raw = archived_data['brief_raw']
-                    
             def format_html_text(text):
                 text = str(text)
                 text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
                 return text.replace('\n', '<br>')
-            
             st.markdown(format_html_text(arch_raw), unsafe_allow_html=True)
-                
-        else:
-            arch_raw = ""
-            if isinstance(archived_data, dict):
-                bluf = archived_data.get('bluf', archived_data.get('bottom_line_up_front', ''))
-                exec_sum = archived_data.get('executive_summary', '')
-                narrative = archived_data.get('threat_narrative', '')
-                risk = archived_data.get('risk_assessment', '')
-                forecast = archived_data.get('strategic_forecast', archived_data.get('strategic_outlook', ''))
-                
-                parts = []
-                if bluf: parts.append(f"**🎯 BLUF:**\n{bluf}")
-                if exec_sum: parts.append(f"**📋 EXECUTIVE SUMMARY:**\n{exec_sum}")
-                if narrative: parts.append(f"**🕸️ THREAT NARRATIVE:**\n{narrative}")
-                if risk: parts.append(f"**⚖️ RISK ASSESSMENT:**\n{risk}")
-                if forecast: parts.append(f"**🔭 STRATEGIC FORECAST:**\n{forecast}")
-                
-                arch_raw = "\n\n---\n\n".join(parts)
-                
-                if not arch_raw:
-                    arch_raw = "*(No synthesized text keys found in this payload)*"
-                    
-            t1 = extract_tag('EXEC', arch_raw) or arch_raw
-            st.markdown(t1.replace('$', r'\$'))
     else:
-        st.warning("No active archives found.")
+        st.warning("No Weekly Archives found.")
+
+def render_monthly_archives():
+    st.title("Monthly Archive")
+    st.caption("Access historical Monthly SemicoN Reports.")
+    
+    archive_mapping, ordered_keys = get_brief_mappings('data', archive_category="Monthly Archive")
+    
+    if archive_mapping and ordered_keys:
+        selected_brief = st.selectbox("Select Monthly Report:", ordered_keys)
+        st.info(f"Displaying: {selected_brief}")
+        
+        with open(archive_mapping[selected_brief], 'r', encoding='utf-8') as f:
+            archived_data = json.load(f)
+            
+        render_archived_intel_brief(archived_data)
+    else:
+        st.info("The Monthly Archive is currently empty. Reports will appear here upon completion of a monthly cycle.")
+
 
 def render_clean_archives():
     st.title("Clean Archives")
@@ -214,10 +206,11 @@ def render_clean_archives():
     </style>
     """, unsafe_allow_html=True)
     
-    archive_mapping = get_brief_mappings('data')
+    # Grab all files regardless of archive type so the admin can clean anything
+    archive_mapping, ordered_keys = get_brief_mappings('data', "All")
     
-    if archive_mapping:
-        archive_to_clean = st.selectbox("Select Brief to Clean:", list(archive_mapping.keys()))
+    if archive_mapping and ordered_keys:
+        archive_to_clean = st.selectbox("Select Brief to Clean:", ordered_keys)
         if st.button("🗑️ Move to Trash", type="primary"):
             old_path = archive_mapping[archive_to_clean]
             filename = os.path.basename(old_path)
@@ -241,10 +234,15 @@ def render_trash():
     </style>
     """, unsafe_allow_html=True)
     
-    trash_mapping = get_brief_mappings('trash')
+    trash_mapping, trash_keys = get_brief_mappings('trash', "All")
+    
+    if not trash_mapping:
+        files = glob.glob('trash/*.json')
+        trash_mapping = {os.path.basename(f): f for f in files}
+        trash_keys = list(trash_mapping.keys())
     
     if trash_mapping:
-        archive_to_manage = st.selectbox("Select Brief in Trash:", list(trash_mapping.keys()))
+        archive_to_manage = st.selectbox("Select Brief in Trash:", trash_keys)
         old_path = trash_mapping[archive_to_manage]
         filename = os.path.basename(old_path)
         

@@ -625,8 +625,17 @@ else:
         elif view_selection == "Trend Timelines":
             render_trend_timelines()
 
-        elif view_selection == "Archives":
+        elif view_selection == "Daily Archive":
+            from features.archive_features import render_daily_archives
+            render_daily_archives()
+            
+        elif view_selection == "Archive":
+            from features.archive_features import render_archives
             render_archives()
+            
+        elif view_selection == "Monthly Archive":
+            from features.archive_features import render_monthly_archives
+            render_monthly_archives()
 
         elif view_selection == "Clean Archives" and st.session_state['role'] == 'admin':
             render_clean_archives()

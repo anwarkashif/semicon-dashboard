@@ -112,16 +112,19 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         "West Asia Strategic Intel (Psyopoly)"
     ]
 
+    # 🛑 STRATEGIC PLACEMENT: Daily Archive above Archive above Monthly Archive
+    archive_options = ["Daily Archive", "Archive", "Monthly Archive"]
+
     if st.session_state.get('role') == 'admin':
         st.sidebar.info("Access Level: **Administrator**")
         if st.sidebar.button("Logout"):
             st.session_state['role'] = None
             st.rerun()
-        view_options = base_options + ["Trend Timelines", "Archives", "Global Threat Intercept (ShadowBroker)", "Clean Archives", "Trash"]
+        view_options = base_options + ["Trend Timelines"] + archive_options + ["Global Threat Intercept (ShadowBroker)", "Clean Archives", "Trash"]
     else:
         st.sidebar.info("Access Level: **Guest Viewer**")
         st.sidebar.caption("*(System Access Restricted)*")
-        view_options = base_options + ["Archives"]
+        view_options = base_options + archive_options
 
     st.sidebar.markdown("---")
     view_selection = st.sidebar.radio("Strategic Navigation", view_options)
@@ -137,48 +140,34 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         
         actor_set = set()
         
-        # 📊 THE 15-FACTOR VITAL ASPECT SYSTEM DICTIONARY
         strategic_taxonomy = [
-            # 1 & 2. Countries and Regions
             "United States", "US", "China", "Taiwan", "India", "Iran", "Russia", "Ukraine", "Israel", "Lebanon", "Germany", "Djibouti", "Thailand", "Eritrea", "Ethiopia",
             "Indo-Pacific", "West Asia", "Middle East", "MENA", "Africa", "Europe", "Americas", "Gaza", "Horn of Africa",
-            # 3. Government Departments & Agencies
             "CISA", "DoD", "MoD", "State Department", "Ministry", "Government",
-            # 4 & 5 & 11. Vital Events, Geo-Economics, Agreements, MoUs & Summits
             "Trade deal", "Tariff", "Export controls", "Agreement", "Embargo", "Sanctions", "Summit", "Bilateral", "Multilateral", "Visit",
-            # 6 & 7. Semiconductor, Rare Earth and Supply Chain News
             "Semiconductor", "Rare Earth", "Lithography", "Tape-out", "Foundry", "Fabless", "TSMC", "ASML", "Nvidia", "SMIC", "Intel", "Samsung", "Lithium", "Indium", "Cobalt", "Aluminium", "Supply Chain", "Vulnerabilities", "Disruption", "Shortage",
-            # 8. AI News and Developments
             "AI", "Artificial Intelligence", "Anthropic", "OpenAI", "AI Chip",
-            # 9. Loan, Subsidy, Financials, MoU, MoC
             "Loan", "Subsidy", "Financial Assistance", "MoU", "MoC", "Funding", "Investment",
-            # 10. Global Institutions, Blocks & Missions
             "NATO", "UN", "BRICS", "SCO", "ASEAN", "BRI", "Hormuz mission",
-            # 12 & 13 & 14. Humanitarian, War, Conflict, Tensions & Flashpoints
             "Humanitarian", "Rights groups", "Peace deal", "War", "Conflict", "Incursion", "Attack", "Drone strike", "Confrontation", "Kinetic action", "Troop movements", "Clashes", "Tensions", "Flashpoints", "Brink-of-war", "Standoff", "Threat", "Volatility",
-            # 15. Shipping Straits & Maritime News
             "Shipping strait", "Maritime", "Port", "Naval", "Strait of Hormuz", "Malacca Strait", "Suez Canal", "Chokepoint"
         ]
         
         text_to_scan = ""
         
-        # --- COLLECT RAW TEXT BASED ON SELECTION ---
         if view_selection == "Weekly Intelligence Brief":
             text_to_scan = str(raw_text)
             
         elif view_selection == "Weekly Tactical Brief":
             from utils.snippet_templates import get_weekly_tactical_template
             tac_brief = get_weekly_tactical_template()
-            # Combine all core generated strategic fields into one text block to parse
             text_to_scan = " ".join([str(tac_brief.get(k, '')) for k in ['bluf', 'executive_summary', 'risk_assessment', 'threat_narrative', 'predictive_analysis', 'recommendations', 'tactical_indicators']])
 
-        # --- EXECUTE THEMATIC KEYWORD SEARCH SCANNERS ---
         lower_scan_pool = text_to_scan.lower()
         for keyword in strategic_taxonomy:
             if keyword.lower() in lower_scan_pool:
                 actor_set.add(keyword)
         
-        # Clean up components from data frames if any are missing
         if view_selection == "Weekly Intelligence Brief" and dashboard_data and 'recent_actions' in dashboard_data:
             for row in dashboard_data['recent_actions']:
                 for key in ['Actor', 'actor', 'Location', 'location']:
@@ -189,7 +178,6 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
                             if len(clean_item) > 2 and clean_item.lower() in lower_scan_pool:
                                 actor_set.add(clean_item)
                                 
-        # Sort values alphabetically
         actor_list = sorted(list(actor_set))
         
         selected_actor = st.sidebar.selectbox("🔍 Highlight & Filter by Keyword:", ["All"] + actor_list)
