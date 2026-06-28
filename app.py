@@ -29,15 +29,14 @@ st.set_page_config(
 
 # 🫀 SILENT JS HEARTBEAT TO PREVENT BACKGROUND TAB FREEZING
 # This runs invisibly and stops the browser/HF from closing the WebSocket
-components.html(
+st.html(
     """
     <script>
         setInterval(() => {
             window.parent.postMessage('hf-stay-alive-ping', '*');
         }, 30000);
     </script>
-    """,
-    height=0, width=0
+    """
 )
 
 # ⬛ DEFAULT UI RESET CSS
@@ -166,7 +165,8 @@ else:
     
     from utils.data_helpers import clean_dataframe, extract_tag
     from features.advanced_features import render_threat_scoring, render_rag_interrogation, render_fab_chat
-    from features.archive_features import render_trend_timelines, render_archives, render_clean_archives, render_trash
+    # 🛑 THE FIX: Properly import the tri-archive rendering structure
+    from features.archive_features import render_trend_timelines, render_daily_archives, render_weekly_archives, render_monthly_archives, render_clean_archives, render_trash
     from features.editor_features import render_vetting_editor
     from features.sidebar_features import render_sidebar
     from features.weekly_orchestrator import render_full_weekly_brief
@@ -530,7 +530,7 @@ else:
         target_glow_sections = [
             "Executive Home", "Today's Snippet", "Weekly Tactical Brief", 
             "Weekly Intelligence Brief", "West Asia Strategic Intel (Psyopoly)", 
-            "Archives"
+            "Daily Archive", "Weekly Archive", "Monthly Archive"
         ]
         
         if view_selection in target_glow_sections:
@@ -559,7 +559,7 @@ else:
         if view_selection != "West Asia Strategic Intel (Psyopoly)":
             render_ticker_tape()
 
-        if view_selection not in ["Trend Timelines", "Archives"]:
+        if view_selection not in ["Trend Timelines", "Daily Archive", "Weekly Archive", "Monthly Archive"]:
             st.markdown(
                 """
                 <style>
@@ -629,9 +629,9 @@ else:
             from features.archive_features import render_daily_archives
             render_daily_archives()
             
-        elif view_selection == "Archive":
-            from features.archive_features import render_archives
-            render_archives()
+        elif view_selection == "Weekly Archive":
+            from features.archive_features import render_weekly_archives
+            render_weekly_archives()
             
         elif view_selection == "Monthly Archive":
             from features.archive_features import render_monthly_archives

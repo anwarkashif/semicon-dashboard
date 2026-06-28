@@ -87,7 +87,6 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
     }
     </style>
     """, unsafe_allow_html=True)
-    # ==========================================
 
     st.sidebar.image("logo.jpg", use_container_width=True)
     st.sidebar.markdown("""
@@ -99,9 +98,6 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
     """, unsafe_allow_html=True)
     st.sidebar.markdown("---")
 
-    # ==========================================
-    # 🚀 STEP 1: RENDER NAVIGATION MENU FIRST
-    # ==========================================
     st.sidebar.title("SemicoN Access")
 
     base_options = [
@@ -112,8 +108,8 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         "West Asia Strategic Intel (Psyopoly)"
     ]
 
-    # 🛑 STRATEGIC PLACEMENT: Daily Archive above Archive above Monthly Archive
-    archive_options = ["Daily Archive", "Archive", "Monthly Archive"]
+    # 🛑 THE FIX: "Weekly Archive" properly integrated into the trio
+    archive_options = ["Daily Archive", "Weekly Archive", "Monthly Archive"]
 
     if st.session_state.get('role') == 'admin':
         st.sidebar.info("Access Level: **Administrator**")
@@ -130,9 +126,6 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
     view_selection = st.sidebar.radio("Strategic Navigation", view_options)
     st.sidebar.markdown("---")
 
-    # ==========================================
-    # 🔍 STEP 2: ISOLATED THEMATIC GLOBAL FILTER LOGIC
-    # ==========================================
     selected_actor = "All" 
     
     if view_selection in ["Weekly Tactical Brief", "Weekly Intelligence Brief"]:
@@ -183,9 +176,6 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         selected_actor = st.sidebar.selectbox("🔍 Highlight & Filter by Keyword:", ["All"] + actor_list)
         st.sidebar.markdown("---")
 
-    # ==========================================
-    # 🌍 STEP 3: RENDER REGIONS & CONCEPTS
-    # ==========================================
     st.sidebar.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>Regions Covered</p>", unsafe_allow_html=True)
     
     region_checks = {

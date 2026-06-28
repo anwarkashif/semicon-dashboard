@@ -6,10 +6,9 @@ import pandas as pd
 import streamlit as st
 import datetime 
 
-def get_brief_mappings(directory, archive_category="Archive"):
+def get_brief_mappings(directory, archive_category="Weekly Archive"):
     files = glob.glob(f'{directory}/*.json')
     
-    # Sort files physically by server modification time so we process newest first
     files.sort(key=os.path.getmtime, reverse=True)
     
     mapping = {}
@@ -23,20 +22,33 @@ def get_brief_mappings(directory, archive_category="Archive"):
     for f in files:
         filename = os.path.basename(f)
         
-        if filename in exclude_files or filename.startswith('tactical_events') or filename.startswith('weekly_tactical_live'):
+        # 🛑 THE FIX: Actively block the "bug briefs" (brief_weekly_tactical_) from cluttering the dropdown
+        if filename in exclude_files or filename.startswith('tactical_events') or filename.startswith('brief_weekly_tactical'):
             continue
             
         try:
             with open(f, 'r', encoding='utf-8') as file:
                 d = json.load(file)
-                if not isinstance(d, dict): continue
+                # Ensure the official 'weekly_tactical_live.json' (which is a list) can be processed
+                if not isinstance(d, dict) and not isinstance(d, list): continue
                     
                 b_date = 'Unknown Date'
-                # Attempt to get the cleanest date possible for the display label
-                if 'title' in d and ' - ' in d['title']:
-                    extracted_date = str(d['title']).split(' - ')[-1].strip()
-                    if len(extracted_date) > 5: b_date = extracted_date
-                if b_date == 'Unknown Date': b_date = d.get('date', 'Unknown Date')
+                
+                # 🛑 THE FIX: Force the official timeframe date "June 19-26, 2026" onto the official brief
+                if filename == 'weekly_tactical_live.json':
+                    try:
+                        from utils.snippet_templates import get_weekly_tactical_template
+                        temp_data = get_weekly_tactical_template()
+                        if 'title' in temp_data and ' - ' in temp_data['title']:
+                            b_date = temp_data['title'].split(' - ')[-1].strip()
+                    except: pass
+
+                if b_date == 'Unknown Date' and isinstance(d, dict):
+                    if 'title' in d and ' - ' in d['title']:
+                        b_date = str(d['title']).split(' - ')[-1].strip()
+                    elif 'date' in d:
+                        b_date = d.get('date', 'Unknown Date')
+                        
                 if b_date == 'Unknown Date':
                     date_match = re.search(r'\d{4}-\d{2}-\d{2}', filename)
                     if date_match: b_date = date_match.group(0)
@@ -44,13 +56,12 @@ def get_brief_mappings(directory, archive_category="Archive"):
                         mtime = os.path.getmtime(f)
                         b_date = datetime.datetime.fromtimestamp(mtime).strftime('%Y-%m-%d')
                 
-                # 🏷️ Strict Categorization
                 display_name = ""
                 belongs_to = ""
                 
-                if 'weekly_tactical' in filename:
-                    display_name = f"Tactical Weekly Brief: Strategic Intelligence Synthesis - {b_date}"
-                    belongs_to = "Archive"
+                if filename == 'weekly_tactical_live.json' or 'weekly_tactical' in filename:
+                    display_name = f"Weekly Tactical Brief: Strategic Intelligence Synthesis - {b_date}"
+                    belongs_to = "Weekly Archive"
                 elif 'brief_flash' in filename or 'flash_brief' in filename or 'flash' in filename:  
                     display_name = f"Executive Flash Brief - {b_date}"
                     belongs_to = "Daily Archive"
@@ -68,14 +79,12 @@ def get_brief_mappings(directory, archive_category="Archive"):
                     belongs_to = "Daily Archive"
                 elif 'brief_' in filename:
                     display_name = f"Weekly Intelligence Brief - {b_date}"
-                    belongs_to = "Archive"
+                    belongs_to = "Weekly Archive"
                 else:
                     display_name = f"Intelligence Document - {b_date} ({filename})"
-                    belongs_to = "Archive"
+                    belongs_to = "Weekly Archive"
                     
-                # If the file belongs in the specific Archive Tab requested by the UI
                 if belongs_to == archive_category or archive_category == "All":
-                    # Prevent overwrites
                     original_display = display_name
                     counter = 1
                     while display_name in mapping:
@@ -84,16 +93,11 @@ def get_brief_mappings(directory, archive_category="Archive"):
                         counter += 1
                         
                     mapping[display_name] = f
-                    
-                    # Store the raw server modification time alongside the display name so we can sort the final list perfectly
                     ordered_keys.append({"display": display_name, "time": os.path.getmtime(f)})
                     
         except Exception: pass
             
-    # 🛑 THE STRICT FIX: Sort the final UI list explicitly by the actual file creation/modification time descending
     ordered_keys.sort(key=lambda x: x["time"], reverse=True)
-    
-    # Extract just the sorted display names for Streamlit to use
     final_sorted_list = [item["display"] for item in ordered_keys]
     
     return mapping, final_sorted_list

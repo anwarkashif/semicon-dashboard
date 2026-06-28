@@ -189,31 +189,73 @@ def render_weekly_tactical_brief(dashboard_data, text_summary, text_section_1, t
             if st.button("💾 Archive Brief (RAG Sync)", type="secondary", use_container_width=True):
                 try:
                     import datetime
-                    date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                    from huggingface_hub import HfApi
                     
-                    compiled_raw = f"EXEC: {intel_data.get('executive_summary', '')}\nTHREAT_NARRATIVE: {intel_data.get('threat_narrative', '')}\nRISK: {intel_data.get('risk_assessment', '')}\nPREDICTIVE: {intel_data.get('predictive_analysis', '')}\nRECOMMENDATIONS: {intel_data.get('recommendations', '')}"
+                    # 🛑 THE FIX: Pull the exact timeframe string for the file name so it aligns perfectly with your title
+                    if 'title' in intel_data and ' - ' in intel_data['title']:
+                        date_str = intel_data['title'].split(' - ')[-1].strip()
+                    else:
+                        date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                    
+                    bluf = intel_data.get('bluf', '')
+                    exec_sum = intel_data.get('executive_summary', '')
+                    tactical = intel_data.get('tactical_indicators', '')
+                    narrative = intel_data.get('threat_narrative', '')
+                    risk = intel_data.get('risk_assessment', '')
+                    pred = intel_data.get('predictive_analysis', '')
+                    rec = intel_data.get('recommendations', '')
+                    
+                    if isinstance(tactical, list):
+                        tactical = "\n".join([f"• {item}" for item in tactical])
+
+                    parts = []
+                    if bluf: parts.append(f"**🎯 BLUF:**\n{bluf}")
+                    if exec_sum: parts.append(f"**📋 EXECUTIVE SUMMARY:**\n{exec_sum}")
+                    if tactical: parts.append(f"**🚩 TACTICAL INDICATORS:**\n{tactical}")
+                    if narrative: parts.append(f"**🕸️ THREAT NARRATIVE:**\n{narrative}")
+                    if risk: parts.append(f"**⚖️ RISK ASSESSMENT:**\n{risk}")
+                    if pred: parts.append(f"**🔭 PREDICTIVE ANALYSIS:**\n{pred}")
+                    if rec: parts.append(f"**🛡️ STRATEGIC RECOMMENDATIONS:**\n{rec}")
+                    compiled_raw = "\n\n---\n\n".join(parts)
+                    
+                    daily_sources = []
+                    if df_actions is not None and not df_actions.empty:
+                        for _, row in df_actions.iterrows():
+                            headline = str(row.get('Headline', row.get('Action', 'Verified Source')))
+                            url = str(row.get('Source', row.get('Url', '#')))
+                            daily_sources.append({"title": headline, "url": url})
                     
                     archive_payload = {
                         "date": date_str,
+                        "title": f"Weekly Tactical Brief: Strategic Intelligence Synthesis - {date_str}",
                         "brief_raw": compiled_raw,
-                        "recent_actions": df_actions.to_dict('records') if df_actions is not None else []
+                        "recent_actions": df_actions.to_dict('records') if df_actions is not None else [],
+                        "sources": daily_sources
                     }
                     
-                    # 🛑 THE FIX: Saving the file DIRECTLY into 'data/' instead of 'data/weekly_tactical/'
                     os.makedirs('data', exist_ok=True)
                     archive_filename = f"data/brief_weekly_tactical_{date_str}.json"
                     
                     with open(archive_filename, 'w', encoding='utf-8') as f:
                         json.dump(archive_payload, f, indent=4)
                         
-                    st.success("✅ Brief permanently synced to RAG Archives!")
+                    HF_TOKEN = os.environ.get("HF_TOKEN")
+                    REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
+                    if HF_TOKEN and REPO_ID:
+                        api = HfApi()
+                        api.upload_file(path_or_fileobj=archive_filename, path_in_repo=archive_filename, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Weekly Tactical Archive")
+                        
+                    st.success("✅ Brief permanently synced to RAG Archives with Source URLs!")
                 except Exception as e:
                     st.error(f"Archive failed: {e}")
 
         with colC:
             try:
                 import datetime
-                date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                if 'title' in intel_data and ' - ' in intel_data['title']:
+                    date_str = intel_data['title'].split(' - ')[-1].strip()
+                else:
+                    date_str = datetime.datetime.now().strftime("%Y-%m-%d")
                 
                 intel_data.setdefault('date', date_str)
                 intel_data.setdefault('classification', 'CONFIDENTIAL // OSINT')
