@@ -1,28 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Strikes Konotop With Hypersonic Missile",
+        "Title": "Iran's IRGC Claims Strikes on US Forces in Kuwait and Bahrain",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89441",
-        "Title": "US Conducts Airstrike on Qeshm Island",
+        "Source": "https://t.me/Middle_East_Spectator/33955",
+        "Title": "Airstrikes Hit Issa Airbase in Bahrain and Ali Al-Salem Airbase in Kuwait",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89439",
-        "Title": "US Airstrike Hits Iranian Naval Base",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33944",
-        "Title": "Iran Warns of Continued Attacks",
+        "Source": "https://t.me/warmonitors/44719",
+        "Title": "UK Pledges 290 Million Pounds to Support Ukraine Energy",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
@@ -42,31 +35,38 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/27/world/americas/venezuela-earthquakes-doctors-rescues.html",
-        "Title": "12 Hours With Venezuelan Doctors Searching for Earthquake Survivors",
+        "Source": "https://t.me/intelslava/89453",
+        "Title": "Iranian Ballistic Missile Flies Over Kuwait",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/27/world/americas/venezuela-earthquake-volunteers-traffic.html",
-        "Title": "A Rush of Volunteers in Venezuela Has Slowed Rescue Efforts",
+        "Source": "https://t.me/Middle_East_Spectator/33956",
+        "Title": "US Forces Shut Down Baghdad Green Zone",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/australia-news/live/2026/jun/28/australia-news-live-sunday-nsw-shark-spotting-drones-politics-ntwnfb",
-        "Title": "Australia news live: shark-spotting drones to patrol NSW beaches year-round",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/anger-grows-in-venezuela-as-citizens-blocked-from-aiding-earthquake-rescue?traffic_source=rss",
+        "Title": "Anger grows in Venezuela as citizens blocked from aiding earthquake rescue",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33953",
+        "Title": "US Embassy in Baghdad Sees Heavy Military Movements",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33951",
+        "Title": "Iranian Impacts Reported in Kuwait",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
