@@ -1,30 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drone Strike Collapses Bridge in Crimea's Rozdolne",
+        "Title": "Explosion Reported Near Kirovske, Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44727",
+        "Title": "US Requests Israel Modify Agreement",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/Middle_East_Spectator/33977",
         "Title": "Iran Targets Kurdish Separatists in Iraqi Kurdistan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33972",
-        "Title": "Yemen Houthis Mobilize Against Saudi-Backed Forces",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/28/ukraine-says-it-attacked-two-russian-oil-refineries?traffic_source=rss",
-        "Title": "Ukraine says it attacked two Russian oil refineries",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -35,11 +28,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32295",
-        "Title": "UK Police Use AI to Assign Risk Scores to Residents",
+        "Source": "https://t.me/Middle_East_Spectator/33972",
+        "Title": "Yemen Houthis Mobilize Against Saudi-Backed Forces",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -56,17 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/6/28/three-firefighters-killed-in-us-wildfires-along-colorado-utah?traffic_source=rss",
-        "Title": "Three firefighters killed in US wildfires along Colorado\u2013Utah border",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
+        "Title": "Siemens WinCC Certificate Manager",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/new-caledonia-provisional-results-show-anti-independence-parties-lead",
+        "Title": "New Caledonia: Provisional results show anti-independence parties lead",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.npr.org/2026/06/28/nx-s1-5872458/brazil-trade-us-tariffs-europe",
-        "Title": "Trade tensions shake up Brazil's caipirinha spirit",
+        "Source": "https://t.me/rybar_in_english/32298",
+        "Title": "Russia Liberalizes Firearms Law",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
