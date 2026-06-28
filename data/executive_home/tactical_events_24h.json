@@ -4,6 +4,34 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israel detonates tunnel, strikes south Lebanon",
+        "Headline": "Israel detonates tunnel, strikes south Lebanon",
+        "Summary": "Israel detonates tunnel, strikes south Lebanon",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/06/israel-detonates-tunnel-strikes-south-lebanon",
+        "Title": "Israel detonates tunnel, strikes south Lebanon",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "al-monitor.com"
+    },
+    {
+        "Date": "2026-06-28",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
+        "Headline": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
+        "Summary": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/sports/2026/6/28/heightened-emotions-in-iran-after-team-melli-knocked-out-of-world-cup?traffic_source=rss",
+        "Title": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
+        "Date": "2026-06-28",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "US and Iran agree to resume Strait of Hormuz talks: Report",
         "Headline": "US and Iran agree to resume Strait of Hormuz talks: Report",
         "Summary": "US and Iran agree to resume Strait of Hormuz talks: Report",
@@ -12,6 +40,72 @@
         "Title": "US and Iran agree to resume Strait of Hormuz talks: Report",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "Recent",
+        "Actor": "US, Iran (implied hostile actors)",
+        "Action": "US carries out fresh strikes against Iran; Tankers struck, escalating hostilities",
+        "Location": "Strait of Hormuz, Iran",
+        "Risk": "High risk of full-scale military conflict, severe disruption of global oil supply and maritime trade",
+        "Source": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/",
+        "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "gcaptain.com"
+    },
+    {
+        "Date": "June 30",
+        "Actor": "United States, Iran",
+        "Action": "Agreed to halt strikes and hold consultations",
+        "Location": "Doha (for talks), Strait of Hormuz (context)",
+        "Risk": "Potential de-escalation of conflict, but outcome uncertain and fragile",
+        "Source": "https://x.com/tassagency_en/status/2071344357177729100",
+        "Title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "Recent",
+        "Actor": "Israel (IDF), Hezbollah",
+        "Action": "Attacked Hezbollah's underground infrastructure",
+        "Location": "Lebanon",
+        "Risk": "Escalation of Israel-Hezbollah conflict, regional instability, humanitarian impact",
+        "Source": "https://x.com/Haaretz/status/2071327884111729127",
+        "Title": "Netanyahu: The IDF attacked Hezbollah's underground infrastructure in Lebanon, the US was informed in advance",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "Recent",
+        "Actor": "Houthis",
+        "Action": "Attacked Israel, announced ban on Israeli vessels",
+        "Location": "Red Sea, Israel",
+        "Risk": "Expansion of regional conflict, severe disruption to international maritime trade routes",
+        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
+        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "Within weeks",
+        "Actor": "Aleksandar Vucic (Serbian President)",
+        "Action": "Announces resignation amidst anti-government protests",
+        "Location": "Serbia",
+        "Risk": "Political instability, potential for shifts in domestic and regional power dynamics",
+        "Source": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOamhNd3ZCelFLcXp1VVYtaGFVOWlidnh3ZHlmTXpsT19LaHBibkVQaGRnREdpZDlMY1c5bVdSMFRPR1RvcHdpZ2cxZHg1ZEdxSmctOWNYY0g5UHd1VVg2cmpqTUpWN1h1RDFOR1BlSXExdjc1cGhBN0VSX3hPQndKY1luUEhMOE16ZTFzMFBEYVRJNFhfdng5S0Fubkg0LXZUb3U5Yk10NzF5YlotbklIbTUtREt0SGVyZm1haFU4X1lRZlhHZEtKb2JVX2JMOUdQNjlqVnVNazhyZUZZLWtoNA?oc=5",
+        "Title": "Serbian President Aleksandar Vucic says he will resign within weeks, while Serbia prepares for parliamentary elections after months of anti-government protests. His possible exit could allow him to return as prime minister if his party wins. #dwnews - facebook.com",
+        "Feed_Source": "Google News Live 1H",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "Recent",
+        "Actor": "Pakistan",
+        "Action": "Carried out ground operation and strikes, killing militants",
+        "Location": "Pakistan-Afghanistan border",
+        "Risk": "Cross-border tensions, regional instability, ongoing counter-terrorism challenges",
+        "Source": "https://x.com/AP/status/2071329006843019748",
+        "Title": "Pakistan says it carried out a ground operation and strikes along the border with Afghanistan, killing 29 militants.",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
     },
     {
         "Date": "2026-06-28",
@@ -71,17 +165,6 @@
         "Risk": "Medium - Potential for de-escalation, but fragile",
         "Source": "https://x.com/tassagency_en/status/2071344357177729100",
         "Title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "2026",
-        "Actor": "IDF (Israel)",
-        "Action": "Attacked Hezbollah's underground infrastructure",
-        "Location": "Lebanon",
-        "Risk": "High - Escalation of conflict, regional instability",
-        "Source": "https://x.com/Haaretz/status/2071327884111729127",
-        "Title": "Netanyahu: The IDF attacked Hezbollah's underground infrastructure in Lebanon, the US was informed in advance",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
     },
@@ -169,17 +252,6 @@
         "Publisher": "news.google.com"
     },
     {
-        "Date": "",
-        "Actor": "Pakistan",
-        "Action": "Carried out ground operation and strikes, killing militants",
-        "Location": "Border with Afghanistan",
-        "Risk": "Cross-border conflict, regional instability",
-        "Source": "https://x.com/AP/status/2071329006843019748",
-        "Title": "Pakistan says it carried out a ground operation and strikes along the border with Afghanistan, killing 29 militants.",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
         "Date": "2026-06-28",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
@@ -231,80 +303,5 @@
         "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
         "Feed_Source": "Premium RSS",
         "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Unidentified (implied Iran/proxies)",
-        "Action": "Strikes tankers, deepens shipping crisis",
-        "Location": "Strait of Hormuz",
-        "Risk": "Disruption of global oil supply, economic impact, military confrontation",
-        "Source": "https://gcaptain.com/second-tanker-struck-in-strait-of-hormuz-as-u-s-iran-shipping-crisis-deepens/",
-        "Title": "Second Tanker Struck in Strait of Hormuz as U.S.-Iran Shipping Crisis Deepens",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Israeli forces",
-        "Action": "Push deeper into southern Syria",
-        "Location": "Southern Syria",
-        "Risk": "Expansion of regional conflict, humanitarian crisis, destabilization",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-push-deeper-southern-syria",
-        "Title": "Israeli forces push deeper into southern Syria",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Iran",
-        "Action": "Canceled participation in technical talks over recent attacks",
-        "Location": "Middle East (related to ongoing conflict)",
-        "Risk": "Breakdown of diplomatic efforts, increased likelihood of military conflict",
-        "Source": "https://x.com/Reuters/status/2071325314211274998",
-        "Title": "Iran canceled participation in technical talks over recent attacks, official tells state TV",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "2026-06-28",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Opinion | Iran Is Winning the Battle of Hormuz",
-        "Headline": "Opinion | Iran Is Winning the Battle of Hormuz",
-        "Summary": "Opinion | Iran Is Winning the Battle of Hormuz",
-        "Risk": "HIGH",
-        "Source": "https://www.wsj.com/opinion/iran-is-winning-the-battle-of-hormuz-f0610f99",
-        "Title": "Opinion | Iran Is Winning the Battle of Hormuz",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "wsj.com"
-    },
-    {
-        "Date": "2026-06-28",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Israel kills three Palestinians in Gaza as attacks on tents continue",
-        "Headline": "Israel kills three Palestinians in Gaza as attacks on tents continue",
-        "Summary": "Israel kills three Palestinians in Gaza as attacks on tents continue",
-        "Risk": "HIGH",
-        "Source": "https://www.aljazeera.com/news/2026/6/28/israel-kills-three-palestinians-in-gaza-as-attacks-on-tents-continue?traffic_source=rss",
-        "Title": "Israel kills three Palestinians in Gaza as attacks on tents continue",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "aljazeera.com"
-    },
-    {
-        "Date": "2026-06-28",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "\u2018Financial death penalty\u2019: How US sanctions are upending the lives of ICC judges",
-        "Headline": "\u2018Financial death penalty\u2019: How US sanctions are upending the lives of ICC judges",
-        "Summary": "\u2018Financial death penalty\u2019: How US sanctions are upending the lives of ICC judges",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/financial-death-penalty-how-us-sanctions-are-upending-lives-icc-judges",
-        "Title": "\u2018Financial death penalty\u2019: How US sanctions are upending the lives of ICC judges",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "middleeasteye.net"
     }
 ]

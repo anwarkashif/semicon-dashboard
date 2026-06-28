@@ -1,8 +1,36 @@
 {
     "date": "2026-06-28",
     "title": "Flash to Brief - 2026-06-28",
-    "brief_raw": "**\ud83c\udfaf BLUF:**\nAPI Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nSystem Awaiting Reset. Data Pipeline Intact.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nGeneration pending next scheduled cron execution.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nPENDING\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nPENDING",
+    "brief_raw": "**\ud83c\udfaf BLUF:**\nThe Middle East is experiencing a critical juncture marked by simultaneous escalation and fragile de-escalation efforts. Israel has intensified its actions against Hezbollah in Lebanon, targeting underground infrastructure, while Houthi forces have expanded their attacks against Israel and maritime shipping in the Red Sea. Concurrently, the US and Iran, despite recent retaliatory strikes in the Strait of Hormuz, have agreed to halt hostilities and engage in consultations in Doha, signaling a precarious attempt to avert a full-scale conflict. These regional flashpoints are compounded by internal Iranian tensions following a significant sporting event and broader geopolitical shifts, including political instability in Serbia and counter-terrorism operations on the Pakistan-Afghanistan border, underscoring a highly volatile global security environment.\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nRecent tactical indicators highlight a complex and rapidly evolving operational landscape. In the Levant, Israel has conducted significant strikes in south Lebanon, including the detonation of a tunnel and attacks on Hezbollah's underground infrastructure, with prior notification to the US. Simultaneously, Houthi forces have escalated their involvement, launching attacks against Israel and imposing a ban on Israeli vessels in the Red Sea, directly impacting international maritime trade. In the Persian Gulf, the US carried out fresh strikes against Iran following tanker incidents in the Strait of Hormuz, indicating direct military engagement. However, a critical counter-indicator is the reported agreement between the US and Iran to halt strikes and commence consultations in Doha on June 30, suggesting a diplomatic off-ramp amidst heightened military activity. Separately, Pakistan has conducted ground operations and strikes along its border with Afghanistan, neutralizing militants, while Serbia faces internal political upheaval with President Vucic's announced resignation amidst protests.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nThe prevailing threat narrative centers on a multi-front regional conflict in the Middle East, with significant potential for broader international implications, juxtaposed against a fragile diplomatic push. Israel's aggressive posture against Hezbollah, including pre-emptive strikes on infrastructure, suggests a determination to degrade capabilities and deter further aggression, potentially drawing Lebanon deeper into conflict. The Houthis' expanded operations in the Red Sea and against Israel demonstrate a widening scope of proxy engagement, threatening critical global shipping lanes and increasing the risk of miscalculation. The direct military exchanges between the US and Iran in the Strait of Hormuz represent a dangerous escalation, pushing both nations closer to direct confrontation over maritime security and regional influence. This is occurring while Iran grapples with heightened internal emotions, potentially exacerbating the regime's calculus. The agreement for US-Iran talks, while a positive sign, remains highly tenuous given the underlying tensions and recent kinetic actions. The broader regional instability is further underscored by ongoing counter-terrorism efforts on the Pakistan-Afghanistan border and political volatility in the Balkans, indicating a globally interconnected and precarious security environment where localized conflicts can quickly cascade.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nThe overall risk assessment remains HIGH, characterized by a significant potential for rapid escalation across multiple theaters. The Israel-Hezbollah conflict carries a high risk of expanding into a full-scale war, with severe humanitarian consequences and destabilizing effects across the Levant. Houthi actions in the Red Sea pose a critical threat to international maritime trade, risking severe economic disruption and potentially drawing more international naval forces into direct engagement. The US-Iran dynamic in the Strait of Hormuz presents the most immediate and severe risk of a full-scale military conflict, which would have catastrophic global implications for oil supply, trade, and regional stability, despite the recent agreement to hold talks. This agreement is fragile and could easily collapse due to a single incident or miscalculation. Internal instability in Iran, fueled by domestic sentiment, could further complicate the regime's foreign policy decisions. Beyond the Middle East, political instability in Serbia could lead to regional power shifts and renewed tensions in the Balkans, while cross-border operations between Pakistan and Afghanistan maintain a persistent risk of regional instability and humanitarian crises. The interconnectedness of these flashpoints means that an escalation in one area could quickly trigger responses in others, leading to a cascading effect.\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nThe strategic forecast for the immediate future suggests a period of intense volatility, with a delicate balance between continued escalation and concerted, albeit fragile, de-escalation efforts. In the Middle East, the coming days will be critical for the US-Iran relationship, with the June 30 Doha consultations serving as a pivotal moment to determine if a diplomatic off-ramp can be sustained or if the region will revert to direct military confrontation. However, even if talks progress, underlying tensions and proxy conflicts, particularly between Israel and Hezbollah, and the Houthis' continued actions, are likely to persist and could reignite broader hostilities. Israel will likely continue its proactive measures against perceived threats from Lebanon, maintaining a high state of alert. Iran's internal dynamics, influenced by public sentiment, will play a role in its external policy decisions. Globally, the ongoing counter-terrorism operations on the Pakistan-Afghanistan border will remain a persistent challenge, while Serbia's political transition will bear watching for its implications on regional stability in the Balkans. The overarching trend points towards a continued fragmentation of global security, where regional conflicts are increasingly intertwined and demand agile diplomatic and security responses to prevent wider conflagration.",
     "recent_actions": [
+        {
+            "Date": "2026-06-28",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Israel detonates tunnel, strikes south Lebanon",
+            "Headline": "Israel detonates tunnel, strikes south Lebanon",
+            "Summary": "Israel detonates tunnel, strikes south Lebanon",
+            "Risk": "HIGH",
+            "Source": "https://www.al-monitor.com/originals/2026/06/israel-detonates-tunnel-strikes-south-lebanon",
+            "Title": "Israel detonates tunnel, strikes south Lebanon",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "al-monitor.com"
+        },
+        {
+            "Date": "2026-06-28",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
+            "Headline": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
+            "Summary": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
+            "Risk": "HIGH",
+            "Source": "https://www.aljazeera.com/sports/2026/6/28/heightened-emotions-in-iran-after-team-melli-knocked-out-of-world-cup?traffic_source=rss",
+            "Title": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "aljazeera.com"
+        },
         {
             "Date": "2026-06-28",
             "Actor": "Psyopoly/West Asia",
@@ -16,6 +44,72 @@
             "Title": "US and Iran agree to resume Strait of Hormuz talks: Report",
             "Feed_Source": "Psyopoly Supabase",
             "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "US, Iran (implied hostile actors)",
+            "Action": "US carries out fresh strikes against Iran; Tankers struck, escalating hostilities",
+            "Location": "Strait of Hormuz, Iran",
+            "Risk": "High risk of full-scale military conflict, severe disruption of global oil supply and maritime trade",
+            "Source": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/",
+            "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "gcaptain.com"
+        },
+        {
+            "Date": "June 30",
+            "Actor": "United States, Iran",
+            "Action": "Agreed to halt strikes and hold consultations",
+            "Location": "Doha (for talks), Strait of Hormuz (context)",
+            "Risk": "Potential de-escalation of conflict, but outcome uncertain and fragile",
+            "Source": "https://x.com/tassagency_en/status/2071344357177729100",
+            "Title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Israel (IDF), Hezbollah",
+            "Action": "Attacked Hezbollah's underground infrastructure",
+            "Location": "Lebanon",
+            "Risk": "Escalation of Israel-Hezbollah conflict, regional instability, humanitarian impact",
+            "Source": "https://x.com/Haaretz/status/2071327884111729127",
+            "Title": "Netanyahu: The IDF attacked Hezbollah's underground infrastructure in Lebanon, the US was informed in advance",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Houthis",
+            "Action": "Attacked Israel, announced ban on Israeli vessels",
+            "Location": "Red Sea, Israel",
+            "Risk": "Expansion of regional conflict, severe disruption to international maritime trade routes",
+            "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
+            "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
+            "Feed_Source": "Maritime Deep Scrape",
+            "Publisher": "news.google.com"
+        },
+        {
+            "Date": "Within weeks",
+            "Actor": "Aleksandar Vucic (Serbian President)",
+            "Action": "Announces resignation amidst anti-government protests",
+            "Location": "Serbia",
+            "Risk": "Political instability, potential for shifts in domestic and regional power dynamics",
+            "Source": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOamhNd3ZCelFLcXp1VVYtaGFVOWlidnh3ZHlmTXpsT19LaHBibkVQaGRnREdpZDlMY1c5bVdSMFRPR1RvcHdpZ2cxZHg1ZEdxSmctOWNYY0g5UHd1VVg2cmpqTUpWN1h1RDFOR1BlSXExdjc1cGhBN0VSX3hPQndKY1luUEhMOE16ZTFzMFBEYVRJNFhfdng5S0Fubkg0LXZUb3U5Yk10NzF5YlotbklIbTUtREt0SGVyZm1haFU4X1lRZlhHZEtKb2JVX2JMOUdQNjlqVnVNazhyZUZZLWtoNA?oc=5",
+            "Title": "Serbian President Aleksandar Vucic says he will resign within weeks, while Serbia prepares for parliamentary elections after months of anti-government protests. His possible exit could allow him to return as prime minister if his party wins. #dwnews - facebook.com",
+            "Feed_Source": "Google News Live 1H",
+            "Publisher": "news.google.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Pakistan",
+            "Action": "Carried out ground operation and strikes, killing militants",
+            "Location": "Pakistan-Afghanistan border",
+            "Risk": "Cross-border tensions, regional instability, ongoing counter-terrorism challenges",
+            "Source": "https://x.com/AP/status/2071329006843019748",
+            "Title": "Pakistan says it carried out a ground operation and strikes along the border with Afghanistan, killing 29 militants.",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
         },
         {
             "Date": "2026-06-28",
@@ -75,17 +169,6 @@
             "Risk": "Medium - Potential for de-escalation, but fragile",
             "Source": "https://x.com/tassagency_en/status/2071344357177729100",
             "Title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "x.com"
-        },
-        {
-            "Date": "2026",
-            "Actor": "IDF (Israel)",
-            "Action": "Attacked Hezbollah's underground infrastructure",
-            "Location": "Lebanon",
-            "Risk": "High - Escalation of conflict, regional instability",
-            "Source": "https://x.com/Haaretz/status/2071327884111729127",
-            "Title": "Netanyahu: The IDF attacked Hezbollah's underground infrastructure in Lebanon, the US was informed in advance",
             "Feed_Source": "Psyopoly Supabase",
             "Publisher": "x.com"
         },
@@ -173,17 +256,6 @@
             "Publisher": "news.google.com"
         },
         {
-            "Date": "",
-            "Actor": "Pakistan",
-            "Action": "Carried out ground operation and strikes, killing militants",
-            "Location": "Border with Afghanistan",
-            "Risk": "Cross-border conflict, regional instability",
-            "Source": "https://x.com/AP/status/2071329006843019748",
-            "Title": "Pakistan says it carried out a ground operation and strikes along the border with Afghanistan, killing 29 militants.",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "x.com"
-        },
-        {
             "Date": "2026-06-28",
             "Actor": "Psyopoly/West Asia",
             "Location": "Middle East",
@@ -235,87 +307,44 @@
             "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
             "Feed_Source": "Premium RSS",
             "Publisher": "gcaptain.com"
-        },
-        {
-            "Date": "Recent",
-            "Actor": "Unidentified (implied Iran/proxies)",
-            "Action": "Strikes tankers, deepens shipping crisis",
-            "Location": "Strait of Hormuz",
-            "Risk": "Disruption of global oil supply, economic impact, military confrontation",
-            "Source": "https://gcaptain.com/second-tanker-struck-in-strait-of-hormuz-as-u-s-iran-shipping-crisis-deepens/",
-            "Title": "Second Tanker Struck in Strait of Hormuz as U.S.-Iran Shipping Crisis Deepens",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "gcaptain.com"
-        },
-        {
-            "Date": "Recent",
-            "Actor": "Israeli forces",
-            "Action": "Push deeper into southern Syria",
-            "Location": "Southern Syria",
-            "Risk": "Expansion of regional conflict, humanitarian crisis, destabilization",
-            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-push-deeper-southern-syria",
-            "Title": "Israeli forces push deeper into southern Syria",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "middleeasteye.net"
-        },
-        {
-            "Date": "Recent",
-            "Actor": "Iran",
-            "Action": "Canceled participation in technical talks over recent attacks",
-            "Location": "Middle East (related to ongoing conflict)",
-            "Risk": "Breakdown of diplomatic efforts, increased likelihood of military conflict",
-            "Source": "https://x.com/Reuters/status/2071325314211274998",
-            "Title": "Iran canceled participation in technical talks over recent attacks, official tells state TV",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "x.com"
-        },
-        {
-            "Date": "2026-06-28",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "Opinion | Iran Is Winning the Battle of Hormuz",
-            "Headline": "Opinion | Iran Is Winning the Battle of Hormuz",
-            "Summary": "Opinion | Iran Is Winning the Battle of Hormuz",
-            "Risk": "HIGH",
-            "Source": "https://www.wsj.com/opinion/iran-is-winning-the-battle-of-hormuz-f0610f99",
-            "Title": "Opinion | Iran Is Winning the Battle of Hormuz",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "wsj.com"
-        },
-        {
-            "Date": "2026-06-28",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "Israel kills three Palestinians in Gaza as attacks on tents continue",
-            "Headline": "Israel kills three Palestinians in Gaza as attacks on tents continue",
-            "Summary": "Israel kills three Palestinians in Gaza as attacks on tents continue",
-            "Risk": "HIGH",
-            "Source": "https://www.aljazeera.com/news/2026/6/28/israel-kills-three-palestinians-in-gaza-as-attacks-on-tents-continue?traffic_source=rss",
-            "Title": "Israel kills three Palestinians in Gaza as attacks on tents continue",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "aljazeera.com"
-        },
-        {
-            "Date": "2026-06-28",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "\u2018Financial death penalty\u2019: How US sanctions are upending the lives of ICC judges",
-            "Headline": "\u2018Financial death penalty\u2019: How US sanctions are upending the lives of ICC judges",
-            "Summary": "\u2018Financial death penalty\u2019: How US sanctions are upending the lives of ICC judges",
-            "Risk": "HIGH",
-            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/financial-death-penalty-how-us-sanctions-are-upending-lives-icc-judges",
-            "Title": "\u2018Financial death penalty\u2019: How US sanctions are upending the lives of ICC judges",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "middleeasteye.net"
         }
     ],
     "sources": [
         {
+            "title": "Israel detonates tunnel, strikes south Lebanon",
+            "url": "https://www.al-monitor.com/originals/2026/06/israel-detonates-tunnel-strikes-south-lebanon"
+        },
+        {
+            "title": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
+            "url": "https://www.aljazeera.com/sports/2026/6/28/heightened-emotions-in-iran-after-team-melli-knocked-out-of-world-cup?traffic_source=rss"
+        },
+        {
             "title": "US and Iran agree to resume Strait of Hormuz talks: Report",
             "url": "https://www.middleeasteye.net/live-blog/live-blog-update/us-and-iran-agree-resume-strait-hormuz-talks-report"
+        },
+        {
+            "title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
+            "url": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/"
+        },
+        {
+            "title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
+            "url": "https://x.com/tassagency_en/status/2071344357177729100"
+        },
+        {
+            "title": "Netanyahu: The IDF attacked Hezbollah's underground infrastructure in Lebanon, the US was informed in advance",
+            "url": "https://x.com/Haaretz/status/2071327884111729127"
+        },
+        {
+            "title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5"
+        },
+        {
+            "title": "Serbian President Aleksandar Vucic says he will resign within weeks, while Serbia prepares for parliamentary elections after months of anti-government protests. His possible exit could allow him to return as prime minister if his party wins. #dwnews - facebook.com",
+            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOamhNd3ZCelFLcXp1VVYtaGFVOWlidnh3ZHlmTXpsT19LaHBibkVQaGRnREdpZDlMY1c5bVdSMFRPR1RvcHdpZ2cxZHg1ZEdxSmctOWNYY0g5UHd1VVg2cmpqTUpWN1h1RDFOR1BlSXExdjc1cGhBN0VSX3hPQndKY1luUEhMOE16ZTFzMFBEYVRJNFhfdng5S0Fubkg0LXZUb3U5Yk10NzF5YlotbklIbTUtREt0SGVyZm1haFU4X1lRZlhHZEtKb2JVX2JMOUdQNjlqVnVNazhyZUZZLWtoNA?oc=5"
+        },
+        {
+            "title": "Pakistan says it carried out a ground operation and strikes along the border with Afghanistan, killing 29 militants.",
+            "url": "https://x.com/AP/status/2071329006843019748"
         },
         {
             "title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
@@ -336,10 +365,6 @@
         {
             "title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
             "url": "https://x.com/tassagency_en/status/2071344357177729100"
-        },
-        {
-            "title": "Netanyahu: The IDF attacked Hezbollah's underground infrastructure in Lebanon, the US was informed in advance",
-            "url": "https://x.com/Haaretz/status/2071327884111729127"
         },
         {
             "title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
@@ -370,10 +395,6 @@
             "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5"
         },
         {
-            "title": "Pakistan says it carried out a ground operation and strikes along the border with Afghanistan, killing 29 militants.",
-            "url": "https://x.com/AP/status/2071329006843019748"
-        },
-        {
             "title": "Iran praises resilience after World Cup exit under US threats and pressure",
             "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-praises-resilience-after-world-cup-exit-under-us-threats-and"
         },
@@ -388,30 +409,6 @@
         {
             "title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
             "url": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/"
-        },
-        {
-            "title": "Second Tanker Struck in Strait of Hormuz as U.S.-Iran Shipping Crisis Deepens",
-            "url": "https://gcaptain.com/second-tanker-struck-in-strait-of-hormuz-as-u-s-iran-shipping-crisis-deepens/"
-        },
-        {
-            "title": "Israeli forces push deeper into southern Syria",
-            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-push-deeper-southern-syria"
-        },
-        {
-            "title": "Iran canceled participation in technical talks over recent attacks, official tells state TV",
-            "url": "https://x.com/Reuters/status/2071325314211274998"
-        },
-        {
-            "title": "Opinion | Iran Is Winning the Battle of Hormuz",
-            "url": "https://www.wsj.com/opinion/iran-is-winning-the-battle-of-hormuz-f0610f99"
-        },
-        {
-            "title": "Israel kills three Palestinians in Gaza as attacks on tents continue",
-            "url": "https://www.aljazeera.com/news/2026/6/28/israel-kills-three-palestinians-in-gaza-as-attacks-on-tents-continue?traffic_source=rss"
-        },
-        {
-            "title": "\u2018Financial death penalty\u2019: How US sanctions are upending the lives of ICC judges",
-            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/financial-death-penalty-how-us-sanctions-are-upending-lives-icc-judges"
         }
     ]
 }
