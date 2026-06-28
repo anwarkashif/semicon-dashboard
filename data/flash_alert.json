@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Strikes Kyiv With 9 Ballistic and Hypersonic Missiles",
+        "Title": "US Strikes Iran as Tehran Hits Kuwait and Bahrain, Ceasefire at Risk",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,32 +14,32 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89451",
-        "Title": "Kuwait Under Air Raid Alert",
+        "Source": "https://t.me/Middle_East_Spectator/33962",
+        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/video/hezbollahs-leader-rejects-us-israeli-brokered-ceasefire/",
-        "Title": "Hezbollah's leader rejects U.S.-Israeli brokered ceasefire",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/Middle_East_Spectator/33956",
         "Title": "US Forces Shut Down Baghdad Green Zone",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33960",
+        "Title": "Iraq Arrests Parliament Members in Green Zone",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -49,24 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33962",
-        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
+        "Source": "https://t.me/intelslava/89463",
+        "Title": "Iraqi Security Forces Detain People in Baghdad",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cbsnews.com/video/rescue-workers-race-against-time-venezuela-after-earthquakes/",
-        "Title": "Rescue workers race against time in Venezuela after earthquakes",
+        "Source": "https://t.me/intelslava/89462",
+        "Title": "Iraq Deploys Intensive Security Near Baghdad Airport",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/2026/jun/28/new-caledonia-polls-open-in-first-local-vote-in-the-french-territory-since-2019",
+        "Title": "New Caledonia polls open in first local vote in the French territory since 2019",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
