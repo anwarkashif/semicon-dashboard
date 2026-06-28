@@ -21,15 +21,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33960",
-        "Title": "Iraq Arrests Parliament Members in Green Zone",
+        "Source": "https://t.me/Middle_East_Spectator/33962",
+        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33962",
-        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
+        "Source": "https://t.me/Middle_East_Spectator/33960",
+        "Title": "Iraq Arrests Parliament Members in Green Zone",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -42,8 +42,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
@@ -58,13 +65,6 @@
     {
         "Source": "https://t.me/intelslava/89470",
         "Title": "Bahrain Residents Report Hearing Explosion",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89463",
-        "Title": "Iraqi Security Forces Detain People in Baghdad",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
