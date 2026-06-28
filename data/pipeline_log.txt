@@ -1677,3 +1677,19 @@
 2026-06-28 01:18:19,899 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
 2026-06-28 01:18:29,939 - INFO - AFC is enabled with max remote calls: 10.
 2026-06-28 01:18:43,159 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-28 02:02:21,239 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-28 02:02:21,391 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-28 02:02:21,392 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-28 02:02:31,439 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-28 02:02:31,593 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-28 02:02:31,594 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-28 02:02:31,594 - INFO - Rotating to API Key 2
+2026-06-28 02:02:34,597 - WARNING - Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: All API keys exhausted via rotation.
+2026-06-28 02:02:34,635 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-28 02:02:34,754 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-28 02:02:34,754 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-28 02:02:44,794 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-28 02:02:44,921 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-28 02:02:44,922 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-06-28 02:02:44,922 - INFO - Rotating to API Key 2
+2026-06-28 02:02:47,925 - ERROR - FLASH TO BRIEF Final Failure: All API keys exhausted via rotation.
