@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran's IRGC Claims Strikes on US Forces in Kuwait and Bahrain",
+        "Title": "Russia Strikes Kyiv With 9 Ballistic and Hypersonic Missiles",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,8 +14,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44719",
-        "Title": "UK Pledges 290 Million Pounds to Support Ukraine Energy",
+        "Source": "https://t.me/intelslava/89451",
+        "Title": "Kuwait Under Air Raid Alert",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cbsnews.com/video/hezbollahs-leader-rejects-us-israeli-brokered-ceasefire/",
+        "Title": "Hezbollah's leader rejects U.S.-Israeli brokered ceasefire",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33956",
+        "Title": "US Forces Shut Down Baghdad Green Zone",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
@@ -25,7 +39,7 @@
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -35,38 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89453",
-        "Title": "Iranian Ballistic Missile Flies Over Kuwait",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
+        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/33962",
+        "Title": "Iraq Arrests Sunni Party Leader Muhammad Al-Halbousi",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33956",
-        "Title": "US Forces Shut Down Baghdad Green Zone",
+        "Source": "https://www.cbsnews.com/video/rescue-workers-race-against-time-venezuela-after-earthquakes/",
+        "Title": "Rescue workers race against time in Venezuela after earthquakes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/28/anger-grows-in-venezuela-as-citizens-blocked-from-aiding-earthquake-rescue?traffic_source=rss",
-        "Title": "Anger grows in Venezuela as citizens blocked from aiding earthquake rescue",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33953",
-        "Title": "US Embassy in Baghdad Sees Heavy Military Movements",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33951",
-        "Title": "Iranian Impacts Reported in Kuwait",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     }
 ]
