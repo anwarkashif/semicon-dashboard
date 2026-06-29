@@ -1,38 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Explosion Reported Near Kirovske, Crimea",
+        "Title": "Ukraine Strikes Semiconductor Plant in Voronezh, Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44727",
-        "Title": "US Requests Israel Modify Agreement",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/33977",
-        "Title": "Iran Targets Kurdish Separatists in Iraqi Kurdistan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119530",
-        "Title": "Russians Withdraw Billions from Banks",
+        "Source": "https://t.me/intelslava/89511",
+        "Title": "China Supports Belarus Sovereignty",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/33972",
-        "Title": "Yemen Houthis Mobilize Against Saudi-Backed Forces",
+        "Source": "https://t.me/southfronteng/61603",
+        "Title": "Israel Targets Syrian Position After Troops Attacked",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/asia-pacific/20260629-dozens-of-civilians-killed-in-pakistani-air-strikes-in-afghanistan-officials-say",
+        "Title": "Dozens of civilians killed in Pakistani air strikes in Afghanistan, officials say",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,31 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.france24.com/en/new-caledonia-provisional-results-show-anti-independence-parties-lead",
-        "Title": "New Caledonia: Provisional results show anti-independence parties lead",
+        "Source": "https://www.npr.org/2026/06/29/nx-s1-5871337/violence-belfast-northern-ireland-white-supremacy-riots-active-clubs",
+        "Title": "Could neo-Nazi youth, or 'active clubs,' have played a role in Belfast riots?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "npr.org",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32298",
-        "Title": "Russia Liberalizes Firearms Law",
+        "Source": "https://t.me/liveuamap/12196",
+        "Title": "Iran and US Reach Agreement on Lifting Oil Sanctions",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Treasury yields little changed as investors look ahead to key jobs data",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQzN6UmVIVU11NmpYSVFYT3pISGNuOElhcTBCQm1HZ3AyWFlSRlJzYjBaRHVIQ2tpUklTOTRqQjl5M1JDYzJwblcyMURBZXlsdFlhRjRJOHVnOV9Dd2twX1g0UERuMmlRTTBLZWR2bWdGUlo0aGh0NGdhaFJiTktVZ2tFanQ5SHRDQmktT2p1RWRKcDdpc1lYUnB1dEVvQUpHQWpjTVpMWQ?oc=5",
+        "Title": "One killed in shooting at site of California World Cup fan zone - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
