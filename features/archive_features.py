@@ -285,6 +285,10 @@ def render_clean_archives():
             filename = os.path.basename(old_path)
             new_path = os.path.join('trash', filename)
             os.rename(old_path, new_path)
+            
+            # 🛑 THE FIX: Force Streamlit to clear its RAM cache so ghost files vanish instantly
+            st.cache_data.clear() 
+            
             st.success(f"Successfully moved to Trash: {archive_to_clean}")
             st.rerun()
     else:
@@ -321,17 +325,21 @@ def render_trash():
             if st.button("♻️ Revert to Archives"):
                 new_path = os.path.join('data', filename)
                 os.rename(old_path, new_path)
+                st.cache_data.clear() # Clear cache on revert
                 st.success(f"Completely restored: {archive_to_manage}")
                 st.rerun()
         with col_del:
             if st.button("⚠️ Permanently Delete", type="primary"):
-                # 1. Delete from Local Server
+                # 1. Eradicate from local container disk
                 try:
                     os.remove(old_path)
                 except FileNotFoundError:
                     pass
                     
-                # 2. 🛑 THE FIX: Permanently eradicate from Hugging Face Cloud Storage
+                # 2. 🛑 THE FIX: Purge the Streamlit Cache to eliminate ghost files
+                st.cache_data.clear()
+                    
+                # 3. Eradicate from Hugging Face Cloud Storage
                 HF_TOKEN = os.environ.get("HF_TOKEN")
                 REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
                 
@@ -339,17 +347,30 @@ def render_trash():
                     try:
                         from huggingface_hub import HfApi
                         api = HfApi()
-                        # The file originated in the 'data' folder on the cloud
-                        cloud_path = f"data/{filename}"
                         api.delete_file(
-                            path_in_repo=cloud_path, 
+                            path_in_repo=f"data/{filename}", 
                             repo_id=REPO_ID, 
                             token=HF_TOKEN, 
+                            repo_type="space",
                             commit_message=f"Dashboard Admin: Permanently deleted {filename}"
                         )
                     except Exception:
-                        pass # Fails silently if it was already gone from the cloud
+                        pass
                         
+                # 4. Eradicate from GitHub (just in case it is stuck there)
+                GITHUB_PAT = os.environ.get("GITHUB_PAT")
+                if GITHUB_PAT:
+                    try:
+                        import requests
+                        url = f"https://api.github.com/repos/anwarkashif/semicon-dashboard/contents/data/{filename}"
+                        headers = {"Authorization": f"token {GITHUB_PAT}"}
+                        r = requests.get(url, headers=headers)
+                        if r.status_code == 200:
+                            sha = r.json()['sha']
+                            requests.delete(url, headers=headers, json={"message": f"Delete {filename} via dashboard", "sha": sha})
+                    except Exception:
+                        pass
+
                 st.success(f"Permanently destroyed: {archive_to_manage}")
                 st.rerun()
     else:
