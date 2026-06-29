@@ -4,6 +4,34 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "\u2018Is it Israel\u2019s aim to kill our children\u2019? West Bank parents implore end to IDF\u2019s child killings with impunity",
+        "Headline": "\u2018Is it Israel\u2019s aim to kill our children\u2019? West Bank parents implore end to IDF\u2019s child killings with impunity",
+        "Summary": "\u2018Is it Israel\u2019s aim to kill our children\u2019? West Bank parents implore end to IDF\u2019s child killings with impunity",
+        "Risk": "HIGH",
+        "Source": "https://www.theguardian.com/world/2026/jun/29/is-it-israels-aim-to-kill-our-children-west-bank-parents-implore-end-to-idfs-child-killings-with-impunity",
+        "Title": "\u2018Is it Israel\u2019s aim to kill our children\u2019? West Bank parents implore end to IDF\u2019s child killings with impunity",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "theguardian.com"
+    },
+    {
+        "Date": "2026-06-29",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The UAE's compassionate war on drugs",
+        "Headline": "The UAE's compassionate war on drugs",
+        "Summary": "The UAE's compassionate war on drugs",
+        "Risk": "HIGH",
+        "Source": "https://x.com/TheNationalNews/status/2071502218197348674",
+        "Title": "The UAE's compassionate war on drugs",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-06-29",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iraq Reaffirms Backing for Iran against Foreign Aggression",
         "Headline": "Iraq Reaffirms Backing for Iran against Foreign Aggression",
         "Summary": "Iraq Reaffirms Backing for Iran against Foreign Aggression",
@@ -12,6 +40,50 @@
         "Title": "Iraq Reaffirms Backing for Iran against Foreign Aggression",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "tasnimnews.ir"
+    },
+    {
+        "Date": "Recent/Ongoing",
+        "Actor": "Israel",
+        "Action": "Destroyed Hezbollah underground infrastructure in southern Lebanon.",
+        "Location": "Southern Lebanon",
+        "Risk": "Escalation of conflict with Hezbollah, regional instability, potential for wider conflict.",
+        "Source": "https://www.al-monitor.com/originals/2026/06/israel-destroys-hezbollah-underground-infrastructure-southern-lebanon",
+        "Title": "Israel destroys Hezbollah underground infrastructure in southern Lebanon",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "al-monitor.com"
+    },
+    {
+        "Date": "Recent/Ongoing",
+        "Actor": "Houthis",
+        "Action": "Attacked Israel and announced a ban on Israeli vessels in the Red Sea.",
+        "Location": "Red Sea, Israel",
+        "Risk": "Major disruption to global shipping, expansion of regional conflict, maritime security threats.",
+        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
+        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - The Long War Journal",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "Recent/Ongoing",
+        "Actor": "South Korea",
+        "Action": "Unveiled a $517.9 billion plan to build a new semiconductor production base.",
+        "Location": "South Korea",
+        "Risk": "Intensified global competition in critical technology, potential shifts in global supply chains, economic investment race.",
+        "Source": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOTnFMdDRZbHJvZDBGVWRwdVJsZ3pUVUJEUXhPRWp4eDVpOFJhLVhZOXk4eWxIV0ZQNnI1eVF0SGdHSmtoOFNrUXFOZmxoSlZkZl85SHpCLWphSE1nUFlQdERsR2NzMVpSLTdNVjBOemJkUEUtemkxdFhwcmJkUzl3aUV4a2djbWlKVmtsQ3BKVVFwT0pPaGwtS3h6alBpSl9ENm9SS0FjRDBPazBveGZRSGMtWVdGZDhwN1Joaw?oc=5",
+        "Title": "South Korea unveils $517.9B plans to build new semiconductor production base - Anadolu Ajans\u0131",
+        "Feed_Source": "Google News Live 1H",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "Recent/Ongoing",
+        "Actor": "Nvidia, Huawei, China",
+        "Action": "Nvidia's AI chip sales stalled in China as local chipmakers like Huawei gained market leadership.",
+        "Location": "China (AI chip market)",
+        "Risk": "Intensified US-China tech rivalry, impact on global tech supply chains, economic competition.",
+        "Source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQb1hnZDBVbEhFVGR1MFY4bFZZZkpvcTM3b2d3LTlBclBId0pzWlBvRzZWcnZ1TTdoeld3V2tQNU5ldHZOXzk3a1Bta3ItTExva0RnVmZnSkkxQkQ1S01vRmFYZDMyekJfWmFtV3ZqVlIxRFdWdW55RlNLek1jU2lhdG5kTEItQ28wNUJaUTdpWENTa2VreVFUUER3T042bWxwbTVmTVVubXJWc0hCTzV2YnJidE1VTHV1aGtUSjFuNWJyWjR0emc?oc=5",
+        "Title": "Nvidia's AI chip sales in China stall, as local chipmakers like Huawei take the lead - The Washington Post",
+        "Feed_Source": "Google News Live 1H",
+        "Publisher": "news.google.com"
     },
     {
         "Date": "2026-06-29",
@@ -162,17 +234,6 @@
     },
     {
         "Date": "N/A",
-        "Actor": "Houthis",
-        "Action": "Attacked Israel and announced a ban on Israeli vessels in the Red Sea.",
-        "Location": "Red Sea, Israel",
-        "Risk": "Maritime security crisis, regional conflict escalation, disruption of international shipping.",
-        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - The Long War Journal",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "N/A",
         "Actor": "Iran, United States",
         "Action": "Agreed to halt hostilities and renew talks regarding the Strait of Hormuz dispute.",
         "Location": "Strait of Hormuz (context)",
@@ -242,63 +303,5 @@
         "Title": "Israeli cyber chief reports sharp rise in Iranian cyberattacks after war",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "2026-06-29",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "There is only one criterion to determine if this whole war was worth it",
-        "Headline": "There is only one criterion to determine if this whole war was worth it",
-        "Summary": "There is only one criterion to determine if this whole war was worth it",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Haaretz/status/2071473883270549755",
-        "Title": "There is only one criterion to determine if this whole war was worth it",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "U.S.",
-        "Action": "Carries out fresh strikes against Iran after tanker struck in Hormuz, escalating hostilities",
-        "Location": "Iran, Strait of Hormuz",
-        "Risk": "Escalation of US-Iran conflict, threat to maritime security and global oil supply",
-        "Source": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/",
-        "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "2026",
-        "Actor": "Iran",
-        "Action": "Surge in cyberattacks on Israel",
-        "Location": "Israel",
-        "Risk": "Escalation of cyber warfare, potential for broader regional conflict",
-        "Source": "https://www.al-monitor.com/originals/2026/06/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says",
-        "Title": "Iran cyberattacks on Israel surged in 2026, Israeli cyber chief says",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "al-monitor.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Houthis",
-        "Action": "Attack Israel and announce ban on Israeli vessels in the Red Sea",
-        "Location": "Red Sea, Israel",
-        "Risk": "Expansion of conflict, maritime insecurity, disruption of global shipping",
-        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - The Long War Journal",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Israel, Hezbollah",
-        "Action": "Israel detonates tunnel, strikes south Lebanon; Hezbollah asserts right to self-defense",
-        "Location": "South Lebanon",
-        "Risk": "Escalation of Israel-Hezbollah conflict, potential for regional war",
-        "Source": "https://www.al-monitor.com/originals/2026/06/israel-detonates-tunnel-strikes-south-lebanon-hezbollah-says-has-right-self",
-        "Title": "Israel detonates tunnel, strikes south Lebanon as Hezbollah says has right to self-defence",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "al-monitor.com"
     }
 ]
