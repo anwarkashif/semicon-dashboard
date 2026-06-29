@@ -306,6 +306,7 @@ def render_trash():
     trash_mapping, trash_keys = get_brief_mappings('trash', "All")
     
     if not trash_mapping:
+        import glob
         files = glob.glob('trash/*.json')
         trash_mapping = {os.path.basename(f): f for f in files}
         trash_keys = list(trash_mapping.keys())
@@ -324,7 +325,31 @@ def render_trash():
                 st.rerun()
         with col_del:
             if st.button("⚠️ Permanently Delete", type="primary"):
-                os.remove(old_path)
+                # 1. Delete from Local Server
+                try:
+                    os.remove(old_path)
+                except FileNotFoundError:
+                    pass
+                    
+                # 2. 🛑 THE FIX: Permanently eradicate from Hugging Face Cloud Storage
+                HF_TOKEN = os.environ.get("HF_TOKEN")
+                REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
+                
+                if HF_TOKEN and REPO_ID:
+                    try:
+                        from huggingface_hub import HfApi
+                        api = HfApi()
+                        # The file originated in the 'data' folder on the cloud
+                        cloud_path = f"data/{filename}"
+                        api.delete_file(
+                            path_in_repo=cloud_path, 
+                            repo_id=REPO_ID, 
+                            token=HF_TOKEN, 
+                            commit_message=f"Dashboard Admin: Permanently deleted {filename}"
+                        )
+                    except Exception:
+                        pass # Fails silently if it was already gone from the cloud
+                        
                 st.success(f"Permanently destroyed: {archive_to_manage}")
                 st.rerun()
     else:
