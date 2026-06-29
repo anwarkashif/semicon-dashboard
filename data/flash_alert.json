@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Sudanese Army Recaptures Two Villages in Blue Nile",
+        "Title": "Israel Kills Hezbollah Operative in Deir Seryan, Lebanon",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "HIGH"
@@ -21,13 +21,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119559",
-        "Title": "Russia Strikes Dnepropetrovsk Region",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.nytimes.com/live/2026/06/29/world/hormuz-us-iran-strikes",
         "Title": "Mideast Live Updates: U.S. Reaches Deal With Iran to Halt Attacks, Official Says",
         "Feed_Source": "WAR MONITOR",
@@ -35,11 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/06/29/world/asia/pakistan-afghanistan-strikes.html",
-        "Title": "Pakistan Attacks Afghanistan, Killing More Than 30",
+        "Source": "https://www.france24.com/en/video/20260629-sultan-of-oman-to-meet-france-s-macron-with-spotlight-on-strait-of-hormuz",
+        "Title": "Sultan of Oman to meet France's Macron with spotlight on Strait of Hormuz",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -51,6 +44,13 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
