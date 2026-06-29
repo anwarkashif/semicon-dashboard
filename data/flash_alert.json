@@ -21,11 +21,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeUx1R2hLeUZxU3ZHcmhpVTR1NC1WNGlEbXFMeHJMci0zMFZPSFdjbjRyNzRZM1plWUtmZW5IVkwyWmYySE94dWZranJTM3Q4dmhrQXZNTTFtNjlsSGcxSXBablJ5TUhvWWJZVW5RQmxyWmY5UXVfOW55NHhwY1FIRlh0X05JLUJNS0lBcE9vWHdXR2I0elBoMmJoSDRaX2hSVG45T0ZmOUJqeHlXc3ZfS2t4ZG56TzREd0JuYzc3RzRoSk5GdzVHMFhUdFM?oc=5",
-        "Title": "Press Release: Weapons Located in UNRWA Bags in Khan Yunis - idf.il",
+        "Source": "https://www.france24.com/en/armed-conflict-threatens-ethiopia-s-ancient-monasteries",
+        "Title": "Armed conflict threatens Ethiopia\u2019s ancient monasteries",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -35,8 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -46,27 +46,27 @@
         "Title": "Siemens WinCC Certificate Manager",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/29/samsung-sk-hynix-reported-1point3-reported-trillion-spending-plans.html",
-        "Title": "Samsung, SK Hynix shares fall as investors brace for reported $1.3 trillion spending plans",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/news/venezuela-earthquake-search-rescue-la-guaira/",
-        "Title": "Venezuela death toll rises as search for earthquake survivors continues",
+        "Source": "https://www.cbsnews.com/video/062826-cbs-weekend-news/",
+        "Title": "6/28: CBS Weekend News",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cbsnews.com/video/more-than-1400-confirmed-dead-in-venezuela-earthquakes-tens-of-thousands-still-missing/",
-        "Title": "More than 1,400 confirmed dead in Venezuela earthquakes, tens of thousands still missing",
+        "Source": "https://www.france24.com/en/middle-east/20260629-middle-east-live-lebanon-rejects-us%E2%80%93israel-framework-hezbollah-asserts-right-to-self-defence",
+        "Title": "US says Iran talks to continue, with 'both sides' pausing strikes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "The \u2018Pride Match\u2019 that wasn\u2019t",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
