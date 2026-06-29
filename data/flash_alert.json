@@ -1,17 +1,31 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Arms Civilian Ship in Baltic Sea with Heavy Machine Gun",
+        "Title": "Estonian FM Says Ukrainian Drones Falling in NATO Are Price Worth Paying",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.nytimes.com/live/2026/06/29/world/hormuz-us-iran-strikes",
+        "Title": "Mideast Live Updates: U.S. Reaches Deal With Iran to Halt Attacks, Official Says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/liveuamap/12196",
-        "Title": "Iran and US Reach Agreement on Lifting Oil Sanctions",
+        "Source": "https://www.france24.com/en/video/20260629-sultan-of-oman-to-meet-france-s-macron-with-spotlight-on-strait-of-hormuz",
+        "Title": "Sultan of Oman to meet France's Macron with spotlight on Strait of Hormuz",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "france24.com",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/06/29/world/asia/pakistan-afghanistan-strikes.html",
+        "Title": "Pakistan Attacks Afghanistan, Killing More Than 30",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/southfronteng/61603",
@@ -19,13 +33,6 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.france24.com/en/asia-pacific/20260629-dozens-of-civilians-killed-in-pakistani-air-strikes-in-afghanistan-officials-say",
-        "Title": "Dozens of civilians killed in Pakistani air strikes in Afghanistan, officials say",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -37,13 +44,6 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
@@ -63,10 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/live/2026/06/29/world/hormuz-us-iran-strikes",
-        "Title": "Mideast Live Updates: U.S. Reaches Deal With Iran to Halt Attacks, Official Says",
+        "Source": "https://www.theguardian.com/world/live/2026/jun/29/extreme-heat-europe-germany-poland-czechia-hungary-serbia-heatwave-nato-rutte-starmer-eu-latest-news-updates",
+        "Title": "Extreme heat continues in central and eastern Europe with temperatures of 38C expected \u2013 Europe live",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
