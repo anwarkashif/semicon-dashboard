@@ -4,6 +4,34 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Pakistan says retaliatory airstrikes in Afghanistan killed 25 militants",
+        "Headline": "Pakistan says retaliatory airstrikes in Afghanistan killed 25 militants",
+        "Summary": "Pakistan says retaliatory airstrikes in Afghanistan killed 25 militants",
+        "Risk": "HIGH",
+        "Source": "https://www.france24.com/en/middle-east/20260629-pakistan-says-retaliatory-airstrikes-in-afghanistan-killed-25-militants",
+        "Title": "Pakistan says retaliatory airstrikes in Afghanistan killed 25 militants",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "france24.com"
+    },
+    {
+        "Date": "2026-06-29",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Turkey says Israel trying to cover up Gaza crimes with Armenian 'genocide' resolution",
+        "Headline": "Turkey says Israel trying to cover up Gaza crimes with Armenian 'genocide' resolution",
+        "Summary": "Turkey says Israel trying to cover up Gaza crimes with Armenian 'genocide' resolution",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/turkey-says-israel-trying-cover-gaza-crimes-armenian-genocide-resolution",
+        "Title": "Turkey says Israel trying to cover up Gaza crimes with Armenian 'genocide' resolution",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-06-29",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Stocks adrift, oil up as US-Iran halt renewed attacks",
         "Headline": "Stocks adrift, oil up as US-Iran halt renewed attacks",
         "Summary": "Stocks adrift, oil up as US-Iran halt renewed attacks",
@@ -278,27 +306,5 @@
         "Title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
-    },
-    {
-        "Date": "2026",
-        "Actor": "Israel, Hezbollah",
-        "Action": "Israel detonates tunnel and strikes south Lebanon; Hezbollah asserts right to self-defense",
-        "Location": "Southern Lebanon",
-        "Risk": "Escalation of conflict between Israel and Hezbollah, regional instability",
-        "Source": "https://www.al-monitor.com/originals/2026/06/israel-detonates-tunnel-strikes-south-lebanon-hezbollah-says-has-right-self",
-        "Title": "Israel detonates tunnel, strikes south Lebanon as Hezbollah says has right to self-defence",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "al-monitor.com"
-    },
-    {
-        "Date": "2026",
-        "Actor": "Ukraine, Russia",
-        "Action": "Ukraine's drone sets Russian oil refinery ablaze; Putin admits fuel shortages",
-        "Location": "Russia (oil refinery)",
-        "Risk": "Continued conflict, energy supply disruption, economic impact on Russia",
-        "Source": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQN0l0OWVUTzEtVnVuS1ZuU21sYlBHbDJDN0tsZkdPV1pLMHVmTHJ3YUR5ODlWaXNHczdLTXRqLUYtTm12Mmw3ekNYTUZKU0R5dGp0dzZIR3pSSEx2dE9FWGp2SW11YXA3alpSSGJ6M2VnXzVpbTg2d0RBckhnODVmdkNfYjd2cG82enQwb1lCTXUxb1hxRGYtTTQ2UHBVUUdxMVVOeklEbF9NaEduVjVUM3N6cTJiZDBhWUVQU3h1cXFTNWhSZGM2RWc0V29yYkxHVFczTw?oc=5",
-        "Title": "Ukraine's drone set another Russian oil refinery ablaze as Putin admits fuel shortages - Chattanooga Times Free Press",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
     }
 ]
