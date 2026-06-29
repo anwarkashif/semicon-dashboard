@@ -174,7 +174,12 @@ def fetch_daily_intelligence():
                 article_counter += 1; total_articles += 1
         except Exception: pass
 
-    for query in ['("geopolitics" OR "sanctions" OR "foreign policy" OR "tariffs") when:1h', '("semiconductor" OR "lithography" OR "rare earth" OR "critical minerals") when:1h', '("artificial intelligence" OR "quantum computing" OR "data center" OR "Nvidia") when:1h']:
+    # 🛑 THE FIX: Check if it's the late-night run (18:15 UTC / 11:45 PM IST). If so, do a 24-hour sweep.
+    current_utc_hour = datetime.now(timezone.utc).hour
+    is_super_brief_run = current_utc_hour >= 18 
+    time_modifier = "when:1d" if is_super_brief_run else "when:1h"
+
+    for query in [f'("geopolitics" OR "sanctions" OR "foreign policy" OR "tariffs") {time_modifier}', f'("semiconductor" OR "lithography" OR "rare earth" OR "critical minerals") {time_modifier}', f'("artificial intelligence" OR "quantum computing" OR "data center" OR "Nvidia") {time_modifier}']:
         try:
             gn_url = f'https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
             for entry in feedparser.parse(requests.get(gn_url, headers=headers, timeout=15).text).entries[:5]: 
@@ -314,7 +319,14 @@ if __name__ == "__main__":
         json.dump(unique_master, open(output_file_tactical, 'w'), indent=4)
         
         print("⏳ Pooling data before FLASH TO BRIEF generation...")
-        brief_input = unique_master[:10]
+        
+        # 🛑 THE FIX: If it's the late-night Super Brief run, feed Gemini the top 25 events from the whole day instead of just 10.
+        current_utc_hour = datetime.now(timezone.utc).hour
+        if current_utc_hour >= 18:
+            print("🌟 Executing 24-Hour Super Brief Synthesis...")
+            brief_input = unique_master[:25]
+        else:
+            brief_input = unique_master[:10]
         
         flush_brief_data = generate_flush_to_brief(brief_input)
         json.dump(flush_brief_data, open('data/executive_home/flush_brief_24h.json', 'w'), indent=4)
