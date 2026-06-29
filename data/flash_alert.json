@@ -1,42 +1,42 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Arms Civilian Ship in Baltic Sea with Heavy Machine Gun",
+        "Title": "CENTCOM Commander Meets Israeli and Lebanese Leaders on Framework Agreement",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119564",
+        "Title": "Russia Arms Tankers to Deter NATO Seizure",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/liveuamap/12196",
-        "Title": "Iran and US Reach Agreement on Lifting Oil Sanctions",
+        "Source": "https://t.me/nexta_live/119559",
+        "Title": "Russia Strikes Dnepropetrovsk Region",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61603",
-        "Title": "Israel Targets Syrian Position After Troops Attacked",
+        "Source": "https://www.nytimes.com/live/2026/06/29/world/hormuz-us-iran-strikes",
+        "Title": "Mideast Live Updates: U.S. Reaches Deal With Iran to Halt Attacks, Official Says",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/asia-pacific/20260629-dozens-of-civilians-killed-in-pakistani-air-strikes-in-afghanistan-officials-say",
-        "Title": "Dozens of civilians killed in Pakistani air strikes in Afghanistan, officials say",
+        "Source": "https://www.nytimes.com/2026/06/29/world/asia/pakistan-afghanistan-strikes.html",
+        "Title": "Pakistan Attacks Afghanistan, Killing More Than 30",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/29/spacex-debt-diversification-equity-bond-investors-analysts.html",
-        "Title": "SpaceX's $25 billion bond sale drives huge demand - and a potential headache for investors",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119559",
-        "Title": "Russia Strikes Dnepropetrovsk Region",
+        "Source": "https://t.me/warmonitors/44735",
+        "Title": "US and Iran Discuss Possible Meeting in Qatar",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/live/2026/06/29/world/hormuz-us-iran-strikes",
-        "Title": "Mideast Live Updates: U.S. Reaches Deal With Iran to Halt Attacks, Official Says",
+        "Source": "https://t.me/liveuamap/12198",
+        "Title": "US and Iran to Meet in Doha",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32317",
+        "Title": "US Reviews Middle East Presence After Iranian Strikes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
