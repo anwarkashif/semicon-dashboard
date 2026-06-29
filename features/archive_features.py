@@ -330,16 +330,7 @@ def render_trash():
                 st.rerun()
         with col_del:
             if st.button("⚠️ Permanently Delete", type="primary"):
-                # 1. Eradicate from local container disk
-                try:
-                    os.remove(old_path)
-                except FileNotFoundError:
-                    pass
-                    
-                # 2. 🛑 THE FIX: Purge the Streamlit Cache to eliminate ghost files
-                st.cache_data.clear()
-                    
-                # 3. Eradicate from Hugging Face Cloud Storage
+                # 🛑 1. CLOUD KILL FIRST: Eradicate from Hugging Face Cloud Storage
                 HF_TOKEN = os.environ.get("HF_TOKEN")
                 REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
                 
@@ -347,6 +338,7 @@ def render_trash():
                     try:
                         from huggingface_hub import HfApi
                         api = HfApi()
+                        # Crucial: Target the 'data/' folder on the cloud, not 'trash/'
                         api.delete_file(
                             path_in_repo=f"data/{filename}", 
                             repo_id=REPO_ID, 
@@ -354,10 +346,10 @@ def render_trash():
                             repo_type="space",
                             commit_message=f"Dashboard Admin: Permanently deleted {filename}"
                         )
-                    except Exception:
-                        pass
+                    except Exception as e:
+                        pass # Continue if already gone
                         
-                # 4. Eradicate from GitHub (just in case it is stuck there)
+                # 🛑 2. GITHUB KILL SECOND: Eradicate from GitHub repo (if present)
                 GITHUB_PAT = os.environ.get("GITHUB_PAT")
                 if GITHUB_PAT:
                     try:
@@ -371,6 +363,14 @@ def render_trash():
                     except Exception:
                         pass
 
+                # 🛑 3. LOCAL KILL THIRD: Eradicate from local container disk
+                try:
+                    os.remove(old_path)
+                except FileNotFoundError:
+                    pass
+                    
+                # 🛑 4. CACHE PURGE LAST: Clear memory and refresh only after all files are dead
+                st.cache_data.clear()
                 st.success(f"Permanently destroyed: {archive_to_manage}")
                 st.rerun()
     else:
