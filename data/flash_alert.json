@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Explosions Reported Across Occupied Crimea and Luhansk",
+        "Title": "US Marines Conduct Aerial Damage Assessment of Caracas Coast",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,15 +14,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeUx1R2hLeUZxU3ZHcmhpVTR1NC1WNGlEbXFMeHJMci0zMFZPSFdjbjRyNzRZM1plWUtmZW5IVkwyWmYySE94dWZranJTM3Q4dmhrQXZNTTFtNjlsSGcxSXBablJ5TUhvWWJZVW5RQmxyWmY5UXVfOW55NHhwY1FIRlh0X05JLUJNS0lBcE9vWHdXR2I0elBoMmJoSDRaX2hSVG45T0ZmOUJqeHlXc3ZfS2t4ZG56TzREd0JuYzc3RzRoSk5GdzVHMFhUdFM?oc=5",
-        "Title": "Press Release: Weapons Located in UNRWA Bags in Khan Yunis - idf.il",
+        "Source": "https://www.cnbc.com/2026/06/28/stock-futures-today-live-updates.html",
+        "Title": "Stock futures edge higher, Asia mixed as renewed U.S.-Iran attacks push oil prices up: Live updates",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "cnbc.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44731",
-        "Title": "Israel Attacks Neighborhood in Southern Lebanon",
+        "Source": "https://t.me/warmonitors/44732",
+        "Title": "Detonations Start in Southern Lebanon",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -40,6 +40,13 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.france24.com/en/armed-conflict-threatens-ethiopia-s-ancient-monasteries",
@@ -60,13 +67,6 @@
         "Title": "Two boys rescued from Venezuela earthquake rubble after days of being trapped",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQN1ZCQnhWR1FvdU9wb2RvRTZGZ0NxQm43d0FpVnVsUENyYV84SW5zRmFUM2FFTXZVUTBsdXpNTWs5ZDVtaWRCMXhVSklpeXc1V0NzeFZPeTlBTzV6UURBRU5RT0s4U2VwdThpUTIyNDFBaWlGaXBWb2dXN2V4MjJ4UHo4bFYzQ2c0dDZoY3FzcVhfYzhTenFWclE0QWJoUlJ3RkRMVDlLY0x3c2o4ZjZGSkFrR0VZci1zYzhOWkRtRHRheS0yZEE?oc=5",
-        "Title": "Earthquakes in Venezuela: Situation Report No. 3 (26 June 2026, Time: 3:00 pm) - ReliefWeb",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
