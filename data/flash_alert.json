@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Libya Accused of Being Weapons Trafficking Hub for RSF with UAE Backing",
+        "Title": "Zelensky Says Putin Demands Capture of Donetsk and Luhansk by Year-End",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -42,6 +42,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
         "Title": "Yokogawa FAST/TOOLS and CI Server",
         "Feed_Source": "CISA",
@@ -60,13 +67,6 @@
         "Title": "US and Iran to Meet in Doha",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/6/29/drone-relayers-off-ukraines-diplomatic-triumph-over-belarus?traffic_source=rss",
-        "Title": "Drone relayers off: Ukraine\u2019s diplomatic triumph over Russia ally Belarus",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
