@@ -1,33 +1,5 @@
 [
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "US-Iran Nuclear Talks Resume in Qatar",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/29/china-japan-export-controls-watch-list-defense-entities.html",
-        "Title": "China widens Japan export curbs, targeting drone makers, nuclear firms and defense institutes ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/29/oil-prices-wti-brent-crude-us-iran-strikes-strait-hormuz-talks.html",
-        "Title": "Oil jumps back above $70 as fresh U.S.-Iran clashes reignite Middle East supply fears",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89505",
-        "Title": "Israel Destroys Iranian Missile Launcher in Strike",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -49,6 +21,41 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Gas Lines Worsen in Western Russia After Ukrainian Drone Strikes Hit Refineries",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/29/china-japan-export-controls-watch-list-defense-entities.html",
+        "Title": "China widens Japan export curbs, targeting drone makers, nuclear firms and defense institutes ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/29/putin-says-ukraine-proposed-halt-to-deep-strikes?traffic_source=rss",
+        "Title": "Putin says Ukraine proposed halt to deep strikes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/29/oil-prices-wti-brent-crude-us-iran-strikes-strait-hormuz-talks.html",
+        "Title": "Oil jumps back above $70 as fresh U.S.-Iran clashes reignite Middle East supply fears",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/29/venezuelans-angry-government-as-time-runs-out-to-dig-out-survivors?traffic_source=rss",
+        "Title": "Venezuelans angry government as time runs out to dig out survivors",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.aljazeera.com/features/longform/2026/6/29/venezuelas-earthquakes-pose-first-major-test-for-president-delcy-rodriguez?traffic_source=rss",
         "Title": "Venezuela\u2019s earthquakes pose first major test for President Delcy Rodriguez",
         "Feed_Source": "WAR MONITOR",
@@ -60,13 +67,6 @@
         "Title": "France hunts for new EU taxes to fund \u20ac2T budget",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "politico.eu",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/video/062826-cbs-weekend-news/",
-        "Title": "6/28: CBS Weekend News",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     }
 ]
