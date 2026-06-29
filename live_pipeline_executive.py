@@ -225,11 +225,21 @@ def fetch_daily_intelligence():
     return aggregated_news, total_articles, psy_events, article_map
 
 def extract_tactical_events(news_text):
+    # 🛑 THE FIX: Dynamically scale the extraction volume based on whether it is the 24-hour Super Brief run
+    current_utc_hour = datetime.now(timezone.utc).hour
+    is_super_brief = current_utc_hour >= 18 
+    
+    extraction_volume = "20-25" if is_super_brief else "5-10"
+    
     prompt = f"""
-    You are an elite Geopolitics-OSINT analyst. Review entries preceded by IDs. Extract 4-6 critical events.
+    You are an elite Geopolitics-OSINT analyst. Review entries preceded by IDs. Extract {extraction_volume} critical events.
     Output raw JSON array. Keys exactly: "Article_ID", "Date", "Actor", "Action", "Location", "Risk".
     Data: {news_text}
     """
+    raw_txt = generate_with_rotation(prompt, temperature=0.1)
+    match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
+    if match: return json.loads(match.group(0))
+    return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
     raw_txt = generate_with_rotation(prompt, temperature=0.1)
     match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
     if match: return json.loads(match.group(0))
