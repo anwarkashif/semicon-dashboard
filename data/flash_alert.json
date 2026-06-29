@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drone Strikes Cause Fuel Shortage Concerns in Russia",
+        "Title": "Iran Says US Will Release $6 Billion in Frozen Assets",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/asia-pacific/20260629-dozens-of-civilians-killed-in-pakistani-air-strikes-in-afghanistan-officials-say",
+        "Title": "Dozens of civilians killed in Pakistani air strikes in Afghanistan, officials say",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/intelslava/89511",
@@ -14,18 +21,18 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://warmonitor.com/",
+        "Title": "Lukashenko Visits China After Russia Trip",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cnbc.com/2026/06/29/china-japan-export-controls-watch-list-defense-entities.html",
         "Title": "China widens Japan export curbs, targeting drone makers, nuclear firms and defense institutes ",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/29/putin-says-ukraine-proposed-halt-to-deep-strikes?traffic_source=rss",
-        "Title": "Putin says Ukraine proposed halt to deep strikes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -37,13 +44,6 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
