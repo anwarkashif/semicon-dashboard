@@ -7,18 +7,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/liveuamap/12196",
-        "Title": "Iran and US Reach Agreement on Lifting Oil Sanctions",
+        "Source": "https://t.me/intelslava/89511",
+        "Title": "China Supports Belarus Sovereignty",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/asia-pacific/20260629-dozens-of-civilians-killed-in-pakistani-air-strikes-in-afghanistan-officials-say",
-        "Title": "Dozens of civilians killed in Pakistani air strikes in Afghanistan, officials say",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/southfronteng/61603",
@@ -28,10 +21,10 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Lukashenko Visits China After Russia Trip",
+        "Source": "https://www.france24.com/en/asia-pacific/20260629-dozens-of-civilians-killed-in-pakistani-air-strikes-in-afghanistan-officials-say",
+        "Title": "Dozens of civilians killed in Pakistani air strikes in Afghanistan, officials say",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "france24.com",
         "threat_level": "HIGH"
     },
     {
@@ -56,17 +49,24 @@
         "threat_level": "WATCH"
     },
     {
+        "Source": "https://t.me/liveuamap/12196",
+        "Title": "Iran and US Reach Agreement on Lifting Oil Sanctions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Treasury yields little changed as investors look ahead to key jobs data",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQzN6UmVIVU11NmpYSVFYT3pISGNuOElhcTBCQm1HZ3AyWFlSRlJzYjBaRHVIQ2tpUklTOTRqQjl5M1JDYzJwblcyMURBZXlsdFlhRjRJOHVnOV9Dd2twX1g0UERuMmlRTTBLZWR2bWdGUlo0aGh0NGdhaFJiTktVZ2tFanQ5SHRDQmktT2p1RWRKcDdpc1lYUnB1dEVvQUpHQWpjTVpMWQ?oc=5",
         "Title": "One killed in shooting at site of California World Cup fan zone - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119549",
-        "Title": "Lightning Strikes Eiffel Tower in France",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
