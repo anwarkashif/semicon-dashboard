@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Says US Will Release $6 Billion in Frozen Assets",
+        "Title": "Ukraine Strikes Semiconductor Plant in Voronezh, Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.france24.com/en/asia-pacific/20260629-dozens-of-civilians-killed-in-pakistani-air-strikes-in-afghanistan-officials-say",
@@ -14,6 +14,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/southfronteng/61603",
+        "Title": "Israel Targets Syrian Position After Troops Attacked",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://t.me/intelslava/89511",
         "Title": "China Supports Belarus Sovereignty",
         "Feed_Source": "WAR MONITOR",
@@ -21,18 +28,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Lukashenko Visits China After Russia Trip",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/29/putin-says-ukraine-proposed-halt-to-deep-strikes?traffic_source=rss",
+        "Title": "Putin says Ukraine proposed halt to deep strikes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/29/china-japan-export-controls-watch-list-defense-entities.html",
-        "Title": "China widens Japan export curbs, targeting drone makers, nuclear firms and defense institutes ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,6 +49,13 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://warmonitor.com/",
+        "Title": "Treasury yields little changed as investors look ahead to key jobs data",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQzN6UmVIVU11NmpYSVFYT3pISGNuOElhcTBCQm1HZ3AyWFlSRlJzYjBaRHVIQ2tpUklTOTRqQjl5M1JDYzJwblcyMURBZXlsdFlhRjRJOHVnOV9Dd2twX1g0UERuMmlRTTBLZWR2bWdGUlo0aGh0NGdhaFJiTktVZ2tFanQ5SHRDQmktT2p1RWRKcDdpc1lYUnB1dEVvQUpHQWpjTVpMWQ?oc=5",
         "Title": "One killed in shooting at site of California World Cup fan zone - Reuters",
         "Feed_Source": "WAR MONITOR",
@@ -60,13 +67,6 @@
         "Title": "Lightning Strikes Eiffel Tower in France",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/paris-mortuaries-overwhelmed-france-counts-victims-devastating-heatwave",
-        "Title": "Paris mortuaries overwhelmed as France counts victims of devastating heatwave",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
