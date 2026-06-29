@@ -46,8 +46,10 @@ def generate_with_rotation(prompt, temperature=0.1):
         
     current_idx = 0
     failures = 0
+    global_cycles = 0
+    MAX_GLOBAL_CYCLES = 4  # Allows 4 full loops (up to 24 key attempts) before truly failing
     
-    while current_idx < len(VALID_KEYS):
+    while global_cycles < MAX_GLOBAL_CYCLES:
         current_key = VALID_KEYS[current_idx]
         client = genai.Client(api_key=current_key)
         
@@ -78,15 +80,25 @@ def generate_with_rotation(prompt, temperature=0.1):
             logging.warning(log_msg)
             
             if failures >= 2:
-                print(f"🔄 Rotating to API Key {current_idx + 2}...")
-                logging.info(f"Rotating to API Key {current_idx + 2}")
                 current_idx += 1
                 failures = 0
-                time.sleep(3)
-            else:
-                time.sleep(10)
                 
-    raise Exception("All API keys exhausted via rotation.")
+                # 🛑 THE FIX: If all keys are exhausted, wait 65 seconds for Google's RPM quota to reset, then loop back to Key 1
+                if current_idx >= len(VALID_KEYS):
+                    print("⏳ All keys exhausted in this cycle. Sleeping 65 seconds for RPM quotas to reset...")
+                    logging.info("All keys exhausted. Sleeping 65s for RPM reset.")
+                    time.sleep(65)
+                    current_idx = 0
+                    global_cycles += 1
+                else:
+                    print(f"🔄 Rotating to API Key {current_idx + 1}...")
+                    logging.info(f"Rotating to API Key {current_idx + 1}")
+                    time.sleep(5)
+            else:
+                # Wait 15 seconds on a first failure to allow temporary 503 Server Errors to resolve
+                time.sleep(15)
+                
+    raise Exception("CRITICAL: All API keys exhausted across multiple recovery cycles. Manual intervention required.")
 
 def valid_url(url):
     if not url: return False
