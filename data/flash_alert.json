@@ -7,13 +7,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/29/china-japan-export-controls-watch-list-defense-entities.html",
-        "Title": "China widens Japan export curbs, targeting drone makers, nuclear firms and defense institutes ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://t.me/intelslava/89511",
         "Title": "China Supports Belarus Sovereignty",
         "Feed_Source": "WAR MONITOR",
@@ -21,10 +14,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Lukashenko Visits China After Russia Trip",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/29/putin-says-ukraine-proposed-halt-to-deep-strikes?traffic_source=rss",
+        "Title": "Putin says Ukraine proposed halt to deep strikes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/29/china-japan-export-controls-watch-list-defense-entities.html",
+        "Title": "China widens Japan export curbs, targeting drone makers, nuclear firms and defense institutes ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/middle-east/20260629-middle-east-live-lebanon-rejects-us%E2%80%93israel-framework-hezbollah-asserts-right-to-self-defence",
+        "Title": "US says Iran talks to continue, with 'both sides' pausing strikes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "HIGH"
     },
     {
@@ -37,13 +44,6 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
