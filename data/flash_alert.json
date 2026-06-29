@@ -14,13 +14,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119559",
-        "Title": "Russia Strikes Dnepropetrovsk Region",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.nytimes.com/live/2026/06/29/world/hormuz-us-iran-strikes",
         "Title": "Mideast Live Updates: U.S. Reaches Deal With Iran to Halt Attacks, Official Says",
         "Feed_Source": "WAR MONITOR",
@@ -44,6 +37,13 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
