@@ -1,16 +1,9 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Marines Conduct Aerial Damage Assessment of Caracas Coast",
+        "Title": "Gas Lines Worsen in Western Russia After Ukrainian Drone Strikes Hit Refineries",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89505",
-        "Title": "Israel Destroys Iranian Missile Launcher in Strike",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,11 +14,25 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44732",
-        "Title": "Detonations Start in Southern Lebanon",
+        "Source": "https://t.me/intelslava/89505",
+        "Title": "Israel Destroys Iranian Missile Launcher in Strike",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeUx1R2hLeUZxU3ZHcmhpVTR1NC1WNGlEbXFMeHJMci0zMFZPSFdjbjRyNzRZM1plWUtmZW5IVkwyWmYySE94dWZranJTM3Q4dmhrQXZNTTFtNjlsSGcxSXBablJ5TUhvWWJZVW5RQmxyWmY5UXVfOW55NHhwY1FIRlh0X05JLUJNS0lBcE9vWHdXR2I0elBoMmJoSDRaX2hSVG45T0ZmOUJqeHlXc3ZfS2t4ZG56TzREd0JuYzc3RzRoSk5GdzVHMFhUdFM?oc=5",
+        "Title": "Press Release: Weapons Located in UNRWA Bags in Khan Yunis - idf.il",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cbsnews.com/news/pakistan-29-militants-killed-afghan-border/",
+        "Title": "Pakistan says its security forces killed 29 militants along Afghan border",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -39,34 +46,27 @@
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.france24.com/en/armed-conflict-threatens-ethiopia-s-ancient-monasteries",
-        "Title": "Armed conflict threatens Ethiopia\u2019s ancient monasteries",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/28/world/americas/venezuela-earthquake-caracas-morgue.html",
-        "Title": "At a Caracas Morgue, Families and Officials Try to Identify More Than 100 Victims",
+        "Source": "https://www.nytimes.com/live/2026/06/28/world/venezuela-earthquake/search-teams-rescued-33-people-from-the-rubble-on-saturday",
+        "Title": "Search teams rescued 33 people from the rubble on Saturday.",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/cr47dvywvy5o?at_medium=RSS&at_campaign=rss",
-        "Title": "Two boys rescued from Venezuela earthquake rubble after days of being trapped",
+        "Source": "https://warmonitor.com/",
+        "Title": "Rescuers in \u2018Critical Hours\u2019 as Window to Find Survivors Closes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/29/father-and-son-pulled-out-alive-four-days-after-venezuela-earthquake?traffic_source=rss",
+        "Title": "Father and son pulled out alive four days after Venezuela earthquake",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
