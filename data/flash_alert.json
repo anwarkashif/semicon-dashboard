@@ -1,23 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Strike Hits Kerch Strait Power Cable and Air Defense Position",
+        "Title": "Ukrainian Drone Strikes Cause Fuel Shortage Concerns in Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89511",
         "Title": "China Supports Belarus Sovereignty",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/29/putin-says-ukraine-proposed-halt-to-deep-strikes?traffic_source=rss",
-        "Title": "Putin says Ukraine proposed halt to deep strikes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
@@ -28,10 +21,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260629-middle-east-live-lebanon-rejects-us%E2%80%93israel-framework-hezbollah-asserts-right-to-self-defence",
-        "Title": "US says Iran talks to continue, with 'both sides' pausing strikes",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/29/putin-says-ukraine-proposed-halt-to-deep-strikes?traffic_source=rss",
+        "Title": "Putin says Ukraine proposed halt to deep strikes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
@@ -49,24 +42,31 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+        "Title": "EVoke Systems Charging Station Management System",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQzN6UmVIVU11NmpYSVFYT3pISGNuOElhcTBCQm1HZ3AyWFlSRlJzYjBaRHVIQ2tpUklTOTRqQjl5M1JDYzJwblcyMURBZXlsdFlhRjRJOHVnOV9Dd2twX1g0UERuMmlRTTBLZWR2bWdGUlo0aGh0NGdhaFJiTktVZ2tFanQ5SHRDQmktT2p1RWRKcDdpc1lYUnB1dEVvQUpHQWpjTVpMWQ?oc=5",
+        "Title": "One killed in shooting at site of California World Cup fan zone - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119549",
+        "Title": "Lightning Strikes Eiffel Tower in France",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.france24.com/en/paris-mortuaries-overwhelmed-france-counts-victims-devastating-heatwave",
         "Title": "Paris mortuaries overwhelmed as France counts victims of devastating heatwave",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/news/venezuela-earthquake-search-rescue-mother-baby-video/",
-        "Title": "Videos show U.S. rescue team pull mother, baby from rubble in Venezuela",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/29/cnbc-daily-open-iran-ecb-meta-google-sk-hynix-samsung.html",
-        "Title": "CNBC Daily Open: Hostilities halted again as peace talks continue",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
