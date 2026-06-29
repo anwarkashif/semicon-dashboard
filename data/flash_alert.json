@@ -1,17 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Standoff at Key Oil Chokepoint Intensifies",
+        "Title": "Strike Hits Kerch Strait Power Cable and Air Defense Position",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Lukashenko Visits China After Russia Trip",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cnbc.com/2026/06/29/china-japan-export-controls-watch-list-defense-entities.html",
@@ -21,11 +14,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/06/29/oil-prices-wti-brent-crude-us-iran-strikes-strait-hormuz-talks.html",
-        "Title": "Oil jumps back above $70 as fresh U.S.-Iran clashes reignite Middle East supply fears",
+        "Source": "https://t.me/intelslava/89511",
+        "Title": "China Supports Belarus Sovereignty",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Lukashenko Visits China After Russia Trip",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +49,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01",
-        "Title": "Siemens WinCC Certificate Manager",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/29/baidu-kunlunxin-hong-kong-ipo-50-billion-ai-chips.html",
-        "Title": "Baidu shares jump 7% as AI chip arm Kunlunxin said to target $50 billion Hong Kong IPO",
+        "Source": "https://www.france24.com/en/paris-mortuaries-overwhelmed-france-counts-victims-devastating-heatwave",
+        "Title": "Paris mortuaries overwhelmed as France counts victims of devastating heatwave",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/6/29/putin-says-ukraine-proposed-halt-to-deep-strikes?traffic_source=rss",
-        "Title": "Putin says Ukraine proposed halt to deep strikes",
+        "Source": "https://www.cbsnews.com/news/venezuela-earthquake-search-rescue-mother-baby-video/",
+        "Title": "Videos show U.S. rescue team pull mother, baby from rubble in Venezuela",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "cbsnews.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/29/cnbc-daily-open-iran-ecb-meta-google-sk-hynix-samsung.html",
+        "Title": "CNBC Daily Open: Hostilities halted again as peace talks continue",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
