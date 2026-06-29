@@ -1,5 +1,19 @@
 [
     {
+        "Date": "2026-06-29",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran war live: Tehran insists on control of Hormuz amid reports of US talks",
+        "Headline": "Iran war live: Tehran insists on control of Hormuz amid reports of US talks",
+        "Summary": "Iran war live: Tehran insists on control of Hormuz amid reports of US talks",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/liveblog/2026/6/29/iran-war-live-tehran-insists-on-control-of-hormuz-amid-reports-of-us-talks?traffic_source=rss",
+        "Title": "Iran war live: Tehran insists on control of Hormuz amid reports of US talks",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
         "Date": "2026-06-28",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
@@ -26,6 +40,72 @@
         "Title": "Report says Israel rebrands Gaza displacement plan as 'Freedom of Movement'",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026",
+        "Actor": "US",
+        "Action": "Carries out fresh strikes against Iran after tanker struck in Hormuz",
+        "Location": "Strait of Hormuz, Iran",
+        "Risk": "Escalation of hostilities, regional conflict, shipping disruption",
+        "Source": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/",
+        "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "gcaptain.com"
+    },
+    {
+        "Date": "2026",
+        "Actor": "Unknown (implied Iran/proxies)",
+        "Action": "Strikes second tanker",
+        "Location": "Strait of Hormuz",
+        "Risk": "Deepening shipping crisis, economic disruption, military confrontation",
+        "Source": "https://gcaptain.com/second-tanker-struck-in-strait-of-hormuz-as-u-s-iran-shipping-crisis-deepens/",
+        "Title": "Second Tanker Struck in Strait of Hormuz as U.S.-Iran Shipping Crisis Deepens",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "gcaptain.com"
+    },
+    {
+        "Date": "June 30, 2026",
+        "Actor": "United States, Iran",
+        "Action": "Agree to halt strikes and hold consultations",
+        "Location": "Doha (for consultations), Middle East (for strikes)",
+        "Risk": "Potential de-escalation of conflict, but fragility of peace",
+        "Source": "https://x.com/tassagency_en/status/2071344357177729100",
+        "Title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026",
+        "Actor": "Israel, Hezbollah",
+        "Action": "Israel detonates tunnel and strikes south Lebanon; Hezbollah asserts right to self-defense",
+        "Location": "Southern Lebanon",
+        "Risk": "Escalation of conflict between Israel and Hezbollah, regional instability",
+        "Source": "https://www.al-monitor.com/originals/2026/06/israel-detonates-tunnel-strikes-south-lebanon-hezbollah-says-has-right-self",
+        "Title": "Israel detonates tunnel, strikes south Lebanon as Hezbollah says has right to self-defence",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "al-monitor.com"
+    },
+    {
+        "Date": "2026",
+        "Actor": "Ukraine, Russia",
+        "Action": "Ukraine's drone sets Russian oil refinery ablaze; Putin admits fuel shortages",
+        "Location": "Russia (oil refinery)",
+        "Risk": "Continued conflict, energy supply disruption, economic impact on Russia",
+        "Source": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQN0l0OWVUTzEtVnVuS1ZuU21sYlBHbDJDN0tsZkdPV1pLMHVmTHJ3YUR5ODlWaXNHczdLTXRqLUYtTm12Mmw3ekNYTUZKU0R5dGp0dzZIR3pSSEx2dE9FWGp2SW11YXA3alpSSGJ6M2VnXzVpbTg2d0RBckhnODVmdkNfYjd2cG82enQwb1lCTXUxb1hxRGYtTTQ2UHBVUUdxMVVOeklEbF9NaEduVjVUM3N6cTJiZDBhWUVQU3h1cXFTNWhSZGM2RWc0V29yYkxHVFczTw?oc=5",
+        "Title": "Ukraine's drone set another Russian oil refinery ablaze as Putin admits fuel shortages - Chattanooga Times Free Press",
+        "Feed_Source": "Google News Live 1H",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "2026",
+        "Actor": "UN (reporting on Israel's actions)",
+        "Action": "Releases damning report on obliteration of Gaza's children",
+        "Location": "Gaza",
+        "Risk": "Humanitarian crisis, war crimes accusations, international condemnation against Israel",
+        "Source": "https://moderndiplomacy.eu/2026/06/29/obliterating-gazas-children-the-damning-un-report/",
+        "Title": "Obliterating Gaza\u2019s Children: The Damning UN Report",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
     },
     {
         "Date": "2026-06-28",
@@ -214,88 +294,5 @@
         "Title": "Israel detonates tunnel, strikes south Lebanon",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "al-monitor.com"
-    },
-    {
-        "Date": "2026-06-28",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
-        "Headline": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
-        "Summary": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
-        "Risk": "HIGH",
-        "Source": "https://www.aljazeera.com/sports/2026/6/28/heightened-emotions-in-iran-after-team-melli-knocked-out-of-world-cup?traffic_source=rss",
-        "Title": "Heightened emotions in Iran after Team Melli knocked out of World Cup",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "aljazeera.com"
-    },
-    {
-        "Date": "2026-06-28",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "US and Iran agree to resume Strait of Hormuz talks: Report",
-        "Headline": "US and Iran agree to resume Strait of Hormuz talks: Report",
-        "Summary": "US and Iran agree to resume Strait of Hormuz talks: Report",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/us-and-iran-agree-resume-strait-hormuz-talks-report",
-        "Title": "US and Iran agree to resume Strait of Hormuz talks: Report",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "US, Iran (implied hostile actors)",
-        "Action": "US carries out fresh strikes against Iran; Tankers struck, escalating hostilities",
-        "Location": "Strait of Hormuz, Iran",
-        "Risk": "High risk of full-scale military conflict, severe disruption of global oil supply and maritime trade",
-        "Source": "https://gcaptain.com/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-in-hormuz-escalating-hostilities/",
-        "Title": "US Carries Out Fresh Strikes Against Iran After Tanker Struck In Hormuz, Escalating Hostilities",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "June 30",
-        "Actor": "United States, Iran",
-        "Action": "Agreed to halt strikes and hold consultations",
-        "Location": "Doha (for talks), Strait of Hormuz (context)",
-        "Risk": "Potential de-escalation of conflict, but outcome uncertain and fragile",
-        "Source": "https://x.com/tassagency_en/status/2071344357177729100",
-        "Title": "Representatives of the United States and Iran reached an agreement to halt strikes and hold consultations in Doha on June 30, Axios journalist Barak Ravid said:",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Israel (IDF), Hezbollah",
-        "Action": "Attacked Hezbollah's underground infrastructure",
-        "Location": "Lebanon",
-        "Risk": "Escalation of Israel-Hezbollah conflict, regional instability, humanitarian impact",
-        "Source": "https://x.com/Haaretz/status/2071327884111729127",
-        "Title": "Netanyahu: The IDF attacked Hezbollah's underground infrastructure in Lebanon, the US was informed in advance",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "Recent",
-        "Actor": "Houthis",
-        "Action": "Attacked Israel, announced ban on Israeli vessels",
-        "Location": "Red Sea, Israel",
-        "Risk": "Expansion of regional conflict, severe disruption to international maritime trade routes",
-        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
-        "Feed_Source": "Maritime Deep Scrape",
-        "Publisher": "news.google.com"
-    },
-    {
-        "Date": "Within weeks",
-        "Actor": "Aleksandar Vucic (Serbian President)",
-        "Action": "Announces resignation amidst anti-government protests",
-        "Location": "Serbia",
-        "Risk": "Political instability, potential for shifts in domestic and regional power dynamics",
-        "Source": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOamhNd3ZCelFLcXp1VVYtaGFVOWlidnh3ZHlmTXpsT19LaHBibkVQaGRnREdpZDlMY1c5bVdSMFRPR1RvcHdpZ2cxZHg1ZEdxSmctOWNYY0g5UHd1VVg2cmpqTUpWN1h1RDFOR1BlSXExdjc1cGhBN0VSX3hPQndKY1luUEhMOE16ZTFzMFBEYVRJNFhfdng5S0Fubkg0LXZUb3U5Yk10NzF5YlotbklIbTUtREt0SGVyZm1haFU4X1lRZlhHZEtKb2JVX2JMOUdQNjlqVnVNazhyZUZZLWtoNA?oc=5",
-        "Title": "Serbian President Aleksandar Vucic says he will resign within weeks, while Serbia prepares for parliamentary elections after months of anti-government protests. His possible exit could allow him to return as prime minister if his party wins. #dwnews - facebook.com",
-        "Feed_Source": "Google News Live 1H",
-        "Publisher": "news.google.com"
     }
 ]
