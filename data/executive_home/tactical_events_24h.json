@@ -1,5 +1,33 @@
 [
     {
+        "Date": "2026-06-30",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Talks with Iran could fail and diplomacy may not succeed, Rubio tells Congress",
+        "Headline": "Talks with Iran could fail and diplomacy may not succeed, Rubio tells Congress",
+        "Summary": "Talks with Iran could fail and diplomacy may not succeed, Rubio tells Congress",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/talks-iran-could-fail-and-diplomacy-may-not-succeed-rubio-tells-congress",
+        "Title": "Talks with Iran could fail and diplomacy may not succeed, Rubio tells Congress",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-06-30",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran war live: Tehran denies Trump\u2019s claims of meeting in Doha",
+        "Headline": "Iran war live: Tehran denies Trump\u2019s claims of meeting in Doha",
+        "Summary": "Iran war live: Tehran denies Trump\u2019s claims of meeting in Doha",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/liveblog/2026/6/30/iran-war-live-tehran-denies-trumps-claims-of-meeting-in-doha?traffic_source=rss",
+        "Title": "Iran war live: Tehran denies Trump\u2019s claims of meeting in Doha",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
         "Date": "2026-06-29",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
@@ -12,6 +40,116 @@
         "Title": "Pezeshkian says Iran will honour deal if US complies",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "",
+        "Actor": "Keir Starmer (UK)",
+        "Action": "To unveil defence plan with \u00a35bn for drones",
+        "Location": "UK",
+        "Risk": "Increased military spending, focus on drone warfare, potential shift in UK defense posture.",
+        "Source": "https://www.ft.com/content/95020bd5-a717-4fcf-97d4-c218e9f4d500",
+        "Title": "Keir Starmer to unveil defence plan with \u00a35bn for drones",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "ft.com"
+    },
+    {
+        "Date": "",
+        "Actor": "Authorities (implied)",
+        "Action": "Raided Supermicro offices in chip smuggling probe",
+        "Location": "Taiwan",
+        "Risk": "Supply chain disruption, intellectual property theft, geopolitical tensions related to chip industry.",
+        "Source": "https://www.ft.com/content/a033c2fb-6c0b-4d25-9795-a04b95964e23",
+        "Title": "Supermicro Taiwan offices raided in chip smuggling probe",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "ft.com"
+    },
+    {
+        "Date": "",
+        "Actor": "Samsung, SK Hynix",
+        "Action": "Plan $600bn chipmaking expansion",
+        "Location": "Global (primarily South Korea)",
+        "Risk": "Significant investment in critical technology, potential for market shifts, geopolitical implications for chip dominance.",
+        "Source": "https://www.ft.com/content/86013b7e-41da-445a-981c-075a701dccf6",
+        "Title": "Samsung and SK Hynix plan $600bn chipmaking expansion",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "ft.com"
+    },
+    {
+        "Date": "",
+        "Actor": "European allies, NATO",
+        "Action": "Accelerate eastern flank deterrence at Ankara summit",
+        "Location": "Ankara (summit), Eastern Flank (NATO)",
+        "Risk": "Increased tensions with Russia, military buildup, potential for miscalculation.",
+        "Source": "https://www.atlanticcouncil.org/dispatches/european-allies-can-boost-nato-unity-at-the-ankara-summit-by-accelerating-eastern-flank-deterrence/",
+        "Title": "European allies can boost NATO unity at the Ankara summit by accelerating eastern flank deterrence",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "",
+        "Actor": "U.S., Iran",
+        "Action": "Prepare for talks on Strait of Hormuz",
+        "Location": "Strait of Hormuz",
+        "Risk": "Potential for de-escalation or failure leading to increased tensions, impact on global oil supply.",
+        "Source": "https://foreignpolicy.com/2026/06/29/us-iran-talks-qatar-strait-hormuz-attacks-oman/",
+        "Title": "U.S., Iran Prepare for Talks on Strait of Hormuz",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "foreignpolicy.com"
+    },
+    {
+        "Date": "",
+        "Actor": "Philippines",
+        "Action": "Deploys US-made Triton naval drones to scout for intruders",
+        "Location": "Philippines' western waters (likely South China Sea)",
+        "Risk": "Increased surveillance in contested waters, potential for confrontation with China, militarization of the South China Sea.",
+        "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
+        "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "c4isrnet.com"
+    },
+    {
+        "Date": "",
+        "Actor": "US Army",
+        "Action": "Wants up to 100 drone boats to fill watercraft gap",
+        "Location": "Pacific",
+        "Risk": "Militarization of the Pacific, increased naval capabilities, potential for arms race with China.",
+        "Source": "https://www.defensenews.com/news/your-military/2026/06/29/army-wants-up-to-100-drone-boats-to-fill-watercraft-gap-in-pacific/",
+        "Title": "US Army wants up to 100 drone boats to fill watercraft gap in Pacific",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
+    },
+    {
+        "Date": "",
+        "Actor": "U.S., China",
+        "Action": "U.S. eyes China\u2019s expanding role",
+        "Location": "Latin America",
+        "Risk": "Geopolitical competition, erosion of U.S. influence, potential for economic or political instability in Latin American countries.",
+        "Source": "https://www.eetimes.com/u-s-eyes-china-expanding-role-in-latin-america/",
+        "Title": "U.S. Eyes China\u2019s Expanding Role in Latin America",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "eetimes.com"
+    },
+    {
+        "Date": "",
+        "Actor": "Unknown (attackers), UKMTO (reporter)",
+        "Action": "Reports new ship attack",
+        "Location": "Strait of Hormuz",
+        "Risk": "Direct threat to maritime security, potential for escalation, impact on global trade and energy prices.",
+        "Source": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWEJZV1NrOG9saWdXRmU4VGxXVV9TQnFpcWhFQS1nNVdBVVZoSzZ0RWNIdTVzangyMHV3QWdoWVpwSEkzZGQyWnZBN2pucWhIUGxKTGs3UzZMOGVXTnhkaHN4NURtdC1RaW5nTEkzcHpMSWtldGx4dDhtWV9nRWpYbmh2dER1d1Y5VkNXNkxB?oc=5",
+        "Title": "UKMTO reports new ship attack in Strait of Hormuz - Mehr News Agency",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "",
+        "Actor": "Houthis",
+        "Action": "Attack Israel and announce ban on Israeli vessels",
+        "Location": "Red Sea, Israel",
+        "Risk": "Expansion of regional conflict, disruption of maritime trade routes, direct threat to Israeli shipping.",
+        "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
+        "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - The Long War Journal",
+        "Feed_Source": "Maritime Deep Scrape",
+        "Publisher": "news.google.com"
     },
     {
         "Date": "2026-06-29",
@@ -96,17 +234,6 @@
     },
     {
         "Date": "N/A",
-        "Actor": "Samsung, SK Hynix",
-        "Action": "Plan $600bn chipmaking expansion",
-        "Location": "Global (primarily South Korea)",
-        "Risk": "Global Chip Supply, Economic Competition, Technological Dominance",
-        "Source": "https://www.ft.com/content/86013b7e-41da-445a-981c-075a701dccf6",
-        "Title": "Samsung and SK Hynix plan $600bn chipmaking expansion",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
-    },
-    {
-        "Date": "N/A",
         "Actor": "Europe, US",
         "Action": "Preparing for radically different US foreign policy",
         "Location": "Europe, US",
@@ -140,17 +267,6 @@
     },
     {
         "Date": "N/A",
-        "Actor": "U.S., Iran",
-        "Action": "Prepare for talks on Strait of Hormuz",
-        "Location": "Strait of Hormuz",
-        "Risk": "Maritime Security, Regional Conflict, Energy Supply",
-        "Source": "https://foreignpolicy.com/2026/06/29/us-iran-talks-qatar-strait-hormuz-attacks-oman/",
-        "Title": "U.S., Iran Prepare for Talks on Strait of Hormuz",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "foreignpolicy.com"
-    },
-    {
-        "Date": "N/A",
         "Actor": "Farmers Worldwide",
         "Action": "Brace for El Ni\u00f1o impacts",
         "Location": "Global",
@@ -181,115 +297,5 @@
         "Title": "Russia Targets Ukraine\u2019s Fortress Belt in Major Offensive",
         "Feed_Source": "Premium RSS",
         "Publisher": "moderndiplomacy.eu"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "Putin (Russia)",
-        "Action": "Vows to continue Russia\u2019s Ukraine offensive",
-        "Location": "Ukraine",
-        "Risk": "Prolonged Conflict, Geopolitical Tension, International Sanctions",
-        "Source": "https://moderndiplomacy.eu/2026/06/29/putin-vows-to-continue-russias-ukraine-offensive/",
-        "Title": "Putin Vows to Continue Russia\u2019s Ukraine Offensive",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "moderndiplomacy.eu"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "US military, Agentic-AI",
-        "Action": "Developing AI tool for rapid target options",
-        "Location": "US (military application)",
-        "Risk": "AI in Warfare, Military Ethics, Escalation Potential",
-        "Source": "https://www.defenseone.com/technology/2026/06/agentic-ai-tool-aims-give-us-commanders-new-target-options-within-seconds/414491/",
-        "Title": "Agentic-AI tool aims to give US commanders new target options \u2018within seconds\u2019",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defenseone.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "Europe, NATO",
-        "Action": "Developing new force posture concept for Europeanizing extended nuclear deterrence",
-        "Location": "Europe",
-        "Risk": "Nuclear Deterrence, Alliance Strategy, Proliferation Concerns",
-        "Source": "https://warontherocks.com/a-new-force-posture-concept-for-europeanizing-extended-nuclear-deterrence/",
-        "Title": "A New Force Posture Concept for Europeanizing Extended Nuclear Deterrence",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "warontherocks.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "IDF Officials (Israel)",
-        "Action": "States 'Not Withdrawing Yet' on Lebanon Deal",
-        "Location": "Lebanon, Israel border",
-        "Risk": "Regional Conflict, Border Security, Escalation",
-        "Source": "https://www.realcleardefense.com/2026/06/29/idf_officials_on_lebanon_deal_not_withdrawing_yet_1191444.html",
-        "Title": "IDF Officials on Lebanon Deal: 'Not Withdrawing Yet'",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "realcleardefense.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "Philippines, US",
-        "Action": "Deploys US-made Triton naval drones to scout for intruders",
-        "Location": "Western waters, Philippines",
-        "Risk": "Maritime Security, South China Sea Tensions, Regional Sovereignty",
-        "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
-        "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "c4isrnet.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "Poland, Saab (Sweden)",
-        "Action": "Awards $4.8 billion A26 submarine deal",
-        "Location": "Poland",
-        "Risk": "Military Modernization, Regional Power Balance, Baltic Sea Security",
-        "Source": "https://www.defensenews.com/global/europe/2026/06/29/poland-awards-48-billion-a26-submarine-deal-to-saab/",
-        "Title": "Poland awards $4.8 billion A26 submarine deal to Saab",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "US Army",
-        "Action": "Wants up to 100 drone boats to fill watercraft gap",
-        "Location": "Pacific",
-        "Risk": "Naval Strategy, Military Technology, Pacific Competition",
-        "Source": "https://www.defensenews.com/news/your-military/2026/06/29/army-wants-up-to-100-drone-boats-to-fill-watercraft-gap-in-pacific/",
-        "Title": "US Army wants up to 100 drone boats to fill watercraft gap in Pacific",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "Israel, Romania",
-        "Action": "Israel sells Spyder air defense systems for $2.3 billion",
-        "Location": "Romania",
-        "Risk": "Military Buildup, Regional Security, Arms Trade",
-        "Source": "https://www.defensenews.com/global/mideast-africa/2026/06/29/israel-sells-spyder-air-defense-systems-to-romania-for-23-billion/",
-        "Title": "Israel sells Spyder air defense systems to Romania for $2.3 billion",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "Rocket Lab, Iridium",
-        "Action": "Rocket Lab buying satellite-communications company Iridium for $8 billion",
-        "Location": "Global (space industry)",
-        "Risk": "Space Industry Consolidation, Commercial Space Capabilities, Strategic Infrastructure",
-        "Source": "https://www.space.com/space-exploration/launches-spacecraft/the-start-of-a-new-era-rocket-lab-buying-satellite-communications-company-iridium-for-usd8-billion",
-        "Title": "'The start of a new era': Rocket Lab buying satellite-communications company Iridium for $8 billion",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "space.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "U.S., China",
-        "Action": "U.S. eyes China\u2019s expanding role",
-        "Location": "Latin America",
-        "Risk": "Geopolitical Competition, Regional Influence, US-China Rivalry",
-        "Source": "https://www.eetimes.com/u-s-eyes-china-expanding-role-in-latin-america/",
-        "Title": "U.S. Eyes China\u2019s Expanding Role in Latin America",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "eetimes.com"
     }
 ]
