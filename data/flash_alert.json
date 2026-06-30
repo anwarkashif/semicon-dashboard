@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Launches Drone Attack on Moscow",
+        "Title": "China Builds Three New Structures in East China Sea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119564",
+        "Title": "Russia Arms Tankers to Deter NATO Seizure",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119559",
+        "Title": "Russia Strikes Dnepropetrovsk Region",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,24 +28,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119564",
-        "Title": "Russia Arms Tankers to Deter NATO Seizure",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.nytimes.com/2026/06/29/world/asia/pakistan-afghanistan-strikes.html",
         "Title": "Pakistan Attacks Afghanistan, Killing More Than 30",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32317",
-        "Title": "US Reviews Middle East Presence After Iranian Strikes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,11 +49,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
-        "Title": "EVoke Systems Charging Station Management System",
+        "Source": "https://www.cisa.gov/resources-tools/resources/using-sase-modern-tic-30-solution",
+        "Title": "Using SASE in a Modern TIC 3.0 Solution",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/warmonitors/44735",
