@@ -184,7 +184,7 @@ def fetch_daily_intelligence():
     return aggregated_news, total_articles, psy_events, article_map
 
 def extract_tactical_events(news_text):
-    prompt = f"You are an elite Geopolitics-OSINT analyst. Review entries preceded by IDs. Extract 4-6 critical events. Output raw JSON array. Keys exactly: Article_ID, Date, Actor, Action, Location, Risk. Data: {news_text}"
+    prompt = f"You are an elite Geopolitics-OSINT analyst. Review entries preceded by IDs. Extract 15-20 critical events. Output raw JSON array. Keys exactly: Article_ID, Date, Actor, Action, Location, Risk. Data: {news_text}"
     raw_txt = generate_with_rotation(prompt, temperature=0.1)
     match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
     if match: return json.loads(match.group(0))
