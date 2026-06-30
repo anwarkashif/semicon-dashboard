@@ -1,7 +1,7 @@
 {
     "date": "2026-06-30",
     "title": "Flash to Brief - 2026-06-30",
-    "brief_raw": "**\ud83c\udfaf BLUF:**\nAPI Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nSystem Awaiting Reset. Data Pipeline Intact.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nGeneration pending next scheduled cron execution.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nPENDING\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nPENDING",
+    "brief_raw": "**\ud83c\udfaf BLUF:**\nGlobal geopolitical tensions are escalating across multiple critical theaters, marked by a significant increase in autonomous warfare capabilities and persistent flashpoints. The Middle East remains highly volatile with Iran asserting exclusive control over demining the Strait of Hormuz amidst indirect talks with the US, while Europe faces heightened risks from an accelerated NATO eastern flank deterrence and Belarus being identified as a major flashpoint. Concurrently, the Indo-Pacific sees a rapid militarization with new drone deployments by the Philippines and US Army, alongside critical supply chain vulnerabilities highlighted by a chip smuggling probe in Taiwan.\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nRecent tactical indicators underscore a global shift towards enhanced military readiness and strategic posturing. Iran's declaration of sole responsibility for demining the Strait of Hormuz signals a firm assertion of sovereignty over a vital global chokepoint, occurring concurrently with US-Iran talks in Qatar where direct engagement remains elusive. In Europe, NATO allies are accelerating eastern flank deterrence, directly responding to the identification of Belarus as a critical flashpoint, indicating a hardening of military postures against potential Russian influence. The UK's commitment of \u00a35bn for drones signifies a strategic pivot towards autonomous warfare capabilities. In the Indo-Pacific, the Philippines' deployment of US-made Triton naval drones in the South China Sea and the US Army's pursuit of up to 100 drone boats for the Pacific demonstrate a rapid militarization of maritime domains, increasing surveillance and potential for confrontation. Furthermore, the raid on Supermicro offices in Taiwan for chip smuggling highlights immediate concerns regarding critical technology supply chain integrity.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nThe current global threat narrative is characterized by a multi-front escalation of geopolitical competition and the rapid proliferation of advanced military technologies, particularly autonomous systems. In the Middle East, Iran's assertive stance on the Strait of Hormuz, coupled with the complex, indirect nature of US-Iran negotiations, maintains a high risk of regional instability that could severely impact global energy markets, as underscored by domestic US concerns over fuel prices. Europe is grappling with a resurgent security dilemma, with NATO's reinforced eastern flank directly confronting increased Russian influence and the volatile situation in Belarus, raising the specter of conflict spillover. Simultaneously, the Indo-Pacific is becoming a hotbed for maritime militarization, with the deployment of advanced naval drones by both the Philippines and the US Army, intensifying territorial disputes and the potential for direct confrontation with China. This technological arms race, combined with vulnerabilities in critical supply chains like semiconductors, paints a picture of a world increasingly on edge, where regional flashpoints could rapidly escalate into broader strategic challenges.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nThe overall risk assessment is HIGH, driven by a confluence of escalating regional tensions, the rapid adoption of autonomous warfare, and persistent vulnerabilities in critical global supply chains. In the Middle East, the potential for miscalculation or failed de-escalation in the Strait of Hormuz remains acute, posing a direct threat to global oil supply and economic stability. Europe faces a significant risk of regional instability and conflict spillover from Belarus, exacerbated by heightened NATO-Russia tensions and increased military deployments along the eastern flank. The Indo-Pacific carries a high risk of maritime confrontation due to the deployment of advanced surveillance and combat drones in disputed waters, potentially leading to unintended escalation between major powers. Furthermore, the investigation into chip smuggling in Taiwan underscores the fragility of the global semiconductor supply chain, presenting a substantial economic and national security risk that could impact technological advancement and strategic competition. The widespread investment in drone technology across various actors suggests an increased likelihood of autonomous systems being employed in future conflicts, introducing new complexities and ethical dilemmas.\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nThe strategic forecast points towards a continued trajectory of global power competition, characterized by an accelerating arms race in autonomous systems and a persistent focus on critical chokepoints and supply chains. In the Middle East, the delicate balance of power and the ongoing, albeit indirect, diplomatic efforts between the US and Iran will dictate the immediate future of regional stability, with the Strait of Hormuz remaining a pivotal flashpoint. The proliferation of drone technology, as evidenced by UK investment, Philippine deployments, and US Army procurement, indicates a fundamental shift in military doctrine and capabilities, suggesting that future conflicts will increasingly feature unmanned systems across air, land, and sea. This technological evolution will likely intensify competition in the Indo-Pacific, where maritime surveillance and deterrence will become paramount. Europe will likely see a sustained, elevated military presence along NATO's eastern flank, with Belarus remaining a key indicator of Russian strategic intentions and regional stability. Economically, vulnerabilities in critical technology supply chains, particularly semiconductors, will continue to be a major strategic concern, driving efforts towards diversification and resilience. Overall, the global landscape is set to become more complex, with a higher propensity for localized conflicts to have broader international implications, demanding agile diplomatic and defense strategies.",
     "recent_actions": [
         {
             "Date": "2026-06-30",
@@ -44,6 +44,116 @@
             "Title": "Witkoff on his way to talks in Qatar. Senior Iranian: We will come but not meet with Americans",
             "Feed_Source": "Psyopoly Supabase",
             "Publisher": "x.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Keir Starmer (UK)",
+            "Action": "Unveils defence plan with \u00a35bn for drones",
+            "Location": "United Kingdom",
+            "Risk": "Shift in UK defence strategy, increased focus on autonomous warfare capabilities.",
+            "Source": "https://www.ft.com/content/95020bd5-a717-4fcf-97d4-c218e9f4d500",
+            "Title": "Keir Starmer to unveil defence plan with \u00a35bn for drones",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "ft.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Taiwan Authorities",
+            "Action": "Raids Supermicro offices in chip smuggling probe",
+            "Location": "Taiwan",
+            "Risk": "Supply chain disruption, intellectual property concerns in critical semiconductor industry.",
+            "Source": "https://www.ft.com/content/a033c2fb-6c0b-4d25-9795-a04b95964e23",
+            "Title": "Supermicro Taiwan offices raided in chip smuggling probe",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "ft.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "European NATO Allies",
+            "Action": "Accelerate eastern flank deterrence at Ankara summit",
+            "Location": "Eastern Flank, Europe (Ankara summit)",
+            "Risk": "Heightened geopolitical tensions with Russia, increased military presence in Eastern Europe.",
+            "Source": "https://www.atlanticcouncil.org/dispatches/european-allies-can-boost-nato-unity-at-the-ankara-summit-by-accelerating-eastern-flank-deterrence/",
+            "Title": "European allies can boost NATO unity at the Ankara summit by accelerating eastern flank deterrence",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "atlanticcouncil.org"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "U.S., Iran",
+            "Action": "Prepare for talks on Strait of Hormuz and broader peace deal",
+            "Location": "Strait of Hormuz, Doha",
+            "Risk": "Potential for de-escalation or failure of talks leading to increased regional instability and impact on global oil supply.",
+            "Source": "https://foreignpolicy.com/2026/06/29/us-iran-talks-qatar-strait-hormuz-attacks-oman/",
+            "Title": "U.S., Iran Prepare for Talks on Strait of Hormuz",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "foreignpolicy.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Belarus",
+            "Action": "Identified as Europe\u2019s most dangerous flashpoint",
+            "Location": "Belarus, Europe",
+            "Risk": "High potential for regional instability, conflict spillover, and increased Russian influence.",
+            "Source": "https://moderndiplomacy.eu/2026/06/30/why-belarus-is-now-europes-most-dangerous-flashpoint/",
+            "Title": "Why Belarus Is Now Europe\u2019s Most Dangerous Flashpoint",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "moderndiplomacy.eu"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Philippines",
+            "Action": "Deploys US-made Triton naval drones to scout for intruders",
+            "Location": "Western waters (South China Sea)",
+            "Risk": "Increased surveillance and potential for confrontation in disputed maritime territories, escalating regional tensions.",
+            "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
+            "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "c4isrnet.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "US Army",
+            "Action": "Seeks up to 100 drone boats to fill watercraft gap",
+            "Location": "Pacific Ocean",
+            "Risk": "Militarization of the Pacific, advancement of autonomous naval warfare, potential for increased tensions with China.",
+            "Source": "https://www.defensenews.com/news/your-military/2026/06/29/army-wants-up-to-100-drone-boats-to-fill-watercraft-gap-in-pacific/",
+            "Title": "US Army wants up to 100 drone boats to fill watercraft gap in Pacific",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "defensenews.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Houthis, unknown actors",
+            "Action": "Reports of ship attacks, threats, and floating mines",
+            "Location": "Strait of Hormuz, Red Sea",
+            "Risk": "Severe maritime security crisis, disruption of global shipping lanes, escalation of regional conflict.",
+            "Source": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWEJZV1NrOG9saWdXRmU4VGxXVV9TQnFpcWhFQS1nNVdBVVZoSzZ0RWNIdTVzangyMHV3QWdoWVpwSEkzZGQyWnZBN2pucWhIUGxKTGs3UzZMOGVXTnhkaHN4NURtdC1RaW5nTEkzcHpMSWtldGx4dDhtWV9nRWpYbmh2dER1d1Y5VkNXNkxB?oc=5",
+            "Title": "UKMTO reports new ship attack in Strait of Hormuz - Mehr News Agency",
+            "Feed_Source": "Maritime Deep Scrape",
+            "Publisher": "news.google.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Apple, US Government, CXMT (China)",
+            "Action": "Apple lobbies US for approval to source DRAM from China",
+            "Location": "United States, China",
+            "Risk": "Supply chain security concerns, potential technology transfer, impact on US-China tech rivalry and trade relations.",
+            "Source": "https://technode.com/2026/06/29/apple-reportedly-lobbies-us-for-approval-to-source-dram-from-chinas-cxmt/",
+            "Title": "Apple reportedly lobbies US for approval to source DRAM from China\u2019s CXMT",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "technode.com"
+        },
+        {
+            "Date": "Recent",
+            "Actor": "Australia",
+            "Action": "Identified as unprepared for medical support in a potential Taiwan war",
+            "Location": "Darwin, Australia (in context of Taiwan conflict)",
+            "Risk": "Regional conflict preparedness deficiencies, potential for Australian involvement in a Taiwan conflict, humanitarian crisis implications.",
+            "Source": "https://www.aspistrategist.org.au/in-a-taiwan-war-forces-would-need-darwin-for-medical-support-were-not-preparing-it/",
+            "Title": "In a Taiwan war, forces would need Darwin for medical support. We\u2019re not preparing it",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "aspistrategist.org.au"
         },
         {
             "Date": "Ongoing",
@@ -101,17 +211,6 @@
             "Publisher": "foreignpolicy.com"
         },
         {
-            "Date": "Recent",
-            "Actor": "Philippines",
-            "Action": "Deploys US-made Triton naval drones to scout for intruders",
-            "Location": "Western waters (South China Sea), Philippines",
-            "Risk": "High - South China Sea Tensions, Regional Militarization",
-            "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
-            "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "c4isrnet.com"
-        },
-        {
             "Date": "Ongoing",
             "Actor": "U.S., China",
             "Action": "U.S. eyes China\u2019s expanding role",
@@ -121,17 +220,6 @@
             "Title": "U.S. Eyes China\u2019s Expanding Role in Latin America",
             "Feed_Source": "Premium RSS",
             "Publisher": "eetimes.com"
-        },
-        {
-            "Date": "Ongoing",
-            "Actor": "Belarus",
-            "Action": "Identified as Europe\u2019s most dangerous flashpoint",
-            "Location": "Belarus, Europe",
-            "Risk": "High - Regional Instability, Russia's Influence",
-            "Source": "https://moderndiplomacy.eu/2026/06/30/why-belarus-is-now-europes-most-dangerous-flashpoint/",
-            "Title": "Why Belarus Is Now Europe\u2019s Most Dangerous Flashpoint",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "moderndiplomacy.eu"
         },
         {
             "Date": "Ongoing Discussion",
@@ -207,94 +295,6 @@
             "Title": "Supermicro Taiwan offices raided in chip smuggling probe",
             "Feed_Source": "Premium RSS",
             "Publisher": "ft.com"
-        },
-        {
-            "Date": "Future",
-            "Actor": "Samsung, SK Hynix",
-            "Action": "Plan $600bn chipmaking expansion",
-            "Location": "Global (primarily South Korea)",
-            "Risk": "Increased global chip production capacity, potential market shifts, intense competition in critical technology.",
-            "Source": "https://www.ft.com/content/86013b7e-41da-445a-981c-075a701dccf6",
-            "Title": "Samsung and SK Hynix plan $600bn chipmaking expansion",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "ft.com"
-        },
-        {
-            "Date": "Ongoing",
-            "Actor": "Russia",
-            "Action": "Launched major offensive targeting Ukraine\u2019s Fortress Belt",
-            "Location": "Ukraine",
-            "Risk": "Escalation of conflict, humanitarian crisis, geopolitical instability in Europe.",
-            "Source": "https://moderndiplomacy.eu/2026/06/29/russia-targets-ukraines-fortress-belt-in-major-offensive/",
-            "Title": "Russia Targets Ukraine\u2019s Fortress Belt in Major Offensive",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "moderndiplomacy.eu"
-        },
-        {
-            "Date": "Future",
-            "Actor": "US Army",
-            "Action": "Plans to acquire up to 100 drone boats",
-            "Location": "Pacific",
-            "Risk": "Militarization of the Pacific, focus on autonomous naval warfare, potential for increased tensions with China.",
-            "Source": "https://www.defensenews.com/news/your-military/2026/06/29/army-wants-up-to-100-drone-boats-to-fill-watercraft-gap-in-pacific/",
-            "Title": "US Army wants up to 100 drone boats to fill watercraft gap in Pacific",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "defensenews.com"
-        },
-        {
-            "Date": "Ongoing",
-            "Actor": "U.S., China",
-            "Action": "China's expanding role and influence",
-            "Location": "Latin America",
-            "Risk": "Geopolitical competition, influence struggle, potential for economic and political shifts in the region.",
-            "Source": "https://www.eetimes.com/u-s-eyes-china-expanding-role-in-latin-america/",
-            "Title": "U.S. Eyes China\u2019s Expanding Role in Latin America",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "eetimes.com"
-        },
-        {
-            "Date": "Ongoing",
-            "Actor": "Houthis, unknown attackers",
-            "Action": "Ship attacks in Strait of Hormuz and Red Sea, ban on Israeli vessels",
-            "Location": "Strait of Hormuz, Red Sea",
-            "Risk": "Direct threat to global shipping, escalation of regional conflict, economic impact on oil and trade routes.",
-            "Source": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWEJZV1NrOG9saWdXRmU4VGxXVV9TQnFpcWhFQS1nNVdBVVZoSzZ0RWNIdTVzangyMHV3QWdoWVpwSEkzZGQyWnZBN2pucWhIUGxKTGs3UzZMOGVXTnhkaHN4NURtdC1RaW5nTEkzcHpMSWtldGx4dDhtWV9nRWpYbmh2dER1d1Y5VkNXNkxB?oc=5",
-            "Title": "UKMTO reports new ship attack in Strait of Hormuz - Mehr News Agency",
-            "Feed_Source": "Maritime Deep Scrape",
-            "Publisher": "news.google.com"
-        },
-        {
-            "Date": "Ongoing",
-            "Actor": "U.S., Iran",
-            "Action": "Preparing for talks on Strait of Hormuz and potential nuclear/peace deal",
-            "Location": "Strait of Hormuz, Doha, Qatar",
-            "Risk": "Potential for de-escalation or continued conflict, implications for global oil supply, regional stability.",
-            "Source": "https://foreignpolicy.com/2026/06/29/us-iran-talks-qatar-strait-hormuz-attacks-oman/",
-            "Title": "U.S., Iran Prepare for Talks on Strait of Hormuz",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "foreignpolicy.com"
-        },
-        {
-            "Date": "Ongoing",
-            "Actor": "Trump Administration (U.S.)",
-            "Action": "Declares food supply emergency, suspends tariffs on fertilizer imports",
-            "Location": "U.S., Global (fertilizer markets)",
-            "Risk": "Global food security concerns, trade policy shifts, impact on agricultural markets.",
-            "Source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOLTJNb0hCTC11VDhVQWVlWXJ0ZjZNZEJkNHEzN2NOMlh4SFd1dUJHWm03a2ZaWUUydm14S1poOHZURHBJOTF6ZnpXdlY5Q0dGYkZrWFBFUEswbkdWWTdmLUlueWp0WXpRa0xrRVhHVUE3cXo4ZGZDR0s1bGlWWWRmZnpTeFIzRU8zTVk5U04zWUprRXRmdnhpcVBMTGdILUs2OVIxN09NU29pb2lPQW9BRkttY9IBuAFBVV95cUxNZUdEU2tlV29WS1RtOEdDcWlaaUd4N2FnaEl3T1Z6cmV5Snh1RjdJMDA2R2NTRFE0TXhhYUdzU0pPdzZLY2R3SUl5aUM4NENFc2I0cjk1UkNvOUY2QWdDWXpmU2dwX0xhZFdJaDJKQ0swVWM5QkZOV0tQdkgwUE9Cdm90Wm9rYWFSTGNKSlZrTVc3Ymg4QzRBdzBiYW9CLTV4YmFoeXpzcTJpMUZJLXU0UVFnbVNQY0d5?oc=5",
-            "Title": "Trump declares food supply emergency, suspends tariffs on key fertilizer imports - Fox Business",
-            "Feed_Source": "Google News Live 1H",
-            "Publisher": "news.google.com"
-        },
-        {
-            "Date": "Future",
-            "Actor": "European allies, NATO",
-            "Action": "Accelerate eastern flank deterrence at Ankara summit",
-            "Location": "Eastern Europe, Ankara (summit)",
-            "Risk": "Increased tensions with Russia, strengthening of NATO's defensive posture, potential for military buildup.",
-            "Source": "https://www.atlanticcouncil.org/dispatches/european-allies-can-boost-nato-unity-at-the-ankara-summit-by-accelerating-eastern-flank-deterrence/",
-            "Title": "European allies can boost NATO unity at the Ankara summit by accelerating eastern flank deterrence",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "atlanticcouncil.org"
         }
     ],
     "sources": [
@@ -309,6 +309,46 @@
         {
             "title": "Witkoff on his way to talks in Qatar. Senior Iranian: We will come but not meet with Americans",
             "url": "https://x.com/Haaretz/status/2071763402758693063"
+        },
+        {
+            "title": "Keir Starmer to unveil defence plan with \u00a35bn for drones",
+            "url": "https://www.ft.com/content/95020bd5-a717-4fcf-97d4-c218e9f4d500"
+        },
+        {
+            "title": "Supermicro Taiwan offices raided in chip smuggling probe",
+            "url": "https://www.ft.com/content/a033c2fb-6c0b-4d25-9795-a04b95964e23"
+        },
+        {
+            "title": "European allies can boost NATO unity at the Ankara summit by accelerating eastern flank deterrence",
+            "url": "https://www.atlanticcouncil.org/dispatches/european-allies-can-boost-nato-unity-at-the-ankara-summit-by-accelerating-eastern-flank-deterrence/"
+        },
+        {
+            "title": "U.S., Iran Prepare for Talks on Strait of Hormuz",
+            "url": "https://foreignpolicy.com/2026/06/29/us-iran-talks-qatar-strait-hormuz-attacks-oman/"
+        },
+        {
+            "title": "Why Belarus Is Now Europe\u2019s Most Dangerous Flashpoint",
+            "url": "https://moderndiplomacy.eu/2026/06/30/why-belarus-is-now-europes-most-dangerous-flashpoint/"
+        },
+        {
+            "title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
+            "url": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/"
+        },
+        {
+            "title": "US Army wants up to 100 drone boats to fill watercraft gap in Pacific",
+            "url": "https://www.defensenews.com/news/your-military/2026/06/29/army-wants-up-to-100-drone-boats-to-fill-watercraft-gap-in-pacific/"
+        },
+        {
+            "title": "UKMTO reports new ship attack in Strait of Hormuz - Mehr News Agency",
+            "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWEJZV1NrOG9saWdXRmU4VGxXVV9TQnFpcWhFQS1nNVdBVVZoSzZ0RWNIdTVzangyMHV3QWdoWVpwSEkzZGQyWnZBN2pucWhIUGxKTGs3UzZMOGVXTnhkaHN4NURtdC1RaW5nTEkzcHpMSWtldGx4dDhtWV9nRWpYbmh2dER1d1Y5VkNXNkxB?oc=5"
+        },
+        {
+            "title": "Apple reportedly lobbies US for approval to source DRAM from China\u2019s CXMT",
+            "url": "https://technode.com/2026/06/29/apple-reportedly-lobbies-us-for-approval-to-source-dram-from-chinas-cxmt/"
+        },
+        {
+            "title": "In a Taiwan war, forces would need Darwin for medical support. We\u2019re not preparing it",
+            "url": "https://www.aspistrategist.org.au/in-a-taiwan-war-forces-would-need-darwin-for-medical-support-were-not-preparing-it/"
         },
         {
             "title": "As Yemen's Houthis enter the fray, Israel is once again in active conflict on four fronts - The Jerusalem Post",
@@ -331,16 +371,8 @@
             "url": "https://foreignpolicy.com/2026/06/29/us-iran-talks-qatar-strait-hormuz-attacks-oman/"
         },
         {
-            "title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
-            "url": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/"
-        },
-        {
             "title": "U.S. Eyes China\u2019s Expanding Role in Latin America",
             "url": "https://www.eetimes.com/u-s-eyes-china-expanding-role-in-latin-america/"
-        },
-        {
-            "title": "Why Belarus Is Now Europe\u2019s Most Dangerous Flashpoint",
-            "url": "https://moderndiplomacy.eu/2026/06/30/why-belarus-is-now-europes-most-dangerous-flashpoint/"
         },
         {
             "title": "A New Force Posture Concept for Europeanizing Extended Nuclear Deterrence",
@@ -365,38 +397,6 @@
         {
             "title": "Supermicro Taiwan offices raided in chip smuggling probe",
             "url": "https://www.ft.com/content/a033c2fb-6c0b-4d25-9795-a04b95964e23"
-        },
-        {
-            "title": "Samsung and SK Hynix plan $600bn chipmaking expansion",
-            "url": "https://www.ft.com/content/86013b7e-41da-445a-981c-075a701dccf6"
-        },
-        {
-            "title": "Russia Targets Ukraine\u2019s Fortress Belt in Major Offensive",
-            "url": "https://moderndiplomacy.eu/2026/06/29/russia-targets-ukraines-fortress-belt-in-major-offensive/"
-        },
-        {
-            "title": "US Army wants up to 100 drone boats to fill watercraft gap in Pacific",
-            "url": "https://www.defensenews.com/news/your-military/2026/06/29/army-wants-up-to-100-drone-boats-to-fill-watercraft-gap-in-pacific/"
-        },
-        {
-            "title": "U.S. Eyes China\u2019s Expanding Role in Latin America",
-            "url": "https://www.eetimes.com/u-s-eyes-china-expanding-role-in-latin-america/"
-        },
-        {
-            "title": "UKMTO reports new ship attack in Strait of Hormuz - Mehr News Agency",
-            "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWEJZV1NrOG9saWdXRmU4VGxXVV9TQnFpcWhFQS1nNVdBVVZoSzZ0RWNIdTVzangyMHV3QWdoWVpwSEkzZGQyWnZBN2pucWhIUGxKTGs3UzZMOGVXTnhkaHN4NURtdC1RaW5nTEkzcHpMSWtldGx4dDhtWV9nRWpYbmh2dER1d1Y5VkNXNkxB?oc=5"
-        },
-        {
-            "title": "U.S., Iran Prepare for Talks on Strait of Hormuz",
-            "url": "https://foreignpolicy.com/2026/06/29/us-iran-talks-qatar-strait-hormuz-attacks-oman/"
-        },
-        {
-            "title": "Trump declares food supply emergency, suspends tariffs on key fertilizer imports - Fox Business",
-            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOLTJNb0hCTC11VDhVQWVlWXJ0ZjZNZEJkNHEzN2NOMlh4SFd1dUJHWm03a2ZaWUUydm14S1poOHZURHBJOTF6ZnpXdlY5Q0dGYkZrWFBFUEswbkdWWTdmLUlueWp0WXpRa0xrRVhHVUE3cXo4ZGZDR0s1bGlWWWRmZnpTeFIzRU8zTVk5U04zWUprRXRmdnhpcVBMTGdILUs2OVIxN09NU29pb2lPQW9BRkttY9IBuAFBVV95cUxNZUdEU2tlV29WS1RtOEdDcWlaaUd4N2FnaEl3T1Z6cmV5Snh1RjdJMDA2R2NTRFE0TXhhYUdzU0pPdzZLY2R3SUl5aUM4NENFc2I0cjk1UkNvOUY2QWdDWXpmU2dwX0xhZFdJaDJKQ0swVWM5QkZOV0tQdkgwUE9Cdm90Wm9rYWFSTGNKSlZrTVc3Ymg4QzRBdzBiYW9CLTV4YmFoeXpzcTJpMUZJLXU0UVFnbVNQY0d5?oc=5"
-        },
-        {
-            "title": "European allies can boost NATO unity at the Ankara summit by accelerating eastern flank deterrence",
-            "url": "https://www.atlanticcouncil.org/dispatches/european-allies-can-boost-nato-unity-at-the-ankara-summit-by-accelerating-eastern-flank-deterrence/"
         }
     ]
 }
