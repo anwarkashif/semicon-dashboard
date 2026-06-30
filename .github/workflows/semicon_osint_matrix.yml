@@ -52,15 +52,17 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        # 🛑 THE FIX: Bulletproof Git Sync. Fetch the latest remote state and soft reset.
-        # This completely bypasses all merge/rebase conflicts (including modify/delete conflicts), 
-        # guaranteeing the bot's newly generated data always successfully pushes.
-        git fetch origin main
-        git reset --soft origin/main
+        # Switch explicitly to the main branch to prevent detached HEAD errors
+        git checkout main
         
         git add data/
         git commit -m "🚨 Auto-Update: Executive Home Live Radar" || true
-        git push origin HEAD:main
+        
+        # Pull latest changes using a standard merge (NO rebase). 
+        # '-X ours' forces Git to accept the bot's new data over any remote manual deletions.
+        git pull origin main --no-rebase -X ours || true
+        
+        git push origin main
 
     - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_executive_radar'

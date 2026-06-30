@@ -229,7 +229,7 @@ def extract_tactical_events(news_text):
     current_utc_hour = datetime.now(timezone.utc).hour
     is_super_brief = current_utc_hour >= 18 
     
-    extraction_volume = "20-25" if is_super_brief else "5-10"
+    extraction_volume = "20-25" if is_super_brief else "10-15"
     
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. Review entries preceded by IDs. Extract {extraction_volume} critical events.
@@ -246,7 +246,7 @@ def extract_tactical_events(news_text):
     return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
 
 def generate_flush_to_brief(accumulated_events):
-    trimmed = accumulated_events[:10]
+    trimmed = accumulated_events[:15]
     
     # 🛑 THE FIX: Explicitly instructing the LLM to format EVERY section as a professionally written paragraph.
     prompt = (
