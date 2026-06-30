@@ -99,9 +99,29 @@ def merge_and_sync(new_events):
         return
         
     os.makedirs(os.path.dirname(STANDALONE_PSYOPOLY_PATH), exist_ok=True)
-    with open(STANDALONE_PSYOPOLY_PATH, 'w', encoding='utf-8') as f:
-        json.dump(new_events, f, indent=4)
 
+    # 🛑 THE FIX: Load existing standalone history so we don't overwrite it
+    existing_standalone_events = []
+    if os.path.exists(STANDALONE_PSYOPOLY_PATH):
+        try: existing_standalone_events = json.load(open(STANDALONE_PSYOPOLY_PATH, 'r', encoding='utf-8'))
+        except Exception: pass
+
+    # Deduplicate standalone history
+    standalone_signatures = {str(e.get("Headline", e.get("Action", ""))).strip().lower() for e in existing_standalone_events}
+    
+    for event in new_events:
+        signature = str(event.get("Headline", "")).strip().lower()
+        if signature and signature not in standalone_signatures:
+            existing_standalone_events.insert(0, event)
+            standalone_signatures.add(signature)
+
+    # Cap standalone file size to a generous historical limit (e.g., 4500) to preserve history
+    existing_standalone_events = existing_standalone_events[:4500]
+
+    with open(STANDALONE_PSYOPOLY_PATH, 'w', encoding='utf-8') as f:
+        json.dump(existing_standalone_events, f, indent=4)
+
+    # Now handle the Universal Pool exactly as before
     existing_events = []
     if os.path.exists(UNIVERSAL_POOL_PATH):
         try: existing_events = json.load(open(UNIVERSAL_POOL_PATH, 'r', encoding='utf-8'))
@@ -117,13 +137,13 @@ def merge_and_sync(new_events):
             existing_signatures.add(signature)
             added_count += 1
             
-    # Cap pool sizes to prevent token limits from choking downstream LLM analysis scripts
+    # Cap Universal pool sizes to prevent token limits from choking downstream LLM analysis scripts
     existing_events = existing_events[:80]
             
     with open(UNIVERSAL_POOL_PATH, 'w', encoding='utf-8') as f:
         json.dump(existing_events, f, indent=4)
         
-    print(f"✅ Merged {added_count} new unique Psyopoly events into Universal Pool.")
+    print(f"✅ Merged {added_count} new unique Psyopoly events into Universal Pool and updated Standalone Archive.")
 
     HF_TOKEN = os.environ.get("HF_TOKEN")
     REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
