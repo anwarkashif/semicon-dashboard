@@ -33,7 +33,7 @@ jobs:
       if: github.event.action == 'trigger_executive_radar'
       run: |
         python -m pip install --upgrade pip
-        pip install requests google-genai feedparser beautifulsoup4 huggingface-hub
+        pip install requests google-genai feedparser beautifulsoup4 huggingface-hub trafilatura
 
     - name: Run Executive Home Pipeline
       if: github.event.action == 'trigger_executive_radar'
@@ -84,7 +84,7 @@ jobs:
       if: github.event.action == 'trigger_weekly_brief'
       run: |
         python -m pip install --upgrade pip
-        pip install requests google-genai plotly feedparser beautifulsoup4 huggingface-hub
+        pip install requests google-genai plotly feedparser beautifulsoup4 huggingface-hub trafilatura
 
     - name: Run Core Datasets and Weekly Pipelines
       if: github.event.action == 'trigger_weekly_brief'
@@ -171,7 +171,7 @@ jobs:
       if: github.event.action == 'trigger_shift_brief'
       run: |
         python -m pip install --upgrade pip
-        pip install requests google-genai feedparser beautifulsoup4 huggingface-hub
+        pip install requests google-genai feedparser beautifulsoup4 huggingface-hub trafilatura
 
     - name: Run Today's Snippet Pipeline
       if: github.event.action == 'trigger_shift_brief'
@@ -250,7 +250,7 @@ jobs:
       if: github.event.action == 'trigger_flash_alert'
       run: |
         python -m pip install --upgrade pip
-        pip install requests google-genai feedparser beautifulsoup4 huggingface-hub
+        pip install requests google-genai feedparser beautifulsoup4 huggingface-hub trafilatura
 
     - name: Run Flash Alert Engine
       if: github.event.action == 'trigger_flash_alert'

@@ -12,6 +12,7 @@ from google import genai
 from huggingface_hub import HfApi
 import logging
 import re
+import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 
 os.makedirs('data/today_snippet', exist_ok=True)
 
@@ -47,7 +48,7 @@ def generate_with_rotation(prompt, temperature=0.1):
     current_idx = 0
     failures = 0
     global_cycles = 0
-    MAX_GLOBAL_CYCLES = 4  # Allows 4 full loops (up to 24 key attempts) before truly failing
+    MAX_GLOBAL_CYCLES = 4  
     
     while global_cycles < MAX_GLOBAL_CYCLES:
         current_key = VALID_KEYS[current_idx]
@@ -152,16 +153,34 @@ def fetch_psyopoly_data():
     except Exception: return [], []
 
 def fetch_daily_intelligence():
+    print("🌍 Scraping strategic feeds, resolving URLs, & Executing Deep Text Extraction...")
     aggregated_news = ""; total_articles = 0; article_map = {}; article_counter = 1
     headers = {'User-Agent': 'Mozilla/5.0'}
     
+    # 🛑 THE FIX: Helper to deep-scrape article bodies using Trafilatura
+    def extract_deep_text(url):
+        try:
+            downloaded = trafilatura.fetch_url(url)
+            if downloaded:
+                text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
+                if text:
+                    # Return the first 1000 characters to give Gemini rich context without blowing up token limits
+                    return text[:1000].replace('\n', ' ') + "..."
+        except Exception: pass
+        return ""
+
     # 1. Standard RSS Extraction
     for url in RSS_FEEDS:
         try:
             for entry in feedparser.parse(requests.get(url, headers=headers, timeout=15).text).entries[:3]:
                 art_id = f"ART_{article_counter:03d}"; final_url = resolve_final_url(entry.link, headers)
+                body_text = extract_deep_text(final_url)
+                
                 article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": "Premium RSS"}
-                aggregated_news += f"ID: {art_id} | [MACRO] {entry.title}\n"
+                if body_text:
+                    aggregated_news += f"ID: {art_id} | [MACRO] {entry.title}\n  DEEP DATA: {body_text}\n"
+                else:
+                    aggregated_news += f"ID: {art_id} | [MACRO] {entry.title}\n"
                 article_counter += 1; total_articles += 1
         except Exception: pass
 
@@ -171,8 +190,13 @@ def fetch_daily_intelligence():
             gn_url = f'https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-US&gl=US'
             for entry in feedparser.parse(requests.get(gn_url, headers=headers, timeout=15).text).entries[:3]: 
                 art_id = f"ART_{article_counter:03d}"; final_url = resolve_final_url(entry.link, headers)
+                body_text = extract_deep_text(final_url)
+                
                 article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": "Google News Live 1H"}
-                aggregated_news += f"ID: {art_id} | [LIVE 1H] {entry.title}\n"
+                if body_text:
+                    aggregated_news += f"ID: {art_id} | [LIVE 1H] {entry.title}\n  DEEP DATA: {body_text}\n"
+                else:
+                    aggregated_news += f"ID: {art_id} | [LIVE 1H] {entry.title}\n"
                 article_counter += 1; total_articles += 1
         except Exception: pass
 
@@ -188,8 +212,13 @@ def fetch_daily_intelligence():
                     url = e.get('url') or e.get('link') or f"https://{source_name.lower().replace(' ', '')}.com/"
                     if title:
                         art_id = f"ART_{article_counter:03d}"
+                        body_text = extract_deep_text(url)
+                        
                         article_map[art_id] = {"title": title, "url": url, "feed_source": source_name}
-                        aggregated_news += f"ID: {art_id} | [{source_name}] {title}\n"
+                        if body_text:
+                            aggregated_news += f"ID: {art_id} | [{source_name}] {title}\n  DEEP DATA: {body_text}\n"
+                        else:
+                            aggregated_news += f"ID: {art_id} | [{source_name}] {title}\n"
                         article_counter += 1; total_articles += 1
         except Exception as e: print(f"⚠️ Failed {source_name}: {e}")
 
@@ -200,15 +229,20 @@ def fetch_daily_intelligence():
     psy_events, psy_raw_items = fetch_psyopoly_data()
     for item in psy_raw_items:
         art_id = f"ART_{article_counter:03d}"
+        body_text = extract_deep_text(item["url"])
+        
         article_map[art_id] = {"title": item["headline"], "url": item["url"], "feed_source": "Psyopoly Supabase"}
-        aggregated_news += f"ID: {art_id} | [PSYOPOLY] {item['headline']}\n"
+        if body_text:
+            aggregated_news += f"ID: {art_id} | [PSYOPOLY] {item['headline']}\n  DEEP DATA: {body_text}\n"
+        else:
+            aggregated_news += f"ID: {art_id} | [PSYOPOLY] {item['headline']}\n"
         article_counter += 1; total_articles += 1
 
     return aggregated_news, total_articles, psy_events, article_map
 
 def extract_tactical_events(news_text):
     prompt = f"""
-    You are an elite Geopolitics-OSINT analyst. Review the following raw feeds.
+    You are an elite Geopolitics-OSINT analyst. Review the following raw feeds and Deep Extraction Data.
     Select EXACTLY 40-50 distinct, critical geopolitical, cyber, or defense-related events.
     
     CRITICAL INSTRUCTIONS:
