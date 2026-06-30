@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 import urllib.parse
 from datetime import datetime, timezone
 from google import genai
+import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 
 # ==========================================
 # 1. CONFIGURATION & SETUP (WEEKLY TACTICAL BRIEF)
@@ -122,10 +123,6 @@ def generate_with_rotation(prompt, temperature=0.1):
 # 2. URL RESOLVER (UNPACK GOOGLE NEWS REDIRECTS)
 # ==========================================
 def resolve_final_url(url, headers):
-    """
-    Follows redirects to unpack the actual publisher URL.
-    Optimized to explicitly target Google News redirect URLs.
-    """
     if not url or "news.google.com" not in url: return url
     try:
         r = requests.get(url, headers=headers, timeout=15, allow_redirects=True)
@@ -175,10 +172,21 @@ def fetch_psyopoly_data():
     except Exception: return [], []
 
 def fetch_daily_intelligence():
-    print("🌍 Scraping ALL strategic feeds, APIs, and Deep-Scrapes for Weekly Tactical Brief...")
+    print("🌍 Scraping ALL strategic feeds, APIs, & Executing Deep Text Extraction for Weekly Tactical Brief...")
     aggregated_news = ""; total_articles = 0; article_map = {}; article_counter = 1
     headers = {'User-Agent': 'Mozilla/5.0'}
     global_seen_titles = set()
+
+    # 🛑 THE FIX: Helper to deep-scrape article bodies using Trafilatura
+    def extract_deep_text(url):
+        try:
+            downloaded = trafilatura.fetch_url(url)
+            if downloaded:
+                text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
+                if text:
+                    return text[:1000].replace('\n', ' ') + "..."
+        except Exception: pass
+        return ""
 
     def add_to_payload(title, url, source_name):
         nonlocal article_counter, total_articles, aggregated_news
@@ -188,7 +196,13 @@ def fetch_daily_intelligence():
         
         art_id = f"ART_{article_counter:03d}"
         article_map[art_id] = {"title": title, "url": url, "feed_source": source_name}
-        aggregated_news += f"ID: {art_id} | [{source_name}] {title}\n"
+        
+        body_text = extract_deep_text(url)
+        if body_text:
+            aggregated_news += f"ID: {art_id} | [{source_name}] {title}\n  DEEP DATA: {body_text}\n"
+        else:
+            aggregated_news += f"ID: {art_id} | [{source_name}] {title}\n"
+            
         article_counter += 1; total_articles += 1
 
     # 1. Premium RSS
@@ -224,11 +238,7 @@ def fetch_daily_intelligence():
         gn_maritime_url = f'https://news.google.com/rss/search?q={urllib.parse.quote(maritime_query)}&hl=en-US&gl=US&_={int(time.time())}'
         for entry in feedparser.parse(requests.get(gn_maritime_url, headers=headers, timeout=15).text).entries[:8]: 
             final_url = resolve_final_url(entry.link, headers)
-            try:
-                text = " ".join([p.get_text(strip=True) for p in BeautifulSoup(requests.get(final_url, headers=headers, timeout=10).text, 'html.parser').find_all('p') if len(p.get_text()) > 30])
-                title = f"{entry.title} - DEEP DATA: {text[:800]}..." if text else entry.title
-                add_to_payload(title, final_url, "Maritime Deep Scrape")
-            except: add_to_payload(entry.title, final_url, "Maritime Deep Scrape")
+            add_to_payload(entry.title, final_url, "Maritime Deep Scrape")
     except Exception: pass
 
     # 4. Grafted Flash Pipeline Deep APIs
@@ -237,7 +247,7 @@ def fetch_daily_intelligence():
             res = requests.get(api_url, headers=headers, params=params, timeout=10)
             if res.status_code == 200:
                 data = res.json().get('data', []) if 'war-monitor' in api_url else res.json()
-                for e in data[:10]: # Take top 10 from each deep API for weekly scope
+                for e in data[:10]: 
                     title = e.get('title') or e.get('headline')
                     url = e.get('url') or e.get('link') or f"https://{source_name.lower().replace(' ', '')}.com/"
                     if title: add_to_payload(title, url, source_name)
@@ -259,8 +269,7 @@ def fetch_daily_intelligence():
     print("🌐 Executing Deep-Scrape on Hegemon Global...")
     try:
         hg_url = "https://hegemonglobal.com"
-        text = " ".join([e.get_text(strip=True) for e in BeautifulSoup(requests.get(hg_url, headers=headers, timeout=15).text, 'html.parser').find_all(['h1', 'h2', 'h3', 'p']) if len(e.get_text()) > 20])
-        if text: add_to_payload(f"Hegemon Global Intel - DEEP DATA: {text[:1500]}...", hg_url, "Hegemon Global")
+        add_to_payload("Hegemon Global Intel", hg_url, "Hegemon Global")
     except: pass
 
     # 7. Psyopoly Siphon
@@ -270,7 +279,6 @@ def fetch_daily_intelligence():
 
     print(f"📰 Successfully grabbed {total_articles} raw headlines mapped to internal indices.")
     
-    # 🛑 CRITICAL FIX: To ensure both components are safely returned, we append psy_events to the map
     article_map["psy_events_payload"] = psy_events
     
     return aggregated_news, total_articles, article_map
