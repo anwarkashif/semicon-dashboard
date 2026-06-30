@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "China, US, Japan Aircraft Active Near Taiwan Strait",
+        "Title": "Drone Attacks Damage Moscow's Kapotnya Oil Refinery",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -11,13 +11,6 @@
         "Title": "Russia Arms Tankers to Deter NATO Seizure",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/live/2026/06/29/world/hormuz-us-iran-strikes",
-        "Title": "Mideast Live Updates: U.S. Reaches Deal With Iran to Halt Attacks, Official Says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -39,7 +32,14 @@
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
