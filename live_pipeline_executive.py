@@ -413,7 +413,7 @@ if __name__ == "__main__":
             "sources": daily_sources
         }
         
-        archive_filename = f"data/brief_flash_{date_str}.json"
+        archive_filename = f"data/flash_archive_{date_str}.json"
         with open(archive_filename, 'w', encoding='utf-8') as f:
             json.dump(archive_payload, f, indent=4)
         
