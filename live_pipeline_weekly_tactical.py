@@ -7,7 +7,7 @@ import requests
 from huggingface_hub import HfApi
 from bs4 import BeautifulSoup
 import urllib.parse
-from datetime import datetime
+from datetime import datetime, timezone
 from google import genai
 
 # ==========================================
@@ -53,12 +53,70 @@ RSS_FEEDS = [
     "https://venturebeat.com/category/ai/feed/"
 ]
 
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-if not GEMINI_API_KEY:
-    print("Error: GEMINI_API_KEY environment variable not set.")
-    exit(1)
+# 🚨 THE ARSENAL: API Key Rotation List
+AVAILABLE_KEYS = [
+    os.environ.get("GEMINI_API_KEY"),
+    os.environ.get("RAG_GEMINI_API_KEY"),
+    os.environ.get("RAG_GEMINI_API_KEY_2"),
+    os.environ.get("RAG_GEMINI_API_KEY_3"),
+    os.environ.get("RAG_GEMINI_API_KEY_4"),
+    os.environ.get("RAG_GEMINI_API_KEY_5")
+]
+VALID_KEYS = [k for k in AVAILABLE_KEYS if k and k.strip()]
 
-client = genai.Client(api_key=GEMINI_API_KEY)
+# 🚨 THE ENGINE: Seamless Failover Generation
+def generate_with_rotation(prompt, temperature=0.1):
+    if not VALID_KEYS:
+        raise Exception("CRITICAL: No valid API keys found in environment.")
+        
+    current_idx = 0
+    failures = 0
+    global_cycles = 0
+    MAX_GLOBAL_CYCLES = 4
+    
+    while global_cycles < MAX_GLOBAL_CYCLES:
+        current_key = VALID_KEYS[current_idx]
+        client = genai.Client(api_key=current_key)
+        
+        try:
+            response = client.models.generate_content(
+                model='gemini-2.5-flash', 
+                contents=prompt,
+                config={
+                    "response_mime_type": "application/json",
+                    "temperature": temperature,
+                    "safety_settings": [
+                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+                    ]
+                }
+            )
+            raw_txt = getattr(response, 'text', '').strip()
+            if not raw_txt: raise ValueError("Empty response blocked by unknown filter")
+            return raw_txt
+            
+        except Exception as e:
+            failures += 1
+            print(f"⚠️ API Key {current_idx + 1} Attempt {failures} Failed: {str(e)[:100]}")
+            
+            if failures >= 2:
+                current_idx += 1
+                failures = 0
+                
+                if current_idx >= len(VALID_KEYS):
+                    print("⏳ All keys exhausted in this cycle. Sleeping 65 seconds for RPM quotas to reset...")
+                    time.sleep(65)
+                    current_idx = 0
+                    global_cycles += 1
+                else:
+                    print(f"🔄 Rotating to API Key {current_idx + 1}...")
+                    time.sleep(5)
+            else:
+                time.sleep(15)
+                
+    raise Exception("CRITICAL: All API keys exhausted across multiple recovery cycles.")
 
 # ==========================================
 # 2. URL RESOLVER (UNPACK GOOGLE NEWS REDIRECTS)
@@ -68,125 +126,153 @@ def resolve_final_url(url, headers):
     Follows redirects to unpack the actual publisher URL.
     Optimized to explicitly target Google News redirect URLs.
     """
-    if "news.google.com" not in url:
-        return url
-        
+    if not url or "news.google.com" not in url: return url
     try:
-        # Follow the redirect to get the true destination (e.g., Reuters, FT)
-        response = requests.get(url, headers=headers, timeout=10, allow_redirects=True)
-        return response.url
-    except Exception:
-        # If the resolution fails, gracefully fallback to the original link
-        return url
+        r = requests.get(url, headers=headers, timeout=15, allow_redirects=True)
+        final_url = r.url
+        if any(d in urlparse(final_url).netloc.lower() for d in ["news.google.com", "google.com"]): return url
+        return final_url
+    except Exception: return url
 
 # ==========================================
 # 3. DATA SCRAPING & DETERMINISTIC ID MAPPING
 # ==========================================
-def fetch_daily_intelligence():
-    print("🌍 Scraping strategic RSS & LIVE Boolean feeds for Weekly Tactical Brief...")
-    aggregated_news = ""
-    total_articles = 0
-    article_map = {}
-    article_counter = 1
+def fetch_psyopoly_data():
+    SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news?select=id%2Cheadline%2Cposted_at%2Curl&order=posted_at.desc&limit=30"
+    ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxvamlyb2x6a3Nob3FnY2Nyd3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODQyNjQsImV4cCI6MjA4OTY2MDI2NH0.DzdBr_d69SSlRxtnxH8DRqc0hLNQfb4wL5t1Qe96UMo"
     
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1'
+        "apikey": ANON_KEY, 
+        "authorization": f"Bearer {ANON_KEY}", 
+        "accept": "application/json",
+        "origin": "https://www.psyopoly.pro",
+        "referer": "https://www.psyopoly.pro/"
     }
     
-    # --- PHASE 1: Premium Think-Tank & Media Feeds ---
+    formatted_events = []; raw_psy_items = []
+    try:
+        for item in requests.get(SUPABASE_URL, headers=headers, timeout=10).json():
+            headline = item.get("headline", "No Headline Provided").strip()
+            url = item.get("url", "https://www.psyopoly.pro/middle-east")
+            if not valid_url(url): continue
+            
+            raw_psy_items.append({"headline": headline, "url": url})
+            formatted_events.append({
+                "Date": item.get("posted_at", "").split("T")[0] if item.get("posted_at") else datetime.now().strftime("%Y-%m-%d"),
+                "Actor": "Psyopoly/West Asia", 
+                "Location": "Middle East",
+                "Event": "Strategic Update", 
+                "Action": headline,
+                "Headline": headline,
+                "Summary": headline, 
+                "Risk": "HIGH", 
+                "Source": url,
+                "Title": headline, 
+                "Feed_Source": "Psyopoly Supabase",
+                "Publisher": urlparse(url).netloc.replace("www.", "")
+            })
+        return formatted_events, raw_psy_items
+    except Exception: return [], []
+
+def fetch_daily_intelligence():
+    print("🌍 Scraping ALL strategic feeds, APIs, and Deep-Scrapes for Weekly Tactical Brief...")
+    aggregated_news = ""; total_articles = 0; article_map = {}; article_counter = 1
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    global_seen_titles = set()
+
+    def add_to_payload(title, url, source_name):
+        nonlocal article_counter, total_articles, aggregated_news
+        clean_title = str(title).strip().lower()
+        if clean_title in global_seen_titles: return
+        global_seen_titles.add(clean_title)
+        
+        art_id = f"ART_{article_counter:03d}"
+        article_map[art_id] = {"title": title, "url": url, "feed_source": source_name}
+        aggregated_news += f"ID: {art_id} | [{source_name}] {title}\n"
+        article_counter += 1; total_articles += 1
+
+    # 1. Premium RSS
     for url in RSS_FEEDS:
         try:
-            response = requests.get(url, headers=headers, timeout=15)
-            response.raise_for_status() 
-            feed = feedparser.parse(response.text)
-            for entry in feed.entries[:5]:
-                art_id = f"ART_{article_counter:03d}"
-                # Direct RSS feeds generally don't use heavy redirects, but we pass it through safely
+            for entry in feedparser.parse(requests.get(url, headers=headers, timeout=15).text).entries[:5]:
                 final_url = resolve_final_url(entry.link, headers)
-                article_map[art_id] = {"title": entry.title, "url": final_url}
-                
-                aggregated_news += f"ID: {art_id} | [MACRO] {entry.title}\n"
-                article_counter += 1
-                total_articles += 1
-        except Exception as e:
-            print(f"⚠️ Warning: Could not fetch {url} - {e}")
+                add_to_payload(entry.title, final_url, "Premium RSS")
+        except Exception: pass
 
-    # --- PHASE 2: Live Google News Boolean Radar (Past 1 Hour) ---
+    # 2. Google News Live Sweeps (Using 7d for Weekly Scope)
     GOOGLE_QUERIES = [
-        '("geopolitics" OR "sanctions" OR "foreign policy" OR "tariffs") when:1h',
-        '("military" OR "defense" OR "missile" OR "conflict" OR "war") when:1h',
-        '("outer space" OR "satellite" OR "orbital" OR "space force" OR "SpaceX") when:1h',
-        '("semiconductor" OR "lithography" OR "rare earth" OR "critical minerals") when:1h',
-        '("Indo-Pacific" OR "China" OR "Taiwan" OR "South China Sea" OR "AUKUS") when:1h',
-        '("logistics" OR "supply chain" OR "Middle East" OR "Red Sea" OR "Strait of Hormuz") when:1h',
-        '("artificial intelligence" OR "quantum computing" OR "data center" OR "Nvidia" OR "supercomputer") when:1h'
+        '("geopolitics" OR "sanctions" OR "foreign policy" OR "tariffs") when:7d',
+        '("military" OR "defense" OR "missile" OR "conflict" OR "war") when:7d',
+        '("outer space" OR "satellite" OR "orbital" OR "space force" OR "SpaceX") when:7d',
+        '("semiconductor" OR "lithography" OR "rare earth" OR "critical minerals") when:7d',
+        '("Indo-Pacific" OR "China" OR "Taiwan" OR "South China Sea" OR "AUKUS") when:7d',
+        '("logistics" OR "supply chain" OR "Middle East" OR "Red Sea" OR "Strait of Hormuz") when:7d',
+        '("artificial intelligence" OR "quantum computing" OR "data center" OR "Nvidia" OR "supercomputer") when:7d'
     ]
-
     for query in GOOGLE_QUERIES:
-        encoded_query = urllib.parse.quote(query)
-        gn_url = f'https://news.google.com/rss/search?q={encoded_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
-        
         try:
-            response = requests.get(gn_url, headers=headers, timeout=15)
-            response.raise_for_status()
-            feed = feedparser.parse(response.text)
-            for entry in feed.entries[:5]: 
-                art_id = f"ART_{article_counter:03d}"
-                # 🛑 CRITICAL FIX: Unpack Google News redirect BEFORE saving to map
+            gn_url = f'https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
+            for entry in feedparser.parse(requests.get(gn_url, headers=headers, timeout=15).text).entries[:6]: 
                 final_url = resolve_final_url(entry.link, headers)
-                article_map[art_id] = {"title": entry.title, "url": final_url}
-                
-                aggregated_news += f"ID: {art_id} | [LIVE 1H] {entry.title}\n"
-                article_counter += 1
-                total_articles += 1
-        except Exception as e:
-            print(f"⚠️ Warning: Could not fetch Google News for {query} - {e}")
-            
-    # --- PHASE 3: DEEP-SCRAPE MARITIME ALERTS ---
-    print("🚢 Executing Deep-Scrape on Live Maritime URLs...")
-    maritime_query = '("UKMTO" OR "Ambrey" OR "MSCHOA" OR "MSCIO") AND ("incident" OR "attack" OR "vessel" OR "boarded" OR "missile" OR "houthi") when:24h'
-    encoded_m_query = urllib.parse.quote(maritime_query)
-    gn_maritime_url = f'https://news.google.com/rss/search?q={encoded_m_query}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
-    
+                add_to_payload(entry.title, final_url, "Google News 7D")
+        except Exception: pass
+
+    # 3. Deep-Scrape Maritime (7 Days)
+    print("🚢 Executing Deep-Scrape on Maritime URLs...")
     try:
-        m_res = requests.get(gn_maritime_url, headers=headers, timeout=15)
-        m_res.raise_for_status()
-        m_feed = feedparser.parse(m_res.text)
-        
-        for entry in m_feed.entries[:6]: 
-            # 🛑 CRITICAL FIX: Unpack redirect BEFORE scraping the actual page content
+        maritime_query = '("UKMTO" OR "Ambrey" OR "MSCHOA" OR "MSCIO") AND ("incident" OR "attack" OR "vessel" OR "boarded" OR "missile" OR "houthi") when:7d'
+        gn_maritime_url = f'https://news.google.com/rss/search?q={urllib.parse.quote(maritime_query)}&hl=en-US&gl=US&_={int(time.time())}'
+        for entry in feedparser.parse(requests.get(gn_maritime_url, headers=headers, timeout=15).text).entries[:8]: 
             final_url = resolve_final_url(entry.link, headers)
-            art_id = f"ART_{article_counter:03d}"
-            article_map[art_id] = {"title": entry.title, "url": final_url}
-            
             try:
-                # Scrape using the true publisher URL
-                page_res = requests.get(final_url, headers=headers, timeout=10)
-                soup = BeautifulSoup(page_res.text, 'html.parser')
-                
-                paragraphs = soup.find_all('p')
-                extracted_text = " ".join([p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 30])
-                
-                if extracted_text:
-                    snippet = extracted_text[:800] + "..." if len(extracted_text) > 800 else extracted_text
-                    aggregated_news += f"ID: {art_id} | [LIVE MARITIME ALERT - {entry.title}]\n  DEEP EXTRACTION DATA: {snippet}\n"
-                else:
-                    aggregated_news += f"ID: {art_id} | [LIVE MARITIME ALERT] {entry.title}\n"
-                
-                article_counter += 1
-                total_articles += 1
-            except Exception as e:
-                aggregated_news += f"ID: {art_id} | [LIVE MARITIME ALERT] {entry.title}\n"
-                article_counter += 1
-                total_articles += 1
-    except Exception as e:
-        print(f"⚠️ Warning: Could not fetch Maritime Boolean - {e}")
+                text = " ".join([p.get_text(strip=True) for p in BeautifulSoup(requests.get(final_url, headers=headers, timeout=10).text, 'html.parser').find_all('p') if len(p.get_text()) > 30])
+                title = f"{entry.title} - DEEP DATA: {text[:800]}..." if text else entry.title
+                add_to_payload(title, final_url, "Maritime Deep Scrape")
+            except: add_to_payload(entry.title, final_url, "Maritime Deep Scrape")
+    except Exception: pass
+
+    # 4. Grafted Flash Pipeline Deep APIs
+    def extract_api_feed(api_url, source_name, params=None):
+        try:
+            res = requests.get(api_url, headers=headers, params=params, timeout=10)
+            if res.status_code == 200:
+                data = res.json().get('data', []) if 'war-monitor' in api_url else res.json()
+                for e in data[:10]: # Take top 10 from each deep API for weekly scope
+                    title = e.get('title') or e.get('headline')
+                    url = e.get('url') or e.get('link') or f"https://{source_name.lower().replace(' ', '')}.com/"
+                    if title: add_to_payload(title, url, source_name)
+        except Exception as e: print(f"⚠️ Failed {source_name}: {e}")
+
+    extract_api_feed("https://monitor-the-situation.com/api/events", "MONITOR THE SITUATION", {"range": "7d", "feed": "live"})
+    extract_api_feed("https://api.war-monitor.com/api/events", "WAR MONITOR", {"page": "1", "limit": "25", "fresh_hours": "168"})
+
+    # 5. CISA
+    try:
+        url = "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+        res = requests.get(url, headers=headers, timeout=10)
+        if res.status_code == 200:
+            for entry in feedparser.parse(res.text).entries[:8]:
+                add_to_payload(entry.title, entry.link, "CISA")
+    except: pass
+
+    # 6. Hegemon Global
+    print("🌐 Executing Deep-Scrape on Hegemon Global...")
+    try:
+        hg_url = "https://hegemonglobal.com"
+        text = " ".join([e.get_text(strip=True) for e in BeautifulSoup(requests.get(hg_url, headers=headers, timeout=15).text, 'html.parser').find_all(['h1', 'h2', 'h3', 'p']) if len(e.get_text()) > 20])
+        if text: add_to_payload(f"Hegemon Global Intel - DEEP DATA: {text[:1500]}...", hg_url, "Hegemon Global")
+    except: pass
+
+    # 7. Psyopoly Siphon
+    psy_events, psy_raw_items = fetch_psyopoly_data()
+    for item in psy_raw_items:
+        add_to_payload(item["headline"], item["url"], "Psyopoly Supabase")
 
     print(f"📰 Successfully grabbed {total_articles} raw headlines mapped to internal indices.")
+    
+    # 🛑 CRITICAL FIX: To ensure both components are safely returned, we append psy_events to the map
+    article_map["psy_events_payload"] = psy_events
+    
     return aggregated_news, total_articles, article_map
 
 # ==========================================
@@ -198,41 +284,29 @@ def extract_tactical_events(news_text):
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. 
     Review the following news entries, each preceded by a unique ID (e.g., ART_001).
-    Extract 4 to 6 of the most critical geopolitical, defense, semiconductor, or supply chain events.
+    Extract 50 to 60 of the most critical geopolitical, defense, semiconductor, and supply chain events.
     
-    You MUST output the result as a raw JSON array of objects. Do not include markdown formatting like ```json.
+    CRITICAL INSTRUCTIONS:
+    1. DIVERSITY MANDATE: You MUST prioritize events flagged from [MONITOR THE SITUATION], [WAR MONITOR], [CISA], and [PSYOPOLY] alongside standard news.
+    2. You MUST output the result as a raw JSON array of objects. Do not include markdown formatting like ```json.
     
     Each object must have exactly these keys:
-    "Article_ID": The exact ID string (e.g., "ART_001") matching the news item chosen. Do not invent IDs.
+    "Article_ID": The exact ID string matching the news item chosen. Do not invent IDs.
     "Date": The current date (use {datetime.now().strftime('%Y-%m-%d')})
     "Actor": The country, company, or entity taking the action.
     "Action": A concise, 5-8 word description of the event.
-    "Location": A specific country, region, or chokepoint (e.g., "Taiwan", "Strait of Hormuz", "United States", "China").
+    "Location": A specific country, region, or chokepoint.
     "Risk": Must be strictly one of: "CRITICAL", "HIGH", or "ELEVATED".
     
     News Data:
     {news_text}
     """
     
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            response = client.models.generate_content(
-                model='gemini-2.5-flash',
-                contents=prompt,
-            )
-            clean_text = response.text.replace("```json", "").replace("```", "").strip()
-            return json.loads(clean_text)
-            
-        except Exception as e:
-            print(f"⚠️ API Error on attempt {attempt + 1}/{max_retries}: {e}")
-            if attempt < max_retries - 1:
-                sleep_time = 15 * (attempt + 1) 
-                print(f"⏳ Retrying in {sleep_time} seconds...")
-                time.sleep(sleep_time)
-            else:
-                print("❌ Max retries reached. Aborting AI extraction.")
-                raise e 
+    raw_txt = generate_with_rotation(prompt, temperature=0.1)
+    import re
+    match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
+    if match: return json.loads(match.group(0))
+    return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
 
 # ==========================================
 # 5. EXECUTE, REATTACH TARGET URLS & SAVE
@@ -245,6 +319,7 @@ if __name__ == "__main__":
             exit(0)
 
         news_data, article_count, source_article_map = fetch_daily_intelligence()
+        psy_events = source_article_map.pop("psy_events_payload", [])
         
         if article_count == 0:
             print("❌ ABORTING: No articles scraped. Preventing AI hallucination.")
@@ -254,15 +329,12 @@ if __name__ == "__main__":
         extracted_events = extract_tactical_events(news_data)
         
         # 🛡️ THE DETERMINISTIC INJECTION STEP
-        # We programmatically append the verified long-form URL directly from python memory
         validated_tactical_events = []
         for event in extracted_events:
             target_id = event.get("Article_ID")
             
             if target_id in source_article_map:
-                # Reattach the exact full-path news link scraped directly from the feed
                 event["Source"] = source_article_map[target_id]["url"]
-                # Clean up the payload by removing the operational ID before saving to disk
                 del event["Article_ID"]
                 validated_tactical_events.append(event)
             else:
