@@ -12,6 +12,7 @@ from google import genai
 from huggingface_hub import HfApi
 import re
 import logging
+import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 
 os.makedirs('data/executive_home', exist_ok=True)
 
@@ -161,20 +162,41 @@ def fetch_psyopoly_data():
     except Exception: return [], []
 
 def fetch_daily_intelligence():
-    print("🌍 Scraping strategic feeds & resolving publisher URLs...")
+    print("🌍 Scraping strategic feeds, resolving URLs, & Executing Deep Text Extraction...")
     aggregated_news = ""; total_articles = 0; article_map = {}; article_counter = 1
     headers = {'User-Agent': 'Mozilla/5.0'}
     
+    # Helper to deep-scrape article bodies
+    def extract_deep_text(url):
+        try:
+            downloaded = trafilatura.fetch_url(url)
+            if downloaded:
+                text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
+                if text:
+                    # Return the first 1000 characters to give Gemini rich context without blowing up token limits
+                    return text[:1000].replace('\n', ' ') + "..."
+        except Exception: pass
+        return ""
+
     for url in RSS_FEEDS:
         try:
             for entry in feedparser.parse(requests.get(url, headers=headers, timeout=15).text).entries[:5]:
-                art_id = f"ART_{article_counter:03d}"; final_url = resolve_final_url(entry.link, headers)
+                art_id = f"ART_{article_counter:03d}"
+                final_url = resolve_final_url(entry.link, headers)
+                
+                # 🛑 THE FIX: Deep extract the article body
+                body_text = extract_deep_text(final_url)
+                
                 article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": "Premium RSS"}
-                aggregated_news += f"ID: {art_id} | [MACRO] {entry.title}\n"
+                
+                if body_text:
+                    aggregated_news += f"ID: {art_id} | [MACRO] {entry.title}\n  DEEP DATA: {body_text}\n"
+                else:
+                    aggregated_news += f"ID: {art_id} | [MACRO] {entry.title}\n"
+                    
                 article_counter += 1; total_articles += 1
         except Exception: pass
 
-    # 🛑 THE FIX: Check if it's the late-night run (18:15 UTC / 11:45 PM IST). If so, do a 24-hour sweep.
     current_utc_hour = datetime.now(timezone.utc).hour
     is_super_brief_run = current_utc_hour >= 18 
     time_modifier = "when:1d" if is_super_brief_run else "when:1h"
@@ -183,9 +205,19 @@ def fetch_daily_intelligence():
         try:
             gn_url = f'https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-US&gl=US&ceid=US:en&_={int(time.time())}'
             for entry in feedparser.parse(requests.get(gn_url, headers=headers, timeout=15).text).entries[:5]: 
-                art_id = f"ART_{article_counter:03d}"; final_url = resolve_final_url(entry.link, headers)
-                article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": "Google News Live 1H"}
-                aggregated_news += f"ID: {art_id} | [LIVE 1H] {entry.title}\n"
+                art_id = f"ART_{article_counter:03d}"
+                final_url = resolve_final_url(entry.link, headers)
+                
+                # 🛑 THE FIX: Deep extract the article body
+                body_text = extract_deep_text(final_url)
+                
+                article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": f"Google News {time_modifier}"}
+                
+                if body_text:
+                    aggregated_news += f"ID: {art_id} | [LIVE NEWS] {entry.title}\n  DEEP DATA: {body_text}\n"
+                else:
+                    aggregated_news += f"ID: {art_id} | [LIVE NEWS] {entry.title}\n"
+                    
                 article_counter += 1; total_articles += 1
         except Exception: pass
             
@@ -197,21 +229,24 @@ def fetch_daily_intelligence():
             final_url = resolve_final_url(entry.link, headers)
             art_id = f"ART_{article_counter:03d}"
             article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": "Maritime Deep Scrape"}
-            try:
-                text = " ".join([p.get_text(strip=True) for p in BeautifulSoup(requests.get(final_url, headers=headers, timeout=10).text, 'html.parser').find_all('p') if len(p.get_text()) > 30])
-                aggregated_news += f"ID: {art_id} | [MARITIME] {entry.title}\n DATA: {text[:800]}...\n" if text else f"ID: {art_id} | [MARITIME] {entry.title}\n"
-            except Exception: aggregated_news += f"ID: {art_id} | [MARITIME] {entry.title}\n"
+            
+            # Using Trafilatura for Maritime events as well instead of BeautifulSoup
+            body_text = extract_deep_text(final_url)
+            if body_text:
+                aggregated_news += f"ID: {art_id} | [MARITIME] {entry.title}\n  DEEP DATA: {body_text}\n"
+            else:
+                aggregated_news += f"ID: {art_id} | [MARITIME] {entry.title}\n"
             article_counter += 1; total_articles += 1
     except Exception: pass
 
     print("🌐 Executing Deep-Scrape on Hegemon Global...")
     try:
         hg_url = "https://hegemonglobal.com"
-        text = " ".join([e.get_text(strip=True) for e in BeautifulSoup(requests.get(hg_url, headers=headers, timeout=15).text, 'html.parser').find_all(['h1', 'h2', 'h3', 'p']) if len(e.get_text()) > 20])
-        if text:
+        body_text = extract_deep_text(hg_url)
+        if body_text:
             art_id = f"ART_{article_counter:03d}"
             article_map[art_id] = {"title": "Hegemon Global Intel", "url": hg_url, "feed_source": "Hegemon Global"}
-            aggregated_news += f"ID: {art_id} | [HEGEMON GLOBAL]\n DATA: {text[:1500]}...\n"
+            aggregated_news += f"ID: {art_id} | [HEGEMON GLOBAL]\n  DEEP DATA: {body_text}\n"
             article_counter += 1; total_articles += 1
     except Exception: pass
 
@@ -219,7 +254,14 @@ def fetch_daily_intelligence():
     for item in psy_raw_items:
         art_id = f"ART_{article_counter:03d}"
         article_map[art_id] = {"title": item["headline"], "url": item["url"], "feed_source": "Psyopoly Supabase"}
-        aggregated_news += f"ID: {art_id} | [PSYOPOLY] {item['headline']}\n"
+        
+        # Pull the body text for Psyopoly events too
+        body_text = extract_deep_text(item["url"])
+        if body_text:
+            aggregated_news += f"ID: {art_id} | [PSYOPOLY] {item['headline']}\n  DEEP DATA: {body_text}\n"
+        else:
+            aggregated_news += f"ID: {art_id} | [PSYOPOLY] {item['headline']}\n"
+            
         article_counter += 1; total_articles += 1
 
     return aggregated_news, total_articles, psy_events, article_map
