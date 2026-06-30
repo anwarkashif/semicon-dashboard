@@ -1,8 +1,22 @@
 {
     "date": "2026-06-30",
     "title": "Flash to Brief - 2026-06-30",
-    "brief_raw": "**\ud83c\udfaf BLUF:**\nAPI Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nSystem Awaiting Reset. Data Pipeline Intact.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nGeneration pending next scheduled cron execution.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nPENDING\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nPENDING",
+    "brief_raw": "**\ud83c\udfaf BLUF:**\nImmediate geopolitical tensions are escalating, primarily centered on the Middle East where Iran has issued a direct warning to the United States regarding potential violations of a memorandum of understanding, amidst celebratory remarks from a US official about Iran's exclusion from an unspecified body. Concurrently, major powers are rapidly advancing military capabilities and deterrence postures, with the UK significantly increasing defense spending, European NATO allies bolstering their eastern flank, and the US integrating advanced AI for targeting, signaling a global shift towards heightened military readiness and potential for rapid escalation.\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nSeveral key tactical indicators point to an immediate hardening of positions and increased military preparedness across multiple theaters. In West Asia, Iran's explicit declaration to respond to any US violation of a memorandum of understanding, coupled with the US Secretary of Homeland Security's public expression of joy over Iran's 'kicking out,' underscores a severe deterioration in diplomatic relations and raises the specter of direct confrontation. Simultaneously, the United Kingdom's reallocation of \u00a315 billion from infrastructure to defense signals a tangible commitment to increased military capacity, mirroring broader European NATO efforts to accelerate eastern flank deterrence at the Ankara summit. Further indicating a global arms race and technological shift, the US military's implementation of Agentic-AI for rapid targeting options demonstrates a move towards accelerated decision-making in kinetic operations, while the Philippines' deployment of US-made Triton naval drones in the South China Sea directly contributes to increased surveillance and potential friction in a contested maritime zone.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nThe current geopolitical landscape is characterized by a rapidly intensifying threat narrative, driven by a confluence of regional flashpoints and a global arms race. In the Middle East, the unresolved status of the Iran nuclear deal, combined with Iran's explicit threats of retaliation against perceived US violations and Israel's declaration of the Oct. 7 War as 'effectively over,' creates a volatile environment ripe for miscalculation and escalation. This regional instability is exacerbated by a broader trend of militarization: European NATO allies are actively strengthening their eastern flank deterrence against Russia, and Europe is developing a new nuclear deterrence force posture, signaling a return to great power competition. The introduction of advanced military technologies, such as the US military's Agentic-AI for rapid targeting and the Philippines' deployment of naval drones in the South China Sea, further compresses decision-making cycles and increases the risk of rapid, unintended escalation in contested areas. This narrative suggests a world moving towards a more confrontational stance, where diplomatic channels are strained, and military readiness is paramount.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nThe overall risk assessment is unequivocally high across multiple domains, driven by escalating geopolitical tensions and accelerated military advancements. The direct threats exchanged between Iran and the United States carry a high risk of regional conflict, potentially involving non-state actors and leading to broader destabilization in the Middle East, with significant implications for global energy markets and security. The uncertainty surrounding a final Iran nuclear deal further elevates the risk of nuclear proliferation. In Europe, the accelerated eastern flank deterrence by NATO allies and the development of new nuclear deterrence concepts by Europe itself increase tensions with Russia, raising the specter of a conventional or even nuclear confrontation. The UK's substantial reallocation of funds to defense, while bolstering national security, also signifies a diversion of resources from critical infrastructure, posing a medium-term economic risk. Technologically, the US military's adoption of Agentic-AI for rapid targeting introduces a high risk of reduced human decision-making time and increased potential for rapid escalation in conflict scenarios. Similarly, the deployment of US-made Triton naval drones by the Philippines in the South China Sea significantly heightens the risk of maritime incidents and increased tensions in a strategically vital and contested region.\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nThe strategic forecast points towards a sustained period of heightened global instability, characterized by a renewed emphasis on military deterrence, technological arms races, and regional power realignments. The ongoing US-Iran standoff, coupled with the unresolved nuclear question, suggests a prolonged period of tension in the Middle East, potentially leading to a more overt proxy conflict or direct confrontation if diplomatic efforts fail. Europe's strategic shift towards enhanced defense spending and a more independent nuclear deterrence posture indicates a long-term commitment to counter-balancing Russian influence and a potential decoupling from full reliance on US extended deterrence. The integration of advanced AI into military operations, as demonstrated by the US, will fundamentally alter the speed and nature of future conflicts, demanding new doctrines for command, control, and ethical engagement, while simultaneously increasing the risk of autonomous escalation. In the Indo-Pacific, the deployment of advanced surveillance and reconnaissance assets like the Triton drones signals a continued militarization of the South China Sea, likely leading to increased friction and a more assertive posture from regional claimants and external powers. Overall, the global strategic environment is trending towards multipolar competition, where military strength and technological superiority will be key determinants of influence and security.",
     "recent_actions": [
+        {
+            "Date": "2026-06-30",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Iran says it will respond to any violation of the memorandum of understanding by the United States.",
+            "Headline": "Iran says it will respond to any violation of the memorandum of understanding by the United States.",
+            "Summary": "Iran says it will respond to any violation of the memorandum of understanding by the United States.",
+            "Risk": "HIGH",
+            "Source": "https://x.com/LOrientLeJour/status/2071957104038977894",
+            "Title": "Iran says it will respond to any violation of the memorandum of understanding by the United States.",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
         {
             "Date": "2026-06-30",
             "Actor": "Psyopoly/West Asia",
@@ -30,6 +44,171 @@
             "Title": "US Secretary of Homeland Security: I danced and sang when Iran was kicked out",
             "Feed_Source": "Psyopoly Supabase",
             "Publisher": "x.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "UK Government",
+            "Action": "Reallocates \u00a315bn from infrastructure to defense",
+            "Location": "United Kingdom",
+            "Risk": "Medium (Economic impact, increased defense spending)",
+            "Source": "https://www.ft.com/content/95020bd5-a717-4fcf-97d4-c218e9f4d500",
+            "Title": "Starmer says some road and energy projects will be scrapped to fund \u00a315bn defence plan",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "ft.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "European NATO Allies",
+            "Action": "Accelerate eastern flank deterrence at Ankara summit",
+            "Location": "Eastern Europe (NATO context)",
+            "Risk": "Medium (Increased tensions with Russia, regional militarization)",
+            "Source": "https://www.atlanticcouncil.org/dispatches/european-allies-can-boost-nato-unity-at-the-ankara-summit-by-accelerating-eastern-flank-deterrence/",
+            "Title": "European allies can boost NATO unity at the Ankara summit by accelerating eastern flank deterrence",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "atlanticcouncil.org"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "Israel",
+            "Action": "Declares Oct. 7 War effectively over",
+            "Location": "Israel",
+            "Risk": "High (Post-conflict instability, regional power shifts)",
+            "Source": "https://foreignpolicy.com/2026/06/30/israel-war-netanyahu-palestinians-gaza-hamas-lebanon-hezbollah-iran-trump/",
+            "Title": "For Israel, the Oct. 7 War Is Effectively Over",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "foreignpolicy.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "US, Iran (negotiators)",
+            "Action": "Uncertainty over final Iran nuclear deal",
+            "Location": "Global (diplomacy)",
+            "Risk": "High (Nuclear proliferation, regional conflict risk)",
+            "Source": "https://www.worldpoliticsreview.com/a-final-iran-deal-is-far-from-a-sure-thing/",
+            "Title": "A Final Iran Deal Is Far From a Sure Thing",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "worldpoliticsreview.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "US Military",
+            "Action": "Implements Agentic-AI for rapid targeting options",
+            "Location": "United States (military operations)",
+            "Risk": "High (Reduced decision-making time, increased escalation risk)",
+            "Source": "https://www.defenseone.com/technology/2026/06/agentic-ai-tool-aims-give-us-commanders-new-target-options-within-seconds/414491/",
+            "Title": "Agentic-AI tools aim to give US commanders new target options \u2018within seconds\u2019",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "defenseone.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "Europe",
+            "Action": "Develops new nuclear deterrence force posture concept",
+            "Location": "Europe",
+            "Risk": "High (Nuclear proliferation, increased regional tensions)",
+            "Source": "https://warontherocks.com/a-new-force-posture-concept-for-europeanizing-extended-nuclear-deterrence/",
+            "Title": "A New Force Posture Concept for Europeanizing Extended Nuclear Deterrence",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "warontherocks.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "Philippines",
+            "Action": "Deploys US-made Triton naval drones",
+            "Location": "Western Philippine waters (South China Sea)",
+            "Risk": "High (Increased tensions in South China Sea, maritime surveillance)",
+            "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
+            "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "c4isrnet.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "United States, China",
+            "Action": "US monitors China's expanding influence",
+            "Location": "Latin America",
+            "Risk": "High (Geopolitical competition, regional influence)",
+            "Source": "https://www.eetimes.com/u-s-eyes-china-expanding-role-in-latin-america/",
+            "Title": "U.S. Eyes China\u2019s Expanding Role in Latin America",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "eetimes.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "Apple, US Government, CXMT (China)",
+            "Action": "Apple lobbies for Chinese DRAM sourcing approval",
+            "Location": "United States, China (tech supply chain)",
+            "Risk": "High (Supply chain security, US-China tech rivalry)",
+            "Source": "https://technode.com/2026/06/29/apple-reportedly-lobbies-us-for-approval-to-source-dram-from-chinas-cxmt/",
+            "Title": "Apple reportedly lobbies US for approval to source DRAM from China\u2019s CXMT",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "technode.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "Merz (European official)",
+            "Action": "Proposes new Plaza Accord for China trade practices",
+            "Location": "Global (targeting China)",
+            "Risk": "High (Trade war escalation, economic instability)",
+            "Source": "https://asiatimes.com/2026/06/merz-floats-plaza-accord-redux-to-tame-chinas-trade-practices/",
+            "Title": "Merz floats Plaza Accord redux to tame China\u2019s trade practices",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "asiatimes.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "China, Russia",
+            "Action": "Potential Chinese recovery of Russian Far East coast",
+            "Location": "Russian Far East",
+            "Risk": "Very High (Major geopolitical shift, regional dominance)",
+            "Source": "https://www.aspistrategist.org.au/if-china-recovers-russian-far-east-coast-it-will-suddenly-outflank-island-chain/",
+            "Title": "If China recovers Russian Far East coast, it will suddenly outflank island chain",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "aspistrategist.org.au"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "China",
+            "Action": "Conducts patrols around Scarborough Shoal",
+            "Location": "Scarborough Shoal, South China Sea",
+            "Risk": "High (Escalation of maritime disputes, regional instability)",
+            "Source": "https://gcaptain.com/china-conducts-patrols-around-scarborough-shoal-in-disputed-south-china-sea/",
+            "Title": "China Conducts Patrols Around Scarborough Shoal in Disputed\u00a0South China Sea",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "gcaptain.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "UK Government",
+            "Action": "Announces \u00a3300 billion defense investment plan",
+            "Location": "United Kingdom",
+            "Risk": "High (Significant rearmament, geopolitical signaling)",
+            "Source": "https://www.aljazeera.com/economy/2026/6/30/uks-starmer-announces-300-billion-pound-defence-investment-plan?traffic_source=rss",
+            "Title": "UK\u2019s Starmer announces 300-billion-pound defence investment plan",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "aljazeera.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "NSA, DEVCOM Army Research Office (US)",
+            "Action": "Launch QuantumEAGLe Initiative (quantum computing)",
+            "Location": "United States",
+            "Risk": "High (Quantum arms race, national security implications)",
+            "Source": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNUGFIaEZoQ3d3dmx2U0xkTWQwaVhrSHVROFJiOVY5TjVfT0RNcGtlUW1BV2ZOMDY1aVVydVFkMGhaek1kcEZhd1kzcnQxSHBEenI4c2EtSDFrZkwxdzFnSUgxYkdIaWlKTnAyb0ZUb3J4Y3FHNzdGbkJyTmtrQnBBTXB6UlJzNWg4X000ZVRZRGNxV2NkcWk2RFIwVDFXYVdVQngwLUt2NFVSdUlHU3RmM2ZhWlV1ejJZLXRLb3lWV0FubUFfNE1JdTVMcWRyYzZSNndSWFNodmlxVERRRC1WZVczZE1qRzdhaHUw?oc=5",
+            "Title": "NSA, DEVCOM Army Research Office Launch QuantumEAGLe Initiative - National Security Agency (NSA) (.gov)",
+            "Feed_Source": "Google News Live 1H",
+            "Publisher": "news.google.com"
+        },
+        {
+            "Date": "Undated",
+            "Actor": "Houthis",
+            "Action": "Attack Israel and ban Israeli vessels",
+            "Location": "Red Sea, Israel",
+            "Risk": "Very High (Regional conflict, maritime trade disruption)",
+            "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
+            "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
+            "Feed_Source": "Maritime Deep Scrape",
+            "Publisher": "news.google.com"
         },
         {
             "Date": "2026-06-30",
@@ -119,194 +298,13 @@
             "Title": "European allies can boost NATO unity at the Ankara summit by accelerating eastern flank deterrence",
             "Feed_Source": "Premium RSS",
             "Publisher": "atlanticcouncil.org"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "UN",
-            "Action": "Warns Hormuz disruption could leave lasting economic scars",
-            "Location": "Strait of Hormuz, Global economy",
-            "Risk": "Major economic disruption, supply chain vulnerability",
-            "Source": "https://moderndiplomacy.eu/2026/06/30/un-warns-hormuz-disruption-could-leave-lasting-economic-scars/",
-            "Title": "UN warns Hormuz disruption could leave lasting economic scars",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "moderndiplomacy.eu"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "US",
-            "Action": "To begin USMCA exit process as trade talks continue",
-            "Location": "North America",
-            "Risk": "Trade instability, economic impact on member countries",
-            "Source": "https://moderndiplomacy.eu/2026/06/30/us-to-begin-usmca-exit-process-as-trade-talks-continue/",
-            "Title": "US to begin USMCA exit process as trade talks continue",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "moderndiplomacy.eu"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "US Army",
-            "Action": "Using AI and robot boats for Pacific logistics",
-            "Location": "Pacific",
-            "Risk": "Military modernization, autonomous warfare development, regional power projection",
-            "Source": "https://www.defenseone.com/technology/2026/06/army-using-ai-robot-boats-pacific-logistics/414525/",
-            "Title": "Army using AI, robot boats for Pacific logistics",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "defenseone.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Philippines",
-            "Action": "Deploys US-made Triton naval drones to scout for intruders",
-            "Location": "Western waters (South China Sea implied)",
-            "Risk": "Increased surveillance, regional tensions, maritime security",
-            "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/",
-            "Title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "c4isrnet.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Poland, Saab (Sweden)",
-            "Action": "Awards $4.8 billion A26 submarine deal to Saab",
-            "Location": "Poland, Sweden",
-            "Risk": "Military modernization, regional power balance shift (Baltic Sea)",
-            "Source": "https://www.defensenews.com/global/europe/2026/06/29/poland-awards-48-billion-a26-submarine-deal-to-saab/",
-            "Title": "Poland awards $4.8 billion A26 submarine deal to Saab",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "defensenews.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Rocket Lab, Iridium",
-            "Action": "Rocket Lab acquires satellite-communications company Iridium for $8 billion",
-            "Location": "Global (space industry)",
-            "Risk": "Consolidation in space industry, impact on satellite communications, strategic asset control",
-            "Source": "https://www.space.com/space-exploration/launches-spacecraft/the-start-of-a-new-era-rocket-lab-buying-satellite-communications-company-iridium-for-usd8-billion",
-            "Title": "'The start of a new era': Rocket Lab buying satellite-communications company Iridium for $8 billion",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "space.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Sweden",
-            "Action": "Grants 25-year concession to heavy rare earth deposit",
-            "Location": "Sweden",
-            "Risk": "Resource security, supply chain diversification, geopolitical competition for critical minerals",
-            "Source": "https://www.mining.com/sweden-grants-25-year-concession-to-heavy-rare-earth-deposit/",
-            "Title": "Sweden grants 25-year concession to heavy rare earth deposit",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "mining.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Apple, US government, CXMT (China)",
-            "Action": "Apple reportedly lobbies US for approval to source DRAM from China\u2019s CXMT",
-            "Location": "US, China (tech supply chain)",
-            "Risk": "Supply chain dependencies, tech decoupling challenges, national security concerns",
-            "Source": "https://technode.com/2026/06/29/apple-reportedly-lobbies-us-for-approval-to-source-dram-from-chinas-cxmt/",
-            "Title": "Apple reportedly lobbies US for approval to source DRAM from China\u2019s CXMT",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "technode.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "China",
-            "Action": "Conducts patrols around Scarborough Shoal in Disputed South China Sea",
-            "Location": "Scarborough Shoal, South China Sea",
-            "Risk": "Escalation of maritime disputes, regional instability, freedom of navigation challenges",
-            "Source": "https://gcaptain.com/china-conducts-patrols-around-scarborough-shoal-in-disputed-south-china-sea/",
-            "Title": "China Conducts Patrols Around Scarborough Shoal in Disputed\u00a0South China Sea",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "gcaptain.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Taiwan's president",
-            "Action": "Warns military cadets to keep out of China's clutches",
-            "Location": "Taiwan",
-            "Risk": "Cross-strait tensions, potential conflict, sovereignty dispute",
-            "Source": "https://www.al-monitor.com/originals/2026/06/keep-out-chinas-clutches-taiwans-president-tells-military-cadets",
-            "Title": "Keep out of China's clutches, Taiwan's president tells military cadets",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "al-monitor.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "US Treasury chief, China, Iran",
-            "Action": "US Treasury chief states only China is buying Iranian oil as others wary of sanctions risk",
-            "Location": "Iran, China, Global oil market",
-            "Risk": "Sanctions evasion, geopolitical alignment, oil market dynamics",
-            "Source": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTlU1VEpfcHg0dVpadlpkNGIxYkE4U0I4M25iQjhaRG5vbjBYWmFMT0gtZVBwSXItbkFTZ0lfVmhSX2FsVWJsR0Y0bGVMekczWkxsd3g1eGJ2Z0t1bjl6SDlMNDRTVU82ZjhtaEVNbndNUjhjSlpEdllZUXZVYXE4dHV2YjNONUZ1emx4UGEwcTcyUkZ4VnVHamZTRVl5aU1kSDRFQlhjYWNnSjVfRXBaSmZINVJKMTBqQS03X00yVlQtcEI1?oc=5",
-            "Title": "US Treasury chief says only China buying Iranian oil as others wary of sanctions risk - Anadolu Ajans\u0131",
-            "Feed_Source": "Google News Live 1H",
-            "Publisher": "news.google.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "Houthis",
-            "Action": "Attack Israel and announce ban on Israeli vessels in the Red Sea",
-            "Location": "Red Sea, Israel",
-            "Risk": "Direct conflict, maritime blockade, regional war expansion",
-            "Source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-            "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
-            "Feed_Source": "Maritime Deep Scrape",
-            "Publisher": "news.google.com"
-        },
-        {
-            "Date": "2026-06-30",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "The 1968 Pact on Shipping Routes in the Strait of Hormuz That Iran Is Rejecting",
-            "Headline": "The 1968 Pact on Shipping Routes in the Strait of Hormuz That Iran Is Rejecting",
-            "Summary": "The 1968 Pact on Shipping Routes in the Strait of Hormuz That Iran Is Rejecting",
-            "Risk": "HIGH",
-            "Source": "https://www.nytimes.com/2026/06/30/world/middleeast/the-1968-pact-on-shipping-routes-in-the-strait-of-hormuz-that-iran-is-rejecting.html",
-            "Title": "The 1968 Pact on Shipping Routes in the Strait of Hormuz That Iran Is Rejecting",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "nytimes.com"
-        },
-        {
-            "Date": "2026-06-30",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "A generational shift is transforming the US-Israel relationship | Kenneth Roth",
-            "Headline": "A generational shift is transforming the US-Israel relationship | Kenneth Roth",
-            "Summary": "A generational shift is transforming the US-Israel relationship | Kenneth Roth",
-            "Risk": "HIGH",
-            "Source": "https://www.theguardian.com/commentisfree/2026/jun/30/us-israel-relationship-shift",
-            "Title": "A generational shift is transforming the US-Israel relationship | Kenneth Roth",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "theguardian.com"
-        },
-        {
-            "Date": "2026-06-30",
-            "Actor": "Psyopoly/West Asia",
-            "Location": "Middle East",
-            "Event": "Strategic Update",
-            "Action": "#Danslapresse | The Israeli army has reportedly signed a $7 million contract for a radar system against Hezbollah drones.",
-            "Headline": "#Danslapresse | The Israeli army has reportedly signed a $7 million contract for a radar system against Hezbollah drones.",
-            "Summary": "#Danslapresse | The Israeli army has reportedly signed a $7 million contract for a radar system against Hezbollah drones.",
-            "Risk": "HIGH",
-            "Source": "https://x.com/LOrientLeJour/status/2071925974891942345",
-            "Title": "#Danslapresse | The Israeli army has reportedly signed a $7 million contract for a radar system against Hezbollah drones.",
-            "Feed_Source": "Psyopoly Supabase",
-            "Publisher": "x.com"
-        },
-        {
-            "Date": "N/A",
-            "Actor": "UK (Starmer/Labour)",
-            "Action": "Reallocating \u00a315bn to defense, scrapping road/energy projects",
-            "Location": "UK",
-            "Risk": "Domestic economic impact, increased defense spending",
-            "Source": "https://www.ft.com/content/95020bd5-a717-4fcf-97d4-c218e9f4d500",
-            "Title": "Starmer says some road and energy projects will be scrapped to fund \u00a315bn defence plan",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "ft.com"
         }
     ],
     "sources": [
+        {
+            "title": "Iran says it will respond to any violation of the memorandum of understanding by the United States.",
+            "url": "https://x.com/LOrientLeJour/status/2071957104038977894"
+        },
         {
             "title": "Iran says it will respond to any US violation of memorandum of understanding",
             "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-says-it-will-respond-any-us-violation-memorandum-understanding"
@@ -314,6 +312,66 @@
         {
             "title": "US Secretary of Homeland Security: I danced and sang when Iran was kicked out",
             "url": "https://x.com/Haaretz/status/2071949673460363641"
+        },
+        {
+            "title": "Starmer says some road and energy projects will be scrapped to fund \u00a315bn defence plan",
+            "url": "https://www.ft.com/content/95020bd5-a717-4fcf-97d4-c218e9f4d500"
+        },
+        {
+            "title": "European allies can boost NATO unity at the Ankara summit by accelerating eastern flank deterrence",
+            "url": "https://www.atlanticcouncil.org/dispatches/european-allies-can-boost-nato-unity-at-the-ankara-summit-by-accelerating-eastern-flank-deterrence/"
+        },
+        {
+            "title": "For Israel, the Oct. 7 War Is Effectively Over",
+            "url": "https://foreignpolicy.com/2026/06/30/israel-war-netanyahu-palestinians-gaza-hamas-lebanon-hezbollah-iran-trump/"
+        },
+        {
+            "title": "A Final Iran Deal Is Far From a Sure Thing",
+            "url": "https://www.worldpoliticsreview.com/a-final-iran-deal-is-far-from-a-sure-thing/"
+        },
+        {
+            "title": "Agentic-AI tools aim to give US commanders new target options \u2018within seconds\u2019",
+            "url": "https://www.defenseone.com/technology/2026/06/agentic-ai-tool-aims-give-us-commanders-new-target-options-within-seconds/414491/"
+        },
+        {
+            "title": "A New Force Posture Concept for Europeanizing Extended Nuclear Deterrence",
+            "url": "https://warontherocks.com/a-new-force-posture-concept-for-europeanizing-extended-nuclear-deterrence/"
+        },
+        {
+            "title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
+            "url": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/"
+        },
+        {
+            "title": "U.S. Eyes China\u2019s Expanding Role in Latin America",
+            "url": "https://www.eetimes.com/u-s-eyes-china-expanding-role-in-latin-america/"
+        },
+        {
+            "title": "Apple reportedly lobbies US for approval to source DRAM from China\u2019s CXMT",
+            "url": "https://technode.com/2026/06/29/apple-reportedly-lobbies-us-for-approval-to-source-dram-from-chinas-cxmt/"
+        },
+        {
+            "title": "Merz floats Plaza Accord redux to tame China\u2019s trade practices",
+            "url": "https://asiatimes.com/2026/06/merz-floats-plaza-accord-redux-to-tame-chinas-trade-practices/"
+        },
+        {
+            "title": "If China recovers Russian Far East coast, it will suddenly outflank island chain",
+            "url": "https://www.aspistrategist.org.au/if-china-recovers-russian-far-east-coast-it-will-suddenly-outflank-island-chain/"
+        },
+        {
+            "title": "China Conducts Patrols Around Scarborough Shoal in Disputed\u00a0South China Sea",
+            "url": "https://gcaptain.com/china-conducts-patrols-around-scarborough-shoal-in-disputed-south-china-sea/"
+        },
+        {
+            "title": "UK\u2019s Starmer announces 300-billion-pound defence investment plan",
+            "url": "https://www.aljazeera.com/economy/2026/6/30/uks-starmer-announces-300-billion-pound-defence-investment-plan?traffic_source=rss"
+        },
+        {
+            "title": "NSA, DEVCOM Army Research Office Launch QuantumEAGLe Initiative - National Security Agency (NSA) (.gov)",
+            "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNUGFIaEZoQ3d3dmx2U0xkTWQwaVhrSHVROFJiOVY5TjVfT0RNcGtlUW1BV2ZOMDY1aVVydVFkMGhaek1kcEZhd1kzcnQxSHBEenI4c2EtSDFrZkwxdzFnSUgxYkdIaWlKTnAyb0ZUb3J4Y3FHNzdGbkJyTmtrQnBBTXB6UlJzNWg4X000ZVRZRGNxV2NkcWk2RFIwVDFXYVdVQngwLUt2NFVSdUlHU3RmM2ZhWlV1ejJZLXRLb3lWV0FubUFfNE1JdTVMcWRyYzZSNndSWFNodmlxVERRRC1WZVczZE1qRzdhaHUw?oc=5"
+        },
+        {
+            "title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5"
         },
         {
             "title": "US envoys in Doha for indirect talks with Iranian technical delegation",
@@ -342,70 +400,6 @@
         {
             "title": "European allies can boost NATO unity at the Ankara summit by accelerating eastern flank deterrence",
             "url": "https://www.atlanticcouncil.org/dispatches/european-allies-can-boost-nato-unity-at-the-ankara-summit-by-accelerating-eastern-flank-deterrence/"
-        },
-        {
-            "title": "UN warns Hormuz disruption could leave lasting economic scars",
-            "url": "https://moderndiplomacy.eu/2026/06/30/un-warns-hormuz-disruption-could-leave-lasting-economic-scars/"
-        },
-        {
-            "title": "US to begin USMCA exit process as trade talks continue",
-            "url": "https://moderndiplomacy.eu/2026/06/30/us-to-begin-usmca-exit-process-as-trade-talks-continue/"
-        },
-        {
-            "title": "Army using AI, robot boats for Pacific logistics",
-            "url": "https://www.defenseone.com/technology/2026/06/army-using-ai-robot-boats-pacific-logistics/414525/"
-        },
-        {
-            "title": "Philippines deploys US-made Triton naval drones in its western waters to scout for intruders",
-            "url": "https://www.c4isrnet.com/global/asia-pacific/2026/06/25/philippines-deploys-us-made-triton-naval-drones-in-its-western-waters-to-scout-for-intruders/"
-        },
-        {
-            "title": "Poland awards $4.8 billion A26 submarine deal to Saab",
-            "url": "https://www.defensenews.com/global/europe/2026/06/29/poland-awards-48-billion-a26-submarine-deal-to-saab/"
-        },
-        {
-            "title": "'The start of a new era': Rocket Lab buying satellite-communications company Iridium for $8 billion",
-            "url": "https://www.space.com/space-exploration/launches-spacecraft/the-start-of-a-new-era-rocket-lab-buying-satellite-communications-company-iridium-for-usd8-billion"
-        },
-        {
-            "title": "Sweden grants 25-year concession to heavy rare earth deposit",
-            "url": "https://www.mining.com/sweden-grants-25-year-concession-to-heavy-rare-earth-deposit/"
-        },
-        {
-            "title": "Apple reportedly lobbies US for approval to source DRAM from China\u2019s CXMT",
-            "url": "https://technode.com/2026/06/29/apple-reportedly-lobbies-us-for-approval-to-source-dram-from-chinas-cxmt/"
-        },
-        {
-            "title": "China Conducts Patrols Around Scarborough Shoal in Disputed\u00a0South China Sea",
-            "url": "https://gcaptain.com/china-conducts-patrols-around-scarborough-shoal-in-disputed-south-china-sea/"
-        },
-        {
-            "title": "Keep out of China's clutches, Taiwan's president tells military cadets",
-            "url": "https://www.al-monitor.com/originals/2026/06/keep-out-chinas-clutches-taiwans-president-tells-military-cadets"
-        },
-        {
-            "title": "US Treasury chief says only China buying Iranian oil as others wary of sanctions risk - Anadolu Ajans\u0131",
-            "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTlU1VEpfcHg0dVpadlpkNGIxYkE4U0I4M25iQjhaRG5vbjBYWmFMT0gtZVBwSXItbkFTZ0lfVmhSX2FsVWJsR0Y0bGVMekczWkxsd3g1eGJ2Z0t1bjl6SDlMNDRTVU82ZjhtaEVNbndNUjhjSlpEdllZUXZVYXE4dHV2YjNONUZ1emx4UGEwcTcyUkZ4VnVHamZTRVl5aU1kSDRFQlhjYWNnSjVfRXBaSmZINVJKMTBqQS03X00yVlQtcEI1?oc=5"
-        },
-        {
-            "title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
-            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5"
-        },
-        {
-            "title": "The 1968 Pact on Shipping Routes in the Strait of Hormuz That Iran Is Rejecting",
-            "url": "https://www.nytimes.com/2026/06/30/world/middleeast/the-1968-pact-on-shipping-routes-in-the-strait-of-hormuz-that-iran-is-rejecting.html"
-        },
-        {
-            "title": "A generational shift is transforming the US-Israel relationship | Kenneth Roth",
-            "url": "https://www.theguardian.com/commentisfree/2026/jun/30/us-israel-relationship-shift"
-        },
-        {
-            "title": "#Danslapresse | The Israeli army has reportedly signed a $7 million contract for a radar system against Hezbollah drones.",
-            "url": "https://x.com/LOrientLeJour/status/2071925974891942345"
-        },
-        {
-            "title": "Starmer says some road and energy projects will be scrapped to fund \u00a315bn defence plan",
-            "url": "https://www.ft.com/content/95020bd5-a717-4fcf-97d4-c218e9f4d500"
         }
     ]
 }
