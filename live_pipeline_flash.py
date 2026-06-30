@@ -7,6 +7,7 @@ import feedparser
 from urllib.parse import urlparse
 from google import genai
 from huggingface_hub import HfApi
+import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 
 GEMINI_API_KEY = os.environ.get("RAG_GEMINI_API_KEY_5")
 if not GEMINI_API_KEY:
@@ -50,6 +51,18 @@ def fetch_and_evaluate_flash_alerts():
     raw_intel_payload = ""
     global_seen_titles = set() # 🛡️ NEW: TITLE DEDUPLICATION SHIELD
 
+    # 🛑 THE FIX: Helper to deep-scrape article bodies using Trafilatura
+    def extract_deep_text(url):
+        try:
+            downloaded = trafilatura.fetch_url(url)
+            if downloaded:
+                text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
+                if text:
+                    # Return the first 1000 characters to give Gemini rich context without blowing up token limits
+                    return text[:1000].replace('\n', ' ') + "..."
+        except Exception: pass
+        return ""
+
     # Helper function to process feeds and remove title duplicates instantly
     def add_to_payload(feed_data, source_name, max_items=15):
         nonlocal article_counter, raw_intel_payload
@@ -68,7 +81,14 @@ def fetch_and_evaluate_flash_alerts():
             url = e.get('url') or e.get('link') or f"https://{source_name.lower().replace(' ', '')}.com/"
             art_id = f"ART_{article_counter:03d}"
             article_map[art_id] = {"title": title, "url": url, "feed_source": source_name}
-            raw_intel_payload += f"ID: {art_id} | TITLE: {title}\n"
+            
+            # 🛑 THE FIX: Deep extract the article body
+            body_text = extract_deep_text(url)
+            
+            if body_text:
+                raw_intel_payload += f"ID: {art_id} | TITLE: {title}\n  DEEP DATA: {body_text}\n"
+            else:
+                raw_intel_payload += f"ID: {art_id} | TITLE: {title}\n"
             
             article_counter += 1
             added += 1
@@ -101,8 +121,8 @@ def fetch_and_evaluate_flash_alerts():
 
     # --- AI EXTRACTION (ID ONLY) ---
     prompt = f"""
-    You are a Geopolitics-OSINT Intelligence Router. Review the following raw feeds.
-    Select EXACTLY 10 distinct, critical geopolitical, cyber, or defense-related headlines.
+    You are a Geopolitics-OSINT Intelligence Router. Review the following raw feeds and Deep Extraction Data.
+    Select EXACTLY 10 distinct, critical geopolitical, cyber, or defense-related events.
     
     CRITICAL INSTRUCTIONS:
     1. Return exactly 10 objects.
