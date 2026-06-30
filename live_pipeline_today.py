@@ -155,25 +155,48 @@ def fetch_daily_intelligence():
     aggregated_news = ""; total_articles = 0; article_map = {}; article_counter = 1
     headers = {'User-Agent': 'Mozilla/5.0'}
     
+    # 1. Standard RSS Extraction
     for url in RSS_FEEDS:
         try:
-            for entry in feedparser.parse(requests.get(url, headers=headers, timeout=15).text).entries[:5]:
+            for entry in feedparser.parse(requests.get(url, headers=headers, timeout=15).text).entries[:3]:
                 art_id = f"ART_{article_counter:03d}"; final_url = resolve_final_url(entry.link, headers)
                 article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": "Premium RSS"}
                 aggregated_news += f"ID: {art_id} | [MACRO] {entry.title}\n"
                 article_counter += 1; total_articles += 1
         except Exception: pass
 
+    # 2. Google News Live Sweeps
     for query in ['("geopolitics" OR "sanctions") when:1h', '("semiconductor" OR "AI") when:1h']:
         try:
             gn_url = f'https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-US&gl=US'
-            for entry in feedparser.parse(requests.get(gn_url, headers=headers, timeout=15).text).entries[:5]: 
+            for entry in feedparser.parse(requests.get(gn_url, headers=headers, timeout=15).text).entries[:3]: 
                 art_id = f"ART_{article_counter:03d}"; final_url = resolve_final_url(entry.link, headers)
                 article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": "Google News Live 1H"}
                 aggregated_news += f"ID: {art_id} | [LIVE 1H] {entry.title}\n"
                 article_counter += 1; total_articles += 1
         except Exception: pass
 
+    # 3. 🚀 NEW: Grafted Flash Pipeline Deep APIs
+    def extract_api_feed(api_url, source_name, headers, params=None):
+        nonlocal article_counter, total_articles, aggregated_news
+        try:
+            res = requests.get(api_url, headers=headers, params=params, timeout=10)
+            if res.status_code == 200:
+                data = res.json().get('data', []) if 'war-monitor' in api_url else res.json()
+                for e in data[:5]: # Take top 5 from each deep API
+                    title = e.get('title') or e.get('headline')
+                    url = e.get('url') or e.get('link') or f"https://{source_name.lower().replace(' ', '')}.com/"
+                    if title:
+                        art_id = f"ART_{article_counter:03d}"
+                        article_map[art_id] = {"title": title, "url": url, "feed_source": source_name}
+                        aggregated_news += f"ID: {art_id} | [{source_name}] {title}\n"
+                        article_counter += 1; total_articles += 1
+        except Exception as e: print(f"⚠️ Failed {source_name}: {e}")
+
+    extract_api_feed("https://monitor-the-situation.com/api/events", "MONITOR THE SITUATION", {'Referer': 'https://monitor-the-situation.com/', **headers}, {"range": "12h", "feed": "live"})
+    extract_api_feed("https://api.war-monitor.com/api/events", "WAR MONITOR", {'Origin': 'https://war-monitor.com', 'Referer': 'https://war-monitor.com/', **headers}, {"page": "1", "limit": "15", "fresh_hours": "168"})
+
+    # 4. Psyopoly Siphon
     psy_events, psy_raw_items = fetch_psyopoly_data()
     for item in psy_raw_items:
         art_id = f"ART_{article_counter:03d}"
@@ -184,7 +207,18 @@ def fetch_daily_intelligence():
     return aggregated_news, total_articles, psy_events, article_map
 
 def extract_tactical_events(news_text):
-    prompt = f"You are an elite Geopolitics-OSINT analyst. Review entries preceded by IDs. Extract 15-20 critical events. Output raw JSON array. Keys exactly: Article_ID, Date, Actor, Action, Location, Risk. Data: {news_text}"
+    prompt = f"""
+    You are an elite Geopolitics-OSINT analyst. Review the following raw feeds.
+    Select EXACTLY 40-50 distinct, critical geopolitical, cyber, or defense-related events.
+    
+    CRITICAL INSTRUCTIONS:
+    1. Do NOT invent IDs. You must use the EXACT "Article_ID" provided.
+    2. DIVERSITY MANDATE: You MUST prioritize events flagged from [MONITOR THE SITUATION] and [WAR MONITOR] alongside standard news.
+    3. THREAT SCORING: Assign a realistic Risk score ("CRITICAL", "HIGH", "WATCH").
+    
+    Output a raw JSON array. Keys exactly: Article_ID, Date, Actor, Action, Location, Risk.
+    Data: {news_text}
+    """
     raw_txt = generate_with_rotation(prompt, temperature=0.1)
     match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
     if match: return json.loads(match.group(0))
@@ -251,10 +285,10 @@ if __name__ == "__main__":
             iden = e.get('Action', '').strip().lower()
             if iden and iden not in seen: seen.add(iden); unique.append(e)
                 
-        json.dump(unique[:25], open(output_file_tactical, 'w'), indent=4)
+        json.dump(unique[:40], open(output_file_tactical, 'w'), indent=4)
 
         print("⏳ Pooling data before Shift Brief generation...")
-        json.dump(generate_shift_brief(unique[:25]), open('data/today_snippet/shift_brief.json', 'w'), indent=4)
+        json.dump(generate_shift_brief(unique[:40]), open('data/today_snippet/shift_brief.json', 'w'), indent=4)
         
         HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
         if HF_TOKEN:
