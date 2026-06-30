@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Drone Attacks Damage Moscow's Kapotnya Oil Refinery",
+        "Title": "Russia Seeks Fuel Imports From Belarus, Georgia, Kazakhstan, and India",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44735",
+        "Title": "US and Iran Discuss Possible Meeting in Qatar",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32317",
+        "Title": "US Reviews Middle East Presence After Iranian Strikes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,10 +35,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32317",
-        "Title": "US Reviews Middle East Presence After Iranian Strikes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
@@ -32,28 +46,7 @@
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01",
-        "Title": "Yokogawa FAST/TOOLS and CI Server",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44735",
-        "Title": "US and Iran Discuss Possible Meeting in Qatar",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/liveuamap/12198",
@@ -67,6 +60,13 @@
         "Title": "Drone relayers off: Ukraine\u2019s diplomatic triumph over Russia ally Belarus",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/tv-shows/business/20260629-china-eu-commerce-ministers-meet-amid-widening-trade-imbalance",
+        "Title": "China, EU commerce ministers meet amid widening trade imbalance",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
