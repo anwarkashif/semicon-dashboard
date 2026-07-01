@@ -168,14 +168,15 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                             context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:25])}"
                     except: pass
 
-            sys_prompt = f"""
+            # 🛑 THE FIX: Define the system prompt strictly as internal instructions, NOT as user content
+            system_instruction = f"""
             You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
-            Your primary directive is to answer the user's question using the provided intelligence context below, and supplement with external information if needed.
+            Your primary directive is to answer the user's question using the provided intelligence context below, and supplement with external web information if needed.
             
             CRITICAL GROUNDING & CITATION DIRECTIVES:
             1. STRICTLY DO NOT use, reference, or cite www.wikipedia.org. Filter it out completely from your knowledge and external searches.
-            2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05] or [Reported in/by Archive and Live Context: Intelligence Brief Date: May 7-14, 2026].
-            3. DO NOT use standard bracketed footnote numbers (e.g., avoid). Use explicit inline text citations based on the context provided.
+            2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05].
+            3. DO NOT use standard bracketed footnote numbers. Use explicit inline text citations.
             
             ARCHIVES AND LIVE CONTEXT:
             {context_data}
@@ -185,23 +186,61 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                 from google import genai
                 import time
                 full_response = ""
+                unique_urls = set()
+                sources_md = ""
                 success = False
                 
                 # 🚀 Loop through the 4-Key Cascade
                 for attempt, api_key in enumerate(api_keys):
                     try:
                         client = genai.Client(api_key=api_key)
-                        # 🛑 THE FIX: Use standard blocking generation to prevent websocket timeouts with heavy RAG payloads
+                        # 🛑 THE FIX: Separate the system instruction from the user prompt so the search tool doesn't crash
                         response = client.models.generate_content(
                             model=model_name,
-                            contents=[sys_prompt, prompt]
+                            contents=prompt,
+                            config={
+                                "system_instruction": system_instruction,
+                                "tools": [{"google_search": {}}]
+                            }
                         )
+                        
                         full_response = response.text
-                        message_placeholder.markdown(full_response)
+                        unique_urls = set()
+                        sources_md = ""
+                        
+                        # Intercept Grounding Metadata safely after generation completes
+                        try:
+                            if response.candidates and response.candidates[0].grounding_metadata:
+                                meta = response.candidates[0].grounding_metadata
+                                if hasattr(meta, 'grounding_chunks') and meta.grounding_chunks:
+                                    for g_chunk in meta.grounding_chunks:
+                                        if hasattr(g_chunk, 'web') and getattr(g_chunk.web, 'uri', None):
+                                            title = getattr(g_chunk.web, 'title', 'Source link')
+                                            url = g_chunk.web.uri
+                                            if url not in unique_urls:
+                                                unique_urls.add(url)
+                                                sources_md += f"\n* [{title}]({url})"
+                        except Exception: pass
+                            
                         success = True
                         break # Node worked, exit retry loop
-                        
+
                     except Exception as e:
+                        if attempt < len(api_keys) - 1:
+                            message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
+                            time.sleep(1.5)
+                            continue
+                        else:
+                            raise e
+
+                if success:
+                    if sources_md:
+                        full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
+                    if not full_response.strip():
+                        full_response = "Intelligence processing completed. Re-indexing data models..."
+                    message_placeholder.markdown(full_response)
+                
+            except Exception as e:
                         # If node fails and we have backup keys remaining
                         if attempt < len(api_keys) - 1:
                             message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
@@ -381,14 +420,15 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                                             context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:10])}"
                                     except: pass
 
-                            sys_prompt = f"""
+                            # 🛑 THE FIX: Define the system prompt strictly as internal instructions, NOT as user content
+                            system_instruction = f"""
                             You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
                             Answer the user's question concisely using the provided context and supplement with external web information if needed.
                             
                             CRITICAL GROUNDING & CITATION DIRECTIVES:
                             1. STRICTLY DO NOT use, reference, or cite www.wikipedia.org. Filter it out completely from your knowledge and external searches.
-                            2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05] or [Reported in/by Archive and Live Context: Intelligence Brief Date: May 7-14, 2026].
-                            3. DO NOT use standard bracketed footnote numbers (e.g., avoid). Use explicit inline text citations based on the context provided.
+                            2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05].
+                            3. DO NOT use standard bracketed footnote numbers. Use explicit inline text citations.
                             
                             ARCHIVES AND LIVE CONTEXT:
                             {context_data}
@@ -406,11 +446,14 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                                 for attempt, api_key in enumerate(api_keys):
                                     try:
                                         client = genai.Client(api_key=api_key)
-                                        # 🛑 THE FIX: Shift to blocking generation for Google Search grounding to stop Streamlit crashes
+                                        # 🛑 THE FIX: Separate the system instruction from the user prompt so the search tool doesn't crash
                                         response = client.models.generate_content(
                                             model=model_name,
-                                            contents=[sys_prompt, query],
-                                            config={"tools": [{"google_search": {}}]}
+                                            contents=query,
+                                            config={
+                                                "system_instruction": system_instruction,
+                                                "tools": [{"google_search": {}}]
+                                            }
                                         )
                                         
                                         full_response = response.text
@@ -435,6 +478,21 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                                         break # Node worked, exit retry loop
 
                                     except Exception as e:
+                                        if attempt < len(api_keys) - 1:
+                                            message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
+                                            time.sleep(1.5)
+                                            continue
+                                        else:
+                                            raise e
+
+                                if success:
+                                    if sources_md:
+                                        full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
+                                    if not full_response.strip():
+                                        full_response = "Intelligence processing completed. Re-indexing data models..."
+                                    message_placeholder.markdown(full_response)
+                                
+                            except Exception as e:
                                         if attempt < len(api_keys) - 1:
                                             message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
                                             time.sleep(1.5)
