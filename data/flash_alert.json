@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Strikes Israeli Air Bases and Refinery in Barrage",
+        "Title": "NATO Allies Split Over Long-Term Ukraine Aid Commitment",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,18 +14,18 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/01/qatarenergy-extend-force-majeure-september-italys-edison-iran-war-.html",
-        "Title": "LNG market disruption may continue for months as a top producer withholds some Italian shipments",
+        "Source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRWZGSUVLOXZGbDVZT29BVG5FaWgyQm9NMVRDQTZhVXo5ZElxdFlMRU95bjliQ19VNDdZNzBtR2tRR3d2VXFta3c2dTd5ZnF1ZjBNRDB1MTJ1R1UzU2NEdmd5WWotZ19wcGMyS0NYS1AzNFZYcC1IUXVfMG42aDMzekI5SlFJd3ZOMXhSaVpwZ2h5NlhEeEVfLWpLeWl4TnJFcTF5MHZLRlhXWlRzUlE?oc=5",
+        "Title": "World Bank to phase out China lending by 2031, source says - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "news.google.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/01/us-military-deploys-over-900-personnel-to-venezuela-for-earthquake-response.html",
-        "Title": "U.S. military deploys over 900 personnel to Venezuela for earthquake response",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "HIGH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
+        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
@@ -35,8 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/01/thames-waters-andy-burnham-creditors-apollo-blackrock-privatization.html",
-        "Title": "Andy Burnham's first big fight could be with Wall Street investors",
+        "Source": "https://www.bbc.co.uk/news/articles/cqj1210rj0yo?at_medium=RSS&at_campaign=rss",
+        "Title": "Aftershock frays nerves as many Venezuelans left to fend for themselves",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32361",
-        "Title": "Ukraine Forces Clash With Russia In Multiple Regions",
+        "Source": "https://www.bbc.co.uk/news/articles/c1jykwk8n18o?at_medium=RSS&at_campaign=rss",
+        "Title": "Three-year-old rescued and taken to hospital six days after Venezuela quake",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRWZGSUVLOXZGbDVZT29BVG5FaWgyQm9NMVRDQTZhVXo5ZElxdFlMRU95bjliQ19VNDdZNzBtR2tRR3d2VXFta3c2dTd5ZnF1ZjBNRDB1MTJ1R1UzU2NEdmd5WWotZ19wcGMyS0NYS1AzNFZYcC1IUXVfMG42aDMzekI5SlFJd3ZOMXhSaVpwZ2h5NlhEeEVfLWpLeWl4TnJFcTF5MHZLRlhXWlRzUlE?oc=5",
-        "Title": "World Bank to phase out China lending by 2031, source says - Reuters",
+        "Source": "https://www.theguardian.com/world/2026/jul/01/wednesday-briefing-after-two-powerful-earthquakes-what-is-the-reality-on-the-ground-in-venezuela",
+        "Title": "Wednesday briefing: After two powerful earthquakes, what is the reality on the ground in Venezuela?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
