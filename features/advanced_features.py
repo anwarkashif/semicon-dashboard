@@ -191,16 +191,12 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                 for attempt, api_key in enumerate(api_keys):
                     try:
                         client = genai.Client(api_key=api_key)
-                        response = client.models.generate_content_stream(
+                        # 🛑 THE FIX: Use standard blocking generation to prevent websocket timeouts with heavy RAG payloads
+                        response = client.models.generate_content(
                             model=model_name,
                             contents=[sys_prompt, prompt]
                         )
-                        full_response = ""
-                        for chunk in response:
-                            if chunk.text:
-                                full_response += chunk.text
-                                message_placeholder.markdown(full_response + "▌") 
-                        
+                        full_response = response.text
                         message_placeholder.markdown(full_response)
                         success = True
                         break # Node worked, exit retry loop
@@ -410,34 +406,30 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                                 for attempt, api_key in enumerate(api_keys):
                                     try:
                                         client = genai.Client(api_key=api_key)
-                                        response = client.models.generate_content_stream(
+                                        # 🛑 THE FIX: Shift to blocking generation for Google Search grounding to stop Streamlit crashes
+                                        response = client.models.generate_content(
                                             model=model_name,
                                             contents=[sys_prompt, query],
                                             config={"tools": [{"google_search": {}}]}
                                         )
                                         
-                                        full_response = ""
+                                        full_response = response.text
                                         unique_urls = set()
                                         sources_md = ""
                                         
-                                        for chunk in response:
-                                            if chunk.text:
-                                                full_response += chunk.text
-                                                message_placeholder.markdown(full_response + "▌") 
-                                                
-                                            # Intercept Grounding Metadata safely from the stream
-                                            try:
-                                                if chunk.candidates and chunk.candidates[0].grounding_metadata:
-                                                    meta = chunk.candidates[0].grounding_metadata
-                                                    if hasattr(meta, 'grounding_chunks') and meta.grounding_chunks:
-                                                        for g_chunk in meta.grounding_chunks:
-                                                            if hasattr(g_chunk, 'web') and getattr(g_chunk.web, 'uri', None):
-                                                                title = getattr(g_chunk.web, 'title', 'Source link')
-                                                                url = g_chunk.web.uri
-                                                                if url not in unique_urls:
-                                                                    unique_urls.add(url)
-                                                                    sources_md += f"\n* [{title}]({url})"
-                                            except Exception: pass
+                                        # Intercept Grounding Metadata safely after generation completes
+                                        try:
+                                            if response.candidates and response.candidates[0].grounding_metadata:
+                                                meta = response.candidates[0].grounding_metadata
+                                                if hasattr(meta, 'grounding_chunks') and meta.grounding_chunks:
+                                                    for g_chunk in meta.grounding_chunks:
+                                                        if hasattr(g_chunk, 'web') and getattr(g_chunk.web, 'uri', None):
+                                                            title = getattr(g_chunk.web, 'title', 'Source link')
+                                                            url = g_chunk.web.uri
+                                                            if url not in unique_urls:
+                                                                unique_urls.add(url)
+                                                                sources_md += f"\n* [{title}]({url})"
+                                        except Exception: pass
                                             
                                         success = True
                                         break # Node worked, exit retry loop
