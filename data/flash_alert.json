@@ -14,17 +14,17 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cnbc.com/2026/07/01/defense-stocks-uk-investment-plan-gilts-bae-systems.html",
+        "Title": "Buy the UK DIP? Defense stocks lifted by $20 billion spending boost as gilts come under fire",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.politico.eu/article/russia-suspends-railway-border-crossings-finland-baltic-neighbors/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
         "Title": "Russia shuts railway border crossings with Finland, Estonia and Latvia",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "politico.eu",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.dw.com/en/activist-arrests-surge-in-turkey-ahead-of-key-nato-summit/a-77777671?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Activist arrests surge in Turkey ahead of key NATO summit",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119661",
-        "Title": "Moscow Fire Alarm Activated in Federation Tower",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Fed Chief Kevin Warsh set to give view on rates, central bank overhaul at ECB forum: Live updates",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/1/orange-lava-flows-stream-from-mount-etna?traffic_source=rss",
-        "Title": "Orange lava flows stream from Mount Etna",
+        "Source": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5xaTJPSmRvdGVCdWlJbGpCaWtHZVppUGhCYlpVVHVrTTdiTG1DV1lOYlkyZG1CZEQ3SURfMlNmR2pQMGotd1UyVEg5REpaVGpSQ29Vc3V2VmV1Q3dCWkhJVTBOYXlvdl9Z?oc=5",
+        "Title": "U.S. Army Soldiers Conduct Operations in the Middle East - centcom.mil",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/tv-shows/press-review/20260701-cloak-of-secrecy-surrounds-plane-that-crashed-into-beijing-skyscraper",
-        "Title": "'Cloak of secrecy' surrounds plane that crashed into Beijing skyscraper",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
