@@ -1,0 +1,402 @@
+{
+    "date": "2026-07-01",
+    "title": "Flash to Brief - 2026-07-01",
+    "brief_raw": "**\ud83c\udfaf BLUF:**\nAPI Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nSystem Awaiting Reset. Data Pipeline Intact.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nGeneration pending next scheduled cron execution.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nPENDING\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nPENDING",
+    "recent_actions": [
+        {
+            "Date": "2026-07-01",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Iran war live: Qatar\u2019s PM meets US envoys, Tehran holds firm on conditions",
+            "Headline": "Iran war live: Qatar\u2019s PM meets US envoys, Tehran holds firm on conditions",
+            "Summary": "Iran war live: Qatar\u2019s PM meets US envoys, Tehran holds firm on conditions",
+            "Risk": "HIGH",
+            "Source": "https://www.aljazeera.com/news/liveblog/2026/7/1/iran-war-live-qatars-pm-meets-us-envoys-tehran-holds-firm-on-conditions?traffic_source=rss",
+            "Title": "Iran war live: Qatar\u2019s PM meets US envoys, Tehran holds firm on conditions",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "aljazeera.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "A Dispute Over Opening Hormuz Drives a Wedge Into U.S.-Saudi Relations",
+            "Headline": "A Dispute Over Opening Hormuz Drives a Wedge Into U.S.-Saudi Relations",
+            "Summary": "A Dispute Over Opening Hormuz Drives a Wedge Into U.S.-Saudi Relations",
+            "Risk": "HIGH",
+            "Source": "https://www.wsj.com/world/middle-east/saudi-arabia-us-relationship-iran-war-ca0f31a0",
+            "Title": "A Dispute Over Opening Hormuz Drives a Wedge Into U.S.-Saudi Relations",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "wsj.com"
+        },
+        {
+            "Date": "2026-06-30",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Israel delays withdrawal from two southern Lebanon villages, report says",
+            "Headline": "Israel delays withdrawal from two southern Lebanon villages, report says",
+            "Summary": "Israel delays withdrawal from two southern Lebanon villages, report says",
+            "Risk": "HIGH",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-delays-withdrawal-two-southern-lebanon-villages-report-says",
+            "Title": "Israel delays withdrawal from two southern Lebanon villages, report says",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "Late June 2026",
+            "Actor": "Ukraine, Russia",
+            "Action": "Ukraine's intensifying blockade of Crimea caused energy blackouts and fuel shortages; Russia declared a state of emergency.",
+            "Location": "Crimea, Black Sea peninsula",
+            "Risk": "High",
+            "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/ukraines-blockade-of-crimea-puts-putins-greatest-victory-under-threat/",
+            "Title": "Ukraine\u2019s blockade of Crimea puts Putin\u2019s greatest victory under threat",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "atlanticcouncil.org"
+        },
+        {
+            "Date": "July 1, 2026",
+            "Actor": "United States, Mexico, Canada",
+            "Action": "US set to formally announce non-renewal of USMCA, beginning a potentially decade-long negotiation process.",
+            "Location": "North America",
+            "Risk": "High",
+            "Source": "https://www.atlanticcouncil.org/blogs/econographics/the-five-stages-of-a-usmca-shakeup/",
+            "Title": "The five stages of a USMCA shakeup",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "atlanticcouncil.org"
+        },
+        {
+            "Date": "Late June 2026",
+            "Actor": "Demonstrators, March and March (organization)",
+            "Action": "Widespread anti-immigrant rallies held, demanding undocumented migrants leave the country.",
+            "Location": "South Africa",
+            "Risk": "High",
+            "Source": "https://foreignpolicy.com/2026/06/30/south-africa-anti-immigrant-rallies-self-deport-ramaphosa-xenophobia/",
+            "Title": "Anti-Immigrant Marches Held Across South Africa",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "foreignpolicy.com"
+        },
+        {
+            "Date": "June 22, 2025",
+            "Actor": "US (B-2 Spirit bombers, Tomahawk cruise missiles), Iran",
+            "Action": "US launched 'Operation Midnight Hammer', dropping GBU-57 bombs on Iranian nuclear facilities and cruise missiles on surface targets.",
+            "Location": "Fordow, Natanz, Isfahan, Iran",
+            "Risk": "High",
+            "Source": "https://moderndiplomacy.eu/2026/07/01/the-new-age-of-bunker-busting-warfare/",
+            "Title": "The New Age of Bunker-Busting Warfare",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "moderndiplomacy.eu"
+        },
+        {
+            "Date": "June 24, 2026",
+            "Actor": "BRICS (Brazil, Russia, India, China, South Africa), Sergey Lavrov",
+            "Action": "BRICS suspended its future expansion due to political divergences and rising geopolitical changes among members.",
+            "Location": "Moscow, Russia",
+            "Risk": "Medium",
+            "Source": "https://moderndiplomacy.eu/2026/06/30/brics-facing-political-divergences-suspends-its-future-expansion/",
+            "Title": "BRICS Facing Political Divergences, Suspends its Future Expansion",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "moderndiplomacy.eu"
+        },
+        {
+            "Date": "Late June 2026",
+            "Actor": "Pakistan, Taliban (Afghanistan), Tehreek-e-Taliban Pakistan (TTP)",
+            "Action": "Pakistan launched airstrikes in eastern Afghanistan targeting militants, renewing cross-border violence.",
+            "Location": "Eastern Afghanistan",
+            "Risk": "High",
+            "Source": "https://www.worldpoliticsreview.com/serbia-vucic-resignation-eu-russia-2/",
+            "Title": "Cross-Border Strikes Renew Pakistan-Taliban Tensions",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "worldpoliticsreview.com"
+        },
+        {
+            "Date": "June 29, 2026",
+            "Actor": "Latvia, Ukraine",
+            "Action": "Latvia and Ukraine announced plans to build a joint drone manufacturing facility.",
+            "Location": "Latgale region, eastern Latvia (near Russia/Belarus border)",
+            "Risk": "Medium",
+            "Source": "https://www.c4isrnet.com/global/europe/2026/06/30/latvia-and-ukraine-to-open-drone-factory-right-on-baltic-nations-border-with-russia/",
+            "Title": "Latvia and Ukraine to open drone factory right on Baltic nation\u2019s border with Russia",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "c4isrnet.com"
+        },
+        {
+            "Date": "Late June 2026",
+            "Actor": "China (Ministry of Commerce), Japan, Japanese companies",
+            "Action": "China added 40 Japanese companies to its export control lists, accusing them of supporting Japan\u2019s military buildup.",
+            "Location": "China (affecting trade with Japan)",
+            "Risk": "High",
+            "Source": "https://asiatimes.com/2026/07/china-cites-40-japanese-firms-for-advancing-remilitarization/",
+            "Title": "China cites 40 Japanese firms for \u2018advancing remilitarization\u2019",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "asiatimes.com"
+        },
+        {
+            "Date": "September 2025",
+            "Actor": "Donald Trump, Trump sons, Kazakh leader, Kaz Resources, US government",
+            "Action": "Trump's sons are set to profit from a tax-funded tungsten mining deal in Kazakhstan, negotiated by Donald Trump, with US federal financing.",
+            "Location": "Kazakhstan, US",
+            "Risk": "High",
+            "Source": "https://asiatimes.com/2026/07/trump-sons-set-to-profit-from-tax-funded-kazakh-tungsten-mine-deal/",
+            "Title": "Trump sons set to profit from tax-funded Kazakh tungsten mine deal",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "asiatimes.com"
+        },
+        {
+            "Date": "June 12, 2026",
+            "Actor": "Australia, Anthropic (US company), US government",
+            "Action": "Australia lost access to Anthropic\u2019s Claude Fable 5 AI model due to a US national security directive.",
+            "Location": "Australia, US",
+            "Risk": "Medium",
+            "Source": "https://www.aspistrategist.org.au/not-at-the-frontier-but-at-least-australian-we-need-our-own-ai/",
+            "Title": "Not at the frontier, but at least Australian: we need our own AI",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "aspistrategist.org.au"
+        },
+        {
+            "Date": "June 30, 2026",
+            "Actor": "Iran, Shell, global LNG trade",
+            "Action": "Shipping disruptions in the Strait of Hormuz due to the Iran war could stall global liquefied natural gas trade for 2026.",
+            "Location": "Strait of Hormuz, global LNG market",
+            "Risk": "High",
+            "Source": "https://gcaptain.com/hormuz-disruption-to-stall-2026-lng-trade-demand-to-rise-by-2050/",
+            "Title": "Hormuz\u00a0Disruption to Stall 2026 LNG Trade, Demand to Rise by 2050",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "gcaptain.com"
+        },
+        {
+            "Date": "July 1, 2026",
+            "Actor": "Israeli officials, Lebanese army, Hezbollah, US",
+            "Action": "Israel delayed its planned withdrawal of forces from two southern Lebanon villages, pending agreement on a US oversight mechanism.",
+            "Location": "Southern Lebanon",
+            "Risk": "High",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-delays-withdrawal-two-southern-lebanon-villages-report-says",
+            "Title": "Israel delays withdrawal from two southern Lebanon villages, report says",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "June 30, 2026",
+            "Actor": "Israeli drone, civilians",
+            "Action": "An Israeli drone attack killed two people and wounded several others.",
+            "Location": "North of Khan Younis, southern Gaza",
+            "Risk": "High",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-drone-attack-kills-two-north-khan-younis",
+            "Title": "Israeli drone attack kills two north of Khan Younis",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "July 1, 2026",
+            "Actor": "Qatar\u2019s PM, US envoys, Iranian negotiators",
+            "Action": "Qatar\u2019s PM met US envoys in Doha for discussions on negotiations with Iran, but no direct talks were planned as Iran held firm on conditions.",
+            "Location": "Doha, Qatar",
+            "Risk": "High",
+            "Source": "https://www.aljazeera.com/news/liveblog/2026/7/1/iran-war-live-qatars-pm-meets-us-envoys-tehran-holds-firm-on-conditions?traffic_source=rss",
+            "Title": "Iran war live: Qatar\u2019s PM meets US envoys, Tehran holds firm on conditions",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "aljazeera.com"
+        },
+        {
+            "Date": "Late June 2026",
+            "Actor": "Sudan's army, RSF",
+            "Action": "Sudan's army built a 51 km defense network around El Obeid amid RSF encirclement; drone strikes on infrastructure caused a severe humanitarian crisis.",
+            "Location": "El Obeid, Sudan",
+            "Risk": "High",
+            "Source": "https://x.com/SudanTribune_EN/status/2072098153122140399",
+            "Title": "Sudan's army has built a 51 km network of trenches and berms to defend the strategic city of El Obeid from an ongoing RSF encirclement, according to satellite analysis from Yale HRL. Meanwhile, targeted drone strikes on fuel and electrical infrastructure have cut off power to vital water pumps, triggering a severe humanitarian crisis. The cost of drinking water has spiked from 9,000 to 25,000 Sudanese pounds per barrel, as over 700 new displacement structures appear in a single month.",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "2026-06-30",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "US envoys met with mediators in Qatar, talks with Iran up in the air",
+            "Headline": "US envoys met with mediators in Qatar, talks with Iran up in the air",
+            "Summary": "US envoys met with mediators in Qatar, talks with Iran up in the air",
+            "Risk": "HIGH",
+            "Source": "https://www.france24.com/en/middle-east/20260630-us-envoys-met-with-mediators-in-qatar-talks-with-iran-up-in-the-air",
+            "Title": "US envoys met with mediators in Qatar, talks with Iran up in the air",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "france24.com"
+        },
+        {
+            "Date": "2026-06-30",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Syria's president condemns Israeli attacks near Golan Heights",
+            "Headline": "Syria's president condemns Israeli attacks near Golan Heights",
+            "Summary": "Syria's president condemns Israeli attacks near Golan Heights",
+            "Risk": "HIGH",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/syrias-president-condemns-israeli-attacks-near-golan-heights",
+            "Title": "Syria's president condemns Israeli attacks near Golan Heights",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "2026-06-30",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Donald Trump reports $1.4bn in cryptocurrency income in government filing",
+            "Headline": "Donald Trump reports $1.4bn in cryptocurrency income in government filing",
+            "Summary": "Donald Trump reports $1.4bn in cryptocurrency income in government filing",
+            "Risk": "HIGH",
+            "Source": "https://www.aljazeera.com/news/2026/6/30/donald-trump-reports-1-4bn-in-cryptocurrency-income-in-government-filing?traffic_source=rss",
+            "Title": "Donald Trump reports $1.4bn in cryptocurrency income in government filing",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "aljazeera.com"
+        },
+        {
+            "Date": "Last week (2026)",
+            "Actor": "Ukraine, Russia",
+            "Action": "Intensifying blockade of Crimea, causing energy blackouts and fuel shortages, strategic bombing campaign.",
+            "Location": "Crimea, Black Sea peninsula, occupied southern Ukraine",
+            "Risk": "High",
+            "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/ukraines-blockade-of-crimea-puts-putins-greatest-victory-under-threat/",
+            "Title": "Ukraine\u2019s blockade of Crimea puts Putin\u2019s greatest victory under threat",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "atlanticcouncil.org"
+        },
+        {
+            "Date": "June 9 (2026)",
+            "Actor": "EU, European Commission, Russia",
+            "Action": "Debating visa ban on Russian military personnel as part of sanctions package.",
+            "Location": "EU",
+            "Risk": "High",
+            "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/banning-russian-soldiers-from-the-eu-is-a-common-sense-security-measure/",
+            "Title": "Banning Russian soldiers from the EU is a common sense security measure",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "atlanticcouncil.org"
+        },
+        {
+            "Date": "July 1 (2026)",
+            "Actor": "United States, Mexico, Canada",
+            "Action": "US set to formally announce non-renewal of USMCA, initiating a potential decade-long negotiation process.",
+            "Location": "North America",
+            "Risk": "High",
+            "Source": "https://www.atlanticcouncil.org/blogs/econographics/the-five-stages-of-a-usmca-shakeup/",
+            "Title": "The five stages of a USMCA shakeup",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "atlanticcouncil.org"
+        },
+        {
+            "Date": "Recent (Tuesday)",
+            "Actor": "Demonstrators, undocumented migrants, March and March organization",
+            "Action": "Widespread anti-immigrant rallies demanding undocumented migrants leave, rising xenophobia.",
+            "Location": "South Africa",
+            "Risk": "High",
+            "Source": "https://foreignpolicy.com/2026/06/30/south-africa-anti-immigrant-rallies-self-deport-ramaphosa-xenophobia/",
+            "Title": "Anti-Immigrant Marches Held Across South Africa",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "foreignpolicy.com"
+        }
+    ],
+    "sources": [
+        {
+            "title": "Iran war live: Qatar\u2019s PM meets US envoys, Tehran holds firm on conditions",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/7/1/iran-war-live-qatars-pm-meets-us-envoys-tehran-holds-firm-on-conditions?traffic_source=rss"
+        },
+        {
+            "title": "A Dispute Over Opening Hormuz Drives a Wedge Into U.S.-Saudi Relations",
+            "url": "https://www.wsj.com/world/middle-east/saudi-arabia-us-relationship-iran-war-ca0f31a0"
+        },
+        {
+            "title": "Israel delays withdrawal from two southern Lebanon villages, report says",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-delays-withdrawal-two-southern-lebanon-villages-report-says"
+        },
+        {
+            "title": "Ukraine\u2019s blockade of Crimea puts Putin\u2019s greatest victory under threat",
+            "url": "https://www.atlanticcouncil.org/blogs/ukrainealert/ukraines-blockade-of-crimea-puts-putins-greatest-victory-under-threat/"
+        },
+        {
+            "title": "The five stages of a USMCA shakeup",
+            "url": "https://www.atlanticcouncil.org/blogs/econographics/the-five-stages-of-a-usmca-shakeup/"
+        },
+        {
+            "title": "Anti-Immigrant Marches Held Across South Africa",
+            "url": "https://foreignpolicy.com/2026/06/30/south-africa-anti-immigrant-rallies-self-deport-ramaphosa-xenophobia/"
+        },
+        {
+            "title": "The New Age of Bunker-Busting Warfare",
+            "url": "https://moderndiplomacy.eu/2026/07/01/the-new-age-of-bunker-busting-warfare/"
+        },
+        {
+            "title": "BRICS Facing Political Divergences, Suspends its Future Expansion",
+            "url": "https://moderndiplomacy.eu/2026/06/30/brics-facing-political-divergences-suspends-its-future-expansion/"
+        },
+        {
+            "title": "Cross-Border Strikes Renew Pakistan-Taliban Tensions",
+            "url": "https://www.worldpoliticsreview.com/serbia-vucic-resignation-eu-russia-2/"
+        },
+        {
+            "title": "Latvia and Ukraine to open drone factory right on Baltic nation\u2019s border with Russia",
+            "url": "https://www.c4isrnet.com/global/europe/2026/06/30/latvia-and-ukraine-to-open-drone-factory-right-on-baltic-nations-border-with-russia/"
+        },
+        {
+            "title": "China cites 40 Japanese firms for \u2018advancing remilitarization\u2019",
+            "url": "https://asiatimes.com/2026/07/china-cites-40-japanese-firms-for-advancing-remilitarization/"
+        },
+        {
+            "title": "Trump sons set to profit from tax-funded Kazakh tungsten mine deal",
+            "url": "https://asiatimes.com/2026/07/trump-sons-set-to-profit-from-tax-funded-kazakh-tungsten-mine-deal/"
+        },
+        {
+            "title": "Not at the frontier, but at least Australian: we need our own AI",
+            "url": "https://www.aspistrategist.org.au/not-at-the-frontier-but-at-least-australian-we-need-our-own-ai/"
+        },
+        {
+            "title": "Hormuz\u00a0Disruption to Stall 2026 LNG Trade, Demand to Rise by 2050",
+            "url": "https://gcaptain.com/hormuz-disruption-to-stall-2026-lng-trade-demand-to-rise-by-2050/"
+        },
+        {
+            "title": "Israel delays withdrawal from two southern Lebanon villages, report says",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-delays-withdrawal-two-southern-lebanon-villages-report-says"
+        },
+        {
+            "title": "Israeli drone attack kills two north of Khan Younis",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-drone-attack-kills-two-north-khan-younis"
+        },
+        {
+            "title": "Iran war live: Qatar\u2019s PM meets US envoys, Tehran holds firm on conditions",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/7/1/iran-war-live-qatars-pm-meets-us-envoys-tehran-holds-firm-on-conditions?traffic_source=rss"
+        },
+        {
+            "title": "Sudan's army has built a 51 km network of trenches and berms to defend the strategic city of El Obeid from an ongoing RSF encirclement, according to satellite analysis from Yale HRL. Meanwhile, targeted drone strikes on fuel and electrical infrastructure have cut off power to vital water pumps, triggering a severe humanitarian crisis. The cost of drinking water has spiked from 9,000 to 25,000 Sudanese pounds per barrel, as over 700 new displacement structures appear in a single month.",
+            "url": "https://x.com/SudanTribune_EN/status/2072098153122140399"
+        },
+        {
+            "title": "US envoys met with mediators in Qatar, talks with Iran up in the air",
+            "url": "https://www.france24.com/en/middle-east/20260630-us-envoys-met-with-mediators-in-qatar-talks-with-iran-up-in-the-air"
+        },
+        {
+            "title": "Syria's president condemns Israeli attacks near Golan Heights",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/syrias-president-condemns-israeli-attacks-near-golan-heights"
+        },
+        {
+            "title": "Donald Trump reports $1.4bn in cryptocurrency income in government filing",
+            "url": "https://www.aljazeera.com/news/2026/6/30/donald-trump-reports-1-4bn-in-cryptocurrency-income-in-government-filing?traffic_source=rss"
+        },
+        {
+            "title": "Ukraine\u2019s blockade of Crimea puts Putin\u2019s greatest victory under threat",
+            "url": "https://www.atlanticcouncil.org/blogs/ukrainealert/ukraines-blockade-of-crimea-puts-putins-greatest-victory-under-threat/"
+        },
+        {
+            "title": "Banning Russian soldiers from the EU is a common sense security measure",
+            "url": "https://www.atlanticcouncil.org/blogs/ukrainealert/banning-russian-soldiers-from-the-eu-is-a-common-sense-security-measure/"
+        },
+        {
+            "title": "The five stages of a USMCA shakeup",
+            "url": "https://www.atlanticcouncil.org/blogs/econographics/the-five-stages-of-a-usmca-shakeup/"
+        },
+        {
+            "title": "Anti-Immigrant Marches Held Across South Africa",
+            "url": "https://foreignpolicy.com/2026/06/30/south-africa-anti-immigrant-rallies-self-deport-ramaphosa-xenophobia/"
+        }
+    ]
+}
