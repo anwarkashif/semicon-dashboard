@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.politico.eu/article/russia-suspends-railway-border-crossings-finland-baltic-neighbors/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Russia shuts railway border crossings with Finland, Estonia and Latvia",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.aljazeera.com/news/2026/7/1/us-iran-negotiations-whats-the-latest?traffic_source=rss",
         "Title": "US-Iran negotiations: What\u2019s the latest?",
         "Feed_Source": "WAR MONITOR",
@@ -21,11 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119652",
-        "Title": "Ukraine Strikes Russian Military Airbase in Occupied Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -35,38 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQN0ZRX1Nxci11RnR2MkJad0xQZXlIbWt4SGlMR2RBNWVpLWtpbTJ0M05LWGhNRUl4emFubE9URUJaSUt6U2toM3Z4WFBiUUpDWndMSW1SeDE4OTJDSjRMSjVSSTBlRE5oTWpoeTZuOFVSbWJZMEp1VDRFaV9TdUR5T2ZKWWpEWG42MzVZc0RHTVhVa3BFbUFKeHBJRElyNE84ZEZVMVV0NDdsaFZ3Nk9MZi0zUXAxNm8xa2lIYkxvVmJGS1QybTdv?oc=5",
+        "Title": "Earthquakes in Venezuela: Situation Report No. 6 (29 June 2026, Time: 06:00 pm) - ReliefWeb",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONHRuWjl1VEhoVC1qTllkS0RUSERFbEJCbG9ydkQ0NTF4WG5jSXEzU2J2WkdRb0JUZkNER2loa2FRbmpuNEtRSXo5eVd4dXdlamE0VzBrQmI2TGo3TG9Ud3JfRy0zQThKcmxrUUJ1a3VCMENmMTJKZW1CSHBISHgzSXUzVXJkTVgzMzBtd21taHhGQzJkZC1ZYXRJd2xvVllvcElpS2NEaVBUZTYwdXRVWlVpQQ?oc=5",
         "Title": "Two people die from suffocation during World Cup celebrations in Mexico - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/01/gold-prices-fall-worst-quarter-interest-rates-bullion-precious-metals.html",
-        "Title": "Gold prices fall further after worst quarter in 13 years as interest rate fears hit bullion",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/01/mgx-ai-fund-uae-49-billion.html",
-        "Title": "UAE's MGX raises one of the biggest AI funds ever as it closes at $49 billion",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
