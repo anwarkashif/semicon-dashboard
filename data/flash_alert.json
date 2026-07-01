@@ -1,16 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Lebanon Says 4,297 Killed in Israeli Attacks Since March",
+        "Title": "Israel Strikes Gaza City, Killing Three Palestinians",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/china-s-tech-rise-reshapes-the-global-space-race/a-77790036?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "China's tech rise reshapes the global space race",
+        "Source": "https://www.aljazeera.com/news/2026/7/1/first-syrian-parliament-since-al-assads-ousting-begins-legislative-duties?traffic_source=rss",
+        "Title": "First Syrian parliament since al-Assad\u2019s ousting begins legislative duties",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/live/2026/jul/01/ireland-set-to-take-presidency-of-eu-in-dublin-opening-ceremony-europe-live",
+        "Title": "EU must keep promises on Ukraine accession talks, says Zelenskyy, as Ireland takes presidency \u2013 Europe live",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,15 +28,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89601",
-        "Title": "Russia Produces Iranian Su-35 Jets",
+        "Source": "https://www.politico.eu/article/european-regulators-assessing-whether-scotus-ruling-threatens-transatlantic-data-flows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Trump\u2019s court win reignites fight to sink \u20ac1.7T data deal with Europe",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "politico.eu",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
-        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,22 +56,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://warmonitor.com/",
+        "Title": "India\u2019s Bengal drops eggs from school lunches: Why that\u2019s stoking debate",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/live/2026/jul/01/ireland-set-to-take-presidency-of-eu-in-dublin-opening-ceremony-europe-live",
-        "Title": "EU must keep promises on Ukraine accession talks, says Zelenskyy, as Ireland takes presidency \u2013 Europe live",
+        "Source": "https://www.theguardian.com/australia-news/2026/jul/01/lambie-hanson-and-pocock-form-unlikely-alliance-to-protect-transparency-campaigner-rex-patrick",
+        "Title": "Lambie, Hanson and Pocock form unlikely alliance to protect transparency campaigner Rex Patrick",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
         "threat_level": "WATCH"
