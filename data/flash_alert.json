@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/southfronteng/61661",
+        "Title": "Iran Warns US Over Israeli Threats",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/southfronteng/61660",
         "Title": "Israel Conducts Airstrikes in Northern Palestine",
         "Feed_Source": "WAR MONITOR",
@@ -21,22 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/china-s-tech-rise-reshapes-the-global-space-race/a-77790036?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "China's tech rise reshapes the global space race",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/1/first-syrian-parliament-since-al-assads-ousting-begins-legislative-duties?traffic_source=rss",
-        "Title": "First Syrian parliament since al-Assad\u2019s ousting begins legislative duties",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
+        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,22 +42,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/tv-shows/middle-east-matters/20260701-pm-pashinyas-warned-armenia-does-not-wish-to-engage-with-weaponization-of-the-1915-genocide",
-        "Title": "PM Pashinyas warned Armenia does not wish to engage with 'weaponization' of the 1915 genocide",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119677",
-        "Title": "Russians Sell Queue Spots At Gas Stations",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89616",
+        "Title": "Russian Forces Capture Kopani in Zaporizhzhia Region",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
