@@ -74,7 +74,10 @@ def get_sunday_to_sunday_range():
     recent_sunday = today - timedelta(days=days_since_sunday)
     previous_sunday = recent_sunday - timedelta(days=7)
     
-    return f"{previous_sunday.strftime('%B %d')} - {recent_sunday.strftime('%d')}, {recent_sunday.year}"
+    if recent_sunday.month == previous_sunday.month:
+        return f"{recent_sunday.strftime('%B')} {previous_sunday.day}-{recent_sunday.day}, {recent_sunday.year}"
+    else:
+        return f"{previous_sunday.strftime('%B %d')} - {recent_sunday.strftime('%B %d')}, {recent_sunday.year}"
 
 def fetch_weekly_psyopoly_pool():
     standalone_path = 'data/psyopoly_alerts.json'
@@ -107,17 +110,38 @@ def generate_west_asia_brief(events, date_range):
     print(f"🧠 Synthesizing {len(events)} events for Weekly West Asia Brief...")
     
     prompt = f"""
-    You are an elite West Asia geopolitical, risk, and threat OSINT analyst expert.
-    Synthesize {len(events)} events (gathered over the last 7 days) into a "Weekly West Asia Brief".
-    Focus exclusively on Middle East/West Asia. EXCLUDE sports, entertainment, films, and music.
+    You are an elite West Asia geopolitical, risk, and threat OSINT analyst expert with extensive experience in the Middle East.
+    Synthesize the following {len(events)} events (gathered over the last 7 days) into a highly authoritative "Weekly West Asia Brief".
     
-    Structure the response as a single JSON object. DO NOT use markdown code blocks.
+    CRITICAL INSTRUCTIONS:
+    1. Focus STRICTLY on West Asia / Middle East. Exclude sports, entertainment, commercial fluff, film, and music entirely.
+    2. Rely heavily on the deep-text provided in the 'Summary' fields for rich analytical context to meet the strict word count requirements.
+    3. Output MUST be a valid JSON object. Do not use markdown wrappers.
+    4. Provide comprehensive, professionally written analytical paragraphs for each section. YOU MUST STRICTLY ADHERE TO THE WORD COUNTS.
     
-    Keys: "bluf", "executive_summary", "escalation_indicators", "irano_centric_axis", "levantine_front", "israeli_strategy", "gcc_region", "strategic_intel_log", "tactical_indicators", "threat_narrative", "risk_assessment", "strategic_forecast", "themed_urls"
+    REQUIRED JSON KEYS:
+    "bluf": "Bottom Line Up Front paragraph. Strict length: 250-300 words.",
+    "executive_summary": "Micro and Macro-level summary paragraph. Strict length: 300-450 words.",
+    "escalation_indicators": "Paragraph detailing specific escalation signals. Strict length: 300-450 words.",
+    "irano_centric_axis": "Paragraph on Iranian, IRGC, or allied proxy operations. Strict length: 350-400 words.",
+    "levantine_front": "Paragraph on Lebanon, Syria, Hezbollah dynamics. Strict length: 350-400 words.",
+    "israeli_strategy": "Paragraph on Israeli multi-theater operations. Strict length: 350-400 words.",
+    "gcc_region": "Paragraph on Gulf Cooperation Council, energy, or economic and military shifts. Strict length: 300-450 words.",
+    "strategic_intel_log": "Paragraph logging major intelligence and military moves. Strict length: 300-450 words.",
+    "tactical_indicators": "Paragraph summarizing on-the-ground tactical shifts. Strict length: 250-300 words.",
+    "threat_narrative": "Paragraph outlining the overarching threat landscape. Strict length: 250-300 words.",
+    "risk_assessment": "Paragraph quantifying near-term operational risks. Strict length: 300-350 words.",
+    "strategic_forecast": "Paragraph forecasting the next 7-14 days. Strict length: 300-350 words.",
+    "themed_urls": {{
+        "Military & Escalation": ["url1", "url2"],
+        "Diplomacy & Economy": ["url3", "url4"],
+        "Intelligence": ["url5"]
+    }}
     
-    'themed_urls' format: {{ "Military": ["url1"], "Diplomacy": ["url2"] }}
+    Group the provided URLs into the 'themed_urls' object based on the context of the articles.
     
-    Data: {json.dumps(events)}
+    RAW DATA POOL:
+    {json.dumps(events)}
     """
     
     raw_txt = generate_with_rotation(prompt)
