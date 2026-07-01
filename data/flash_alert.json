@@ -1,37 +1,30 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Warns of Immediate Response to Israeli Threats Against Supreme Leader Khamenei",
+        "Title": "US Escorts Tankers Through Strait of Hormuz",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61658",
-        "Title": "US Considers Return to War with Iran",
+        "Source": "https://t.me/intelslava/89601",
+        "Title": "Russia Produces Iranian Su-35 Jets",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/1/un-human-rights-council-to-hold-urgent-meeting-on-sudan-crisis?traffic_source=rss",
-        "Title": "UN Human Rights Council to hold urgent meeting on Sudan crisis",
+        "Source": "https://t.me/intelslava/89599",
+        "Title": "Russia Approves Secret China Military Training",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119664",
-        "Title": "Russia Holds Emergency Security Meeting Over Kaliningrad",
+        "Source": "https://t.me/intelslava/89600",
+        "Title": "Iran and Oman Advance Joint Plan for Strait of Hormuz Fees",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.politico.eu/article/germany-us-weapons-boris-pistorius-friedrich-merz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Germany wants to make US weapons on home turf, Pistorius says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
         "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/nexta_live/119666",
-        "Title": "Russia Buys Gasoline from India",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.politico.eu/podcast/inside-afd/warum-weidel-und-chrupalla-den-parteitag-furchten/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Warum Weidel und Chrupalla den Parteitag f\u00fcrchten",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Global funds revisit Indian stocks as oil, rupee risks recede - Reuters",
+        "Source": "https://www.france24.com/en/video/20260701-france-24-meets-families-desperately-searching-for-venezuela-earthquake-missing",
+        "Title": "FRANCE 24 meets families desperately searching for Venezuela earthquake missing",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
