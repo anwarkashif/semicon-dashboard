@@ -14,18 +14,25 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/tv-shows/press-review/20260701-cloak-of-secrecy-surrounds-plane-that-crashed-into-beijing-skyscraper",
-        "Title": "'Cloak of secrecy' surrounds plane that crashed into Beijing skyscraper",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.politico.eu/article/russia-suspends-railway-border-crossings-finland-baltic-neighbors/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
         "Title": "Russia shuts railway border crossings with Finland, Estonia and Latvia",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "politico.eu",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.dw.com/en/activist-arrests-surge-in-turkey-ahead-of-key-nato-summit/a-77777671?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Activist arrests surge in Turkey ahead of key NATO summit",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/tv-shows/press-review/20260701-cloak-of-secrecy-surrounds-plane-that-crashed-into-beijing-skyscraper",
+        "Title": "'Cloak of secrecy' surrounds plane that crashed into Beijing skyscraper",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,29 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.dw.com/en/activist-arrests-surge-in-turkey-ahead-of-key-nato-summit/a-77777671?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Activist arrests surge in Turkey ahead of key NATO summit",
+        "Source": "https://www.france24.com/en/americas/20260701-we-lost-so-many-venezuelans-search-for-loved-ones-under-quake-rubble-la-guaira",
+        "Title": "\u2018We\u2019ve lost so many\u2019: Venezuelans search for loved ones under quake rubble",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/americas/20260701-we-lost-so-many-venezuelans-search-for-loved-ones-under-quake-rubble-la-guaira",
-        "Title": "\u2018We\u2019ve lost so many\u2019: Venezuelans search for loved ones under quake rubble",
+        "Source": "https://www.france24.com/en/venezuela-faces-risk-of-public-health-crisis-as-it-struggles-to-cope-with-earthquakes-aftermath",
+        "Title": "Venezuela risks public health crisis as it struggles to cope with earthquakes' aftermath",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/france-s-green-party-admonishes-government-over-heatwave-response",
+        "Title": "France's Green party admonishes government over heatwave response",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
         "threat_level": "WATCH"
