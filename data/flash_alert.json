@@ -1,23 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Warns of Immediate Response to Israeli Threats Against Supreme Leader Khamenei",
+        "Title": "US Escorts Tankers Through Strait of Hormuz",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61658",
-        "Title": "US Considers Return to War with Iran",
+        "Source": "https://t.me/intelslava/89599",
+        "Title": "Russia Approves Secret China Military Training",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/1/un-human-rights-council-to-hold-urgent-meeting-on-sudan-crisis?traffic_source=rss",
-        "Title": "UN Human Rights Council to hold urgent meeting on Sudan crisis",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -25,20 +18,13 @@
         "Title": "Russia Holds Emergency Security Meeting Over Kaliningrad",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.politico.eu/article/germany-us-weapons-boris-pistorius-friedrich-merz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Germany wants to make US weapons on home turf, Pistorius says",
+        "Source": "https://t.me/intelslava/89594",
+        "Title": "Russia Drone Attacks Hit Penza Enterprises",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,24 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119666",
-        "Title": "Russia Buys Gasoline from India",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89598",
+        "Title": "EASA Advises Airlines to Avoid Iraq and Lebanon Airspace",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Global funds revisit Indian stocks as oil, rupee risks recede - Reuters",
+        "Source": "https://t.me/intelslava/89597",
+        "Title": "Iraq Orders Pro-Iran Groups to Disarm by September",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9mY2dXUWdyU1VBd20tRGl1NENxUEE3WjE5WUNYS0JfY3VzVi1vM2xLSXplVU53TG9namw2bGFWaFdXTHQ2OVdBM3hqY3pVRFpNWXFZczZzZm41ZW43M21ETzlCT2RxQ2VE?oc=5",
+        "Title": "CENTCOM Commander Meets with U.S. Troops in Israel - centcom.mil",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
