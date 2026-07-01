@@ -271,7 +271,7 @@ def extract_tactical_events(news_text):
     current_utc_hour = datetime.now(timezone.utc).hour
     is_super_brief = current_utc_hour >= 18 
     
-    extraction_volume = "20-25" if is_super_brief else "10-15"
+    extraction_volume = "40-45" if is_super_brief else "20-30"
     
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. Review entries preceded by IDs. Extract {extraction_volume} critical events.
@@ -288,15 +288,42 @@ def extract_tactical_events(news_text):
     return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
 
 def generate_flush_to_brief(accumulated_events):
-    trimmed = accumulated_events[:15]
+    # Determine if this is the 24-hour Super Brief or a standard run based on volume
+    is_super_brief = len(accumulated_events) > 30
     
-    # 🛑 THE FIX: Explicitly instructing the LLM to format EVERY section as a professionally written paragraph.
+    if is_super_brief:
+        trimmed = accumulated_events[:45]
+        # Super Brief uses maximum lengths
+        req_250_300 = "Strict length: 300 words."
+        req_300_350 = "Strict length: 350 words."
+        req_300_450 = "Strict length: 450 words."
+        req_350_400 = "Strict length: 400 words."
+    else:
+        trimmed = accumulated_events[:30]
+        # Standard Flash uses minimum/range lengths
+        req_250_300 = "Strict length: 250-300 words."
+        req_300_350 = "Strict length: 300-350 words."
+        req_300_450 = "Strict length: 300-450 words."
+        req_350_400 = "Strict length: 350-400 words."
+
     prompt = (
         "You are an elite Geopolitics-OSINT analyst. "
         f"Generate a FLASH TO BRIEF from this data: {json.dumps(trimmed)}. "
         "Output ONLY a valid JSON object with these exact keys: "
-        "bluf, tactical_indicators, threat_narrative, risk_assessment, strategic_forecast. "
-        "CRITICAL: ALL values must be comprehensive, professionally graded analytical paragraphs. Do NOT use bullet points or JSON arrays for any section."
+        f'"bluf": "Bottom Line Up Front paragraph. {req_250_300}", '
+        f'"executive_summary": "Micro and Macro-level summary paragraph. {req_300_450}", '
+        f'"escalation_indicators": "Paragraph detailing specific escalation signals. {req_300_450}", '
+        f'"irano_centric_axis": "Paragraph on Iranian, IRGC, or allied proxy operations. {req_350_400}", '
+        f'"levantine_front": "Paragraph on Lebanon, Syria, Hezbollah dynamics. {req_350_400}", '
+        f'"israeli_strategy": "Paragraph on Israeli multi-theater operations. {req_350_400}", '
+        f'"gcc_region": "Paragraph on Gulf Cooperation Council, energy, or economic and military shifts. {req_300_450}", '
+        f'"strategic_intel_log": "Paragraph logging major intelligence and military moves. {req_300_450}", '
+        f'"tactical_indicators": "Paragraph summarizing on-the-ground tactical shifts. {req_250_300}", '
+        f'"threat_narrative": "Paragraph outlining the overarching threat landscape. {req_250_300}", '
+        f'"risk_assessment": "Paragraph quantifying near-term operational risks. {req_300_350}", '
+        f'"strategic_forecast": "Paragraph forecasting the next 7-14 days. {req_300_350}", '
+        '"themed_urls": {"Military & Escalation": ["url1", "url2"], "Diplomacy & Economy": ["url3", "url4"], "Intelligence": ["url5"]} '
+        "CRITICAL: ALL values (except themed_urls) must be comprehensive, professionally graded analytical paragraphs. Do NOT use bullet points."
     )
     
     try:
@@ -308,10 +335,11 @@ def generate_flush_to_brief(accumulated_events):
         logging.error(f"FLASH TO BRIEF Final Failure: {e}")
         return {
             "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
-            "tactical_indicators": "System Awaiting Reset. Data Pipeline Intact.",
+            "executive_summary": "PENDING", "escalation_indicators": "PENDING", "irano_centric_axis": "PENDING",
+            "levantine_front": "PENDING", "israeli_strategy": "PENDING", "gcc_region": "PENDING", 
+            "strategic_intel_log": "PENDING", "tactical_indicators": "System Awaiting Reset. Data Pipeline Intact.",
             "threat_narrative": "Generation pending next scheduled cron execution.",
-            "risk_assessment": "PENDING",
-            "strategic_forecast": "PENDING"
+            "risk_assessment": "PENDING", "strategic_forecast": "PENDING", "themed_urls": {}
         }
 
 if __name__ == "__main__":
@@ -367,26 +395,32 @@ if __name__ == "__main__":
             if iden and iden not in seen:
                 seen.add(iden); unique_master.append(e)
                 
-        unique_master = unique_master[:25]
+        unique_master = unique_master[:45]  # Adjusted to hold up to 45 for super brief
         json.dump(unique_master, open(output_file_tactical, 'w'), indent=4)
         
         print("⏳ Pooling data before FLASH TO BRIEF generation...")
         
-        # 🛑 THE FIX: If it's the late-night Super Brief run, feed Gemini the top 25 events from the whole day instead of just 10.
         current_utc_hour = datetime.now(timezone.utc).hour
         if current_utc_hour >= 18:
             print("🌟 Executing 24-Hour Super Brief Synthesis...")
-            brief_input = unique_master[:25]
+            brief_input = unique_master[:45]
         else:
-            brief_input = unique_master[:10]
+            brief_input = unique_master[:30]
         
         flush_brief_data = generate_flush_to_brief(brief_input)
         json.dump(flush_brief_data, open('data/executive_home/flush_brief_24h.json', 'w'), indent=4)
         
         date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         
-        # 🛑 THE FIX: Ensured tactical_indicators is successfully passed into the Archive payload
+        # Build the expanded Archive Payload
         bluf = flush_brief_data.get('bluf', '')
+        exec_sum = flush_brief_data.get('executive_summary', '')
+        esc = flush_brief_data.get('escalation_indicators', '')
+        iran = flush_brief_data.get('irano_centric_axis', '')
+        levant = flush_brief_data.get('levantine_front', '')
+        israel = flush_brief_data.get('israeli_strategy', '')
+        gcc = flush_brief_data.get('gcc_region', '')
+        intel_log = flush_brief_data.get('strategic_intel_log', '')
         tactical = flush_brief_data.get('tactical_indicators', '')
         narrative = flush_brief_data.get('threat_narrative', '')
         risk = flush_brief_data.get('risk_assessment', '')
@@ -394,6 +428,13 @@ if __name__ == "__main__":
         
         parts = []
         if bluf: parts.append(f"**🎯 BLUF:**\n{bluf}")
+        if exec_sum: parts.append(f"**📋 EXECUTIVE SUMMARY:**\n{exec_sum}")
+        if esc: parts.append(f"**📈 ESCALATION INDICATORS:**\n{esc}")
+        if iran: parts.append(f"**🇮🇷 IRANO-CENTRIC NETWORK AXIS:**\n{iran}")
+        if levant: parts.append(f"**🇱🇧 LEVANTINE OPERATIONAL FRONT:**\n{levant}")
+        if israel: parts.append(f"**🇮🇱 ISRAELI MULTI-THEATER STRATEGY:**\n{israel}")
+        if gcc: parts.append(f"**🛢️ GCC REGION AND DEVELOPMENT:**\n{gcc}")
+        if intel_log: parts.append(f"**📂 STRATEGIC INTELLIGENCE LOG:**\n{intel_log}")
         if tactical: parts.append(f"**🚩 TACTICAL INDICATORS:**\n{tactical}")
         if narrative: parts.append(f"**🕸️ THREAT NARRATIVE:**\n{narrative}")
         if risk: parts.append(f"**⚖️ RISK ASSESSMENT:**\n{risk}")
