@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Germany Approves Compulsory Reservist Training for Potential War",
+        "Title": "Ukrainian Forces Eliminate Russian Border Breach Near Kozacha Lopan",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/southfronteng/61661",
@@ -25,13 +25,6 @@
         "Title": "Russia Forcibly Uses Child Labor for Military",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
-        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -63,10 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89616",
-        "Title": "Russian Forces Capture Kopani in Zaporizhzhia Region",
+        "Source": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1hVHdiRVNWTWNWNGVsb2k1N1gteHd3OTc1M2VqMnN2bTN1MTJ1enFUNXZQeFRGLWxaVzkydEpYRzFKRTRVNG1YNE1paHN6U0RHb3cxVWw0QW5XZ1YxQzdHdGV4TFQtb2sz?oc=5",
+        "Title": "CENTCOM Leads Regional Security Dialogue with 12 Nations in Bahrain - centcom.mil",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/07/01/trump-usmca-canada-mexico-trade-treaty.html",
+        "Title": "U.S. won\u2019t renew USMCA, opening door for negotiations with Canada and Mexico",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
