@@ -14,15 +14,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/01/defense-stocks-uk-investment-plan-gilts-bae-systems.html",
-        "Title": "Buy the UK DIP? Defense stocks lifted by $20 billion spending boost as gilts come under fire",
+        "Source": "https://www.aljazeera.com/news/2026/7/1/un-human-rights-council-to-hold-urgent-meeting-on-sudan-crisis?traffic_source=rss",
+        "Title": "UN Human Rights Council to hold urgent meeting on Sudan crisis",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119664",
+        "Title": "Russia Holds Emergency Security Meeting Over Kaliningrad",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.politico.eu/article/russia-suspends-railway-border-crossings-finland-baltic-neighbors/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Russia shuts railway border crossings with Finland, Estonia and Latvia",
+        "Source": "https://www.politico.eu/article/germany-us-weapons-boris-pistorius-friedrich-merz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Germany wants to make US weapons on home turf, Pistorius says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "politico.eu",
         "threat_level": "HIGH"
@@ -35,8 +42,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Fed Chief Kevin Warsh set to give view on rates, central bank overhaul at ECB forum: Live updates",
+        "Source": "https://t.me/nexta_live/119666",
+        "Title": "Russia Buys Gasoline from India",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5xaTJPSmRvdGVCdWlJbGpCaWtHZVppUGhCYlpVVHVrTTdiTG1DV1lOYlkyZG1CZEQ3SURfMlNmR2pQMGotd1UyVEg5REpaVGpSQ29Vc3V2VmV1Q3dCWkhJVTBOYXlvdl9Z?oc=5",
-        "Title": "U.S. Army Soldiers Conduct Operations in the Middle East - centcom.mil",
+        "Source": "https://warmonitor.com/",
+        "Title": "Global funds revisit Indian stocks as oil, rupee risks recede - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
