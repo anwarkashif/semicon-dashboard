@@ -14,13 +14,6 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260701-middle-east-live-qatar-reaffirms-backing-for-us-iran-talks",
-        "Title": "Middle East live: Qatar reaffirms backing for US \u2013 Iran talks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cnbc.com/2026/07/01/us-military-deploys-over-900-personnel-to-venezuela-for-earthquake-response.html",
         "Title": "U.S. military deploys over 900 personnel to Venezuela for earthquake response",
         "Feed_Source": "WAR MONITOR",
@@ -28,11 +21,32 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/01/iran-us-mou-negotiation-war-oil-exports-strait-of-hormuz-.html",
-        "Title": "Iran says it is selling oil at 20% premium as end of U.S. blockade sees 40 million barrels exported",
+        "Source": "https://www.france24.com/en/france/20260630-police-raid-eu-far-right-offices-including-s-france-s-national-rally-over-allegations-of-misuse-of-eu-funds",
+        "Title": "France's National Rally targeted as part of Europe-wide raids over alleged far-right embezzlement",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "france24.com",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,31 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.france24.com/en/middle-east/20260701-middle-east-live-qatar-reaffirms-backing-for-us-iran-talks",
+        "Title": "Middle East live: Qatar reaffirms backing for US \u2013 Iran talks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.aljazeera.com/news/2026/7/1/un-chief-fears-for-millions-of-palestinians-amid-unrwa-funding-shortfall?traffic_source=rss",
         "Title": "UN chief fears for \u2018millions\u2019 of Palestinians amid UNRWA funding shortfall",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.dw.com/en/venezuela-death-toll-nears-2-000-as-rescue-hopes-fade/a-77778620?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Venezuela: Death toll nears 2,000 as rescue hopes fade",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/1/iran-says-it-couldnt-export-a-single-barrel-of-oil-during-us-blockade?traffic_source=rss",
-        "Title": "Iran says it couldn\u2019t export a \u2018single barrel of oil\u2019 during US blockade",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/technology/20260701-anthropic-to-restore-global-access-to-most-powerful-ai-models",
-        "Title": "Anthropic to restore global access to most powerful AI models",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
