@@ -11,25 +11,25 @@
         "Title": "Ukraine Buys Gripen E Fighter Jets From Sweden",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRWZGSUVLOXZGbDVZT29BVG5FaWgyQm9NMVRDQTZhVXo5ZElxdFlMRU95bjliQ19VNDdZNzBtR2tRR3d2VXFta3c2dTd5ZnF1ZjBNRDB1MTJ1R1UzU2NEdmd5WWotZ19wcGMyS0NYS1AzNFZYcC1IUXVfMG42aDMzekI5SlFJd3ZOMXhSaVpwZ2h5NlhEeEVfLWpLeWl4TnJFcTF5MHZLRlhXWlRzUlE?oc=5",
         "Title": "World Bank to phase out China lending by 2031, source says - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
         "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,11 +42,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119646",
+        "Title": "Ukraine Bridge Collapses on Mariupol Donetsk Highway",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://news.sky.com/story/florida-woman-dies-after-alligator-bites-off-her-arm-13559081",
@@ -60,13 +67,6 @@
         "Title": "Russians Wait in Gas Lines",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/01/kkr-sk-launch-1-3-billion-south-korea-renewable-energy-platform-ai-data-centers.html",
-        "Title": "KKR to control South Korea's $1.3 billion renewables platform with SK as AI power demand rises",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
