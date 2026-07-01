@@ -1,17 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "AMTI Updates Map of South China Sea Energy Exploration",
+        "Title": "Iran Chief Negotiator Says Iran Will Keep Asserting Control Over Strait of Hormuz",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.twz.com/sea/heavy-machine-guns-appear-on-key-russian-commercial-tanker-in-baltic",
         "Title": "Heavy Machine Guns Appear On Key Russian Commercial Tanker In Baltic",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "twz.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.twz.com/air/air-force-discloses-b-2-can-launch-stealth-anti-ship-missiles-in-surprise-announcement",
@@ -28,18 +28,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.twz.com/news-features/chinas-truck-mounted-electromagnetic-aircraft-catapult-seen-in-action-for-the-first-time",
-        "Title": "China\u2019s Truck-Mounted Electromagnetic Aircraft Catapult Seen In Action For The First Time",
+        "Source": "https://www.twz.com/news-features/uk-sacrifices-its-future-destroyer-as-part-of-massive-bet-on-drones-across-its-forces",
+        "Title": "UK Sacrifices Its Future Destroyer As Part Of Massive Bet On Drones Across Its Forces",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "twz.com",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cbsnews.com/news/venezuela-earthquakes-rescue-team-security-guard/",
-        "Title": "Rescuers in Venezuela race to save security guard trapped under building",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/australia-news/live/2026/jul/01/australia-politics-live-labor-kpmg-daniel-mulino-jim-chalmers-anthony-albanese-question-time-coalition-angus-taylor-one-nation-pauline-hanson-ntwnfb",
+        "Title": "Australia politics live: author Anna Funder says she\u2019s a \u2018victim of crime\u2019 as creatives lobby government to protect them from AI",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c20yz9rzwy0o?at_medium=RSS&at_campaign=rss",
-        "Title": "Australia sues Amazon for making allegedly unfair contracts with subscribers",
+        "Source": "https://www.nytimes.com/2026/06/30/world/americas/mexico-driver-died-world-cup-party.html",
+        "Title": "Driver Is Reported Dead Days After Plowing Into World Cup Fans in Mexico",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/06/30/stock-market-today-live-updates.html",
-        "Title": "Yen slides to new 40-year low while Dow futures ease after strongest first half in five years: Live updates",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
