@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Chief Negotiator Says Iran Will Keep Asserting Control Over Strait of Hormuz",
+        "Title": "Saudi Arabia Refused US Bases for Hormuz Operation, WSJ Reports",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/technology/20260701-anthropic-to-restore-global-access-to-most-powerful-ai-models",
+        "Title": "Anthropic to restore global access to most powerful AI models",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.twz.com/sea/heavy-machine-guns-appear-on-key-russian-commercial-tanker-in-baltic",
@@ -21,15 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.twz.com/air/mig-29-transfer-to-ukraine-halted-by-poland-over-claimed-drone-snub",
-        "Title": "MiG-29 Transfer To Ukraine Halted By Poland Over Claimed Drone Snub",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,6 +49,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://warmonitor.com/",
         "Title": "Trump Officials Sideline Machado, Venezuela\u2019s Opposition Leader, Over Earthquake Response",
         "Feed_Source": "WAR MONITOR",
@@ -60,13 +67,6 @@
         "Title": "Australia politics live: author Anna Funder says she\u2019s a \u2018victim of crime\u2019 as creatives lobby government to protect them from AI",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/30/world/americas/mexico-driver-died-world-cup-party.html",
-        "Title": "Driver Is Reported Dead Days After Plowing Into World Cup Fans in Mexico",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
