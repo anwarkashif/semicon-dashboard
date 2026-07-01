@@ -112,6 +112,8 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                     try:
                         with open(file_path, 'r') as f:
                             d = json.load(f)
+                            if isinstance(d, list): d = d[:25]
+                            elif isinstance(d, dict) and 'recent_actions' in d: d['recent_actions'] = d['recent_actions'][:25]
                             context_data += f"\n--- {label} ---\n{json.dumps(d)}\n"
                     except: pass
 
@@ -157,13 +159,13 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                             context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
                             context_data += "ALGORITHMIC THREAT SCORES:\n"
                             for name, txt in categories:
-                                if len(txt.strip()) > 20:
+                                if len(txt.strip()) > 25:
                                     score = calculate_domain_threat(name, txt, d)
                                     context_data += f"- {name}: {score}%\n"
                                     
                             context_data += "\nRAW INTELLIGENCE TEXT:\n"
                             context_data += r_text
-                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', []))}"
+                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:25])}"
                     except: pass
 
             sys_prompt = f"""
@@ -348,7 +350,10 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                                 if os.path.exists(file_path):
                                     try:
                                         with open(file_path, 'r') as f:
-                                            context_data += f"\n--- {label} ---\n{json.dumps(json.load(f))}\n"
+                                            file_data = json.load(f)
+                                            if isinstance(file_data, list): file_data = file_data[:25]
+                                            elif isinstance(file_data, dict) and 'recent_actions' in file_data: file_data['recent_actions'] = file_data['recent_actions'][:25]
+                                            context_data += f"\n--- {label} ---\n{json.dumps(file_data)}\n"
                                     except: pass
 
                             archive_mapping = get_brief_mappings('data')
@@ -377,7 +382,7 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                                             d = json.load(file)
                                             context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
                                             context_data += "\nRAW INTELLIGENCE TEXT:\n" + d.get('brief_raw', '')
-                                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', []))}"
+                                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:10])}"
                                     except: pass
 
                             sys_prompt = f"""
