@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/intelslava/89601",
+        "Title": "Russia Produces Iranian Su-35 Jets",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/intelslava/89599",
         "Title": "Russia Approves Secret China Military Training",
         "Feed_Source": "WAR MONITOR",
@@ -14,32 +21,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119664",
-        "Title": "Russia Holds Emergency Security Meeting Over Kaliningrad",
+        "Source": "https://t.me/intelslava/89600",
+        "Title": "Iran and Oman Advance Joint Plan for Strait of Hormuz Fees",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89594",
-        "Title": "Russia Drone Attacks Hit Penza Enterprises",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89598",
-        "Title": "EASA Advises Airlines to Avoid Iraq and Lebanon Airspace",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.politico.eu/podcast/inside-afd/warum-weidel-und-chrupalla-den-parteitag-furchten/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Warum Weidel und Chrupalla den Parteitag f\u00fcrchten",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/intelslava/89597",
-        "Title": "Iraq Orders Pro-Iran Groups to Disarm by September",
+        "Source": "https://www.france24.com/en/video/20260701-france-24-meets-families-desperately-searching-for-venezuela-earthquake-missing",
+        "Title": "FRANCE 24 meets families desperately searching for Venezuela earthquake missing",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9mY2dXUWdyU1VBd20tRGl1NENxUEE3WjE5WUNYS0JfY3VzVi1vM2xLSXplVU53TG9namw2bGFWaFdXTHQ2OVdBM3hqY3pVRFpNWXFZczZzZm41ZW43M21ETzlCT2RxQ2VE?oc=5",
-        "Title": "CENTCOM Commander Meets with U.S. Troops in Israel - centcom.mil",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
