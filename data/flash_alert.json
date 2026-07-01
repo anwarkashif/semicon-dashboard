@@ -1,31 +1,38 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Forces Eliminate Russian Border Breach Near Kozacha Lopan",
+        "Title": "Russia Reportedly Plans Large-Scale Mobilization and Border Closures",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.politico.eu/article/zelenskyy-cuts-irish-visit-short-as-intelligence-warns-russian-massive-attack/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Zelenskyy cuts Irish visit short as intelligence warns of Russian massive attack",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/inside-story/2026/7/1/can-sudans-rapid-support-forces-take-control-of-el-obeid?traffic_source=rss",
+        "Title": "Can Sudan\u2019s Rapid Support Forces take control of el-Obeid?",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/southfronteng/61661",
-        "Title": "Iran Warns US Over Israeli Threats",
+        "Source": "https://www.twz.com/air/mh-60s-seahawk-goes-down-in-arabian-sea-search-on-for-missing-crewmember",
+        "Title": "MH-60S Seahawk Goes Down In Arabian Sea, Search On For Missing Crewmember",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "twz.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/southfronteng/61660",
-        "Title": "Israel Conducts Airstrikes in Northern Palestine",
+        "Source": "https://www.aljazeera.com/news/2026/7/1/secretive-gaza-meetings-in-cyprus-as-plan-to-isolate-hamas-gathers-pace?traffic_source=rss",
+        "Title": "Secretive Gaza meetings in Cyprus as plan to isolate Hamas gathers pace",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119674",
-        "Title": "Russia Forcibly Uses Child Labor for Military",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
@@ -42,31 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1hVHdiRVNWTWNWNGVsb2k1N1gteHd3OTc1M2VqMnN2bTN1MTJ1enFUNXZQeFRGLWxaVzkydEpYRzFKRTRVNG1YNE1paHN6U0RHb3cxVWw0QW5XZ1YxQzdHdGV4TFQtb2sz?oc=5",
-        "Title": "CENTCOM Leads Regional Security Dialogue with 12 Nations in Bahrain - centcom.mil",
+        "Source": "https://www.npr.org/2026/07/01/nx-s1-5877369/venezuela-earthquakes-updates",
+        "Title": "Untold casualties and humanitarian needs: What to know a week from Venezuela's quakes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "npr.org",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/01/trump-usmca-canada-mexico-trade-treaty.html",
-        "Title": "U.S. won\u2019t renew USMCA, opening door for negotiations with Canada and Mexico",
+        "Source": "https://t.me/intelslava/89623",
+        "Title": "Ukrainian Air Defense Hit by Strikes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
