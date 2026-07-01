@@ -1,10 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Trump Weighs Iran Military Strikes, Continues Nuclear Talks - WSJ",
+        "Title": "Iran Strikes Israeli Air Bases and Refinery in Barrage",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89590",
+        "Title": "Ukraine Buys Gripen E Fighter Jets From Sweden",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cnbc.com/2026/07/01/qatarenergy-extend-force-majeure-september-italys-edison-iran-war-.html",
@@ -21,29 +28,8 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/cdr42623e1do?at_medium=RSS&at_campaign=rss",
-        "Title": "Anthropic says US lifts export ban on its advanced AI tools",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/01/iran-us-mou-negotiation-war-oil-exports-strait-of-hormuz-.html",
-        "Title": "Iran says it is selling oil at 20% premium as end of U.S. blockade sees 40 million barrels exported",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89589",
-        "Title": "Russia Increases Crude Oil Exports to Record Level",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/07/01/thames-waters-andy-burnham-creditors-apollo-blackrock-privatization.html",
+        "Title": "Andy Burnham's first big fight could be with Wall Street investors",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32361",
+        "Title": "Ukraine Forces Clash With Russia In Multiple Regions",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260701-middle-east-live-qatar-reaffirms-backing-for-us-iran-talks",
-        "Title": "Middle East live: Qatar reaffirms backing for US \u2013 Iran talks",
+        "Source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRWZGSUVLOXZGbDVZT29BVG5FaWgyQm9NMVRDQTZhVXo5ZElxdFlMRU95bjliQ19VNDdZNzBtR2tRR3d2VXFta3c2dTd5ZnF1ZjBNRDB1MTJ1R1UzU2NEdmd5WWotZ19wcGMyS0NYS1AzNFZYcC1IUXVfMG42aDMzekI5SlFJd3ZOMXhSaVpwZ2h5NlhEeEVfLWpLeWl4TnJFcTF5MHZLRlhXWlRzUlE?oc=5",
+        "Title": "World Bank to phase out China lending by 2031, source says - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
