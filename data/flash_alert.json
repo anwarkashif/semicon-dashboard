@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.france24.com/en/asia-pacific/20260701-myanmar-mourns-as-post-coup-conflict-death-toll-hits-100-000",
+        "Title": "More than 100,000 killed in Myanmar since 2021 coup,  monitor says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/intelslava/89590",
         "Title": "Ukraine Buys Gripen E Fighter Jets From Sweden",
         "Feed_Source": "WAR MONITOR",
@@ -14,22 +21,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRWZGSUVLOXZGbDVZT29BVG5FaWgyQm9NMVRDQTZhVXo5ZElxdFlMRU95bjliQ19VNDdZNzBtR2tRR3d2VXFta3c2dTd5ZnF1ZjBNRDB1MTJ1R1UzU2NEdmd5WWotZ19wcGMyS0NYS1AzNFZYcC1IUXVfMG42aDMzekI5SlFJd3ZOMXhSaVpwZ2h5NlhEeEVfLWpLeWl4TnJFcTF5MHZLRlhXWlRzUlE?oc=5",
-        "Title": "World Bank to phase out China lending by 2031, source says - Reuters",
+        "Source": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObFdTRjVCQk00TjFPaWhGNU44dUFtYmhMRU9xZEFESHh4aWg5UjMwYm5qWFhFeFJ6YmxmRHhIS3ZDZllXY1ZMdy1EZThUX08xYzhBYU8wUkxPYXY3cGNpZFJkdmJwN0pib2FFQlROZ1BRME0zMUxVVUgzU1A1amNSWHNNNVVQbmpBM1VXWGFGWnhNMGlGZUJxaTRTV3RKbmFTTVBUa1Y0Qk1XQWR4UGcxc2N3?oc=5",
+        "Title": "EXCLUSIVE: NATO joins exercises off US coast, even as it loses political fight in Trump's Washington - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
         "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
