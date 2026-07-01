@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Set to Launch Massive Missile Campaign on Kyiv, Ukraine",
+        "Title": "Russia Prepares Massive Air and Missile Strike Against Ukraine Tonight",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,6 +14,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/intelslava/89642",
+        "Title": "Russia Threatens Retaliation Over Energy Infrastructure Attack",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/1/us-signs-1-lease-with-israel-to-build-permanent-embassy-in-west-jerusalem?traffic_source=rss",
         "Title": "US signs $1 lease with Israel to build permanent embassy in West Jerusalem",
         "Feed_Source": "WAR MONITOR",
@@ -21,10 +28,10 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty",
-        "Title": "Trump refuses to renew US-Canada-Mexico trade pact he once championed",
+        "Source": "https://www.bbc.co.uk/news/articles/ce8j2lmrvrdo?at_medium=RSS&at_campaign=rss",
+        "Title": "US blocks long-term renewal of North American trade deal",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "bbc.co.uk",
         "threat_level": "HIGH"
     },
     {
@@ -35,38 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c05yv34qlnlo?at_medium=RSS&at_campaign=rss",
-        "Title": "Aunt of Venezuelan boy pulled from rubble tells BBC she will give him 'mother's warmth'",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.politico.com/news/2026/07/01/us-citizen-iraqi-prison-turkey-00984580?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "US citizen, released from Iraqi prison, alleges he\u2019s been held in Turkey at US request",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/1/iran-to-open-communication-channel-on-mou-with-us-after-talks-in-qatar?traffic_source=rss",
-        "Title": "Iran to open \u2018communication channel\u2019 on MoU with US after talks in Qatar",
+        "Source": "https://www.aljazeera.com/news/2026/7/1/us-judge-sides-with-naacp-over-proposed-mail-in-ballot-restrictions?traffic_source=rss",
+        "Title": "US judge sides with NAACP over proposed mail-in ballot restrictions",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89631",
+        "Title": "Explosions Reported in Kyiv",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
