@@ -1,40 +1,5 @@
 [
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Comando Vermelho Uses Drone Bombs in Rio Offensive",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32317",
-        "Title": "US Reviews Middle East Presence After Iranian Strikes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119564",
-        "Title": "Russia Arms Tankers to Deter NATO Seizure",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/live/2026/06/29/world/hormuz-us-iran-strikes",
-        "Title": "Mideast Live Updates: U.S. Reaches Deal With Iran to Halt Attacks, Official Says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/06/29/world/asia/pakistan-afghanistan-strikes.html",
-        "Title": "Pakistan Attacks Afghanistan, Killing More Than 30",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
         "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
@@ -42,8 +7,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +21,52 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-05",
+        "Title": "XZ Utils vulnerability impacting B&R Products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44735",
-        "Title": "US and Iran Discuss Possible Meeting in Qatar",
+        "Source": "https://www.twz.com/sea/heavy-machine-guns-appear-on-key-russian-commercial-tanker-in-baltic",
+        "Title": "Heavy Machine Guns Appear On Key Russian Commercial Tanker In Baltic",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "twz.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/air/air-force-discloses-b-2-can-launch-stealth-anti-ship-missiles-in-surprise-announcement",
+        "Title": "Air Force Discloses B-2 Can Launch Stealth Anti-Ship Missiles In Surprise Announcement",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/news-features/chinas-truck-mounted-electromagnetic-aircraft-catapult-seen-in-action-for-the-first-time",
+        "Title": "China\u2019s Truck-Mounted Electromagnetic Aircraft Catapult Seen In Action For The First Time",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.politico.eu/article/russia-import-gasoline-ukraine-strikes-fuel-shortage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Russia to import gasoline as Ukrainian strikes force Putin to use reserves",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Iran Chief Negotiator Says Iran Will Keep Asserting Control Over Strait of Hormuz",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdVp5dmVuTXI1d2wxUnZWdG9FdGhIRnAyVE1aTkpoRU96OFU2aUR6NTJINTlleERSS2FGSEFiTXBIc3V4U2pRX2lQVzVPWFBwLVB6Z3dSN25HSGVFUGpmWTF6dExnanpZZHVDNkNGSjktRWs4MEdFNkhMRm04dVFXYTNDbHpNVmZORVVMdk9BU19JNnhZWTlPZVNadFR0cm5hU09EckVOaWtFaV91Q2ZDZUNQREI?oc=5",
+        "Title": "'Heat dome' threatens sweltering conditions for World Cup fans, players - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
