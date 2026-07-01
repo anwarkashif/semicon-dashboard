@@ -1,16 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian 85th Motorized Rifle Brigade Raises Flags in Malynivka, Donetsk Oblast",
+        "Title": "Lebanon Says 4,297 Killed in Israeli Attacks Since March",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.politico.eu/article/european-regulators-assessing-whether-scotus-ruling-threatens-transatlantic-data-flows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Trump\u2019s court win reignites fight to sink \u20ac1.7T data deal with Europe",
+        "Source": "https://www.dw.com/en/china-s-tech-rise-reshapes-the-global-space-race/a-77790036?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "China's tech rise reshapes the global space race",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
+        "Publisher": "dw.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89603",
+        "Title": "Russia Seizes Control of Ukrainskoye in Kharkiv Region",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,21 +25,7 @@
         "Title": "Russia Produces Iranian Su-35 Jets",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89600",
-        "Title": "Iran and Oman Advance Joint Plan for Strait of Hormuz Fees",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89599",
-        "Title": "Russia Approves Secret China Military Training",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
@@ -68,5 +61,12 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/live/2026/jul/01/ireland-set-to-take-presidency-of-eu-in-dublin-opening-ceremony-europe-live",
+        "Title": "EU must keep promises on Ukraine accession talks, says Zelenskyy, as Ireland takes presidency \u2013 Europe live",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
     }
 ]
