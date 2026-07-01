@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "SBU Drones Strike Aircraft Shelters at Saky Air Base in Crimea",
+        "Title": "Putin Presses Lukashenko to Join Ukraine War, Belarus Seeks China's Counsel",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.politico.eu/article/russia-suspends-railway-border-crossings-finland-baltic-neighbors/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Russia shuts railway border crossings with Finland, Estonia and Latvia",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/1/us-iran-negotiations-whats-the-latest?traffic_source=rss",
+        "Title": "US-Iran negotiations: What\u2019s the latest?",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -11,27 +25,6 @@
         "Title": "Sudan's RSF committed crimes against humanity in el-Fasher, Amnesty says ",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/asia-pacific/20260701-myanmar-mourns-as-post-coup-conflict-death-toll-hits-100-000",
-        "Title": "More than 100,000 killed in Myanmar since 2021 coup,  monitor says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-04",
-        "Title": "Daktronics Controller Firmware",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQN0ZRX1Nxci11RnR2MkJad0xQZXlIbWt4SGlMR2RBNWVpLWtpbTJ0M05LWGhNRUl4emFubE9URUJaSUt6U2toM3Z4WFBiUUpDWndMSW1SeDE4OTJDSjRMSjVSSTBlRE5oTWpoeTZuOFVSbWJZMEp1VDRFaV9TdUR5T2ZKWWpEWG42MzVZc0RHTVhVa3BFbUFKeHBJRElyNE84ZEZVMVV0NDdsaFZ3Nk9MZi0zUXAxNm8xa2lIYkxvVmJGS1QybTdv?oc=5",
+        "Title": "Earthquakes in Venezuela: Situation Report No. 6 (29 June 2026, Time: 06:00 pm) - ReliefWeb",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
-        "Title": "Schneider Electric PowerLogic P7",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONHRuWjl1VEhoVC1qTllkS0RUSERFbEJCbG9ydkQ0NTF4WG5jSXEzU2J2WkdRb0JUZkNER2loa2FRbmpuNEtRSXo5eVd4dXdlamE0VzBrQmI2TGo3TG9Ud3JfRy0zQThKcmxrUUJ1a3VCMENmMTJKZW1CSHBISHgzSXUzVXJkTVgzMzBtd21taHhGQzJkZC1ZYXRJd2xvVllvcElpS2NEaVBUZTYwdXRVWlVpQQ?oc=5",
+        "Title": "Two people die from suffocation during World Cup celebrations in Mexico - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
     }
 ]
