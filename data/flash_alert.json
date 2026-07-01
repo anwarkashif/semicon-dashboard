@@ -1,10 +1,38 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Germany Approves Compulsory Reservist Training for Potential War",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/southfronteng/61660",
         "Title": "Israel Conducts Airstrikes in Northern Palestine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119674",
+        "Title": "Russia Forcibly Uses Child Labor for Military",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.dw.com/en/china-s-tech-rise-reshapes-the-global-space-race/a-77790036?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "China's tech rise reshapes the global space race",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/1/first-syrian-parliament-since-al-assads-ousting-begins-legislative-duties?traffic_source=rss",
+        "Title": "First Syrian parliament since al-Assad\u2019s ousting begins legislative duties",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -28,45 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Sanctioned Iranian Tanker Spotted Near Hormuz Island",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119674",
-        "Title": "Russia Forcibly Uses Child Labor for Military",
+        "Source": "https://www.france24.com/en/tv-shows/middle-east-matters/20260701-pm-pashinyas-warned-armenia-does-not-wish-to-engage-with-weaponization-of-the-1915-genocide",
+        "Title": "PM Pashinyas warned Armenia does not wish to engage with 'weaponization' of the 1915 genocide",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/1/first-syrian-parliament-since-al-assads-ousting-begins-legislative-duties?traffic_source=rss",
-        "Title": "First Syrian parliament since al-Assad\u2019s ousting begins legislative duties",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/34003",
-        "Title": "Iran Closes Tehran Airspace for Khamenei Funeral",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/video/20260701-venezuela-dramatic-cctv-footage-shows-moment-quake-strikes",
-        "Title": "Venezuela: Dramatic CCTV footage shows moment quake strikes",
+        "Source": "https://t.me/nexta_live/119677",
+        "Title": "Russians Sell Queue Spots At Gas Stations",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
