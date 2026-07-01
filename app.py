@@ -174,7 +174,8 @@ else:
     from features.snippet_features import render_daily_snippet
     from features.snippet_orchestrator import handle_snippet_logic
     from features.shadowbroker_features import render_shadowbroker
-    from features.psyopoly_features import render_psyopoly_viewer  
+    from features.psyopoly_features import render_psyopoly_viewer
+    from features.west_asia_weekly_features import render_west_asia_weekly_brief  
 
     MAPBOX_PUBLIC_TOKEN = os.environ.get("MAPBOX_PUBLIC_TOKEN")
     if not MAPBOX_PUBLIC_TOKEN:
@@ -605,7 +606,10 @@ else:
                     text_military, text_section_5, text_india, text_wa, text_final, text_ews,
                     selected_actor, df_actions, MAPBOX_PUBLIC_TOKEN
                 )
-                
+        
+        elif view_selection == "Weekly West Asia Brief":
+            render_west_asia_weekly_brief()        
+
         elif view_selection == "West Asia Strategic Intel (Psyopoly)":
             render_psyopoly_viewer(df_actions)
 

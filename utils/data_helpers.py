@@ -74,7 +74,10 @@ def get_brief_mappings(directory, archive_category="Weekly Archive"):
                 elif 'monthly_report' in filename or 'monthly' in filename:
                     display_name = f"Monthly SemicoN Report - {b_date}"
                     belongs_to = "Monthly Archive"
-                elif 'west_asia_brief' in filename or 'psyopoly_brief' in filename:
+                elif 'west_asia_brief' in filename:  # 🛑 THE FIX: Intercept the new brief
+                    display_name = f"Weekly West Asia Brief - {b_date}"
+                    belongs_to = "Weekly Archive"
+                elif 'psyopoly_brief' in filename:
                     display_name = f"West Asia Intelligence Brief - {b_date}"
                     belongs_to = "Daily Archive"
                 elif 'brief_' in filename:

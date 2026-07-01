@@ -105,6 +105,7 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         "Today's Snippet",
         "Weekly Tactical Brief",
         "Weekly Intelligence Brief",
+        "Weekly West Asia Brief",  # 🛑 THE FIX: Added right above Psyopoly
         "West Asia Strategic Intel (Psyopoly)"
     ]
 
