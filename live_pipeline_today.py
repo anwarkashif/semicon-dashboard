@@ -259,7 +259,17 @@ def extract_tactical_events(news_text):
     return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
 
 def generate_shift_brief(accumulated_events):
-    prompt = f"Synthesize a 12H Strategic Shift Brief using this data: {json.dumps(accumulated_events)}. Return JSON exactly keys: date, bluf, executive_summary, escalation_indicators, strategic_outlook, threat_level."
+    prompt = (
+        "Synthesize a 12H Strategic Shift Brief using this data: "
+        f"{json.dumps(accumulated_events)}. "
+        "Return ONLY a valid JSON object with exactly these keys: "
+        "date, bluf, executive_summary, escalation_indicators, strategic_outlook, threat_level. "
+        "CRITICAL INSTRUCTIONS: "
+        "The values for 'bluf', 'executive_summary', 'escalation_indicators', and 'strategic_outlook' "
+        "MUST be comprehensive, professionally written OSINT RISK AND THREAT analytical paragraphs AND EXPLANATION. "
+        "STRICT LENGTH REQUIREMENT: Each of those 4 sections MUST be between 400 and 700 words in length. "
+        "Do NOT use bullet points or JSON arrays for those sections."
+    )
     try:
         raw_txt = generate_with_rotation(prompt, temperature=0.2)
         match = re.search(r'\{.*\}', raw_txt, re.DOTALL)
