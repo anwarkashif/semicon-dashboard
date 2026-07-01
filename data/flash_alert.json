@@ -1,24 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Minister Cohen Says Control Over Gaza Will Continue to Grow",
+        "Title": "SBU Drones Strike Aircraft Shelters at Saky Air Base in Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPUDZFSi1jZ1UxQ0VHOU1jYUtoZlkwWFVZM2duQmxNMlZJSVJ5OW01SFUzSHJYSnRLU3JWM2xWUGVCZEtwb3dkSUFpQUJfbGV5TXNaTE1WalQyaGlYQmNIbWFvOTY0ZmpjMGV4ZDl1RG5MNWp2WTAwN2U2bURNbWh1NWRJYW1GcW5pNTR5bG9LT3htZG9kUHUydWtOWHBadTlqVnU0RE93?oc=5",
-        "Title": "China's Meituan says new AI model trained on domestic chips - Reuters",
+        "Source": "https://www.bbc.co.uk/news/articles/cz9lqvx0z1vo?at_medium=RSS&at_campaign=rss",
+        "Title": "Sudan's RSF committed crimes against humanity in el-Fasher, Amnesty says ",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32364",
-        "Title": "Russia Explores Laser Guidance for JDAM Bombs",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "bbc.co.uk",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.france24.com/en/asia-pacific/20260701-myanmar-mourns-as-post-coup-conflict-death-toll-hits-100-000",
@@ -30,6 +23,13 @@
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
         "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObFdTRjVCQk00TjFPaWhGNU44dUFtYmhMRU9xZEFESHh4aWg5UjMwYm5qWFhFeFJ6YmxmRHhIS3ZDZllXY1ZMdy1EZThUX08xYzhBYU8wUkxPYXY3cGNpZFJkdmJwN0pib2FFQlROZ1BRME0zMUxVVUgzU1A1amNSWHNNNVVQbmpBM1VXWGFGWnhNMGlGZUJxaTRTV3RKbmFTTVBUa1Y0Qk1XQWR4UGcxc2N3?oc=5",
-        "Title": "EXCLUSIVE: NATO joins exercises off US coast, even as it loses political fight in Trump's Washington - Reuters",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-04",
+        "Title": "Daktronics Controller Firmware",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119646",
-        "Title": "Ukraine Bridge Collapses on Mariupol Donetsk Highway",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "Title": "Schneider Electric PowerLogic P7",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     }
 ]
