@@ -55,7 +55,7 @@ def generate_with_rotation(prompt, temperature=0.1):
     current_idx = 0
     failures = 0
     global_cycles = 0
-    MAX_GLOBAL_CYCLES = 4  # Allows 4 full loops (up to 24 key attempts) before truly failing
+    MAX_GLOBAL_CYCLES = 4  
     
     while global_cycles < MAX_GLOBAL_CYCLES:
         current_key = VALID_KEYS[current_idx]
@@ -91,7 +91,6 @@ def generate_with_rotation(prompt, temperature=0.1):
                 current_idx += 1
                 failures = 0
                 
-                # 🛑 THE FIX: If all keys are exhausted, wait 65 seconds for Google's RPM quota to reset, then loop back to Key 1
                 if current_idx >= len(VALID_KEYS):
                     print("⏳ All keys exhausted in this cycle. Sleeping 65 seconds for RPM quotas to reset...")
                     logging.info("All keys exhausted. Sleeping 65s for RPM reset.")
@@ -103,7 +102,6 @@ def generate_with_rotation(prompt, temperature=0.1):
                     logging.info(f"Rotating to API Key {current_idx + 1}")
                     time.sleep(5)
             else:
-                # Wait 15 seconds on a first failure to allow temporary 503 Server Errors to resolve
                 time.sleep(15)
                 
     raise Exception("CRITICAL: All API keys exhausted across multiple recovery cycles. Manual intervention required.")
@@ -166,14 +164,12 @@ def fetch_daily_intelligence():
     aggregated_news = ""; total_articles = 0; article_map = {}; article_counter = 1
     headers = {'User-Agent': 'Mozilla/5.0'}
     
-    # Helper to deep-scrape article bodies
     def extract_deep_text(url):
         try:
             downloaded = trafilatura.fetch_url(url)
             if downloaded:
                 text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
                 if text:
-                    # Return the first 1000 characters to give Gemini rich context without blowing up token limits
                     return text[:1000].replace('\n', ' ') + "..."
         except Exception: pass
         return ""
@@ -184,7 +180,6 @@ def fetch_daily_intelligence():
                 art_id = f"ART_{article_counter:03d}"
                 final_url = resolve_final_url(entry.link, headers)
                 
-                # 🛑 THE FIX: Deep extract the article body
                 body_text = extract_deep_text(final_url)
                 
                 article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": "Premium RSS"}
@@ -208,7 +203,6 @@ def fetch_daily_intelligence():
                 art_id = f"ART_{article_counter:03d}"
                 final_url = resolve_final_url(entry.link, headers)
                 
-                # 🛑 THE FIX: Deep extract the article body
                 body_text = extract_deep_text(final_url)
                 
                 article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": f"Google News {time_modifier}"}
@@ -230,7 +224,6 @@ def fetch_daily_intelligence():
             art_id = f"ART_{article_counter:03d}"
             article_map[art_id] = {"title": entry.title, "url": final_url, "feed_source": "Maritime Deep Scrape"}
             
-            # Using Trafilatura for Maritime events as well instead of BeautifulSoup
             body_text = extract_deep_text(final_url)
             if body_text:
                 aggregated_news += f"ID: {art_id} | [MARITIME] {entry.title}\n  DEEP DATA: {body_text}\n"
@@ -255,7 +248,6 @@ def fetch_daily_intelligence():
         art_id = f"ART_{article_counter:03d}"
         article_map[art_id] = {"title": item["headline"], "url": item["url"], "feed_source": "Psyopoly Supabase"}
         
-        # Pull the body text for Psyopoly events too
         body_text = extract_deep_text(item["url"])
         if body_text:
             aggregated_news += f"ID: {art_id} | [PSYOPOLY] {item['headline']}\n  DEEP DATA: {body_text}\n"
@@ -267,10 +259,10 @@ def fetch_daily_intelligence():
     return aggregated_news, total_articles, psy_events, article_map
 
 def extract_tactical_events(news_text):
-    # 🛑 THE FIX: Dynamically scale the extraction volume based on whether it is the 24-hour Super Brief run
     current_utc_hour = datetime.now(timezone.utc).hour
     is_super_brief = current_utc_hour >= 18 
     
+    # 🛑 SCALED EXTRACTION: 40-45 for super brief, 20-30 for normal brief
     extraction_volume = "40-45" if is_super_brief else "20-30"
     
     prompt = f"""
@@ -279,10 +271,7 @@ def extract_tactical_events(news_text):
     Data: {news_text}
     """
     raw_txt = generate_with_rotation(prompt, temperature=0.1)
-    match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
-    if match: return json.loads(match.group(0))
-    return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
-    raw_txt = generate_with_rotation(prompt, temperature=0.1)
+    import re
     match = re.search(r'\[.*\]', raw_txt, re.DOTALL)
     if match: return json.loads(match.group(0))
     return json.loads(raw_txt.replace("```json", "").replace("```", "").strip())
@@ -293,37 +282,21 @@ def generate_flush_to_brief(accumulated_events):
     
     if is_super_brief:
         trimmed = accumulated_events[:45]
-        # Super Brief uses maximum lengths
-        req_250_300 = "Strict length: 300 words."
-        req_300_350 = "Strict length: 350 words."
-        req_300_450 = "Strict length: 450 words."
-        req_350_400 = "Strict length: 400 words."
+        word_req = "Strict length: 400-450 words."
     else:
         trimmed = accumulated_events[:30]
-        # Standard Flash uses minimum/range lengths
-        req_250_300 = "Strict length: 250-300 words."
-        req_300_350 = "Strict length: 300-350 words."
-        req_300_450 = "Strict length: 300-450 words."
-        req_350_400 = "Strict length: 350-400 words."
+        word_req = "Strict length: 300-450 words."
 
     prompt = (
         "You are an elite Geopolitics-OSINT analyst. "
         f"Generate a FLASH TO BRIEF from this data: {json.dumps(trimmed)}. "
-        "Output ONLY a valid JSON object with these exact keys: "
-        f'"bluf": "Bottom Line Up Front paragraph. {req_250_300}", '
-        f'"executive_summary": "Micro and Macro-level summary paragraph. {req_300_450}", '
-        f'"escalation_indicators": "Paragraph detailing specific escalation signals. {req_300_450}", '
-        f'"irano_centric_axis": "Paragraph on Iranian, IRGC, or allied proxy operations. {req_350_400}", '
-        f'"levantine_front": "Paragraph on Lebanon, Syria, Hezbollah dynamics. {req_350_400}", '
-        f'"israeli_strategy": "Paragraph on Israeli multi-theater operations. {req_350_400}", '
-        f'"gcc_region": "Paragraph on Gulf Cooperation Council, energy, or economic and military shifts. {req_300_450}", '
-        f'"strategic_intel_log": "Paragraph logging major intelligence and military moves. {req_300_450}", '
-        f'"tactical_indicators": "Paragraph summarizing on-the-ground tactical shifts. {req_250_300}", '
-        f'"threat_narrative": "Paragraph outlining the overarching threat landscape. {req_250_300}", '
-        f'"risk_assessment": "Paragraph quantifying near-term operational risks. {req_300_350}", '
-        f'"strategic_forecast": "Paragraph forecasting the next 7-14 days. {req_300_350}", '
-        '"themed_urls": {"Military & Escalation": ["url1", "url2"], "Diplomacy & Economy": ["url3", "url4"], "Intelligence": ["url5"]} '
-        "CRITICAL: ALL values (except themed_urls) must be comprehensive, professionally graded analytical paragraphs. Do NOT use bullet points."
+        "Output ONLY a valid JSON object with these exactly 5 keys: "
+        f'"bluf": "Bottom Line Up Front. {word_req}", '
+        f'"tactical_indicators": "Summary of on-the-ground tactical shifts. {word_req}", '
+        f'"threat_narrative": "Outline of the overarching threat landscape. {word_req}", '
+        f'"risk_assessment": "Quantified near-term operational risks. {word_req}", '
+        f'"strategic_forecast": "Forecast for the next 24-72 hours. {word_req}" '
+        "CRITICAL: ALL values must be comprehensive, professionally graded analytical paragraphs. Do NOT use bullet points or JSON arrays for any section."
     )
     
     try:
@@ -335,11 +308,10 @@ def generate_flush_to_brief(accumulated_events):
         logging.error(f"FLASH TO BRIEF Final Failure: {e}")
         return {
             "bluf": "API Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...",
-            "executive_summary": "PENDING", "escalation_indicators": "PENDING", "irano_centric_axis": "PENDING",
-            "levantine_front": "PENDING", "israeli_strategy": "PENDING", "gcc_region": "PENDING", 
-            "strategic_intel_log": "PENDING", "tactical_indicators": "System Awaiting Reset. Data Pipeline Intact.",
+            "tactical_indicators": "System Awaiting Reset. Data Pipeline Intact.",
             "threat_narrative": "Generation pending next scheduled cron execution.",
-            "risk_assessment": "PENDING", "strategic_forecast": "PENDING", "themed_urls": {}
+            "risk_assessment": "PENDING",
+            "strategic_forecast": "PENDING"
         }
 
 if __name__ == "__main__":
@@ -395,7 +367,8 @@ if __name__ == "__main__":
             if iden and iden not in seen:
                 seen.add(iden); unique_master.append(e)
                 
-        unique_master = unique_master[:45]  # Adjusted to hold up to 45 for super brief
+        # 🛑 STORE UP TO 45 EVENTS to support the 24-hour Super Brief depth
+        unique_master = unique_master[:45]
         json.dump(unique_master, open(output_file_tactical, 'w'), indent=4)
         
         print("⏳ Pooling data before FLASH TO BRIEF generation...")
@@ -412,15 +385,7 @@ if __name__ == "__main__":
         
         date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         
-        # Build the expanded Archive Payload
         bluf = flush_brief_data.get('bluf', '')
-        exec_sum = flush_brief_data.get('executive_summary', '')
-        esc = flush_brief_data.get('escalation_indicators', '')
-        iran = flush_brief_data.get('irano_centric_axis', '')
-        levant = flush_brief_data.get('levantine_front', '')
-        israel = flush_brief_data.get('israeli_strategy', '')
-        gcc = flush_brief_data.get('gcc_region', '')
-        intel_log = flush_brief_data.get('strategic_intel_log', '')
         tactical = flush_brief_data.get('tactical_indicators', '')
         narrative = flush_brief_data.get('threat_narrative', '')
         risk = flush_brief_data.get('risk_assessment', '')
@@ -428,13 +393,6 @@ if __name__ == "__main__":
         
         parts = []
         if bluf: parts.append(f"**🎯 BLUF:**\n{bluf}")
-        if exec_sum: parts.append(f"**📋 EXECUTIVE SUMMARY:**\n{exec_sum}")
-        if esc: parts.append(f"**📈 ESCALATION INDICATORS:**\n{esc}")
-        if iran: parts.append(f"**🇮🇷 IRANO-CENTRIC NETWORK AXIS:**\n{iran}")
-        if levant: parts.append(f"**🇱🇧 LEVANTINE OPERATIONAL FRONT:**\n{levant}")
-        if israel: parts.append(f"**🇮🇱 ISRAELI MULTI-THEATER STRATEGY:**\n{israel}")
-        if gcc: parts.append(f"**🛢️ GCC REGION AND DEVELOPMENT:**\n{gcc}")
-        if intel_log: parts.append(f"**📂 STRATEGIC INTELLIGENCE LOG:**\n{intel_log}")
         if tactical: parts.append(f"**🚩 TACTICAL INDICATORS:**\n{tactical}")
         if narrative: parts.append(f"**🕸️ THREAT NARRATIVE:**\n{narrative}")
         if risk: parts.append(f"**⚖️ RISK ASSESSMENT:**\n{risk}")
@@ -454,6 +412,7 @@ if __name__ == "__main__":
             "sources": daily_sources
         }
         
+        # Saves safely using the correct naming convention so it doesn't crash the Weekly view
         archive_filename = f"data/flash_archive_{date_str}.json"
         with open(archive_filename, 'w', encoding='utf-8') as f:
             json.dump(archive_payload, f, indent=4)
