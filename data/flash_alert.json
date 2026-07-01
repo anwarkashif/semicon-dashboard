@@ -1,16 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Strategic Bombers Depart Bases Ahead of Likely Massive Ukraine Strike",
+        "Title": "Philippine Air Force to Build Bases on Thitu Island, South China Sea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty",
+        "Title": "Trump refuses to renew US-Canada-Mexico trade pact he once championed",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/ce8j2lmrvrdo?at_medium=RSS&at_campaign=rss",
-        "Title": "US blocks long-term renewal of North American trade deal",
+        "Source": "https://www.france24.com/en/americas/20260701-venezuela-death-toll-rises-to-2-295-seven-days-of-national-mourning-declared",
+        "Title": "\ud83d\udd34 Venezuela death toll rises to 2,295, seven days of national mourning declared",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "france24.com",
         "threat_level": "HIGH"
     },
     {
@@ -21,11 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61667",
-        "Title": "US Helicopter Crashes Near Strait of Hormuz",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
@@ -49,24 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-04",
-        "Title": "Daktronics Controller Firmware",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/1/seven-more-sentenced-over-texas-ice-detention-centre-shooting?traffic_source=rss",
-        "Title": "Seven more sentenced over Texas ICE detention centre shooting",
+        "Source": "https://warmonitor.com/",
+        "Title": "Nigeria to seek compensation for property abandoned by citizens fleeing South Africa",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "EUBAM Libya 1-2026 Call for Applications - EEAS",
+        "Source": "https://www.bbc.co.uk/news/articles/ce8j2lmrvrdo?at_medium=RSS&at_campaign=rss",
+        "Title": "US blocks long-term renewal of North American trade deal",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
