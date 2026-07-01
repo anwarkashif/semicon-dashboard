@@ -1,38 +1,17 @@
 [
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-05",
-        "Title": "XZ Utils vulnerability impacting B&R Products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://monitorthesituation.com/",
+        "Title": "AMTI Updates Map of South China Sea Energy Exploration",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.twz.com/sea/heavy-machine-guns-appear-on-key-russian-commercial-tanker-in-baltic",
         "Title": "Heavy Machine Guns Appear On Key Russian Commercial Tanker In Baltic",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "twz.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.twz.com/air/air-force-discloses-b-2-can-launch-stealth-anti-ship-missiles-in-surprise-announcement",
@@ -42,31 +21,52 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.twz.com/air/mig-29-transfer-to-ukraine-halted-by-poland-over-claimed-drone-snub",
+        "Title": "MiG-29 Transfer To Ukraine Halted By Poland Over Claimed Drone Snub",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.twz.com/news-features/chinas-truck-mounted-electromagnetic-aircraft-catapult-seen-in-action-for-the-first-time",
         "Title": "China\u2019s Truck-Mounted Electromagnetic Aircraft Catapult Seen In Action For The First Time",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "twz.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.politico.eu/article/russia-import-gasoline-ukraine-strikes-fuel-shortage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Russia to import gasoline as Ukrainian strikes force Putin to use reserves",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Chief Negotiator Says Iran Will Keep Asserting Control Over Strait of Hormuz",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdVp5dmVuTXI1d2wxUnZWdG9FdGhIRnAyVE1aTkpoRU96OFU2aUR6NTJINTlleERSS2FGSEFiTXBIc3V4U2pRX2lQVzVPWFBwLVB6Z3dSN25HSGVFUGpmWTF6dExnanpZZHVDNkNGSjktRWs4MEdFNkhMRm04dVFXYTNDbHpNVmZORVVMdk9BU19JNnhZWTlPZVNadFR0cm5hU09EckVOaWtFaV91Q2ZDZUNQREI?oc=5",
-        "Title": "'Heat dome' threatens sweltering conditions for World Cup fans, players - Reuters",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cbsnews.com/news/venezuela-earthquakes-rescue-team-security-guard/",
+        "Title": "Rescuers in Venezuela race to save security guard trapped under building",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "cbsnews.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/c20yz9rzwy0o?at_medium=RSS&at_campaign=rss",
+        "Title": "Australia sues Amazon for making allegedly unfair contracts with subscribers",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/06/30/stock-market-today-live-updates.html",
+        "Title": "Yen slides to new 40-year low while Dow futures ease after strongest first half in five years: Live updates",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
