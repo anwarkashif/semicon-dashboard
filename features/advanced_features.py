@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import re
-import os  # <-- Added to check for live JSON files
+import os
 from utils.constants import COUNTRY_INFO
 from utils.data_helpers import get_brief_mappings, extract_tag
 from utils.engines import calculate_domain_threat
@@ -112,8 +112,8 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                     try:
                         with open(file_path, 'r') as f:
                             d = json.load(f)
-                            if isinstance(d, list): d = d[:25]
-                            elif isinstance(d, dict) and 'recent_actions' in d: d['recent_actions'] = d['recent_actions'][:25]
+                            if isinstance(d, list): d = d[:20]
+                            elif isinstance(d, dict) and 'recent_actions' in d: d['recent_actions'] = d['recent_actions'][:20]
                             context_data += f"\n--- {label} ---\n{json.dumps(d)}\n"
                     except: pass
 
@@ -165,18 +165,17 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                                     
                             context_data += "\nRAW INTELLIGENCE TEXT:\n"
                             context_data += r_text
-                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:25])}"
+                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:20])}"
                     except: pass
 
-            # 🛑 THE FIX: Define the system prompt strictly as internal instructions, NOT as user content
             system_instruction = f"""
             You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
             Your primary directive is to answer the user's question using the provided intelligence context below, and supplement with external web information if needed.
             
             CRITICAL GROUNDING & CITATION DIRECTIVES:
             1. STRICTLY DO NOT use, reference, or cite www.wikipedia.org. Filter it out completely from your knowledge and external searches.
-            2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05].
-            3. DO NOT use standard bracketed footnote numbers. Use explicit inline text citations.
+            2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05] or [Reported in/by Archive and Live Context: Intelligence Brief Date: May 7-14, 2026].
+            3. DO NOT use standard bracketed footnote numbers. Use explicit inline text citations based on the context provided.
             
             ARCHIVES AND LIVE CONTEXT:
             {context_data}
@@ -194,7 +193,6 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                 for attempt, api_key in enumerate(api_keys):
                     try:
                         client = genai.Client(api_key=api_key)
-                        # 🛑 THE FIX: Separate the system instruction from the user prompt so the search tool doesn't crash
                         response = client.models.generate_content(
                             model=model_name,
                             contents=prompt,
@@ -226,21 +224,6 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                         break # Node worked, exit retry loop
 
                     except Exception as e:
-                        if attempt < len(api_keys) - 1:
-                            message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
-                            time.sleep(1.5)
-                            continue
-                        else:
-                            raise e
-
-                if success:
-                    if sources_md:
-                        full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
-                    if not full_response.strip():
-                        full_response = "Intelligence processing completed. Re-indexing data models..."
-                    message_placeholder.markdown(full_response)
-                
-            except Exception as e:
                         # If node fails and we have backup keys remaining
                         if attempt < len(api_keys) - 1:
                             message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
@@ -249,6 +232,13 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                         else:
                             raise e # Last node failed, trigger main error handler
                             
+                if success:
+                    if sources_md:
+                        full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
+                    if not full_response.strip():
+                        full_response = "Intelligence processing completed. Re-indexing data models..."
+                    message_placeholder.markdown(full_response)
+                
             except Exception as e:
                 error_str = str(e).lower()
                 if "503" in error_str or "429" in error_str or "unavailable" in error_str or "quota" in error_str or "limit" in error_str or "exhausted" in error_str:
@@ -344,192 +334,178 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                 with c2:
                     st.button("✖", key="close_fab", on_click=toggle_fab)
 
-                st.markdown("<hr style='border-color: #333; margin-top: 5px; margin-bottom: 15px;'>", unsafe_allow_html=True)
+            st.markdown("<hr style='border-color: #333; margin-top: 5px; margin-bottom: 15px;'>", unsafe_allow_html=True)
 
-                if not api_keys:
-                    st.error("⚠️ GEMINI_API_KEY is missing.")
-                else:
-                    for message in st.session_state.fab_rag_messages:
-                        with st.chat_message(message["role"]):
-                            st.markdown(message["content"])
+            if not api_keys:
+                st.error("⚠️ GEMINI_API_KEY is missing.")
+            else:
+                for message in st.session_state.fab_rag_messages:
+                    with st.chat_message(message["role"]):
+                        st.markdown(message["content"])
 
-                    if st.session_state.get("fab_pending_query"):
-                        query = st.session_state.fab_pending_query
-                        st.session_state.fab_pending_query = None
+                if st.session_state.get("fab_pending_query"):
+                    query = st.session_state.fab_pending_query
+                    st.session_state.fab_pending_query = None
 
-                        with st.chat_message("assistant"):
-                            message_placeholder = st.empty()
-                            message_placeholder.markdown("Scanning live feeds & archives... 🕵️‍♂️")
+                    with st.chat_message("assistant"):
+                        message_placeholder = st.empty()
+                        message_placeholder.markdown("Scanning live feeds & archives... 🕵️‍♂️")
 
-                            context_data = ""
-                            context_data += "\n\n=== LIVE DASHBOARD TEXT FEEDS ===\n"
-                            live_texts = {
-                                "Executive Summary": text_summary, "Global Foundry Market": text_section_1,
-                                "AI Chip Demand & Lithography": text_section_2, "Critical Minerals (REE)": text_section_3,
-                                "Export Controls": text_section_4, "Military & Outer Space": text_military,
-                                "India": text_india, "West Asia": text_wa, "Early Warning": text_ews
-                            }
-                            for section, txt in live_texts.items():
-                                if txt and len(str(txt).strip()) > 10:
-                                    context_data += f"\n--- {section.upper()} ---\n{txt}\n"
+                        context_data = ""
+                        context_data += "\n\n=== LIVE DASHBOARD TEXT FEEDS ===\n"
+                        live_texts = {
+                            "Executive Summary": text_summary, "Global Foundry Market": text_section_1,
+                            "AI Chip Demand & Lithography": text_section_2, "Critical Minerals (REE)": text_section_3,
+                            "Export Controls": text_section_4, "Military & Outer Space": text_military,
+                            "India": text_india, "West Asia": text_wa, "Early Warning": text_ews
+                        }
+                        for section, txt in live_texts.items():
+                            if txt and len(str(txt).strip()) > 10:
+                                context_data += f"\n--- {section.upper()} ---\n{txt}\n"
 
-                            live_files = [
-                                ('data/executive_home/tactical_events_24h.json', 'EXECUTIVE HOME TACTICAL'),
-                                ('data/executive_home/flush_brief_24h.json', 'EXECUTIVE HOME BRIEF'),
-                                ('data/today_snippet/tactical_events_24h.json', 'TODAY SNIPPET TACTICAL'),
-                                ('data/today_snippet/shift_brief.json', 'TODAY SNIPPET BRIEF'),
-                                ('data/weekly_tactical/tactical_events_24h.json', 'WEEKLY TACTICAL EVENTS')
-                            ]
-                            context_data += "\n\n=== LIVE AUTONOMOUS JSON FEEDS ===\n"
-                            for file_path, label in live_files:
-                                if os.path.exists(file_path):
-                                    try:
-                                        with open(file_path, 'r') as f:
-                                            file_data = json.load(f)
-                                            if isinstance(file_data, list): file_data = file_data[:25]
-                                            elif isinstance(file_data, dict) and 'recent_actions' in file_data: file_data['recent_actions'] = file_data['recent_actions'][:25]
-                                            context_data += f"\n--- {label} ---\n{json.dumps(file_data)}\n"
-                                    except: pass
+                        live_files = [
+                            ('data/executive_home/tactical_events_24h.json', 'EXECUTIVE HOME TACTICAL'),
+                            ('data/executive_home/flush_brief_24h.json', 'EXECUTIVE HOME BRIEF'),
+                            ('data/today_snippet/tactical_events_24h.json', 'TODAY SNIPPET TACTICAL'),
+                            ('data/today_snippet/shift_brief.json', 'TODAY SNIPPET BRIEF'),
+                            ('data/weekly_tactical/tactical_events_24h.json', 'WEEKLY TACTICAL EVENTS')
+                        ]
+                        context_data += "\n\n=== LIVE AUTONOMOUS JSON FEEDS ===\n"
+                        for file_path, label in live_files:
+                            if os.path.exists(file_path):
+                                try:
+                                    with open(file_path, 'r') as f:
+                                        file_data = json.load(f)
+                                        if isinstance(file_data, list): file_data = file_data[:20]
+                                        elif isinstance(file_data, dict) and 'recent_actions' in file_data: file_data['recent_actions'] = file_data['recent_actions'][:20]
+                                        context_data += f"\n--- {label} ---\n{json.dumps(file_data)}\n"
+                                except: pass
 
-                            archive_mapping = get_brief_mappings('data')
-                            context_data += "\n\n=== HISTORICAL ARCHIVES ===\n"
-                            user_keywords = [w.lower() for w in re.findall(r'\b\w+\b', query) if len(w) > 2 and w.lower() not in ['what', 'when', 'where', 'which', 'who', 'why', 'how', 'were', 'was', 'this', 'that', 'with', 'from', 'about', 'the', 'and', 'for', 'are', 'did', 'have', 'has']]
-                            
-                            if archive_mapping:
-                                file_scores = []
-                                for f_path in archive_mapping.values():
-                                    try:
-                                        with open(f_path, 'r') as file:
-                                            d = json.load(file)
-                                            content = d.get('brief_raw', '').lower() + json.dumps(d.get('recent_actions', [])).lower()
-                                            score = sum(content.count(kw) for kw in user_keywords)
-                                            file_scores.append((score, f_path))
-                                    except: pass
-
-                                file_scores.sort(key=lambda x: x[0], reverse=True)
-                                top_files = [fs[1] for fs in file_scores if fs[0] > 0][:3]
-                                if not top_files:
-                                    top_files = list(archive_mapping.values())[:2]
-                                
-                                for f_path in top_files:
-                                    try:
-                                        with open(f_path, 'r') as file:
-                                            d = json.load(file)
-                                            context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
-                                            context_data += "\nRAW INTELLIGENCE TEXT:\n" + d.get('brief_raw', '')
-                                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:10])}"
-                                    except: pass
-
-                            # 🛑 THE FIX: Define the system prompt strictly as internal instructions, NOT as user content
-                            system_instruction = f"""
-                            You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
-                            Answer the user's question concisely using the provided context and supplement with external web information if needed.
-                            
-                            CRITICAL GROUNDING & CITATION DIRECTIVES:
-                            1. STRICTLY DO NOT use, reference, or cite www.wikipedia.org. Filter it out completely from your knowledge and external searches.
-                            2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05].
-                            3. DO NOT use standard bracketed footnote numbers. Use explicit inline text citations.
-                            
-                            ARCHIVES AND LIVE CONTEXT:
-                            {context_data}
-                            """
-                            
-                            try:
-                                from google import genai
-                                import time
-                                full_response = ""
-                                unique_urls = set()
-                                sources_md = ""
-                                success = False
-                                
-                                # 🚀 Loop through the 4-Key Cascade
-                                for attempt, api_key in enumerate(api_keys):
-                                    try:
-                                        client = genai.Client(api_key=api_key)
-                                        # 🛑 THE FIX: Separate the system instruction from the user prompt so the search tool doesn't crash
-                                        response = client.models.generate_content(
-                                            model=model_name,
-                                            contents=query,
-                                            config={
-                                                "system_instruction": system_instruction,
-                                                "tools": [{"google_search": {}}]
-                                            }
-                                        )
-                                        
-                                        full_response = response.text
-                                        unique_urls = set()
-                                        sources_md = ""
-                                        
-                                        # Intercept Grounding Metadata safely after generation completes
-                                        try:
-                                            if response.candidates and response.candidates[0].grounding_metadata:
-                                                meta = response.candidates[0].grounding_metadata
-                                                if hasattr(meta, 'grounding_chunks') and meta.grounding_chunks:
-                                                    for g_chunk in meta.grounding_chunks:
-                                                        if hasattr(g_chunk, 'web') and getattr(g_chunk.web, 'uri', None):
-                                                            title = getattr(g_chunk.web, 'title', 'Source link')
-                                                            url = g_chunk.web.uri
-                                                            if url not in unique_urls:
-                                                                unique_urls.add(url)
-                                                                sources_md += f"\n* [{title}]({url})"
-                                        except Exception: pass
-                                            
-                                        success = True
-                                        break # Node worked, exit retry loop
-
-                                    except Exception as e:
-                                        if attempt < len(api_keys) - 1:
-                                            message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
-                                            time.sleep(1.5)
-                                            continue
-                                        else:
-                                            raise e
-
-                                if success:
-                                    if sources_md:
-                                        full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
-                                    if not full_response.strip():
-                                        full_response = "Intelligence processing completed. Re-indexing data models..."
-                                    message_placeholder.markdown(full_response)
-                                
-                            except Exception as e:
-                                        if attempt < len(api_keys) - 1:
-                                            message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
-                                            time.sleep(1.5)
-                                            continue
-                                        else:
-                                            raise e
-
-                                if success:
-                                    if sources_md:
-                                        full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
-                                    if not full_response.strip():
-                                        full_response = "Intelligence processing completed. Re-indexing data models..."
-                                    message_placeholder.markdown(full_response)
-                                
-                            except Exception as e:
-                                error_str = str(e).lower()
-                                if "503" in error_str or "429" in error_str or "unavailable" in error_str or "quota" in error_str or "limit" in error_str or "exhausted" in error_str:
-                                    full_response = "⚠️ Server Down. Please try after sometime."
-                                else:
-                                    full_response = f"⚠️ Error querying database: {e}"
-                                    
-                                message_placeholder.markdown(full_response)
-                                
-                        st.session_state.fab_rag_messages.append({"role": "assistant", "content": full_response})
-                        st.rerun()
-
-                    if "fab_input_text" not in st.session_state:
-                        st.session_state.fab_input_text = ""
+                        archive_mapping = get_brief_mappings('data')
+                        context_data += "\n\n=== HISTORICAL ARCHIVES ===\n"
+                        user_keywords = [w.lower() for w in re.findall(r'\b\w+\b', query) if len(w) > 2 and w.lower() not in ['what', 'when', 'where', 'which', 'who', 'why', 'how', 'were', 'was', 'this', 'that', 'with', 'from', 'about', 'the', 'and', 'for', 'are', 'did', 'have', 'has']]
                         
-                    def submit_fab_chat():
-                        if st.session_state.fab_input_text:
-                            st.session_state.fab_rag_messages.append({"role": "user", "content": st.session_state.fab_input_text})
-                            st.session_state.fab_pending_query = st.session_state.fab_input_text
-                            st.session_state.fab_input_text = "" 
-                            
-                    st.text_input("Ask the dashboard...", key="fab_input_text", on_change=submit_fab_chat)
+                        if archive_mapping:
+                            file_scores = []
+                            for f_path in archive_mapping.values():
+                                try:
+                                    with open(f_path, 'r') as file:
+                                        d = json.load(file)
+                                        content = d.get('brief_raw', '').lower() + json.dumps(d.get('recent_actions', [])).lower()
+                                        score = sum(content.count(kw) for kw in user_keywords)
+                                        file_scores.append((score, f_path))
+                                except: pass
 
+                            file_scores.sort(key=lambda x: x[0], reverse=True)
+                            top_files = [fs[1] for fs in file_scores if fs[0] > 0][:3]
+                            if not top_files:
+                                top_files = list(archive_mapping.values())[:2]
+                            
+                            for f_path in top_files:
+                                try:
+                                    with open(f_path, 'r') as file:
+                                        d = json.load(file)
+                                        context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
+                                        context_data += "\nRAW INTELLIGENCE TEXT:\n" + d.get('brief_raw', '')
+                                        context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:20])}"
+                                except: pass
+
+                        # 🛑 THE FIX: Define the system prompt strictly as internal instructions, NOT as user content
+                        system_instruction = f"""
+                        You are an elite geopolitical intelligence AI assistant for the SemicoN Dashboard.
+                        Answer the user's question concisely using the provided context and supplement with external web information if needed.
+                        
+                        CRITICAL GROUNDING & CITATION DIRECTIVES:
+                        1. STRICTLY DO NOT use, reference, or cite www.wikipedia.org. Filter it out completely from your knowledge and external searches.
+                        2. When citing internal dashboard data, format citations with the exact section and date. Example: [Reported in/by Archive and Live Context: Today Snippet Tactical on 2026-06-05].
+                        3. DO NOT use standard bracketed footnote numbers. Use explicit inline text citations.
+                        
+                        ARCHIVES AND LIVE CONTEXT:
+                        {context_data}
+                        """
+                        
+                        try:
+                            from google import genai
+                            import time
+                            full_response = ""
+                            unique_urls = set()
+                            sources_md = ""
+                            success = False
+                            
+                            # 🚀 Loop through the 4-Key Cascade
+                            for attempt, api_key in enumerate(api_keys):
+                                try:
+                                    client = genai.Client(api_key=api_key)
+                                    # 🛑 THE FIX: Separate the system instruction from the user prompt so the search tool doesn't crash
+                                    response = client.models.generate_content(
+                                        model=model_name,
+                                        contents=query,
+                                        config={
+                                            "system_instruction": system_instruction,
+                                            "tools": [{"google_search": {}}]
+                                        }
+                                    )
+                                    
+                                    full_response = response.text
+                                    unique_urls = set()
+                                    sources_md = ""
+                                    
+                                    # Intercept Grounding Metadata safely after generation completes
+                                    try:
+                                        if response.candidates and response.candidates[0].grounding_metadata:
+                                            meta = response.candidates[0].grounding_metadata
+                                            if hasattr(meta, 'grounding_chunks') and meta.grounding_chunks:
+                                                for g_chunk in meta.grounding_chunks:
+                                                    if hasattr(g_chunk, 'web') and getattr(g_chunk.web, 'uri', None):
+                                                        title = getattr(g_chunk.web, 'title', 'Source link')
+                                                        url = g_chunk.web.uri
+                                                        if url not in unique_urls:
+                                                            unique_urls.add(url)
+                                                            sources_md += f"\n* [{title}]({url})"
+                                    except Exception: pass
+                                        
+                                    success = True
+                                    break # Node worked, exit retry loop
+
+                                except Exception as e:
+                                    if attempt < len(api_keys) - 1:
+                                        message_placeholder.markdown("⚠️ Try Again... Shifting to backup node 🕵️‍♂️")
+                                        time.sleep(1.5)
+                                        continue
+                                    else:
+                                        raise e
+
+                            if success:
+                                if sources_md:
+                                    full_response += f"\n\n---\n**🌐 Live Web Search Grounding Activated:**\n{sources_md}"
+                                if not full_response.strip():
+                                    full_response = "Intelligence processing completed. Re-indexing data models..."
+                                message_placeholder.markdown(full_response)
+                            
+                        except Exception as e:
+                            error_str = str(e).lower()
+                            if "503" in error_str or "429" in error_str or "unavailable" in error_str or "quota" in error_str or "limit" in error_str or "exhausted" in error_str:
+                                full_response = "⚠️ Server Down. Please try after sometime."
+                            else:
+                                full_response = f"⚠️ Error querying database: {e}"
+                                
+                            message_placeholder.markdown(full_response)
+                            
+                    st.session_state.fab_rag_messages.append({"role": "assistant", "content": full_response})
+                    st.rerun()
+
+            if "fab_input_text" not in st.session_state:
+                st.session_state.fab_input_text = ""
+                
+            def submit_fab_chat():
+                if st.session_state.fab_input_text:
+                    st.session_state.fab_rag_messages.append({"role": "user", "content": st.session_state.fab_input_text})
+                    st.session_state.fab_pending_query = st.session_state.fab_input_text
+                    st.session_state.fab_input_text = "" 
+                    
+            st.text_input("Ask the dashboard...", key="fab_input_text", on_change=submit_fab_chat)
+
+        # 🛑 THE FIX: These two lines are now properly indented inside the render_isolated_fab function
         st.markdown('<span id="fab-anchor"></span>', unsafe_allow_html=True)
         st.button("RAG", key="fab_main_toggle", on_click=toggle_fab)
 
