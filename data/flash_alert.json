@@ -1,38 +1,10 @@
 [
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Israel Strikes Gaza City, Killing Three Palestinians",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/1/first-syrian-parliament-since-al-assads-ousting-begins-legislative-duties?traffic_source=rss",
-        "Title": "First Syrian parliament since al-Assad\u2019s ousting begins legislative duties",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/live/2026/jul/01/ireland-set-to-take-presidency-of-eu-in-dublin-opening-ceremony-europe-live",
-        "Title": "EU must keep promises on Ukraine accession talks, says Zelenskyy, as Ireland takes presidency \u2013 Europe live",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89603",
-        "Title": "Russia Seizes Control of Ukrainskoye in Kharkiv Region",
+        "Source": "https://t.me/southfronteng/61660",
+        "Title": "Israel Conducts Airstrikes in Northern Palestine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.politico.eu/article/european-regulators-assessing-whether-scotus-ruling-threatens-transatlantic-data-flows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Trump\u2019s court win reignites fight to sink \u20ac1.7T data deal with Europe",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +21,52 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "India\u2019s Bengal drops eggs from school lunches: Why that\u2019s stoking debate",
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Sanctioned Iranian Tanker Spotted Near Hormuz Island",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119674",
+        "Title": "Russia Forcibly Uses Child Labor for Military",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/1/first-syrian-parliament-since-al-assads-ousting-begins-legislative-duties?traffic_source=rss",
+        "Title": "First Syrian parliament since al-Assad\u2019s ousting begins legislative duties",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/34003",
+        "Title": "Iran Closes Tehran Airspace for Khamenei Funeral",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/australia-news/2026/jul/01/lambie-hanson-and-pocock-form-unlikely-alliance-to-protect-transparency-campaigner-rex-patrick",
-        "Title": "Lambie, Hanson and Pocock form unlikely alliance to protect transparency campaigner Rex Patrick",
+        "Source": "https://www.france24.com/en/video/20260701-venezuela-dramatic-cctv-footage-shows-moment-quake-strikes",
+        "Title": "Venezuela: Dramatic CCTV footage shows moment quake strikes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
