@@ -7,11 +7,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c33yjk0ldkdo?at_medium=RSS&at_campaign=rss",
-        "Title": "Ukrainian charged in Germany over Nord Stream blasts",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/1/us-signs-1-lease-with-israel-to-build-permanent-embassy-in-west-jerusalem?traffic_source=rss",
+        "Title": "US signs $1 lease with Israel to build permanent embassy in West Jerusalem",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "CRITICAL"
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty",
@@ -42,6 +42,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
         "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
@@ -49,24 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32374",
-        "Title": "Russia Targets Ukrainian Gas Stations",
+        "Source": "https://www.politico.com/news/2026/07/01/us-citizen-iraqi-prison-turkey-00984580?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "US citizen, released from Iraqi prison, alleges he\u2019s been held in Turkey at US request",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "politico.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Treasury yields rise as Fed Chairman Warsh says 'prices are too high'",
+        "Source": "https://www.aljazeera.com/news/2026/7/1/iran-to-open-communication-channel-on-mou-with-us-after-talks-in-qatar?traffic_source=rss",
+        "Title": "Iran to open \u2018communication channel\u2019 on MoU with US after talks in Qatar",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
