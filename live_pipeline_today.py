@@ -243,7 +243,7 @@ def fetch_daily_intelligence():
 def extract_tactical_events(news_text):
     prompt = f"""
     You are an elite Geopolitics-OSINT analyst. Review the following raw feeds and Deep Extraction Data.
-    Select EXACTLY 40-50 distinct, critical geopolitical, cyber, or defense-related events.
+    Select EXACTLY 60-70 distinct, critical geopolitical, cyber, or defense-related events.
     
     CRITICAL INSTRUCTIONS:
     1. Do NOT invent IDs. You must use the EXACT "Article_ID" provided.
