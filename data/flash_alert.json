@@ -1,30 +1,37 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Philippine Air Force to Build Bases on Thitu Island, South China Sea",
+        "Title": "Russia Launches Mass Aerial Attack on Kyiv",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty",
-        "Title": "Trump refuses to renew US-Canada-Mexico trade pact he once championed",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/americas/20260701-venezuela-death-toll-rises-to-2-295-seven-days-of-national-mourning-declared",
-        "Title": "\ud83d\udd34 Venezuela death toll rises to 2,295, seven days of national mourning declared",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/c33yjk0ldkdo?at_medium=RSS&at_campaign=rss",
         "Title": "Ukrainian charged in Germany over Nord Stream blasts",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty",
+        "Title": "Trump refuses to renew US-Canada-Mexico trade pact he once championed",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.twz.com/air/new-su-57-weapons-configuration-points-to-drone-and-cruise-missile-defense-mission",
+        "Title": "New Su-57 Weapons Configuration Points To Drone And Cruise Missile Defense Mission",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,24 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Nigeria to seek compensation for property abandoned by citizens fleeing South Africa",
+        "Source": "https://t.me/rybar_in_english/32374",
+        "Title": "Russia Targets Ukrainian Gas Stations",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/ce8j2lmrvrdo?at_medium=RSS&at_campaign=rss",
-        "Title": "US blocks long-term renewal of North American trade deal",
+        "Source": "https://warmonitor.com/",
+        "Title": "Treasury yields rise as Fed Chairman Warsh says 'prices are too high'",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
