@@ -14,6 +14,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/rybar_in_english/32391",
+        "Title": "Mali Army and Allies Launch Operations Against Militants",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.france24.com/en/37-students-missing-in-nigeria-after-yet-another-jihadist-kidnapping",
         "Title": "37 students missing in Nigeria after yet another jihadist kidnapping",
         "Feed_Source": "WAR MONITOR",
@@ -21,22 +28,8 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/nexta_live/119717",
-        "Title": "China Plane Crashes Into Beijing Skyscraper",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://news.sky.com/story/ukrainian-man-charged-with-war-crimes-over-nord-stream-pipeline-explosions-13559773",
-        "Title": "<a href='https://news.sky.com/story/ukraine-war-latest-live-putin-kyiv-zelenskyy-12541713?postid=11981252#liveblog-body'> Ukrainian man charged with war crimes over Nord Stream pipeline explosions</a>",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/tv-shows/perspective/20260702-danish-refugee-council-on-importance-of-coordinated-response-to-ebola-wider-humanitarian-crisis",
+        "Title": "Danish Refugee Council on importance of coordinated response to Ebola, wider humanitarian crisis",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Brookfield wants to build AI data centers in London\u2019s answer to Wall Street",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/c8x2y74wp9eo?at_medium=RSS&at_campaign=rss",
         "Title": "EU border delays 'not bearable' over summer, warns airport boss",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.politico.eu/article/germany-friedrich-merz-coalition-leaders-strike-tax-reform-deal-to-reverse-steep-popularity-losses/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "German coalition leaders strike tax reform deal to reverse steep popularity losses",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     }
 ]
