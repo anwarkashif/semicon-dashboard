@@ -1,35 +1,14 @@
 [
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "US Envoy Warns Iran Over Hormuz Closure at UN Emergency Session",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.twz.com/air/russia-highly-likely-behind-drone-incursions-over-u-s-bases-in-england-report-concludes",
-        "Title": "Russia \u201cHighly Likely\u201d Behind Drone Incursions Over U.S. Bases In England Report Concludes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.twz.com/nuclear/navys-new-doomsday-plane-delayed-as-watchdog-says-developmental-concerns-are-now-realities",
-        "Title": "Navy\u2019s New \u2018Doomsday Plane\u2019 Delayed As Watchdog Says Developmental Concerns Are Now Realities",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/inside-story/2026/7/2/could-water-become-a-flashpoint-between-islamabad-and-new-delhi?traffic_source=rss",
-        "Title": "Could water become a flashpoint between Islamabad and New Delhi?",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,18 +21,39 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://www.twz.com/air/russia-highly-likely-behind-drone-incursions-over-u-s-bases-in-england-report-concludes",
+        "Title": "Russia \u201cHighly Likely\u201d Behind Drone Incursions Over U.S. Bases In England Report Concludes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44771",
+        "Title": "Israel Strikes South Lebanon",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/nuclear/navys-new-doomsday-plane-delayed-as-watchdog-says-developmental-concerns-are-now-realities",
+        "Title": "Navy\u2019s New \u2018Doomsday Plane\u2019 Delayed As Watchdog Says Developmental Concerns Are Now Realities",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Turkey Warns It Will Confront Israel If Interests Clash",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/c75ykve4zzxo?at_medium=RSS&at_campaign=rss",
