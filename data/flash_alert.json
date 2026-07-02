@@ -7,10 +7,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32381",
-        "Title": "Russia Launches Massive Strike on Kiev",
+        "Source": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss",
+        "Title": "At least one killed in major airstrikes on Kyiv",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/2/german-prosecutors-charge-ukrainian-suspect-over-nord-stream-explosions?traffic_source=rss",
+        "Title": "German prosecutors charge Ukrainian suspect over Nord Stream explosions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,22 +28,8 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/2/german-prosecutors-charge-ukrainian-suspect-over-nord-stream-explosions?traffic_source=rss",
-        "Title": "German prosecutors charge Ukrainian suspect over Nord Stream explosions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/articles/c621g086ek4o?at_medium=RSS&at_campaign=rss",
-        "Title": "Afghan Taliban launch strikes on border with Pakistan as tensions escalate",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html",
-        "Title": "OpenAI proposes 5% stake to Trump administration to ease Washington pressure: report",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/2/survivors-look-to-foreign-aid-after-the-earthquakes-in-venezuela?traffic_source=rss",
+        "Title": "Survivors look to foreign aid after the earthquakes in Venezuela",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/02/world/middleeast/iraq-us-dollar-transfers-resumes.html",
-        "Title": "U.S. Resumes Dollar Transfers to Iraq After Monthslong Suspension",
+        "Source": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNbTlrVFlvZVBFZzVIR2V3UElQeXNiV0F5dXBLdVdUak1acFRaaFFYd1VaamJWTk5FNVlORTAwZVNoU3J0TTFuTlR4NDNzWEFhUUFQYXdkYVJ2QXhGYjMxTnFtNThERVhyVm12bFVXYkhramJaOEo5cFhkNnRCaS1VbVBqWjNFaExoUUNYWHp5NllSSkZRZ1AyOGN3OGtpYzdJdlNMYkZNd2dCd3JsT01xQTJtX2ZjYTN6aDdEZU9fVHh2aGtLMEY2YjVXM1djanJXSGRFVXlNaEdjSlZnUm1sRUtySGhrVW5vQW5leTdjV04?oc=5",
+        "Title": "Venezuela: Terremotos de junio de 2026 \u2013 Snapshot de situaci\u00f3n (\u00daltima actualizaci\u00f3n: 30 de junio de 2026) - ReliefWeb",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
