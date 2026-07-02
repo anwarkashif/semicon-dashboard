@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Claims Command Over Strait of Hormuz, Rejects US Authority",
+        "Title": "Ukrainian Drones Strike Oil Refinery in Kstovo, Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -28,15 +28,8 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89642",
-        "Title": "Russia Threatens Retaliation Over Energy Infrastructure Attack",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,6 +42,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.nytimes.com/2026/07/02/world/middleeast/iraq-us-dollar-transfers-resumes.html",
+        "Title": "U.S. Resumes Dollar Transfers to Iraq After Monthslong Suspension",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.cnbc.com/2026/07/02/samsung-sk-hynix-shares-slide-kospi-tech-selloff-nasdaq.html",
         "Title": "Samsung Electronics, SK Hynix shares tumble over 7% as chip rout spreads from Wall Street",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/editorial/2026/7/2/on-the-front-line-of-congos-ebola-outbreak?traffic_source=rss",
-        "Title": "On the front line of Congo\u2019s Ebola outbreak",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
