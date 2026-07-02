@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.politico.eu/article/vladimir-putin-russia-economy-fuel-crisis-ukraine-attacks/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Putin\u2019s economy is running on fumes after Ukrainian attacks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss",
         "Title": "At least one killed in major airstrikes on Kyiv",
         "Feed_Source": "WAR MONITOR",
@@ -21,22 +28,15 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89642",
-        "Title": "Russia Threatens Retaliation Over Energy Infrastructure Attack",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -47,6 +47,13 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cnbc.com/2026/07/02/oil-prices-fall-after-us-iran-talks-conclude-in-doha.html",
@@ -60,13 +67,6 @@
         "Title": "Ebola Outbreak, DRC and Region, Situation Report #9, July 1, 2026 - ReliefWeb",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.sky.com/story/alleged-member-of-international-cyber-hacking-group-scattered-spider-arrested-13559690",
-        "Title": "Alleged member of hacking group Scattered Spider arrested",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
         "threat_level": "WATCH"
     }
 ]
