@@ -1,35 +1,42 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Missiles and Drones Kill 18 in Kyiv Overnight",
+        "Title": "Russia Strikes Ukrainian Energy Grid, Causing Blackouts in Sumy",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.politico.eu/article/germany-charges-ukrainian-suspect-nord-stream-sabotage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Germany indicts Ukrainian over Nord Stream sabotage, alleges Kyiv-backed plot",
+        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/",
+        "Title": "U.S.-Iran talks pause for ayatollah's funeral after claims of progress",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
+        "Publisher": "cbsnews.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32385",
-        "Title": "NATO Leaders Gather in Ankara for Summit",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/ukraine-s-strikes-on-russian-refineries-highlight-kyiv-s-growing-drone-industry",
-        "Title": "Ukraine's strikes on Russian refineries highlight Kyiv's growing drone industry",
+        "Source": "https://www.france24.com/en/37-students-missing-in-nigeria-after-yet-another-jihadist-kidnapping",
+        "Title": "37 students missing in Nigeria after yet another jihadist kidnapping",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-01",
-        "Title": "Mitsubishi Electric MELSOFT Update Manager SW1DND-UDM-M",
+        "Source": "https://t.me/nexta_live/119717",
+        "Title": "China Plane Crashes Into Beijing Skyscraper",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://news.sky.com/story/ukrainian-man-charged-with-war-crimes-over-nord-stream-pipeline-explosions-13559773",
+        "Title": "<a href='https://news.sky.com/story/ukraine-war-latest-live-putin-kyiv-zelenskyy-12541713?postid=11981252#liveblog-body'> Ukrainian man charged with war crimes over Nord Stream pipeline explosions</a>",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.sky.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,13 +49,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119716",
-        "Title": "Russia Desertions Rise as Nine Convicts Flee War Effort",
+        "Source": "https://www.bbc.co.uk/news/articles/c8x2y74wp9eo?at_medium=RSS&at_campaign=rss",
+        "Title": "EU border delays 'not bearable' over summer, warns airport boss",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Far-right French mayor causes outrage after barring staging of play about migrant",
+        "Source": "https://www.politico.eu/article/germany-friedrich-merz-coalition-leaders-strike-tax-reform-deal-to-reverse-steep-popularity-losses/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "German coalition leaders strike tax reform deal to reverse steep popularity losses",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     }
 ]
