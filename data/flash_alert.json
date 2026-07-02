@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Forces Shoot Down 14 Iranian Drones Over Bahrain",
+        "Title": "Russian Forces Advance to Within 9 km of Slovyansk",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,32 +14,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/37-students-missing-in-nigeria-after-yet-another-jihadist-kidnapping",
-        "Title": "37 students missing in Nigeria after yet another jihadist kidnapping",
+        "Source": "https://www.cnbc.com/2026/07/02/european-union-china-meeting-summer-heatwave-trade-imbalance-tariffs-.html",
+        "Title": "Europe wants to rebalance trade with Beijing, but can't quit Chinese air conditioners ",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119723",
-        "Title": "Russia Faces Gasoline Crisis",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "cnbc.com",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32391",
-        "Title": "Mali Army and Allies Launch Operations Against Militants",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +28,45 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://warmonitor.com/",
-        "Title": "U.S. economy added 57,000 jobs in June, less than expected; unemployment rate at 4.2%",
+        "Title": "China Says Pilot Who Flew Into Skyscraper Had Thoughts of Death",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/02/world/europe/germany-overhaul-merz-economy-pensions.html",
-        "Title": "As Far Right Rises, German Leaders Look to Jump-Start the Economy",
+        "Source": "https://t.me/Middle_East_Spectator/34007",
+        "Title": "Syria Regains Control in Homs",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.sky.com/story/salmonella-outbreak-linked-to-noodles-affecting-uk-and-13-other-countries-13559779",
-        "Title": "Salmonella outbreak linked to noodles affecting UK and 13 other countries",
+        "Source": "https://www.aljazeera.com/news/2026/7/2/explosion-heard-in-syrias-capital-damascus-state-media?traffic_source=rss",
+        "Title": "Explosion heard in Syria\u2019s capital Damascus: state media",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
