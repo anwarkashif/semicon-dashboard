@@ -28,8 +28,8 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNR0lNUjVaWDFGdTNrUC1yZl9rRG91Zkx6dzRuNGNYU3JDZUJISW5LdUxjZ29EUDQ4Wmt4MTFuZEdLSnVoWW1jUDJ5WEgtM3RSUnU0aGdvMEEzUjBVWWxhTE5wOFZOWS1oYVIwcnhZQmJSLXZNWVFUelRWVURDYVEyUld3dVdGSWd1VERtTEswNHdPZFFKUS1nWGN3N2JaMTJoUVpiczVB?oc=5",
+        "Title": "Trump says the US will not let China take over Panama Canal - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.nytimes.com/2026/07/02/world/middleeast/iraq-us-dollar-transfers-resumes.html",
         "Title": "U.S. Resumes Dollar Transfers to Iraq After Monthslong Suspension",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/02/samsung-sk-hynix-shares-slide-kospi-tech-selloff-nasdaq.html",
-        "Title": "Samsung Electronics, SK Hynix shares tumble over 7% as chip rout spreads from Wall Street",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
