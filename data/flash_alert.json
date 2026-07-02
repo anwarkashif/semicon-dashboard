@@ -1,37 +1,16 @@
 [
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://monitorthesituation.com/",
         "Title": "US Forces Shoot Down 14 Iranian Drones Over Bahrain",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/",
+        "Title": "U.S.-Iran talks pause for ayatollah's funeral after claims of progress",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -42,31 +21,52 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/34006",
-        "Title": "Syria Bombing Hits Damascus Cafe",
+        "Source": "https://t.me/nexta_live/119723",
+        "Title": "Russia Faces Gasoline Crisis",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/",
-        "Title": "U.S.-Iran talks pause for ayatollah's funeral after claims of progress",
+        "Source": "https://t.me/rybar_in_english/32391",
+        "Title": "Mali Army and Allies Launch Operations Against Militants",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.france24.com/en/tv-shows/perspective/20260702-danish-refugee-council-on-importance-of-coordinated-response-to-ebola-wider-humanitarian-crisis",
-        "Title": "Danish Refugee Council on importance of coordinated response to Ebola, wider humanitarian crisis",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://warmonitor.com/",
-        "Title": "Brookfield wants to build AI data centers in London\u2019s answer to Wall Street",
+        "Title": "U.S. economy added 57,000 jobs in June, less than expected; unemployment rate at 4.2%",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/07/02/world/europe/germany-overhaul-merz-economy-pensions.html",
+        "Title": "As Far Right Rises, German Leaders Look to Jump-Start the Economy",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.sky.com/story/salmonella-outbreak-linked-to-noodles-affecting-uk-and-13-other-countries-13559779",
+        "Title": "Salmonella outbreak linked to noodles affecting UK and 13 other countries",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.sky.com",
         "threat_level": "WATCH"
     }
 ]
