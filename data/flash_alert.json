@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Poland Activates Fighter Jets, Air Defense After Russian Strikes on Ukraine",
+        "Title": "Ex-Minister Mandelson Revealed as Russian Spy Contact for Decades",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/c621g086ek4o?at_medium=RSS&at_campaign=rss",
+        "Title": "Afghan Taliban launch strikes on border with Pakistan as tensions escalate",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,13 +21,6 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89642",
-        "Title": "Russia Threatens Retaliation Over Energy Infrastructure Attack",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.france24.com/en/europe/20260701-fire-breaks-out-in-central-kyiv-after-explosion-during-air-raid-alert",
         "Title": "Fire breaks out in central Kyiv after explosion during air raid alert",
         "Feed_Source": "WAR MONITOR",
@@ -28,11 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/1/us-signs-1-lease-with-israel-to-build-permanent-embassy-in-west-jerusalem?traffic_source=rss",
+        "Title": "US signs $1 lease with Israel to build permanent embassy in West Jerusalem",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
@@ -63,10 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/1/us-judge-sides-with-naacp-over-proposed-mail-in-ballot-restrictions?traffic_source=rss",
-        "Title": "US judge sides with NAACP over proposed mail-in ballot restrictions",
+        "Source": "https://t.me/intelslava/89642",
+        "Title": "Russia Threatens Retaliation Over Energy Infrastructure Attack",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
