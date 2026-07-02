@@ -1,49 +1,49 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Strike Damages Slavyansk Eco Oil Refinery",
+        "Title": "Ukraine Strikes Russian Semiconductor Plant in Voronezh, Kills Five",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/eu-targets-chinese-imports-amid-trade-talks/a-77800366?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "EU targets Chinese imports amid trade talks",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/2/collateral-damage-73-palestinian-children-israel-shot-in-the-head?traffic_source=rss",
+        "Title": "\u2018Collateral damage\u2019: 73 Palestinian children Israel shot in the head",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "HIGH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/australia-news/2026/jul/03/afp-investigating-alleged-war-crimes-committed-by-australian-citizen-serving-in-idf-in-gaza-ntwnfb",
-        "Title": "AFP assessing allegation of Gaza war crimes committed by Australian citizen serving in IDF",
+        "Source": "https://www.france24.com/en/africa/20260702-unprecedented-images-russia-using-drones-war-ukraine-africa",
+        "Title": "Unprecedented images show how Russia is using drones from the war in Ukraine in Africa",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "HIGH"
+        "Publisher": "france24.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/34009",
+        "Title": "Iran Imposes Fees in Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/intelslava/89697",
         "Title": "Iran Strikes Kurdish Separatist Groups in Iraq",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119728",
-        "Title": "Russia Attacks Public Pool in Zaporizhzhia",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/middle-east/20260702-bomb-blast-in-central-damascus-cafe-kills-several",
-        "Title": "Bomb blast in central Damascus cafe kills several",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119731",
-        "Title": "Ukraine President Zelensky Threatens Moscow",
+        "Source": "https://warmonitor.com/",
+        "Title": "U.S. job creation cools in June with payrolls growth of just 57,000; unemployment rate at 4.2%",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/france/20260702-firefighters-battle-blazes-scorching-southern-france-after-record-heatwave",
-        "Title": "Firefighters battle blazes scorching southern France after record heatwave",
+        "Source": "https://t.me/nexta_live/119733",
+        "Title": "Novosibirsk Protests Against Moscow",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
