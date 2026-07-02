@@ -7,6 +7,20 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/rybar_in_english/32381",
+        "Title": "Russia Launches Massive Strike on Kiev",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNR0lNUjVaWDFGdTNrUC1yZl9rRG91Zkx6dzRuNGNYU3JDZUJISW5LdUxjZ29EUDQ4Wmt4MTFuZEdLSnVoWW1jUDJ5WEgtM3RSUnU0aGdvMEEzUjBVWWxhTE5wOFZOWS1oYVIwcnhZQmJSLXZNWVFUelRWVURDYVEyUld3dVdGSWd1VERtTEswNHdPZFFKUS1nWGN3N2JaMTJoUVpiczVB?oc=5",
+        "Title": "Trump says the US will not let China take over Panama Canal - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.aljazeera.com/news/2026/7/2/german-prosecutors-charge-ukrainian-suspect-over-nord-stream-explosions?traffic_source=rss",
         "Title": "German prosecutors charge Ukrainian suspect over Nord Stream explosions",
         "Feed_Source": "WAR MONITOR",
@@ -14,18 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss",
-        "Title": "At least one killed in major airstrikes on Kyiv",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.bbc.co.uk/news/articles/c621g086ek4o?at_medium=RSS&at_campaign=rss",
         "Title": "Afghan Taliban launch strikes on border with Pakistan as tensions escalate",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
@@ -42,13 +49,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -56,10 +56,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNR0lNUjVaWDFGdTNrUC1yZl9rRG91Zkx6dzRuNGNYU3JDZUJISW5LdUxjZ29EUDQ4Wmt4MTFuZEdLSnVoWW1jUDJ5WEgtM3RSUnU0aGdvMEEzUjBVWWxhTE5wOFZOWS1oYVIwcnhZQmJSLXZNWVFUelRWVURDYVEyUld3dVdGSWd1VERtTEswNHdPZFFKUS1nWGN3N2JaMTJoUVpiczVB?oc=5",
-        "Title": "Trump says the US will not let China take over Panama Canal - Reuters",
+        "Source": "https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html",
+        "Title": "OpenAI proposes 5% stake to Trump administration to ease Washington pressure: report",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
