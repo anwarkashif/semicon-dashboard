@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Official Warns Israel Will Eliminate Iranian Officials If Needed",
+        "Title": "Israeli Warplanes Cross Into Iran, Negotiator Makes Emergency Landing",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,32 +14,18 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.aljazeera.com/video/inside-story/2026/7/2/could-water-become-a-flashpoint-between-islamabad-and-new-delhi?traffic_source=rss",
+        "Title": "Could water become a flashpoint between Islamabad and New Delhi?",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.aljazeera.com/editorial/2026/7/2/fears-of-new-massacre-in-sudans-el-obeid-what-do-we-know?traffic_source=rss",
         "Title": "Fears of new massacre in Sudan\u2019s el-Obeid: What do we know?",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61699",
-        "Title": "Iran Warns Israel Against Targeting Funeral",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119740",
-        "Title": "Russian Forces Accused of Abusing Civilians in Ukraine",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cbsnews.com/news/u-s-helicopter-goes-down-in-arabian-sea-crew-member-missing-navy-says/",
-        "Title": "U.S. helicopter goes down in Arabian Sea, crew member missing, Navy says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Dow jumps nearly 600 points to record close; Nasdaq slides as chip stocks suffer: Live updates",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAyVEpWQjVyNEZ4ZmlOamJtTy1NdjJlYWNGb1c0ZnI0eURTQ0R0VDJpYkhpaXcyRFk2UFZ3anlzNjBrSjRxaV9VY050SnNaeWdwdXgzZkRjM1RuZzZmMnQ1ZW5fUGY1LXh3VlR5RlAzVQ?oc=5",
+        "Title": "ST Engineering iDirect iQ-Series Terminals - CISA (.gov)",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/2/trump-administration-renews-pressure-on-international-criminal-court?traffic_source=rss",
-        "Title": "Trump administration renews pressure on International Criminal Court",
+        "Source": "https://t.me/southfronteng/61707",
+        "Title": "Israel Arrests Tajikistan Man For Spying On Behalf Of Iran",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/hundreds-besiege-french-supermarkets-in-scramble-to-find-air-conditioners-before-next-heatwave",
-        "Title": "Hundreds besiege French supermarkets in scramble to find air conditioners before next heatwave",
+        "Source": "https://www.nytimes.com/2026/07/02/world/americas/venezuela-earthquake-survivor.html",
+        "Title": "Man Rescued 8 Days After Quake, a Ray of Joy in Stricken Venezuela",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
