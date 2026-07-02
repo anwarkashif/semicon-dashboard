@@ -1,24 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Defense Minister Urges 40 Countries to Transfer Patriot Missiles",
+        "Title": "China Coast Guard Presence Doubles at Scarborough Shoal, Dangerous Encounters Reported",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/2/collateral-damage-73-palestinian-children-israel-shot-in-the-head?traffic_source=rss",
-        "Title": "\u2018Collateral damage\u2019: 73 Palestinian children Israel shot in the head",
+        "Source": "https://www.aljazeera.com/news/2026/7/2/how-us-iran-war-may-push-gulf-countries-to-diversify-security-alliances?traffic_source=rss",
+        "Title": "How US-Iran war may push Gulf countries to \u2018diversify\u2019 security alliances",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32396",
-        "Title": "Russian Forces Capture Piskunovka in Siversk Direction",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.france24.com/en/africa/20260702-unprecedented-images-russia-using-drones-war-ukraine-africa",
@@ -28,8 +21,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://t.me/intelslava/89698",
+        "Title": "Sudanese Forces Down UAE-Backed Drone in White Nile State",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,11 +49,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://t.me/southfronteng/61697",
+        "Title": "Russia Thwarts Ukraine Counterattack In Konstantinovka",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.theguardian.com/world/2026/jul/02/venezuelan-man-pulled-alive-from-collapsed-basement-eight-days-after-earthquakes",
@@ -60,13 +67,6 @@
         "Title": "Russia Strikes OKWINE Warehouse",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/02/job-seekers-giving-up-labor-force-participation-rate-falls-to-lowest-in-50-years-outside-of-covid-era.html",
-        "Title": "Job seekers giving up: Labor force participation rate falls to lowest in 50 years, outside of Covid era",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
