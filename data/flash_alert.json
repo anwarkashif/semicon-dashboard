@@ -1,23 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Russia's Rubin Communications Hub in Moscow",
+        "Title": "Russia Fires Ballistic Missile at Dnipro, Ukraine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNR0lNUjVaWDFGdTNrUC1yZl9rRG91Zkx6dzRuNGNYU3JDZUJISW5LdUxjZ29EUDQ4Wmt4MTFuZEdLSnVoWW1jUDJ5WEgtM3RSUnU0aGdvMEEzUjBVWWxhTE5wOFZOWS1oYVIwcnhZQmJSLXZNWVFUelRWVURDYVEyUld3dVdGSWd1VERtTEswNHdPZFFKUS1nWGN3N2JaMTJoUVpiczVB?oc=5",
-        "Title": "Trump says the US will not let China take over Panama Canal - Reuters",
+        "Source": "https://www.theguardian.com/world/live/2026/jul/02/russia-strikes-ukraine-war-kyiv-volodymyr-zelenskyy-europe-latest-news-updates",
+        "Title": "Russian strikes on Kyiv kill at least 13 \u2013 Europe live",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/2/german-prosecutors-charge-ukrainian-suspect-over-nord-stream-explosions?traffic_source=rss",
-        "Title": "German prosecutors charge Ukrainian suspect over Nord Stream explosions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,15 +21,22 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.aljazeera.com/news/2026/7/2/german-prosecutors-charge-ukrainian-suspect-over-nord-stream-explosions?traffic_source=rss",
+        "Title": "German prosecutors charge Ukrainian suspect over Nord Stream explosions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,15 +49,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://warmonitor.com/",
-        "Title": "CNBC Daily Open: Chips are down, OpenAI's woos the White House, and Russia strikes",
+        "Title": "Oil prices on pace for fourth straight weekly loss as Trump sees progress in U.S.-Iran talks",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
@@ -67,6 +60,13 @@
         "Title": "Survivors look to foreign aid after the earthquakes in Venezuela",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNbTlrVFlvZVBFZzVIR2V3UElQeXNiV0F5dXBLdVdUak1acFRaaFFYd1VaamJWTk5FNVlORTAwZVNoU3J0TTFuTlR4NDNzWEFhUUFQYXdkYVJ2QXhGYjMxTnFtNThERVhyVm12bFVXYkhramJaOEo5cFhkNnRCaS1VbVBqWjNFaExoUUNYWHp5NllSSkZRZ1AyOGN3OGtpYzdJdlNMYkZNd2dCd3JsT01xQTJtX2ZjYTN6aDdEZU9fVHh2aGtLMEY2YjVXM1djanJXSGRFVXlNaEdjSlZnUm1sRUtySGhrVW5vQW5leTdjV04?oc=5",
+        "Title": "Venezuela: Terremotos de junio de 2026 \u2013 Snapshot de situaci\u00f3n (\u00daltima actualizaci\u00f3n: 30 de junio de 2026) - ReliefWeb",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
