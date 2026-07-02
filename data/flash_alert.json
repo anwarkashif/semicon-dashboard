@@ -7,10 +7,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61708",
-        "Title": "Russia Advances in Kupyansk and Slavyansk Areas",
+        "Source": "https://www.twz.com/air/russia-highly-likely-behind-drone-incursions-over-u-s-bases-in-england-report-concludes",
+        "Title": "Russia \u201cHighly Likely\u201d Behind Drone Incursions Over U.S. Bases In England Report Concludes",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "twz.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/nuclear/navys-new-doomsday-plane-delayed-as-watchdog-says-developmental-concerns-are-now-realities",
+        "Title": "Navy\u2019s New \u2018Doomsday Plane\u2019 Delayed As Watchdog Says Developmental Concerns Are Now Realities",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
         "threat_level": "HIGH"
     },
     {
@@ -21,20 +28,6 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/southfronteng/61706",
-        "Title": "US Seeks to Resume Conflict with Iran",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
@@ -42,8 +35,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
-        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -63,10 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/02/saudi-arabia-iran-strait-hormuz-persian-gulf-oil.html",
-        "Title": "Saudi Arabia has ramped up oil shipments through the Strait of Hormuz since U.S.-Iran deal ",
+        "Source": "https://t.me/southfronteng/61708",
+        "Title": "Russia Advances in Kupyansk and Slavyansk Areas",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
