@@ -4,6 +4,48 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "Israeli drone attack wounds people in southern Gaza",
+        "Headline": "Israeli drone attack wounds people in southern Gaza",
+        "Summary": "Israeli drone attack wounds people in southern Gaza",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-drone-attack-wounds-people-southern-gaza",
+        "Title": "Israeli drone attack wounds people in southern Gaza",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-07-02",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran renews Hormuz threats as Doha talks end with cautious progress",
+        "Headline": "Iran renews Hormuz threats as Doha talks end with cautious progress",
+        "Summary": "Iran renews Hormuz threats as Doha talks end with cautious progress",
+        "Risk": "HIGH",
+        "Source": "https://x.com/euronews/status/2072771594909352275",
+        "Title": "Iran renews Hormuz threats as Doha talks end with cautious progress",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-07-02",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "The American administration believed that Israel planned to assassinate Iran's top negotiators",
+        "Headline": "The American administration believed that Israel planned to assassinate Iran's top negotiators",
+        "Summary": "The American administration believed that Israel planned to assassinate Iran's top negotiators",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2072771370828578884",
+        "Title": "The American administration believed that Israel planned to assassinate Iran's top negotiators",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-07-02",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iranian foreign minister hits back at US-led military talks in Bahrain",
         "Headline": "Iranian foreign minister hits back at US-led military talks in Bahrain",
         "Summary": "Iranian foreign minister hits back at US-led military talks in Bahrain",
@@ -469,38 +511,5 @@
         "Title": "Turkish standup comic detained after act calling Erdogan 'dictator' goes viral",
         "Feed_Source": "Premium RSS",
         "Publisher": "al-monitor.com"
-    },
-    {
-        "Date": "July 1, 2026",
-        "Actor": "Canada (Prime Minister Mark Carney), NATO nations",
-        "Action": "Aims to announce founding nations for Defence, Security and Resilience Bank (DSRB)",
-        "Location": "Ankara, Turkey (NATO summit)",
-        "Risk": "Low",
-        "Source": "https://www.al-monitor.com/originals/2026/07/exclusive-canada-aims-announce-10-countries-backing-global-defence-bank-nato",
-        "Title": "Exclusive-Canada aims to announce 10 countries backing global defence bank at NATO summit",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "al-monitor.com"
-    },
-    {
-        "Date": "July 2, 2026",
-        "Actor": "Bahrain, Iran",
-        "Action": "Accused Iran of 808 attacks and warned of risks to Gulf security",
-        "Location": "Bahrain, Gulf region, Iran",
-        "Risk": "High",
-        "Source": "https://x.com/TheNationalNews/status/2072755460680110508",
-        "Title": "Bahrain accuses Iran of 808 attacks and warns of risks to Gulf security",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "July 2, 2026",
-        "Actor": "Iran, US, Israel",
-        "Action": "Began funeral preparations for Supreme Leader Ali Khamenei, killed in US-Israeli airstrikes in February",
-        "Location": "Iran (Mashhad for burial)",
-        "Risk": "High",
-        "Source": "https://x.com/Reuters/status/2072750904848392272",
-        "Title": "Iran begins final preparations for the funeral of Supreme Leader Ali Khamenei, killed in US-Israeli airstrikes in February, with his burial in Mashhad set for July 9",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
     }
 ]
