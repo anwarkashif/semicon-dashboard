@@ -7,36 +7,36 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c621g086ek4o?at_medium=RSS&at_campaign=rss",
-        "Title": "Afghan Taliban launch strikes on border with Pakistan as tensions escalate",
+        "Source": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss",
+        "Title": "At least one killed in major airstrikes on Kyiv",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/europe/20260701-fire-breaks-out-in-central-kyiv-after-explosion-during-air-raid-alert",
-        "Title": "Fire breaks out in central Kyiv after explosion during air raid alert",
+        "Source": "https://www.bbc.co.uk/news/articles/c621g086ek4o?at_medium=RSS&at_campaign=rss",
+        "Title": "Afghan Taliban launch strikes on border with Pakistan as tensions escalate",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/1/us-signs-1-lease-with-israel-to-build-permanent-embassy-in-west-jerusalem?traffic_source=rss",
-        "Title": "US signs $1 lease with Israel to build permanent embassy in West Jerusalem",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "bbc.co.uk",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://t.me/intelslava/89642",
+        "Title": "Russia Threatens Retaliation Over Energy Infrastructure Attack",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -47,6 +47,13 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/07/02/oil-prices-fall-after-us-iran-talks-conclude-in-doha.html",
+        "Title": "Oil falls as easing Middle East tensions send Brent to its worst quarter since 2020",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbTJib2hZSXBEaVdKWWN1ZnJhaGdDTXlfempPUWRMUTJ0b2pkTG1hTmd2Z2ttTF9pS2o2bDM3YXpBWElaSTdnQkhlajRfSXdIVTI0al9RTDVXYXlCWGVxVUdoWHRiQW9YanpvWTlOQTV3Qjh6eWJCQnRYWVcweDc2OFp6QzgtT012dXV5NGgwYk5xWGlaVGUwcHJiUlZTNnVzQlhaWHRWTF9rQUN2RmE4aXp2MVJQUQ?oc=5",
@@ -60,13 +67,6 @@
         "Title": "Alleged member of hacking group Scattered Spider arrested",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.sky.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/02/india-amazon-walmart-flipkart-quick-commerce.html",
-        "Title": "Inside India newsletter: Amazon, Walmart-owned Flipkart get ready to shake upIndia's delivery-in-minutes sector",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
