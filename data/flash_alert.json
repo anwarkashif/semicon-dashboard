@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Lithuania Lifts Ban on Hosting Nuclear Weapons",
+        "Title": "Russian Missiles and Drones Kill 18 in Kyiv Overnight",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,22 +14,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/02/world/middleeast/iran-funeral-ali-khamenei-preparations.html",
-        "Title": "Mass Mournings,6 Days and 2 Countries: Iran Prepares to Bury Supreme Leader",
+        "Source": "https://t.me/rybar_in_english/32385",
+        "Title": "NATO Leaders Gather in Ankara for Summit",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jul/02/russia-mounted-drone-surveillance-of-european-nuclear-sites-over-18-months",
-        "Title": "Russia \u2018mounted drone surveillance of European nuclear sites over 18 months\u2019",
+        "Source": "https://www.france24.com/en/ukraine-s-strikes-on-russian-refineries-highlight-kyiv-s-growing-drone-industry",
+        "Title": "Ukraine's strikes on Russian refineries highlight Kyiv's growing drone industry",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-01",
+        "Title": "Mitsubishi Electric MELSOFT Update Manager SW1DND-UDM-M",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119714",
-        "Title": "Venezuelan Opposition Leader Denied US Support to Return Home",
+        "Source": "https://t.me/nexta_live/119716",
+        "Title": "Russia Desertions Rise as Nine Convicts Flee War Effort",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/united-states-brace-for-unrelenting-heatwave-with-calls-to-stay-safe",
-        "Title": "United States brace for unrelenting heatwave, with calls to stay safe",
+        "Source": "https://warmonitor.com/",
+        "Title": "Far-right French mayor causes outrage after barring staging of play about migrant",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
