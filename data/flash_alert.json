@@ -1,17 +1,24 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes 13 Energy Sites in Occupied Southern Regions",
+        "Title": "Ukrainian Strike Damages Slavyansk Eco Oil Refinery",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.dw.com/en/eu-targets-chinese-imports-amid-trade-talks/a-77800366?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "EU targets Chinese imports amid trade talks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.theguardian.com/australia-news/2026/jul/03/afp-investigating-alleged-war-crimes-committed-by-australian-citizen-serving-in-idf-in-gaza-ntwnfb",
         "Title": "AFP assessing allegation of Gaza war crimes committed by Australian citizen serving in IDF",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89697",
@@ -21,29 +28,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/2/gaza-wars-1000-days-90-of-strip-destroyed-80-seized-by-israel?traffic_source=rss",
-        "Title": "Gaza war\u2019s 1,000 days: 90% of strip \u2018destroyed\u2019, 80% \u2018seized\u2019 by Israel",
+        "Source": "https://t.me/nexta_live/119728",
+        "Title": "Russia Attacks Public Pool in Zaporizhzhia",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://www.france24.com/en/middle-east/20260702-bomb-blast-in-central-damascus-cafe-kills-several",
+        "Title": "Bomb blast in central Damascus cafe kills several",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
         "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/nexta_live/119731",
+        "Title": "Ukraine President Zelensky Threatens Moscow",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.france24.com/en/france/20260702-firefighters-battle-blazes-scorching-southern-france-after-record-heatwave",
         "Title": "Firefighters battle blazes scorching southern France after record heatwave",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/07/02/world/europe/russia-ukraine-military-battlefield.html",
-        "Title": "Even as It Bombards Kyiv, Russia\u2019s Wider Military Campaign Has Largely Stalled",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
