@@ -1,17 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ex-Minister Mandelson Revealed as Russian Spy Contact for Decades",
+        "Title": "Iran Claims Command Over Strait of Hormuz, Rejects US Authority",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.politico.eu/article/vladimir-putin-russia-economy-fuel-crisis-ukraine-attacks/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Putin\u2019s economy is running on fumes after Ukrainian attacks",
+        "Source": "https://www.aljazeera.com/news/2026/7/2/german-prosecutors-charge-ukrainian-suspect-over-nord-stream-explosions?traffic_source=rss",
+        "Title": "German prosecutors charge Ukrainian suspect over Nord Stream explosions",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "HIGH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss",
@@ -25,6 +25,13 @@
         "Title": "Afghan Taliban launch strikes on border with Pakistan as tensions escalate",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89642",
+        "Title": "Russia Threatens Retaliation Over Energy Infrastructure Attack",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -49,24 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/02/oil-prices-fall-after-us-iran-talks-conclude-in-doha.html",
-        "Title": "Oil falls as easing Middle East tensions send Brent to its worst quarter since 2020",
+        "Source": "https://www.cnbc.com/2026/07/02/samsung-sk-hynix-shares-slide-kospi-tech-selloff-nasdaq.html",
+        "Title": "Samsung Electronics, SK Hynix shares tumble over 7% as chip rout spreads from Wall Street",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbTJib2hZSXBEaVdKWWN1ZnJhaGdDTXlfempPUWRMUTJ0b2pkTG1hTmd2Z2ttTF9pS2o2bDM3YXpBWElaSTdnQkhlajRfSXdIVTI0al9RTDVXYXlCWGVxVUdoWHRiQW9YanpvWTlOQTV3Qjh6eWJCQnRYWVcweDc2OFp6QzgtT012dXV5NGgwYk5xWGlaVGUwcHJiUlZTNnVzQlhaWHRWTF9rQUN2RmE4aXp2MVJQUQ?oc=5",
-        "Title": "Ebola Outbreak, DRC and Region, Situation Report #9, July 1, 2026 - ReliefWeb",
+        "Source": "https://www.aljazeera.com/editorial/2026/7/2/on-the-front-line-of-congos-ebola-outbreak?traffic_source=rss",
+        "Title": "On the front line of Congo\u2019s Ebola outbreak",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
