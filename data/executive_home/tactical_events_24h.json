@@ -4,6 +4,48 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "US envoy warns Iran over Hormuz closure",
+        "Headline": "US envoy warns Iran over Hormuz closure",
+        "Summary": "US envoy warns Iran over Hormuz closure",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/us-envoy-warns-iran-over-hormuz-closure",
+        "Title": "US envoy warns Iran over Hormuz closure",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-07-02",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "US says it supports Pakistan&#039;s right to defend itself against &#039;terrorist attacks&#039;",
+        "Headline": "US says it supports Pakistan&#039;s right to defend itself against &#039;terrorist attacks&#039;",
+        "Summary": "US says it supports Pakistan&#039;s right to defend itself against &#039;terrorist attacks&#039;",
+        "Risk": "HIGH",
+        "Source": "https://www.al-monitor.com/originals/2026/07/us-says-it-supports-pakistans-right-defend-itself-against-terrorist-attacks",
+        "Title": "US says it supports Pakistan&#039;s right to defend itself against &#039;terrorist attacks&#039;",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "al-monitor.com"
+    },
+    {
+        "Date": "2026-07-02",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Gaza's breast cancer patients face immediate mastectomies as doctors plead for end to blockade",
+        "Headline": "Gaza's breast cancer patients face immediate mastectomies as doctors plead for end to blockade",
+        "Summary": "Gaza's breast cancer patients face immediate mastectomies as doctors plead for end to blockade",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/gazas-breast-cancer-patients-face-immediate-mastectomies-doctors-plead",
+        "Title": "Gaza's breast cancer patients face immediate mastectomies as doctors plead for end to blockade",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-07-02",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Iranian foreign minister, UN chief call to discuss regional developments",
         "Headline": "Iranian foreign minister, UN chief call to discuss regional developments",
         "Summary": "Iranian foreign minister, UN chief call to discuss regional developments",
@@ -24,20 +66,6 @@
         "Risk": "HIGH",
         "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/jerusalem-governorate-warns-over-israeli-approval-13-new-settlements",
         "Title": "Jerusalem Governorate warns over Israeli approval of 13 new settlements",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "2026-07-02",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Gaza's breast cancer patients face immediate mastectomies as doctors plead for end to blockade",
-        "Headline": "Gaza's breast cancer patients face immediate mastectomies as doctors plead for end to blockade",
-        "Summary": "Gaza's breast cancer patients face immediate mastectomies as doctors plead for end to blockade",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/news/gaza-breat-cancer-patients-immediate-mastectomies-doctors-please%20end-blockade",
-        "Title": "Gaza's breast cancer patients face immediate mastectomies as doctors plead for end to blockade",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "middleeasteye.net"
     },
@@ -480,27 +508,5 @@
         "Title": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
         "Feed_Source": "Maritime Deep Scrape",
         "Publisher": "news.google.com"
-    },
-    {
-        "Date": "2026-07-02",
-        "Actor": "Iran",
-        "Action": "Renewed Hormuz threats as Doha talks ended with cautious progress",
-        "Location": "Strait of Hormuz",
-        "Risk": "Geopolitical tension, energy security",
-        "Source": "https://x.com/euronews/status/2072771594909352275",
-        "Title": "Iran renews Hormuz threats as Doha talks end with cautious progress",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "2026-07-02",
-        "Actor": "Trump administration (United States)",
-        "Action": "Renewed pressure on the International Criminal Court (ICC), denouncing it as 'lawless and illegitimate'",
-        "Location": "Global",
-        "Risk": "International law, US foreign policy",
-        "Source": "https://www.aljazeera.com/news/2026/7/2/trump-administration-renews-pressure-on-international-criminal-court?traffic_source=rss",
-        "Title": "Trump administration renews pressure on International Criminal Court",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "aljazeera.com"
     }
 ]
