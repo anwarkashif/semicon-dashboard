@@ -7,10 +7,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss",
-        "Title": "At least one killed in major airstrikes on Kyiv",
+        "Source": "https://t.me/rybar_in_english/32381",
+        "Title": "Russia Launches Massive Strike on Kiev",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -19,6 +19,13 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.npr.org/2026/07/02/nx-s1-5878887/us-iran-meetings-qatar",
+        "Title": "U.S. and Iran hold separate meetings in Qatar and agree to continue discussions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNR0lNUjVaWDFGdTNrUC1yZl9rRG91Zkx6dzRuNGNYU3JDZUJISW5LdUxjZ29EUDQ4Wmt4MTFuZEdLSnVoWW1jUDJ5WEgtM3RSUnU0aGdvMEEzUjBVWWxhTE5wOFZOWS1oYVIwcnhZQmJSLXZNWVFUelRWVURDYVEyUld3dVdGSWd1VERtTEswNHdPZFFKUS1nWGN3N2JaMTJoUVpiczVB?oc=5",
@@ -49,24 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://warmonitor.com/",
+        "Title": "CNBC Daily Open: Chips are down, OpenAI's woos the White House, and Russia strikes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/2/survivors-look-to-foreign-aid-after-the-earthquakes-in-venezuela?traffic_source=rss",
         "Title": "Survivors look to foreign aid after the earthquakes in Venezuela",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNbTlrVFlvZVBFZzVIR2V3UElQeXNiV0F5dXBLdVdUak1acFRaaFFYd1VaamJWTk5FNVlORTAwZVNoU3J0TTFuTlR4NDNzWEFhUUFQYXdkYVJ2QXhGYjMxTnFtNThERVhyVm12bFVXYkhramJaOEo5cFhkNnRCaS1VbVBqWjNFaExoUUNYWHp5NllSSkZRZ1AyOGN3OGtpYzdJdlNMYkZNd2dCd3JsT01xQTJtX2ZjYTN6aDdEZU9fVHh2aGtLMEY2YjVXM1djanJXSGRFVXlNaEdjSlZnUm1sRUtySGhrVW5vQW5leTdjV04?oc=5",
-        "Title": "Venezuela: Terremotos de junio de 2026 \u2013 Snapshot de situaci\u00f3n (\u00daltima actualizaci\u00f3n: 30 de junio de 2026) - ReliefWeb",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
