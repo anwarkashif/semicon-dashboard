@@ -4,7 +4,7 @@
         "Title": "China Coast Guard Presence Doubles at Scarborough Shoal, Dangerous Encounters Reported",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.aljazeera.com/news/2026/7/2/how-us-iran-war-may-push-gulf-countries-to-diversify-security-alliances?traffic_source=rss",
@@ -21,15 +21,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89698",
-        "Title": "Sudanese Forces Down UAE-Backed Drone in White Nile State",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/2/collateral-damage-73-palestinian-children-israel-shot-in-the-head?traffic_source=rss",
+        "Title": "\u2018Collateral damage\u2019: 73 Palestinian children Israel shot in the head",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,29 +42,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cbsnews.com/news/u-s-helicopter-goes-down-in-arabian-sea-crew-member-missing-navy-says/",
+        "Title": "U.S. helicopter goes down in Arabian Sea, crew member missing, Navy says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://t.me/southfronteng/61697",
         "Title": "Russia Thwarts Ukraine Counterattack In Konstantinovka",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/2026/jul/02/venezuelan-man-pulled-alive-from-collapsed-basement-eight-days-after-earthquakes",
-        "Title": "Venezuelan man saved from collapsed mall eight days after earthquakes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119736",
-        "Title": "Russia Strikes OKWINE Warehouse",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
