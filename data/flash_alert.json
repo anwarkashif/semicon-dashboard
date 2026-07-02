@@ -1,31 +1,24 @@
 [
     {
+        "Source": "https://www.theguardian.com/world/2026/jul/02/russia-mounted-drone-surveillance-of-european-nuclear-sites-over-18-months",
+        "Title": "Russia \u2018mounted drone surveillance of European nuclear sites over 18 months\u2019",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/live/2026/jul/02/russia-strikes-ukraine-war-kyiv-volodymyr-zelenskyy-europe-latest-news-updates",
+        "Title": "Russian strikes on Kyiv kill at least 13 \u2013 Europe live",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Missile and Drone Attack Kills 13 in Kyiv",
+        "Title": "Russia Strikes Dnipro With Iskander-M Ballistic Missile",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.npr.org/2026/07/02/nx-s1-5878887/us-iran-meetings-qatar",
-        "Title": "U.S. and Iran hold separate meetings in Qatar and agree to continue discussions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNR0lNUjVaWDFGdTNrUC1yZl9rRG91Zkx6dzRuNGNYU3JDZUJISW5LdUxjZ29EUDQ4Wmt4MTFuZEdLSnVoWW1jUDJ5WEgtM3RSUnU0aGdvMEEzUjBVWWxhTE5wOFZOWS1oYVIwcnhZQmJSLXZNWVFUelRWVURDYVEyUld3dVdGSWd1VERtTEswNHdPZFFKUS1nWGN3N2JaMTJoUVpiczVB?oc=5",
-        "Title": "Trump says the US will not let China take over Panama Canal - Reuters",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32384",
-        "Title": "Ukraine Seeks 6.6 Billion Euros from European Peace Fund",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,11 +35,25 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.aljazeera.com/news/2026/7/2/the-crisis-is-deep-the-view-from-russia-as-fuel-shortages-worsen?traffic_source=rss",
+        "Title": "\u2018The crisis is deep\u2019: The view from Russia as fuel shortages worsen",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/07/02/world/europe/drone-incursions-europe-russia.html",
+        "Title": "Drones over Europe raise concerns about Russian activities",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/nexta_live/119709",
@@ -60,13 +67,6 @@
         "Title": "Kyiv Service Center Catches Fire",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/live/2026/jul/02/russia-strikes-ukraine-war-kyiv-volodymyr-zelenskyy-europe-latest-news-updates",
-        "Title": "Russian strikes on Kyiv kill at least 13 \u2013 Europe live",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
