@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Launches Three Nights of Strikes on Iran",
+        "Title": "Ukrainian Drone Raid Targets Crimea and Central Russia",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -21,10 +21,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jul/02/china-ethnic-unity-law-denounced-rights-groups",
-        "Title": "China\u2019s ethnic unity law denounced as \u2018forced assimilation\u2019 by rights groups",
+        "Source": "https://www.twz.com/nuclear/navys-new-doomsday-plane-delayed-as-watchdog-says-developmental-concerns-are-now-realities",
+        "Title": "Navy\u2019s New \u2018Doomsday Plane\u2019 Delayed As Watchdog Says Developmental Concerns Are Now Realities",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "twz.com",
         "threat_level": "HIGH"
     },
     {
@@ -35,8 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/07/03/venezuela-earthquakes-death-toll-rises-rescue-efforts-continue.html",
+        "Title": "Venezuela quake toll climbs to 2,595 as damage estimates mount after strongest tremor in a century",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cnbc.com/2026/07/03/kuaishou-shares-fall-after-securing-tencent-funding-for-kling-ai.html",
         "Title": "Kuaishou shares fall after Tencent joins $2.8 billion raise for Kling AI subsidiary",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Oil up slightly ahead of long US weekend as peace efforts hold",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
