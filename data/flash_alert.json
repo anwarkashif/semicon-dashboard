@@ -1,42 +1,21 @@
 [
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Occupation Administrations in Kerch and Feodosia Ordered to Evacuate Documents",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89706",
-        "Title": "US Launches Missiles at Iran from Kuwait",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +28,45 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/can-inspectors-return-to-iran-s-nuclear-sites/a-77819688?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Can inspectors return to Iran's nuclear sites?",
+        "Source": "https://t.me/southfronteng/61716",
+        "Title": "Russia Rejects Ukraine Ceasefire Proposal",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89706",
+        "Title": "US Launches Missiles at Iran from Kuwait",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.politico.eu/article/donald-tusk-tells-kyiv-must-help-repair-ties-with-poland/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Tusk urges Ukraine to do its part to repair ties with Poland",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.france24.com/en/international-red-cross-civilian-suffering-in-sudan-is-not-inevitable",
-        "Title": "International Red Cross:'Civilian suffering in Sudan is not inevitable'",
+        "Source": "https://www.bbc.co.uk/news/articles/cwylkvpl80xo?at_medium=RSS&at_campaign=rss",
+        "Title": "US withdraws troops from Nigeria after Islamic State mission ",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
+        "Publisher": "bbc.co.uk",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/34062",
-        "Title": "Saudi Delegation Visits Iran",
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Ukrainian Drone Strike Destroys Truck in Mariupol",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/features/2026/7/3/dont-eat-your-greens-a-diet-taking-yemen-by-storm-has-doctors-worried?traffic_source=rss",
+        "Title": "Don\u2019t eat your greens? A diet taking Yemen by storm has doctors worried",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
