@@ -1,38 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israel Strikes Lebanon, Violating Ceasefire",
+        "Title": "Occupation Administrations in Kerch and Feodosia Ordered to Evacuate Documents",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/3/mourners-pay-respects-as-irans-slain-leader-ali-khamenei-laid-in-state?traffic_source=rss",
-        "Title": "Mourners pay respects as Iran\u2019s slain leader Ali Khamenei laid in state",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/3/un-sounds-red-alert-over-human-rights-catastrophe-in-sudans-el-obeid?traffic_source=rss",
-        "Title": "UN sounds \u2018red alert\u2019 over human rights catastrophe in Sudan\u2019s el-Obeid",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61712",
-        "Title": "US Strikes Destroy Iranian Radar Systems",
+        "Source": "https://t.me/intelslava/89706",
+        "Title": "US Launches Missiles at Iran from Kuwait",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/europe/20260703-ukraine-russia-faces-challenge-jamming-starlink",
-        "Title": "Russia faces challenges trying to jam Starlink in Ukraine",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -42,8 +21,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-05",
-        "Title": "XZ Utils vulnerability impacting B&R Products",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,15 +42,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Pakistan Leaders Visit Iran",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.dw.com/en/can-inspectors-return-to-iran-s-nuclear-sites/a-77819688?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Can inspectors return to Iran's nuclear sites?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "dw.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/international-red-cross-civilian-suffering-in-sudan-is-not-inevitable",
+        "Title": "International Red Cross:'Civilian suffering in Sudan is not inevitable'",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32429",
-        "Title": "Ukraine Strikes Market in Tokmak",
+        "Source": "https://t.me/Middle_East_Spectator/34062",
+        "Title": "Saudi Delegation Visits Iran",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
