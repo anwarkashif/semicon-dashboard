@@ -16,6 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      
+    # 🛑 CRITICAL FIX: Prevent parallel execution of pipelines to stop merge conflicts
+    concurrency:
+      group: semicon-data-pipeline
+      cancel-in-progress: false
 
     steps:
     - name: Checkout repository
@@ -107,10 +112,14 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git fetch origin main
+        # 🛑 CRITICAL FIX: Attach to the main branch explicitly before pulling to prevent detached HEAD
+        git checkout main
         git add data/
         git commit -m "🤖 Auto-Update: SemicoN Data updated" || true
-        git pull origin main --rebase || true
-        git push
+        # 🛑 CRITICAL FIX: Use strategy-option 'ours' to auto-resolve conflicts without rebasing
+        git pull origin main -X ours --no-rebase || true
+        git push origin main
         
     - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_weekly_brief'
