@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Intelligence Warns Poland of Russian Armed Provocation With Belarus",
+        "Title": "Russian Strikes Kill 17, Injure 125 Across Four Ukrainian Oblasts",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -11,6 +11,13 @@
         "Title": "US Strikes Destroy Iranian Radar Systems",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/",
+        "Title": "Peace talks paused as Iran gears up for dayslong funeral for slain supreme leader",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -25,20 +32,6 @@
         "Title": "EU lawmaker investigating surveillance hacked by Israeli spyware, report says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119775",
-        "Title": "Russian Propagandist Simonyan Claims Assassination Attempts",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/2026/jul/03/spain-conservatives-pp-far-right-vox-party-andalucia-coalition-deal",
+        "Title": "Spain\u2019s conservatives and far-right Vox increase ties with Andaluc\u00eda coalition",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.politico.eu/article/italy-bulgaria-resist-eu-sanctions-patriarch-kirill-russia-orthodox/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Italy joins Bulgaria in resisting EU sanctions against Putin ally Patriarch Kirill",
+        "Source": "https://www.theguardian.com/world/ng-interactive/2026/jul/03/international-rescuers-venezuela-earthquake-hellscape",
+        "Title": "\u2018I can only describe it as a war zone\u2019: the rescuers navigating Venezuela\u2019s post-quake hellscape",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/",
-        "Title": "Peace talks paused as Iran gears up for dayslong funeral for slain supreme leader",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
