@@ -1,21 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Gasoline Shortage Hits Novorossiysk, Russia's Largest Oil Port",
+        "Title": "IAEA Confirms Damage to Fire Station Supporting Zaporizhzhia Nuclear Plant",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZ1JFOEl5RnFBT0phSHFEdGYzeURhcUJCNHM3MFI1czF5Q1d0Y0JXOVNUaEt6cGtTeWowSl9yRjFGNFZrbC02enRzQmpFbUMtNnNrcTVlZ1BfSzdEelAtLTEyS2kyTDhieFJSck5STmFKcWtXU3Rwdzdkb0pKUDVOb0hGOFBpQV85aHNGNFFXakREaXc2dHdLcnYzRVprV0d1aTN1LXMydlZuMFFFbmhPckJRZk5MZw?oc=5",
-        "Title": "EXCLUSIVE: Canada aims to announce 10 countries backing global defence bank at NATO summit - Reuters",
+        "Source": "https://www.cnbc.com/2026/07/03/oman-strait-hormuz-fees-iran-trump.html",
+        "Title": "Oman walks a diplomatic tightrope over Strait of Hormuz fees, creating a \u2018blind spot\u2019 for markets",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "HIGH"
+        "Publisher": "cnbc.com",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32419",
-        "Title": "Ukraine Launches Retaliatory Raid on Crimea",
+        "Source": "https://t.me/nexta_live/119763",
+        "Title": "US Warns Poland of Russian Military Provocation",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -25,20 +25,6 @@
         "Title": "US, Iran talks conclude in Doha, focused on Strait of Hormuz - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.dw.com/en/ai-drones-made-in-germany-see-duty-on-ukraine-s-front-line/a-77804928?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "AI drones made in Germany see duty on Ukraine's front line",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,24 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/07/03/extreme-heat-us-power-grids-july-4-travel.html",
+        "Title": "Extreme heat wave threatens U.S. power grids and July 4 travel",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://warmonitor.com/",
-        "Title": "Global stock markets rise as South Korea jumps, shrugging off chip slump: Live updates",
+        "Title": "Iran Hosts Palestinian Representatives",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/3/at-least-40-killed-in-passenger-bus-crash-in-southwest-pakistan?traffic_source=rss",
-        "Title": "At least 40 killed in passenger bus crash in southwest Pakistan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/3/man-holding-tibetan-flag-dies-after-setting-himself-on-fire-outside-un?traffic_source=rss",
-        "Title": "Man holding Tibetan flag dies after setting himself on fire outside UN",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
