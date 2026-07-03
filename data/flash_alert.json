@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Drone Raid Hits Russian Targets Across Zaporizhzhia and Crimea",
+        "Title": "US Intelligence Warns Poland of Russian Armed Provocation With Belarus",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61712",
+        "Title": "US Strikes Destroy Iranian Radar Systems",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,11 +25,11 @@
         "Title": "EU lawmaker investigating surveillance hacked by Israeli spyware, report says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -35,38 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Peace talks paused as Iran gears up for dayslong funeral for slain supreme leader",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32427",
-        "Title": "US Revitalizes Middle Corridor Amid Iran Tensions",
+        "Source": "https://t.me/nexta_live/119775",
+        "Title": "Russian Propagandist Simonyan Claims Assassination Attempts",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/czrxezg60x1o?at_medium=RSS&at_campaign=rss",
-        "Title": "At least 32 dead after overcrowded bus plunges into ravine in Pakistan",
+        "Source": "https://www.politico.eu/article/italy-bulgaria-resist-eu-sanctions-patriarch-kirill-russia-orthodox/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Italy joins Bulgaria in resisting EU sanctions against Putin ally Patriarch Kirill",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "politico.eu",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/",
+        "Title": "Peace talks paused as Iran gears up for dayslong funeral for slain supreme leader",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
         "threat_level": "WATCH"
     }
 ]
