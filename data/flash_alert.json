@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Houthis Threaten to Strike Saudi Airports Over Airspace Dispute",
+        "Title": "Strait of Hormuz Traffic Plunges 70 Percent Amid Conflict",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,25 +14,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/sports/2026/7/3/gaza-sports-community-pledges-to-continue-legacy-of-killed-goalkeeper?traffic_source=rss",
-        "Title": "Gaza sports community pledges to continue legacy of killed goalkeeper",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://t.me/southfronteng/61716",
         "Title": "Russia Rejects Ukraine Ceasefire Proposal",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-03",
-        "Title": "Gardyn IoT Hub",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.aljazeera.com/sports/2026/7/3/gaza-sports-community-pledges-to-continue-legacy-of-killed-goalkeeper?traffic_source=rss",
+        "Title": "Gaza sports community pledges to continue legacy of killed goalkeeper",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -42,31 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Stand-up comic held for jokes about Erdogan and Islam in Turkey crackdown",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.sky.com/story/two-men-recruited-by-iran-jailed-for-stabbing-iranian-tv-presenter-on-london-street-13559993",
+        "Title": "Two men jailed for stabbing Iranian TV presenter on London street",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.sky.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/rybar_in_english/32434",
         "Title": "Russia Concerned Over Apple Data Collection",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/2026/jul/03/canada-alberta-pipeline",
-        "Title": "New pipeline in Canada to proceed after C$150bn pledged to ease BC and First Nations concerns",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
