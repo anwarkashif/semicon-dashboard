@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "IAEA Confirms Damage to Fire Station Supporting Zaporizhzhia Nuclear Plant",
+        "Title": "Gasoline Shortage Hits Novorossiysk, Russia's Largest Oil Port",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZ1JFOEl5RnFBT0phSHFEdGYzeURhcUJCNHM3MFI1czF5Q1d0Y0JXOVNUaEt6cGtTeWowSl9yRjFGNFZrbC02enRzQmpFbUMtNnNrcTVlZ1BfSzdEelAtLTEyS2kyTDhieFJSck5STmFKcWtXU3Rwdzdkb0pKUDVOb0hGOFBpQV85aHNGNFFXakREaXc2dHdLcnYzRVprV0d1aTN1LXMydlZuMFFFbmhPckJRZk5MZw?oc=5",
@@ -18,13 +18,20 @@
         "Title": "Ukraine Launches Retaliatory Raid on Crimea",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNR2I3cUEydmhlWVB5bmFRM1JuTXZVRHdDVFV6MTFjWHc0V3NFeDBCNFR0ZEJ0U2NjR213NWJwYlQwb0pNQjZmbU1tdlJjRlF2ZUZKZjBBRmpteTM1SUthZV9ESXZpaVRvSVhUaUYxb1lFenoxLUU2MklQd0I1OC1XR1NGSVo4b29CdVZ5ZzQ0QXp4MFdlMnoyRS1Rak0tTVNvYVU1RVhtb29hdENLeldfakJsMHNNaWNkQ0Uw?oc=5",
+        "Title": "US, Iran talks conclude in Doha, focused on Strait of Hormuz - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/cvg53ngvvpxo?at_medium=RSS&at_campaign=rss",
-        "Title": "On the Strait of Hormuz, BBC finds seized ships and shark fishermen as uneasy calm returns",
+        "Source": "https://www.dw.com/en/ai-drones-made-in-germany-see-duty-on-ukraine-s-front-line/a-77804928?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "AI drones made in Germany see duty on Ukraine's front line",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "dw.com",
         "threat_level": "HIGH"
     },
     {
@@ -42,29 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/france/20260703-france-records-2-025-excess-deaths-in-june-heatwave",
-        "Title": "France records 2,025 excess deaths in June heatwave",
+        "Source": "https://warmonitor.com/",
+        "Title": "Global stock markets rise as South Korea jumps, shrugging off chip slump: Live updates",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVnd0WHJkTnk5YWMtVWhQa0ctdzJFU21WMXZfLTNBVTVsbFJNTkg2ZGpoOUI4OFRfamIxTEI1UHhJOTBDb3RseERQQkU0WHd2eW4yVGlidkJJRDVYa2s3bXRsZmxpY29tNHAxYjN4T3JraENmWFZ6Tmp5NGltUnc2bHlUWVpnd3lFdUIzUTMxLXhSbWZMUU11V3V1NkVkak5X?oc=5",
-        "Title": "World Cup fans sue StubHub over cancelled tickets - Reuters",
+        "Source": "https://www.aljazeera.com/news/2026/7/3/at-least-40-killed-in-passenger-bus-crash-in-southwest-pakistan?traffic_source=rss",
+        "Title": "At least 40 killed in passenger bus crash in southwest Pakistan",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/03/world/asia/tibet-self-immolation-united-nations-china.html",
-        "Title": "Tibetan Activist Sets Self on Fire Outside U.N. in Protest Against China",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/3/delcy-rodriguez-responds-to-public-anger-at-government-response?traffic_source=rss",
-        "Title": "Delcy Rodriguez responds to public anger at government response",
+        "Source": "https://www.aljazeera.com/news/2026/7/3/man-holding-tibetan-flag-dies-after-setting-himself-on-fire-outside-un?traffic_source=rss",
+        "Title": "Man holding Tibetan flag dies after setting himself on fire outside UN",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
