@@ -7,11 +7,25 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.twz.com/air/russia-highly-likely-behind-drone-incursions-over-u-s-bases-in-england-report-concludes",
+        "Title": "Russia \u201cHighly Likely\u201d Behind Drone Incursions Over U.S. Bases In England Report Concludes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/warmonitors/44771",
         "Title": "Israel Strikes South Lebanon",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61708",
+        "Title": "Russia Advances in Kupyansk and Slavyansk Areas",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.twz.com/nuclear/navys-new-doomsday-plane-delayed-as-watchdog-says-developmental-concerns-are-now-realities",
@@ -21,15 +35,15 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.twz.com/air/russia-highly-likely-behind-drone-incursions-over-u-s-bases-in-england-report-concludes",
-        "Title": "Russia \u201cHighly Likely\u201d Behind Drone Incursions Over U.S. Bases In England Report Concludes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,29 +56,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/middle-east/20260703-syria-rules-out-military-intervention-in-lebanon-despite-us-pressure",
-        "Title": "Syria rules out military intervention in Lebanon despite US pressure",
+        "Source": "https://warmonitor.com/",
+        "Title": "Oil up slightly ahead of long US weekend as peace efforts hold",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/03/trump-administration-cannot-hold-migrants-without-bond-hearings-past-90-days.html",
-        "Title": "Trump administration cannot hold migrants without bond hearings past 90 days, court rules",
+        "Source": "https://www.cnbc.com/2026/07/03/dollar-heads-for-weekly-drop-as-jobs-data-dims-fed-hike-bets.html",
+        "Title": "Dollar heads for weekly drop as jobs data dims Fed hike bets",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
         "threat_level": "WATCH"
