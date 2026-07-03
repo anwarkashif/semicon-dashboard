@@ -223,11 +223,11 @@ def render_login_screen():
         spacer_left, center_col, spacer_right = st.columns([1, 1.5, 1])
         
         with center_col:
-            # 🛑 FIX: Use standard container instead of form to completely kill the hot-reload parsing glitch
-            with st.container():
+            # 🛑 REVERT: Using st.form prevents rapid keystrokes from crashing the local WebSocket connection
+            with st.form("login_form", border=False):
                 email_input = st.text_input("Email", placeholder="analyst@agency.gov")
                 password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
-                submit_login = st.button("Login", type="primary")
+                submit_login = st.form_submit_button("Login", type="primary", use_container_width=True)
 
             if submit_login:
                 ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "anwarkashif@semirare.in")

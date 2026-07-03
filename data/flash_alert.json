@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
         "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
@@ -21,10 +28,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Ukrainian Strike Damages Vladimir Space Communications Center in Orbita, Russia",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -35,38 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89706",
-        "Title": "US Launches Missiles at Iran from Kuwait",
+        "Source": "https://t.me/rybar_in_english/32432",
+        "Title": "US Urges Taiwan to Develop Drone Production",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.politico.eu/article/donald-tusk-tells-kyiv-must-help-repair-ties-with-poland/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Tusk urges Ukraine to do its part to repair ties with Poland",
+        "Source": "https://warmonitor.com/",
+        "Title": "Entire NSW Labor left calls for controversial anti-protest laws to be scrapped ahead of party conference",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "HIGH"
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/cwylkvpl80xo?at_medium=RSS&at_campaign=rss",
-        "Title": "US withdraws troops from Nigeria after Islamic State mission ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Drone Strike Destroys Truck in Mariupol",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/features/2026/7/3/dont-eat-your-greens-a-diet-taking-yemen-by-storm-has-doctors-worried?traffic_source=rss",
-        "Title": "Don\u2019t eat your greens? A diet taking Yemen by storm has doctors worried",
+        "Source": "https://www.aljazeera.com/sports/2026/7/3/gaza-sports-community-pledges-to-continue-legacy-of-killed-goalkeeper?traffic_source=rss",
+        "Title": "Gaza sports community pledges to continue legacy of killed goalkeeper",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61717",
+        "Title": "Russia Develops Anti-Drone Ammunition",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
