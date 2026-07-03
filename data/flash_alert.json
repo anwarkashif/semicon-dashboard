@@ -1,23 +1,9 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "HIMARS Strike Hits Rocket Engine Facility Near Energomash in Russia",
+        "Title": "IAEA Confirms Damage to Fire Station Supporting Zaporizhzhia Nuclear Plant",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32419",
-        "Title": "Ukraine Launches Retaliatory Raid on Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119751",
-        "Title": "Russia Suffers Infrastructure Damage in Belgorod",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,22 +14,22 @@
         "threat_level": "HIGH"
     },
     {
+        "Source": "https://t.me/rybar_in_english/32419",
+        "Title": "Ukraine Launches Retaliatory Raid on Crimea",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/cvg53ngvvpxo?at_medium=RSS&at_campaign=rss",
+        "Title": "On the Strait of Hormuz, BBC finds seized ships and shark fishermen as uneasy calm returns",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
         "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -54,6 +40,13 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/france/20260703-france-records-2-025-excess-deaths-in-june-heatwave",
+        "Title": "France records 2,025 excess deaths in June heatwave",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVnd0WHJkTnk5YWMtVWhQa0ctdzJFU21WMXZfLTNBVTVsbFJNTkg2ZGpoOUI4OFRfamIxTEI1UHhJOTBDb3RseERQQkU0WHd2eW4yVGlidkJJRDVYa2s3bXRsZmxpY29tNHAxYjN4T3JraENmWFZ6Tmp5NGltUnc2bHlUWVpnd3lFdUIzUTMxLXhSbWZMUU11V3V1NkVkak5X?oc=5",
@@ -67,6 +60,13 @@
         "Title": "Tibetan Activist Sets Self on Fire Outside U.N. in Protest Against China",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/3/delcy-rodriguez-responds-to-public-anger-at-government-response?traffic_source=rss",
+        "Title": "Delcy Rodriguez responds to public anger at government response",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]
