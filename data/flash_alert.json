@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Strikes Kill 17, Injure 125 Across Four Ukrainian Oblasts",
+        "Title": "Israel Strikes Lebanon, Violating Ceasefire",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/3/mourners-pay-respects-as-irans-slain-leader-ali-khamenei-laid-in-state?traffic_source=rss",
+        "Title": "Mourners pay respects as Iran\u2019s slain leader Ali Khamenei laid in state",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/3/un-sounds-red-alert-over-human-rights-catastrophe-in-sudans-el-obeid?traffic_source=rss",
+        "Title": "UN sounds \u2018red alert\u2019 over human rights catastrophe in Sudan\u2019s el-Obeid",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,36 +28,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/",
-        "Title": "Peace talks paused as Iran gears up for dayslong funeral for slain supreme leader",
+        "Source": "https://www.france24.com/en/europe/20260703-ukraine-russia-faces-challenge-jamming-starlink",
+        "Title": "Russia faces challenges trying to jam Starlink in Ukraine",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/3/israel-approves-plan-to-establish-13-new-settlements-in-occupied-west-bank?traffic_source=rss",
-        "Title": "Israel approves plan to establish 13 new settlements in occupied West Bank",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/economy/2026/7/3/eu-lawmaker-investigating-surveillance-hacked-by-israeli-spyware-report-says?traffic_source=rss",
-        "Title": "EU lawmaker investigating surveillance hacked by Israeli spyware, report says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-05",
+        "Title": "XZ Utils vulnerability impacting B&R Products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jul/03/spain-conservatives-pp-far-right-vox-party-andalucia-coalition-deal",
-        "Title": "Spain\u2019s conservatives and far-right Vox increase ties with Andaluc\u00eda coalition",
+        "Source": "https://warmonitor.com/",
+        "Title": "Pakistan Leaders Visit Iran",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/world/ng-interactive/2026/jul/03/international-rescuers-venezuela-earthquake-hellscape",
-        "Title": "\u2018I can only describe it as a war zone\u2019: the rescuers navigating Venezuela\u2019s post-quake hellscape",
+        "Source": "https://t.me/rybar_in_english/32429",
+        "Title": "Ukraine Strikes Market in Tokmak",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
