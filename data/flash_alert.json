@@ -1,28 +1,35 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "IDF Kills Hamas Terror Leader Holding Four Hostages in Gaza",
+        "Title": "Ukraine Drone Raid Hits Russian Targets Across Zaporizhzhia and Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/3/ukraine-strike-hits-belgorod-causing-fire-and-power-outages?traffic_source=rss",
-        "Title": "Ukraine strike hits Belgorod, causing fire and power outages",
+        "Source": "https://www.aljazeera.com/news/2026/7/3/israel-approves-plan-to-establish-13-new-settlements-in-occupied-west-bank?traffic_source=rss",
+        "Title": "Israel approves plan to establish 13 new settlements in occupied West Bank",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.aljazeera.com/economy/2026/7/3/eu-lawmaker-investigating-surveillance-hacked-by-israeli-spyware-report-says?traffic_source=rss",
+        "Title": "EU lawmaker investigating surveillance hacked by Israeli spyware, report says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,31 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/34042",
-        "Title": "Taliban Leaders Visit Iran",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/07/03/world/europe/russia-gas-shortages.html",
-        "Title": "Long Lines for Gas Shatter the Illusion of Normalcy in Wartime Russia",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
         "Source": "https://warmonitor.com/",
-        "Title": "Oman Delegation Arrives in Tehran",
+        "Title": "Peace talks paused as Iran gears up for dayslong funeral for slain supreme leader",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.sky.com/story/calls-for-israeli-pm-netanyahu-and-his-justice-minister-to-be-sanctioned-by-uk-13559852",
-        "Title": "MPs call on foreign secretary to sanction Netanyahu over 'torture' of Palestinian civilians",
+        "Source": "https://t.me/rybar_in_english/32427",
+        "Title": "US Revitalizes Middle Corridor Amid Iran Tensions",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/czrxezg60x1o?at_medium=RSS&at_campaign=rss",
+        "Title": "At least 32 dead after overcrowded bus plunges into ravine in Pakistan",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
