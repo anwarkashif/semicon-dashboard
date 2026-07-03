@@ -87,22 +87,27 @@ def generate_with_rotation(prompt, temperature=0.1):
             print(f"⚠️ {log_msg}")
             logging.warning(log_msg)
             
+            # 🛑 CRITICAL FIX: Instantly pause for 65 seconds if a 429 Quota limit is hit to prevent burning keys
+            if "429" in err_msg or "quota" in err_msg.lower():
+                print("🛑 429 Quota Limit Hit! Forcing strict 65-second API cooldown...")
+                time.sleep(65)
+            else:
+                time.sleep(10)
+            
             if failures >= 2:
                 current_idx += 1
                 failures = 0
                 
                 if current_idx >= len(VALID_KEYS):
-                    print("⏳ All keys exhausted in this cycle. Sleeping 65 seconds for RPM quotas to reset...")
-                    logging.info("All keys exhausted. Sleeping 65s for RPM reset.")
-                    time.sleep(65)
+                    print("⏳ All keys exhausted in this cycle. Sleeping an additional 60 seconds...")
+                    logging.info("All keys exhausted. Sleeping additional 60s.")
+                    time.sleep(60)
                     current_idx = 0
                     global_cycles += 1
                 else:
                     print(f"🔄 Rotating to API Key {current_idx + 1}...")
                     logging.info(f"Rotating to API Key {current_idx + 1}")
                     time.sleep(5)
-            else:
-                time.sleep(15)
                 
     raise Exception("CRITICAL: All API keys exhausted across multiple recovery cycles. Manual intervention required.")
 
