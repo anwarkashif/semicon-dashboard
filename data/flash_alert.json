@@ -1,17 +1,38 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "IDF Kills Hamas Terror Leader Holding Four Hostages in Gaza",
+        "Title": "Israel Strikes Lebanon, Violating Ceasefire",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/3/ukraine-strike-hits-belgorod-causing-fire-and-power-outages?traffic_source=rss",
-        "Title": "Ukraine strike hits Belgorod, causing fire and power outages",
+        "Source": "https://www.aljazeera.com/news/2026/7/3/mourners-pay-respects-as-irans-slain-leader-ali-khamenei-laid-in-state?traffic_source=rss",
+        "Title": "Mourners pay respects as Iran\u2019s slain leader Ali Khamenei laid in state",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/3/un-sounds-red-alert-over-human-rights-catastrophe-in-sudans-el-obeid?traffic_source=rss",
+        "Title": "UN sounds \u2018red alert\u2019 over human rights catastrophe in Sudan\u2019s el-Obeid",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61712",
+        "Title": "US Strikes Destroy Iranian Radar Systems",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/europe/20260703-ukraine-russia-faces-challenge-jamming-starlink",
+        "Title": "Russia faces challenges trying to jam Starlink in Ukraine",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -21,15 +42,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-05",
+        "Title": "XZ Utils vulnerability impacting B&R Products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,31 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/34042",
-        "Title": "Taliban Leaders Visit Iran",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/07/03/world/europe/russia-gas-shortages.html",
-        "Title": "Long Lines for Gas Shatter the Illusion of Normalcy in Wartime Russia",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
         "Source": "https://warmonitor.com/",
-        "Title": "Oman Delegation Arrives in Tehran",
+        "Title": "Pakistan Leaders Visit Iran",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.sky.com/story/calls-for-israeli-pm-netanyahu-and-his-justice-minister-to-be-sanctioned-by-uk-13559852",
-        "Title": "MPs call on foreign secretary to sanction Netanyahu over 'torture' of Palestinian civilians",
+        "Source": "https://t.me/rybar_in_english/32429",
+        "Title": "Ukraine Strikes Market in Tokmak",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.sky.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
