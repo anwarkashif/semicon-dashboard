@@ -7,13 +7,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/03/oman-strait-hormuz-fees-iran-trump.html",
-        "Title": "Oman walks a diplomatic tightrope over Strait of Hormuz fees, creating a \u2018blind spot\u2019 for markets",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://t.me/nexta_live/119763",
         "Title": "US Warns Poland of Russian Military Provocation",
         "Feed_Source": "WAR MONITOR",
@@ -21,11 +14,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNR2I3cUEydmhlWVB5bmFRM1JuTXZVRHdDVFV6MTFjWHc0V3NFeDBCNFR0ZEJ0U2NjR213NWJwYlQwb0pNQjZmbU1tdlJjRlF2ZUZKZjBBRmpteTM1SUthZV9ESXZpaVRvSVhUaUYxb1lFenoxLUU2MklQd0I1OC1XR1NGSVo4b29CdVZ5ZzQ0QXp4MFdlMnoyRS1Rak0tTVNvYVU1RVhtb29hdENLeldfakJsMHNNaWNkQ0Uw?oc=5",
-        "Title": "US, Iran talks conclude in Doha, focused on Strait of Hormuz - Reuters",
+        "Source": "https://www.cnbc.com/2026/07/03/oman-strait-hormuz-fees-iran-trump.html",
+        "Title": "Oman walks a diplomatic tightrope over Strait of Hormuz fees, creating a \u2018blind spot\u2019 for markets",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "cnbc.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/3/ukraine-strike-hits-belgorod-causing-fire-and-power-outages?traffic_source=rss",
+        "Title": "Ukraine strike hits Belgorod, causing fire and power outages",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -35,36 +35,36 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/03/extreme-heat-us-power-grids-july-4-travel.html",
-        "Title": "Extreme heat wave threatens U.S. power grids and July 4 travel",
+        "Source": "https://t.me/Middle_East_Spectator/34042",
+        "Title": "Taliban Leaders Visit Iran",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/34041",
+        "Title": "Iraqi Kurdistan President Visits Tehran",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
         "Source": "https://warmonitor.com/",
-        "Title": "Iran Hosts Palestinian Representatives",
+        "Title": "India Sends High-Ranking Delegation to Tehran",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
