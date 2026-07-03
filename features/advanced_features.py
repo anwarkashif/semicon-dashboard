@@ -118,9 +118,9 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                     try:
                         with open(file_path, 'r') as f:
                             d = json.load(f)
-                            # 🛑 FIX 1: Limit JSON payloads to 20 to prevent timeouts
-                            if isinstance(d, list): d = d[:20]
-                            elif isinstance(d, dict) and 'recent_actions' in d: d['recent_actions'] = d['recent_actions'][:20]
+                            # 🛑 FIX 1: Limit JSON payloads to 50 events for deeper RAG analysis and to prevent timeouts
+                            if isinstance(d, list): d = d[:50]
+                            elif isinstance(d, dict) and 'recent_actions' in d: d['recent_actions'] = d['recent_actions'][:50]
                             context_data += f"\n--- {label} ---\n{json.dumps(d)}\n"
                     except: pass
 
@@ -178,8 +178,8 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                                     
                             context_data += "\nRAW INTELLIGENCE TEXT:\n"
                             context_data += r_text
-                            # 🛑 FIX 1: Limit JSON payloads to 20 to prevent timeouts
-                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:20])}"
+                            # 🛑 FIX 1: Limit JSON payloads to 50 events for deeper RAG analysis and to prevent timeouts
+                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:50])}"
                     except: pass
 
             # 🛑 FIX 2: Decouple system instruction from context payload to protect Google Search API
@@ -404,8 +404,8 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                                     try:
                                         with open(file_path, 'r') as f:
                                             file_data = json.load(f)
-                                            if isinstance(file_data, list): file_data = file_data[:20]
-                                            elif isinstance(file_data, dict) and 'recent_actions' in file_data: file_data['recent_actions'] = file_data['recent_actions'][:20]
+                                            if isinstance(file_data, list): file_data = file_data[:50]
+                                            elif isinstance(file_data, dict) and 'recent_actions' in file_data: file_data['recent_actions'] = file_data['recent_actions'][:50]
                                             context_data += f"\n--- {label} ---\n{json.dumps(file_data)}\n"
                                     except: pass
 
@@ -438,7 +438,7 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                                             d = json.load(file)
                                             context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
                                             context_data += "\nRAW INTELLIGENCE TEXT:\n" + d.get('brief_raw', '')
-                                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:20])}"
+                                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:50])}"
                                     except: pass
 
                             system_instruction = f"""
