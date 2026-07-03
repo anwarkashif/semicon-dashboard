@@ -1,38 +1,38 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Satellite Imagery Shows Damage to Russian Military Communications Center Near Moscow",
+        "Title": "Russia Pounds Sumy Residential Areas with Aerial Bombs and Drones",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.twz.com/news-features/royal-navys-sea-launch-of-combat-proven-nyan-kamikaze-drone-points-to-fleets-hybrid-future",
-        "Title": "Royal Navy\u2019s Sea Launch Of Combat-Proven Nyan Kamikaze Drone Points To Fleet\u2019s \u2018Hybrid\u2019 Future",
+        "Source": "https://www.twz.com/news-features/hardened-aircraft-shelters-at-russian-air-base-in-crimea-damaged-from-ukrainian-drone-strikes",
+        "Title": "Hardened Aircraft Shelters At Russian Air Base In Crimea Damaged From Ukrainian Drone Strikes",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "twz.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119796",
-        "Title": "Russia Concerned About Potential Withdrawal from Crimea",
+        "Source": "https://www.aljazeera.com/news/2026/7/3/israeli-settlers-intensify-attacks-in-west-bank-targeting-water-supplies?traffic_source=rss",
+        "Title": "Israeli settlers intensify attacks in West Bank, targeting water supplies",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/tv-shows/spotlight/20260703-not-a-proxy-war-sudan-civil-war-would-not-go-on-like-this-without-role-of-international-players",
+        "Title": "'Not a proxy war': Sudan civil war 'would not go on like this' without role of international players",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.bbc.co.uk/news/articles/cj0gp88q4l4o?at_medium=RSS&at_campaign=rss",
         "Title": "Polish PM warns critical months ahead in face of Russian threat",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "bbc.co.uk",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32436",
-        "Title": "US Warns Iran of Israeli Strikes on Leaders",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
@@ -42,8 +42,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119799",
-        "Title": "Russia Blocks Most Social Media",
+        "Source": "https://www.npr.org/2026/07/03/nx-s1-5880459/venezuelan-governments-quake-response-is-under-fire",
+        "Title": "Venezuelan government's quake response is under fire",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "npr.org",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/features/2026/7/3/israel-prevents-exiled-palestinian-detainees-from-reuniting-with-their-families?traffic_source=rss",
-        "Title": "Israel prevents exiled Palestinian detainees from reuniting with their families",
+        "Source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOVBVbFVncnN6NnB6c1NMV1JpSjFxX2RfODFnRWVsWEVvRGt2czNtTTlOQ3VWLTFxR1Z5cE1kT19zYmNhUXZlUkZsaEViYmt6YUtaVTlMU1FHOW50eVg1bU5JeFVvclljclNVUjA2My1uUTNFT1FwUG5wQ3lqSDdvV3FUS0pGc0VCMU14YlZCbXcwT2F0bm5xVUt4d0hsUk1ueE9pdjk1NGllcGJOSjRRLTY3dURwRk5kQTdYSXdLMExGQVk?oc=5",
+        "Title": "Mexican president urges responsible World Cup celebrations following deaths after last win - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
