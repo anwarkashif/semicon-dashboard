@@ -17,9 +17,9 @@ jobs:
     permissions:
       contents: write
       
-    # 🛑 CRITICAL FIX: Prevent parallel execution of pipelines to stop merge conflicts
+    # 🛑 MIDDLE GROUND FIX: Task-specific concurrency gives each trigger its own dedicated queue lane
     concurrency:
-      group: semicon-data-pipeline
+      group: semicon-pipeline-${{ github.event.action }}
       cancel-in-progress: false
 
     steps:
