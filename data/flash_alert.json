@@ -1,44 +1,37 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Zaporizhzhia Nuclear Plant Loses Off-Site Power for 21st Time Due to Military Activity",
+        "Title": "Satellite Imagery Shows Damage to Russian Military Communications Center Near Moscow",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.politico.eu/article/eu-sanctions-alexei-navalny-poison-russia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "EU sanctions individuals behind Alexei Navalny poisoning",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/3/yemens-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion?traffic_source=rss",
-        "Title": "Yemen\u2019s Houthis threaten Saudi Arabia after alleged airspace intrusion",
+        "Source": "https://www.twz.com/news-features/royal-navys-sea-launch-of-combat-proven-nyan-kamikaze-drone-points-to-fleets-hybrid-future",
+        "Title": "Royal Navy\u2019s Sea Launch Of Combat-Proven Nyan Kamikaze Drone Points To Fleet\u2019s \u2018Hybrid\u2019 Future",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.france24.com/en/africa/20260703-un-issues-red-alert-over-human-rights-catastrophe-in-sudan-s-el-obeid",
-        "Title": "UN issues 'red alert' over human rights catastrophe in Sudan's El-Obeid",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "twz.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://t.me/nexta_live/119796",
+        "Title": "Russia Concerned About Potential Withdrawal from Crimea",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://www.bbc.co.uk/news/articles/cj0gp88q4l4o?at_medium=RSS&at_campaign=rss",
+        "Title": "Polish PM warns critical months ahead in face of Russian threat",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32436",
+        "Title": "US Warns Iran of Israeli Strikes on Leaders",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -56,15 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119795",
-        "Title": "Russia Fuel Shortage Sparks Violence",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119799",
+        "Title": "Russia Blocks Most Social Media",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/3/heavy-rain-floods-mumbai-during-intense-monsoon-spell?traffic_source=rss",
-        "Title": "Heavy rain floods Mumbai during intense monsoon spell",
+        "Source": "https://www.aljazeera.com/features/2026/7/3/israel-prevents-exiled-palestinian-detainees-from-reuniting-with-their-families?traffic_source=rss",
+        "Title": "Israel prevents exiled Palestinian detainees from reuniting with their families",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
