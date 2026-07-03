@@ -4,6 +4,48 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
+        "Action": "The new bloc is defined by two goals: containing the Iranian threat while also regaining influence in countries dominated by Iranian proxies or allies such as Syria and Lebanon, writes columnist @anchalvohra.",
+        "Headline": "The new bloc is defined by two goals: containing the Iranian threat while also regaining influence in countries dominated by Iranian proxies or allies such as Syria and Lebanon, writes columnist @anchalvohra.",
+        "Summary": "The new bloc is defined by two goals: containing the Iranian threat while also regaining influence in countries dominated by Iranian proxies or allies such as Syria and Lebanon, writes columnist @anchalvohra.",
+        "Risk": "HIGH",
+        "Source": "https://x.com/ForeignPolicy/status/2072983803602121071",
+        "Title": "The new bloc is defined by two goals: containing the Iranian threat while also regaining influence in countries dominated by Iranian proxies or allies such as Syria and Lebanon, writes columnist @anchalvohra.",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-07-03",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Israel approves plan to establish 13 new settlements in occupied West Bank",
+        "Headline": "Israel approves plan to establish 13 new settlements in occupied West Bank",
+        "Summary": "Israel approves plan to establish 13 new settlements in occupied West Bank",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/2026/7/3/israel-approves-plan-to-establish-13-new-settlements-in-occupied-west-bank?traffic_source=rss",
+        "Title": "Israel approves plan to establish 13 new settlements in occupied West Bank",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
+        "Date": "2026-07-03",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "\"I feel most at home among the left-wing Israelis in Paris\"",
+        "Headline": "\"I feel most at home among the left-wing Israelis in Paris\"",
+        "Summary": "\"I feel most at home among the left-wing Israelis in Paris\"",
+        "Risk": "HIGH",
+        "Source": "https://x.com/Haaretz/status/2072982700953055551",
+        "Title": "\"I feel most at home among the left-wing Israelis in Paris\"",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-07-03",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
         "Action": "Qalibaf Warns Iran Will Act If US, Israel Fail to Honor Commitments",
         "Headline": "Qalibaf Warns Iran Will Act If US, Israel Fail to Honor Commitments",
         "Summary": "Qalibaf Warns Iran Will Act If US, Israel Fail to Honor Commitments",
@@ -478,38 +520,5 @@
         "Title": "Lithuania moves to end nuclear weapon ban as \u2018situation getting worse\u2019",
         "Feed_Source": "Premium RSS",
         "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "July 2, 2026",
-        "Actor": "United Launch Alliance (ULA), Amazon Leo",
-        "Action": "ULA launched the final Atlas V rocket for Amazon Leo, making the constellation ready for initial continuous service.",
-        "Location": "Cape Canaveral Space Force Station, Florida, USA",
-        "Risk": "Technological, Economic (Space Industry) (Low)",
-        "Source": "https://spacepolicyonline.com/news/atlas-v-launches-more-amazon-leos-with-only-six-starliner-flights-left-on-the-books/",
-        "Title": "Atlas V Launches More Amazon Leos with Only Six Starliner Flights Left on the Books",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "spacepolicyonline.com"
-    },
-    {
-        "Date": "July 2, 2026",
-        "Actor": "NASA",
-        "Action": "NASA awarded approximately $600 million in Commercial Lunar Payload Services (CLPS) contracts to three companies for robotic Moon landers.",
-        "Location": "Moon, US",
-        "Risk": "Technological, Economic (Space Industry) (Medium)",
-        "Source": "https://spacepolicyonline.com/news/nasa-awards-more-clps-contracts-may-send-mars-rover-engineering-model-to-the-moon/",
-        "Title": "NASA Awards More CLPS Contracts, May Send Mars Rover Engineering Model to the Moon",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "spacepolicyonline.com"
-    },
-    {
-        "Date": "July 2, 2026",
-        "Actor": "NASA astronauts, Canadian Space Agency",
-        "Action": "Astronauts successfully replaced a broken 'wrist' joint on the International Space Station's robot arm.",
-        "Location": "International Space Station",
-        "Risk": "Safety (Space), Technological (Medium)",
-        "Source": "https://spaceflightnow.com/2026/06/30/astronauts-operate-on-space-stations-broken-robot-arm/",
-        "Title": "Astronauts \u2018operate\u2019 on space station\u2019s broken robot arm",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "spaceflightnow.com"
     }
 ]
