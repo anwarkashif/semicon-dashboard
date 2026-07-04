@@ -1,17 +1,24 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Feodosia Oil Depot in Crimea Sustains Extensive Damage",
+        "Title": "Medvedev Calls Hormuz Strait a Weapon as Powerful as Nuclear Arms",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/africa/20260704-mali-insurgents-attack-prison-and-multiple-towns-army-says",
+        "Title": "Mali insurgents attack prison and multiple towns, army says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.dw.com/en/trump-set-to-put-nato-unity-to-the-test-at-turkey-summit/a-77824515?maca=en-rss-en-world-4025-xml-mrss",
         "Title": "Trump set to put NATO unity to the test at Turkey summit",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "dw.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89716",
@@ -21,22 +28,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNX2tIVDBRWmhSV3BlZlQ1S1Nub0tyOVNaeDMzLS1ZZEF5UkxxMEVadWhQOUotYndyODdxbXJNcGJrekZaZ0hkcVVBdXZEY0VLRE5hdXdQQ2F3UGNmcWpQdXA5UmVBcjhxM3FkX2dLVGhLXzl2emVPOXBaaGJETTdra2dlbnJ2cm5XUDR2cFZXM2lfZmtodGswU2trRnZ3Qnd1WlRvRVJVWTgzNWFVRzYzb1NPdGttWktwY2RWZkFZZzkwQjRxbnc?oc=5",
-        "Title": "EXCLUSIVE: Inside Taiwan's nightmare scenario: Chinese blockade, earthquake, sabotage and invasion - Reuters",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/4/el-obeid-crisis-could-be-worse-than-el-fasher-warns-ex-un-official?traffic_source=rss",
-        "Title": "\u2018El Obeid crisis could be worse than El Fasher,\u2019 warns ex-UN official",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119819",
-        "Title": "Ukrainian Commander Mocks Putin After Attacks",
+        "Source": "https://www.nytimes.com/2026/07/04/world/americas/world-cup-mexico-tourism-trump.html",
+        "Title": "Trump\u2019s Travel Crackdown Has a Winner: Mexican Tourism",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/southfronteng/61728",
-        "Title": "Russia Deploys T-90M Tank With New Active Protection System",
+        "Source": "https://warmonitor.com/",
+        "Title": "New York Experiences Severe Weather",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/global-development/2026/jul/04/overseas-education-project-for-women-and-girls-axed-by-uk-after-two-years",
-        "Title": "Overseas education project for women and girls axed by UK after two years",
+        "Source": "https://www.france24.com/en/foreign-rescue-workers-help-with-recovering-venezuela-s-quake-victims",
+        "Title": "Foreign rescue workers help with recovering Venezuela's quake victims",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
