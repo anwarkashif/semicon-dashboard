@@ -7,24 +7,24 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNX2tIVDBRWmhSV3BlZlQ1S1Nub0tyOVNaeDMzLS1ZZEF5UkxxMEVadWhQOUotYndyODdxbXJNcGJrekZaZ0hkcVVBdXZEY0VLRE5hdXdQQ2F3UGNmcWpQdXA5UmVBcjhxM3FkX2dLVGhLXzl2emVPOXBaaGJETTdra2dlbnJ2cm5XUDR2cFZXM2lfZmtodGswU2trRnZ3Qnd1WlRvRVJVWTgzNWFVRzYzb1NPdGttWktwY2RWZkFZZzkwQjRxbnc?oc=5",
+        "Title": "EXCLUSIVE: Inside Taiwan's nightmare scenario: Chinese blockade, earthquake, sabotage and invasion - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.npr.org/2026/07/03/nx-s1-5879278/irans-control-of-the-strait-of-hormuz-remains-a-powerful-bargaining-chip",
+        "Title": "Iran's control of the Strait of Hormuz remains a powerful bargaining chip",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.twz.com/news-features/hardened-aircraft-shelters-at-russian-air-base-in-crimea-damaged-from-ukrainian-drone-strikes",
         "Title": "Hardened Aircraft Shelters At Russian Air Base In Crimea Damaged From Ukrainian Drone Strikes",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "twz.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/3/israeli-settlers-intensify-attacks-in-west-bank-targeting-water-supplies?traffic_source=rss",
-        "Title": "Israeli settlers intensify attacks in West Bank, targeting water supplies",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/tv-shows/spotlight/20260703-not-a-proxy-war-sudan-civil-war-would-not-go-on-like-this-without-role-of-international-players",
-        "Title": "'Not a proxy war': Sudan civil war 'would not go on like this' without role of international players",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
         "threat_level": "HIGH"
     },
     {
@@ -37,6 +37,13 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +63,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/3/venezuelas-rodriguez-blames-propaganda-for-quake-response-backlash-2?traffic_source=rss",
-        "Title": "Venezuela\u2019s Rodriguez blames \u2018propaganda\u2019 for quake response backlash",
+        "Source": "https://www.nytimes.com/2026/07/03/world/europe/monaco-bomb-suspect-ukraine-anastasiia-berezovska.html",
+        "Title": "Woman From Ukraine Was Behind Monaco Bomb Attack, Officials Say",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/3/thousands-forced-to-evacuate-in-colorado-as-wildfire-spreads?traffic_source=rss",
-        "Title": "Thousands forced to evacuate in Colorado as wildfire spreads",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
