@@ -1,17 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Drone Strike Sets Fire to Truck Factory in Stavropol, Russia",
+        "Title": "Finland Restricts Gulf of Finland Shipping and Airspace After Ukraine Drone Attack",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/04/uk-france-agree-with-oman-to-ensure-safety-of-its-territorial-waters.html",
-        "Title": "UK and France agree with Oman to ensure safety of its territorial waters",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/4/russia-claims-it-captured-the-strategic-key-ukrainian-city-of-kostiantynivk?traffic_source=rss",
+        "Title": "Russia claims it captured the strategic key Ukrainian city of Kostiantynivk",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "HIGH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.aljazeera.com/news/2026/7/4/saudi-led-coalition-pledges-unprecedented-force-against-houthi-threats?traffic_source=rss",
@@ -21,18 +21,18 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.france24.com/en/africa/20260704-mali-insurgents-attack-prison-and-multiple-towns-army-says",
+        "Title": "Mali insurgents attack prison and multiple towns, army says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.dw.com/en/trump-set-to-put-nato-unity-to-the-test-at-turkey-summit/a-77824515?maca=en-rss-en-world-4025-xml-mrss",
         "Title": "Trump set to put NATO unity to the test at Turkey summit",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "dw.com",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -49,22 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "Source": "https://www.nytimes.com/2026/07/04/world/middleeast/iran-dissidents-crackdown.html",
+        "Title": "Iran Projects Unity to the World While Pursuing a Crackdown at Home",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.sky.com/story/venezuelas-interim-president-delcy-rodriguez-defends-earthquake-response-as-more-than-2500-confirmed-dead-13560045",
+        "Title": "Venezuelan leader hits out at 'disgraceful' misinformation over earthquake response",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.sky.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/nexta_live/119824",
         "Title": "Ukraine Experiences Fatal Accident on Nikolaev-Odessa Highway",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32447",
-        "Title": "Russia Develops Integrated Combat Systems",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
