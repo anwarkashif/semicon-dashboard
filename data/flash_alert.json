@@ -1,17 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ships Divert From US-Patrolled Omani Lane to Iran-Designated Corridor in Strait of Hormuz",
+        "Title": "Ships Leave US-Patrolled Omani Lane, Enter Iran Corridor in Strait of Hormuz",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/4/el-obeid-crisis-could-be-worse-than-el-fasher-warns-ex-un-official?traffic_source=rss",
-        "Title": "\u2018El Obeid crisis could be worse than El Fasher,\u2019 warns ex-UN official",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNX2tIVDBRWmhSV3BlZlQ1S1Nub0tyOVNaeDMzLS1ZZEF5UkxxMEVadWhQOUotYndyODdxbXJNcGJrekZaZ0hkcVVBdXZEY0VLRE5hdXdQQ2F3UGNmcWpQdXA5UmVBcjhxM3FkX2dLVGhLXzl2emVPOXBaaGJETTdra2dlbnJ2cm5XUDR2cFZXM2lfZmtodGswU2trRnZ3Qnd1WlRvRVJVWTgzNWFVRzYzb1NPdGttWktwY2RWZkFZZzkwQjRxbnc?oc=5",
@@ -25,6 +18,20 @@
         "Title": "Putin Visits Battlefield and Vows to Take More of Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/4/el-obeid-crisis-could-be-worse-than-el-fasher-warns-ex-un-official?traffic_source=rss",
+        "Title": "\u2018El Obeid crisis could be worse than El Fasher,\u2019 warns ex-UN official",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-03",
+        "Title": "Gardyn IoT Hub",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,24 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89713",
-        "Title": "Russia Claims Liberation of Konstantinovka",
+        "Source": "https://t.me/intelslava/89716",
+        "Title": "Russia Oil Terminal Attacked in Leningrad Region",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/04/macron-modi-ai-infrastructure-tech-ceos.html",
-        "Title": "Macron and Modi turn on personal charm offensives as France and India race to secure AI investment",
+        "Source": "https://t.me/nexta_live/119813",
+        "Title": "Russia Asks Residents to Limit Car Travel",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/articles/cevlkzer7vdo?at_medium=RSS&at_campaign=rss",
-        "Title": "Brutal heat cancels Fourth of July events, from DC to Philadelphia ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
