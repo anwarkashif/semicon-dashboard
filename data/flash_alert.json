@@ -7,17 +7,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119857",
-        "Title": "Ukrainian Forces Strike Belgorod in Largest Attack",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.aljazeera.com/video/inside-story/2026/7/4/will-economic-pressure-move-the-kremlin-towards-talks-with-kyiv?traffic_source=rss",
         "Title": "Will economic pressure move the Kremlin towards talks with Kyiv?",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5makphc3M0cEVzVVVvaGFwUXlTQ3lDZ2czT3E5RmZpTEI0YzMxUzdpNE9EQ3RpM1RPOGZkMFdYelczRktZLWZ2NW15OEQ5Njd3VGU0dDdEV1BxQVk?oc=5",
+        "Title": "EU sanctions extremist settlers and entities undermining the Two-State Solution - EEAS",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "HIGH"
     },
     {
@@ -35,6 +35,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
         "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
@@ -42,15 +49,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
-        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
