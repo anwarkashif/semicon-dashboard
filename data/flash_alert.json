@@ -4,27 +4,34 @@
         "Title": "Medvedev Calls Hormuz Strait a Weapon as Powerful as Nuclear Arms",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/africa/20260704-mali-insurgents-attack-prison-and-multiple-towns-army-says",
-        "Title": "Mali insurgents attack prison and multiple towns, army says",
+        "Source": "https://www.aljazeera.com/news/2026/7/4/saudi-led-coalition-pledges-unprecedented-force-against-houthi-threats?traffic_source=rss",
+        "Title": "Saudi-led coalition pledges \u2018unprecedented\u2019 force against Houthi threats",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.dw.com/en/trump-set-to-put-nato-unity-to-the-test-at-turkey-summit/a-77824515?maca=en-rss-en-world-4025-xml-mrss",
         "Title": "Trump set to put NATO unity to the test at Turkey summit",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "dw.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/intelslava/89716",
         "Title": "Russia Oil Terminal Attacked in Leningrad Region",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -35,18 +42,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/07/04/uk-france-agree-with-oman-to-ensure-safety-of-its-territorial-waters.html",
+        "Title": "UK and France agree with Oman to ensure safety of its territorial waters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.nytimes.com/2026/07/04/world/americas/world-cup-mexico-tourism-trump.html",
@@ -60,13 +67,6 @@
         "Title": "New York Experiences Severe Weather",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/foreign-rescue-workers-help-with-recovering-venezuela-s-quake-victims",
-        "Title": "Foreign rescue workers help with recovering Venezuela's quake victims",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
