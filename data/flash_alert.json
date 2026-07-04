@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Drones Strike Industrial Facility in Zaporizhzhia",
+        "Title": "Russia Strikes Dnipro With Two Iskander-M Ballistic Missiles",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.dw.com/en/trump-set-to-put-nato-unity-to-the-test-at-turkey-summit/a-77824515?maca=en-rss-en-world-4025-xml-mrss",
@@ -18,21 +18,21 @@
         "Title": "Russia Oil Terminal Attacked in Leningrad Region",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cbsnews.com/video/070326-cbs-evening-news/",
-        "Title": "7/3: CBS Evening News",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/03/world/europe/putin-ukraine-donbas-battlefield-visit.html",
-        "Title": "Putin Visits Battlefield and Vows to Take More of Ukraine",
+        "Source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNX2tIVDBRWmhSV3BlZlQ1S1Nub0tyOVNaeDMzLS1ZZEF5UkxxMEVadWhQOUotYndyODdxbXJNcGJrekZaZ0hkcVVBdXZEY0VLRE5hdXdQQ2F3UGNmcWpQdXA5UmVBcjhxM3FkX2dLVGhLXzl2emVPOXBaaGJETTdra2dlbnJ2cm5XUDR2cFZXM2lfZmtodGswU2trRnZ3Qnd1WlRvRVJVWTgzNWFVRzYzb1NPdGttWktwY2RWZkFZZzkwQjRxbnc?oc=5",
+        "Title": "EXCLUSIVE: Inside Taiwan's nightmare scenario: Chinese blockade, earthquake, sabotage and invasion - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "HIGH"
+        "Publisher": "news.google.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119813",
-        "Title": "Russia Asks Residents to Limit Car Travel",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89713",
-        "Title": "Russia Claims Liberation of Konstantinovka",
+        "Source": "https://www.theguardian.com/global-development/2026/jul/04/overseas-education-project-for-women-and-girls-axed-by-uk-after-two-years",
+        "Title": "Overseas education project for women and girls axed by UK after two years",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
