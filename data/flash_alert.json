@@ -1,44 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Expands Drone Site in Oryol Region, Satellite Imagery Shows",
+        "Title": "Russia Ready to Continue Strategic Partnership With Iran, Medvedev Says",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61742",
-        "Title": "Saudi Arabia Threatens Force Against Houthi Attacks",
+        "Source": "https://t.me/nexta_live/119857",
+        "Title": "Ukrainian Forces Strike Belgorod in Largest Attack",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/4/at-least-7-palestinians-killed-by-israeli-forces-over-past-48-hours-in-gaza?traffic_source=rss",
-        "Title": "At least 7 Palestinians killed by Israeli forces over past 48 hours in Gaza",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61740",
-        "Title": "Turkey Tests Ballistic Missile in Black Sea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -49,22 +21,50 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119855",
-        "Title": "Russia Moves Putin's Yacht to Murmansk",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61742",
+        "Title": "Saudi Arabia Threatens Force Against Houthi Attacks",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61740",
+        "Title": "Turkey Tests Ballistic Missile in Black Sea",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61743",
+        "Title": "Russia Targets Ukrainian Fuel Logistics",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/southfronteng/61737",
-        "Title": "Ukraine Recruits Foreign Mercenaries Amid Conflict",
+        "Source": "https://t.me/Middle_East_Spectator/34118",
+        "Title": "Iranian Protesters Chant in Tehran",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
