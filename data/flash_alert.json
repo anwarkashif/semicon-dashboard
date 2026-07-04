@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Belbek Airbase in Crimea, Destroys Russian MiG-29",
+        "Title": "Ukraine Strikes Russian Research Institute in Penza",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,29 +14,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jul/04/el-obeid-aid-workers-sudan-war-drone-strikes",
-        "Title": "\u2018The situation is terrible\u2019: aid workers on life in Sudanese city pummelled by drone strikes",
+        "Source": "https://www.npr.org/2026/07/04/g-s1-131994/chinas-military-promotes-2-new-generals-after-anti-corruption-purge-thins-ranks",
+        "Title": "China's military promotes 2 new generals after anti-corruption purge thins ranks",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "NATO Summit Defence Industry Forum, 07-Jul-2026 | NATO Event - North Atlantic Treaty Organization | NATO",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "npr.org",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://t.me/Middle_East_Spectator/34107",
+        "Title": "Iran Appoints New IRGC-Navy Commander",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "NATO Summit Defence Industry Forum, 07-Jul-2026 | NATO Event - North Atlantic Treaty Organization | NATO",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://t.me/southfronteng/61736",
         "Title": "Yemeni Fraudster Sparks Tribal Conflict in Sanaa",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119841",
-        "Title": "Russia Factory Fire Hits Stavropol",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/video/20260704-mali-government-says-rebels-attacking-northern-towns",
-        "Title": "Mali government says rebels attacking northern towns",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
