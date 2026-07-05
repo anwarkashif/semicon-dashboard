@@ -453,3 +453,62 @@
 2026-07-05 11:33:55,332 - INFO - Rotating to API Key 2
 2026-07-05 11:34:00,373 - INFO - AFC is enabled with max remote calls: 10.
 2026-07-05 11:34:43,224 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-05 23:31:42,501 - INFO - Redirecting https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdEVDSHhJWTFHenhMWWZDS2NJUmRYbE9yZkJ3MkZsRmV1M2F0c1dNNTIyaG9DbXNkWjFEM1pObkthWksxTEtHb2lJa0FRLXN2TExGaUNVSDgtLW1xbUZrM2YyM1lPbFFPWnplS2pCbWsxdHJoNWlOWFJQWFFPS0RUQzBLNElXNzdkRmt2NXl3Z1ljRGEyWDQwVWlWQlU4bUUyWGhoVTNOU0Myd3lwMlFNUGRDTWdWbF80NzdJQWRhcjlrWms?oc=5 -> https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdEVDSHhJWTFHenhMWWZDS2NJUmRYbE9yZkJ3MkZsRmV1M2F0c1dNNTIyaG9DbXNkWjFEM1pObkthWksxTEtHb2lJa0FRLXN2TExGaUNVSDgtLW1xbUZrM2YyM1lPbFFPWnplS2pCbWsxdHJoNWlOWFJQWFFPS0RUQzBLNElXNzdkRmt2NXl3Z1ljRGEyWDQwVWlWQlU4bUUyWGhoVTNOU0Myd3lwMlFNUGRDTWdWbF80NzdJQWRhcjlrWms?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-05 23:31:42,613 - WARNING - discarding data: None
+2026-07-05 23:31:42,820 - INFO - Redirecting https://news.google.com/rss/articles/CBMiUEFVX3lxTFA1Nzc4aFhEdnh1eEhVTXpFQU8teEhoODNwNVRoZHpnbVhkOUNCZWRkT0owbUx6WlF0SGFha0tLQy1WdGN5VDhydU00UXpLX0sz?oc=5 -> https://news.google.com/rss/articles/CBMiUEFVX3lxTFA1Nzc4aFhEdnh1eEhVTXpFQU8teEhoODNwNVRoZHpnbVhkOUNCZWRkT0owbUx6WlF0SGFha0tLQy1WdGN5VDhydU00UXpLX0sz?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-05 23:31:42,927 - WARNING - discarding data: None
+2026-07-05 23:31:43,158 - INFO - Redirecting https://news.google.com/rss/articles/CBMiuwFBVV95cUxPajNjTUYxNXhEOFVMNDdMWmp6NHRRelA0cmM0Q3NMYWJRWmpBQXdyYnVHbEx4R084NGtvSGV2NnJoZW1IQ0VzN3NIeUszMlliVnR2a2tnc0lmeVlRbzBEVlVPV085TWJTbW4yamlSNkZCaGI0YTV3cjVkTlY3MlctOFJKOTR4Ry02TzE3ZTZhdUs5QnlWYUtnVTZ0bEZrMDZ1RHhvOXY5bWZIWE1yb1hrWXktN19EV3dORGtZ?oc=5 -> https://news.google.com/rss/articles/CBMiuwFBVV95cUxPajNjTUYxNXhEOFVMNDdMWmp6NHRRelA0cmM0Q3NMYWJRWmpBQXdyYnVHbEx4R084NGtvSGV2NnJoZW1IQ0VzN3NIeUszMlliVnR2a2tnc0lmeVlRbzBEVlVPV085TWJTbW4yamlSNkZCaGI0YTV3cjVkTlY3MlctOFJKOTR4Ry02TzE3ZTZhdUs5QnlWYUtnVTZ0bEZrMDZ1RHhvOXY5bWZIWE1yb1hrWXktN19EV3dORGtZ?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-05 23:31:43,262 - WARNING - discarding data: None
+2026-07-05 23:31:44,092 - INFO - Redirecting https://news.google.com/rss/articles/CBMirwFBVV95cUxPUGQyd3dNbWNWTEU3c3lHTTdVU0VqdkI4YWFaUjNWLWxlek8xb1dhaGt4ajBValFLUW81TVJOaXdOSWt5U0I2ajRPNjg1VDQ5dkVSWWVHNWhPejFWN2xWQ2JxQ2tyM3BoYkRmeFU1bi1uNFhUMTF1dlRyVEVrSEN5OWdROEpfejdmV0xWNWtObk9OcS1Vbzg0UVNBbUNkb3lUM1ctZFpBZHEwNl9FR0RZ?oc=5 -> https://news.google.com/rss/articles/CBMirwFBVV95cUxPUGQyd3dNbWNWTEU3c3lHTTdVU0VqdkI4YWFaUjNWLWxlek8xb1dhaGt4ajBValFLUW81TVJOaXdOSWt5U0I2ajRPNjg1VDQ5dkVSWWVHNWhPejFWN2xWQ2JxQ2tyM3BoYkRmeFU1bi1uNFhUMTF1dlRyVEVrSEN5OWdROEpfejdmV0xWNWtObk9OcS1Vbzg0UVNBbUNkb3lUM1ctZFpBZHEwNl9FR0RZ?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-05 23:31:44,206 - WARNING - discarding data: None
+2026-07-05 23:31:44,414 - INFO - Redirecting https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbXpacGRvV3JySFREMFo5cTBIMzJxT0JtSHpFclhaWDVvZlhENHVfeDJ3R1I2TUUzREUySXE3RFhzSVRrTmYyYkdWN19VZmJiZnhUbTA0UWZDRE9FVTVNb3EzWjRwUElsQ1ltWHBzR1BwQzBHWUdPbFJOV2NIdEhyTzI2dW96aWN1VlJSOFZLYVA1TDhHTkx4TkpnNWk1aFVKM3VwdnNlM1hDdw?oc=5 -> https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbXpacGRvV3JySFREMFo5cTBIMzJxT0JtSHpFclhaWDVvZlhENHVfeDJ3R1I2TUUzREUySXE3RFhzSVRrTmYyYkdWN19VZmJiZnhUbTA0UWZDRE9FVTVNb3EzWjRwUElsQ1ltWHBzR1BwQzBHWUdPbFJOV2NIdEhyTzI2dW96aWN1VlJSOFZLYVA1TDhHTkx4TkpnNWk1aFVKM3VwdnNlM1hDdw?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-05 23:31:44,519 - WARNING - discarding data: None
+2026-07-05 23:31:44,747 - INFO - Redirecting https://news.google.com/rss/articles/CBMijwFBVV95cUxOSEVoYlRQN0czVFhfSXYzUkFNUmw0c0gwRnJDMTVrT2NTNkQ1dFdfeXVxSDZmbmFaZEQzbF9ydTNoMllTZmgzb0E5M3NYQWdjZDhKaExMT0lqSGZMclhrc1VDeks4X2QtYjI2aFR2OWVIVU8ySnBvUWFMODFFYkg2eHZmNUlwTnZiR0hSYURJcw?oc=5 -> https://news.google.com/rss/articles/CBMijwFBVV95cUxOSEVoYlRQN0czVFhfSXYzUkFNUmw0c0gwRnJDMTVrT2NTNkQ1dFdfeXVxSDZmbmFaZEQzbF9ydTNoMllTZmgzb0E5M3NYQWdjZDhKaExMT0lqSGZMclhrc1VDeks4X2QtYjI2aFR2OWVIVU8ySnBvUWFMODFFYkg2eHZmNUlwTnZiR0hSYURJcw?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-05 23:31:44,854 - WARNING - discarding data: None
+2026-07-05 23:31:45,311 - ERROR - download error: https://monitorthesituation.com/ HTTPSConnectionPool(host='monitorthesituation.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='monitorthesituation.com', port=443): Failed to resolve 'monitorthesituation.com' ([Errno -5] No address associated with hostname)"))
+2026-07-05 23:31:45,326 - ERROR - download error: https://monitorthesituation.com/ HTTPSConnectionPool(host='monitorthesituation.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='monitorthesituation.com', port=443): Failed to resolve 'monitorthesituation.com' ([Errno -5] No address associated with hostname)"))
+2026-07-05 23:31:45,447 - ERROR - download error: https://monitorthesituation.com/ HTTPSConnectionPool(host='monitorthesituation.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='monitorthesituation.com', port=443): Failed to resolve 'monitorthesituation.com' ([Errno -5] No address associated with hostname)"))
+2026-07-05 23:31:45,493 - ERROR - download error: https://monitorthesituation.com/ HTTPSConnectionPool(host='monitorthesituation.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='monitorthesituation.com', port=443): Failed to resolve 'monitorthesituation.com' ([Errno -5] No address associated with hostname)"))
+2026-07-05 23:31:45,609 - ERROR - download error: https://monitorthesituation.com/ HTTPSConnectionPool(host='monitorthesituation.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='monitorthesituation.com', port=443): Failed to resolve 'monitorthesituation.com' ([Errno -5] No address associated with hostname)"))
+2026-07-05 23:31:50,396 - ERROR - not a 200 response: 403 for URL https://www.nytimes.com/2026/07/05/world/middleeast/israel-court-netanyahu-clash.html
+2026-07-05 23:32:56,499 - WARNING - Retrying (Retry(total=0, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.tasnimnews.ir', port=443): Read timed out. (read timeout=30)")': /en/news/2026/07/05/3640515/ejei-reappointed-as-chief-of-iran-s-judiciary
+2026-07-05 23:32:59,141 - ERROR - download error: https://www.tasnimnews.ir/en/news/2026/07/05/3640515/ejei-reappointed-as-chief-of-iran-s-judiciary HTTPSConnectionPool(host='www.tasnimnews.ir', port=443): Max retries exceeded with url: /en/news/2026/07/05/3640515/ejei-reappointed-as-chief-of-iran-s-judiciary (Caused by ResponseError('too many 502 error responses'))
+2026-07-05 23:32:59,954 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:33:00,087 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-05 23:33:00,089 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-05 23:33:15,140 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:33:15,239 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-05 23:33:15,239 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-05 23:33:15,240 - INFO - Rotating to API Key 2
+2026-07-05 23:33:20,279 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:33:20,387 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-05 23:33:20,388 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-05 23:33:35,437 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:33:35,548 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-05 23:33:35,552 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-05 23:33:35,552 - INFO - Rotating to API Key 3
+2026-07-05 23:33:40,591 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:33:41,349 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-07-05 23:33:41,349 - WARNING - API Key 3 Attempt 1 Failed: ServerError - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
+2026-07-05 23:33:56,399 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:34:25,622 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-07-05 23:34:25,623 - WARNING - API Key 3 Attempt 2 Failed: ServerError - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
+2026-07-05 23:34:25,623 - INFO - Rotating to API Key 4
+2026-07-05 23:34:30,663 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:35:47,761 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-05 23:35:47,798 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:35:47,903 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-05 23:35:47,904 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-05 23:36:02,953 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:36:03,045 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-05 23:36:03,046 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-05 23:36:03,046 - INFO - Rotating to API Key 2
+2026-07-05 23:36:08,085 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:36:08,191 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-05 23:36:08,191 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-05 23:36:23,242 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:36:23,354 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-05 23:36:23,355 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-05 23:36:23,355 - INFO - Rotating to API Key 3
+2026-07-05 23:36:28,399 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-05 23:37:06,219 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
