@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Soldiers Claim Unit Wiped Out on Donbas Frontline",
+        "Title": "Trump Blocks Israeli Military Operation in Southern Lebanon",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/4/white-nationalists-march-in-washington-dc-area-during-july-4-festivities?traffic_source=rss",
-        "Title": "White nationalists march in Washington, DC, area during July 4 festivities",
+        "Source": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5makphc3M0cEVzVVVvaGFwUXlTQ3lDZ2czT3E5RmZpTEI0YzMxUzdpNE9EQ3RpM1RPOGZkMFdYelczRktZLWZ2NW15OEQ5Njd3VGU0dDdEV1BxQVk?oc=5",
+        "Title": "EU sanctions extremist settlers and entities undermining the Two-State Solution - EEAS",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "news.google.com",
         "threat_level": "HIGH"
     },
     {
@@ -21,18 +21,11 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/inside-story/2026/7/4/will-economic-pressure-move-the-kremlin-towards-talks-with-kyiv?traffic_source=rss",
-        "Title": "Will economic pressure move the Kremlin towards talks with Kyiv?",
+        "Source": "https://t.me/southfronteng/61743",
+        "Title": "Russia Targets Ukrainian Fuel Logistics",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -56,6 +49,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.aljazeera.com/news/2026/7/4/white-nationalists-march-in-washington-dc-area-during-july-4-festivities?traffic_source=rss",
+        "Title": "White nationalists march in Washington, DC, area during July 4 festivities",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://t.me/warmonitors/44809",
         "Title": "US Orders Evacuation at National Mall Due to Storms",
         "Feed_Source": "WAR MONITOR",
@@ -63,10 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5makphc3M0cEVzVVVvaGFwUXlTQ3lDZ2czT3E5RmZpTEI0YzMxUzdpNE9EQ3RpM1RPOGZkMFdYelczRktZLWZ2NW15OEQ5Njd3VGU0dDdEV1BxQVk?oc=5",
-        "Title": "EU sanctions extremist settlers and entities undermining the Two-State Solution - EEAS",
+        "Source": "https://www.nytimes.com/2026/07/04/world/middleeast/iran-ayatollah-funeral.html",
+        "Title": "Huge Crowds Mass in Tehran for Ayatollah\u2019s State Funeral",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
