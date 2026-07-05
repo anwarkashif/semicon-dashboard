@@ -242,6 +242,12 @@ def render_weekly_archives():
 
             # Render it beautifully
             render_archived_flash_brief(reconstructed_data, brief_title=selected_brief)
+            
+        # 🛑 FIX: Route the West Asia brief to its dedicated renderer instead of failing silently
+        elif "Weekly West Asia Brief" in selected_brief:
+            from features.west_asia_weekly_features import render_west_asia_weekly_brief
+            render_west_asia_weekly_brief(archived_data=archived_data, brief_title=selected_brief)
+            
     else:
         st.warning("No Weekly Archives found.")
 

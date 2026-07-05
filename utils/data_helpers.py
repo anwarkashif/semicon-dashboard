@@ -9,6 +9,10 @@ import datetime
 def get_brief_mappings(directory, archive_category="Weekly Archive"):
     files = glob.glob(f'{directory}/*.json')
     
+    # 🛑 FIX: Explicitly command the scanner to also pull JSONs from the west_asia subfolder
+    if os.path.exists(f'{directory}/west_asia'):
+        files.extend(glob.glob(f'{directory}/west_asia/*.json'))
+        
     files.sort(key=os.path.getmtime, reverse=True)
     
     mapping = {}
