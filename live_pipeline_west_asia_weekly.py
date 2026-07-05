@@ -56,15 +56,23 @@ def generate_with_rotation(prompt, temperature=0.2):
             return raw_txt
         except Exception as e:
             failures += 1
+            err_msg = str(e).lower()
             print(f"⚠️ API Key {current_idx + 1} Attempt {failures} Failed: {str(e)[:100]}")
+            
+            # 🛑 CRITICAL FIX: Instantly pause for 65 seconds if a 429 Quota limit is hit
+            if "429" in err_msg or "quota" in err_msg:
+                print("🛑 429 Quota Limit Hit! Forcing strict 65-second API cooldown...")
+                time.sleep(65)
+            else:
+                time.sleep(10)
+                
             if failures >= 2:
                 current_idx += 1; failures = 0
                 if current_idx >= len(VALID_KEYS):
-                    print("⏳ All keys exhausted. Sleeping 65 seconds for RPM quotas to reset...")
-                    time.sleep(65)
+                    print("⏳ All keys exhausted. Sleeping an additional 60 seconds...")
+                    time.sleep(60)
                     current_idx = 0; global_cycles += 1
                 else: time.sleep(5)
-            else: time.sleep(15)
     raise Exception("CRITICAL: All API keys exhausted across multiple recovery cycles.")
 
 def get_sunday_to_sunday_range():

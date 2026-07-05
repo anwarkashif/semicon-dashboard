@@ -137,8 +137,8 @@ def merge_and_sync(new_events):
             existing_signatures.add(signature)
             added_count += 1
             
-    # Cap Universal pool sizes to prevent token limits from choking downstream LLM analysis scripts
-    existing_events = existing_events[:80]
+    # 🛑 FIX: Lifted the severe 80-item limit to 2000 to retain multi-day history on the frontend
+    existing_events = existing_events[:4500]
             
     with open(UNIVERSAL_POOL_PATH, 'w', encoding='utf-8') as f:
         json.dump(existing_events, f, indent=4)
