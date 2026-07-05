@@ -1,30 +1,37 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Armed Attack Targets Vessel LADY NAEIMA in Bab el Mandeb",
+        "Title": "Israel Kills Two Hamas Fighters in Gaza During Ceasefire",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89748",
-        "Title": "France Develops Robotic Combat Unit with AI",
+        "Source": "https://t.me/nexta_live/119881",
+        "Title": "Poland Allegedly Sends Patriot Missiles to Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.nytimes.com/2026/07/05/world/asia/china-taiwan-east-coast-guard-patrols.html",
         "Title": "China Raises Pressure on Taiwan With Expanded Coast Guard Patrols",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89738",
         "Title": "North Korea Tests Cruise Missiles From Destroyer",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -42,13 +49,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/intelslava/89748",
+        "Title": "France Develops Robotic Combat Unit with AI",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.nytimes.com/2026/07/05/world/asia/ezra-jin-mingri-china-christian-xi-trump.html",
         "Title": "China Frees Pastor Detained in Crackdown on Religion After Trump\u2019s Urging",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119876",
-        "Title": "Russian Citizen Criticizes Putin Over Crimea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
