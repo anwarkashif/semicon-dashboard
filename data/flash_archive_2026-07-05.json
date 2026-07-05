@@ -1,0 +1,696 @@
+{
+    "date": "2026-07-05",
+    "title": "Flash to Brief - 2026-07-05",
+    "brief_raw": "**\ud83c\udfaf BLUF:**\nAPI Generation Timeout. Scanning macro-strategic feeds. Awaiting next telemetry generation cycle...\n\n---\n\n**\ud83d\udea9 TACTICAL INDICATORS:**\nSystem Awaiting Reset. Data Pipeline Intact.\n\n---\n\n**\ud83d\udd78\ufe0f THREAT NARRATIVE:**\nGeneration pending next scheduled cron execution.\n\n---\n\n**\u2696\ufe0f RISK ASSESSMENT:**\nPENDING\n\n---\n\n**\ud83d\udd2d STRATEGIC FORECAST:**\nPENDING",
+    "recent_actions": [
+        {
+            "Date": "2026-07-05",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "A newfound bloc has emerged as a potential winner from the Iran war.",
+            "Headline": "A newfound bloc has emerged as a potential winner from the Iran war.",
+            "Summary": "A newfound bloc has emerged as a potential winner from the Iran war.",
+            "Risk": "HIGH",
+            "Source": "https://x.com/ForeignPolicy/status/2073557555436048489",
+            "Title": "A newfound bloc has emerged as a potential winner from the Iran war.",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Iran's envoy to China says friendly nations to get \u2018special\u2019 Hormuz fee treatment",
+            "Headline": "Iran's envoy to China says friendly nations to get \u2018special\u2019 Hormuz fee treatment",
+            "Summary": "Iran's envoy to China says friendly nations to get \u2018special\u2019 Hormuz fee treatment",
+            "Risk": "HIGH",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/irans-envoy-china-says-friendly-nations-get-special-hormuz-fee-treatment",
+            "Title": "Iran's envoy to China says friendly nations to get \u2018special\u2019 Hormuz fee treatment",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "The 14-point MOU committed the United States to a lot and Iran to a little.",
+            "Headline": "The 14-point MOU committed the United States to a lot and Iran to a little.",
+            "Summary": "The 14-point MOU committed the United States to a lot and Iran to a little.",
+            "Risk": "HIGH",
+            "Source": "https://x.com/ForeignPolicy/status/2073542469094892027",
+            "Title": "The 14-point MOU committed the United States to a lot and Iran to a little.",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Hundreds of thousands of mourners fill Tehran's streets as Iran launch days of funeral ceremonies for Khamenei, blending grief, defiance, chants against US, Israel while country's new leadership seeks to project unity amid fragile postwar tensions",
+            "Headline": "Hundreds of thousands of mourners fill Tehran's streets as Iran launch days of funeral ceremonies for Khamenei, blending grief, defiance, chants against US, Israel while country's new leadership seeks to project unity amid fragile postwar tensions",
+            "Summary": "Hundreds of thousands of mourners fill Tehran's streets as Iran launch days of funeral ceremonies for Khamenei, blending grief, defiance, chants against US, Israel while country's new leadership seeks to project unity amid fragile postwar tensions",
+            "Risk": "HIGH",
+            "Source": "https://x.com/DailySabah/status/2073534879459889229",
+            "Title": "Hundreds of thousands of mourners fill Tehran's streets as Iran launch days of funeral ceremonies for Khamenei, blending grief, defiance, chants against US, Israel while country's new leadership seeks to project unity amid fragile postwar tensions",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "Russian President Vladimir Putin",
+            "Action": "Mulling mass mobilization to rescue Ukraine invasion.",
+            "Location": "Russia, Ukraine",
+            "Risk": "Escalation of Russia-Ukraine War, internal instability in Russia.",
+            "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/putin-may-gamble-on-mobilization-to-rescue-russias-ukraine-invasion/",
+            "Title": "Putin may gamble on mobilization to rescue Russia\u2019s Ukraine invasion",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "atlanticcouncil.org"
+        },
+        {
+            "Date": "2026-06-28",
+            "Actor": "Venezuela's government",
+            "Action": "Struggled to respond to deadly earthquakes, reporting 2,295 deaths.",
+            "Location": "Venezuela",
+            "Risk": "Humanitarian crisis, political instability, government incompetence.",
+            "Source": "https://foreignpolicy.com/2026/07/03/venezuela-earthquakes-rodriguez-machado-politics/",
+            "Title": "Venezuela\u2019s Bungled Earthquake Response",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "foreignpolicy.com"
+        },
+        {
+            "Date": "2026-07-02",
+            "Actor": "Russia",
+            "Action": "Launched missile and drone strikes on Kyiv, killing 21 and wounding over 90.",
+            "Location": "Kyiv, Ukraine",
+            "Risk": "Civilian casualties, escalation of Russia-Ukraine War, infrastructure damage.",
+            "Source": "https://foreignpolicy.com/2026/07/02/russia-ukraine-missiles-drones-kyiv-oil-energy-critical-infrastructure-strikes/",
+            "Title": "Russia\u2019s 11-Hour Assault on Kyiv",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "foreignpolicy.com"
+        },
+        {
+            "Date": "2026-06-01",
+            "Actor": "Pakistan, India",
+            "Action": "Pakistan formally objected to India\u2019s Bhakara Dam expansion, escalating water dispute.",
+            "Location": "South Asia (Indus River Basin)",
+            "Risk": "Water conflict, regional power reordering, collapse of Indus Waters Treaty.",
+            "Source": "https://moderndiplomacy.eu/2026/07/05/indus-waters-treaty-crisis-why-south-asias-power-balance-is-shifting/",
+            "Title": "Indus Waters Treaty Crisis: Why South Asia\u2019s Power Balance Is Shifting",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "moderndiplomacy.eu"
+        },
+        {
+            "Date": "2026-07-03",
+            "Actor": "Ukraine (drones), Russia (Lukoil-Nizhegorodnefteorgsitez refinery)",
+            "Action": "Ukrainian drone attacks damaged Lukoil's Norsi oil refinery, suspending operations.",
+            "Location": "Kstovo, Nizhny Novgorod region, Russia",
+            "Risk": "Fuel crisis in Russia, disruption of energy exports, escalation of Russia-Ukraine War.",
+            "Source": "https://moderndiplomacy.eu/2026/07/04/russias-energy-crisis-an-exporter-becomes-importer/",
+            "Title": "Russia\u2019s Energy Crisis: An Exporter Becomes Importer",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "moderndiplomacy.eu"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "Trump administration (US)",
+            "Action": "Announced annual reviews for USMCA, not renewing in current form, introducing uncertainty.",
+            "Location": "US, Mexico, Canada (USMCA trade deal)",
+            "Risk": "Trade uncertainty for businesses, prolonged negotiation process, potential trade disputes.",
+            "Source": "https://www.worldpoliticsreview.com/india-japan-ties-tech-security/",
+            "Title": "Trump Administration Opts for Annual USMCA Reviews",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "worldpoliticsreview.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "US Supreme Court, President Donald Trump",
+            "Action": "Overturned Trump's Jan 20, 2025 executive order on 14th Amendment citizenship.",
+            "Location": "United States",
+            "Risk": "Political division, legal challenge to executive power, social unrest.",
+            "Source": "https://www.worldpoliticsreview.com/america-250-14th-amendment-birthright-citizenship/",
+            "Title": "America at 250 Is Still a Work in Progress",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "worldpoliticsreview.com"
+        },
+        {
+            "Date": "2026-06-27",
+            "Actor": "US Secretary of State Marco Rubio, Israel, Lebanon",
+            "Action": "Presided over signing of framework agreement to restore Lebanese sovereignty.",
+            "Location": "Middle East (Israel, Lebanon)",
+            "Risk": "Potential for conflicting diplomatic efforts, regional instability.",
+            "Source": "https://www.worldpoliticsreview.com/us-iran-war-israel-lebanon-hezbollah/",
+            "Title": "The U.S. Is Working at Cross-Purposes in Iran and Lebanon",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "worldpoliticsreview.com"
+        },
+        {
+            "Date": "2026-01-01",
+            "Actor": "Spain (Prime Minister Pedro S\u00e1nchez)",
+            "Action": "Launched initiative expanding legal status for over 1 million undocumented immigrants.",
+            "Location": "Spain",
+            "Risk": "Divergence from broader EU immigration policy, potential for increased migration flows to Spain.",
+            "Source": "https://www.worldpoliticsreview.com/spain-migrant-legalization-eu-immigration/",
+            "Title": "Spain Expands Legal Status for Migrants",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "worldpoliticsreview.com"
+        },
+        {
+            "Date": "2026-07-14",
+            "Actor": "Syria (interim President Ahmed al-Sharaa)",
+            "Action": "Appointed 70 members to Syria's transitional parliament; al-Sharaa remains in control.",
+            "Location": "Damascus, Syria",
+            "Risk": "Limited democratic transition, continued authoritarian control, potential for future instability.",
+            "Source": "https://www.worldpoliticsreview.com/syria-parliament-al-sharaa-post-assad-transition/",
+            "Title": "Syria\u2019s New Parliament Leaves al-Sharaa in Control",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "worldpoliticsreview.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "President Donald Trump, acting DNI Bill Pulte",
+            "Action": "Trump gave acting DNI Bill Pulte sweeping authority to declassify records.",
+            "Location": "United States",
+            "Risk": "Exposure of intelligence secrets, damage to foreign relationships, endangerment of personnel.",
+            "Source": "https://www.defenseone.com/policy/2026/07/trump-says-pulte-can-declassify-whatever-he-wants-sparking-fears-exposing-intelligence-secrets/414577/",
+            "Title": "Trump says Pulte can declassify \u2018whatever\u2019 he wants, sparking fears of exposing intelligence secrets",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "defenseone.com"
+        },
+        {
+            "Date": "2026-06-29",
+            "Actor": "Defense Secretary Pete Hegseth (US Pentagon)",
+            "Action": "Ordered creation of DRPM-UxS office to oversee all Pentagon drone and counter-drone efforts.",
+            "Location": "United States (Pentagon)",
+            "Risk": "Centralization of autonomous weapons development, ethical concerns of AI in warfare, potential for rapid deployment.",
+            "Source": "https://www.defenseone.com/defense-systems/2026/07/under-new-management-pentagons-autonomous-systems-get-new-oversight/414584/",
+            "Title": "Under new management: the Pentagon\u2019s autonomous systems get new oversight",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "defenseone.com"
+        },
+        {
+            "Date": "2026-06-18",
+            "Actor": "Defense Secretary Pete Hegseth (Trump administration)",
+            "Action": "Announced 'real review' of America's force posture and basing in Europe, aiming for Europe to lead its own defense.",
+            "Location": "Brussels, Europe",
+            "Risk": "Weakening of NATO, reduced US commitment to European security, potential for increased Russian aggression.",
+            "Source": "https://warontherocks.com/misguided-and-misunderstood-trumps-approach-to-u-s-troops-in-europe/",
+            "Title": "Misguided and Misunderstood: Trump\u2019s Approach to U.S. Troops in Europe",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "warontherocks.com"
+        },
+        {
+            "Date": "2026-01-01",
+            "Actor": "Prime Minister Benjamin Netanyahu (Israel)",
+            "Action": "Reshaping Israeli intelligence agencies (Shin Bet, Mossad).",
+            "Location": "Israel",
+            "Risk": "Potential for undermining democratic institutions, political interference in intelligence.",
+            "Source": "https://warontherocks.com/from-shin-bet-to-mossad-netanyahu-reshapes-israeli-intelligence/",
+            "Title": "From Shin Bet to Mossad, Netanyahu Reshapes Israeli Intelligence",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "warontherocks.com"
+        },
+        {
+            "Date": "2026-07-02",
+            "Actor": "Raymond Greene (US diplomat, American Institute in Taiwan), Taiwan",
+            "Action": "Advocated for Taiwan to develop a 'hornet's nest' of drones for deterrence against China.",
+            "Location": "Taichung, Taiwan",
+            "Risk": "Increased militarization of Taiwan, potential for escalation with China.",
+            "Source": "https://www.c4isrnet.com/industry/techwatch/2026/07/03/taiwan-needs-a-hornets-nest-of-drones-to-deter-conflict-us-diplomat-says/",
+            "Title": "Taiwan needs a \u2018hornet\u2019s nest\u2019 of drones to deter conflict, US diplomat says",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "c4isrnet.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "US Navy (Naval Air Systems Command)",
+            "Action": "Posted RFI seeking industry capability to supply up to 600 Advanced Emission Suppression Missiles per year.",
+            "Location": "United States",
+            "Risk": "Increased military spending, arms race, potential for use in future conflicts.",
+            "Source": "https://www.c4isrnet.com/industry/techwatch/2026/07/02/us-navy-seeks-to-boost-production-of-new-anti-radar-missile/",
+            "Title": "US Navy seeks to boost production of new anti-radar missile",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "c4isrnet.com"
+        },
+        {
+            "Date": "2026-07-02",
+            "Actor": "United States, Nigeria, ISIS",
+            "Action": "US withdrew most forces from Nigeria after May operation against ISIS, now providing intelligence support.",
+            "Location": "Northeastern Nigeria",
+            "Risk": "Continued ISIS threat, regional instability, reliance on intelligence support.",
+            "Source": "https://www.defensenews.com/news/pentagon-congress/2026/07/03/us-withdrew-forces-from-nigeria-after-operation-against-isis-africom-chief-says/",
+            "Title": "US withdrew forces from Nigeria after operation against ISIS, AFRICOM chief says",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "defensenews.com"
+        },
+        {
+            "Date": "2026-07-03",
+            "Actor": "Japan, Italy, UK (Edgewing consortium)",
+            "Action": "Awarded \u00a34.6 billion development contract for GCAP sixth-generation fighter jet.",
+            "Location": "Global (consortium involves multiple countries)",
+            "Risk": "Arms race, increased military spending, technological competition.",
+            "Source": "https://www.defensenews.com/global/europe/2026/07/03/multibillion-dollar-contract-secures-major-step-forward-for-gcap-fighter-jet/",
+            "Title": "Multibillion-dollar contract secures \u2018major step forward\u2019 for GCAP fighter jet",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "defensenews.com"
+        },
+        {
+            "Date": "2026-06-29",
+            "Actor": "Poland, Spain, Airbus",
+            "Action": "Signed memorandum to jointly acquire four Airbus A330 MRTT tanker aircraft.",
+            "Location": "Poland, Spain",
+            "Risk": "Increased military spending, regional arms buildup, European defense integration.",
+            "Source": "https://www.defensenews.com/global/europe/2026/07/03/poland-teams-up-with-spain-to-double-tanker-aircraft-purchase/",
+            "Title": "Poland teams up with Spain to double tanker aircraft purchase",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "defensenews.com"
+        },
+        {
+            "Date": "2026-07-02",
+            "Actor": "European NATO allies, US, NATO",
+            "Action": "European allies largely filled gaps left by US reductions in NATO Force Model.",
+            "Location": "Europe (NATO)",
+            "Risk": "Weakening of NATO cohesion, increased burden on European allies, potential for US disengagement.",
+            "Source": "https://www.defensenews.com/global/europe/2026/07/03/europeans-to-fill-almost-all-gaps-left-by-us-in-nato-defense-plans-source-says/",
+            "Title": "Europeans to fill almost all gaps left by US in NATO defense plans, source says",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "defensenews.com"
+        },
+        {
+            "Date": "2026-07-03",
+            "Actor": "Katalyst Space, NASA",
+            "Action": "Launched LINK on-orbit servicing spacecraft to reboost NASA\u2019s Swift observatory.",
+            "Location": "Earth orbit (space)",
+            "Risk": "High-risk space mission, potential for orbital debris, space infrastructure vulnerability.",
+            "Source": "https://spacepolicyonline.com/news/katalysts-link-on-its-way-to-reboost-swift/",
+            "Title": "Katalyst\u2019s LINK On Its Way to Reboost Swift",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "spacepolicyonline.com"
+        },
+        {
+            "Date": "2026-07-02",
+            "Actor": "United Launch Alliance (ULA), Amazon Leo",
+            "Action": "Launched final Atlas V rocket with 29 Amazon Leo satellites, ending use of Russian RD-180 engines.",
+            "Location": "Cape Canaveral Space Force Station, Florida, US",
+            "Risk": "Space debris, commercial space competition, reliance on satellite internet infrastructure.",
+            "Source": "https://spacepolicyonline.com/news/atlas-v-launches-more-amazon-leos-with-only-six-starliner-flights-left-on-the-books/",
+            "Title": "Atlas V Launches More Amazon Leos with Only Six Starliner Flights Left on the Books",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "spacepolicyonline.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "NASA, Astrobotic (and two other companies)",
+            "Action": "Awarded $600 million in CLPS contracts to three companies for Moon landers.",
+            "Location": "Moon",
+            "Risk": "Space exploration risks, cost overruns, international competition in lunar exploration.",
+            "Source": "https://spacepolicyonline.com/news/nasa-awards-more-clps-contracts-may-send-mars-rover-engineering-model-to-the-moon/",
+            "Title": "NASA Awards More CLPS Contracts, May Send Mars Rover Engineering Model to the Moon",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "spacepolicyonline.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "NASA\u2019s Aerospace Safety Advisory Panel (ASAP), Government Accountability Office (GAO)",
+            "Action": "Raised concerns about ISS future, budget cuts, and potential gap before commercial space stations.",
+            "Location": "International Space Station (ISS)",
+            "Risk": "Space station safety, gap in human spaceflight capability, international cooperation challenges.",
+            "Source": "https://spacepolicyonline.com/news/asap-worries-about-iss-gao-wonders-what-comes-next/",
+            "Title": "ASAP Worries About ISS, GAO Wonders What Comes Next",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "spacepolicyonline.com"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "SpaceX, Besxar Space Industries",
+            "Action": "Falcon 9 rocket launched Starlink satellites and two semiconductor fabrication test beds.",
+            "Location": "Cape Canaveral, Florida, US (space)",
+            "Risk": "Space debris, commercialization of space, potential for dual-use technology.",
+            "Source": "https://spaceflightnow.com/2026/07/04/live-coverage-semiconductor-manufacturing-test-bed-to-fly-alongside-starlink-satellites-on-falcon-9-launch/",
+            "Title": "Live coverage: Semiconductor manufacturing test bed to fly alongside Starlink satellites on Falcon 9 launch",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "spaceflightnow.com"
+        },
+        {
+            "Date": "2026-06-30",
+            "Actor": "NASA astronauts, Canadian Space Agency",
+            "Action": "Replaced broken 'wrist' joint on International Space Station's robot arm during EVA.",
+            "Location": "International Space Station (ISS)",
+            "Risk": "Space station operational safety, reliance on complex robotics, extravehicular activity risks.",
+            "Source": "https://spaceflightnow.com/2026/06/30/astronauts-operate-on-space-stations-broken-robot-arm/",
+            "Title": "Astronauts \u2018operate\u2019 on space station\u2019s broken robot arm",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "spaceflightnow.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "South Korea, Samsung, SK hynix",
+            "Action": "Unveiled sweeping AI and semiconductor investment drive, including $260B by Samsung.",
+            "Location": "South Korea",
+            "Risk": "Global chip supply chain competition, economic dependence on tech, geopolitical leverage.",
+            "Source": "https://semiengineering.com/chip-industry-week-in-review-145/",
+            "Title": "Chip Industry Week In Review",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "semiengineering.com"
+        },
+        {
+            "Date": "2026-07-03",
+            "Actor": "West Papua National Liberation Army (TPNPB), American pilot Nicholas F. Gosselin, Indonesia",
+            "Action": "TPNPB shot dead American pilot and burned plane; Indonesia recovered body.",
+            "Location": "Yahukimo regency, Highland Papua province, Indonesia",
+            "Risk": "Separatist violence, foreign national safety, regional conflict, international incident.",
+            "Source": "https://thediplomat.com/2026/07/indonesia-recovers-body-of-american-pilot-killed-by-papuan-separatists/",
+            "Title": "Indonesia Recovers Body of American Pilot Killed by Papuan Separatists",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "thediplomat.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "China (Beijing Institute of Technology)",
+            "Action": "Developed and demonstrated truck-mounted electromagnetic aircraft launch system for drones.",
+            "Location": "China",
+            "Risk": "Military innovation, dual-use technology, potential for covert military operations, arms proliferation.",
+            "Source": "https://asiatimes.com/2026/07/chinas-truck-drone-launcher-hides-airpower-in-civilian-traffic/",
+            "Title": "China\u2019s truck drone launcher hides airpower in civilian traffic",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "asiatimes.com"
+        },
+        {
+            "Date": "2026-03-01",
+            "Actor": "US Pentagon, Palantir (Maven Smart System)",
+            "Action": "Pentagon made Palantir's Maven Smart System a formal 'program of record', used in 13,500 US strikes in Iran.",
+            "Location": "Iran, United States",
+            "Risk": "Civilian casualties, ethical concerns of AI in warfare, lack of accountability, escalation of conflict.",
+            "Source": "https://asiatimes.com/2026/07/americas-ai-war-machine-has-no-human-stop-rule/",
+            "Title": "America\u2019s AI war machine has no human stop rule",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "asiatimes.com"
+        },
+        {
+            "Date": "2026-07-03",
+            "Actor": "Japanese government (Takaichi government), Bank of Japan",
+            "Action": "Japanese long-term bonds climbed to 2.81%, highest in 30 years, due to fiscal policy concerns.",
+            "Location": "Japan",
+            "Risk": "Economic instability, fiscal policy challenges, central bank independence.",
+            "Source": "https://asiatimes.com/2026/07/honebuto-shock-new-term-coined-as-japan-fiscal-policy-is-probed/",
+            "Title": "\u2018Honebuto shock\u2019: new term coined as Japan fiscal policy is probed",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "asiatimes.com"
+        },
+        {
+            "Date": "2026-07-01",
+            "Actor": "China (Chinese Communist Party), Australia (and other sovereign states)",
+            "Action": "China's new Ethnic Unity and Progress Promotion Law claims legal authority over conduct abroad.",
+            "Location": "Global (with implications for Australia)",
+            "Risk": "Erosion of national sovereignty, suppression of free speech, international legal disputes.",
+            "Source": "https://www.aspistrategist.org.au/even-in-australia-china-is-after-you-its-new-law-criminalises-what-happens-abroad/",
+            "Title": "Even in Australia, China is after you. Its new law criminalises what happens abroad",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "aspistrategist.org.au"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "Ukraine, Russia (St Petersburg, Vysotsk port)",
+            "Action": "Ukrainian drone attack hit St Petersburg oil terminal and Vysotsk port, 72 drones shot down.",
+            "Location": "St Petersburg, Leningrad region, Russia",
+            "Risk": "Fuel shortages in Russia, escalation of Russia-Ukraine War, infrastructure damage.",
+            "Source": "https://gcaptain.com/st-petersburg-oil-terminal-hit-in-major-ukrainian-drone-attack/",
+            "Title": "St Petersburg Oil Terminal Hit In Major Ukrainian Drone Attack",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "gcaptain.com"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "China Coast Guard, Taiwan Coast Guard",
+            "Action": "China launched coast guard patrol east of Taiwan, prompting Taiwan to deploy monitoring vessels.",
+            "Location": "East of Taiwan (China's jurisdictional waters claim)",
+            "Risk": "Escalation of diplomatic dispute, increased tensions in Taiwan Strait, military confrontation.",
+            "Source": "https://gcaptain.com/china-launches-coast-guard-patrol-east-of-taiwan-despite-international-pushback/",
+            "Title": "China Launches\u00a0Coast Guard\u00a0Patrol East Of Taiwan Despite International Pushback",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "gcaptain.com"
+        },
+        {
+            "Date": "2026-05-01",
+            "Actor": "CMA CGM (French shipping group), Iran war (missile)",
+            "Action": "CMA CGM container ship 'San Antonio' hit by missile in Strait of Hormuz, severely damaged.",
+            "Location": "Strait of Hormuz",
+            "Risk": "Shipping disruption, economic impact, regional conflict escalation, maritime security.",
+            "Source": "https://gcaptain.com/cma-cgm-ship-hit-by-missile-in-hormuz-strait-may-go-for-scrapping/",
+            "Title": "CMA CGM Ship Hit By Missile In Hormuz Strait May Go For Scrapping",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "gcaptain.com"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "Physicians for Human Rights Israel (NGO), Israel, Abu Safia (Kamal Adwan Hospital director)",
+            "Action": "NGO warned Abu Safia's life is in danger after months in Israeli detention under 'Unlawful Combatant Law'.",
+            "Location": "Nitzan Prison, Israel (Gaza)",
+            "Risk": "Humanitarian crisis, human rights violations, international condemnation, regional tensions.",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-ngo-warns-gaza-hospital-directors-life-danger-detention",
+            "Title": "Israeli NGO warns Gaza hospital director\u2019s life is in danger in detention",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "Iran, Ali Khamenei (deceased Supreme Leader)",
+            "Action": "Began six-day state funeral for Ali Khamenei, with massive crowds chanting 'Death to America', 'Death to Israel'.",
+            "Location": "Tehran, Iran",
+            "Risk": "Anti-Western sentiment, regional instability, post-war power dynamics, potential for unrest.",
+            "Source": "https://www.middleeasteye.net/news/iran-begins-six-day-state-funeral-ali-khamenei",
+            "Title": "Iran begins six-day state funeral for Ali Khamenei",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "Ukrainian President Volodymyr Zelenskiy, US President Donald Trump",
+            "Action": "Zelenskiy spoke to Trump, called for 'American resolve' to end war with Russia.",
+            "Location": "Ukraine, United States",
+            "Risk": "Continuation of Russia-Ukraine War, geopolitical influence of US, international diplomacy.",
+            "Source": "https://www.al-monitor.com/originals/2026/07/ukraines-zelenskiy-says-he-spoke-trump-calls-american-resolve-help-end-war",
+            "Title": "Ukraine's Zelenskiy says he spoke to Trump, calls for 'American resolve' to help end war",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "al-monitor.com"
+        },
+        {
+            "Date": "2026-07-04",
+            "Actor": "Pope Leo XIV, Europe, US",
+            "Action": "Visited Lampedusa island, urged Europe to protect and integrate migrants, clashing with Trump admin.",
+            "Location": "Lampedusa island, Italy",
+            "Risk": "Humanitarian crisis (migrants), political division over immigration, international relations.",
+            "Source": "https://www.al-monitor.com/originals/2026/07/pope-urges-europe-protect-migrants-visit-island-frontier",
+            "Title": "Pope urges Europe to protect migrants in visit to island frontier",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "al-monitor.com"
+        },
+        {
+            "Date": "2026-07-11",
+            "Actor": "US, Iran",
+            "Action": "Talks set for July 11 in Pakistan to discuss sanctions, frozen funds, and nuclear issues.",
+            "Location": "Pakistan",
+            "Risk": "Diplomatic tensions, nuclear proliferation, regional stability.",
+            "Source": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPcjBQTDQzenhmRmFvRkE0d2xmblI2emkzOGl3QVlhajQwSURHQjMtOU1VV2xaTXFDLWpYV1VGWGpkYTRhbWNSLUZiT3FyX3dQRktlcGt4QWNJczVRY3NzVUdsTUNaVmVrUi1uWjhPWUxlTW82N3FKSEtQX3hYN2F6M1BaNmt4NGxUZHBnQmV4UnZ2U05yYlRqUTlQRlpfYnFIcG5rb0pNUmUzbDM4R3RNc3M3b1BRUzNUNFJBLVotT0t2SWVYNTNfVEN6SE1UYWtKT1B6dTA5dmNuQ1JWY2VfUldjb09fQnlRbnhyYnMwVGllZ05KeUE?oc=5",
+            "Title": "Report: US-Iran talks set for Pakistan on July 11, with sanctions, frozen funds and nuclear issues on agenda | LIVE BLOG - i24NEWS",
+            "Feed_Source": "Google News when:1d",
+            "Publisher": "news.google.com"
+        },
+        {
+            "Date": "2026-07-03",
+            "Actor": "Yemen's Houthis, Saudi Arabia",
+            "Action": "Houthis threatened Saudi Arabia after alleged airspace intrusion.",
+            "Location": "Yemen, Saudi Arabia",
+            "Risk": "Regional conflict escalation, airspace violations, Houthi aggression.",
+            "Source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVTBGcWdZSnBGOE1PY2ZHSm5UN3pfT1BXWldnTXNKZmg0clh5QVE2SGViVk52MWIxaTkyNktEQWNwMVJqdWZPbFdKMzJlbE1jUUY3dnBZVV9icHAzby1zRXk1NjJhcEZhVWhySkdidnhCVXJUZVpsR1dOblpRNUV6Tm1PY0J2UlluQ1hZX2FPcExObENiZk9IRGdaSW1iQ05LWG9OWTdrM0JBTXJ3Y3fSAbMBQVVfeXFMTlRERlY3ZkZzSmFNR0lNdlJfSU9vX2lZWDlyZnYxczhYdmhQVHpWcnZGNjFuSzlFQUJpandRU1lwbEtMNXkwVGFKTnBTSTBvSUdCNVYxdjdzdlRZM1EyS0tETkhienZQSGNQMldkZ0kxemdkVExSRUlhVTFXaEF2VjJ1eUJSX1NxeVQxMnhHTTVkNkJMSWlneEQwSnl2QTdBMUhzUy01YnhONVBBT21zVWJSLTg?oc=5",
+            "Title": "Yemen\u2019s Houthis threaten Saudi Arabia after alleged airspace intrusion - Al Jazeera",
+            "Feed_Source": "Maritime Deep Scrape",
+            "Publisher": "news.google.com"
+        }
+    ],
+    "sources": [
+        {
+            "title": "A newfound bloc has emerged as a potential winner from the Iran war.",
+            "url": "https://x.com/ForeignPolicy/status/2073557555436048489"
+        },
+        {
+            "title": "Iran's envoy to China says friendly nations to get \u2018special\u2019 Hormuz fee treatment",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/irans-envoy-china-says-friendly-nations-get-special-hormuz-fee-treatment"
+        },
+        {
+            "title": "The 14-point MOU committed the United States to a lot and Iran to a little.",
+            "url": "https://x.com/ForeignPolicy/status/2073542469094892027"
+        },
+        {
+            "title": "Hundreds of thousands of mourners fill Tehran's streets as Iran launch days of funeral ceremonies for Khamenei, blending grief, defiance, chants against US, Israel while country's new leadership seeks to project unity amid fragile postwar tensions",
+            "url": "https://x.com/DailySabah/status/2073534879459889229"
+        },
+        {
+            "title": "Putin may gamble on mobilization to rescue Russia\u2019s Ukraine invasion",
+            "url": "https://www.atlanticcouncil.org/blogs/ukrainealert/putin-may-gamble-on-mobilization-to-rescue-russias-ukraine-invasion/"
+        },
+        {
+            "title": "Venezuela\u2019s Bungled Earthquake Response",
+            "url": "https://foreignpolicy.com/2026/07/03/venezuela-earthquakes-rodriguez-machado-politics/"
+        },
+        {
+            "title": "Russia\u2019s 11-Hour Assault on Kyiv",
+            "url": "https://foreignpolicy.com/2026/07/02/russia-ukraine-missiles-drones-kyiv-oil-energy-critical-infrastructure-strikes/"
+        },
+        {
+            "title": "Indus Waters Treaty Crisis: Why South Asia\u2019s Power Balance Is Shifting",
+            "url": "https://moderndiplomacy.eu/2026/07/05/indus-waters-treaty-crisis-why-south-asias-power-balance-is-shifting/"
+        },
+        {
+            "title": "Russia\u2019s Energy Crisis: An Exporter Becomes Importer",
+            "url": "https://moderndiplomacy.eu/2026/07/04/russias-energy-crisis-an-exporter-becomes-importer/"
+        },
+        {
+            "title": "Trump Administration Opts for Annual USMCA Reviews",
+            "url": "https://www.worldpoliticsreview.com/india-japan-ties-tech-security/"
+        },
+        {
+            "title": "America at 250 Is Still a Work in Progress",
+            "url": "https://www.worldpoliticsreview.com/america-250-14th-amendment-birthright-citizenship/"
+        },
+        {
+            "title": "The U.S. Is Working at Cross-Purposes in Iran and Lebanon",
+            "url": "https://www.worldpoliticsreview.com/us-iran-war-israel-lebanon-hezbollah/"
+        },
+        {
+            "title": "Spain Expands Legal Status for Migrants",
+            "url": "https://www.worldpoliticsreview.com/spain-migrant-legalization-eu-immigration/"
+        },
+        {
+            "title": "Syria\u2019s New Parliament Leaves al-Sharaa in Control",
+            "url": "https://www.worldpoliticsreview.com/syria-parliament-al-sharaa-post-assad-transition/"
+        },
+        {
+            "title": "Trump says Pulte can declassify \u2018whatever\u2019 he wants, sparking fears of exposing intelligence secrets",
+            "url": "https://www.defenseone.com/policy/2026/07/trump-says-pulte-can-declassify-whatever-he-wants-sparking-fears-exposing-intelligence-secrets/414577/"
+        },
+        {
+            "title": "Under new management: the Pentagon\u2019s autonomous systems get new oversight",
+            "url": "https://www.defenseone.com/defense-systems/2026/07/under-new-management-pentagons-autonomous-systems-get-new-oversight/414584/"
+        },
+        {
+            "title": "Misguided and Misunderstood: Trump\u2019s Approach to U.S. Troops in Europe",
+            "url": "https://warontherocks.com/misguided-and-misunderstood-trumps-approach-to-u-s-troops-in-europe/"
+        },
+        {
+            "title": "From Shin Bet to Mossad, Netanyahu Reshapes Israeli Intelligence",
+            "url": "https://warontherocks.com/from-shin-bet-to-mossad-netanyahu-reshapes-israeli-intelligence/"
+        },
+        {
+            "title": "Taiwan needs a \u2018hornet\u2019s nest\u2019 of drones to deter conflict, US diplomat says",
+            "url": "https://www.c4isrnet.com/industry/techwatch/2026/07/03/taiwan-needs-a-hornets-nest-of-drones-to-deter-conflict-us-diplomat-says/"
+        },
+        {
+            "title": "US Navy seeks to boost production of new anti-radar missile",
+            "url": "https://www.c4isrnet.com/industry/techwatch/2026/07/02/us-navy-seeks-to-boost-production-of-new-anti-radar-missile/"
+        },
+        {
+            "title": "US withdrew forces from Nigeria after operation against ISIS, AFRICOM chief says",
+            "url": "https://www.defensenews.com/news/pentagon-congress/2026/07/03/us-withdrew-forces-from-nigeria-after-operation-against-isis-africom-chief-says/"
+        },
+        {
+            "title": "Multibillion-dollar contract secures \u2018major step forward\u2019 for GCAP fighter jet",
+            "url": "https://www.defensenews.com/global/europe/2026/07/03/multibillion-dollar-contract-secures-major-step-forward-for-gcap-fighter-jet/"
+        },
+        {
+            "title": "Poland teams up with Spain to double tanker aircraft purchase",
+            "url": "https://www.defensenews.com/global/europe/2026/07/03/poland-teams-up-with-spain-to-double-tanker-aircraft-purchase/"
+        },
+        {
+            "title": "Europeans to fill almost all gaps left by US in NATO defense plans, source says",
+            "url": "https://www.defensenews.com/global/europe/2026/07/03/europeans-to-fill-almost-all-gaps-left-by-us-in-nato-defense-plans-source-says/"
+        },
+        {
+            "title": "Katalyst\u2019s LINK On Its Way to Reboost Swift",
+            "url": "https://spacepolicyonline.com/news/katalysts-link-on-its-way-to-reboost-swift/"
+        },
+        {
+            "title": "Atlas V Launches More Amazon Leos with Only Six Starliner Flights Left on the Books",
+            "url": "https://spacepolicyonline.com/news/atlas-v-launches-more-amazon-leos-with-only-six-starliner-flights-left-on-the-books/"
+        },
+        {
+            "title": "NASA Awards More CLPS Contracts, May Send Mars Rover Engineering Model to the Moon",
+            "url": "https://spacepolicyonline.com/news/nasa-awards-more-clps-contracts-may-send-mars-rover-engineering-model-to-the-moon/"
+        },
+        {
+            "title": "ASAP Worries About ISS, GAO Wonders What Comes Next",
+            "url": "https://spacepolicyonline.com/news/asap-worries-about-iss-gao-wonders-what-comes-next/"
+        },
+        {
+            "title": "Live coverage: Semiconductor manufacturing test bed to fly alongside Starlink satellites on Falcon 9 launch",
+            "url": "https://spaceflightnow.com/2026/07/04/live-coverage-semiconductor-manufacturing-test-bed-to-fly-alongside-starlink-satellites-on-falcon-9-launch/"
+        },
+        {
+            "title": "Astronauts \u2018operate\u2019 on space station\u2019s broken robot arm",
+            "url": "https://spaceflightnow.com/2026/06/30/astronauts-operate-on-space-stations-broken-robot-arm/"
+        },
+        {
+            "title": "Chip Industry Week In Review",
+            "url": "https://semiengineering.com/chip-industry-week-in-review-145/"
+        },
+        {
+            "title": "Indonesia Recovers Body of American Pilot Killed by Papuan Separatists",
+            "url": "https://thediplomat.com/2026/07/indonesia-recovers-body-of-american-pilot-killed-by-papuan-separatists/"
+        },
+        {
+            "title": "China\u2019s truck drone launcher hides airpower in civilian traffic",
+            "url": "https://asiatimes.com/2026/07/chinas-truck-drone-launcher-hides-airpower-in-civilian-traffic/"
+        },
+        {
+            "title": "America\u2019s AI war machine has no human stop rule",
+            "url": "https://asiatimes.com/2026/07/americas-ai-war-machine-has-no-human-stop-rule/"
+        },
+        {
+            "title": "\u2018Honebuto shock\u2019: new term coined as Japan fiscal policy is probed",
+            "url": "https://asiatimes.com/2026/07/honebuto-shock-new-term-coined-as-japan-fiscal-policy-is-probed/"
+        },
+        {
+            "title": "Even in Australia, China is after you. Its new law criminalises what happens abroad",
+            "url": "https://www.aspistrategist.org.au/even-in-australia-china-is-after-you-its-new-law-criminalises-what-happens-abroad/"
+        },
+        {
+            "title": "St Petersburg Oil Terminal Hit In Major Ukrainian Drone Attack",
+            "url": "https://gcaptain.com/st-petersburg-oil-terminal-hit-in-major-ukrainian-drone-attack/"
+        },
+        {
+            "title": "China Launches\u00a0Coast Guard\u00a0Patrol East Of Taiwan Despite International Pushback",
+            "url": "https://gcaptain.com/china-launches-coast-guard-patrol-east-of-taiwan-despite-international-pushback/"
+        },
+        {
+            "title": "CMA CGM Ship Hit By Missile In Hormuz Strait May Go For Scrapping",
+            "url": "https://gcaptain.com/cma-cgm-ship-hit-by-missile-in-hormuz-strait-may-go-for-scrapping/"
+        },
+        {
+            "title": "Israeli NGO warns Gaza hospital director\u2019s life is in danger in detention",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-ngo-warns-gaza-hospital-directors-life-danger-detention"
+        },
+        {
+            "title": "Iran begins six-day state funeral for Ali Khamenei",
+            "url": "https://www.middleeasteye.net/news/iran-begins-six-day-state-funeral-ali-khamenei"
+        },
+        {
+            "title": "Ukraine's Zelenskiy says he spoke to Trump, calls for 'American resolve' to help end war",
+            "url": "https://www.al-monitor.com/originals/2026/07/ukraines-zelenskiy-says-he-spoke-trump-calls-american-resolve-help-end-war"
+        },
+        {
+            "title": "Pope urges Europe to protect migrants in visit to island frontier",
+            "url": "https://www.al-monitor.com/originals/2026/07/pope-urges-europe-protect-migrants-visit-island-frontier"
+        },
+        {
+            "title": "Report: US-Iran talks set for Pakistan on July 11, with sanctions, frozen funds and nuclear issues on agenda | LIVE BLOG - i24NEWS",
+            "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPcjBQTDQzenhmRmFvRkE0d2xmblI2emkzOGl3QVlhajQwSURHQjMtOU1VV2xaTXFDLWpYV1VGWGpkYTRhbWNSLUZiT3FyX3dQRktlcGt4QWNJczVRY3NzVUdsTUNaVmVrUi1uWjhPWUxlTW82N3FKSEtQX3hYN2F6M1BaNmt4NGxUZHBnQmV4UnZ2U05yYlRqUTlQRlpfYnFIcG5rb0pNUmUzbDM4R3RNc3M3b1BRUzNUNFJBLVotT0t2SWVYNTNfVEN6SE1UYWtKT1B6dTA5dmNuQ1JWY2VfUldjb09fQnlRbnhyYnMwVGllZ05KeUE?oc=5"
+        },
+        {
+            "title": "Yemen\u2019s Houthis threaten Saudi Arabia after alleged airspace intrusion - Al Jazeera",
+            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVTBGcWdZSnBGOE1PY2ZHSm5UN3pfT1BXWldnTXNKZmg0clh5QVE2SGViVk52MWIxaTkyNktEQWNwMVJqdWZPbFdKMzJlbE1jUUY3dnBZVV9icHAzby1zRXk1NjJhcEZhVWhySkdidnhCVXJUZVpsR1dOblpRNUV6Tm1PY0J2UlluQ1hZX2FPcExObENiZk9IRGdaSW1iQ05LWG9OWTdrM0JBTXJ3Y3fSAbMBQVVfeXFMTlRERlY3ZkZzSmFNR0lNdlJfSU9vX2lZWDlyZnYxczhYdmhQVHpWcnZGNjFuSzlFQUJpandRU1lwbEtMNXkwVGFKTnBTSTBvSUdCNVYxdjdzdlRZM1EyS0tETkhienZQSGNQMldkZ0kxemdkVExSRUlhVTFXaEF2VjJ1eUJSX1NxeVQxMnhHTTVkNkJMSWlneEQwSnl2QTdBMUhzUy01YnhONVBBT21zVWJSLTg?oc=5"
+        }
+    ]
+}
