@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://t.me/intelslava/89737",
+        "Title": "Militants Deploy FPV Drone in Mali",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://t.me/Middle_East_Spectator/34145",
         "Title": "Palestinian Girl Killed by Israeli Forces",
         "Feed_Source": "WAR MONITOR",
@@ -21,29 +28,15 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/inside-story/2026/7/4/will-economic-pressure-move-the-kremlin-towards-talks-with-kyiv?traffic_source=rss",
-        "Title": "Will economic pressure move the Kremlin towards talks with Kyiv?",
+        "Source": "https://warmonitor.com/",
+        "Title": "Egypt Unveils S-300VM Air Defense System",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,15 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Iran Closes Highways Near Mosque Due to Crowding",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.theguardian.com/world/2026/jul/05/founder-of-prominent-underground-church-released-from-prison-in-china",
         "Title": "Founder of prominent underground church released from prison in China",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.theguardian.com/australia-news/live/2026/jul/05/australia-news-live-albanese-labor-nsw-h5-bird-flu-angus-taylor-liberal-coalition-pauline-hanson-ntwnfb",
+        "Title": "Australia news live: Liberal coalition with One Nation \u2018not being talked about\u2019, Tehan says; suspected space debris washes up near Townsville",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "theguardian.com",
         "threat_level": "WATCH"
