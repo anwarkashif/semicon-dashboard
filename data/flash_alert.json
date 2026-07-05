@@ -4,13 +4,13 @@
         "Title": "Trump Blocks Israeli Military Operation in Southern Lebanon",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5makphc3M0cEVzVVVvaGFwUXlTQ3lDZ2czT3E5RmZpTEI0YzMxUzdpNE9EQ3RpM1RPOGZkMFdYelczRktZLWZ2NW15OEQ5Njd3VGU0dDdEV1BxQVk?oc=5",
-        "Title": "EU sanctions extremist settlers and entities undermining the Two-State Solution - EEAS",
+        "Source": "https://www.aljazeera.com/news/2026/7/4/white-nationalists-march-in-washington-dc-area-during-july-4-festivities?traffic_source=rss",
+        "Title": "White nationalists march in Washington, DC, area during July 4 festivities",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
@@ -21,22 +21,22 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/southfronteng/61743",
-        "Title": "Russia Targets Ukrainian Fuel Logistics",
+        "Source": "https://www.aljazeera.com/video/inside-story/2026/7/4/will-economic-pressure-move-the-kremlin-towards-talks-with-kyiv?traffic_source=rss",
+        "Title": "Will economic pressure move the Kremlin towards talks with Kyiv?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
+        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,10 +49,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/4/white-nationalists-march-in-washington-dc-area-during-july-4-festivities?traffic_source=rss",
-        "Title": "White nationalists march in Washington, DC, area during July 4 festivities",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/australia-news/live/2026/jul/05/australia-news-live-albanese-labor-nsw-h5-bird-flu-angus-taylor-liberal-coalition-pauline-hanson-ntwnfb",
+        "Title": "Australia news live: Liberal coalition with One Nation \u2018not being talked about\u2019, Tehan says; suspected space debris washes up near Townsville",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
@@ -60,13 +67,6 @@
         "Title": "US Orders Evacuation at National Mall Due to Storms",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/07/04/world/middleeast/iran-ayatollah-funeral.html",
-        "Title": "Huge Crowds Mass in Tehran for Ayatollah\u2019s State Funeral",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
