@@ -1,5 +1,33 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "US Warned Iran of Israeli Plot to Kill Officials",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/5/china-and-russia-to-hold-annual-joint-naval-drills?traffic_source=rss",
+        "Title": "China and Russia to hold annual joint naval drills",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89749",
+        "Title": "US and Israel Bomb Iranian Electronics Factory",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/07/05/world/asia/china-taiwan-east-coast-guard-patrols.html",
+        "Title": "China Raises Pressure on Taiwan With Expanded Coast Guard Patrols",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -7,15 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -28,45 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-02",
-        "Title": "CubeSpace CW0057 Reaction Wheel",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Finland Restricts Gulf of Finland Shipping and Airspace After Ukraine Drone Attack",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32450",
-        "Title": "NATO Prepares to Counter Russian UAVs in Baltic Region",
+        "Source": "https://www.france24.com/en/paris-appeals-court-ruling-could-upend-marine-le-pen-s-2027-presidential-bid",
+        "Title": "Paris appeals court ruling could upend Marine Le Pen\u2019s 2027 presidential bid",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/4/russia-claims-it-captured-the-strategic-key-ukrainian-city-of-kostiantynivk?traffic_source=rss",
-        "Title": "Russia claims it captured the strategic key Ukrainian city of Kostiantynivk",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/videos/cd0mpgvzzy5o?at_medium=RSS&at_campaign=rss",
-        "Title": "'It's so hot' - Dangerous hot weather grips parts of the US",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jul/04/el-obeid-aid-workers-sudan-war-drone-strikes",
-        "Title": "\u2018The situation is terrible\u2019: aid workers on life in Sudanese city pummelled by drone strikes",
+        "Source": "https://www.aljazeera.com/opinions/2026/7/5/release-dr-hussam-abu-safia-immediately?traffic_source=rss",
+        "Title": "Release Dr Hussam Abu Safia immediately!",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
     }
 ]

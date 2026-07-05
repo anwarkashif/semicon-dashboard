@@ -21,7 +21,8 @@ def render_west_asia_weekly_brief(archived_data=None, brief_title=None):
     if not data:
         files = glob.glob('data/west_asia/west_asia_brief_*.json')
         if files:
-            files.sort(key=os.path.getmtime)
+            # 🛑 FIX: Sort by filename (which contains the exact date) instead of getmtime, which breaks on Cloud servers
+            files.sort()
             try:
                 with open(files[-1], 'r', encoding='utf-8') as f:
                     data = json.load(f)
@@ -37,48 +38,56 @@ def render_west_asia_weekly_brief(archived_data=None, brief_title=None):
     st.caption(f"Synthesized from {data.get('event_volume', '150+')} Trafilatura-enhanced raw intelligence nodes gathered via Psyopoly.")
     st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-    # ROW 1: BLUF & Strategic Forecast (Full Width / Split)
-    c1, c2 = st.columns(2)
-    with c1:
-        st.markdown(f'<div class="wa-gradient-box wa-box-bluf"><div class="wa-header">🎯 BLUF</div>{data.get("bluf", "Data unavailable.")}</div>', unsafe_allow_html=True)
-    with c2:
-        st.markdown(f'<div class="wa-gradient-box wa-box-forecast"><div class="wa-header">🔭 STRATEGIC FORECAST</div>{data.get("strategic_forecast", "Data unavailable.")}</div>', unsafe_allow_html=True)
-
-    # ROW 2: Exec & Escalation
-    r2c1, r2c2 = st.columns(2)
-    with r2c1: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">📋 EXECUTIVE SUMMARY</div>{data.get("executive_summary", "Data unavailable.")}</div>', unsafe_allow_html=True)
-    with r2c2: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">📈 ESCALATION INDICATORS</div>{data.get("escalation_indicators", "Data unavailable.")}</div>', unsafe_allow_html=True)
-
-    # ROW 3: Iran & Levant
-    r3c1, r3c2 = st.columns(2)
-    with r3c1: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🇮🇷 IRANO-CENTRIC NETWORK AXIS</div>{data.get("irano_centric_axis", "Data unavailable.")}</div>', unsafe_allow_html=True)
-    with r3c2: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🇱🇧 LEVANTINE OPERATIONAL FRONT</div>{data.get("levantine_front", "Data unavailable.")}</div>', unsafe_allow_html=True)
-
-    # ROW 4: Israel & GCC
-    r4c1, r4c2 = st.columns(2)
-    with r4c1: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🇮🇱 ISRAELI MULTI-THEATER STRATEGY</div>{data.get("israeli_strategy", "Data unavailable.")}</div>', unsafe_allow_html=True)
-    with r4c2: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🛢️ GCC REGION AND DEVELOPMENT</div>{data.get("gcc_region", "Data unavailable.")}</div>', unsafe_allow_html=True)
-
-    # ROW 5: Threat & Risk
-    r5c1, r5c2 = st.columns(2)
-    with r5c1: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🕸️ THREAT NARRATIVE</div>{data.get("threat_narrative", "Data unavailable.")}</div>', unsafe_allow_html=True)
-    with r5c2: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">⚖️ RISK ASSESSMENT</div>{data.get("risk_assessment", "Data unavailable.")}</div>', unsafe_allow_html=True)
-
-    # ROW 6: Intel Log & Tactical
-    r6c1, r6c2 = st.columns(2)
-    with r6c1: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">📂 STRATEGIC INTELLIGENCE LOG</div>{data.get("strategic_intel_log", "Data unavailable.")}</div>', unsafe_allow_html=True)
-    with r6c2: st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🚩 TACTICAL INDICATOR</div>{data.get("tactical_indicators", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    # 🛑 FIX: Full-width single-column layout in strict requested sequence
+    st.markdown(f'<div class="wa-gradient-box wa-box-bluf"><div class="wa-header">🎯 BLUF</div>{data.get("bluf", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">📋 EXECUTIVE SUMMARY</div>{data.get("executive_summary", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">📈 ESCALATION INDICATORS</div>{data.get("escalation_indicators", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🇮🇷 IRANO-CENTRIC NETWORK AXIS</div>{data.get("irano_centric_axis", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🇱🇧 LEVANTINE OPERATIONAL FRONT</div>{data.get("levantine_front", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🇮🇱 ISRAELI MULTI-THEATER STRATEGY</div>{data.get("israeli_strategy", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🛢️ GCC REGION AND DEVELOPMENT</div>{data.get("gcc_region", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🕸️ THREAT NARRATIVE</div>{data.get("threat_narrative", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">⚖️ RISK ASSESSMENT</div>{data.get("risk_assessment", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">📂 STRATEGIC INTELLIGENCE LOG</div>{data.get("strategic_intel_log", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-standard"><div class="wa-header">🚩 TACTICAL INDICATOR</div>{data.get("tactical_indicators", "Data unavailable.")}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="wa-gradient-box wa-box-forecast"><div class="wa-header">🔭 STRATEGIC FORECAST</div>{data.get("strategic_forecast", "Data unavailable.")}</div>', unsafe_allow_html=True)
 
     # Publisher URLs
-    st.markdown("### 🔗 Themed Source Intelligence")
+    st.markdown("<h3 style='color: #00bfff; margin-top: 40px; margin-bottom: 20px;'>Verified Intelligence Sources</h3>", unsafe_allow_html=True)
     urls = data.get("themed_urls", {})
-    if urls:
+    
+    if urls and any(urls.values()):
+        cols = st.columns(2)
+        # Default palette for fallback themes
+        color_palette = [("#ef4444", "⚔️"), ("#3b82f6", "🤝"), ("#a855f7", "👁️"), ("#10b981", "🌍"), ("#f59e0b", "⚡"), ("#ec4899", "🧠")]
+        
+        idx = 0
         for theme, link_list in urls.items():
-            if link_list:
-                st.markdown(f"**{theme}**")
-                for link in link_list:
-                    if link.startswith('http'):
-                        st.markdown(f"- [{link}]({link})")
+            if not link_list: continue
+            
+            col = cols[idx % 2]
+            color, icon = color_palette[idx % len(color_palette)]
+            
+            # Smart icon & color matching tailored for West Asia themes
+            theme_lower = theme.lower()
+            if "military" in theme_lower or "escalation" in theme_lower or "war" in theme_lower: color, icon = "#ef4444", "⚔️"
+            elif "diplomacy" in theme_lower or "economy" in theme_lower or "gcc" in theme_lower: color, icon = "#3b82f6", "🤝"
+            elif "intelligence" in theme_lower or "covert" in theme_lower: color, icon = "#a855f7", "👁️"
+            
+            # Format the links into a clean HTML list
+            links_html = "".join([f"<li style='margin-bottom: 10px; line-height: 1.4;'><a href='{link}' target='_blank' style='color: #cbd5e1; text-decoration: none; font-size: 0.9em; transition: color 0.3s ease;'>{link}</a></li>" for link in link_list if link.startswith('http')])
+            
+            # Inject the colorful side-by-side HTML box
+            box_html = f"""
+            <div style="background: rgba(30, 41, 59, 0.4); border-left: 4px solid {color}; padding: 18px; border-radius: 6px; margin-bottom: 15px; height: 90%;">
+                <h4 style="color: {color}; margin-top: 0; margin-bottom: 15px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">{icon} {theme}</h4>
+                <ul style="padding-left: 15px; margin: 0;">
+                    {links_html}
+                </ul>
+            </div>
+            """
+            col.markdown(box_html, unsafe_allow_html=True)
+            idx += 1
     else:
         st.caption("No external reference links compiled for this cycle.")
 

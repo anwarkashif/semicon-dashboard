@@ -239,6 +239,21 @@ else:
                             f.write(text_data)
             except Exception: pass
 
+       # 🛑 CRITICAL FIX: Bypass GitHub API Cache & Rate Limits entirely by probing raw URLs for the dynamic dates
+        import datetime
+        for i in range(10): # Probe the last 10 days to guarantee we find the most recent weekly brief
+            probe_date = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=i)).strftime('%Y-%m-%d')
+            wa_filename = f"west_asia_brief_{probe_date}.json"
+            wa_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/west_asia/{wa_filename}"
+            try:
+                wa_resp = requests.get(wa_url, headers=auth_headers, timeout=5)
+                if wa_resp.status_code == 200 and len(wa_resp.text) > 25:
+                    os.makedirs('data/west_asia', exist_ok=True)
+                    with open(f"data/west_asia/{wa_filename}", 'w', encoding='utf-8') as f:
+                        f.write(wa_resp.text)
+                    break # Successfully found and downloaded the most recent brief, stop probing
+            except Exception: pass
+
         api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/data"
         try:
             resp = requests.get(api_url, headers=auth_headers, timeout=5)
@@ -530,7 +545,7 @@ else:
         # ==========================================
         target_glow_sections = [
             "Executive Home", "Today's Snippet", "Weekly Tactical Brief", 
-            "Weekly Intelligence Brief", "West Asia Strategic Intel (Psyopoly)", 
+            "Weekly Intelligence Brief", "Weekly West Asia Brief", "West Asia Strategic Intel (Psyopoly)", 
             "Daily Archive", "Weekly Archive", "Monthly Archive"
         ]
         
