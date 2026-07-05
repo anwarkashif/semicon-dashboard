@@ -1,14 +1,14 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "SBU Alpha Strikes Russian Military Sites Across Crimea and Southern Ukraine",
+        "Title": "Russia Completes Preparations for Large-Scale Attack on Ukraine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119881",
-        "Title": "Poland Allegedly Sends Patriot Missiles to Ukraine",
+        "Source": "https://t.me/intelslava/89749",
+        "Title": "US and Israel Bomb Iranian Electronics Factory",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -21,15 +21,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89748",
-        "Title": "France Develops Robotic Combat Unit with AI",
+        "Source": "https://t.me/intelslava/89738",
+        "Title": "North Korea Tests Cruise Missiles From Destroyer",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,11 +42,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPRzAxMTBzRDRicVR3clBwVkcyaFNnUDVRUG5QbzJUYnZQOXBZNUg5SkZMNjJGYVZSVS1NN196NW5OdzZnYUJuaEVocVpLOHQ0ZDhqWE5qOGVyWkFvSHdNbnhfXzRsTG9hV3RuZkl5T2xReXhfVVZiREt2VElzU29qaUFzRlhyTVBGd2tIV1RSVkpxTDFhTzNETkp3?oc=5",
+        "Title": "Death toll of Venezuela earthquakes rises to 2,645 - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/nexta_live/119882",
@@ -56,15 +63,8 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/05/world/asia/ezra-jin-mingri-china-christian-xi-trump.html",
-        "Title": "China Frees Pastor Detained in Crackdown on Religion After Trump\u2019s Urging",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119876",
-        "Title": "Russian Citizen Criticizes Putin Over Crimea",
+        "Source": "https://t.me/nexta_live/119881",
+        "Title": "Poland Allegedly Sends Patriot Missiles to Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
