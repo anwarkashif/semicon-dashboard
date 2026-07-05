@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Army Chief Threatens Rapid Attack if Lebanon Ceasefire Breached",
+        "Title": "Russia Strikes Naftogaz Facilities Across Ukraine for Second Day",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -11,13 +11,6 @@
         "Title": "Cargo vessel in Red Sea reports coming under attack, UK maritime body says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44813",
-        "Title": "Israel Conducts Airstrike in Southern Lebanon",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -35,11 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.france24.com/en/tv-shows/tech-24/20260705-alibaba-bans-claude-for-staff-%E2%80%93-anthropic-didn-t-want-them-using-it-anyway",
+        "Title": "Alibaba bans Claude for staff \u2013 Anthropic didn't want them using it anyway",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119894",
-        "Title": "Russian Woman Reports Gasoline Shortage",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119897",
+        "Title": "Tornado Hits St Petersburg Area",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/34161",
-        "Title": "Ship Attacked Off Yemen Coast",
+        "Source": "https://warmonitor.com/",
+        "Title": "The World Cup sends prediction market volumes soaring to record highs",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/5/jailed-gaza-hospital-chief-in-life-threatening-condition-rights-group-says?traffic_source=rss",
-        "Title": "Jailed Gaza hospital chief in life-threatening condition, rights group says",
+        "Source": "https://t.me/nexta_live/119896",
+        "Title": "Egypt Opens Massive Military Headquarters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
