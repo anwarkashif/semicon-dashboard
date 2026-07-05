@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Strike Hits Power Substation in Kadiivka, Ukraine",
+        "Title": "Russia Launches Large-Scale Drone And Missile Attack on Kyiv, Ukraine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89773",
+        "Title": "US Withdraws Troops from Estonia",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,36 +21,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cbsnews.com/news/yemen-houthi-rebels-red-sea-attack-cargo-ship/",
-        "Title": "Yemen's Houthis kill 16 government troops; cargo ship reports attack in Red Sea",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/5/turkiye-gears-up-for-its-first-nato-summit-in-22-years?traffic_source=rss",
+        "Title": "Turkiye gears up for its first NATO summit in 22 years",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89766",
-        "Title": "US Intelligence Aids Ukraine in Strikes on Russian Oil Refineries",
+        "Source": "https://www.nytimes.com/2026/07/05/world/middleeast/israel-court-netanyahu-clash.html",
+        "Title": "Israel\u2019s Government Threatens to Ignore a Top Court Ruling",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "nytimes.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/warmonitors/44818",
-        "Title": "US President Trump to Meet Syrian Leader in Turkey",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://t.me/southfronteng/61766",
+        "Title": "Russia Advances Toward Dobropolye in Ukraine",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/5/8-injured-including-4-children-in-new-york-city-fourth-of-july-shooting?traffic_source=rss",
-        "Title": "8 injured, including 4 children, in New York City Fourth of July shooting",
+        "Source": "https://www.theguardian.com/world/2026/jul/05/rodriguez-defends-venezuelas-emergency-earthquake-response-as-bodies-expected-to-soar",
+        "Title": "Rodr\u00edguez defends Venezuela\u2019s emergency earthquake response as number of bodies expected to soar",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
