@@ -1,24 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Attacks in Lebanon Kill 4,304 Since March",
+        "Title": "Ukraine Strikes Russian Energy Infrastructure at Record Rate",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/features/2026/7/5/photo-of-abused-palestinian-detainee-sparks-anguish-for-two-gaza-mothers?traffic_source=rss",
-        "Title": "Photo of abused Palestinian detainee causes anguish for two Gaza mothers",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89761",
         "Title": "Poland Transfers Patriot Missiles to Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.aljazeera.com/news/2026/7/5/at-least-15-yemeni-government-troops-killed-in-hodeidah-fighting?traffic_source=rss",
@@ -35,6 +28,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
         "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
@@ -42,29 +42,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32482",
-        "Title": "Ukraine Discusses Air Defense at Ankara Summit",
+        "Source": "https://t.me/nexta_live/119910",
+        "Title": "Russia Faces Consequences in Occupied Sevastopol",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119906",
-        "Title": "Russia Sees Clashes Over Gasoline",
+        "Source": "https://www.dw.com/en/students-leave-gaza-to-continue-studies-others-in-limbo/a-77816921?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Students leave Gaza to continue studies, others in limbo",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "dw.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/intelslava/89760",
-        "Title": "US Navy Suspends Search for Missing Sailor in Arabian Sea",
+        "Source": "https://t.me/nexta_live/119909",
+        "Title": "Turkey Extradites Activist to Russia",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
