@@ -1,9 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Netanyahu Says No Gaza Rebuild Until Hamas Surrenders Weapons",
+        "Title": "Israeli Army Chief Threatens Rapid Attack if Lebanon Ceasefire Breached",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/07/05/cargo-vessel-in-red-sea-reports-attack-uk-maritime-body-says.html",
+        "Title": "Cargo vessel in Red Sea reports coming under attack, UK maritime body says",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44813",
+        "Title": "Israel Conducts Airstrike in Southern Lebanon",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,17 +35,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89749",
-        "Title": "US and Israel Bomb Iranian Electronics Factory",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/34161",
-        "Title": "Ship Attacked Off Yemen Coast",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -42,31 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://t.me/nexta_live/119894",
+        "Title": "Russian Woman Reports Gasoline Shortage",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-05",
-        "Title": "XZ Utils vulnerability impacting B&R Products",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://t.me/Middle_East_Spectator/34161",
+        "Title": "Ship Attacked Off Yemen Coast",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.aljazeera.com/news/2026/7/5/jailed-gaza-hospital-chief-in-life-threatening-condition-rights-group-says?traffic_source=rss",
         "Title": "Jailed Gaza hospital chief in life-threatening condition, rights group says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/05/opec-set-to-approve-another-oil-output-increase.html",
-        "Title": "OPEC+ approves further oil output increase as Hormuz exports start to recover",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
