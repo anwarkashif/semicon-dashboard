@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Airstrike Hits Russian Positions in Kostyantynivka",
+        "Title": "Ukraine Hits 194 Russian Oil Refineries Since Start of 2026",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/5/at-least-15-yemeni-government-troops-killed-in-hodeidah-fighting?traffic_source=rss",
-        "Title": "At least 15 Yemeni government troops killed in Hodeidah fighting",
+        "Source": "https://t.me/intelslava/89761",
+        "Title": "Poland Transfers Patriot Missiles to Ukraine",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,11 +28,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119888",
-        "Title": "Russia Declares Special Operation a War",
+        "Source": "https://www.aljazeera.com/news/2026/7/5/at-least-15-yemeni-government-troops-killed-in-hodeidah-fighting?traffic_source=rss",
+        "Title": "At least 15 Yemeni government troops killed in Hodeidah fighting",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -42,8 +42,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119902",
-        "Title": "Ukraine Refuses to Cease Fire in Kostiantynivka",
+        "Source": "https://t.me/intelslava/89760",
+        "Title": "US Navy Suspends Search for Missing Sailor in Arabian Sea",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/5/dr-hussam-abu-safias-life-in-grave?traffic_source=rss",
-        "Title": "Dr Hussam Abu Safia\u2019s life in \u2018grave danger\u2019",
+        "Source": "https://www.theguardian.com/australia-news/2026/jul/06/fears-queenslanders-could-be-forced-to-pay-for-mine-cleanup-as-lnp-reviews-environmental-red-tape",
+        "Title": "Fears Queenslanders could be forced to pay for mine cleanup as LNP reviews environmental \u2018red tape\u2019",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
