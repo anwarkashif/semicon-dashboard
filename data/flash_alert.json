@@ -18,21 +18,14 @@
         "Title": "China Raises Pressure on Taiwan With Expanded Coast Guard Patrols",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "nytimes.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89738",
-        "Title": "North Korea Tests Cruise Missiles From Destroyer",
+        "Source": "https://t.me/nexta_live/119881",
+        "Title": "Poland Allegedly Sends Patriot Missiles to Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,31 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.dw.com/en/iran-pressure-on-persecuted-baha-i-community-intensifies/a-77824095?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Iran: Pressure on persecuted Baha'i community intensifies",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPRzAxMTBzRDRicVR3clBwVkcyaFNnUDVRUG5QbzJUYnZQOXBZNUg5SkZMNjJGYVZSVS1NN196NW5OdzZnYUJuaEVocVpLOHQ0ZDhqWE5qOGVyWkFvSHdNbnhfXzRsTG9hV3RuZkl5T2xReXhfVVZiREt2VElzU29qaUFzRlhyTVBGd2tIV1RSVkpxTDFhTzNETkp3?oc=5",
         "Title": "Death toll of Venezuela earthquakes rises to 2,645 - Reuters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.google.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119882",
-        "Title": "Russian Man Detained in Moscow for Waving at Police Vehicle",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119881",
-        "Title": "Poland Allegedly Sends Patriot Missiles to Ukraine",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
