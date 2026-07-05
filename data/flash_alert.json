@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Oil Tanker Deviates From US-Escorted Convoy Off Oman",
+        "Title": "Ukrainian Airstrike Hits Russian Positions in Kostyantynivka",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/nexta_live/119888",
-        "Title": "Russia Declares Special Operation a War",
+        "Source": "https://www.aljazeera.com/news/2026/7/5/at-least-15-yemeni-government-troops-killed-in-hodeidah-fighting?traffic_source=rss",
+        "Title": "At least 15 Yemeni government troops killed in Hodeidah fighting",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,22 +28,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/tv-shows/tech-24/20260705-alibaba-bans-claude-for-staff-%E2%80%93-anthropic-didn-t-want-them-using-it-anyway",
-        "Title": "Alibaba bans Claude for staff \u2013 Anthropic didn't want them using it anyway",
+        "Source": "https://t.me/nexta_live/119888",
+        "Title": "Russia Declares Special Operation a War",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,15 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/5/dr-hussam-abu-safias-life-in-grave?traffic_source=rss",
-        "Title": "Dr Hussam Abu Safia\u2019s life in \u2018grave danger\u2019",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119902",
+        "Title": "Ukraine Refuses to Cease Fire in Kostiantynivka",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/5/at-least-15-yemeni-government-troops-killed-in-hodeidah-fighting?traffic_source=rss",
-        "Title": "At least 15 Yemeni government troops killed in Hodeidah fighting",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/5/dr-hussam-abu-safias-life-in-grave?traffic_source=rss",
+        "Title": "Dr Hussam Abu Safia\u2019s life in \u2018grave danger\u2019",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "WATCH"
