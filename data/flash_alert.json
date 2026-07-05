@@ -1,31 +1,24 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Hits 194 Russian Oil Refineries Since Start of 2026",
+        "Title": "Israeli Attacks in Lebanon Kill 4,304 Since March",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/features/2026/7/5/photo-of-abused-palestinian-detainee-sparks-anguish-for-two-gaza-mothers?traffic_source=rss",
+        "Title": "Photo of abused Palestinian detainee causes anguish for two Gaza mothers",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89761",
         "Title": "Poland Transfers Patriot Missiles to Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/05/cargo-vessel-in-red-sea-reports-attack-uk-maritime-body-says.html",
-        "Title": "Cargo vessel in Red Sea reports coming under attack, UK maritime body says",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44813",
-        "Title": "Israel Conducts Airstrike in Southern Lebanon",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.aljazeera.com/news/2026/7/5/at-least-15-yemeni-government-troops-killed-in-hodeidah-fighting?traffic_source=rss",
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32482",
+        "Title": "Ukraine Discusses Air Defense at Ankara Summit",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119906",
+        "Title": "Russia Sees Clashes Over Gasoline",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/intelslava/89760",
         "Title": "US Navy Suspends Search for Missing Sailor in Arabian Sea",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.theguardian.com/australia-news/2026/jul/06/fears-queenslanders-could-be-forced-to-pay-for-mine-cleanup-as-lnp-reviews-environmental-red-tape",
-        "Title": "Fears Queenslanders could be forced to pay for mine cleanup as LNP reviews environmental \u2018red tape\u2019",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
