@@ -1,17 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israel Bombs Homes in Bint Jbeil District, Southern Lebanon",
+        "Title": "NATO Planners Alarm Over Russian Threat on Baltic, Nordic Borders",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119948",
-        "Title": "Google Maps Hacked in Warsaw",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.theguardian.com/world/live/2026/jul/06/ukraine-russia-zelenskyy-nato-summit-strikes-kyiv-europe-latest-news-updates",
@@ -28,15 +21,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.aljazeera.com/news/2026/7/6/israeli-attack-on-vehicle-in-lebanon-kills-at-least-four?traffic_source=rss",
+        "Title": "Israeli attack on vehicle in Lebanon kills at least four",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
-        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/articles/crlw1xrzd8yo?at_medium=RSS&at_campaign=rss",
-        "Title": "Why an anti-sacrilege law in India's Punjab has sparked controversy",
+        "Source": "https://t.me/intelslava/89838",
+        "Title": "Ukraine Develops Long-Range Drones",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/06/world/europe/khameneis-burial-was-delayed-breaking-with-islamic-custom.html",
-        "Title": "Khamenei\u2019s Burial Was Delayed, Breaking With Islamic Custom",
+        "Source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZ24zRmVXRndFOUcwY3hDMUt4YUdUeGpsOEhXbFFfVm93ZTZyRG8taDcwRGNfSFR2eW1WOGNMeDBvdjZkcEVCZV9HeHV4T1ZZbkgwMlNQUDRueU5nNnRZdzNwR1pJUllmMWR2NGdoZTZBcDI5T1owLVY0ck1wdnhMN1RZN09EUF8waE5hdEdKZHB0dFpVaGRkRm9IZWV2ZnRtTkNqag?oc=5",
+        "Title": "Background: 2006 Israel-Hezbollah War: The Second Lebanon War - idf.il",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
