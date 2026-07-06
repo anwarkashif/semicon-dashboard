@@ -7,18 +7,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.politico.eu/article/britain-intercepted-russian-aircraft-nato-arctic-mission/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Britain intercepted Russian aircraft in expanded NATO Arctic mission",
+        "Source": "https://www.theguardian.com/australia-news/live/2026/jul/06/australia-news-live-crisafulli-bail-laws-property-market-auction-clearance-tax-reform-prime-minister-albanese-fiji-treaty-royal-commission-meta-antisemitism-ntwnfb",
+        "Title": "Australia news live: China conducts long-range missile test in the Pacific as Wong calls it \u2018destabilising to region\u2019",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "HIGH"
+        "Publisher": "theguardian.com",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119924",
-        "Title": "Russia Reports Drone Attacks on Port Ust-Luga and Luga Polygon",
+        "Source": "https://www.aljazeera.com/news/2026/7/6/russian-attacks-on-ukraine-kill-11-on-eve-of-nato-summit-authorities-say?traffic_source=rss",
+        "Title": "Russian attacks on Ukraine kill 11 on eve of NATO summit, authorities say",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -28,25 +28,32 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.politico.eu/article/britain-intercepted-russian-aircraft-nato-arctic-mission/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Britain intercepted Russian aircraft in expanded NATO Arctic mission",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/features/2026/7/6/sudans-maternity-wards-reopen-bringing-hope-amid-post-war-struggles?traffic_source=rss",
+        "Title": "Sudan\u2019s maternity wards reopen, bringing hope amid post-war struggles",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.theguardian.com/world/2026/jul/06/turkey-blocks-lgbtq-cruise-ship-citing-moral-values-ntwnfb",
@@ -58,13 +65,6 @@
     {
         "Source": "https://t.me/intelslava/89812",
         "Title": "Ukraine Reports Smoke and Odor in Kiev Districts",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89811",
-        "Title": "Ukraine Opens Evacuation Centers Near Kiev",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
