@@ -1,5 +1,19 @@
 [
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
@@ -14,17 +28,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://monitorthesituation.com/",
+        "Title": "US Commandos Operate Openly at Taiwanese Military Base",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -42,31 +56,17 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/southfronteng/61789",
-        "Title": "Ukraine Helicopter Downed By Drone",
+        "Source": "https://warmonitor.com/",
+        "Title": "Melbourne police in standoff with graffiti artist perched above Pam the Bird tag on Bolte Bridge tower",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "US Commandos Operate Openly at Taiwanese Military Base",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/6/survivors-and-bodies-still-being-pulled-from-rubble-days-after-twin-quakes?traffic_source=rss",
-        "Title": "Survivors and bodies still being pulled from rubble days after twin quakes",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/australia-news/live/2026/jul/07/australia-news-live-penny-wong-china-missile-test-pacific-anthony-albanese-solomon-islands-defence-royal-commission-antisemitism-meta-ntwnfb",
-        "Title": "Australia news live: Melbourne police in standoff with alleged graffiti artist perched on 120m tower of Bolte Bridge",
+        "Source": "https://t.me/intelslava/89856",
+        "Title": "Ukraine Strikes Russian Gas Pipeline in Belgorod",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
