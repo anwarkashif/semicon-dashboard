@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israel Threatens to Eliminate Iranian Leaders",
+        "Title": "Russia Launches Large-Scale Missile and Drone Attack on Ukraine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/2026/jul/06/china-missile-test-south-pacific",
+        "Title": "China tests long-range missile in South Pacific in move Australia condemns as \u2018destabilising to region\u2019",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -11,13 +18,6 @@
         "Title": "Russian attacks on Ukraine kill 11 on eve of NATO summit, authorities say",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.theguardian.com/australia-news/live/2026/jul/06/australia-news-live-crisafulli-bail-laws-property-market-auction-clearance-tax-reform-prime-minister-albanese-fiji-treaty-royal-commission-meta-antisemitism-ntwnfb",
-        "Title": "Australia news live: China conducts long-range missile test in the Pacific as Wong calls it \u2018destabilising to region\u2019",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -46,7 +46,7 @@
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cnbc.com/2026/07/06/south-korean-prosecutors-indict-four-refiners-oil-price-collusion.html",
