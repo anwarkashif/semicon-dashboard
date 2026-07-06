@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Dozens Killed in Houthi Assault, Worst Fighting in Yemen in Years",
+        "Title": "China and Russia Plan Joint Naval Drills in Yellow Sea, Pacific Patrol",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.twz.com/sea/russian-tu-142-bear-drops-sonobuoys-during-close-encounter-with-british-carrier",
+        "Title": "Russian Tu-142 Bear Drops Sonobuoys During Close Encounter With British Carrier",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "twz.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -14,29 +21,15 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.twz.com/sea/russian-tu-142-bear-drops-sonobuoys-during-close-encounter-with-british-carrier",
-        "Title": "Russian Tu-142 Bear Drops Sonobuoys During Close Encounter With British Carrier",
+        "Source": "https://www.theguardian.com/world/2026/jul/06/canada-buys-12-tkms-german-norwegian-submarines-after-bidding-war",
+        "Title": "Canada buys 12 hi-tech German-Norwegian submarines after bidding war",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "twz.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "theguardian.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.politico.eu/article/germany-ramps-up-defense-spending-in-new-budget-plan-ahead-of-nato-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "Germany ramps up defense spending in new budget plan ahead of NATO summit",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/rybar_in_english/32509",
-        "Title": "Russian Forces Advance Near Volchansk",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/06/climate/dead-chickens-heat-wave-france.html",
-        "Title": "Heat waves are taking a big toll on chickens",
+        "Source": "https://www.npr.org/2026/07/06/nx-s1-5877411/venezuelas-frayed-medical-system-further-strained-by-earthquake",
+        "Title": "Venezuela's frayed medical system further strained by earthquake",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "npr.org",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/6/flavio-bolsonaro-asks-trump-to-delay-tariffs-on-brazil-until-after-election?traffic_source=rss",
-        "Title": "Flavio Bolsonaro asks Trump to delay tariffs on Brazil until after election",
+        "Source": "https://warmonitor.com/",
+        "Title": "Pro-Palestine protesters rally for \u2018Filton 25\u2019 activists at UK court",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/34244",
+        "Title": "Iranians Chant Against President Pezeshkian in Tehran",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
