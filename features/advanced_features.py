@@ -16,7 +16,12 @@ def render_threat_scoring():
     # 🛑 BULLETPROOF ITERABLE FIX
     if isinstance(archive_mapping, tuple):
         archive_mapping = archive_mapping[0]
-    archive_paths = archive_mapping.values() if isinstance(archive_mapping, dict) else (archive_mapping if isinstance(archive_mapping, (list, tuple)) else [])
+    archive_paths = list(archive_mapping.values()) if isinstance(archive_mapping, dict) else list(archive_mapping if isinstance(archive_mapping, (list, tuple)) else [])
+    
+    # 🛑 INJECT ALL SUB-FOLDER BRIEFS & TACTICAL DATA
+    import glob
+    for subfolder in ['west_asia', 'executive_home', 'friday_snippet', 'today_snippet', 'weekly_tactical']:
+        archive_paths.extend(glob.glob(f'data/{subfolder}/*.json'))
 
     if archive_paths:
         scoring_data = {}
@@ -125,14 +130,13 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
                     except: pass
 
             # ==========================================
-            # 3. EXISTING: HISTORICAL ARCHIVE RAG LOGIC
+            # 3. UNIVERSAL HISTORICAL ARCHIVE RAG LOGIC
             # ==========================================
-            archive_mapping = get_brief_mappings('data')
-            
-            # 🛑 BULLETPROOF ITERABLE FIX
-            if isinstance(archive_mapping, tuple):
-                archive_mapping = archive_mapping[0]
-            archive_paths = archive_mapping.values() if isinstance(archive_mapping, dict) else (archive_mapping if isinstance(archive_mapping, (list, tuple)) else [])
+            # 🛑 CRITICAL FIX: Bypass restrictive UI mappings. Sweep ALL files including .txt directly.
+            import glob
+            archive_paths = glob.glob('data/*.json') + glob.glob('data/*.txt')
+            for subfolder in ['west_asia', 'executive_home', 'friday_snippet', 'today_snippet', 'weekly_tactical']:
+                archive_paths.extend(glob.glob(f'data/{subfolder}/*.json'))
 
             context_data += "\n\n=== HISTORICAL ARCHIVES ===\n"
             
@@ -142,44 +146,41 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
             if archive_paths:
                 for f_path in archive_paths:
                     try:
-                        with open(f_path, 'r') as file:
-                            d = json.load(file)
-                            content = d.get('brief_raw', '').lower() + json.dumps(d.get('recent_actions', [])).lower()
-                            score = sum(content.count(kw) for kw in user_keywords)
-                            file_scores.append((score, f_path))
+                        if f_path.endswith('.txt'):
+                            with open(f_path, 'r', encoding='utf-8') as file:
+                                content = file.read().lower()
+                        else:
+                            with open(f_path, 'r', encoding='utf-8') as file:
+                                d = json.load(file)
+                                content = json.dumps(d).lower()
+                        
+                        score = sum(content.count(kw) for kw in user_keywords)
+                        file_scores.append((score, f_path))
                     except: pass
 
                 file_scores.sort(key=lambda x: x[0], reverse=True)
-                top_files = [fs[1] for fs in file_scores if fs[0] > 0][:3]
+                # 🛑 EXTENDED INJECTION LIMIT: Send top 15 files to Gemini so it captures all requested briefs!
+                top_files = [fs[1] for fs in file_scores if fs[0] > 0][:15]
                 if not top_files:
-                    top_files = list(archive_mapping.values())[:2]
+                    top_files = archive_paths[:5]
                 
                 for f_path in top_files:
                     try:
-                        with open(f_path, 'r') as file:
-                            d = json.load(file)
-                            r_text = d.get('brief_raw', '')
-                            categories = [
-                                ("Global Foundry Market", extract_tag('EXEC', r_text) or ""),
-                                ("AI Chip Demand", extract_tag('LITHO', r_text) or ""),
-                                ("Critical Minerals (REE)", extract_tag('REE', r_text) or ""),
-                                ("Export Controls", extract_tag('GEO', r_text) or ""),
-                                ("Military & Outer Space", extract_tag('MILITARY', r_text) or ""),
-                                ("India Developments", extract_tag('INDIA', r_text) or ""),
-                                ("West Asia / Middle East", extract_tag('WEST_ASIA', r_text) or "")
-                            ]
-                            
-                            context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
-                            context_data += "ALGORITHMIC THREAT SCORES:\n"
-                            for name, txt in categories:
-                                if len(txt.strip()) > 25:
-                                    score = calculate_domain_threat(name, txt, d)
-                                    context_data += f"- {name}: {score}%\n"
-                                    
-                            context_data += "\nRAW INTELLIGENCE TEXT:\n"
-                            context_data += r_text
-                            # 🛑 FIX 1: Limit JSON payloads to 50 events for deeper RAG analysis and to prevent timeouts
-                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:50])}"
+                        context_data += f"\n\n--- ARCHIVE SOURCE: {os.path.basename(f_path)} ---\n"
+                        if f_path.endswith('.txt'):
+                            with open(f_path, 'r', encoding='utf-8') as file:
+                                # 🛑 FIX: Use [-20000:] to grab a massive chunk from the BOTTOM of the file so the newest appended news is read first
+                                context_data += f"\nRAW TEXT DATA:\n{file.read()[-8000:]}"
+                        else:
+                            with open(f_path, 'r', encoding='utf-8') as file:
+                                d = json.load(file)
+                                if isinstance(d, dict) and 'brief_raw' in d:
+                                    context_data += "\nRAW INTELLIGENCE TEXT:\n" + d.get('brief_raw', '')
+                                    context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:50])}"
+                                elif isinstance(d, list):
+                                    context_data += f"\nTACTICAL EVENT DATA:\n{json.dumps(d[:50])}"
+                                else:
+                                    context_data += f"\nINTELLIGENCE PAYLOAD:\n{json.dumps(d)[:3000]}"
                     except: pass
 
             # 🛑 FIX 2: Decouple system instruction from context payload to protect Google Search API
@@ -409,36 +410,54 @@ def render_fab_chat(api_keys, model_name, text_summary="", text_section_1="", te
                                             context_data += f"\n--- {label} ---\n{json.dumps(file_data)}\n"
                                     except: pass
 
-                            archive_mapping = get_brief_mappings('data')
-                            if isinstance(archive_mapping, tuple):
-                                archive_mapping = archive_mapping[0] if len(archive_mapping) > 0 and isinstance(archive_mapping[0], dict) else {}
+                            # 🛑 CRITICAL FIX: Bypass UI mappings for FAB Chat. Sweep ALL files including .txt.
+                            import glob
+                            archive_paths = glob.glob('data/*.json') + glob.glob('data/*.txt')
+                            for subfolder in ['west_asia', 'executive_home', 'friday_snippet', 'today_snippet', 'weekly_tactical']:
+                                archive_paths.extend(glob.glob(f'data/{subfolder}/*.json'))
                                 
                             context_data += "\n\n=== HISTORICAL ARCHIVES ===\n"
                             user_keywords = [w.lower() for w in re.findall(r'\b\w+\b', query) if len(w) > 2 and w.lower() not in ['what', 'when', 'where', 'which', 'who', 'why', 'how', 'were', 'was', 'this', 'that', 'with', 'from', 'about', 'the', 'and', 'for', 'are', 'did', 'have', 'has']]
                             
-                            if archive_mapping:
+                            if archive_paths:
                                 file_scores = []
-                                for f_path in archive_mapping.values():
+                                for f_path in archive_paths:
                                     try:
-                                        with open(f_path, 'r') as file:
-                                            d = json.load(file)
-                                            content = d.get('brief_raw', '').lower() + json.dumps(d.get('recent_actions', [])).lower()
-                                            score = sum(content.count(kw) for kw in user_keywords)
-                                            file_scores.append((score, f_path))
+                                        if f_path.endswith('.txt'):
+                                            with open(f_path, 'r', encoding='utf-8') as file:
+                                                content = file.read().lower()
+                                        else:
+                                            with open(f_path, 'r', encoding='utf-8') as file:
+                                                d = json.load(file)
+                                                content = json.dumps(d).lower()
+                                        
+                                        score = sum(content.count(kw) for kw in user_keywords)
+                                        file_scores.append((score, f_path))
                                     except: pass
 
                                 file_scores.sort(key=lambda x: x[0], reverse=True)
-                                top_files = [fs[1] for fs in file_scores if fs[0] > 0][:3]
+                                # 🛑 EXTENDED INJECTION LIMIT: Top 15
+                                top_files = [fs[1] for fs in file_scores if fs[0] > 0][:15]
                                 if not top_files:
-                                    top_files = list(archive_mapping.values())[:2]
+                                    top_files = archive_paths[:5]
                                 
                                 for f_path in top_files:
                                     try:
-                                        with open(f_path, 'r') as file:
-                                            d = json.load(file)
-                                            context_data += f"\n\n--- INTELLIGENCE BRIEF DATE: {d.get('date', 'Unknown')} ---\n"
-                                            context_data += "\nRAW INTELLIGENCE TEXT:\n" + d.get('brief_raw', '')
-                                            context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:50])}"
+                                        context_data += f"\n\n--- ARCHIVE SOURCE: {os.path.basename(f_path)} ---\n"
+                                        if f_path.endswith('.txt'):
+                                            with open(f_path, 'r', encoding='utf-8') as file:
+                                                # 🛑 FIX: Use [-20000:] to grab a massive chunk from the BOTTOM of the file so the newest appended news is read first
+                                                context_data += f"\nRAW TEXT DATA:\n{file.read()[-8000:]}"
+                                        else:
+                                            with open(f_path, 'r', encoding='utf-8') as file:
+                                                d = json.load(file)
+                                                if isinstance(d, dict) and 'brief_raw' in d:
+                                                    context_data += "\nRAW INTELLIGENCE TEXT:\n" + d.get('brief_raw', '')
+                                                    context_data += f"\nLOGGED STATE ACTIONS:\n{json.dumps(d.get('recent_actions', [])[:50])}"
+                                                elif isinstance(d, list):
+                                                    context_data += f"\nTACTICAL EVENT DATA:\n{json.dumps(d[:50])}"
+                                                else:
+                                                    context_data += f"\nINTELLIGENCE PAYLOAD:\n{json.dumps(d)[:3000]}"
                                     except: pass
 
                             system_instruction = f"""
