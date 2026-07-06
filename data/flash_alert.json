@@ -1,17 +1,24 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Poland Transfers Patriot Missile System Secretly to Ukraine",
+        "Title": "NATO Planners Alarm Over Russian Threat on Baltic, Nordic Borders",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/6/scorching-heat-worsens-suffering-in-gazas-displacement-camps?traffic_source=rss",
-        "Title": "Scorching heat worsens suffering in Gaza\u2019s displacement camps",
+        "Source": "https://www.aljazeera.com/news/2026/7/6/israeli-attacks-on-gaza-kill-at-least-6-as-ceasefire-violations-continue?traffic_source=rss",
+        "Title": "Israeli attacks on Gaza kill at least 6 as \u2018ceasefire\u2019 violations continue",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/6/el-obeid-under-siege-by-rsf-could-this-be-sudans-next-el-fasher?traffic_source=rss",
+        "Title": "El-Obeid under siege by RSF: Could this be Sudan\u2019s next el-Fasher?",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/nexta_live/119938",
@@ -21,15 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/middle-east/20260706-hamas-dissolves-gaza-governing-body-clearing-way-for-technocratic-committee",
-        "Title": "Hamas dissolves Gaza governing body, clearing way for technocratic committee",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/6/we-have-nothing-to-cool-off-with-french-heatwave-exposes-inequalities?traffic_source=rss",
-        "Title": "\u2018We have nothing to cool off with\u2019: French heatwave exposes inequalities",
+        "Source": "https://www.cnbc.com/2026/07/06/itv-and-sky-reshape-british-tv-landscape-with-2point1-billion-deal.html",
+        "Title": "ITV and Sky reshape British TV landscape with $2.1 billion deal",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/06/apple-veteran-takes-on-meta-with-1-billion-smart-glasses-maker.html",
-        "Title": "Apple veteran's Chinese smart-glasses firm becomes unicorn as Tencent, Meituan fund rival to Meta",
+        "Source": "https://t.me/intelslava/89836",
+        "Title": "Mali Conducts Airstrikes Against JNIM and FLA",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119942",
+        "Title": "Explosion Reported at Oil Refinery in Omsk",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
