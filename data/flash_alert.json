@@ -7,10 +7,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cbsnews.com/news/uk-fighter-jets-intercept-russian-plane-iceland/",
-        "Title": "U.K. fighter jets intercept Russian plane near aircraft carrier off Iceland",
+        "Source": "https://www.theguardian.com/world/live/2026/jul/06/ukraine-russia-zelenskyy-nato-summit-strikes-kyiv-europe-latest-news-updates",
+        "Title": "Zelenskyy calls for \u2018strong decisions\u2019 at Nato summit as Russia kills 19 in overnight strikes on Kyiv \u2013 Europe live",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -25,18 +25,18 @@
         "Title": "El-Obeid under siege by RSF: Could this be Sudan\u2019s next el-Fasher?",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32503",
-        "Title": "Russia Suffers Drone Strike Near Omsk",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.bbc.co.uk/news/articles/crlw1xrzd8yo?at_medium=RSS&at_campaign=rss",
+        "Title": "Why an anti-sacrilege law in India's Punjab has sparked controversy",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Versant agrees to buy golf simulator company Full Swing for $530 million ",
+        "Source": "https://www.nytimes.com/2026/07/06/world/europe/khameneis-burial-was-delayed-breaking-with-islamic-custom.html",
+        "Title": "Khamenei\u2019s Burial Was Delayed, Breaking With Islamic Custom",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44829",
-        "Title": "Israel Opposes Turkey Receiving F35",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
