@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Lacks Missiles to Intercept Russian Ballistic Missiles, Adviser Warns",
+        "Title": "Thousands of US Troops to Deploy to Poland Amid Russia Provocation Fears",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/rybar_in_english/32509",
+        "Title": "Russian Forces Advance Near Volchansk",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,11 +28,25 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/6/is-nato-at-breaking-point-as-it-meets-in-turkiye?traffic_source=rss",
-        "Title": "Is NATO at breaking point as it meets in Turkiye?",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
+        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -35,38 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119956",
-        "Title": "Poland Presidential Aide Added to Ukraine Database",
+        "Source": "https://www.theguardian.com/world/2026/jul/06/canada-buys-12-tkms-german-norwegian-submarines-after-bidding-war",
+        "Title": "Canada buys 12 hi-tech German-Norwegian submarines after bidding war",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/06/world/europe/balogun-red-card-fifa-belgium.html",
-        "Title": "Trump\u2019s World Cup Intervention Adds New Stress to Europe Ties",
+        "Source": "https://warmonitor.com/",
+        "Title": "Student loan servicers begin 90-day countdown for borrowers to leave SAVE plan",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/34237",
-        "Title": "Iraqi Shia Leaders Call for Mass Attendance at Khamenei Funeral",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
