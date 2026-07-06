@@ -1,24 +1,24 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Trump Threatens to Destroy Iran's Infrastructure",
+        "Title": "Vietnam Expands South China Sea Outposts to 2,771 Acres",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/6/israeli-attack-on-vehicle-in-lebanon-kills-at-least-four?traffic_source=rss",
-        "Title": "Israeli attack on vehicle in Lebanon kills at least four",
+        "Source": "https://www.aljazeera.com/news/2026/7/6/israels-smotrich-declares-revolution-in-west-bank-settlement-expansion?traffic_source=rss",
+        "Title": "Israel\u2019s Smotrich declares \u2018revolution\u2019 in West Bank settlement expansion",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/live/2026/jul/06/ukraine-russia-zelenskyy-nato-summit-strikes-kyiv-europe-latest-news-updates",
-        "Title": "Zelenskyy calls for \u2018strong decisions\u2019 at Nato summit as Russia kills 19 in overnight strikes on Kyiv \u2013 Europe live",
+        "Source": "https://www.aljazeera.com/news/2026/7/6/is-nato-at-breaking-point-as-it-meets-in-turkiye?traffic_source=rss",
+        "Title": "Is NATO at breaking point as it meets in Turkiye?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "CRITICAL"
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89838",
@@ -35,13 +35,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
         "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
@@ -49,24 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/tv-shows/business/20260706-earthquake-damage-threatens-venezuela-s-beach-tourism-centers",
-        "Title": "Earthquake damage threatens Venezuela's beach tourism centers",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/34237",
+        "Title": "Iraqi Shia Leaders Call for Mass Attendance at Khamenei Funeral",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/06/microsoft-cuts-2point1percent-of-employees-as-xbox-unit-plans-to-spin-studios.html",
-        "Title": "Microsoft cuts 4,800 jobs, as Xbox unit downsizes and plans to spin off four gaming studios",
+        "Source": "https://www.nytimes.com/2026/07/06/world/middleeast/iran-dissidents-funeral-anger.html",
+        "Title": "Families of Iranians Killed by Government Dismayed by Leader\u2019s Funeral Pageantry",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
