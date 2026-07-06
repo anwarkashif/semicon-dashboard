@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Strikes Kyiv with Drones and Ballistic Missiles; Patriot Intercepts Multiple",
+        "Title": "Russia Strikes Kyiv With Missiles and Drones, Killing 8",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/6/us-sanctions-target-rwandan-firms-linked-to-conflict-minerals-funding-m23?traffic_source=rss",
+        "Title": "How conflict minerals fuel war in eastern DR Congo amid US sanctions",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -11,7 +18,14 @@
         "Title": "Lockheed Martin leading race for $3.5 billion purchase of naval defense firm Ultra Maritime ",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "cnbc.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "Australia news live: PM signs defence pact with Fiji; public support comforts Coogee shark attack victim on sleepless nights",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cnbc.com/2026/07/06/nvidia-kyber-rack-system-delays-manufacturing-taiwan-rubin-chips-.html",
@@ -21,29 +35,8 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/6/us-sanctions-target-rwandan-firms-linked-to-conflict-minerals-funding-m23?traffic_source=rss",
-        "Title": "How conflict minerals fuel war in eastern DR Congo amid US sanctions",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -67,6 +60,13 @@
         "Title": "Iran Holds Funeral Procession in Capital",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQOExMMERoTnlfeUtLdDFoejc3emp1SXBuQ3NHUGk4YndsTjBxamcyYnh5Qmp6ckFrNk4xTGtld1ZNT2NDOVJHZGVwODVfSENhYXA1Qkg3SjhnZnNjTmhmSjg5Y2x5MzhZbWRDU3M1VHhBV0NxdGJqYkg0ZnlUSUEybVVNRm9MN3R2VnBWRHZVN2NTbFZJZjVSVEpaV3k3ZGVGOXg1Rl9Hd0dveVlLMGRYQ0xtQWx3VkM4N3Bmc1p1MmRSMVk?oc=5",
+        "Title": "South Korea's SK Hynix to launch $28 billion US listing to ride global AI wave - Reuters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
