@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cbsnews.com/news/uk-fighter-jets-intercept-russian-plane-iceland/",
+        "Title": "U.K. fighter jets intercept Russian plane near aircraft carrier off Iceland",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cbsnews.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.aljazeera.com/news/2026/7/6/israeli-attacks-on-gaza-kill-at-least-6-as-ceasefire-violations-continue?traffic_source=rss",
         "Title": "Israeli attacks on Gaza kill at least 6 as \u2018ceasefire\u2019 violations continue",
         "Feed_Source": "WAR MONITOR",
@@ -18,14 +25,7 @@
         "Title": "El-Obeid under siege by RSF: Could this be Sudan\u2019s next el-Fasher?",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119938",
-        "Title": "Russia Loses Tankers in Azov Sea",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,29 +42,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/06/itv-and-sky-reshape-british-tv-landscape-with-2point1-billion-deal.html",
-        "Title": "ITV and Sky reshape British TV landscape with $2.1 billion deal",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89836",
-        "Title": "Mali Conducts Airstrikes Against JNIM and FLA",
+        "Source": "https://t.me/rybar_in_english/32503",
+        "Title": "Russia Suffers Drone Strike Near Omsk",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119942",
-        "Title": "Explosion Reported at Oil Refinery in Omsk",
+        "Source": "https://warmonitor.com/",
+        "Title": "Versant agrees to buy golf simulator company Full Swing for $530 million ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44829",
+        "Title": "Israel Opposes Turkey Receiving F35",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
