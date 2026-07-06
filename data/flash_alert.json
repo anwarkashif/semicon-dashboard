@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Thousands of US Troops to Deploy to Poland Amid Russia Provocation Fears",
+        "Title": "Crimea's Energy Bridge Attacked, Unable to Transmit Power Inland",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/rybar_in_english/32509",
-        "Title": "Russian Forces Advance Near Volchansk",
+        "Source": "https://www.twz.com/sea/russian-tu-142-bear-drops-sonobuoys-during-close-encounter-with-british-carrier",
+        "Title": "Russian Tu-142 Bear Drops Sonobuoys During Close Encounter With British Carrier",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "twz.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -25,14 +25,7 @@
         "Title": "Israel\u2019s Smotrich declares \u2018revolution\u2019 in West Bank settlement expansion",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -42,8 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
-        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jul/06/canada-buys-12-tkms-german-norwegian-submarines-after-bidding-war",
-        "Title": "Canada buys 12 hi-tech German-Norwegian submarines after bidding war",
+        "Source": "https://warmonitor.com/",
+        "Title": "Stocks making the biggest moves midday: AXT, Dell Technologies, Broadcom, O'Reilly Automotive & more",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Student loan servicers begin 90-day countdown for borrowers to leave SAVE plan",
+        "Source": "https://www.aljazeera.com/news/2026/7/6/un-rights-body-demands-release-of-palestinian-doctor-detained-by-israel?traffic_source=rss",
+        "Title": "UN rights body demands release of Palestinian doctor detained by Israel",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "aljazeera.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.politico.eu/article/germany-ramps-up-defense-spending-in-new-budget-plan-ahead-of-nato-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Germany ramps up defense spending in new budget plan ahead of NATO summit",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     }
 ]
