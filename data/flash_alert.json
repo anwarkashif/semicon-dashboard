@@ -1,23 +1,9 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "NATO Planners Alarm Over Russian Threat on Baltic, Nordic Borders",
+        "Title": "Trump Threatens to Destroy Iran's Infrastructure",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/live/2026/jul/06/ukraine-russia-zelenskyy-nato-summit-strikes-kyiv-europe-latest-news-updates",
-        "Title": "Zelenskyy calls for \u2018strong decisions\u2019 at Nato summit as Russia kills 19 in overnight strikes on Kyiv \u2013 Europe live",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cbsnews.com/news/uk-fighter-jets-intercept-russian-plane-iceland/",
-        "Title": "U.K. fighter jets intercept Russian plane near aircraft carrier off Iceland",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,11 +14,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://www.theguardian.com/world/live/2026/jul/06/ukraine-russia-zelenskyy-nato-summit-strikes-kyiv-europe-latest-news-updates",
+        "Title": "Zelenskyy calls for \u2018strong decisions\u2019 at Nato summit as Russia kills 19 in overnight strikes on Kyiv \u2013 Europe live",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89838",
+        "Title": "Ukraine Develops Long-Range Drones",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -42,31 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89838",
-        "Title": "Ukraine Develops Long-Range Drones",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/tv-shows/business/20260706-earthquake-damage-threatens-venezuela-s-beach-tourism-centers",
+        "Title": "Earthquake damage threatens Venezuela's beach tourism centers",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZ24zRmVXRndFOUcwY3hDMUt4YUdUeGpsOEhXbFFfVm93ZTZyRG8taDcwRGNfSFR2eW1WOGNMeDBvdjZkcEVCZV9HeHV4T1ZZbkgwMlNQUDRueU5nNnRZdzNwR1pJUllmMWR2NGdoZTZBcDI5T1owLVY0ck1wdnhMN1RZN09EUF8waE5hdEdKZHB0dFpVaGRkRm9IZWV2ZnRtTkNqag?oc=5",
-        "Title": "Background: 2006 Israel-Hezbollah War: The Second Lebanon War - idf.il",
+        "Source": "https://www.cnbc.com/2026/07/06/microsoft-cuts-2point1percent-of-employees-as-xbox-unit-plans-to-spin-studios.html",
+        "Title": "Microsoft cuts 4,800 jobs, as Xbox unit downsizes and plans to spin off four gaming studios",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     }
 ]
