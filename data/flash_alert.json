@@ -1,5 +1,33 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "NATO Baltic States and Finland Speed Up Border Fortifications",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/2026/jul/06/turkey-crackdown-public-life-run-up-nato-summit-ankara",
+        "Title": "Turkey intensifies crackdown on public life in run-up to Nato summit in Ankara",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119938",
+        "Title": "Russia Loses Tankers in Azov Sea",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/middle-east/20260706-hamas-dissolves-gaza-governing-body-clearing-way-for-technocratic-committee",
+        "Title": "Hamas dissolves Gaza governing body, clearing way for technocratic committee",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
@@ -7,8 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -21,52 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Russian Oil Tankers in Sea of Azov, Radar and Air Defense in Crimea",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.bbc.co.uk/news/articles/cewqqnd7zdwo?at_medium=RSS&at_campaign=rss",
-        "Title": "Ukraine warns of interceptor missile shortage as 14 killed in Kyiv region",
+        "Source": "https://www.cnbc.com/2026/07/06/apple-veteran-takes-on-meta-with-1-billion-smart-glasses-maker.html",
+        "Title": "Apple veteran's Chinese smart-glasses firm becomes unicorn as Tencent, Meituan fund rival to Meta",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/middle-east/20260706-hamas-dissolves-gaza-governing-body-clearing-way-for-technocratic-committee",
-        "Title": "Hamas dissolves Gaza governing body, clearing way for technocratic committee",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/intelslava/89829",
-        "Title": "Russia Threatens Retaliation Over Energy Infrastructure Attacks",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "S&P 500 and Nasdaq futures rise after a strong week on Wall Street, led by chip stocks: Live updates",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119938",
-        "Title": "Russia Loses Tankers in Azov Sea",
+        "Source": "https://t.me/nexta_live/119940",
+        "Title": "Chechen Neo-Nazi Joins War in Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/2026/jul/06/wildfires-southern-europe-evacuations-tour-de-france-portugal-spain-greece-heatwave",
+        "Title": "Wildfires rage across southern Europe, forcing thousands to flee homes",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
