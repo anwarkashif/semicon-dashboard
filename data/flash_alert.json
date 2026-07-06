@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "China and Russia Plan Joint Naval Drills in Yellow Sea, Pacific Patrol",
+        "Title": "Omsk Refinery Strike Worsens Russian Fuel Crisis",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,25 +14,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/6/iran-reappoints-a-familiar-face-to-powerful-post-during-khamenei-funeral?traffic_source=rss",
-        "Title": "Iran reappoints a familiar face to powerful post during Khamenei funeral",
+        "Source": "https://www.aljazeera.com/video/inside-story/2026/7/6/what-is-the-fallout-of-the-increasing-violence-in-mali?traffic_source=rss",
+        "Title": "What is the fallout of the increasing violence in Mali?",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jul/06/canada-buys-12-tkms-german-norwegian-submarines-after-bidding-war",
-        "Title": "Canada buys 12 hi-tech German-Norwegian submarines after bidding war",
+        "Source": "https://www.nytimes.com/2026/07/06/world/canada/carney-submariness-canada-military.html",
+        "Title": "Canada Bets on NATO Partners for Its Expanded Submarine Fleet",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "nytimes.com",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -42,31 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cnbc.com/2026/07/06/toyota-tacoma-truck-san-antonio-plant.html",
+        "Title": "Toyota to invest $3.6 billion to move Tacoma pickup truck production from Mexico to Texas",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.france24.com/en/tv-shows/business/20260706-opec-raises-output-but-cartel-s-future-hangs-in-balance",
+        "Title": "OPEC+ raises output but cartel's future hangs in balance",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.npr.org/2026/07/06/nx-s1-5877411/venezuelas-frayed-medical-system-further-strained-by-earthquake",
         "Title": "Venezuela's frayed medical system further strained by earthquake",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "npr.org",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Pro-Palestine protesters rally for \u2018Filton 25\u2019 activists at UK court",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/34244",
-        "Title": "Iranians Chant Against President Pezeshkian in Tehran",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
