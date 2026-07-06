@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Launches Large-Scale Missile and Drone Attack on Ukraine",
+        "Title": "Russia Strikes Ukrainian Energy Grid, Causing Six-Oblast Blackouts",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -21,18 +21,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.npr.org/2026/07/06/nx-s1-5873913/ultra-orthodox-jews-are-protesting-against-serving-in-israels-army",
-        "Title": "Ultra-Orthodox Jews are protesting against serving in Israel's army",
+        "Source": "https://www.nytimes.com/2026/07/06/world/middleeast/nato-summit-turkey-erdogan-trump.html",
+        "Title": "As Trump Cools on NATO, Turkey Hosts Summit Meeting",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
+        "Publisher": "nytimes.com",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,8 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,15 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "Tehran Metro Stations Closed Due to Overcrowding",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.france24.com/en/france/20260706-thousands-evacuated-in-southwestern-france-as-wildfire-burns-out-of-control",
+        "Title": "Thousands evacuated in southwestern France as wildfire burns out of control",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/Middle_East_Spectator/34204",
-        "Title": "Iranian Protesters Gather Near Azadi Square",
+        "Source": "https://t.me/rybar_in_english/32501",
+        "Title": "Russia Fines Migrant for Displaying Ukrainian Symbols",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
