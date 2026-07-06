@@ -1,5 +1,40 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "UKMTO Reports Attack in Bab el-Mandeb",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/australia-news/live/2026/jul/07/australia-news-live-penny-wong-china-missile-test-pacific-anthony-albanese-solomon-islands-defence-royal-commission-antisemitism-meta-ntwnfb",
+        "Title": "Australia news live: Melbourne police in standoff with alleged graffiti artist perched on 120m tower of Bolte Bridge",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.aljazeera.com/video/inside-story/2026/7/6/what-is-the-fallout-of-the-increasing-violence-in-mali?traffic_source=rss",
+        "Title": "What is the fallout of the increasing violence in Mali?",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/2026/jul/06/keir-starmer-european-nato-us-ankara-summit",
+        "Title": "Starmer to rally European allies at Nato summit amid concerns over US stance",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
@@ -7,8 +42,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -21,50 +56,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "US Commandos Operate Openly at Taiwanese Military Base",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.theguardian.com/world/2026/jul/06/keir-starmer-european-nato-us-ankara-summit",
-        "Title": "Starmer to rally European allies at Nato summit amid concerns over US stance",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.aljazeera.com/video/inside-story/2026/7/6/what-is-the-fallout-of-the-increasing-violence-in-mali?traffic_source=rss",
-        "Title": "What is the fallout of the increasing violence in Mali?",
+        "Source": "https://www.aljazeera.com/news/2026/7/6/over-5500-children-displaced-by-fighting-in-sudans-el-obeid-charity-says?traffic_source=rss",
+        "Title": "Over 5,500 children displaced by fighting in Sudan\u2019s el-Obeid, charity says",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "Melbourne police in standoff with graffiti artist perched above Pam the Bird tag on Bolte Bridge tower",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/intelslava/89856",
-        "Title": "Ukraine Strikes Russian Gas Pipeline in Belgorod",
+        "Source": "https://t.me/Middle_East_Spectator/34253",
+        "Title": "Iran Strikes Qatari Tanker in Gulf",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
