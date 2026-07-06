@@ -1,23 +1,9 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Launches Large-Scale Drone And Missile Attack on Kyiv, Ukraine",
+        "Title": "Russia Strikes Kyiv with Drones and Ballistic Missiles; Patriot Intercepts Multiple",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89773",
-        "Title": "US Withdraws Troops from Estonia",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89767",
-        "Title": "UK Foreign Ministry Email Accounts Hacked",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,10 +14,24 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.nytimes.com/2026/07/05/world/middleeast/israel-court-netanyahu-clash.html",
-        "Title": "Israel\u2019s Government Threatens to Ignore a Top Court Ruling",
+        "Source": "https://www.bbc.co.uk/news/articles/cr7xpgx50jxo?at_medium=RSS&at_campaign=rss",
+        "Title": "Super Typhoon Bavi makes landfall on US Pacific islands with huge wind gusts",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "bbc.co.uk",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89773",
+        "Title": "US Withdraws Troops from Estonia",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61766",
+        "Title": "Russia Advances Toward Dobropolye in Ukraine",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/southfronteng/61766",
-        "Title": "Russia Advances Toward Dobropolye in Ukraine",
+        "Source": "https://t.me/intelslava/89793",
+        "Title": "Russia Imposes Airport Restrictions",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jul/05/rodriguez-defends-venezuelas-emergency-earthquake-response-as-bodies-expected-to-soar",
-        "Title": "Rodr\u00edguez defends Venezuela\u2019s emergency earthquake response as number of bodies expected to soar",
+        "Source": "https://t.me/intelslava/89790",
+        "Title": "Russian Drones Strike Kiev",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/intelslava/89780",
+        "Title": "Ballistic Missile Approaches Kiev",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
