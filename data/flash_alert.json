@@ -1,7 +1,14 @@
 [
     {
+        "Source": "https://www.france24.com/en/middle-east/20260707-explosions-heard-in-damascus-during-french-president-macron-s-visit",
+        "Title": "\ud83d\udd34 Syria: Explosions heard in Damascus during French president Macron's visit",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Says Nuclear Deal Talks Will Not Commence Amid Threats",
+        "Title": "Ukraine Launches Over 400 Drones at Moscow and Belgorod Region",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,11 +21,11 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89869",
-        "Title": "Poland Prepares Escalation Over Volyn Tragedy Anniversary",
+        "Source": "https://www.aljazeera.com/news/2026/7/7/palestine-weekly-one-thousand-days-of-genocide-in-gaza?traffic_source=rss",
+        "Title": "Palestine weekly: One thousand days of genocide in Gaza",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "aljazeera.com",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -28,15 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "WATCH"
     },
     {
+        "Source": "https://t.me/intelslava/89869",
+        "Title": "Poland Prepares Escalation Over Volyn Tragedy Anniversary",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.france24.com/en/france/20260707-live-french-far-right-leader-marine-le-pen-faces-key-ruling-in-race-for-president",
         "Title": "Live: French far-right leader Marine Le Pen faces key ruling in race for president",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "france24.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMzhGeTY4UzgtbGhzZFBSQXpjY2VGRjgxbmU2OWpLZmQwcHMxSnhIa1g5RGtLdk9sVldyYS1HbDNScHZvcjJ1aS1zZjZuVlJTSlVDa25qR0g3WFFzVl8xSkxYMWhBTkltTjZlcXBUWkxpR1A2U25od3BmYnlaaDZxMFpINDE1MlFKaVoySXZwb0hndTVvSnhjX1NFT1BlaDdMZVc1QWZ0cWxxbTJnNDUxM3VoUjZWSTZ3bmx3?oc=5",
-        "Title": "In World Cup shadows, Vancouver's vulnerable communities fear sweeps and raids - Reuters",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
