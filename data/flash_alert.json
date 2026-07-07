@@ -1,5 +1,12 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "US and European Firms Agree on Defense Co-Production Initiatives",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/nexta_live/119990",
         "Title": "Russia Nears Final Decision on Ukraine",
         "Feed_Source": "WAR MONITOR",
@@ -14,11 +21,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/liveuamap/12209",
-        "Title": "Syria Suffers Explosions Near Ministry of Tourism",
+        "Source": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZnJ3T0N1c3QyeXJSYzF4NVNBUDh3dThhd1AzVjhtaWVZNU1ZWW81dGxTVy1pWWJLaW9tcWdybmcxTkNTUl9UU1Z2ekRQOWJJcEF5SUVqd3lzdXNENnlob016M0hHelg1NVNQWHdmTWJ4bWF6bUVrU1Q3eUtkVmloYS1YdzlWcW1tb2hxSmZMTEwyUEVaTkRFdlpyeFYzSUtRRmJVS1V1MHJoQXRIcFBQQ3lVMC1mcE5MWndnM0FmOA?oc=5",
+        "Title": "NATO Secretary General meets with the President of T\u00fcrkiye - North Atlantic Treaty Organization | NATO",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "Publisher": "news.google.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/tv-shows/focus/20260707-german-gen-z-joins-the-bundeswehr-the-military-becomes-a-plan-b",
+        "Title": "German Gen Z joins the Bundeswehr: The military becomes a plan B",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -28,45 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://t.me/warmonitors/44848",
+        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Merz Reveals Months-Long Talks With Canada, Norway on Defense Framework",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "Source": "https://warmonitor.com/",
+        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/nexta_live/119991",
         "Title": "Ukraine Confirms Death of Anastasia Berezovskaya",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/Middle_East_Spectator/34268",
-        "Title": "Iranian Foreign Minister Confronted by Protesters",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.france24.com/en/tv-shows/focus/20260707-german-gen-z-joins-the-bundeswehr-the-military-becomes-a-plan-b",
-        "Title": "German Gen Z joins the Bundeswehr: The military becomes a plan B",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
