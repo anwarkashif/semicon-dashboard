@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "IRGC Navy Bombs Vessel in Strait of Hormuz, Warns Others",
+        "Title": "NATO Allies Launch Critical Raw Materials Project at Summit",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/southfronteng/61809",
@@ -12,6 +12,13 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44848",
+        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/nexta_live/119990",
@@ -28,32 +35,18 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89873",
@@ -63,8 +56,15 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/warmonitors/44848",
-        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
+        "Source": "https://warmonitor.com/",
+        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119991",
+        "Title": "Ukraine Confirms Death of Anastasia Berezovskaya",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
