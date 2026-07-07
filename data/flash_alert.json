@@ -14,17 +14,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119982",
-        "Title": "Ukrainian Drones Reach Novosibirsk Region",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://news.sky.com/story/us-accuses-china-of-nuclear-proliferation-after-ballistic-missile-test-in-pacific-13561174",
         "Title": "US accuses China of nuclear proliferation after ballistic missile test",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.sky.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/liveuamap/12207",
+        "Title": "Explosions Hit Damascus Near French President's Hotel",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.npr.org/2026/07/07/nx-s1-5879389/gen-z-protesters-in-india-demand-political-reform-and-accountability",
-        "Title": "Gen Z protesters in India demand political reform and accountability",
+        "Source": "https://www.france24.com/en/tv-shows/business/20260707-samsung-electronics-profits-surge-1-800-annually-amid-artificial-intelligence-spending-boom",
+        "Title": "Samsung Electronics profits surge 1,800% annually amid artificial intelligence spending boom",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.theguardian.com/world/live/2026/jul/07/nato-summit-zelenskyy-trump-ukraine-rutte-defence-eu-spending-turkey-france-macron-le-pen-europe-latest-news-updates",
-        "Title": "Nato summit begins with focus on defence spending as Zelenskyy and Trump due to meet - Europe live",
+        "Source": "https://www.france24.com/en/syria-s-security-challenges-main-obstacle-to-attracting-investors",
+        "Title": "Syria's 'security challenges' main obstacle to attracting investors",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
