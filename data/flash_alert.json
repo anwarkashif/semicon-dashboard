@@ -1,23 +1,51 @@
 [
     {
-        "Source": "https://www.france24.com/en/middle-east/20260707-explosions-heard-in-damascus-during-french-president-macron-s-visit",
-        "Title": "\ud83d\udd34 Syria: Explosions heard in Damascus during French president Macron's visit",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Iran Threatens to Block Ships in Strait of Hormuz After Missile Strikes",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.npr.org/2026/07/07/g-s1-132265/tanker-attack-strait-of-hormuz",
-        "Title": "Tanker set ablaze after being struck by projectile in the Strait of Hormuz",
+        "Source": "https://www.aljazeera.com/news/2026/7/7/russia-touts-war-with-nato-amid-losses-in-ukraine?traffic_source=rss",
+        "Title": "Russia touts \u2018war with NATO\u2019 amid losses in Ukraine",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
+        "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.theguardian.com/world/live/2026/jul/07/nato-summit-zelenskyy-trump-ukraine-rutte-defence-eu-spending-turkey-france-macron-le-pen-europe-latest-news-updates",
+        "Title": "Nato summit begins with focus on defence spending as Zelenskyy and Trump due to meet - Europe live",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://news.sky.com/story/us-accuses-china-of-nuclear-proliferation-after-ballistic-missile-test-in-pacific-13561174",
         "Title": "US accuses China of nuclear proliferation after ballistic missile test",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "news.sky.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89868",
+        "Title": "Iran Fires Missiles at Commercial Ships in Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,45 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Strikes Mini Oil Refinery in Kaluga Region",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119976",
-        "Title": "Ukraine to Continue Strikes on Moscow and St Petersburg",
+        "Source": "https://t.me/nexta_live/119982",
+        "Title": "Ukrainian Drones Reach Novosibirsk Region",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/liveuamap/12207",
-        "Title": "Explosions Hit Damascus Near French President's Hotel",
+        "Source": "https://www.bbc.co.uk/news/videos/cq61d22ved2o?at_medium=RSS&at_campaign=rss",
+        "Title": "Watch: Moment rare tornado lashes central Chinese cities",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "bbc.co.uk",
         "threat_level": "WATCH"
     }
 ]
