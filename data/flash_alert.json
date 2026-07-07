@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US and European Firms Agree on Defense Co-Production Initiatives",
+        "Title": "Civilians Killed Amid Unstable Security in Crimea",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/southfronteng/61809",
+        "Title": "Iranian Forces Strike Qatari and Saudi Tankers Near Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,18 +28,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZnJ3T0N1c3QyeXJSYzF4NVNBUDh3dThhd1AzVjhtaWVZNU1ZWW81dGxTVy1pWWJLaW9tcWdybmcxTkNTUl9UU1Z2ekRQOWJJcEF5SUVqd3lzdXNENnlob016M0hHelg1NVNQWHdmTWJ4bWF6bUVrU1Q3eUtkVmloYS1YdzlWcW1tb2hxSmZMTEwyUEVaTkRFdlpyeFYzSUtRRmJVS1V1MHJoQXRIcFBQQ3lVMC1mcE5MWndnM0FmOA?oc=5",
-        "Title": "NATO Secretary General meets with the President of T\u00fcrkiye - North Atlantic Treaty Organization | NATO",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
-        "threat_level": "HIGH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/tv-shows/focus/20260707-german-gen-z-joins-the-bundeswehr-the-military-becomes-a-plan-b",
-        "Title": "German Gen Z joins the Bundeswehr: The military becomes a plan B",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "HIGH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -42,29 +49,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/warmonitors/44848",
-        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
+        "Source": "https://t.me/intelslava/89873",
+        "Title": "Russia Produces T-80BVM Tanks at Omsk Plant",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://warmonitor.com/",
-        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119991",
-        "Title": "Ukraine Confirms Death of Anastasia Berezovskaya",
+        "Source": "https://t.me/warmonitors/44848",
+        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
