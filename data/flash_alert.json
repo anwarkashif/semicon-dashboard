@@ -7,6 +7,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.aljazeera.com/news/2026/7/7/russia-touts-war-with-nato-amid-losses-in-ukraine?traffic_source=rss",
         "Title": "Russia touts \u2018war with NATO\u2019 amid losses in Ukraine",
         "Feed_Source": "WAR MONITOR",
@@ -25,11 +32,11 @@
         "Title": "Explosions Hit Damascus Near French President's Hotel",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,31 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.france24.com/en/tv-shows/business/20260707-samsung-electronics-profits-surge-1-800-annually-amid-artificial-intelligence-spending-boom",
-        "Title": "Samsung Electronics profits surge 1,800% annually amid artificial intelligence spending boom",
+        "Source": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZnJ3T0N1c3QyeXJSYzF4NVNBUDh3dThhd1AzVjhtaWVZNU1ZWW81dGxTVy1pWWJLaW9tcWdybmcxTkNTUl9UU1Z2ekRQOWJJcEF5SUVqd3lzdXNENnlob016M0hHelg1NVNQWHdmTWJ4bWF6bUVrU1Q3eUtkVmloYS1YdzlWcW1tb2hxSmZMTEwyUEVaTkRFdlpyeFYzSUtRRmJVS1V1MHJoQXRIcFBQQ3lVMC1mcE5MWndnM0FmOA?oc=5",
+        "Title": "NATO Secretary General meets with the President of T\u00fcrkiye - North Atlantic Treaty Organization | NATO",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/syria-s-security-challenges-main-obstacle-to-attracting-investors",
-        "Title": "Syria's 'security challenges' main obstacle to attracting investors",
+        "Source": "https://www.theguardian.com/technology/2026/jul/07/ai-models-doing-things-their-creators-never-intended",
+        "Title": "AI models already \u2018doing things their creators never intended\u2019, Australia\u2019s assistant technology minister warns",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
