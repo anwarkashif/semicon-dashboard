@@ -1,38 +1,38 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Footage Shows 6 Russian Kh-101 Missiles Hitting Kyiv",
+        "Title": "Iran Says Nuclear Deal Talks Will Not Commence Amid Threats",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/7/tanker-on-fire-off-coast-of-oman-after-being-hit-by-projectile?traffic_source=rss",
-        "Title": "Tanker on fire off coast of Oman after being hit by projectile",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/liveblog/2026/7/7/iran-war-live-khameneis-body-arrives-in-qom-hamas-cedes-gaza-governance?traffic_source=rss",
-        "Title": "Iran war live: Khamenei\u2019s body arrives in Qom, Hamas cedes Gaza governance",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html",
-        "Title": "Chinese AI models are gaining ground with U.S. companies as OpenAI, Anthropic costs surge",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
         "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.npr.org/2026/07/07/g-s1-132265/tanker-attack-strait-of-hormuz",
+        "Title": "Tanker set ablaze after being struck by projectile in the Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/7/aje-onl-nf_russia-sends-weapons-to-mali-hold-off-rebel-siege-060726?traffic_source=rss",
         "Title": "Russia sends weapons to help Mali\u2019s government hold off rebel siege",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
@@ -49,24 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119973",
-        "Title": "Russian Soldier Claims Enlistment Due to Debt",
+        "Source": "https://t.me/nexta_live/119974",
+        "Title": "Ukraine Postal Terminal Destroyed in Kryvyi Rih",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/7/at-least-people-buried-following-landslide-in-china?traffic_source=rss",
-        "Title": "At least 16 people buried following landslide in China",
+        "Source": "https://www.cnbc.com/2026/07/07/samsung-electronics-preliminary-second-quarter-profit-hits-fresh-high.html",
+        "Title": "Samsung Electronics shares fall as capex, demand concerns cloud record Q2 profit report",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "cnbc.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.politico.eu/podcast/brussels-playbook-podcast/the-verdict-that-could-shake-up-french-politics/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "Title": "The verdict that could shake up French politics",
+        "Source": "https://www.france24.com/en/love-deception-and-the-real-lives-of-nigeria-s-romance-fraudsters",
+        "Title": "Love, deception and the real lives of Nigeria's romance fraudsters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "politico.eu",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     }
 ]
