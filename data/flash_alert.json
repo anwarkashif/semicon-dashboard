@@ -1,5 +1,12 @@
 [
     {
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Iran Says Nuclear Deal Talks Will Not Commence Amid Threats",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://t.me/intelslava/89868",
         "Title": "Iran Fires Missiles at Commercial Ships in Strait of Hormuz",
         "Feed_Source": "WAR MONITOR",
@@ -7,29 +14,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Launches Over 400 Drones at Moscow and Belgorod Region",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119976",
-        "Title": "Ukraine to Continue Strikes on Moscow and St Petersburg",
+        "Source": "https://t.me/intelslava/89869",
+        "Title": "Poland Prepares Escalation Over Volyn Tragedy Anniversary",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.aljazeera.com/news/2026/7/7/palestine-weekly-one-thousand-days-of-genocide-in-gaza?traffic_source=rss",
-        "Title": "Palestine weekly: One thousand days of genocide in Gaza",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
+        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
-        "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,18 +42,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "Title": "Delta Electronics DVP12SE PLC",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "Source": "https://www.theguardian.com/world/2026/jul/07/china-severe-storms-death-toll-xi-jinping-rescue-efforts-landslides-tornadoes",
+        "Title": "Severe storms in China bring tornadoes and landslides that have killed 15 people",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "theguardian.com",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.france24.com/en/france/20260707-live-french-far-right-leader-marine-le-pen-faces-key-ruling-in-race-for-president",
