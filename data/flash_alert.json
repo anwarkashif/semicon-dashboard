@@ -1,37 +1,30 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Strikes Two Commercial Ships With Missiles in Strait of Hormuz, US Says",
+        "Title": "Footage Shows 6 Russian Kh-101 Missiles Hitting Kyiv",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/news/liveblog/2026/7/7/iran-war-live-khameneis-body-arrives-in-qom-hamas-cedes-gaza-governance?traffic_source=rss",
-        "Title": "Iran war live: Khamenei\u2019s body arrives in Qom, Hamas cedes Gaza governance",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/7/aje-onl-nf_russia-sends-weapons-to-mali-hold-off-rebel-siege-060726?traffic_source=rss",
+        "Title": "Russia sends weapons to help Mali\u2019s government hold off rebel siege",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "aljazeera.com",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.aljazeera.com/news/2026/7/7/why-el-obeid-matters-as-sudans-war-enters-a-new-phase?traffic_source=rss",
+        "Title": "Why el-Obeid matters as Sudan\u2019s war enters a new phase",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89856",
-        "Title": "Ukraine Strikes Russian Gas Pipeline in Belgorod",
+        "Source": "https://t.me/Middle_East_Spectator/34252",
+        "Title": "Iranian Navy Strikes Vessel in Strait of Hormuz",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/07/hanwha-ocean-shares-sink-canada-submarines-tkms.html",
-        "Title": "Hanwha Ocean shares sink 23% as it loses bid to build Canada's next fleet of submarines",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -42,8 +35,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-05",
+        "Title": "XZ Utils vulnerability impacting B&R Products",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +49,24 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cbsnews.com/video/070626-the-takeout-with-major-garrett/",
-        "Title": "7/6: The Takeout with Major Garrett",
+        "Source": "https://www.politico.eu/podcast/brussels-playbook-podcast/the-verdict-that-could-shake-up-french-politics/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "The verdict that could shake up French politics",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cbsnews.com",
+        "Publisher": "politico.eu",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/videos/c1eyyevn5j7o?at_medium=RSS&at_campaign=rss",
-        "Title": "Fatal Typhoon Maysak floods burst dam wall in China",
+        "Source": "https://www.politico.eu/podcast/berlin-playbook-podcast/bardella-oder-le-pen-wer-fuhrt-frankreichs-rechte-in-die-wahl/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "Title": "Bardella oder Le Pen: Wer f\u00fchrt Frankreichs Rechte in die Wahl?",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "politico.eu",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://www.nytimes.com/2026/07/07/world/europe/nato-trump-rutte-ankara-turkey.html",
+        "Title": "In NATO\u2019s Next Act, Can Europe Play the Leading Role?",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
