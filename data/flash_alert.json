@@ -7,29 +7,29 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "Ukraine Launches Over 400 Drones at Moscow and Belgorod Region",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
+        "Source": "https://www.npr.org/2026/07/07/g-s1-132265/tanker-attack-strait-of-hormuz",
+        "Title": "Tanker set ablaze after being struck by projectile in the Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "npr.org",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89868",
-        "Title": "Iran Fires Missiles at Commercial Ships in Strait of Hormuz",
+        "Source": "https://news.sky.com/story/us-accuses-china-of-nuclear-proliferation-after-ballistic-missile-test-in-pacific-13561174",
+        "Title": "US accuses China of nuclear proliferation after ballistic missile test",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.aljazeera.com/news/2026/7/7/palestine-weekly-one-thousand-days-of-genocide-in-gaza?traffic_source=rss",
-        "Title": "Palestine weekly: One thousand days of genocide in Gaza",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "aljazeera.com",
+        "Publisher": "news.sky.com",
         "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/russian-intelligence-services-continue-target-commercial-messaging-applications",
         "Title": "Russian Intelligence Services Continue to Target Commercial Messaging Applications",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
-        "Title": "Delta Electronics DVP12SE PLC",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/2026/jul/07/china-severe-storms-death-toll-xi-jinping-rescue-efforts-landslides-tornadoes",
-        "Title": "Severe storms in China bring tornadoes and landslides that have killed 15 people",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
-        "threat_level": "WATCH"
+        "Source": "https://monitorthesituation.com/",
+        "Title": "Ukraine Strikes Mini Oil Refinery in Kaluga Region",
+        "Feed_Source": "MONITOR THE SITUATION",
+        "Publisher": "monitorthesituation.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://t.me/intelslava/89869",
-        "Title": "Poland Prepares Escalation Over Volyn Tragedy Anniversary",
+        "Source": "https://t.me/nexta_live/119976",
+        "Title": "Ukraine to Continue Strikes on Moscow and St Petersburg",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.france24.com/en/france/20260707-live-french-far-right-leader-marine-le-pen-faces-key-ruling-in-race-for-president",
-        "Title": "Live: French far-right leader Marine Le Pen faces key ruling in race for president",
+        "Source": "https://t.me/liveuamap/12207",
+        "Title": "Explosions Hit Damascus Near French President's Hotel",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
