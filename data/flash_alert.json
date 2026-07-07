@@ -1,37 +1,30 @@
 [
     {
+        "Source": "https://t.me/intelslava/89868",
+        "Title": "Iran Fires Missiles at Commercial Ships in Strait of Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://monitorthesituation.com/",
         "Title": "Ukraine Launches Over 400 Drones at Moscow and Belgorod Region",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.npr.org/2026/07/07/g-s1-132265/tanker-attack-strait-of-hormuz",
-        "Title": "Tanker set ablaze after being struck by projectile in the Strait of Hormuz",
+        "Source": "https://t.me/nexta_live/119976",
+        "Title": "Ukraine to Continue Strikes on Moscow and St Petersburg",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "npr.org",
-        "threat_level": "CRITICAL"
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.aljazeera.com/news/2026/7/7/palestine-weekly-one-thousand-days-of-genocide-in-gaza?traffic_source=rss",
         "Title": "Palestine weekly: One thousand days of genocide in Gaza",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html",
-        "Title": "Chinese AI models are gaining ground with U.S. companies as OpenAI, Anthropic costs surge",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -42,31 +35,38 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
-        "Title": "Frangoteam FUXA SCADA/HMI",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89868",
-        "Title": "Iran Fires Missiles at Commercial Ships in Strait of Hormuz",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "Title": "StoneFly Storage Concentrator",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.france24.com/en/france/20260707-live-french-far-right-leader-marine-le-pen-faces-key-ruling-in-race-for-president",
+        "Title": "Live: French far-right leader Marine Le Pen faces key ruling in race for president",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "france24.com",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/nexta_live/119975",
-        "Title": "Russia Experiences Widespread Car Damage from Low-Quality Gasoline",
+        "Source": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMzhGeTY4UzgtbGhzZFBSQXpjY2VGRjgxbmU2OWpLZmQwcHMxSnhIa1g5RGtLdk9sVldyYS1HbDNScHZvcjJ1aS1zZjZuVlJTSlVDa25qR0g3WFFzVl8xSkxYMWhBTkltTjZlcXBUWkxpR1A2U25od3BmYnlaaDZxMFpINDE1MlFKaVoySXZwb0hndTVvSnhjX1NFT1BlaDdMZVc1QWZ0cWxxbTJnNDUxM3VoUjZWSTZ3bmx3?oc=5",
+        "Title": "In World Cup shadows, Vancouver's vulnerable communities fear sweeps and raids - Reuters",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.nytimes.com/2026/07/07/world/asia/china-flooding-typhoon-maysak.html",
-        "Title": "At Least 15 Dead in China After Severe Flooding During Typhoon Maysak",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "nytimes.com",
+        "Publisher": "news.google.com",
         "threat_level": "WATCH"
     }
 ]
