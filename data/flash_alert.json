@@ -14,10 +14,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.theguardian.com/world/live/2026/jul/07/nato-summit-zelenskyy-trump-ukraine-rutte-defence-eu-spending-turkey-france-macron-le-pen-europe-latest-news-updates",
-        "Title": "Nato summit begins with focus on defence spending as Zelenskyy and Trump due to meet - Europe live",
+        "Source": "https://t.me/nexta_live/119982",
+        "Title": "Ukrainian Drones Reach Novosibirsk Region",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "theguardian.com",
+        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -28,13 +28,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89868",
-        "Title": "Iran Fires Missiles at Commercial Ships in Strait of Hormuz",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
         "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
@@ -42,8 +35,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
-        "Title": "StoneFly Storage Concentrator",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119982",
-        "Title": "Ukrainian Drones Reach Novosibirsk Region",
+        "Source": "https://www.npr.org/2026/07/07/nx-s1-5879389/gen-z-protesters-in-india-demand-political-reform-and-accountability",
+        "Title": "Gen Z protesters in India demand political reform and accountability",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "npr.org",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.bbc.co.uk/news/videos/cq61d22ved2o?at_medium=RSS&at_campaign=rss",
-        "Title": "Watch: Moment rare tornado lashes central Chinese cities",
+        "Source": "https://www.theguardian.com/world/live/2026/jul/07/nato-summit-zelenskyy-trump-ukraine-rutte-defence-eu-spending-turkey-france-macron-le-pen-europe-latest-news-updates",
+        "Title": "Nato summit begins with focus on defence spending as Zelenskyy and Trump due to meet - Europe live",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "bbc.co.uk",
+        "Publisher": "theguardian.com",
         "threat_level": "WATCH"
     }
 ]
