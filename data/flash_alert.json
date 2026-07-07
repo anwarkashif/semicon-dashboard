@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Says Nuclear Deal Talks Will Not Commence Amid Threats",
+        "Title": "Ukraine Launches Over 400 Drones at Moscow and Belgorod Region",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.npr.org/2026/07/07/g-s1-132265/tanker-attack-strait-of-hormuz",
@@ -14,22 +14,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/7/aje-onl-nf_russia-sends-weapons-to-mali-hold-off-rebel-siege-060726?traffic_source=rss",
-        "Title": "Russia sends weapons to help Mali\u2019s government hold off rebel siege",
+        "Source": "https://www.aljazeera.com/news/2026/7/7/palestine-weekly-one-thousand-days-of-genocide-in-gaza?traffic_source=rss",
+        "Title": "Palestine weekly: One thousand days of genocide in Gaza",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "aljazeera.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html",
+        "Title": "Chinese AI models are gaining ground with U.S. companies as OpenAI, Anthropic costs surge",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "cnbc.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,31 +42,31 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02",
+        "Title": "Frangoteam FUXA SCADA/HMI",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119974",
-        "Title": "Ukraine Postal Terminal Destroyed in Kryvyi Rih",
+        "Source": "https://t.me/intelslava/89868",
+        "Title": "Iran Fires Missiles at Commercial Ships in Strait of Hormuz",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cnbc.com/2026/07/07/samsung-electronics-preliminary-second-quarter-profit-hits-fresh-high.html",
-        "Title": "Samsung Electronics shares fall as capex, demand concerns cloud record Q2 profit report",
+        "Source": "https://t.me/nexta_live/119975",
+        "Title": "Russia Experiences Widespread Car Damage from Low-Quality Gasoline",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "cnbc.com",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.france24.com/en/love-deception-and-the-real-lives-of-nigeria-s-romance-fraudsters",
-        "Title": "Love, deception and the real lives of Nigeria's romance fraudsters",
+        "Source": "https://www.nytimes.com/2026/07/07/world/asia/china-flooding-typhoon-maysak.html",
+        "Title": "At Least 15 Dead in China After Severe Flooding During Typhoon Maysak",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
+        "Publisher": "nytimes.com",
         "threat_level": "WATCH"
     }
 ]
