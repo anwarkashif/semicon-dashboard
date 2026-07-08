@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Drone Strike Kills Two Men in Southern Lebanon",
+        "Title": "US Airstrikes Hit Boat in Bandar Abbas, Iran",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,13 +14,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://t.me/nexta_live/119990",
         "Title": "Russia Nears Final Decision on Ukraine",
         "Feed_Source": "WAR MONITOR",
@@ -28,25 +21,32 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-02",
-        "Title": "CubeSpace CW0057 Reaction Wheel",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-03",
+        "Title": "Hitachi Energy e-mesh EMS",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
-        "Title": "Siemens SINEC OS",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
+        "Title": "Labcenter Proteus 9",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89873",
