@@ -1,16 +1,9 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Trump Says US-Iran Ceasefire Is Over, Oil Prices Jump 6% as Talks Halt in Washington, D.C., United States 2026-07-08 Duration: Pedestrian type: State Organ Diabetes",
+        "Title": "Iran Military Declares Supporters of US Forces Legitimate Targets",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -25,18 +18,18 @@
         "Title": "Russia Nears Final Decision on Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
-        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
+        "Source": "https://t.me/liveuamap/12209",
+        "Title": "Syria Suffers Explosions Near Ministry of Tourism",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -46,7 +39,21 @@
         "Title": "Hitachi Energy e-mesh EMS",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
+        "Title": "Siemens SINEC OS",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/intelslava/89873",
@@ -60,13 +67,6 @@
         "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
