@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Strike Damages Iran's Sirik Port, Injures Four",
+        "Title": "NATO Allies to Deploy Minesweepers at Strait of Hormuz",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -18,7 +18,7 @@
         "Title": "Russia Nears Final Decision on Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
@@ -32,32 +32,25 @@
         "Title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-03",
-        "Title": "Hitachi Energy e-mesh EMS",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-07",
+        "Title": "Digi International PortServer TS, Digi One SP IA",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
-        "Title": "Siemens SINEC OS",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-03",
-        "Title": "Gardyn IoT Hub",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-02",
-        "Title": "CubeSpace CW0057 Reaction Wheel",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04",
+        "Title": "Schneider Electric EasyLogic T150 and Saitel DP RTU",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -65,6 +58,13 @@
     {
         "Source": "https://t.me/intelslava/89873",
         "Title": "Russia Produces T-80BVM Tanks at Omsk Plant",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44848",
+        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
