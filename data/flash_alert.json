@@ -1,16 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "IRGC Shoots Down US MQ-9 Drone Over Khormuj, Iran",
+        "Title": "Iran Launches Ballistic Missiles at Kuwait, Bahrain; Explosions Near Airbase Reported in Kuwait",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/southfronteng/61809",
-        "Title": "Iranian Forces Strike Qatari and Saudi Tankers Near Hormuz",
+        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "dw.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,36 +21,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/liveuamap/12209",
-        "Title": "Syria Suffers Explosions Near Ministry of Tourism",
+        "Source": "https://t.me/southfronteng/61809",
+        "Title": "Iranian Forces Strike Qatari and Saudi Tankers Near Hormuz",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-03",
-        "Title": "Hitachi Energy e-mesh EMS",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-05",
-        "Title": "XZ Utils vulnerability impacting B&R Products",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-02",
+        "Title": "CubeSpace CW0057 Reaction Wheel",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -65,6 +44,27 @@
     {
         "Source": "https://t.me/warmonitors/44848",
         "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119991",
+        "Title": "Ukraine Confirms Death of Anastasia Berezovskaya",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/34268",
+        "Title": "Iranian Foreign Minister Confronted by Protesters",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
