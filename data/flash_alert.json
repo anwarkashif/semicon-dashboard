@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Launches Strikes Against Iran",
+        "Title": "US Navy Deploys 19 Warships Near Iran as New Strikes Begin",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -28,8 +28,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/liveuamap/12209",
-        "Title": "Syria Suffers Explosions Near Ministry of Tourism",
+        "Source": "https://t.me/warmonitors/44848",
+        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "HIGH"
@@ -42,8 +42,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
-        "Title": "Siemens SINEC OS",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -56,17 +56,17 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/warmonitors/44848",
-        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
         "Source": "https://warmonitor.com/",
         "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119991",
+        "Title": "Ukraine Confirms Death of Anastasia Berezovskaya",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
