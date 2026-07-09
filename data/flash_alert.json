@@ -21,18 +21,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/intelslava/89873",
-        "Title": "Russia Produces T-80BVM Tanks at Omsk Plant",
+        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
+        "Publisher": "dw.com",
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.france24.com/en/tv-shows/focus/20260707-german-gen-z-joins-the-bundeswehr-the-military-becomes-a-plan-b",
-        "Title": "German Gen Z joins the Bundeswehr: The military becomes a plan B",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "france24.com",
-        "threat_level": "WATCH"
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
+        "Title": "OpenPLC v3",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog",
@@ -42,11 +42,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-03",
-        "Title": "Schneider Electric Easergy MiCOM Px40 Series",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
+        "Title": "Labcenter Proteus 9",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89873",
+        "Title": "Russia Produces T-80BVM Tanks at Omsk Plant",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/warmonitors/44848",
@@ -60,13 +67,6 @@
         "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119991",
-        "Title": "Ukraine Confirms Death of Anastasia Berezovskaya",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
