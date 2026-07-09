@@ -22597,3 +22597,418 @@
 2026-07-09 17:37:42,139 - INFO - Rotating to API Key 2
 2026-07-09 17:37:47,178 - INFO - AFC is enabled with max remote calls: 10.
 2026-07-09 17:38:23,276 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-09 18:39:23,540 - ERROR - not a 200 response: 403 for URL https://www.realcleardefense.com/2026/07/09/the_drone_revolution_that_isnt_1193371.html
+2026-07-09 18:39:23,574 - ERROR - not a 200 response: 403 for URL https://www.realcleardefense.com/2026/07/09/airpower_did_not_fail_in_iran__simplistic_thinking_did_1193380.html
+2026-07-09 18:39:23,598 - ERROR - not a 200 response: 403 for URL https://www.realcleardefense.com/2026/07/09/us_navy_issued_rfis_to_korean_shipbuilders_for_destroyers_and_oilers_1193415.html
+2026-07-09 18:39:23,633 - ERROR - not a 200 response: 403 for URL https://www.realcleardefense.com/2026/07/09/us_navy_funds_mine_laying_submarine_1193417.html
+2026-07-09 18:39:23,657 - ERROR - not a 200 response: 403 for URL https://www.realcleardefense.com/2026/07/09/the_us_military_is_not_organized_for_cyber_war_1193422.html
+2026-07-09 18:39:31,388 - ERROR - not a 200 response: 403 for URL https://www.satellitetoday.com/manufacturing/2026/07/08/beyond-gravity-signs-gamechanging-contract-with-ariane-group/
+2026-07-09 18:39:31,398 - ERROR - not a 200 response: 403 for URL https://www.satellitetoday.com/finance/2026/07/08/iceye-makes-major-move-in-german-with-new-business-entity/
+2026-07-09 18:39:31,406 - ERROR - not a 200 response: 403 for URL https://www.satellitetoday.com/technology/2026/07/08/york-space-and-all-space-ceos-detail-resilient-communications-vision-as-acquisition-closes/
+2026-07-09 18:39:31,416 - ERROR - not a 200 response: 403 for URL https://www.satellitetoday.com/connectivity/2026/07/07/cesiumastro-files-for-737-satellite-synchronicity-constellation/
+2026-07-09 18:40:27,595 - WARNING - Retrying (Retry(total=1, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /simplifying-intelligent-wireless-design-and-security-certification-for-healthcare-devices/
+2026-07-09 18:41:27,779 - WARNING - Retrying (Retry(total=0, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /simplifying-intelligent-wireless-design-and-security-certification-for-healthcare-devices/
+2026-07-09 18:41:57,923 - ERROR - download error: https://www.eetimes.com/simplifying-intelligent-wireless-design-and-security-certification-for-healthcare-devices/ HTTPSConnectionPool(host='www.eetimes.com', port=443): Max retries exceeded with url: /simplifying-intelligent-wireless-design-and-security-certification-for-healthcare-devices/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)"))
+2026-07-09 18:42:28,131 - WARNING - Retrying (Retry(total=1, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /voyager-spacecraft-the-ultimate-power-management-challenge/
+2026-07-09 18:43:28,241 - WARNING - Retrying (Retry(total=0, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /voyager-spacecraft-the-ultimate-power-management-challenge/
+2026-07-09 18:43:58,307 - ERROR - download error: https://www.eetimes.com/voyager-spacecraft-the-ultimate-power-management-challenge/ HTTPSConnectionPool(host='www.eetimes.com', port=443): Max retries exceeded with url: /voyager-spacecraft-the-ultimate-power-management-challenge/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)"))
+2026-07-09 18:44:28,409 - WARNING - Retrying (Retry(total=1, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /as-ai-moves-from-training-to-inference-optics-moves-closer-to-the-chip/
+2026-07-09 18:45:28,600 - WARNING - Retrying (Retry(total=0, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /as-ai-moves-from-training-to-inference-optics-moves-closer-to-the-chip/
+2026-07-09 18:45:58,768 - ERROR - download error: https://www.eetimes.com/as-ai-moves-from-training-to-inference-optics-moves-closer-to-the-chip/ HTTPSConnectionPool(host='www.eetimes.com', port=443): Max retries exceeded with url: /as-ai-moves-from-training-to-inference-optics-moves-closer-to-the-chip/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)"))
+2026-07-09 18:46:28,887 - WARNING - Retrying (Retry(total=1, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /white-house-executive-order-brings-new-urgency-to-post-quantum-cryptography/
+2026-07-09 18:47:28,999 - WARNING - Retrying (Retry(total=0, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /white-house-executive-order-brings-new-urgency-to-post-quantum-cryptography/
+2026-07-09 18:47:59,086 - ERROR - download error: https://www.eetimes.com/white-house-executive-order-brings-new-urgency-to-post-quantum-cryptography/ HTTPSConnectionPool(host='www.eetimes.com', port=443): Max retries exceeded with url: /white-house-executive-order-brings-new-urgency-to-post-quantum-cryptography/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)"))
+2026-07-09 18:48:29,235 - WARNING - Retrying (Retry(total=1, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /rise-of-the-ai-data-center-why-infrastructure-strategy-is-now-a-board-level-issue/
+2026-07-09 18:49:29,411 - WARNING - Retrying (Retry(total=0, connect=0, read=None, redirect=2, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)")': /rise-of-the-ai-data-center-why-infrastructure-strategy-is-now-a-board-level-issue/
+2026-07-09 18:49:59,479 - ERROR - download error: https://www.eetimes.com/rise-of-the-ai-data-center-why-infrastructure-strategy-is-now-a-board-level-issue/ HTTPSConnectionPool(host='www.eetimes.com', port=443): Max retries exceeded with url: /rise-of-the-ai-data-center-why-infrastructure-strategy-is-now-a-board-level-issue/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='www.eetimes.com', port=443): Read timed out. (read timeout=30)"))
+2026-07-09 18:50:16,851 - WARNING - discarding data: None
+2026-07-09 18:50:17,296 - WARNING - discarding data: None
+2026-07-09 18:50:17,459 - WARNING - discarding data: None
+2026-07-09 18:50:17,623 - WARNING - discarding data: None
+2026-07-09 18:50:53,237 - ERROR - download error: https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think HTTPSConnectionPool(host='venturebeat.com', port=443): Max retries exceeded with url: /technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think (Caused by ResponseError('too many 429 error responses'))
+2026-07-09 18:51:23,319 - ERROR - download error: https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud HTTPSConnectionPool(host='venturebeat.com', port=443): Max retries exceeded with url: /infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud (Caused by ResponseError('too many 429 error responses'))
+2026-07-09 18:51:53,386 - ERROR - download error: https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free HTTPSConnectionPool(host='venturebeat.com', port=443): Max retries exceeded with url: /infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free (Caused by ResponseError('too many 429 error responses'))
+2026-07-09 18:52:23,469 - ERROR - download error: https://venturebeat.com/technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai HTTPSConnectionPool(host='venturebeat.com', port=443): Max retries exceeded with url: /technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai (Caused by ResponseError('too many 429 error responses'))
+2026-07-09 18:52:53,545 - ERROR - download error: https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and HTTPSConnectionPool(host='venturebeat.com', port=443): Max retries exceeded with url: /technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and (Caused by ResponseError('too many 429 error responses'))
+2026-07-09 18:52:54,351 - INFO - Redirecting https://news.google.com/rss/articles/CBMimAJBVV95cUxOUUxzbEZuZV9jMm5RaXJ5SjBWTFJNZ0dUY2l5dDFkbzQteFlLSGNSdkVucEdNcXh5Mkp5eG03bGJuMkk2c2h3V0lESlN6aUxSaVpYTVdCRWY4VGJqaTdZNE9QOVVIOUJFckRjOVRNZnF2MnV1RlFyemNSM0pUdFl4OEhHM1lLZWJ4LWl5M1FFb2F4bVJRM2lrZ1A4cnA0OEstTXhCd2lrZDhmNXdWZE9SNFhjU0dCRS1teXloLVdWZGxwbFpWSE1DMFVhTnFZWENWcUJhcXRLMGpuaUNLd3ZSUnJRdDlxZHBRUk9qMjlXLTZyd1dJNFkzV1BINDJTNlhWeWtGRm55MWprdHNLMnB2ZTFWRDdwa3g5?oc=5 -> https://news.google.com/rss/articles/CBMimAJBVV95cUxOUUxzbEZuZV9jMm5RaXJ5SjBWTFJNZ0dUY2l5dDFkbzQteFlLSGNSdkVucEdNcXh5Mkp5eG03bGJuMkk2c2h3V0lESlN6aUxSaVpYTVdCRWY4VGJqaTdZNE9QOVVIOUJFckRjOVRNZnF2MnV1RlFyemNSM0pUdFl4OEhHM1lLZWJ4LWl5M1FFb2F4bVJRM2lrZ1A4cnA0OEstTXhCd2lrZDhmNXdWZE9SNFhjU0dCRS1teXloLVdWZGxwbFpWSE1DMFVhTnFZWENWcUJhcXRLMGpuaUNLd3ZSUnJRdDlxZHBRUk9qMjlXLTZyd1dJNFkzV1BINDJTNlhWeWtGRm55MWprdHNLMnB2ZTFWRDdwa3g5?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:54,482 - WARNING - discarding data: None
+2026-07-09 18:52:54,678 - INFO - Redirecting https://news.google.com/rss/articles/CBMixAFBVV95cUxOYjh0R1JybkxWSDFsTklON1k4eTJKc1U2cGRhdW9mak5PUTJaZnRLWFB1azYzSHc3NUVsR0hONEdHUnlCWUJwZzktU1ktUDlxcTM3Y0g0RjllMGM0bGduOWRHeWxFem9fTG5tTk13VEd2QzVZQ3lGa081ajdzMVZTTE8weFNHQzJLMHBxWTQwZkM5c2w4a2s3TkNscmFQMGdxQkZmRC1wV1BIS2hFOGRaVGJjbjhRNWNaV3NrZG5ITmxEa3dM?oc=5 -> https://news.google.com/rss/articles/CBMixAFBVV95cUxOYjh0R1JybkxWSDFsTklON1k4eTJKc1U2cGRhdW9mak5PUTJaZnRLWFB1azYzSHc3NUVsR0hONEdHUnlCWUJwZzktU1ktUDlxcTM3Y0g0RjllMGM0bGduOWRHeWxFem9fTG5tTk13VEd2QzVZQ3lGa081ajdzMVZTTE8weFNHQzJLMHBxWTQwZkM5c2w4a2s3TkNscmFQMGdxQkZmRC1wV1BIS2hFOGRaVGJjbjhRNWNaV3NrZG5ITmxEa3dM?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:54,779 - WARNING - discarding data: None
+2026-07-09 18:52:54,978 - INFO - Redirecting https://news.google.com/rss/articles/CBMihgFBVV95cUxOV3ZVcWlTUS1EOVVHaUV4TEtaeGNDZkFMSGhublRCSUNWX3VjNjdEYWx3dXNydWJIVmdiSUhzdjlGUzFEbEhGZ21jYWdfc05EMC16S0RQZjZFRlFmdHlYa25QX1J6WWFaZ2xXQUNydndyNlV0bnV1SWVUOW9oaHhXUl9iT0d1UdIBiwFBVV95cUxNREQyZkZFUDVYZzE1NGR1X2JhQldYX1BQa0w5dDJpN21UUy1WUDRBYkVZUjhLSGNwbmd2S3BYV1cyY2ZsNXpPZTV2cFA2bFktUE04QlV4ZFl6NjMybGo1SnBCNWNoc0FEbEVxM3VKdDVVemNzSVVBOWNsaUJZTC1Ma3dNaFBaVWFjcnBJ?oc=5 -> https://news.google.com/rss/articles/CBMihgFBVV95cUxOV3ZVcWlTUS1EOVVHaUV4TEtaeGNDZkFMSGhublRCSUNWX3VjNjdEYWx3dXNydWJIVmdiSUhzdjlGUzFEbEhGZ21jYWdfc05EMC16S0RQZjZFRlFmdHlYa25QX1J6WWFaZ2xXQUNydndyNlV0bnV1SWVUOW9oaHhXUl9iT0d1UdIBiwFBVV95cUxNREQyZkZFUDVYZzE1NGR1X2JhQldYX1BQa0w5dDJpN21UUy1WUDRBYkVZUjhLSGNwbmd2S3BYV1cyY2ZsNXpPZTV2cFA2bFktUE04QlV4ZFl6NjMybGo1SnBCNWNoc0FEbEVxM3VKdDVVemNzSVVBOWNsaUJZTC1Ma3dNaFBaVWFjcnBJ?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:55,078 - WARNING - discarding data: None
+2026-07-09 18:52:55,299 - INFO - Redirecting https://news.google.com/rss/articles/CBMif0FVX3lxTE9xTVJtOUh1MTVFMnpXcFluMjdxUXo4MkZhYi1DWVJJLWI0UlctSG9pd2tnR1RvRE1WOG03YWhzVGNnN3VYOUhobG5qbXJfTWNDMHAxcmI2UFR0RDZHVGhESEUtcktEb1VLZmQyUDJpTy1Ka3ZrLVBqUFFtZXRBcFnSAYQBQVVfeXFMT1JkdDh5dzUwakF4LU5UaDNaRGpPMmRHT2Nnb3g0NlJBQWdBTjNPZjVJRXgwVllFc0NRcXNibi0tNllpNDEwVUN0cXkxRHlvanVCLXYtMFphbGFzSk95YjFLVnhXNHZUM0trRXplTkZxX1BFZGZxYlZXTDREMEpLbGFjY0Y2?oc=5 -> https://news.google.com/rss/articles/CBMif0FVX3lxTE9xTVJtOUh1MTVFMnpXcFluMjdxUXo4MkZhYi1DWVJJLWI0UlctSG9pd2tnR1RvRE1WOG03YWhzVGNnN3VYOUhobG5qbXJfTWNDMHAxcmI2UFR0RDZHVGhESEUtcktEb1VLZmQyUDJpTy1Ka3ZrLVBqUFFtZXRBcFnSAYQBQVVfeXFMT1JkdDh5dzUwakF4LU5UaDNaRGpPMmRHT2Nnb3g0NlJBQWdBTjNPZjVJRXgwVllFc0NRcXNibi0tNllpNDEwVUN0cXkxRHlvanVCLXYtMFphbGFzSk95YjFLVnhXNHZUM0trRXplTkZxX1BFZGZxYlZXTDREMEpLbGFjY0Y2?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:55,425 - WARNING - discarding data: None
+2026-07-09 18:52:55,639 - INFO - Redirecting https://news.google.com/rss/articles/CBMiggFBVV95cUxObHd1ZmJaeklSRUtlMG4wNXVSVlVBZGFhNFluOUxIdFpDVHVubHBBLVVpZEdFNWY2NDZNQnlRd0dUa1NKT0tjXzNzcnpDTVNIUDJqOW0wMVl0Y3NrbWlSMDhmdkc0eGR6Z25razI1MGdEVnAyTGJJRDB5R2pUcEwtb25n?oc=5 -> https://news.google.com/rss/articles/CBMiggFBVV95cUxObHd1ZmJaeklSRUtlMG4wNXVSVlVBZGFhNFluOUxIdFpDVHVubHBBLVVpZEdFNWY2NDZNQnlRd0dUa1NKT0tjXzNzcnpDTVNIUDJqOW0wMVl0Y3NrbWlSMDhmdkc0eGR6Z25razI1MGdEVnAyTGJJRDB5R2pUcEwtb25n?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:55,740 - WARNING - discarding data: None
+2026-07-09 18:52:56,519 - INFO - Redirecting https://news.google.com/rss/articles/CBMiwAFBVV95cUxONTdfVTdiZjVJb2tHeF9KRmhBTDZnSVFRTDctOEFqVmhnb3d3b3NnZ1JGbW9iUUo1Nm5FcjRCcWtWTHlOMTNhb1RqTldsREpSS3cycG9ramQ1dWx4cnVDUGJXaXhOZnNkbW9ibnl6N0dEWjhtVTZLdDdPZjVJaXNadkdES080RVNPODRIVTFCcmd5Y2RlaGItcmtlNkh0cElJbUZYRE1naFRRbUtYTDdZTFU3YjlIN3RKR09iNjA1Wkg?oc=5 -> https://news.google.com/rss/articles/CBMiwAFBVV95cUxONTdfVTdiZjVJb2tHeF9KRmhBTDZnSVFRTDctOEFqVmhnb3d3b3NnZ1JGbW9iUUo1Nm5FcjRCcWtWTHlOMTNhb1RqTldsREpSS3cycG9ramQ1dWx4cnVDUGJXaXhOZnNkbW9ibnl6N0dEWjhtVTZLdDdPZjVJaXNadkdES080RVNPODRIVTFCcmd5Y2RlaGItcmtlNkh0cElJbUZYRE1naFRRbUtYTDdZTFU3YjlIN3RKR09iNjA1Wkg?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:56,645 - WARNING - discarding data: None
+2026-07-09 18:52:56,878 - INFO - Redirecting https://news.google.com/rss/articles/CBMijwFBVV95cUxQOHFVbGJtSUZfMnZzTDV2cmVYV1lFcmh3dGZ2S1haOGFhc0JKNGxmSXUzRklRVG53cVFrU3h4T2RLVDg4Mm1mQUktS01Xc3hGTzlGQ0toY2dZSVhvcVVBb1RrQWlJaFRhcTh0d2N2UG5GNzJZWjZUNlZ0U0FPRENnU1RvNFllcUNmQmVBZ3Bybw?oc=5 -> https://news.google.com/rss/articles/CBMijwFBVV95cUxQOHFVbGJtSUZfMnZzTDV2cmVYV1lFcmh3dGZ2S1haOGFhc0JKNGxmSXUzRklRVG53cVFrU3h4T2RLVDg4Mm1mQUktS01Xc3hGTzlGQ0toY2dZSVhvcVVBb1RrQWlJaFRhcTh0d2N2UG5GNzJZWjZUNlZ0U0FPRENnU1RvNFllcUNmQmVBZ3Bybw?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:57,003 - WARNING - discarding data: None
+2026-07-09 18:52:57,239 - INFO - Redirecting https://news.google.com/rss/articles/CBMilwFBVV95cUxPV3dUamNQYTZqcXctOEdCeFBpRTBlemdKM2ZMTTVzdzBSOHhWalI0V080UkViWGJ5X0tMR3RiY2FwTUhkaXdRc25nS2x1LWQtVEdhMHlvMkdPRXpPa1lUdFIwb3pCU3MwZVU4VUlfNnRzMmd2ZW5ia0dxb1hXd2xDOXlURzNMTktFTlhEUThLc2cxWXZQUkNB?oc=5 -> https://news.google.com/rss/articles/CBMilwFBVV95cUxPV3dUamNQYTZqcXctOEdCeFBpRTBlemdKM2ZMTTVzdzBSOHhWalI0V080UkViWGJ5X0tMR3RiY2FwTUhkaXdRc25nS2x1LWQtVEdhMHlvMkdPRXpPa1lUdFIwb3pCU3MwZVU4VUlfNnRzMmd2ZW5ia0dxb1hXd2xDOXlURzNMTktFTlhEUThLc2cxWXZQUkNB?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:57,332 - WARNING - discarding data: None
+2026-07-09 18:52:57,552 - INFO - Redirecting https://news.google.com/rss/articles/CBMiowFBVV95cUxOVGZQZkttRDhKNFk1Z3VZQnZqdTRDcGhmaENRVi1Bb3RkUmtpVlJPbEI2SmNZenhBNG9ZZXJxM25xNTktUFVadS0xNDRBdXlpaHBlbWVhcE5lVWIxd2MxX1V3dnMzS1FiTFFEakd0NWpXOVpzRlZ4eHczZDhtR19nSVNWc3B4M3lwbVItU1EzSEdycUFLVWtzaVI1cUJReHZEV3dz?oc=5 -> https://news.google.com/rss/articles/CBMiowFBVV95cUxOVGZQZkttRDhKNFk1Z3VZQnZqdTRDcGhmaENRVi1Bb3RkUmtpVlJPbEI2SmNZenhBNG9ZZXJxM25xNTktUFVadS0xNDRBdXlpaHBlbWVhcE5lVWIxd2MxX1V3dnMzS1FiTFFEakd0NWpXOVpzRlZ4eHczZDhtR19nSVNWc3B4M3lwbVItU1EzSEdycUFLVWtzaVI1cUJReHZEV3dz?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:57,647 - WARNING - discarding data: None
+2026-07-09 18:52:57,867 - INFO - Redirecting https://news.google.com/rss/articles/CBMitwFBVV95cUxNMl9Sb1RtVzRXa3dscEJsLVh3Yk5VY3dwWTg2bUx2Q1lLQng3R09lY2ZoU24wRng4dHJaYTh0LXdlS3hEMm5YU1NfUy14dU92QThzUTNKeXp6RWxDdldEcGlxME9LLU45QloyY0txbmZpajI2dzRUeVdkcDNBSUJrbHZqVEhEbTRSU1B0dGJhZnZYMllCckZQZmR1MnViY2xGdHNaWnNHM0k2SEdjNWxVWmxvUW9sXzQ?oc=5 -> https://news.google.com/rss/articles/CBMitwFBVV95cUxNMl9Sb1RtVzRXa3dscEJsLVh3Yk5VY3dwWTg2bUx2Q1lLQng3R09lY2ZoU24wRng4dHJaYTh0LXdlS3hEMm5YU1NfUy14dU92QThzUTNKeXp6RWxDdldEcGlxME9LLU45QloyY0txbmZpajI2dzRUeVdkcDNBSUJrbHZqVEhEbTRSU1B0dGJhZnZYMllCckZQZmR1MnViY2xGdHNaWnNHM0k2SEdjNWxVWmxvUW9sXzQ?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:57,954 - WARNING - discarding data: None
+2026-07-09 18:52:58,831 - INFO - Redirecting https://news.google.com/rss/articles/CBMingFBVV95cUxNTUpRT3RtSlJJT3pONHQycFlFcHlJdHZUeWZFRS1laW1jWUxCX1Jua3ZWMDdvSHR1aGctaW1fbWc2ekJzSFlOQ3RiS3FtUFJnUkE1Ym1NejdGQ0VxWjZQd3JrQjRjSWg4TFdLekp2bDM3NjZtT1Q5TUQ4cVQ0d1NvR2dpMWE1eU5oLXNweTZDR0hBbHFFUDFsTVJnRHh3UQ?oc=5 -> https://news.google.com/rss/articles/CBMingFBVV95cUxNTUpRT3RtSlJJT3pONHQycFlFcHlJdHZUeWZFRS1laW1jWUxCX1Jua3ZWMDdvSHR1aGctaW1fbWc2ekJzSFlOQ3RiS3FtUFJnUkE1Ym1NejdGQ0VxWjZQd3JrQjRjSWg4TFdLekp2bDM3NjZtT1Q5TUQ4cVQ0d1NvR2dpMWE1eU5oLXNweTZDR0hBbHFFUDFsTVJnRHh3UQ?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:58,921 - WARNING - discarding data: None
+2026-07-09 18:52:59,202 - INFO - Redirecting https://news.google.com/rss/articles/CBMisgFBVV95cUxQWXJpLVd4aU54ZXh0ZFVRRnVwVkw5cGhwVVdVVFlYQ1VRVURxeWVVZUE1aVJEbVVBVEU2T3E0bU5yS2VtMU5FSWpQZnBvMUlUdzVoV1RUNVR5Z3duM3RtaHhkcEFaUUdQTlRUV3dneU13bW0yREVXTWFOaUF2R1dSbFJSVnk1TjRCYUtDUzVKUnhXVDU5QUd5bk9UVDNGQzc0cWJQTHJKcTNTMk9sMTNfY093?oc=5 -> https://news.google.com/rss/articles/CBMisgFBVV95cUxQWXJpLVd4aU54ZXh0ZFVRRnVwVkw5cGhwVVdVVFlYQ1VRVURxeWVVZUE1aVJEbVVBVEU2T3E0bU5yS2VtMU5FSWpQZnBvMUlUdzVoV1RUNVR5Z3duM3RtaHhkcEFaUUdQTlRUV3dneU13bW0yREVXTWFOaUF2R1dSbFJSVnk1TjRCYUtDUzVKUnhXVDU5QUd5bk9UVDNGQzc0cWJQTHJKcTNTMk9sMTNfY093?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:59,328 - WARNING - discarding data: None
+2026-07-09 18:52:59,519 - INFO - Redirecting https://news.google.com/rss/articles/CBMiygFBVV95cUxNUzhwMG5aSUlnb2VWMnNEaVREYTRXckpKZ0ZyRUxWRGdLR1lNMTlURFhhOENRbnVENUJNcE9fZVpRaGU4Z0huM3p4ZVcwZnlpS2FyYzBUbXF3NHVKUm92QmVid1pzTUlJekZGZFdIZC1PZnRuazdQc3V6WG9tZFZONng2dW5UZFN2YU5mRDF5aHJtUmt4WGtrN2lUZmtsVm53Wm5GYXZKb3A4M2NJSVU5eWVURWFIQlVsMmhudFJZY1NKSE9aaWQtUUtB?oc=5 -> https://news.google.com/rss/articles/CBMiygFBVV95cUxNUzhwMG5aSUlnb2VWMnNEaVREYTRXckpKZ0ZyRUxWRGdLR1lNMTlURFhhOENRbnVENUJNcE9fZVpRaGU4Z0huM3p4ZVcwZnlpS2FyYzBUbXF3NHVKUm92QmVid1pzTUlJekZGZFdIZC1PZnRuazdQc3V6WG9tZFZONng2dW5UZFN2YU5mRDF5aHJtUmt4WGtrN2lUZmtsVm53Wm5GYXZKb3A4M2NJSVU5eWVURWFIQlVsMmhudFJZY1NKSE9aaWQtUUtB?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:59,626 - WARNING - discarding data: None
+2026-07-09 18:52:59,825 - INFO - Redirecting https://news.google.com/rss/articles/CBMifEFVX3lxTE1vUFNyOU42ZVhQX2lEY2VYNlljX0RBdlJFa0E2aDNxMDZQazNUSlktd2QwQllLdlpYbC1Pcndya2FMckdvWmI5LXVsQXlrS2tEZnYwRjY0SVktZUV2cXFhaXY3bHczUVVCS002VXBaTVE1QU5lY2lWUFJVMzU?oc=5 -> https://news.google.com/rss/articles/CBMifEFVX3lxTE1vUFNyOU42ZVhQX2lEY2VYNlljX0RBdlJFa0E2aDNxMDZQazNUSlktd2QwQllLdlpYbC1Pcndya2FMckdvWmI5LXVsQXlrS2tEZnYwRjY0SVktZUV2cXFhaXY3bHczUVVCS002VXBaTVE1QU5lY2lWUFJVMzU?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:52:59,923 - WARNING - discarding data: None
+2026-07-09 18:53:00,145 - INFO - Redirecting https://news.google.com/rss/articles/CBMivgFBVV95cUxPUXl4OGJPOWFRWV81QlAxSDBvMHVpMXBtQzNTRHlBaDd1VnJRcE54NVBtNkF5S3BkelVJQjhlN2NNLXpNOXJ1WGVlOXZ3Z1h5OXFPbkNicS1CWnhfbUdPQ1NybkkySF9CZ1o2WEZkWGQ5WEZTYl9QUk96Y1hqbEdIMGwxOEVucldaNEpteWtyWGJmaFpnRFMteENXdllCRGVZUTdIbU00UGxuR05iTjBtTXlnQ05zZFZMM3R2OTN3?oc=5 -> https://news.google.com/rss/articles/CBMivgFBVV95cUxPUXl4OGJPOWFRWV81QlAxSDBvMHVpMXBtQzNTRHlBaDd1VnJRcE54NVBtNkF5S3BkelVJQjhlN2NNLXpNOXJ1WGVlOXZ3Z1h5OXFPbkNicS1CWnhfbUdPQ1NybkkySF9CZ1o2WEZkWGQ5WEZTYl9QUk96Y1hqbEdIMGwxOEVucldaNEpteWtyWGJmaFpnRFMteENXdllCRGVZUTdIbU00UGxuR05iTjBtTXlnQ05zZFZMM3R2OTN3?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:53:00,236 - WARNING - discarding data: None
+2026-07-09 18:53:01,076 - INFO - Redirecting https://news.google.com/rss/articles/CBMigAFBVV95cUxQNzJITTlQd1hvOHl2NU9YZGFvcGh4dF8tVnZaeU1RVXZqc1ktX1dTNWZyXzFyMzBCWUVUZkxEc1habjlXdWp4bzBjbnAxUm9PVmp6NG1ndlR2dVVxN2lmMF9DUk1KUEZDb3RueDVPdzZBUWYtLVN3V2J4blVxTnhDSg?oc=5 -> https://news.google.com/rss/articles/CBMigAFBVV95cUxQNzJITTlQd1hvOHl2NU9YZGFvcGh4dF8tVnZaeU1RVXZqc1ktX1dTNWZyXzFyMzBCWUVUZkxEc1habjlXdWp4bzBjbnAxUm9PVmp6NG1ndlR2dVVxN2lmMF9DUk1KUEZDb3RueDVPdzZBUWYtLVN3V2J4blVxTnhDSg?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:53:01,169 - WARNING - discarding data: None
+2026-07-09 18:53:01,431 - INFO - Redirecting https://news.google.com/rss/articles/CBMipwFBVV95cUxPay13NkpNUTB5ZlBER1ktQ0dRN3Q3dkg5UWpyekd3VnNOTjFZclF2cjZjQS1PZktnU0VWUEpQeWdGbnUzRjlwMUFUN3BmUU9KdGtnR2RvVlREaTROVHpnTzMtNFR0OFA4MVhsdTIxYkk5VGdLQTJkcWNrQnNQZ0hnQ3BGUmNIVlVtM29rcjlVdkt4eGt0QVNQOWs2RnkyZnlOUnhXTUZWWdIBrAFBVV95cUxPR0NidUhFOXNUVG9jS3JiaTJIOUoxNHhhb1RHcTdiRVJzYTB6NFFlS3lHZG1lSy1YRG9nVGFVX2FpTFVaT0tFVU1DQVc4R1dsM0N0MXZ6LU9kT0ZaZ2oyN3JQOTZTTWVUd1pyWUN4RXN5allNVnZrWU1peWl5Xy1SRkVoQUVaR0gya3psN2doanRJal9rM2ZxRlF3T3FiSjJnc2ZjY182YUQ3clVR?oc=5 -> https://news.google.com/rss/articles/CBMipwFBVV95cUxPay13NkpNUTB5ZlBER1ktQ0dRN3Q3dkg5UWpyekd3VnNOTjFZclF2cjZjQS1PZktnU0VWUEpQeWdGbnUzRjlwMUFUN3BmUU9KdGtnR2RvVlREaTROVHpnTzMtNFR0OFA4MVhsdTIxYkk5VGdLQTJkcWNrQnNQZ0hnQ3BGUmNIVlVtM29rcjlVdkt4eGt0QVNQOWs2RnkyZnlOUnhXTUZWWdIBrAFBVV95cUxPR0NidUhFOXNUVG9jS3JiaTJIOUoxNHhhb1RHcTdiRVJzYTB6NFFlS3lHZG1lSy1YRG9nVGFVX2FpTFVaT0tFVU1DQVc4R1dsM0N0MXZ6LU9kT0ZaZ2oyN3JQOTZTTWVUd1pyWUN4RXN5allNVnZrWU1peWl5Xy1SRkVoQUVaR0gya3psN2doanRJal9rM2ZxRlF3T3FiSjJnc2ZjY182YUQ3clVR?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:53:01,518 - WARNING - discarding data: None
+2026-07-09 18:53:01,730 - INFO - Redirecting https://news.google.com/rss/articles/CBMifEFVX3lxTE5LYVN4aG9KdndKaXA5clE3LTVXcHRPVHVjVjNadmlpUWJDRXFOUUhXand3eTE1b3RQWE1YMTdVd3gwXzhzdmxlQmlWZXlUQmlHVzduNTdDbUhVdDBCWjVmNkNZNmlvLTA2VDRuR01wN0d4N1pCZVNvbWFlRFbSAXxBVV95cUxQWURHdGgtM0RiS3ZIa3VoZ3hCSW5Zd1JLVHRaLTI5WnYyNExScjBaNnNuNFFRY0VyOHgyZzAxTEFkMzg5T05xQXdfb3BGU0U5YTNRZFV3dW5OUzRqVXlqMVdoRjNrVUlJNUltRmVWOV9VU0V1YVhZVTZrWDBm?oc=5 -> https://news.google.com/rss/articles/CBMifEFVX3lxTE5LYVN4aG9KdndKaXA5clE3LTVXcHRPVHVjVjNadmlpUWJDRXFOUUhXand3eTE1b3RQWE1YMTdVd3gwXzhzdmxlQmlWZXlUQmlHVzduNTdDbUhVdDBCWjVmNkNZNmlvLTA2VDRuR01wN0d4N1pCZVNvbWFlRFbSAXxBVV95cUxQWURHdGgtM0RiS3ZIa3VoZ3hCSW5Zd1JLVHRaLTI5WnYyNExScjBaNnNuNFFRY0VyOHgyZzAxTEFkMzg5T05xQXdfb3BGU0U5YTNRZFV3dW5OUzRqVXlqMVdoRjNrVUlJNUltRmVWOV9VU0V1YVhZVTZrWDBm?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:53:01,823 - WARNING - discarding data: None
+2026-07-09 18:53:02,011 - INFO - Redirecting https://news.google.com/rss/articles/CBMiiAFBVV95cUxNd2UweE9na0xXNE9uSkZWZTlFLU5vNE0zMENrZUoxOTlQWlhUbnp3dTUwZFhDdXFkMDJxT2xMS2dTemVwZmFWVG9JYmg4WkhtSjc3WC0tWWVZOTZwZ0VpRWdJR0FveFdEM1ZpeHRLc2U1eVlYaGRSWGxaWWh0NkhVekQ1THdFMjBT?oc=5 -> https://news.google.com/rss/articles/CBMiiAFBVV95cUxNd2UweE9na0xXNE9uSkZWZTlFLU5vNE0zMENrZUoxOTlQWlhUbnp3dTUwZFhDdXFkMDJxT2xMS2dTemVwZmFWVG9JYmg4WkhtSjc3WC0tWWVZOTZwZ0VpRWdJR0FveFdEM1ZpeHRLc2U1eVlYaGRSWGxaWWh0NkhVekQ1THdFMjBT?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:53:02,114 - WARNING - discarding data: None
+2026-07-09 18:53:02,329 - INFO - Redirecting https://news.google.com/rss/articles/CBMimwFBVV95cUxNU2E2QW1zZ3JUcFVWWWRjZ0NFUFpab0hQSFdRUkNlSm1lQmVmTGVrQjU3YXNlVkdTUHdLYlhsNmE2M2d3cUJldEpqUld5a1RtY0p0UjVFajloLXZpU3RmNllraDBnM1dtTVlBcWxZem5pcnRfc1J5R3FGWS1hQTZnQ2lId3E2dGF3cmhENjNVLWdOUDlGWkhxVEFBTdIBoAFBVV95cUxNQlVxUzBjSUhzc2NBWGpXQndUN2RLNTdFYklpT1U1V1VpV2xmZk9NVVhpSlJPa3RIcU1zRTRIckxVaUpoWEUyaGNXMUpmN2pMSE1JamROMUZZSDhsaGNPcnZ1YV9UNE1NSUY4MUJJR181ZWRlOFpRZDBvWXhQX3JuNmY1NjhKeDhxbGhGV2M1SXNuMXFuMXFqRGtmcWFCeXp5?oc=5 -> https://news.google.com/rss/articles/CBMimwFBVV95cUxNU2E2QW1zZ3JUcFVWWWRjZ0NFUFpab0hQSFdRUkNlSm1lQmVmTGVrQjU3YXNlVkdTUHdLYlhsNmE2M2d3cUJldEpqUld5a1RtY0p0UjVFajloLXZpU3RmNllraDBnM1dtTVlBcWxZem5pcnRfc1J5R3FGWS1hQTZnQ2lId3E2dGF3cmhENjNVLWdOUDlGWkhxVEFBTdIBoAFBVV95cUxNQlVxUzBjSUhzc2NBWGpXQndUN2RLNTdFYklpT1U1V1VpV2xmZk9NVVhpSlJPa3RIcU1zRTRIckxVaUpoWEUyaGNXMUpmN2pMSE1JamROMUZZSDhsaGNPcnZ1YV9UNE1NSUY4MUJJR181ZWRlOFpRZDBvWXhQX3JuNmY1NjhKeDhxbGhGV2M1SXNuMXFuMXFqRGtmcWFCeXp5?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:53:02,418 - WARNING - discarding data: None
+2026-07-09 18:53:02,631 - INFO - Redirecting https://news.google.com/rss/articles/CBMipwFBVV95cUxQdmt4cXVEaG9xZWEwdGo4VnJPck5aUG42QTdvS0dqa1M4X01tcV82eUM3SG5OQVhaUmk3OHhFMV92VEt2S0tIUkdPSGR1OUk3OEJ4Tkg0SWhzY25xeHl2RG00RkRlZHhkRHFoSUNrSDJPNXZlSExLNHZjOElmQkpJWEFxbUdCLWE0LTlGc3VWRlRTcWxrZVY3Qm5UVTBoNEtpTV9rNzRuMA?oc=5 -> https://news.google.com/rss/articles/CBMipwFBVV95cUxQdmt4cXVEaG9xZWEwdGo4VnJPck5aUG42QTdvS0dqa1M4X01tcV82eUM3SG5OQVhaUmk3OHhFMV92VEt2S0tIUkdPSGR1OUk3OEJ4Tkg0SWhzY25xeHl2RG00RkRlZHhkRHFoSUNrSDJPNXZlSExLNHZjOElmQkpJWEFxbUdCLWE0LTlGc3VWRlRTcWxrZVY3Qm5UVTBoNEtpTV9rNzRuMA?oc=5&hl=en-US&gl=US&ceid=US:en
+2026-07-09 18:53:02,713 - WARNING - discarding data: None
+2026-07-09 18:53:05,077 - ERROR - not a 200 response: 401 for URL https://www.wsj.com/opinion/the-chavista-regime-venezuela-and-trump-7cbd9af9
+2026-07-09 18:53:06,464 - ERROR - not a 200 response: 401 for URL https://www.wsj.com/world/middle-east/these-americans-built-dream-homes-in-lebanon-then-israel-invaded-9c89bd0c
+2026-07-09 18:53:06,497 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:53:06,746 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 18:53:06,747 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 18:54:11,845 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:54:12,120 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 18:54:12,121 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 18:55:17,145 - INFO - Rotating to API Key 2
+2026-07-09 18:55:22,183 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:55:22,625 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:55:22,626 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:55:32,669 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:55:33,195 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:55:33,196 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:55:43,202 - INFO - Rotating to API Key 3
+2026-07-09 18:55:48,240 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:55:48,789 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:55:48,791 - WARNING - API Key 3 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:55:58,835 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:55:59,306 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:55:59,307 - WARNING - API Key 3 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:56:09,317 - INFO - Rotating to API Key 4
+2026-07-09 18:56:14,356 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:56:14,826 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:56:14,827 - WARNING - API Key 4 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:56:24,873 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:56:25,182 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:56:25,182 - WARNING - API Key 4 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:56:35,186 - INFO - Rotating to API Key 5
+2026-07-09 18:56:40,227 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:56:40,641 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:56:40,642 - WARNING - API Key 5 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:56:50,685 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:56:51,031 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:56:51,035 - WARNING - API Key 5 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:57:01,045 - INFO - Rotating to API Key 6
+2026-07-09 18:57:06,084 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:57:06,286 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 18:57:06,287 - WARNING - API Key 6 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 18:58:11,332 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:58:11,770 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:58:11,771 - WARNING - API Key 6 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:58:21,781 - INFO - All keys exhausted. Sleeping additional 60s.
+2026-07-09 18:59:21,835 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:59:22,287 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 18:59:22,288 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 18:59:32,331 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 18:59:32,556 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 18:59:32,557 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:00:37,570 - INFO - Rotating to API Key 2
+2026-07-09 19:00:42,608 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:00:43,018 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:00:43,018 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:00:53,068 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:00:53,442 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:00:53,442 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:01:03,453 - INFO - Rotating to API Key 3
+2026-07-09 19:01:08,491 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:01:08,906 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:01:08,907 - WARNING - API Key 3 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:01:18,951 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:01:19,382 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:01:19,382 - WARNING - API Key 3 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:01:29,393 - INFO - Rotating to API Key 4
+2026-07-09 19:01:34,437 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:01:34,815 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:01:34,816 - WARNING - API Key 4 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:01:44,856 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:01:45,186 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:01:45,186 - WARNING - API Key 4 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:01:55,197 - INFO - Rotating to API Key 5
+2026-07-09 19:02:00,239 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:02:00,786 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:02:00,787 - WARNING - API Key 5 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:02:10,836 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:02:11,111 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:02:11,112 - WARNING - API Key 5 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:02:21,122 - INFO - Rotating to API Key 6
+2026-07-09 19:02:26,160 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:02:26,433 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:02:26,435 - WARNING - API Key 6 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:03:31,513 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:03:31,731 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:03:31,736 - WARNING - API Key 6 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:04:36,770 - INFO - All keys exhausted. Sleeping additional 60s.
+2026-07-09 19:05:36,836 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:05:37,114 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:05:37,115 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:06:42,163 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:06:42,397 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:06:42,398 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:07:47,442 - INFO - Rotating to API Key 2
+2026-07-09 19:07:52,484 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:07:52,915 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:07:52,916 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:08:02,959 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:08:03,296 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:08:03,297 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:08:13,307 - INFO - Rotating to API Key 3
+2026-07-09 19:08:18,345 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:08:18,872 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:08:18,877 - WARNING - API Key 3 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:08:28,920 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:08:29,349 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:08:29,350 - WARNING - API Key 3 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:08:39,360 - INFO - Rotating to API Key 4
+2026-07-09 19:08:44,398 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:08:44,725 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:08:44,725 - WARNING - API Key 4 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:08:54,769 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:08:55,135 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:08:55,136 - WARNING - API Key 4 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:09:05,146 - INFO - Rotating to API Key 5
+2026-07-09 19:09:10,185 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:09:10,802 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:09:10,802 - WARNING - API Key 5 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:09:20,845 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:09:21,122 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:09:21,122 - WARNING - API Key 5 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:09:31,132 - INFO - Rotating to API Key 6
+2026-07-09 19:09:36,176 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:09:36,375 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:09:36,375 - WARNING - API Key 6 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:10:41,424 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:10:41,685 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:10:41,686 - WARNING - API Key 6 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:11:46,751 - INFO - All keys exhausted. Sleeping additional 60s.
+2026-07-09 19:12:46,843 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:12:47,129 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:12:47,133 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:13:52,196 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:13:52,386 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:13:52,387 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:14:57,452 - INFO - Rotating to API Key 2
+2026-07-09 19:15:02,490 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:15:02,937 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:15:02,938 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:15:12,981 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:15:13,267 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:15:13,268 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:15:23,278 - INFO - Rotating to API Key 3
+2026-07-09 19:15:28,316 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:15:28,794 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:15:28,795 - WARNING - API Key 3 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:15:38,838 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:15:39,339 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:15:39,340 - WARNING - API Key 3 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:15:49,346 - INFO - Rotating to API Key 4
+2026-07-09 19:15:54,385 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:15:54,754 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:15:54,755 - WARNING - API Key 4 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:16:04,799 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:16:05,219 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:16:05,220 - WARNING - API Key 4 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:16:15,230 - INFO - Rotating to API Key 5
+2026-07-09 19:16:20,269 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:16:20,610 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:16:20,611 - WARNING - API Key 5 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:16:30,660 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:16:31,085 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:16:31,086 - WARNING - API Key 5 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:16:41,096 - INFO - Rotating to API Key 6
+2026-07-09 19:16:46,135 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:16:46,406 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:16:46,407 - WARNING - API Key 6 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:17:51,443 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:17:51,890 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:17:51,894 - WARNING - API Key 6 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:18:01,905 - INFO - All keys exhausted. Sleeping additional 60s.
+2026-07-09 19:19:01,922 - WARNING - Gemini Extraction Failed due to API limits. Proceeding with Psyopoly Direct Injection. Error: CRITICAL: All API keys exhausted across multiple recovery cycles. Manual intervention required.
+2026-07-09 19:19:01,957 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:19:02,142 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:19:02,143 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:20:07,241 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:20:07,392 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:20:07,393 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:21:12,458 - INFO - Rotating to API Key 2
+2026-07-09 19:21:17,500 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:21:17,661 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:21:17,661 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:21:27,695 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:21:27,840 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:21:27,841 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:21:37,851 - INFO - Rotating to API Key 3
+2026-07-09 19:21:42,889 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:21:43,114 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:21:43,115 - WARNING - API Key 3 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:21:53,164 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:21:53,359 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:21:53,359 - WARNING - API Key 3 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:22:03,370 - INFO - Rotating to API Key 4
+2026-07-09 19:22:08,408 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:22:08,606 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:22:08,607 - WARNING - API Key 4 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:22:18,643 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:22:18,830 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:22:18,831 - WARNING - API Key 4 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:22:28,841 - INFO - Rotating to API Key 5
+2026-07-09 19:22:33,885 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:22:34,044 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:22:34,045 - WARNING - API Key 5 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:22:44,088 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:22:44,255 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:22:44,256 - WARNING - API Key 5 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:22:54,266 - INFO - Rotating to API Key 6
+2026-07-09 19:22:59,304 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:22:59,444 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:22:59,449 - WARNING - API Key 6 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:24:04,506 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:24:04,656 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:24:04,657 - WARNING - API Key 6 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:25:09,676 - INFO - All keys exhausted. Sleeping additional 60s.
+2026-07-09 19:26:09,709 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:26:09,862 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:26:09,863 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:27:14,915 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:27:15,068 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:27:15,069 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:28:20,082 - INFO - Rotating to API Key 2
+2026-07-09 19:28:25,121 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:28:25,267 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:28:25,267 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:29:30,342 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:29:30,490 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:29:30,490 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:30:35,556 - INFO - Rotating to API Key 3
+2026-07-09 19:30:40,605 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:30:40,844 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:30:40,845 - WARNING - API Key 3 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:30:50,888 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:30:51,091 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:30:51,092 - WARNING - API Key 3 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:31:01,102 - INFO - Rotating to API Key 4
+2026-07-09 19:31:06,140 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:31:06,343 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:31:06,344 - WARNING - API Key 4 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:31:16,393 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:31:16,613 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:31:16,614 - WARNING - API Key 4 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:31:26,621 - INFO - Rotating to API Key 5
+2026-07-09 19:31:31,659 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:31:31,812 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:31:31,812 - WARNING - API Key 5 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:31:41,856 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:31:42,021 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:31:42,025 - WARNING - API Key 5 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:31:52,034 - INFO - Rotating to API Key 6
+2026-07-09 19:31:57,073 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:31:57,232 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:31:57,233 - WARNING - API Key 6 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:33:02,331 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:33:02,473 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:33:02,474 - WARNING - API Key 6 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:34:07,479 - INFO - All keys exhausted. Sleeping additional 60s.
+2026-07-09 19:35:07,555 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:35:07,726 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:35:07,727 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:36:12,826 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:36:12,974 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:36:12,975 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:37:18,017 - INFO - Rotating to API Key 2
+2026-07-09 19:37:23,056 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:37:23,222 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:37:23,223 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:38:28,326 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:38:28,491 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:38:28,495 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:39:33,538 - INFO - Rotating to API Key 3
+2026-07-09 19:39:38,577 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:39:38,804 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:39:38,805 - WARNING - API Key 3 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:39:48,848 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:39:49,042 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:39:49,043 - WARNING - API Key 3 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:39:59,053 - INFO - Rotating to API Key 4
+2026-07-09 19:40:04,097 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:40:04,291 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:40:04,292 - WARNING - API Key 4 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:40:14,336 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:40:14,541 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:40:14,542 - WARNING - API Key 4 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:40:24,546 - INFO - Rotating to API Key 5
+2026-07-09 19:40:29,585 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:40:29,758 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:40:29,759 - WARNING - API Key 5 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:40:39,801 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:40:39,953 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:40:39,954 - WARNING - API Key 5 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:40:49,964 - INFO - Rotating to API Key 6
+2026-07-09 19:40:55,003 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:40:55,155 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:40:55,156 - WARNING - API Key 6 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:42:00,228 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:42:00,493 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:42:00,493 - WARNING - API Key 6 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:43:05,558 - INFO - All keys exhausted. Sleeping additional 60s.
+2026-07-09 19:44:05,657 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:44:05,820 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:44:05,821 - WARNING - API Key 1 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:45:10,919 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:45:11,087 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:45:11,088 - WARNING - API Key 1 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:45:21,098 - INFO - Rotating to API Key 2
+2026-07-09 19:45:26,136 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:45:26,273 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:45:26,273 - WARNING - API Key 2 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:46:31,369 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:46:31,534 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:46:31,535 - WARNING - API Key 2 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:46:41,545 - INFO - Rotating to API Key 3
+2026-07-09 19:46:46,584 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:46:46,842 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:46:46,843 - WARNING - API Key 3 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:46:56,884 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:46:57,109 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:46:57,114 - WARNING - API Key 3 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:47:07,124 - INFO - Rotating to API Key 4
+2026-07-09 19:47:12,162 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:47:12,357 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:47:12,358 - WARNING - API Key 4 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:47:22,401 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:47:22,607 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:47:22,608 - WARNING - API Key 4 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:47:32,618 - INFO - Rotating to API Key 5
+2026-07-09 19:47:37,656 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:47:37,823 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:47:37,824 - WARNING - API Key 5 Attempt 1 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:47:47,868 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:47:48,027 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-07-09 19:47:48,028 - WARNING - API Key 5 Attempt 2 Failed: ClientError - 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a
+2026-07-09 19:47:58,038 - INFO - Rotating to API Key 6
+2026-07-09 19:48:03,077 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:48:03,229 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:48:03,230 - WARNING - API Key 6 Attempt 1 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:49:08,295 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-09 19:49:08,467 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-07-09 19:49:08,468 - WARNING - API Key 6 Attempt 2 Failed: ClientError - 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please 
+2026-07-09 19:50:13,474 - INFO - All keys exhausted. Sleeping additional 60s.
+2026-07-09 19:51:13,522 - ERROR - FLASH TO BRIEF Final Failure: CRITICAL: All API keys exhausted across multiple recovery cycles. Manual intervention required.
