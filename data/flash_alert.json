@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israel Ready to Attack Iran for Third Time, Minister Says",
+        "Title": "Ukrainian Drone Strikes Hit Russian Shadow Fleet Near Kerch Strait",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -12,6 +12,13 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44848",
+        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/nexta_live/119990",
@@ -42,8 +49,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-03",
-        "Title": "Gardyn IoT Hub",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-07",
+        "Title": "Digi International PortServer TS, Digi One SP IA",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -51,13 +58,6 @@
     {
         "Source": "https://t.me/intelslava/89873",
         "Title": "Russia Produces T-80BVM Tanks at Omsk Plant",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44848",
-        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
