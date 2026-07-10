@@ -1,10 +1,15 @@
 import os
 import json
 import time
-import streamlit as st
 from typing import Dict, Any, List
 from google import genai
 from google.genai import types
+
+# 🛡️ THE FIX: Safely import Streamlit only if available (prevents headless server crashes)
+try:
+    import streamlit as st
+except ImportError:
+    st = None
 
 class AnalystNode:
     """
@@ -24,7 +29,7 @@ class AnalystNode:
         valid_keys = []
         for slot in key_slots:
             val = os.environ.get(slot)
-            if not val:
+            if not val and st is not None:
                 try: val = st.secrets.get(slot)
                 except Exception: pass
             if val and str(val).strip():
@@ -51,6 +56,7 @@ class AnalystNode:
                 compiled_context += f'\n--- Source: {source_url} ---\n{content}\n'
             source_str = ', '.join([item['source_url'] for item in extracted_data])
 
+        # 🛑 UPGRADED: Expanded System Instruction to enforce the 250-500 word nested structure
         system_instruction = """
         You are an autonomous, elite Geopolitical Intelligence Analyst for the SemicoN Dashboard.
         Your objective is to read the provided context and synthesize a highly professional, 
@@ -60,15 +66,39 @@ class AnalystNode:
         1. You MUST use Google Search Grounding to find up-to-date facts if the provided context is insufficient.
         2. You MUST return your output STRICTLY as a raw JSON object. 
         3. DO NOT include any conversational text outside the JSON.
+        4. The total length of the generated content inside the JSON must be between 250 and 500 words.
         
         Use this EXACT JSON schema:
         {
-            "Title": "A gripping, strategic headline",
+            "Title": "A gripping 10-12 word strategic headline",
             "Threat_Level": "Strictly one of: CRITICAL, ELEVATED, WATCH, or STANDARD",
-            "Action": "A 1-sentence BLUF (Bottom Line Up Front)",
-            "Location": "The primary country or region affected",
-            "Actor": "The primary entity",
-            "Predictive_Analysis": "1 paragraph on what is likely to happen next"
+            "Locations": [
+                "Bullet point 1 detailing a major ongoing news event in a specific location",
+                "Bullet point 2 detailing another major ongoing news event"
+            ],
+            "BLUF": "A cohesive paragraph explaining the Bottom Line Up Front.",
+            "Top_News": {
+                "Asia": ["Bullet point news 1", "Bullet point news 2"],
+                "Middle East": ["Bullet point news 1"],
+                "Europe": ["Bullet point news 1"]
+            },
+            "Watch_Out": [
+                "Bullet point on what news to watch out for",
+                "Bullet point on another upcoming trigger event"
+            ],
+            "Risk_And_Threat_Analysis": {
+                "Risk_Analysis": "A full paragraph detailing immediate operational risks.",
+                "Threat_Analysis": "A full paragraph detailing overarching geopolitical or supply chain threats.",
+                "Overall_Analysis": "A concluding paragraph blending the risk and threat into a strategic summary."
+            },
+            "Predictive_Analysis": "A paragraph forecasting what to look out for in the next few hours.",
+            "Recommendations": {
+                "Global_Supply_Chain": "Impact on global logistics and shipping.",
+                "Semiconductors_And_Rare_Earths": "Impact on chips, lithography, and critical minerals.",
+                "Global_Business": "Impact on markets and multinational corporations.",
+                "Travel": "Travel impact/restrictions determined by the locations mentioned.",
+                "Whats_Next": "Actionable next steps based on the predictive analysis."
+            }
         }
         """
 
@@ -121,6 +151,54 @@ class AnalystNode:
 
                 brief_json['Source'] = source_str
                 state['drafted_brief'] = brief_json
+                
+                # 🛑 UPGRADED: Generate the comprehensive Markdown Email Structure
+                email_md = f"### 🚨 {brief_json.get('Title', 'Agentic AI Strategic Brief')}\n\n"
+                email_md += f"**Threat Level:** {brief_json.get('Threat_Level', 'STANDARD')}\n\n"
+                
+                email_md += "#### 📍 Locations & Major Ongoing News\n"
+                for loc in brief_json.get("Locations", []):
+                    email_md += f"* {loc}\n"
+                email_md += "\n"
+
+                email_md += f"#### 🎯 Bottom Line Up Front (BLUF)\n{brief_json.get('BLUF', 'No BLUF provided.')}\n\n"
+                
+                email_md += "#### 🌍 Top News from the Globe\n"
+                top_news = brief_json.get("Top_News", {})
+                if isinstance(top_news, dict):
+                    for region, news_items in top_news.items():
+                        email_md += f"**{region}**\n"
+                        for item in news_items:
+                            email_md += f"* {item}\n"
+                email_md += "\n"
+
+                email_md += "#### 🔭 What to Watch Out For\n"
+                for watch in brief_json.get("Watch_Out", []):
+                    email_md += f"* {watch}\n"
+                email_md += "\n"
+
+                email_md += "#### ⚖️ Risk and Threat Analysis\n"
+                rta = brief_json.get("Risk_And_Threat_Analysis", {})
+                email_md += f"**Risk Analysis:**\n{rta.get('Risk_Analysis', 'N/A')}\n\n"
+                email_md += f"**Threat Analysis:**\n{rta.get('Threat_Analysis', 'N/A')}\n\n"
+                email_md += f"**Overall Analysis:**\n{rta.get('Overall_Analysis', 'N/A')}\n\n"
+
+                email_md += f"#### 🔮 Predictive Analysis\n{brief_json.get('Predictive_Analysis', 'N/A')}\n\n"
+
+                email_md += "#### 💡 Recommendations & Impact\n"
+                recs = brief_json.get("Recommendations", {})
+                email_md += f"* **Global Supply Chain:** {recs.get('Global_Supply_Chain', 'N/A')}\n"
+                email_md += f"* **Semiconductors & Rare Earths:** {recs.get('Semiconductors_And_Rare_Earths', 'N/A')}\n"
+                email_md += f"* **Global Business:** {recs.get('Global_Business', 'N/A')}\n"
+                email_md += f"* **Travel:** {recs.get('Travel', 'N/A')}\n"
+                email_md += f"* **What's Next:** {recs.get('Whats_Next', 'N/A')}\n\n"
+
+                email_md += f"---\n**Sources:**\n{source_str}"
+                
+                os.makedirs('data', exist_ok=True)
+                with open('data/agentic_email_body.md', 'w', encoding='utf-8') as f:
+                    f.write(email_md)
+
                 print(f'[Node 4] Intelligence Brief successfully drafted using Key Slot {slot_idx + 1}.')
                 success = True
                 break 
