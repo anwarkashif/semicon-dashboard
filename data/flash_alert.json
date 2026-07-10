@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Demands Iran Publicly Guarantee Strait of Hormuz Openness",
+        "Title": "US Issues 24-Hour Ultimatum to Iran Over Strait of Hormuz Attacks",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -12,13 +12,6 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44848",
-        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/nexta_live/119990",
@@ -35,22 +28,22 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://www.france24.com/en/tv-shows/focus/20260707-german-gen-z-joins-the-bundeswehr-the-military-becomes-a-plan-b",
+        "Title": "German Gen Z joins the Bundeswehr: The military becomes a plan B",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "france24.com",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
-        "Title": "Siemens SINEC OS",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
-        "Title": "Labcenter Proteus 9",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
+        "Title": "OpenPLC v3",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -58,6 +51,13 @@
     {
         "Source": "https://t.me/intelslava/89873",
         "Title": "Russia Produces T-80BVM Tanks at Omsk Plant",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44848",
+        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"

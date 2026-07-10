@@ -131,7 +131,29 @@
             "Source": "https://www.worldpoliticsreview.com/china-transnational-repression-min-zin/",
             "Title": "China\u2019s Transnational Repression Is Being Met With a Deafening Silence",
             "Feed_Source": "Premium RSS",
-            "Publisher": "worldpoliticsreview.com"
+            "Publisher": "atlanticcouncil.org"
+        },
+        {
+            "Date": "July 10, 2026",
+            "Actor": "Israel, Lebanese state media",
+            "Action": "Israeli strike on southern Lebanon kills one person",
+            "Location": "Southern Lebanon (Nabatieh)",
+            "Risk": "Regional Conflict, Civilian Casualties",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/lebanese-state-media-says-israeli-strike-south-kills-one",
+            "Title": "Lebanese state media says Israeli strike on south kills one",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "July 10, 2026",
+            "Actor": "Israeli government, US, Lebanese army, Hezbollah",
+            "Action": "Israel suspends 'sensitive operations' in southern Lebanon under US pressure; Prepares to withdraw from areas",
+            "Location": "Southern Lebanon",
+            "Risk": "US Diplomatic Influence, De-escalation",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-suspends-attacks-lebanon-under-american-pressure-report-says",
+            "Title": "Israel suspends attacks on Lebanon under American pressure, report says",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "middleeasteye.net"
         },
         {
             "Date": "July 10, 2026",
@@ -142,7 +164,7 @@
             "Source": "https://www.worldpoliticsreview.com/australia-india-uranium-deal-strategic-partnership-modi-albanese/",
             "Title": "India, Australia Sign Uranium Deal",
             "Feed_Source": "Premium RSS",
-            "Publisher": "worldpoliticsreview.com"
+            "Publisher": "middleeasteye.net"
         },
         {
             "Date": "N/A",
@@ -310,6 +332,17 @@
             "Publisher": "defensenews.com"
         },
         {
+            "Date": "Spring/Summer 2026",
+            "Actor": "Ukraine, Russia, Vladimir Putin",
+            "Action": "Ukraine uses air and ground drones, autonomy, and swarming to re-capture territory; Changes future direction of military technology",
+            "Location": "Ukraine",
+            "Risk": "Warfare Evolution, Military Technology",
+            "Source": "https://www.defenseone.com/technology/2026/07/how-ukraine-won-first-great-robot-war/414658/",
+            "Title": "How Ukraine won the first great robot war",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "defenseone.com"
+        },
+        {
             "Date": "July 2026",
             "Actor": "Italy, Russia (GRU), Gavino Piras",
             "Action": "Broke up alleged Russian espionage ring collecting air defense data",
@@ -329,7 +362,7 @@
             "Source": "https://www.space.com/space-exploration/launches-spacecraft/launching-from-2-continents-germanys-isar-aerospace-leases-canadian-pad-for-usd150-million",
             "Title": "Launching from 2 continents: Germany's Isar Aerospace leases Canadian pad for $150 million",
             "Feed_Source": "Premium RSS",
-            "Publisher": "space.com"
+            "Publisher": "al-monitor.com"
         },
         {
             "Date": "N/A",
@@ -562,8 +595,16 @@
             "url": "https://www.worldpoliticsreview.com/nato-europe-trump-ukraine/"
         },
         {
-            "title": "Two more rocket-makers join Pentagon's list of launch options",
-            "url": "https://www.defenseone.com/business/2026/07/space-force-adds-two-startups-militarys-growing-list-national-security-launch-providers/414685/"
+            "title": "Eight NATO allies launch HALO satellite constellation initiative",
+            "url": "https://www.c4isrnet.com/space/2026/07/07/eight-nato-allies-launch-halo-satellite-constellation-initiative/"
+        },
+        {
+            "title": "Ukraine can soon build its own Patriots \u2013 but it could take years",
+            "url": "https://www.defensenews.com/industry/techwatch/2026/07/10/ukraine-can-soon-build-its-own-patriots-but-it-could-take-years/"
+        },
+        {
+            "title": "Zelenskyy taps European allies to build Freya, a cheaper Patriot-alternative to Russia\u2019s ballistic missiles",
+            "url": "https://www.defensenews.com/industry/techwatch/2026/07/10/zelenskyy-taps-european-allies-to-build-freya-a-cheaper-patriot-alternative-to-russias-ballistic-missiles/"
         },
         {
             "title": "Unions sue to restore Pentagon workers' collective-bargaining rights",
@@ -582,16 +623,84 @@
             "url": "https://warontherocks.com/fraying-deals-and-rising-strikes/"
         },
         {
-            "title": "The Pentagon\u2019s AI Strategy Has a Funding Problem",
-            "url": "https://warontherocks.com/cogs-of-war/the-pentagons-ai-strategy-has-a-funding-problem/"
+            "title": "Trump admin. to support heavy tariffs on Russian oil in effort to end Ukraine war, sources say - CBS News",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRE1WaU53cDFhOTJVUUNHeHFFam5KUk04TDBEZ1RubG9vNVVhVmRPRGhPYlVFOHpHdnNUVWswNlZGMWpsd1hOdUhwMEp3X1pRYUs4MHNqeE5xMUF5c0FxU0VKajVwR2FsSEQyamhVcDhUTDdPWFRoa1NjV1VwamVWb3BCTU1WYlc4dW1zOFJmNk1ONXJjWFl3elI1eXA3NkpwU3NqSy0zMjlyOFZJTEQw?oc=5"
+        },
+        {
+            "title": "US senators say agreement reached with Trump on Russia sanctions bill - Reuters",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMG9jWDI1MnV3NXctZEhMVGpDb0ZmdTI5U1ZBV2xZTUN6bU52SUxRVmRIZURoOUtfcDYwN200WTRCZ1FuRWVOX215eFBKTlM1TDVHLWZHTlJJYmNPRXU4TlBDYWtKaE1oZUlLWk1Ta0JvRmpwOTNvaG1jNW5sWlU3ekc0ZkxFQ2dpMVdpOENlUXdnSlB4NmlJTDhtakNQSjhScHJLakxhb2ZEcXExeVlDMw?oc=5"
+        },
+        {
+            "title": "Canada Signs New Saudi Deals",
+            "url": "https://www.worldpoliticsreview.com/canada-saudi-arabia-carney-trade-bin-salman/"
+        },
+        {
+            "title": "US makes it easier to export Nvidia AI chips and military equipment to the UAE",
+            "url": "https://www.al-monitor.com/originals/2026/07/us-makes-it-easier-export-nvidia-ai-chips-and-military-equipment-uae"
+        },
+        {
+            "title": "Turkey says it hopes to achieve result on lifting U.S. sanctions soon",
+            "url": "https://www.al-monitor.com/originals/2026/07/turkey-says-it-hopes-achieve-result-lifting-us-sanctions-soon"
+        },
+        {
+            "title": "Egypt deepens Horn of Africa maritime alignment with Somalia MoU",
+            "url": "https://www.middleeasteye.net/news/egypt-deepens-horn-of-africa-maritime-alignment-with-somalia-mou"
+        },
+        {
+            "title": "Australia-Fiji defense pact is about much more than China",
+            "url": "https://asiatimes.com/2026/07/australia-fiji-defense-pact-is-about-much-more-than-china/"
+        },
+        {
+            "title": "Beijing is testing who will stand by Taiwan",
+            "url": "https://www.aspistrategist.org.au/beijing-is-testing-who-will-stand-by-taiwan/"
+        },
+        {
+            "title": "China\u2019s Transnational Repression Is Being Met With a Deafening Silence",
+            "url": "https://www.worldpoliticsreview.com/china-transnational-repression-min-zin/"
+        },
+        {
+            "title": "China successfully uses giant floating net to recover rocket booster",
+            "url": "https://www.ft.com/content/211f093c-2666-4f6c-a7fe-ee92f6f78795"
+        },
+        {
+            "title": "Beijing Marks 89th Anniversary of China\u2019s War of Resistance",
+            "url": "https://moderndiplomacy.eu/2026/07/10/beijing-marks-89th-anniversary-of-chinas-war-of-resistance/"
+        },
+        {
+            "title": "India, Australia Sign Uranium Deal",
+            "url": "https://www.worldpoliticsreview.com/australia-india-uranium-deal-strategic-partnership-modi-albanese/"
+        },
+        {
+            "title": "Inside the power struggle over Venezuela\u2019s debt restructuring",
+            "url": "https://www.atlanticcouncil.org/blogs/econographics/inside-the-power-struggle-over-venezuelas-debt-restructuring/"
+        },
+        {
+            "title": "Undetected Ebola Cases Fuel Congo Outbreak, WHO Warns",
+            "url": "https://moderndiplomacy.eu/2026/07/10/undetected-ebola-cases-fuel-congo-outbreak-who-warns/"
+        },
+        {
+            "title": "Tens of thousands of newly displaced civilians are pouring into the besieged city of El Obeid, North Kordofan, completely overwhelming local resources and camps. Despite escalating drone strikes and a tightening blockade, the city has become a final sanctuary for families fleeing violence. #Sudan #Kordofan #SudanWar",
+            "url": "https://x.com/SudanTribune_EN/status/2075674473651720413"
+        },
+        {
+            "title": "The Rapid Support Forces have regained control of the remote town of Kulbus in West Darfur following the withdrawal of the Sudanese army and allied joint forces toward the Chadian border. #Sudan #Darfur #SudanWar",
+            "url": "https://x.com/SudanTribune_EN/status/2075662440092545305"
+        },
+        {
+            "title": "Yemen's Houthis kill 16 government troops; British agency reports attack on cargo ship in Red Sea - CBS News",
+            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQNzJITTlQd1hvOHl2NU9YZGFvcGh4dF8tVnZaeU1RVXZqc1ktX1dTNWZyXzFyMzBCWUVUZkxEc1habjlXdWp4bzBjbnAxUm9PVmp6NG1ndlR2dVVxN2lmMF9DUk1KUEZDb3RueDVPdzZBUWYtLVN3V2J4blVxTnhDSg?oc=5"
         },
         {
             "title": "Victory for al-Qaeda\u2019s Affiliate in Mali Would be a Catastrophe",
             "url": "https://warontherocks.com/victory-for-al-qaedas-affiliate-in-mali-would-be-a-catastrophe/"
         },
         {
-            "title": "Rheinmetall, MBDA to develop laser weapon for German Navy",
-            "url": "https://www.c4isrnet.com/global/europe/2026/07/10/rheinmetall-mbda-to-develop-laser-weapon-for-german-navy/"
+            "title": "UK regulators to scrutinise top US cloud groups",
+            "url": "https://www.ft.com/content/87895bfb-df47-49c7-a339-e5e849b9b271"
+        },
+        {
+            "title": "The Pentagon\u2019s AI Strategy Has a Funding Problem",
+            "url": "https://warontherocks.com/cogs-of-war/the-pentagons-ai-strategy-has-a-funding-problem/"
         },
         {
             "title": "Ukrainian ground robot maker doubles production, eyes ventures with foreign partners",
