@@ -10,6 +10,7 @@ on:
       - trigger_psyopoly_siphon
       - trigger_flash_alert
       - trigger_west_asia_weekly
+      - trigger_agentic_ai
 
 jobs:
   osint-pipeline-dispatcher:
@@ -43,7 +44,6 @@ jobs:
     - name: Run Executive Home Pipeline
       if: github.event.action == 'trigger_executive_radar'
       env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
         RAG_GEMINI_API_KEY: ${{ secrets.RAG_GEMINI_API_KEY }}
         RAG_GEMINI_API_KEY_2: ${{ secrets.RAG_GEMINI_API_KEY_2 }}
@@ -102,7 +102,6 @@ jobs:
     - name: Run Core Datasets and Weekly Pipelines
       if: github.event.action == 'trigger_weekly_brief'
       env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
         RAG_GEMINI_API_KEY: ${{ secrets.RAG_GEMINI_API_KEY }}
         RAG_GEMINI_API_KEY_2: ${{ secrets.RAG_GEMINI_API_KEY_2 }}
@@ -155,7 +154,7 @@ jobs:
     - name: Run Memory Engine
       if: github.event.action == 'trigger_memory_layer'
       env:
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }} # Strictly isolated to the secondary quota
+        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
       run: |
         DAY=$(date +%d | sed 's/^0//')
         if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] || { [ $DAY -ge 8 ] && [ $DAY -le 14 ]; } || { [ $DAY -ge 22 ] && [ $DAY -le 28 ]; }; then
@@ -199,7 +198,6 @@ jobs:
     - name: Run Today's Snippet Pipeline
       if: github.event.action == 'trigger_shift_brief'
       env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
         RAG_GEMINI_API_KEY: ${{ secrets.RAG_GEMINI_API_KEY }}
         RAG_GEMINI_API_KEY_2: ${{ secrets.RAG_GEMINI_API_KEY_2 }}
@@ -257,7 +255,7 @@ jobs:
     - name: Run Psyopoly Extractor Pipeline
       if: github.event.action == 'trigger_psyopoly_siphon'
       env:
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }} # Strictly isolated to the secondary quota
+        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
       run: python psyopoly_extractor.py
 
     - name: Push West Asia Siphon Autonomous Intel Alert
@@ -309,7 +307,6 @@ jobs:
     - name: Run Flash Alert Engine
       if: github.event.action == 'trigger_flash_alert'
       env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
         RAG_GEMINI_API_KEY: ${{ secrets.RAG_GEMINI_API_KEY }}
         RAG_GEMINI_API_KEY_2: ${{ secrets.RAG_GEMINI_API_KEY_2 }}
@@ -367,7 +364,6 @@ jobs:
     - name: Run West Asia Weekly Pipeline
       if: github.event.action == 'trigger_west_asia_weekly'
       env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
         RAG_GEMINI_API_KEY: ${{ secrets.RAG_GEMINI_API_KEY }}
         RAG_GEMINI_API_KEY_2: ${{ secrets.RAG_GEMINI_API_KEY_2 }}
@@ -386,3 +382,43 @@ jobs:
         git commit -m "🌍 Auto-Update: West Asia Weekly OSINT Brief" || true
         git pull origin main --no-rebase -X ours || true
         git push origin main
+
+    # ==========================================
+    # TASK 8: AUTONOMOUS AGENTIC AI LOOP (25M)
+    # ==========================================
+    - name: Set up Python 3.10 (Agentic AI)
+      if: github.event.action == 'trigger_agentic_ai'
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies (Agentic AI)
+      if: github.event.action == 'trigger_agentic_ai'
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests google-genai feedparser beautifulsoup4 huggingface-hub trafilatura langgraph
+
+    - name: Run Agentic AI Engine
+      if: github.event.action == 'trigger_agentic_ai'
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        GEMINI_API_KEY_RAGAI: ${{ secrets.GEMINI_API_KEY_RAGAI }}
+      run: python agent_graph.py
+
+    - name: Commit and Push (Agentic AI)
+      if: github.event.action == 'trigger_agentic_ai'
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git checkout main
+        git add data/
+        git commit -m "🤖 Auto-Update: Agentic AI Autonomous Brief" || true
+        git pull origin main --no-rebase -X ours || true
+        git push origin main
+
+    - name: Sync Data to Hugging Face API
+      if: github.event.action == 'trigger_agentic_ai'
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"

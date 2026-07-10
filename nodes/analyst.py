@@ -10,20 +10,16 @@ class AnalystNode:
     """
     Node 4: The Geopolitical Analyst Component
     Consumes cleaned markdown, synthesizes intelligence, and enforces strict JSON schema output.
-    Implements a multi-key backup cascade with a 10-second cooling window to mitigate 429 Quota errors.
+    Implements a strict 2-key backup cascade with a 10-second cooling window to mitigate 429 Quota errors.
     """
     def __init__(self):
         self.model_id = 'gemini-3.5-flash'
 
     def get_all_keys(self) -> List[str]:
-        """Collects all configured API keys from environment and secrets in strict priority order."""
+        """Collects configured API keys from environment and secrets in strict priority order."""
         key_slots = [
             'GEMINI_API_KEY',
-            'RAG_GEMINI_API_KEY',
-            'RAG_GEMINI_API_KEY_2',
-            'RAG_GEMINI_API_KEY_3',
-            'RAG_GEMINI_API_KEY_4',
-            'RAG_GEMINI_API_KEY_5'
+            'GEMINI_API_KEY_RAGAI'
         ]
         valid_keys = []
         for slot in key_slots:
@@ -76,7 +72,6 @@ class AnalystNode:
         }
         """
 
-        # Fetch the rotational cascade list
         api_keys = self.get_all_keys()
         if not api_keys:
             print('[Node 4] ⚠️ CRITICAL FAILURE: No operational API keys discovered in system secrets configuration.')
@@ -84,7 +79,6 @@ class AnalystNode:
             return state
 
         success = False
-        # Fallback rotation loop starts execution
         for slot_idx, active_key in enumerate(api_keys):
             try:
                 print(f'[Node 4] Attempting engine query via Key Slot {slot_idx + 1}/{len(api_keys)}...')
@@ -100,7 +94,6 @@ class AnalystNode:
                     )
                 )
                 
-                # Safe syntax stripping to keep clipboard actions from breaking strings
                 raw_text = response.text.strip()
                 if raw_text.startswith('```json'): 
                     raw_text = raw_text[7:-3].strip()
@@ -109,7 +102,6 @@ class AnalystNode:
                 
                 brief_json = json.loads(raw_text)
                 
-                # Intercept Google Grounding Links
                 grounding_links = []
                 try:
                     if response.candidates and response.candidates[0].grounding_metadata:
@@ -131,7 +123,7 @@ class AnalystNode:
                 state['drafted_brief'] = brief_json
                 print(f'[Node 4] Intelligence Brief successfully drafted using Key Slot {slot_idx + 1}.')
                 success = True
-                break # Escape cascade loop on clean execution
+                break 
                 
             except Exception as e:
                 print(f'[Node 4] Warning: Key Slot {slot_idx + 1} rejected payload execution: {e}')
