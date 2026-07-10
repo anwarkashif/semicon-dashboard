@@ -19,7 +19,7 @@ RSS_FEEDS = [
     "https://semiwiki.com/feed/", "https://thediplomat.com/feed/", "https://gcaptain.com/feed/"
 ]
 
-client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY_SECONDARY"))
 
 def valid_url(url):
     if not url: return False

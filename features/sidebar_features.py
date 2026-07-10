@@ -101,6 +101,7 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
     st.sidebar.title("SemicoN Access")
 
     base_options = [
+        "Agentic Home",
         "Executive Home",
         "Today's Snippet",
         "Weekly Tactical Brief",
@@ -124,7 +125,7 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         view_options = base_options + archive_options
 
     st.sidebar.markdown("---")
-    view_selection = st.sidebar.radio("Strategic Navigation", view_options)
+    view_selection = st.sidebar.radio("Strategic Navigation", view_options, key="main_nav_radio")
     st.sidebar.markdown("---")
 
     selected_actor = "All" 
