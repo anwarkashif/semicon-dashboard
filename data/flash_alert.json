@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "China Lands Orbital Reusable Booster on Sea Platform, Breaking SpaceX Monopoly Claim",
+        "Title": "Russia and China Codify Joint Strategy to Neutralize Starlink",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -21,17 +28,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
+        "Source": "https://www.france24.com/en/tv-shows/focus/20260707-german-gen-z-joins-the-bundeswehr-the-military-becomes-a-plan-b",
+        "Title": "German Gen Z joins the Bundeswehr: The military becomes a plan B",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZnJ3T0N1c3QyeXJSYzF4NVNBUDh3dThhd1AzVjhtaWVZNU1ZWW81dGxTVy1pWWJLaW9tcWdybmcxTkNTUl9UU1Z2ekRQOWJJcEF5SUVqd3lzdXNENnlob016M0hHelg1NVNQWHdmTWJ4bWF6bUVrU1Q3eUtkVmloYS1YdzlWcW1tb2hxSmZMTEwyUEVaTkRFdlpyeFYzSUtRRmJVS1V1MHJoQXRIcFBQQ3lVMC1mcE5MWndnM0FmOA?oc=5",
-        "Title": "NATO Secretary General meets with the President of T\u00fcrkiye - North Atlantic Treaty Organization | NATO",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "news.google.com",
+        "Publisher": "france24.com",
         "threat_level": "HIGH"
     },
     {
@@ -42,8 +42,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
-        "Title": "Labcenter Proteus 9",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
+        "Title": "OpenPLC v3",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-02",
+        "Title": "CubeSpace CW0057 Reaction Wheel",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -60,13 +67,6 @@
         "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
