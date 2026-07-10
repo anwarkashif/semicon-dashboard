@@ -8,6 +8,48 @@
             "Actor": "Psyopoly/West Asia",
             "Location": "Middle East",
             "Event": "Strategic Update",
+            "Action": "Iranian foreign ministry says Nato chief exposed Europe's 'willful complicity' in US attacks",
+            "Headline": "Iranian foreign ministry says Nato chief exposed Europe's 'willful complicity' in US attacks",
+            "Summary": "Iranian foreign ministry says Nato chief exposed Europe's 'willful complicity' in US attacks",
+            "Risk": "HIGH",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-foreign-ministry-says-nato-chief-exposed-europes-willful",
+            "Title": "Iranian foreign ministry says Nato chief exposed Europe's 'willful complicity' in US attacks",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "2026-07-10",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "The AI adoption race is over. The AI cost war has begun",
+            "Headline": "The AI adoption race is over. The AI cost war has begun",
+            "Summary": "The AI adoption race is over. The AI cost war has begun",
+            "Risk": "HIGH",
+            "Source": "https://x.com/TheNationalNews/status/2075427570846196203",
+            "Title": "The AI adoption race is over. The AI cost war has begun",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "x.com"
+        },
+        {
+            "Date": "2026-07-10",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
+            "Action": "Iran slams Nato talks on navigating Hormuz Strait as 'politically motivated'",
+            "Headline": "Iran slams Nato talks on navigating Hormuz Strait as 'politically motivated'",
+            "Summary": "Iran slams Nato talks on navigating Hormuz Strait as 'politically motivated'",
+            "Risk": "HIGH",
+            "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-slams-nato-talks-navigating-hormuz-strait-politically-motivated",
+            "Title": "Iran slams Nato talks on navigating Hormuz Strait as 'politically motivated'",
+            "Feed_Source": "Psyopoly Supabase",
+            "Publisher": "middleeasteye.net"
+        },
+        {
+            "Date": "2026-07-10",
+            "Actor": "Psyopoly/West Asia",
+            "Location": "Middle East",
+            "Event": "Strategic Update",
             "Action": "Report: US official says 'technical talks' with Iran ongoing, despite attacks",
             "Headline": "Report: US official says 'technical talks' with Iran ongoing, despite attacks",
             "Summary": "Report: US official says 'technical talks' with Iran ongoing, despite attacks",
@@ -500,42 +542,21 @@
             "Title": "India-Japan convergence reshaping Indo-Pacific\u2019s power balance",
             "Feed_Source": "Premium RSS",
             "Publisher": "asiatimes.com"
-        },
-        {
-            "Date": "2026",
-            "Actor": "China, Taiwan, US Allies",
-            "Action": "Increases pressure to isolate Taiwan internationally, tests US commitments",
-            "Location": "Taiwan Strait, Indo-Pacific",
-            "Risk": "Cross-Strait tensions, regional stability",
-            "Source": "https://www.aspistrategist.org.au/beijing-is-testing-who-will-stand-by-taiwan/",
-            "Title": "Beijing is testing who will stand by Taiwan",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "aspistrategist.org.au"
-        },
-        {
-            "Date": "April 2026",
-            "Actor": "Cambodian Government",
-            "Action": "Enacts law and establishes commission to combat online scams",
-            "Location": "Cambodia",
-            "Risk": "Transnational crime, human trafficking",
-            "Source": "https://fulcrum.sg/cambodias-crackdown-on-scams-needs-a-concrete-and-durable-strategy/",
-            "Title": "Cambodia\u2019s Crackdown on Scams Needs a Concrete and Durable Strategy",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "fulcrum.sg"
-        },
-        {
-            "Date": "July 9, 2026",
-            "Actor": "Oil Tankers, Shipping Industry",
-            "Action": "Traffic through Strait of Hormuz at near standstill due to escalating risks",
-            "Location": "Strait of Hormuz",
-            "Risk": "Global oil supply disruption, energy market volatility",
-            "Source": "https://gcaptain.com/oil-tanker-traffic-through-hormuz-at-near-standstill-as-attacks-strain-mou/",
-            "Title": "Oil\u00a0Tanker\u00a0Traffic Through Hormuz at Near Standstill as Attacks Strain MoU",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "gcaptain.com"
         }
     ],
     "sources": [
+        {
+            "title": "Iranian foreign ministry says Nato chief exposed Europe's 'willful complicity' in US attacks",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-foreign-ministry-says-nato-chief-exposed-europes-willful"
+        },
+        {
+            "title": "The AI adoption race is over. The AI cost war has begun",
+            "url": "https://x.com/TheNationalNews/status/2075427570846196203"
+        },
+        {
+            "title": "Iran slams Nato talks on navigating Hormuz Strait as 'politically motivated'",
+            "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-slams-nato-talks-navigating-hormuz-strait-politically-motivated"
+        },
         {
             "title": "Report: US official says 'technical talks' with Iran ongoing, despite attacks",
             "url": "https://www.middleeasteye.net/live-blog/live-blog-update/report-us-official-says-technical-talks-iran-ongoing-despite-attacks"
@@ -549,8 +570,8 @@
             "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-shoot-dead-palestinian-child-central-gaza-0"
         },
         {
-            "title": "Ukraine&#x2019;s Drones Are Now Reaching Siberia and Imperiling Russian Energy Assets",
-            "url": "https://www.wsj.com/world/ukraines-drones-are-now-reaching-siberia-and-imperiling-russian-energy-assets-e0d2caa7"
+            "title": "Iran\u2019s leaders have learnt a fundamental lesson from the war with the United States: the West runs on oil, and Iran sits astride the routes that carry it. That calculation now drives Tehran\u2019s preparations as the ceasefire unravels into open conflict",
+            "url": "https://x.com/Telegraph/status/2075384575711183198"
         },
         {
             "title": "Iran buried slain Supreme Leader Ayatollah Ali Khamenei at the Imam Reza Shrine in Mashhad, the culmination of a week of mass funeral processions, as crowds chanted against Trump and successor Mojtaba Khamenei remained hidden from public view",
@@ -703,18 +724,6 @@
         {
             "title": "India-Japan convergence reshaping Indo-Pacific\u2019s power balance",
             "url": "https://asiatimes.com/2026/07/india-japan-convergence-reshaping-indo-pacifics-power-balance/"
-        },
-        {
-            "title": "Beijing is testing who will stand by Taiwan",
-            "url": "https://www.aspistrategist.org.au/beijing-is-testing-who-will-stand-by-taiwan/"
-        },
-        {
-            "title": "Cambodia\u2019s Crackdown on Scams Needs a Concrete and Durable Strategy",
-            "url": "https://fulcrum.sg/cambodias-crackdown-on-scams-needs-a-concrete-and-durable-strategy/"
-        },
-        {
-            "title": "Oil\u00a0Tanker\u00a0Traffic Through Hormuz at Near Standstill as Attacks Strain MoU",
-            "url": "https://gcaptain.com/oil-tanker-traffic-through-hormuz-at-near-standstill-as-attacks-strain-mou/"
         }
     ]
 }
