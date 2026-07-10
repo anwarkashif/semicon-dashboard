@@ -21,10 +21,14 @@ from features.ui_features import inject_early_css, inject_global_theme, render_l
 # ==========================================
 st.set_page_config(
     page_title="SemicoN Dashboard", 
-    page_icon="logo.jpg",  
+    page_icon="website_logo.png",  # 🌐 Replaces the Browser Tab Icon
     layout="wide", 
     initial_sidebar_state="collapsed"
 )
+
+# 🎨 Streamlit Native Logo Handler
+# 'logo.jpg' serves the open sidebar. 'website_logo.png' serves the top-left corner/collapsed view.
+st.logo("logo.jpg", icon_image="website_logo.png")
 
 # 🚀 IGNITE THE AGENTIC ENGINE THREAD
 if 'agent_daemon_started' not in st.session_state:
