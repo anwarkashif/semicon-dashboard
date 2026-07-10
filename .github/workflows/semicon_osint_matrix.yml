@@ -405,6 +405,20 @@ jobs:
         GEMINI_API_KEY_RAGAI: ${{ secrets.GEMINI_API_KEY_RAGAI }}
       run: python agent_graph.py
 
+    - name: Push Agentic AI News via Email
+      if: github.event.action == 'trigger_agentic_ai'
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: ${{ secrets.SMTP_SERVER }}
+        server_port: 587
+        username: ${{ secrets.SMTP_USERNAME }}
+        password: ${{ secrets.SMTP_PASSWORD }}
+        subject: "🤖 [SemicoN Agentic AI] Autonomous Intelligence Brief"
+        to: anwarkashif@outlook.com
+        from: "SemicoN Switchboard Engine <${{ secrets.SMTP_USERNAME }}>"
+        body: file://data/agentic_email_body.md
+        convert_markdown: true
+
     - name: Commit and Push (Agentic AI)
       if: github.event.action == 'trigger_agentic_ai'
       run: |
