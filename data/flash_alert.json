@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Fire at Kapotnya Oil Refinery Near Moscow After Drone Strike",
+        "Title": "UKMTO Advises Merchant Ships Use Southern Corridor Near Bab el-Mandeb",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/southfronteng/61809",
@@ -42,8 +42,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-03",
+        "Title": "Hitachi Energy e-mesh EMS",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
