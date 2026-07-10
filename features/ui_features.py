@@ -132,6 +132,10 @@ def inject_global_theme():
         }
 
         /* --- GLOBAL BUTTON THEME --- */
+        div[data-testid="stButton"] > button[kind="secondary"] { 
+            margin-top: 10px !important; 
+        }
+        
         div[data-testid="stButton"] > button[kind="primary"],
         div[data-testid="stButton"] > button[data-testid="baseButton-primary"],
         div[data-testid="stFormSubmitButton"] button,
@@ -225,9 +229,15 @@ def render_login_screen():
         with center_col:
             # 🛑 FIX: Use standard container instead of form to completely kill the hot-reload parsing glitch
             with st.container():
-                email_input = st.text_input("Email", placeholder="analyst@agency.gov")
+                email_input = st.text_input("Email", placeholder="enter your email ID")
                 password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
-                submit_login = st.button("Login", type="primary")
+                
+                # Align buttons horizontally on the x-axis
+                btn_col1, btn_col2 = st.columns(2)
+                with btn_col1:
+                    submit_login = st.button("Login", type="primary", use_container_width=True)
+                with btn_col2:
+                    guest_login = st.button("View as Guest", type="secondary", use_container_width=True)
 
             if submit_login:
                 ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "anwarkashif@semirare.in")
@@ -240,7 +250,7 @@ def render_login_screen():
                 else:
                     st.toast("Invalid credentials. Please verify your secure key.", icon="🚫")
 
-            if st.button("View as Guest", type="secondary", use_container_width=True):
+            if guest_login:
                 st.session_state['role'] = 'guest'
                 login_placeholder.empty() 
                 st.rerun()

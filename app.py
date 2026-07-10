@@ -8,7 +8,6 @@ os.environ["PYTHONWARNINGS"] = "ignore"
 os.environ["STREAMLIT_DATA_FRAME_SERIALIZATION"] = "legacy"
 
 # 🛡️ HUGGING FACE ANTI-FREEZE & WEBSOCKET CONFIGURATION
-# Prevents tab-switching disconnects and proxy routing errors on HF Spaces
 os.environ["STREAMLIT_SERVER_ENABLE_CORS"] = "false"
 os.environ["STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION"] = "false"
 os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
@@ -22,40 +21,50 @@ from features.ui_features import inject_early_css, inject_global_theme, render_l
 # ==========================================
 st.set_page_config(
     page_title="SemicoN Dashboard", 
-    page_icon="logo.jpg",  
+    page_icon="website_logo.png",  # 🌐 Replaces the Browser Tab Icon
     layout="wide", 
     initial_sidebar_state="collapsed"
 )
 
-# 🫀 SILENT JS HEARTBEAT TO PREVENT BACKGROUND TAB FREEZING
-# This runs invisibly and stops the browser/HF from closing the WebSocket
+# 🎨 Streamlit Native Logo Handler
+# 'logo.jpg' serves the open sidebar. 'website_logo.png' serves the top-left corner/collapsed view.
+st.logo("logo.jpg", icon_image="website_logo.png")
+
+# 🚀 IGNITE THE AGENTIC ENGINE THREAD
+if 'agent_daemon_started' not in st.session_state:
+    from agent_graph import start_agent_daemon
+    start_agent_daemon()
+    st.session_state['agent_daemon_started'] = True
+
+# ==========================================
+# 🫀 SILENT JS HEARTBEAT & SAFE UI RESET
+# ==========================================
 st.html(
     """
     <script>
-        setInterval(() => {
-            window.parent.postMessage('hf-stay-alive-ping', '*');
-        }, 30000);
+        setInterval(() => { window.parent.postMessage('hf-stay-alive-ping', '*'); }, 30000);
     </script>
-    """
-)
-
-# ⬛ DEFAULT UI RESET CSS
-st.markdown(
-    """
     <div id="top-of-page"></div>
     <style>
+    /* 🛑 GLOBAL CSS NUKE: Obliterate the root layout containers Streamlit uses for the chat box. */
+    [data-testid="stBottom"], 
+    [data-testid="stChatFloatingInputContainer"] { 
+        display: none !important; 
+        height: 0 !important; 
+        opacity: 0 !important; 
+        pointer-events: none !important; 
+    }
+
+    /* 🛑 SAFE DIMMING FIX */
     html, body, [data-testid="stAppViewContainer"], .stApp { background-color: #0e1117 !important; }
+    [data-testid="stAppViewBlockContainer"], [data-testid="stAppViewBlockContainer"][data-stale="true"], .stMainBlockContainer, .stMainBlockContainer[data-stale="true"] { opacity: 1 !important; filter: none !important; transition: none !important; }
     [data-testid="stHeader"] { background-color: transparent !important; }
     [data-testid="stStatusWidget"] { visibility: hidden !important; display: none !important; opacity: 0 !important; }
     [data-testid="stSkeleton"], [data-testid="stDecoration"] { display: none !important; opacity: 0 !important; visibility: hidden !important; }
     @keyframes pulse { 0% { opacity: 0.2; } 50% { opacity: 0.7; } 100% { opacity: 0.2; } }
-    .loading-pulse {
-        position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-        color: #666666; font-family: 'Courier New', monospace; font-size: 13px;
-        letter-spacing: 3px; animation: pulse 2.5s infinite; z-index: 99999; pointer-events: none;
-    }
+    .loading-pulse { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #666666; font-family: 'Courier New', monospace; font-size: 13px; letter-spacing: 3px; animation: pulse 2.5s infinite; z-index: 99999; pointer-events: none; }
     </style>
-    """, unsafe_allow_html=True
+    """
 )
 
 if 'role' not in st.session_state or st.session_state['role'] is None:
@@ -124,7 +133,6 @@ else:
     # ==========================================
     # ⚡ INSTANT TRANSITION SPLASH SCREEN
     # ==========================================
-    # This prevents the Command Centre from graying/dimming out while the backend loads Executive Home.
     if st.session_state.get('just_entered', False):
         st.markdown("""
         <div id="instant-splash" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #0e1117; z-index: 9999999; display: flex; align-items: center; justify-content: center; flex-direction: column;">
@@ -143,7 +151,6 @@ else:
         [data-testid="stAppViewContainer"] { transition: none !important; opacity: 1 !important; filter: none !important; }
         </style>
         """, unsafe_allow_html=True)
-        # Turn it off instantly so it doesn't replay during normal dashboard usage
         st.session_state['just_entered'] = False
 
     # ⬛ INJECT SYNCING MASK ONLY IF THEY HAVEN'T ENTERED COMMAND CENTER YET
@@ -165,7 +172,6 @@ else:
     
     from utils.data_helpers import clean_dataframe, extract_tag
     from features.advanced_features import render_threat_scoring, render_rag_interrogation, render_fab_chat
-    # 🛑 THE FIX: Properly import the tri-archive rendering structure
     from features.archive_features import render_trend_timelines, render_daily_archives, render_weekly_archives, render_monthly_archives, render_clean_archives, render_trash
     from features.editor_features import render_vetting_editor
     from features.sidebar_features import render_sidebar
@@ -201,7 +207,7 @@ else:
             except Exception: val = None
         if val: rag_api_keys.append(val)
             
-    model_name = 'gemini-2.5-flash'
+    model_name = 'gemini-3.5-flash'
 
     GITHUB_REPO = "anwarkashif/semicon-dashboard"
     GITHUB_PAT = os.environ.get("GITHUB_PAT") 
@@ -211,9 +217,8 @@ else:
             
     auth_headers = {"Authorization": f"token {GITHUB_PAT}"} if GITHUB_PAT else {}
 
-    @st.cache_data(ttl=60, show_spinner=False)
+    @st.cache_data(ttl=600, show_spinner=False)
     def stream_pipeline_data_to_disk():
-        # Added flash_alert.json and psyopoly_alerts.json to the array!
         files_to_sync = [
             'tactical_events_24h.json', 'rss_accumulator.txt', 'live_alert.json', 'sitrep_history.json',
             'weekly_tactical_live.json', 'executive_home/tactical_events_24h.json', 'executive_home/flush_brief_24h.json',
@@ -224,46 +229,40 @@ else:
         for filename in files_to_sync:
             local_path = f"data/{filename}"
             url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/{filename}"
-            
             try:
-                resp = requests.get(url, headers=auth_headers, timeout=5)
+                resp = requests.get(url, headers=auth_headers, timeout=1.5)
                 if resp.status_code == 200:
                     text_data = resp.text.strip()
-                    
-                    # 🛡️ THE SMARTER SHIELD
-                    # If GitHub has a tiny/empty file (like [] or {}), it ignores it.
-                    # If GitHub has your rich data (> 25 characters), it accepts and updates the dashboard!
                     if len(text_data) > 25:
                         os.makedirs(os.path.dirname(local_path), exist_ok=True)
                         with open(local_path, 'w', encoding='utf-8') as f:
                             f.write(text_data)
             except Exception: pass
 
-       # 🛑 CRITICAL FIX: Bypass GitHub API Cache & Rate Limits entirely by probing raw URLs for the dynamic dates
         import datetime
-        for i in range(10): # Probe the last 10 days to guarantee we find the most recent weekly brief
+        for i in range(10): 
             probe_date = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=i)).strftime('%Y-%m-%d')
             wa_filename = f"west_asia_brief_{probe_date}.json"
             wa_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/west_asia/{wa_filename}"
             try:
-                wa_resp = requests.get(wa_url, headers=auth_headers, timeout=5)
+                wa_resp = requests.get(wa_url, headers=auth_headers, timeout=1.5)
                 if wa_resp.status_code == 200 and len(wa_resp.text) > 25:
                     os.makedirs('data/west_asia', exist_ok=True)
                     with open(f"data/west_asia/{wa_filename}", 'w', encoding='utf-8') as f:
                         f.write(wa_resp.text)
-                    break # Successfully found and downloaded the most recent brief, stop probing
+                    break 
             except Exception: pass
 
         api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/data"
         try:
-            resp = requests.get(api_url, headers=auth_headers, timeout=5)
+            resp = requests.get(api_url, headers=auth_headers, timeout=2.0)
             if resp.status_code == 200:
                 files = resp.json()
                 brief_files = [f for f in files if f['name'].startswith('brief_') and f['name'].endswith('.json')]
                 if brief_files:
                     brief_files.sort(key=lambda x: x['name'])
                     latest_brief = brief_files[-1]
-                    b_resp = requests.get(latest_brief['download_url'], headers=auth_headers, timeout=5)
+                    b_resp = requests.get(latest_brief['download_url'], headers=auth_headers, timeout=2.0)
                     if b_resp.status_code == 200:
                         with open(f"data/{latest_brief['name']}", 'w', encoding='utf-8') as f:
                             f.write(b_resp.text)
@@ -276,7 +275,7 @@ else:
             return local_files[-1]
         return None
 
-    @st.cache_data(ttl=60, show_spinner=False) 
+    @st.cache_data(ttl=600, show_spinner=False)
     def load_data(filepath):
         if not filepath: return None
         try:
@@ -284,13 +283,12 @@ else:
                 return json.load(f)
         except Exception: return None
 
-    @st.cache_data(ttl=60, show_spinner=False)
+    @st.cache_data(ttl=600, show_spinner=False)
     def load_live_tactical_data():
         combined_data = []
         import datetime
         current_date = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         
-        # 1. NEW: Explicitly Load Flash Alerts with exact schema so clean_dataframe doesn't drop them
         flash_path = 'data/flash_alert.json'
         if os.path.exists(flash_path):
             try:
@@ -305,12 +303,11 @@ else:
                                 "Threat_Level": item.get("threat_level", "CRITICAL").upper(),
                                 "Source": item.get("Source", ""),
                                 "Actor": item.get("Feed_Source", "Flash Node"),
-                                "Location": "Global", # Prevents row deletion
-                                "Date": current_date  # Prevents row deletion
+                                "Location": "Global",
+                                "Date": current_date
                             })
             except Exception: pass
 
-        # 2. Load the rich executive pipeline data
         exec_path = 'data/executive_home/tactical_events_24h.json'
         if os.path.exists(exec_path):
             try:
@@ -319,7 +316,6 @@ else:
                     if isinstance(data, list): combined_data.extend(data)
             except Exception: pass
             
-        # 3. Load standard tactical data
         std_path = 'data/tactical_events_24h.json'
         if os.path.exists(std_path):
             try:
@@ -437,7 +433,6 @@ else:
             left: 0; 
             width: 100vw; 
             height: 42px; 
-            /* Frosted glass so the ambient glow bleeds through */
             background-color: rgba(14, 17, 23, 0.35); 
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
@@ -472,12 +467,9 @@ else:
         else:
             df_actions = df_actions_weekly
             
-        # 🛡️ GLOBAL DATAFRAME NORMALIZATION SHIELD
         if not df_actions.empty:
-            # Capitalize all columns to ensure consistency
             df_actions.columns = [str(c).strip().title() for c in df_actions.columns]
             
-            # Cross-pollinate missing fields
             if 'Title' in df_actions.columns and 'Headline' not in df_actions.columns:
                 df_actions['Headline'] = df_actions['Title']
             if 'Action' in df_actions.columns and 'Headline' not in df_actions.columns:
@@ -495,21 +487,17 @@ else:
             if 'Risk' in df_actions.columns and 'Threat_Level' not in df_actions.columns:
                 df_actions['Threat_Level'] = df_actions['Risk']
 
-            # 🛑 MUST WATCH TICKER FIX: Elevate formatting to ensure Command Centre Ticker is never blank
             if 'Risk' in df_actions.columns:
                 df_actions['Risk'] = df_actions['Risk'].astype(str).str.upper().str.strip()
-                # If there are NO 'CRITICAL' items, force the top item to be CRITICAL so the ticker always fires
                 if not (df_actions['Risk'] == 'CRITICAL').any() and len(df_actions) > 0:
                     df_actions.loc[df_actions.index[0], 'Risk'] = 'CRITICAL'
                 df_actions['Severity'] = df_actions['Risk']
 
-            # 🛑 NEW: Global Deduplication to stop the ticker from repeating the same news
             if 'Headline' in df_actions.columns:
                 df_actions = df_actions.drop_duplicates(subset=['Headline'], keep='first')
             elif 'Action' in df_actions.columns:
                 df_actions = df_actions.drop_duplicates(subset=['Action'], keep='first')
                 
-            # 🛑 CRITICAL FIX FOR COMMAND CENTRE REDROOM:
             for col in ['Headline', 'Action', 'Actor', 'Location', 'Risk', 'Threat_Level', 'Severity', 'Source', 'Title', 'Date']:
                 if col in df_actions.columns:
                     df_actions[col.lower()] = df_actions[col]
@@ -517,22 +505,17 @@ else:
     except Exception as e:
         df_actions = pd.DataFrame()
 
-    # --- RENDER LOGIC ---
     if not st.session_state['dashboard_entered']:
-        # 🟢 LIFT THE BLACKOUT MASK IMMEDIATELY BEFORE SHOWING COMMAND CENTER
         st.markdown("""<style>#blackout-mask { display: none !important; }</style>""", unsafe_allow_html=True)
         try:
             from features.landing_page import render_redroom_landing
             render_redroom_landing(df_actions)
-            # 🛑 CRITICAL: HALT EXECUTION SO IT STAYS ON THE COMMAND CENTER
             st.stop() 
         except Exception as e:
             st.error(f"🚨 **Landing Page Error:** {e}")
             st.stop()
             
     else:
-        # --- STAGE 3: DASHBOARD ENTERED ---
-        
         if SNIPPET_TEST_MODE:
             st.sidebar.info("🛠️ **Snippet Test Mode Active**")
 
@@ -540,11 +523,11 @@ else:
             dashboard_data, df_actions, raw_text, text_india, text_wa
         )
 
-        # ==========================================
-        # 🌌 GEMINI-STYLE AMBIENT GLOW HEADER
-        # ==========================================
+        if view_selection == "Agentic Home":
+            st.markdown('<style>div[data-testid="stElementContainer"]:has(#fab-anchor) + div { display: none !important; }</style>', unsafe_allow_html=True)
+
         target_glow_sections = [
-            "Executive Home", "Today's Snippet", "Weekly Tactical Brief", 
+            "Agentic Home", "Executive Home", "Today's Snippet", "Weekly Tactical Brief", 
             "Weekly Intelligence Brief", "Weekly West Asia Brief", "West Asia Strategic Intel (Psyopoly)", 
             "Daily Archive", "Weekly Archive", "Monthly Archive"
         ]
@@ -572,10 +555,10 @@ else:
                 """, unsafe_allow_html=True
             )
 
-        if view_selection != "West Asia Strategic Intel (Psyopoly)":
+        if view_selection not in ["West Asia Strategic Intel (Psyopoly)", "Agentic Home"]:
             render_ticker_tape()
 
-        if view_selection not in ["Trend Timelines", "Daily Archive", "Weekly Archive", "Monthly Archive"]:
+        if view_selection not in ["Trend Timelines", "Daily Archive", "Weekly Archive", "Monthly Archive", "Agentic Home"]:
             st.markdown(
                 """
                 <style>
@@ -592,7 +575,11 @@ else:
                 """, unsafe_allow_html=True
             )
 
-        if view_selection == "Executive Home":
+        if view_selection == "Agentic Home":
+            from features.agentic_home import render_agentic_home
+            render_agentic_home()
+
+        elif view_selection == "Executive Home":
             render_executive_home(dashboard_data, df_actions, live_tactical_data, MAPBOX_PUBLIC_TOKEN)
 
         elif view_selection == "Today's Snippet":
