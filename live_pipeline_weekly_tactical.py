@@ -56,7 +56,7 @@ RSS_FEEDS = [
 
 # 🚨 THE ARSENAL: API Key Rotation List
 AVAILABLE_KEYS = [
-    os.environ.get("GEMINI_API_KEY"),
+    os.environ.get("GEMINI_API_KEY_SECONDARY"),
     os.environ.get("RAG_GEMINI_API_KEY"),
     os.environ.get("RAG_GEMINI_API_KEY_2"),
     os.environ.get("RAG_GEMINI_API_KEY_3"),

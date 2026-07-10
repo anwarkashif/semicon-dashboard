@@ -9,12 +9,12 @@ from google import genai
 from huggingface_hub import HfApi
 import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 
-GEMINI_API_KEY = os.environ.get("RAG_GEMINI_API_KEY_5")
-if not GEMINI_API_KEY:
+GEMINI_API_KEY_SECONDARY = os.environ.get("RAG_GEMINI_API_KEY_5")
+if not GEMINI_API_KEY_SECONDARY:
     print("Error: RAG_GEMINI_API_KEY_5 environment variable not set.")
     exit(1)
 
-client = genai.Client(api_key=GEMINI_API_KEY)
+client = genai.Client(api_key=GEMINI_API_KEY_SECONDARY)
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
