@@ -211,8 +211,8 @@ class AnalystNode:
             except Exception as e:
                 print(f'[Node 4] Warning: Key Slot {slot_idx + 1} rejected payload execution: {e}')
                 if slot_idx < len(api_keys) - 1:
-                    print('🔄 [Node 4] Quota limit triggered. Engaging 10-second cooling window before shifting keys...')
-                    time.sleep(10.0)
+                    print('🔄 [Node 4] Quota limit triggered. Engaging 10-minute cooling window before shifting keys...')
+                    time.sleep(600.0)
                     continue
                 else:
                     print('[Node 4] ⚠️ All fallback API keys in the rotational matrix have been exhausted.')
