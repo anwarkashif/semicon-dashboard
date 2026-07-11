@@ -207,7 +207,7 @@ else:
             except Exception: val = None
         if val: rag_api_keys.append(val)
             
-    model_name = 'gemini-3.5-flash'
+    model_name = 'gemini-3.5-flash-lite'
 
     GITHUB_REPO = "anwarkashif/semicon-dashboard"
     GITHUB_PAT = os.environ.get("GITHUB_PAT") 
