@@ -19,7 +19,7 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         position: relative;
         background-color: transparent !important;
         color: #ffffff !important;
-        padding: 12px 16px !important;
+        padding: 12px 16px !important; /* 📊 RESTORED: Standard padding for natural alignment */
         margin-bottom: 6px !important;
         border-radius: 6px !important;
         transition: all 0.3s ease !important;
@@ -33,21 +33,11 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         font-size: 15px !important;
         font-weight: 600 !important;
         margin: 0 !important;
-        z-index: 2;
+        z-index: 3;
         position: relative;
     }
 
-    /* 4. THE FIX: Hide ONLY the inner radio circle securely without hiding the text */
-    [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label > div:first-of-type > div:first-child:not([data-testid="stMarkdownContainer"]) {
-        display: none !important;
-    }
-    
-    /* Reset margins so the text correctly aligns to the left edge */
-    [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label > div:first-of-type > div[data-testid="stMarkdownContainer"] {
-        margin-left: 0 !important;
-    }
-
-    /* 5. Create the Colorful Bar (Hidden by default) */
+    /* 4. Create the Colorful Bar (Hidden by default) */
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label::before {
         content: "";
         position: absolute;
@@ -59,9 +49,10 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         opacity: 0;
         transition: all 0.3s ease;
         border-radius: 4px;
+        z-index: 2;
     }
 
-    /* 6. HOVER EFFECT: Soft reveal of the colorful bar + slight shift */
+    /* 5. HOVER EFFECT: Soft reveal of the colorful bar + slight shift */
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label:hover {
         background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%) !important;
         transform: translateX(4px);
@@ -70,7 +61,7 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         opacity: 0.6;
     }
 
-    /* 7. SELECTED/ACTIVE EFFECT: Full vibrant bar + subtle background glow */
+    /* 6. SELECTED/ACTIVE EFFECT: Full vibrant bar + subtle background glow */
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label:has(input:checked) {
         background: linear-gradient(90deg, rgba(0, 191, 255, 0.15) 0%, rgba(0,0,0,0) 100%) !important;
         transform: translateX(4px);
@@ -81,7 +72,7 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         box-shadow: 0 0 12px rgba(0, 191, 255, 0.8); /* Glowing neon effect */
     }
 
-    /* 8. Force active/selected text to glow slightly */
+    /* 7. Force active/selected text to glow slightly */
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label:has(input:checked) [data-testid="stMarkdownContainer"] p {
         text-shadow: 0 0 8px rgba(0, 191, 255, 0.5) !important;
     }
@@ -106,11 +97,10 @@ def render_sidebar(dashboard_data, df_actions, raw_text, text_india, text_wa):
         "Today's Snippet",
         "Weekly Tactical Brief",
         "Weekly Intelligence Brief",
-        "Weekly West Asia Brief",  # 🛑 THE FIX: Added right above Psyopoly
+        "Weekly West Asia Brief",  
         "West Asia Strategic Intel (Psyopoly)"
     ]
 
-    # 🛑 THE FIX: "Weekly Archive" properly integrated into the trio
     archive_options = ["Daily Archive", "Weekly Archive", "Monthly Archive"]
 
     if st.session_state.get('role') == 'admin':
