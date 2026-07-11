@@ -1,23 +1,23 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Launches Ballistic Missiles at US Facilities in Bahrain and Kuwait",
+        "Title": "Russian Missile and Drone Strikes Kill 10 Across Ukraine",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/intelslava/89873",
+        "Title": "Russia Produces T-80BVM Tanks at Omsk Plant",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/southfronteng/61809",
         "Title": "Iranian Forces Strike Qatari and Saudi Tankers Near Hormuz",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,32 +28,18 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
+        "Title": "Siemens SINEC OS",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
         "Title": "Labcenter Proteus 9",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-07",
-        "Title": "Digi International PortServer TS, Digi One SP IA",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/intelslava/89873",
-        "Title": "Russia Produces T-80BVM Tanks at Omsk Plant",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "WATCH"
     },
     {
         "Source": "https://t.me/warmonitors/44848",
@@ -67,6 +53,20 @@
         "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119991",
+        "Title": "Ukraine Confirms Death of Anastasia Berezovskaya",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/Middle_East_Spectator/34268",
+        "Title": "Iranian Foreign Minister Confronted by Protesters",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
