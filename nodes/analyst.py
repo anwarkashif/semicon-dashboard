@@ -19,7 +19,7 @@ class AnalystNode:
     Implements a strict 2-key backup cascade with a 10-second cooling window to mitigate 429 Quota errors.
     """
     def __init__(self):
-        self.model_id = 'gemini-3.5-flash'
+        self.model_id = 'gemini-3.1-flash-lite' # The budget/efficiency workhorse
 
     def get_all_keys(self) -> List[str]:
         """Collects configured API keys from environment and secrets in strict priority order."""
