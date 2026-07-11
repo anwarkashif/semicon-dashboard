@@ -1,10 +1,10 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "UAE Foreign Minister Discusses Iranian Attacks With Qatari and Jordanian Leaders",
+        "Title": "Israeli Forces Demolish Buildings in Khan Younis, Gaza",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/southfronteng/61809",
@@ -28,25 +28,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
         "Title": "OpenPLC v3",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
+        "Title": "Labcenter Proteus 9",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/intelslava/89873",
@@ -67,6 +60,13 @@
         "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119991",
+        "Title": "Ukraine Confirms Death of Anastasia Berezovskaya",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
