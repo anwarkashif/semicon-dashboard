@@ -57,7 +57,6 @@ class AnalystNode:
                 compiled_context += f'\n--- Source: {source_url} ---\n{content}\n'
             source_str = ', '.join([item['source_url'] for item in extracted_data])
 
-        # 🛑 UPGRADED: Expanded System Instruction to enforce the 250-500 word nested structure
         system_instruction = """
         You are an autonomous, elite Geopolitical Intelligence Analyst for the SemicoN Dashboard.
         Your objective is to read the provided context and synthesize a highly professional, 
@@ -121,13 +120,13 @@ class AnalystNode:
                     config=types.GenerateContentConfig(
                         system_instruction=system_instruction,
                         temperature=0.2, 
+                        response_mime_type="application/json", # 🛑 THE FIX: Restored JSON lock
                         tools=[{'google_search': {}}]
                     )
                 )
                 
                 raw_text = response.text.strip()
                 
-                # 🛑 UPGRADED: Bulletproof JSON Extraction using Regex
                 json_match = re.search(r'\{.*\}', raw_text, re.DOTALL)
                 if json_match:
                     raw_text = json_match.group(0)
@@ -159,7 +158,6 @@ class AnalystNode:
                 brief_json['Source'] = source_str
                 state['drafted_brief'] = brief_json
                 
-                # 🛑 UPGRADED: Generate the comprehensive Markdown Email Structure
                 email_md = f"### 🚨 {brief_json.get('Title', 'Agentic AI Strategic Brief')}\n\n"
                 email_md += f"**Threat Level:** {brief_json.get('Threat_Level', 'STANDARD')}\n\n"
                 
@@ -219,5 +217,12 @@ class AnalystNode:
                 else:
                     print('[Node 4] ⚠️ All fallback API keys in the rotational matrix have been exhausted.')
                     state['drafted_brief'] = None
+
+        # 🛑 THE FAILSAFE: Guarantee the email file exists even if Gemini crashes
+        if not success:
+            os.makedirs('data', exist_ok=True)
+            with open('data/agentic_email_body.md', 'w', encoding='utf-8') as f:
+                f.write("### ⚠️ [SYSTEM ALERT] Agentic AI Sweep Interrupted\n\n")
+                f.write("The autonomous intelligence engine was unable to synthesize a valid brief during this cycle due to an API quota limit or a strict formatting rejection from the Gemini model. Normal operations will resume on the next scheduled cron cycle.")
 
         return state
