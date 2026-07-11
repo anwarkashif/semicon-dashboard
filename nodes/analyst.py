@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import re
 from typing import Dict, Any, List
 from google import genai
 from google.genai import types
@@ -125,10 +126,16 @@ class AnalystNode:
                 )
                 
                 raw_text = response.text.strip()
-                if raw_text.startswith('```json'): 
-                    raw_text = raw_text[7:-3].strip()
-                elif raw_text.startswith('```'): 
-                    raw_text = raw_text[3:-3].strip()
+                
+                # 🛑 UPGRADED: Bulletproof JSON Extraction using Regex
+                json_match = re.search(r'\{.*\}', raw_text, re.DOTALL)
+                if json_match:
+                    raw_text = json_match.group(0)
+                else:
+                    if raw_text.startswith('```json'): 
+                        raw_text = raw_text[7:-3].strip()
+                    elif raw_text.startswith('```'): 
+                        raw_text = raw_text[3:-3].strip()
                 
                 brief_json = json.loads(raw_text)
                 
