@@ -19,3 +19,4 @@ huggingface-hub==0.23.0
 google-genai>=1.0.0
 langgraph==1.2.8
 websockets==15.0.1
+trafilatura
