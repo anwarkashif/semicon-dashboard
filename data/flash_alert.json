@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Kills 5, Injures 35 in Missile and Drone Attacks Across Ukraine",
+        "Title": "Russia Strikes Ukrainian Navy Vessel at Odesa Port",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -42,13 +42,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
-        "Title": "Labcenter Proteus 9",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
         "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
@@ -67,6 +60,13 @@
         "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
