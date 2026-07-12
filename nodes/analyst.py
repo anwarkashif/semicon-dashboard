@@ -12,6 +12,11 @@ except ImportError:
     st = None
 
 class AnalystNode:
+    """
+    Node 4: The Geopolitical Analyst Component
+    Features complete text cleanup rules to block raw markdown tokens (###, **)
+    and organizes global intercepts by detailed geographic sub-categories.
+    """
     def __init__(self):
         self.model_id = 'gemini-3.1-flash-lite'
 
@@ -51,67 +56,67 @@ class AnalystNode:
                 compiled_context += f"\n--- Source: {item.get('source_url')} ---\n{item.get('content', '')[:8000]}\n"
 
         # ==========================================
-        # ENGINE PATHWAY A: UNCONSTRAINED CUSTOM MARKOOWN
+        # PATHWAY A: UNCONSTRAINED CUSTOM DIRECTION
         # ==========================================
         if mode == "CUSTOM_UI":
-            sys_instruct = """
+            sys_instruct = f"""
             You are an autonomous, elite Geopolitical Intelligence Analyst.
             Your absolute directive is to read the provided context and fulfill the USER DIRECTIVE perfectly.
             
-            CRITICAL RULES:
-            1. You MUST follow the exact structural layout, headers, bullet counts, and instructions requested in the USER DIRECTIVE.
-            2. Output your response as pure, professional text/Markdown. 
-            3. Do NOT wrap your response in JSON format. Do NOT include conversational greetings.
+            CRITICAL FORMATTING RULES:
+            1. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). Write all section headers in plain-text capital letters (e.g., TITLE:, CATEGORY:, INCIDENT BRIEF:).
+            2. For global news sections, you must cover the entire globe and sub-categorize items cleanly based on precise geography and sub-geography (e.g., Asia-Pacific, North America, Europe, West Asia/Middle East, Africa).
+            3. Right before the Sources section, you MUST insert an 'Owned By' block matching this exact text:
+               Owned By:
+               Add your name
+               Add your position
+            4. Under the Sources section, you MUST strictly use this exact format pattern:
+               Sources:
+               Agentic AI (www.semirare.in)
+               {source_str}
             """
             gen_config = types.GenerateContentConfig(system_instruction=sys_instruct, temperature=0.2)
             
         # ==========================================
-        # ENGINE PATHWAY B: CORES DASHBOARD SCHEMAS
+        # PATHWAY B: STANDARD HOURLY DISPATCH
         # ==========================================
         else:
-            legacy_instruction = """
+            legacy_instruction = f"""
             You are an autonomous, elite Geopolitical Intelligence Analyst for the SemicoN Dashboard.
-            Your objective is to read the provided context and synthesize a highly professional, 
-            actionable intelligence brief focusing on semiconductor supply chains, critical minerals, and geopolitics.
+            Synthesize a highly professional intelligence brief focusing on semiconductor supply chains, critical minerals, and geopolitics.
             
-            CRITICAL RULES:
-            1. Base your analysis STRICTLY on the provided context.
-            2. You MUST return your output STRICTLY as a raw JSON object. 
-            3. DO NOT include any conversational text outside the JSON.
-            4. The total length of the generated content inside the JSON must be between 250 and 500 words.
+            CRITICAL FORMATTING RULES:
+            1. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). 
+            2. Sub-categorize all global news items cleanly based on detailed geography and sub-geography (covering Asia-Pacific, Americas, Europe, West Asia, Africa).
+            3. Right before the Sources section, you MUST insert this exact block:
+               Owned By:
+               Kashif Anwar
+               Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)
+            4. Return your output strictly as a JSON object matching the exact schema below.
             
-            Use this EXACT JSON schema:
-            {
-                "Title": "A gripping 10-12 word strategic headline",
-                "Threat_Level": "Strictly one of: CRITICAL, ELEVATED, WATCH, or STANDARD",
-                "Locations": [
-                    "Bullet point 1 detailing a major ongoing news event in a specific location",
-                    "Bullet point 2 detailing another major ongoing news event"
-                ],
-                "BLUF": "A cohesive paragraph explaining the Bottom Line Up Front.",
-                "Top_News": {
-                    "Asia": ["Bullet point news 1", "Bullet point news 2"],
-                    "Middle East": ["Bullet point news 1"],
-                    "Europe": ["Bullet point news 1"]
-                },
-                "Watch_Out": [
-                    "Bullet point on what news to watch out for",
-                    "Bullet point on another upcoming trigger event"
-                ],
-                "Risk_And_Threat_Analysis": {
-                    "Risk_Analysis": "A full paragraph detailing immediate operational risks.",
-                    "Threat_Analysis": "A full paragraph detailing overarching geopolitical or supply chain threats.",
-                    "Overall_Analysis": "A concluding paragraph blending the risk and threat into a strategic summary."
-                },
-                "Predictive_Analysis": "A paragraph forecasting what to look out for in the next few hours.",
-                "Recommendations": {
-                    "Global_Supply_Chain": "Impact on global logistics and shipping.",
-                    "Semiconductors_And_Rare_Earths": "Impact on chips, lithography, and critical minerals.",
-                    "Global_Business": "Impact on markets and multinational corporations.",
-                    "Travel": "Travel impact/restrictions determined by the locations mentioned.",
-                    "Whats_Next": "Actionable next steps based on the predictive analysis."
-                }
-            }
+            JSON Schema:
+            {{
+                "Title": "Strategic headline text without hashes or stars",
+                "Threat_Level": "CRITICAL, ELEVATED, WATCH, or STANDARD",
+                "Locations": ["Bullet point news event"],
+                "BLUF": "Cohesive paragraph explaining the Bottom Line Up Front.",
+                "Top_News": {{
+                    "Asia-Pacific": ["Bullet news 1"],
+                    "West Asia / Middle East": ["Bullet news 1"],
+                    "Europe": ["Bullet news 1"],
+                    "Americas": ["Bullet news 1"],
+                    "Africa": ["Bullet news 1"]
+                }},
+                "Watch_Out": ["Upcoming trigger event"],
+                "Risk_And_Threat_Analysis": {{
+                    "Overall_Analysis": "Strategic summary summary text."
+                }},
+                "Predictive_Analysis": "Paragraph forecasting upcoming event metrics.",
+                "Sources_List": [
+                    "Agentic AI (www.semirare.in)",
+                    "Live verified references: {source_str}"
+                ]
+            }}
             """
             gen_config = types.GenerateContentConfig(system_instruction=legacy_instruction, temperature=0.2, response_mime_type="application/json")
 
@@ -135,11 +140,12 @@ class AnalystNode:
                     if raw_text.startswith("```markdown"): raw_text = raw_text[11:-3].strip()
                     elif raw_text.startswith("```"): raw_text = raw_text[3:-3].strip()
 
-                    # Directly populates the pristine markdown vector channel
+                    # Direct clean up to ensure absolute protection from stray markdown formats
+                    raw_text = raw_text.replace("###", "").replace("**", "")
+
                     state['ui_markdown'] = raw_text
-                    
-                    # Populates basic fallback mappings for any legacy frontends
                     state['drafted_brief'] = {
+                        "is_custom_prompt": True,
                         "Title": "Custom Analysis Pass",
                         "Threat_Level": "HIGH",
                         "BLUF": raw_text,
@@ -150,6 +156,7 @@ class AnalystNode:
                     if json_match: raw_text = json_match.group(0)
                     brief_json = json.loads(raw_text)
                     brief_json['Source'] = source_str
+                    brief_json['is_custom_prompt'] = False
                     state['drafted_brief'] = brief_json
                     state['ui_markdown'] = ""
 
