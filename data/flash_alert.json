@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Strikes Ukrainian Navy Vessel at Odesa Port",
+        "Title": "Iran Adviser Says Strait Of Hormuz More Important Than 'Dozens Of Atomic Bombs'",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -42,8 +42,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
+        "Title": "Labcenter Proteus 9",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-07",
+        "Title": "Digi International PortServer TS, Digi One SP IA",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -60,13 +67,6 @@
         "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://warmonitor.com/",
-        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
