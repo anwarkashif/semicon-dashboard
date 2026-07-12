@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Adviser Says Strait Of Hormuz More Important Than 'Dozens Of Atomic Bombs'",
+        "Title": "Iran Launches Ballistic Missiles at US Targets in Middle East",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,13 +14,6 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119990",
-        "Title": "Russia Nears Final Decision on Ukraine",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
         "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
         "Feed_Source": "WAR MONITOR",
@@ -28,32 +21,32 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
-        "Title": "OpenPLC v3",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "Source": "https://news.sky.com/story/woman-suspected-of-carrying-out-monaco-bombing-of-ukrainian-tycoon-found-dead-13561246",
+        "Title": "Woman suspected of carrying out Monaco bombing of Ukrainian tycoon found dead",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "news.sky.com",
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
-        "Title": "Siemens SINEC OS",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
-        "Title": "Labcenter Proteus 9",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-02",
+        "Title": "Schneider Electric PowerChute Serial Shutdown",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-07",
-        "Title": "Digi International PortServer TS, Digi One SP IA",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
+        "Title": "ST Engineering iDirect iQ-Series Terminals",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/intelslava/89873",
@@ -67,6 +60,13 @@
         "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
