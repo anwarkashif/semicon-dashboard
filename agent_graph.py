@@ -1,23 +1,25 @@
 import time
 import threading
-from typing import TypedDict, List, Dict, Any, Annotated
+from typing import TypedDict, List, Dict, Any
 from langgraph.graph import StateGraph, END
 from nodes.extractor import ExtractorNode
 from nodes.analyst import AnalystNode
 from nodes.publisher import PublisherNode
 
 # ==========================================
-# 1. DEFINE THE AGENT'S MEMORY (STATE)
+# 1. AGENT STATE CONTRACT (EXPANDED)
 # ==========================================
 class AgentState(TypedDict):
+    execution_mode: str              # "AUTONOMOUS" or "CUSTOM_UI"
     current_target_urls: List[str]
     user_prompt: str
     extracted_markdown_context: List[Dict[str, str]]
-    drafted_brief: Dict[str, Any]
+    drafted_brief: Dict[str, Any]    # Legacy storage for dashboard updates
+    ui_markdown: str                 # Dedicated channel for unconstrained custom output
     publish_status: str
 
 # ==========================================
-# 2. INITIALIZE THE NODES
+# 2. INITIALIZE NODES
 # ==========================================
 extractor = ExtractorNode()
 analyst = AnalystNode()
@@ -33,7 +35,7 @@ def run_publisher(state: AgentState) -> AgentState:
     return publisher.execute(state)
 
 # ==========================================
-# 3. BUILD THE EXECUTION GRAPH
+# 3. BUILD GRAPH ARCHITECTURE
 # ==========================================
 def build_agent_graph():
     workflow = StateGraph(AgentState)
@@ -49,7 +51,7 @@ def build_agent_graph():
     return workflow.compile()
 
 # ==========================================
-# 4. THE AUTONOMOUS LOOP (STREAMLIT DAEMON)
+# 4. AUTONOMOUS CRON LOOP (DAEMON MODE)
 # ==========================================
 def autonomous_agent_loop():
     print("🚀 [Agentic Engine] Autonomous Discovery Loop Initialized.")
@@ -59,6 +61,7 @@ def autonomous_agent_loop():
         try:
             print("\n🔄 [Agentic Engine] Initializing autonomous intelligence sweep...")
             initial_state = {
+                "execution_mode": "AUTONOMOUS",  # Explicitly locks mode to standard routing
                 "current_target_urls": [], 
                 "user_prompt": (
                     "Conduct an autonomous global beat sweep. Synthesize breaking technical and strategic developments "
@@ -67,27 +70,28 @@ def autonomous_agent_loop():
                 ),
                 "extracted_markdown_context": [],
                 "drafted_brief": {},
+                "ui_markdown": "",
                 "publish_status": "Pending"
             }
             final_state = agent_app.invoke(initial_state)
-            print(f"✅ [Agentic Engine] Autonomous cycle complete. Publish Status: {final_state.get('publish_status')}")
+            print(f"✅ [Agentic Engine] Autonomous cycle complete. Status: {final_state.get('publish_status')}")
         except Exception as e:
             print(f"⚠️ [Agentic Engine] Critical Execution Failure: {e}")
-        time.sleep(3600)
+        time.sleep(1500) # Scheduled to run every 25 minutes
 
 def start_agent_daemon():
     agent_thread = threading.Thread(target=autonomous_agent_loop, daemon=True)
     agent_thread.start()
 
 # ==========================================
-# 5. GITHUB ACTIONS HEADLESS TRIGGER
+# 5. RUNTIME HANDLER
 # ==========================================
-# 🛑 THE FIX: This block tells Python to actually run the graph when triggered by GitHub Actions
 if __name__ == "__main__":
     print("🚀 [Agentic Engine] Initiating Single-Pass Sweep (GitHub Actions Mode)...")
     agent_app = build_agent_graph()
     try:
         initial_state = {
+            "execution_mode": "AUTONOMOUS",
             "current_target_urls": [], 
             "user_prompt": (
                 "Conduct an autonomous global beat sweep. Synthesize breaking technical and strategic developments "
@@ -96,9 +100,10 @@ if __name__ == "__main__":
             ),
             "extracted_markdown_context": [],
             "drafted_brief": {},
+            "ui_markdown": "",
             "publish_status": "Pending"
         }
         agent_app.invoke(initial_state)
-        print("✅ [Agentic Engine] Single-pass headless execution complete.")
+        print("✅ [Agentic Engine] Headless execution complete.")
     except Exception as e:
         print(f"⚠️ [Agentic Engine] Headless Execution Failure: {e}")

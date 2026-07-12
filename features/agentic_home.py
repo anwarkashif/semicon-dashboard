@@ -1,5 +1,7 @@
 import streamlit as st
 import random
+import re
+from agent_graph import build_agent_graph
 
 def render_agentic_home():
     # 1. INITIALIZE CHAT STATE
@@ -22,12 +24,25 @@ def render_agentic_home():
     if "agentic_greeting" not in st.session_state:
         st.session_state.agentic_greeting = random.choice(greetings)
 
-    # 🌌 3. BASE CSS: DEEP SPACE, RED GLOW OVERHAUL & TIGHT CHAT GAPS
+    # 3. BASE CSS: DEEP SPACE, RED GLOW OVERHAUL, TIGHT CHAT GAPS & ANTI-DIMMING
     base_css = """
     <style>
+    /* 🛑 ANTI-STALE DIMMING FIX: Prevents the screen from going dull during processing */
+    [data-stale="true"], [data-testid="stAppViewBlockContainer"][data-stale="true"] {
+        opacity: 1 !important;
+        filter: none !important;
+        transition: none !important;
+    }
+    .stMainBlockContainer, [data-testid="stAppViewContainer"] {
+        opacity: 1 !important; 
+        transition: none !important;
+    }
+
     /* Clean up the main canvas padding */
-    .block-container { padding-top: 1rem !important; max-width: 100% !important; padding-bottom: 100px !important; }
-    header { visibility: hidden !important; }
+    .block-container { padding-top: 3rem !important; max-width: 100% !important; padding-bottom: 150px !important; }
+    
+    /* 🛑 SIDEBAR FIX: Keep the header transparent so the hamburger button remains clickable */
+    header[data-testid="stHeader"] { background-color: transparent !important; }
 
     /* 🌌 Deep Space Gemini Background */
     [data-testid="stAppViewContainer"] {
@@ -80,10 +95,9 @@ def render_agentic_home():
         border-radius: 50px !important; 
         animation: defconPulseChat 2s infinite !important;
         margin: 0 auto !important;
-        overflow: hidden !important; /* 🛑 Forces the inner box to cut off exactly at the curve */
+        overflow: hidden !important; 
     }
     
-    /* 🛑 Forces the inner text wrapper to match the curve perfectly */
     [data-testid="stChatInput"] > div {
         border-radius: 50px !important; 
     }
@@ -97,12 +111,11 @@ def render_agentic_home():
     div[data-testid="stChatMessage"] { 
         background: transparent !important; 
         margin-top: 0px !important;
-        margin-bottom: -30px !important; /* 🛑 Pulls chat bubbles aggressively closer */
+        margin-bottom: -15px !important; 
         padding-bottom: 0px !important;
-        gap: 0.2rem !important; /* Neutralize Flexbox internal gaps */
+        gap: 0.5rem !important; 
     }
     
-    /* Vertical block cleanup */
     div[data-testid="stVerticalBlock"] { gap: 0rem !important; }
     
     div[data-testid="stChatMessageContent"] {
@@ -128,93 +141,89 @@ def render_agentic_home():
     }
     </style>
     """
+    st.markdown(base_css, unsafe_allow_html=True)
 
     # 4. DYNAMIC CENTER LAYOUT (Only applies when chat is empty)
-    center_css = """
-    <style>
-    .agent-wrapper {
-        display: flex; flex-direction: column; align-items: center; justify-content: center;
-        height: 50vh; width: 100%;
-    }
-    .agent-greeting {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-        font-size: 2.5rem; font-weight: 500; letter-spacing: -0.5px; color: #e2e8f0; 
-        text-align: center; margin-bottom: 20px; text-shadow: 0 0 20px rgba(255,255,255,0.1); 
-    }
-    /* Rip input to center */
-    [data-testid="stChatInputContainer"] {
-        position: absolute !important;
-        bottom: 40vh !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 100% !important;
-        max-width: 800px !important;
-    }
-    </style>
-    """
-    
-    st.markdown(base_css, unsafe_allow_html=True)
-    
-    # 5. CONDITIONAL RENDERING
+    # 🛑 THE FIX: Using a dedicated empty container ensures Streamlit obliterates the text instantly
+    greeting_container = st.empty()
+    chat_container = st.container()
+
     if is_empty:
-        st.markdown(center_css, unsafe_allow_html=True)
-        st.markdown(f'<div class="agent-wrapper"><div class="agent-greeting">{st.session_state.agentic_greeting}</div></div>', unsafe_allow_html=True)
+        center_css = """
+        <style>
+        .agent-wrapper {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            height: 50vh; width: 100%;
+        }
+        .agent-greeting {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            font-size: 2.5rem; font-weight: 500; letter-spacing: -0.5px; color: #e2e8f0; 
+            text-align: center; margin-bottom: 20px; text-shadow: 0 0 20px rgba(255,255,255,0.1); 
+        }
+        /* Rip input to center */
+        [data-testid="stChatInputContainer"] {
+            position: absolute !important;
+            bottom: 40vh !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            width: 100% !important;
+            max-width: 800px !important;
+        }
+        </style>
+        """
+        greeting_container.markdown(center_css + f'<div class="agent-wrapper"><div class="agent-greeting">{st.session_state.agentic_greeting}</div></div>', unsafe_allow_html=True)
     else:
-        for msg in st.session_state.agentic_messages:
-            avatar_icon = "👤" if msg["role"] == "user" else "✨"
-            with st.chat_message(msg["role"], avatar=avatar_icon):
-                st.markdown(msg["content"])
-                
+        greeting_container.empty() # 🛑 Destroys the Ghost Text instantly
+        with chat_container:
+            for msg in st.session_state.agentic_messages:
+                avatar_icon = "👤" if msg["role"] == "user" else "✨"
+                with st.chat_message(msg["role"], avatar=avatar_icon):
+                    st.markdown(msg["content"])
+            
     # 6. THE INPUT HANDLER & LANGGRAPH TRIGGER
-    agent_query = st.chat_input("Ask the Agentic OSINT Command...")
+    agent_query = st.chat_input("Ask the geopolitical and OSINT pipeline...")
     
     if agent_query:
-        # Display user query
+        # Display user query instantly to prevent screen dimming
         st.session_state.agentic_messages.append({"role": "user", "content": agent_query})
-        
-        # 1. Parse the prompt for any specific URLs using Regex
-        import re
-        raw_urls = re.findall(r'(https?://[^\s]+)', agent_query)
-        # 🛑 FIX: Strip trailing punctuation (quotes, periods) that break URLs and cause 404s
-        extracted_urls = [url.rstrip('"\'.,;)') for url in raw_urls]
-        
-        # If the user provided a URL, use it. Otherwise, default to standard OSINT sweeps.
-        target_urls = extracted_urls if extracted_urls else [
-            "https://www.reuters.com/technology", 
-            "https://asia.nikkei.com/Business/Tech/Semiconductors"
-        ]
-
-        # 2. Invoke the LangGraph Engine Live
-        from agent_graph import build_agent_graph
-        try:
-            agent_app = build_agent_graph()
-            
-            # Pass the targets directly into the AgentState memory
-            initial_state = {
-                "current_target_urls": target_urls,
-                "user_prompt": agent_query,
-                "extracted_markdown_context": [],
-                "drafted_brief": {},
-                "publish_status": "Pending"
-            }
-            
-            # Execute the 5-node graph synchronously for the UI
-            final_state = agent_app.invoke(initial_state)
-            
-            # 3. Format the JSON output from Node 4/5 into a beautiful chat response
-            brief = final_state.get("drafted_brief", {})
-            if brief:
-                response_md = f"### 🚨 {brief.get('Title', 'Intelligence Alert')}\n\n"
-                response_md += f"**Threat Level:** {brief.get('Threat_Level', 'UNKNOWN')}\n\n"
-                response_md += f"**BLUF:** {brief.get('Action', '')}\n\n"
-                response_md += f"**Predictive Analysis:** {brief.get('Predictive_Analysis', '')}\n\n"
-                response_md += f"*Sources Scanned:* {brief.get('Source', 'Internal Engine')}"
-            else:
-                response_md = "⚠️ Agent completed the sweep but failed to synthesize a valid brief."
-                
-        except Exception as e:
-            response_md = f"⚠️ Critical Graph Execution Failure: {e}"
-
-        # Display the final intelligence product
-        st.session_state.agentic_messages.append({"role": "assistant", "content": response_md})
         st.rerun()
+
+    # 7. PROCESS LATEST MESSAGE IF IT WAS FROM USER
+    if not is_empty and st.session_state.agentic_messages[-1]["role"] == "user":
+        latest_query = st.session_state.agentic_messages[-1]["content"]
+        
+        with chat_container: # Keeps the spinner perfectly aligned with the chat
+            with st.chat_message("assistant", avatar="✨"):
+                with st.spinner("Agentic Engine actively sweeping targets and synthesizing data..."):
+                    try:
+                        agent_app = build_agent_graph()
+                        
+                        initial_state = {
+                            "execution_mode": "CUSTOM_UI",  
+                            "current_target_urls": [],     
+                            "user_prompt": latest_query,
+                            "extracted_markdown_context": [],
+                            "drafted_brief": {},
+                            "ui_markdown": "",
+                            "publish_status": "Pending"
+                        }
+                        
+                        # Execute the graph
+                        final_state = agent_app.invoke(initial_state)
+                        
+                        # Read directly from the raw Markdown channel
+                        if final_state.get("ui_markdown"):
+                            response_md = final_state["ui_markdown"]
+                        else:
+                            brief = final_state.get("drafted_brief", {})
+                            response_md = f"### 🚨 {brief.get('Title', 'Intelligence Brief')}\n\n"
+                            response_md += f"**Threat Level:** {brief.get('Threat_Level', 'UNKNOWN')}\n\n"
+                            response_md += f"{brief.get('BLUF', 'No data generated.')}"
+                            
+                    except Exception as e:
+                        response_md = f"⚠️ Critical Graph Execution Failure: {e}"
+
+                    st.markdown(response_md)
+                
+        # Append final response to history
+        st.session_state.agentic_messages.append({"role": "assistant", "content": response_md})
