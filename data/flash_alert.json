@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Strikes 140 Military Targets Across Iran",
+        "Title": "Iran Attacks Bahrain, Air Raid Sirens Sound",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -18,7 +18,7 @@
         "Title": "Russia Nears Final Decision on Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
@@ -32,18 +32,18 @@
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
         "Title": "OpenPLC v3",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-02",
+        "Title": "CubeSpace CW0057 Reaction Wheel",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
