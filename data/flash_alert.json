@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "UAE Detects Missile Threats Outside Its Borders",
+        "Title": "US Strikes Military Facility in Iran's Yasuj",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -12,13 +12,6 @@
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/warmonitors/44848",
-        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/nexta_live/119990",
@@ -32,25 +25,25 @@
         "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "dw.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
-        "Title": "OpenPLC v3",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-02",
+        "Title": "Schneider Electric PowerChute Serial Shutdown",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-02",
-        "Title": "CubeSpace CW0057 Reaction Wheel",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-01",
+        "Title": "Hydro-Qu\u00e9bec Le Circuit Electrique charging station backend",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
@@ -58,6 +51,13 @@
     {
         "Source": "https://t.me/intelslava/89873",
         "Title": "Russia Produces T-80BVM Tanks at Omsk Plant",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://t.me/warmonitors/44848",
+        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "WATCH"
