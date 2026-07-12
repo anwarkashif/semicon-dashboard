@@ -83,7 +83,7 @@
             "Actor": "Venezuela",
             "Action": "Experiencing destructive earthquakes, deepening economic crisis",
             "Location": "Venezuela (Caracas, La Guaira)",
-            "Risk": "Humanitarian crisis",
+            "Risk": "High",
             "Source": "https://www.atlanticcouncil.org/dispatches/venezuelas-earthquakes-have-deepened-this-centurys-biggest-economic-crisis/",
             "Title": "Venezuela\u2019s earthquakes have deepened this century\u2019s biggest economic crisis",
             "Feed_Source": "Premium RSS",
@@ -123,7 +123,7 @@
             "Publisher": "moderndiplomacy.eu"
         },
         {
-            "Date": "July 2026",
+            "Date": "Ongoing (2026)",
             "Actor": "Morocco, China, Europe",
             "Action": "Morocco becoming a significant destination for Chinese investment in advanced industries",
             "Location": "Morocco",
@@ -497,6 +497,39 @@
             "Publisher": "aspistrategist.org.au"
         },
         {
+            "Date": "July 2026",
+            "Actor": "President Prabowo (Indonesia), National Nutrition Agency",
+            "Action": "Replaced head of National Nutrition Agency amidst corruption charges and fiscal pressures",
+            "Location": "Indonesia",
+            "Risk": "Medium",
+            "Source": "https://fulcrum.sg/prabowos-nutrition-agency-shake-up-reveals-deeper-structural-problems/",
+            "Title": "Prabowo\u2019s Nutrition Agency Shake-Up Reveals Deeper Structural Problems",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "fulcrum.sg"
+        },
+        {
+            "Date": "Ongoing (2026)",
+            "Actor": "China, Southeast Asia",
+            "Action": "China's burgeoning exports and trade surplus create 'second China shock' for Southeast Asia",
+            "Location": "Southeast Asia, China",
+            "Risk": "Medium",
+            "Source": "https://fulcrum.sg/should-southeast-asia-fear-the-second-china-shock/",
+            "Title": "Should Southeast Asia Fear the Second China Shock?",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "fulcrum.sg"
+        },
+        {
+            "Date": "Ongoing (2026)",
+            "Actor": "Cambodia",
+            "Action": "Stepped up efforts to eradicate online scam operations, enacted new law",
+            "Location": "Cambodia",
+            "Risk": "Medium",
+            "Source": "https://fulcrum.sg/cambodias-crackdown-on-scams-needs-a-concrete-and-durable-strategy/",
+            "Title": "Cambodia\u2019s Crackdown on Scams Needs a Concrete and Durable Strategy",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "fulcrum.sg"
+        },
+        {
             "Date": "July 12, 2026",
             "Actor": "Russia, Ukraine",
             "Action": "Attacking each other's key grain export gateways with drones",
@@ -538,12 +571,12 @@
             "url": "https://www.atlanticcouncil.org/dispatches/venezuelas-earthquakes-have-deepened-this-centurys-biggest-economic-crisis/"
         },
         {
-            "title": "Israel and the new reality of buffer zones",
-            "url": "https://www.atlanticcouncil.org/dispatches/israel-and-the-new-reality-of-buffer-zones/"
+            "title": "The Ankara summit previewed the Gulf\u2019s new security equation",
+            "url": "https://www.atlanticcouncil.org/dispatches/the-ankara-summit-previewed-the-gulfs-new-security-equation/"
         },
         {
-            "title": "U.S.-Iran Talks May Continue, but the Cease-Fire Is Over",
-            "url": "https://foreignpolicy.com/2026/07/10/us-iran-war-cease-fire-over-strikes-strait-hormuz-qatar-pakistan/"
+            "title": "Israel and the new reality of buffer zones",
+            "url": "https://www.atlanticcouncil.org/dispatches/israel-and-the-new-reality-of-buffer-zones/"
         },
         {
             "title": "Starved of Silicon: China Built Its Own",
@@ -610,8 +643,8 @@
             "url": "https://www.defensenews.com/industry/techwatch/2026/07/10/ukraine-can-soon-build-its-own-patriots-but-it-could-take-years/"
         },
         {
-            "title": "US Marines successfully test-fire new medium-range air defense system",
-            "url": "https://www.defensenews.com/news/your-military/2026/07/10/us-marines-successfully-test-fire-new-medium-range-air-defense-system/"
+            "title": "Zelenskyy taps European allies to build Freya, a cheaper Patriot-alternative to Russia\u2019s ballistic missiles",
+            "url": "https://www.defensenews.com/industry/techwatch/2026/07/10/zelenskyy-taps-european-allies-to-build-freya-a-cheaper-patriot-alternative-to-russias-ballistic-missiles/"
         },
         {
             "title": "Italy busts Russian spy ring collecting data on Ukrainian air defense vulnerabilities",
@@ -680,6 +713,10 @@
         {
             "title": "How US muddle made a bad Iran war a quagmire",
             "url": "https://asiatimes.com/2026/07/how-us-muddle-made-a-bad-iran-war-a-quagmire/"
+        },
+        {
+            "title": "Ambition outguns capacity in US plan to deter China",
+            "url": "https://asiatimes.com/2026/07/ambition-outguns-capacity-in-us-plan-to-deter-china/"
         },
         {
             "title": "Beijing is testing who will stand by Taiwan",
