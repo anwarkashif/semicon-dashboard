@@ -1,14 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Strikes Bandar-e Mahshahr, Iran with ATACMS Missiles",
+        "Title": "Ukrainian Drone Attack Hits Syzran Oil Refinery in Samara Oblast",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://t.me/southfronteng/61809",
         "Title": "Iranian Forces Strike Qatari and Saudi Tankers Near Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119990",
+        "Title": "Russia Nears Final Decision on Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -21,25 +28,25 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://t.me/nexta_live/119990",
-        "Title": "Russia Nears Final Decision on Ukraine",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-02",
+        "Title": "Schneider Electric PowerChute Serial Shutdown",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
+        "Title": "OpenPLC v3",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
         "Title": "Labcenter Proteus 9",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/intelslava/89873",
@@ -60,13 +67,6 @@
         "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "warmonitor.com",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119991",
-        "Title": "Ukraine Confirms Death of Anastasia Berezovskaya",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "WATCH"
     }
 ]
