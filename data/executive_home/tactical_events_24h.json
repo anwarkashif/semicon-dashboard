@@ -1,54 +1,31 @@
 [
     {
-        "Title": "Global Semiconductor Supply Chain and Critical Mineral Geopolitical Intelligence Brief",
-        "Threat_Level": "ELEVATED",
-        "Locations": [
-            "Taiwan Strait maritime transit corridors",
-            "Netherlands lithography export control zones",
-            "US-China trade policy corridors",
-            "Red Sea maritime chokepoints"
-        ],
-        "BLUF": "The semiconductor supply chain remains under significant strain due to the intersection of tightening export controls on advanced lithography equipment and escalating maritime security risks in West Asia. Strategic competition over critical mineral processing capacity is forcing a realignment of global trade routes, increasing the risk of supply chain fragmentation and inflationary pressure on high-end logic chips.",
-        "Top_News": {
-            "Asia-Pacific": [
-                "Taiwanese foundries report increased operational vigilance due to heightened naval activity in the Taiwan Strait.",
-                "Japan and South Korea initiate joint task force to secure rare earth element supply chains independent of current dominant market players."
-            ],
-            "West Asia / Middle East": [
-                "Maritime security in the Red Sea continues to disrupt logistics for semiconductor components moving between East Asia and European markets.",
-                "Regional energy volatility is impacting the operational costs of energy-intensive semiconductor fabrication plants in the Gulf region."
-            ],
-            "Europe": [
-                "The Netherlands government faces renewed pressure to further restrict the maintenance and servicing of advanced lithography systems sold to Chinese entities.",
-                "EU member states finalize new subsidies for domestic silicon carbide production to reduce reliance on external suppliers."
-            ],
-            "Americas": [
-                "US Department of Commerce expands oversight on cloud computing providers to prevent unauthorized access to advanced AI training clusters.",
-                "New legislative proposals introduced to incentivize domestic processing of critical minerals required for semiconductor packaging."
-            ],
-            "Africa": [
-                "Increased investment flows from global powers into cobalt and lithium extraction projects in the DRC and Namibia to secure upstream supply.",
-                "Logistical bottlenecks at major African ports continue to delay the export of raw critical minerals to global processing hubs."
-            ]
-        },
-        "Watch_Out": [
-            "Upcoming G7 summit discussions on harmonizing export control enforcement for dual-use semiconductor technology.",
-            "Potential escalation of maritime interdiction in the Red Sea impacting container shipping schedules."
-        ],
-        "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The semiconductor sector is transitioning from a model of global efficiency to one of national security resilience. The primary threat remains the weaponization of supply chain chokepoints, specifically in lithography maintenance and raw material refining. Geopolitical friction is creating a bifurcated market, increasing the cost of compliance and operational overhead for multinational firms."
-        },
-        "Predictive_Analysis": "Over the next quarter, expect a 10-15 percent increase in logistics costs for semiconductor components as maritime routes remain volatile. Furthermore, anticipate additional regulatory announcements from the US and EU regarding the 'de-risking' of critical mineral supply chains, likely leading to increased volatility in the spot prices of gallium, germanium, and rare earth oxides.",
-        "Sources_List": [
-            "Agentic AI (www.semirare.in)",
-            "Live verified references: Autonomous Built-in Intelligence",
-            "Owned By:",
-            "Kashif Anwar",
-            "Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)"
-        ],
-        "Source": "Autonomous Built-in Intelligence",
-        "is_custom_prompt": false,
-        "Date": "2026-07-12 23:51:43 UTC"
+        "Date": "2026-07-13",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Iran war live: US bombs Iranian cities again as Hormuz standoff intensifies",
+        "Headline": "Iran war live: US bombs Iranian cities again as Hormuz standoff intensifies",
+        "Summary": "Iran war live: US bombs Iranian cities again as Hormuz standoff intensifies",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/liveblog/2026/7/13/iran-war-live-us-bombs-iranian-cities-again-as-hormuz-standoff-intensifies?traffic_source=rss",
+        "Title": "Iran war live: US bombs Iranian cities again as Hormuz standoff intensifies",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
+        "Date": "2026-07-12",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "US launches new wave of strikes against Iran, aimed at \u2018degrading\u2019 military",
+        "Headline": "US launches new wave of strikes against Iran, aimed at \u2018degrading\u2019 military",
+        "Summary": "US launches new wave of strikes against Iran, aimed at \u2018degrading\u2019 military",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/news/2026/7/12/us-launches-new-wave-of-strikes-against-iran-aimed-at-degrading-military?traffic_source=rss",
+        "Title": "US launches new wave of strikes against Iran, aimed at \u2018degrading\u2019 military",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
     },
     {
         "Date": "2026-07-12",
@@ -63,6 +40,336 @@
         "Title": "US and Iranian forces have exchanged heavy missile and drone assaults, with Tehran targeting US facilities in states across the Gulf and saying it had again closed the vital Strait of Hormuz",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
+    },
+    {
+        "Date": "July 2026",
+        "Actor": "Iraqi PM Ali al-Zaidi, US President Donald Trump",
+        "Action": "Iraqi PM visits Washington to meet Trump, discusses disarming Iran-backed militias and signing energy deals",
+        "Location": "Washington, US; Iraq",
+        "Risk": "Stability, Diplomatic Engagement",
+        "Source": "https://www.atlanticcouncil.org/dispatches/iraqs-new-prime-minister-must-sell-iraq-to-a-skeptical-washington/",
+        "Title": "Iraq\u2019s new prime minister must sell Iraq to a skeptical Washington",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "June 24, 2026 - July 8, 2026",
+        "Actor": "Natural Disaster",
+        "Action": "Destructive earthquakes strike Venezuela, causing thousands of casualties and significant economic damage",
+        "Location": "Venezuela (Caracas, La Guaira)",
+        "Risk": "Humanitarian Crisis, Economic Impact",
+        "Source": "https://www.atlanticcouncil.org/dispatches/venezuelas-earthquakes-have-deepened-this-centurys-biggest-economic-crisis/",
+        "Title": "Venezuela\u2019s earthquakes have deepened this century\u2019s biggest economic crisis",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "Post-October 7, 2023, ongoing in 2026",
+        "Actor": "Israel",
+        "Action": "Israel adopts a 'forward defense' doctrine, establishing buffer zones beyond its borders for security",
+        "Location": "Israel, Gaza, Lebanon",
+        "Risk": "Regional Conflict, Border Security",
+        "Source": "https://www.atlanticcouncil.org/dispatches/israel-and-the-new-reality-of-buffer-zones/",
+        "Title": "Israel and the new reality of buffer zones",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "Mid-2026",
+        "Actor": "China, US",
+        "Action": "China develops its own semiconductor ecosystem, leading the US to shift from total containment to managed trade policies",
+        "Location": "China, US",
+        "Risk": "Technological Rivalry, Economic Competition",
+        "Source": "https://moderndiplomacy.eu/2026/07/12/starved-of-silicon-china-built-its-own/",
+        "Title": "Starved of Silicon: China Built Its Own",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": "Current",
+        "Actor": "Morocco, China, Europe",
+        "Action": "Morocco's economic partnership with China grows, attracting significant Chinese investment in advanced industries and shifting economic power from Europe",
+        "Location": "Morocco, Europe, China",
+        "Risk": "Geoeconomic Shift, Economic Competition",
+        "Source": "https://moderndiplomacy.eu/2026/07/12/moroccos-partnership-with-beijing-shifts-economic-power-from-europe-to-china/",
+        "Title": "Morocco\u2019s partnership with Beijing shifts economic power from Europe to China",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": "March 2026",
+        "Actor": "Israel, Turkey",
+        "Action": "Israeli F-35s strike sites in Syria earmarked by Turkey for an airbase; Turkey abandons deployment without retaliation",
+        "Location": "Syria",
+        "Risk": "Regional Tension, Conflict Avoidance",
+        "Source": "https://moderndiplomacy.eu/2026/07/12/is-turkey-israel-war-coming/",
+        "Title": "Is a Turkey\u2013Israel War Actually Coming?",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": "July 2026",
+        "Actor": "Canadian PM Mark Carney, Saudi Crown Prince Mohammed bin Salman",
+        "Action": "Canadian PM visits Saudi Arabia, signs $1 billion in deals across health, AI, defense, and mining sectors",
+        "Location": "Jeddah, Saudi Arabia",
+        "Risk": "Economic Cooperation, Geopolitical Alignment",
+        "Source": "https://www.worldpoliticsreview.com/canada-saudi-arabia-carney-trade-bin-salman/",
+        "Title": "Canada Signs New Saudi Deals",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "worldpoliticsreview.com"
+    },
+    {
+        "Date": "June 3-11, 2026",
+        "Actor": "China, US citizen Min Zin",
+        "Action": "US citizen and academic Min Zin arrested in Kunming, China, on his way to a conference",
+        "Location": "Kunming, China",
+        "Risk": "Human Rights, Diplomatic Tension",
+        "Source": "https://www.worldpoliticsreview.com/china-transnational-repression-min-zin/",
+        "Title": "China\u2019s Transnational Repression Is Being Met With a Deafening Silence",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "worldpoliticsreview.com"
+    },
+    {
+        "Date": "July 2026",
+        "Actor": "Australia, India",
+        "Action": "Australia and India sign a deal allowing Australia to export uranium to India, deepening their strategic partnership",
+        "Location": "Melbourne, Australia",
+        "Risk": "Strategic Partnership, Energy Security",
+        "Source": "https://www.worldpoliticsreview.com/australia-india-uranium-deal-strategic-partnership-modi-albanese/",
+        "Title": "India, Australia Sign Uranium Deal",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "worldpoliticsreview.com"
+    },
+    {
+        "Date": "July 2026",
+        "Actor": "NATO, US President Trump, Europe, Canada, Ukraine",
+        "Action": "NATO Summit in Ankara reaffirms Article 5, pledges $80 billion aid for Ukraine, but omits Ukraine's NATO membership",
+        "Location": "Ankara, Turkey",
+        "Risk": "Alliance Dynamics, Regional Security",
+        "Source": "https://www.worldpoliticsreview.com/nato-europe-trump-ukraine/",
+        "Title": "NATO Reaffirms Defense Commitment",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "worldpoliticsreview.com"
+    },
+    {
+        "Date": "Spring and Summer 2026",
+        "Actor": "Ukraine, Russia",
+        "Action": "Ukraine successfully uses air and ground drones, autonomy, and swarming tactics to recapture territory from Russia",
+        "Location": "Ukraine",
+        "Risk": "Military Innovation, Conflict Outcome",
+        "Source": "https://www.defenseone.com/technology/2026/07/how-ukraine-won-first-great-robot-war/414658/",
+        "Title": "How Ukraine won the first great robot war",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defenseone.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "Pentagon, White House, US President Donald Trump",
+        "Action": "Pentagon's AI strategy faces funding shortfalls despite White House directives for rapid AI adoption in national security",
+        "Location": "US",
+        "Risk": "Defense Modernization, Budgetary Constraints",
+        "Source": "https://warontherocks.com/cogs-of-war/the-pentagons-ai-strategy-has-a-funding-problem/",
+        "Title": "The Pentagon\u2019s AI Strategy Has a Funding Problem",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "warontherocks.com"
+    },
+    {
+        "Date": "Current",
+        "Actor": "Jama\u2019at Nusrat al-Islam wal-Muslimin (al-Qaeda affiliate)",
+        "Action": "Warning that a victory for al-Qaeda affiliate in Mali would devastate the region",
+        "Location": "Mali",
+        "Risk": "Regional Instability, Terrorism",
+        "Source": "https://warontherocks.com/victory-for-al-qaedas-affiliate-in-mali-would-be-a-catastrophe/",
+        "Title": "Victory for al-Qaeda\u2019s Affiliate in Mali Would be a Catastrophe",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "warontherocks.com"
+    },
+    {
+        "Date": "June 2026, operational 2029",
+        "Actor": "Rheinmetall, MBDA, German Navy",
+        "Action": "Rheinmetall and MBDA sign contract to develop a high-energy laser weapon system for the German Navy",
+        "Location": "Germany",
+        "Risk": "Defense Technology, Naval Modernization",
+        "Source": "https://www.c4isrnet.com/global/europe/2026/07/10/rheinmetall-mbda-to-develop-laser-weapon-for-german-navy/",
+        "Title": "Rheinmetall, MBDA to develop laser weapon for German Navy",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "c4isrnet.com"
+    },
+    {
+        "Date": "May 13, 2026 report",
+        "Actor": "Pentagon, US Air Force",
+        "Action": "Pentagon seeks cheaper, long-range drone replacements for MQ-9 Reaper after unsustainable losses in the Iran war",
+        "Location": "US",
+        "Risk": "Defense Procurement, Military Capability",
+        "Source": "https://www.c4isrnet.com/industry/techwatch/2026/07/08/pentagon-to-explore-cheaper-replacements-for-the-mq-9-reaper/",
+        "Title": "Pentagon to explore cheaper replacements for the MQ-9 Reaper",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "c4isrnet.com"
+    },
+    {
+        "Date": "July 2026 report",
+        "Actor": "US Army",
+        "Action": "US Army shelves 10,000 Integrated Visual Augmentation System (IVAS) goggles after $2 billion investment, citing unreadiness for fielding",
+        "Location": "US",
+        "Risk": "Defense Procurement, Technological Failure",
+        "Source": "https://www.c4isrnet.com/news/your-military/2026/07/08/us-army-will-mothball-10000-sets-of-clunky-ivas-goggles-report-reveals/",
+        "Title": "US Army will mothball 10,000 sets of clunky IVAS goggles, report reveals",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "c4isrnet.com"
+    },
+    {
+        "Date": "July 2026",
+        "Actor": "Eight NATO allies (Denmark, Canada, Finland, Germany, Norway, Netherlands, Sweden, Turkey)",
+        "Action": "Eight NATO allies launch the Hybrid Alliance Layered Operations in Space (HALO) initiative for a multinational satellite constellation",
+        "Location": "Ankara, Turkey (NATO Summit), Space",
+        "Risk": "Space Security, Alliance Cooperation",
+        "Source": "https://www.c4isrnet.com/space/2026/07/07/eight-nato-allies-launch-halo-satellite-constellation-initiative/",
+        "Title": "Eight NATO allies launch HALO satellite constellation initiative",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "c4isrnet.com"
+    },
+    {
+        "Date": "July 2026",
+        "Actor": "US President Donald Trump, Ukrainian President Volodymyr Zelenskyy",
+        "Action": "US President Trump pledges to grant Ukraine a license to build its own Patriot interceptors",
+        "Location": "Ankara, Turkey (NATO Summit), Ukraine",
+        "Risk": "Defense Cooperation, Military Aid",
+        "Source": "https://www.defensenews.com/industry/techwatch/2026/07/10/ukraine-can-soon-build-its-own-patriots-but-it-could-take-years/",
+        "Title": "Ukraine can soon build its own Patriots \u2013 but it could take years",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
+    },
+    {
+        "Date": "July 2026",
+        "Actor": "Italy, Russia",
+        "Action": "Italian investigators bust a Russian spy ring collecting data on Western air defense capabilities sent to Ukraine",
+        "Location": "Rome, Italy",
+        "Risk": "Espionage, National Security",
+        "Source": "https://www.defensenews.com/global/europe/2026/07/10/italy-busts-russian-spy-ring-collecting-data-on-ukrainian-air-defense-vulnerabilities/",
+        "Title": "Italy busts Russian spy ring collecting data on Ukrainian air defense vulnerabilities",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
+    },
+    {
+        "Date": "July 12, 2026",
+        "Actor": "US Senator Lindsey Graham",
+        "Action": "US Republican Senator Lindsey Graham dies at 71 from a heart ailment",
+        "Location": "US",
+        "Risk": "Political Impact",
+        "Source": "https://spacepolicyonline.com/news/whats-happening-in-space-policy-july-12-18-2026/",
+        "Title": "What\u2019s Happening in Space Policy July 12-18, 2026",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "spacepolicyonline.com"
+    },
+    {
+        "Date": "July 2026",
+        "Actor": "Japan's ispace, SpaceX",
+        "Action": "Japan's ispace expands into lunar infrastructure services, partnering with SpaceX for end-to-end lunar deliveries",
+        "Location": "Japan, Moon",
+        "Risk": "Space Economy, Commercial Space",
+        "Source": "https://spacepolicyonline.com/news/japans-ispace-expanding-into-lunar-infrastructure/",
+        "Title": "Japan\u2019s ispace Expanding into Lunar Infrastructure",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "spacepolicyonline.com"
+    },
+    {
+        "Date": "July 9, 2026",
+        "Actor": "Auxilium Biotechnologies",
+        "Action": "Company successfully bioprints kidney and liver tissue in space aboard the International Space Station",
+        "Location": "International Space Station",
+        "Risk": "Medical Innovation, Space Technology",
+        "Source": "https://www.space.com/technology/space-medicine-breakthrough-kidney-and-liver-tissue-bioprinted-off-earth-for-1st-time-ever",
+        "Title": "Space medicine breakthrough? Kidney and liver tissue bioprinted off Earth for 1st time ever",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "space.com"
+    },
+    {
+        "Date": "June 2026, Q4 2026",
+        "Actor": "TSMC",
+        "Action": "TSMC unveils A16 angstrom-class CMOS platform with backside power delivery, targeting mass production by Q4 2026",
+        "Location": "Global",
+        "Risk": "Semiconductor Technology, Manufacturing",
+        "Source": "https://semiwiki.com/semiconductor-manufacturers/tsmc/370949-tsmc-a16-backside-power-at-vlsi-2026/",
+        "Title": "TSMC A16 Backside Power at VLSI 2026",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "semiwiki.com"
+    },
+    {
+        "Date": "June 23, 2026",
+        "Actor": "Walmart, Constellation Energy",
+        "Action": "Walmart signs a long-term power purchase agreement to source nuclear energy for its Illinois operations",
+        "Location": "Illinois, US",
+        "Risk": "Energy Transition, Corporate Sustainability",
+        "Source": "https://www.supplychaindive.com/news/walmart-inks-nuclear-energy-deal-to-power-illinois-warehouse/824676/",
+        "Title": "Walmart inks nuclear energy deal to power Illinois warehouse",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "supplychaindive.com"
+    },
+    {
+        "Date": "Post-2024 elections",
+        "Actor": "US President Donald Trump, Indian PM Narendra Modi",
+        "Action": "US President Trump's changed posture cools the strategic partnership between the US and India",
+        "Location": "US, India",
+        "Risk": "Diplomatic Relations, Geopolitical Alignment",
+        "Source": "https://thediplomat.com/2026/07/debate-in-delhi-on-trump-trust-and-strategic-choices/",
+        "Title": "Debate in Delhi on Trump, Trust, and Strategic Choices",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "thediplomat.com"
+    },
+    {
+        "Date": "June 8, 2026",
+        "Actor": "US Department of Defense, China",
+        "Action": "US DoD expands its Chinese Military Companies (CMC) List to include 188 entities, targeting major private Chinese firms",
+        "Location": "US, China",
+        "Risk": "Economic Competition, National Security",
+        "Source": "https://thediplomat.com/2026/07/what-the-pentagons-cmc-list-means-for-china-us-relations/",
+        "Title": "What the Pentagon\u2019s CMC List Means for China-US Relations",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "thediplomat.com"
+    },
+    {
+        "Date": "Post-October 7, 2023, ongoing in 2026",
+        "Actor": "Israel",
+        "Action": "Israel reorients its foreign policy towards Asia, focusing on technology and defense cooperation to diversify partnerships",
+        "Location": "Israel, Asia",
+        "Risk": "Geopolitical Reorientation, Diplomatic Relations",
+        "Source": "https://thediplomat.com/2026/07/israels-pivot-to-asia-2/",
+        "Title": "Israel\u2019s Pivot to Asia",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "thediplomat.com"
+    },
+    {
+        "Date": "July 12, 2026",
+        "Actor": "US, Iran, Islamic Revolutionary Guard Corps (IRGC)",
+        "Action": "US launches third round of military strikes against Iran following an attack on a commercial vessel in the Strait of Hormuz",
+        "Location": "Strait of Hormuz, Iran",
+        "Risk": "Escalation of Conflict, Maritime Security",
+        "Source": "https://gcaptain.com/u-s-launches-third-round-of-strikes-on-iran-after-containership-attack-in-strait-of-hormuz/",
+        "Title": "U.S. Launches Third Round of Strikes on Iran After Containership Attack in Strait of Hormuz",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "gcaptain.com"
+    },
+    {
+        "Date": "July 12, 2026",
+        "Actor": "Global markets, US, Iran",
+        "Action": "Oil prices climb over 3% as renewed US-Iran conflict threatens global supply routes through the Strait of Hormuz",
+        "Location": "Global, Strait of Hormuz",
+        "Risk": "Economic Impact, Energy Security",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/oil-prices-spike-renewed-us-iran-war-threatens-global-supply-route",
+        "Title": "Oil prices spike as renewed US-Iran war threatens global supply route",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "July 12, 2026",
+        "Actor": "Syria, President Ahmed al-Sharaa",
+        "Action": "Syria's new parliament convenes in Damascus for the first time after the toppling of Bashar al-Assad's regime",
+        "Location": "Damascus, Syria",
+        "Risk": "Political Transition, Regional Stability",
+        "Source": "https://www.al-monitor.com/originals/2026/07/new-syrian-parliament-meets-first-time-damascus",
+        "Title": "New Syrian parliament meets for first time in Damascus",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "al-monitor.com"
     },
     {
         "Date": "2026-07-12",
@@ -201,357 +508,5 @@
         "Title": "Is a Turkey\u2013Israel War Actually Coming?",
         "Feed_Source": "Premium RSS",
         "Publisher": "moderndiplomacy.eu"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Canadian Prime Minister Mark Carney, Saudi Crown Prince Mohammed bin Salman",
-        "Action": "Meets Saudi Crown Prince and signs 13 agreements worth $1 billion",
-        "Location": "Jeddah, Saudi Arabia",
-        "Risk": "Geopolitical alignment, human rights concerns, economic cooperation",
-        "Source": "https://www.worldpoliticsreview.com/canada-saudi-arabia-carney-trade-bin-salman/",
-        "Title": "Canada Signs New Saudi Deals",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "worldpoliticsreview.com"
-    },
-    {
-        "Date": "June 11, 2026",
-        "Actor": "US citizen Min Zin, Chinese authorities",
-        "Action": "US citizen Min Zin, a doctoral candidate, is arrested in Kunming, China, after vanishing on June 3",
-        "Location": "Kunming, China",
-        "Risk": "Human rights, academic freedom, transnational repression",
-        "Source": "https://www.worldpoliticsreview.com/china-transnational-repression-min-zin/",
-        "Title": "China\u2019s Transnational Repression Is Being Met With a Deafening Silence",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "worldpoliticsreview.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Australian Prime Minister Albanese, Indian Prime Minister Modi",
-        "Action": "Sign a deal allowing Australia to export uranium to India",
-        "Location": "Melbourne, Australia",
-        "Risk": "Nuclear proliferation concerns, strategic partnership, energy security",
-        "Source": "https://www.worldpoliticsreview.com/australia-india-uranium-deal-strategic-partnership-modi-albanese/",
-        "Title": "India, Australia Sign Uranium Deal",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "worldpoliticsreview.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "NATO members",
-        "Action": "Summit in Ankara reaffirms Article 5 commitment and pledges an additional $80 billion in military aid for Ukraine",
-        "Location": "Ankara, Turkey",
-        "Risk": "Geopolitical tensions, alliance cohesion, defense spending",
-        "Source": "https://www.worldpoliticsreview.com/nato-europe-trump-ukraine/",
-        "Title": "NATO Reaffirms Defense Commitment",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "worldpoliticsreview.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "US Space Force, Impulse Space, Relativity Federal",
-        "Action": "Adds Impulse Space and Relativity Federal to its National Security Space Launch Phase 3 Lane 1 contract",
-        "Location": "US",
-        "Risk": "Space militarization, defense industry expansion, technological competition",
-        "Source": "https://www.defenseone.com/business/2026/07/space-force-adds-two-startups-militarys-growing-list-national-security-launch-providers/414685/",
-        "Title": "Two more rocket-makers join Pentagon's list of launch options",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defenseone.com"
-    },
-    {
-        "Date": "August 1, 2026",
-        "Actor": "US Navy",
-        "Action": "Plans to launch the next phase of its medium unmanned surface vessel (MUSV) program",
-        "Location": "US",
-        "Risk": "Naval warfare evolution, defense technology, military spending",
-        "Source": "https://www.defenseone.com/defense-systems/2026/07/navy-teases-next-step-key-drone-boat-program/414683/",
-        "Title": "Navy teases next step in key drone boat program",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defenseone.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Federal employee unions, Defense Secretary Pete Hegseth",
-        "Action": "Sue Defense Secretary Pete Hegseth over his directive to terminate collective bargaining agreements",
-        "Location": "US",
-        "Risk": "Labor disputes, government overreach, legal challenge",
-        "Source": "https://www.defenseone.com/policy/2026/07/unions-sue-hegseth-pentagon-worker-rights/414675/",
-        "Title": "Unions sue to restore Pentagon workers' collective-bargaining rights",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defenseone.com"
-    },
-    {
-        "Date": "June 2026",
-        "Actor": "Ukraine, Russia",
-        "Action": "Ukraine successfully uses air and ground drones, autonomy, and swarming tactics to recapture territory from Russia",
-        "Location": "Ukraine",
-        "Risk": "Evolution of warfare, military innovation, conflict dynamics",
-        "Source": "https://www.defenseone.com/technology/2026/07/how-ukraine-won-first-great-robot-war/414658/",
-        "Title": "How Ukraine won the first great robot war",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defenseone.com"
-    },
-    {
-        "Date": "June 15, 2026",
-        "Actor": "US, Iran",
-        "Action": "Announce a framework agreement including a commitment to terminate military operations in Lebanon",
-        "Location": "Middle East",
-        "Risk": "Ceasefire fragility, regional conflict, diplomatic efforts",
-        "Source": "https://warontherocks.com/going-over-the-brink-how-hizballahs-risk-strategy-made-lebanon-impossible-to-ignore/",
-        "Title": "Going Over the Brink: How Hizballah\u2019s Risk Strategy Made Lebanon Impossible to Ignore",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "warontherocks.com"
-    },
-    {
-        "Date": "June 2026",
-        "Actor": "White House, Pentagon",
-        "Action": "Issues ambitious AI directives but faces a funding problem for the Pentagon's AI strategy",
-        "Location": "US",
-        "Risk": "National security, technological development, budget constraints",
-        "Source": "https://warontherocks.com/cogs-of-war/the-pentagons-ai-strategy-has-a-funding-problem/",
-        "Title": "The Pentagon\u2019s AI Strategy Has a Funding Problem",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "warontherocks.com"
-    },
-    {
-        "Date": "June 2026",
-        "Actor": "German armed forces, Rheinmetall, MBDA",
-        "Action": "Sign a contract to develop a high-energy laser weapon for the German Navy",
-        "Location": "Germany",
-        "Risk": "Military technology development, arms race, defense capabilities",
-        "Source": "https://www.c4isrnet.com/global/europe/2026/07/10/rheinmetall-mbda-to-develop-laser-weapon-for-german-navy/",
-        "Title": "Rheinmetall, MBDA to develop laser weapon for German Navy",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "c4isrnet.com"
-    },
-    {
-        "Date": "2026",
-        "Actor": "Ukrainian UGV manufacturer Trinity Robotics",
-        "Action": "Plans to double production to 2,200 units and seeks foreign partners",
-        "Location": "Ukraine",
-        "Risk": "Military industrial capacity, international cooperation, defense technology",
-        "Source": "https://www.c4isrnet.com/global/europe/2026/07/09/ukrainian-ground-robot-maker-doubles-production-eyes-ventures-with-foreign-partners/",
-        "Title": "Ukrainian ground robot maker doubles production, eyes ventures with foreign partners",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "c4isrnet.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Eight NATO allies",
-        "Action": "Launch the HALO project to develop a multinational satellite constellation for military operations",
-        "Location": "Ankara, Turkey",
-        "Risk": "Space militarization, alliance cooperation, defense capabilities",
-        "Source": "https://www.c4isrnet.com/space/2026/07/07/eight-nato-allies-launch-halo-satellite-constellation-initiative/",
-        "Title": "Eight NATO allies launch HALO satellite constellation initiative",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "c4isrnet.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "US President Trump, Ukraine",
-        "Action": "Pledges to give Ukraine a license to build its own Patriot interceptors",
-        "Location": "Ankara, Turkey",
-        "Risk": "Military technology transfer, defense capabilities, international relations",
-        "Source": "https://www.defensenews.com/industry/techwatch/2026/07/10/ukraine-can-soon-build-its-own-patriots-but-it-could-take-years/",
-        "Title": "Ukraine can soon build its own Patriots \u2013 but it could take years",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Ukraine, European allies",
-        "Action": "To hold its first coalition meeting in France on developing a homegrown ballistic missile defense system, FREYA",
-        "Location": "France",
-        "Risk": "Defense capabilities, European cooperation, military innovation",
-        "Source": "https://www.defensenews.com/industry/techwatch/2026/07/10/zelenskyy-taps-european-allies-to-build-freya-a-cheaper-patriot-alternative-to-russias-ballistic-missiles/",
-        "Title": "Zelenskyy taps European allies to build Freya, a cheaper Patriot-alternative to Russia\u2019s ballistic missiles",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "June 30, 2026",
-        "Actor": "US Marines",
-        "Action": "Successfully test-fire the new Medium-Range Intercept Capability (MRIC) air defense system",
-        "Location": "Guam",
-        "Risk": "Military capability enhancement, regional security, defense technology",
-        "Source": "https://www.defensenews.com/news/your-military/2026/07/10/us-marines-successfully-test-fire-new-medium-range-air-defense-system/",
-        "Title": "US Marines successfully test-fire new medium-range air defense system",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Italian investigators, Russian spy ring",
-        "Action": "Break up a Russian spy ring collecting data on Ukrainian air defense vulnerabilities",
-        "Location": "Rome, Italy",
-        "Risk": "Espionage, national security, intelligence operations",
-        "Source": "https://www.defensenews.com/global/europe/2026/07/10/italy-busts-russian-spy-ring-collecting-data-on-ukrainian-air-defense-vulnerabilities/",
-        "Title": "Italy busts Russian spy ring collecting data on Ukrainian air defense vulnerabilities",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "July 12, 2026",
-        "Actor": "US Republican Senator Lindsey Graham",
-        "Action": "Dies at 71 from a heart ailment",
-        "Location": "US",
-        "Risk": "Political impact, legislative changes",
-        "Source": "https://spacepolicyonline.com/news/whats-happening-in-space-policy-july-12-18-2026/",
-        "Title": "What\u2019s Happening in Space Policy July 12-18, 2026",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "spacepolicyonline.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Japan\u2019s ispace, SpaceX",
-        "Action": "Japan\u2019s ispace expands into lunar infrastructure business through an agreement with SpaceX",
-        "Location": "Japan, US",
-        "Risk": "Space commercialization, lunar development, international cooperation",
-        "Source": "https://spacepolicyonline.com/news/japans-ispace-expanding-into-lunar-infrastructure/",
-        "Title": "Japan\u2019s ispace Expanding into Lunar Infrastructure",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "spacepolicyonline.com"
-    },
-    {
-        "Date": "July 9, 2026",
-        "Actor": "FCC, Reflect Orbital",
-        "Action": "Approves Reflect Orbital to launch a demonstration satellite to test redirecting sunlight from orbit to Earth",
-        "Location": "US, Space",
-        "Risk": "Space commercialization, environmental concerns, regulatory approval",
-        "Source": "https://www.satellitetoday.com/technology/2026/07/10/fcc-approves-reflect-orbital-demo-satellite-to-test-redirecting-sunlight/",
-        "Title": "FCC Approves Reflect Orbital Demo Satellite to Test Redirecting Sunlight",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "satellitetoday.com"
-    },
-    {
-        "Date": "June 8, 2026",
-        "Actor": "US Department of Defense",
-        "Action": "Expands its Chinese Military Companies (CMC) List to 188 entities, including Tencent and Alibaba",
-        "Location": "US, China",
-        "Risk": "US-China strategic competition, economic impact, trade restrictions",
-        "Source": "https://thediplomat.com/2026/07/what-the-pentagons-cmc-list-means-for-china-us-relations/",
-        "Title": "What the Pentagon\u2019s CMC List Means for China-US Relations",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "thediplomat.com"
-    },
-    {
-        "Date": "July 8-10, 2026",
-        "Actor": "Indian Prime Minister Modi, Australia",
-        "Action": "Visits Australia, cementing a deepening geostrategic relationship and signing various agreements",
-        "Location": "Australia, India",
-        "Risk": "Geopolitical alignment, strategic partnership, regional influence",
-        "Source": "https://thediplomat.com/2026/07/india-and-australia-are-reshaping-what-it-means-to-be-strategic-partners/",
-        "Title": "India and Australia Are Reshaping What It Means To Be Strategic Partners",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "thediplomat.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Israel, US, Iran",
-        "Action": "Israeli and US attacks assassinate Iran's Supreme Leader Ayatollah Ali Khamenei and four family members",
-        "Location": "Iran",
-        "Risk": "Regime change, regional instability, conflict escalation",
-        "Source": "https://asiatimes.com/2026/07/when-gunning-for-regime-change-be-careful-what-you-shoot-for/",
-        "Title": "When gunning for regime change, be careful what you shoot for",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "asiatimes.com"
-    },
-    {
-        "Date": "June 2026",
-        "Actor": "US Indo-Pacific Command",
-        "Action": "Warns Congress of rising conflict risk with China and urges $122 billion in spending to strengthen deterrence",
-        "Location": "US",
-        "Risk": "US-China conflict, military spending, regional security",
-        "Source": "https://asiatimes.com/2026/07/ambition-outguns-capacity-in-us-plan-to-deter-china/",
-        "Title": "Ambition outguns capacity in US plan to deter China",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "asiatimes.com"
-    },
-    {
-        "Date": "July 12, 2026",
-        "Actor": "Russia, Ukraine",
-        "Action": "Attack each other's key grain export gateways, disrupting shipping across the Sea of Azov",
-        "Location": "Sea of Azov, Ukraine, Russia",
-        "Risk": "Food security, conflict escalation, economic disruption",
-        "Source": "https://gcaptain.com/russia-and-ukraine-strikes-hit-key-grain-sea-export-ports/",
-        "Title": "Russia and Ukraine Strikes Hit Key Grain Sea Export Ports",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "July 12, 2026",
-        "Actor": "Iran, Maritime Advisory Group",
-        "Action": "Iran declares Strait of Hormuz closed; commercial vessel GFS Galaxy attacked off Oman, one Indian national missing; traffic near standstill",
-        "Location": "Strait of Hormuz, Gulf of Oman",
-        "Risk": "Maritime security, conflict escalation, civilian casualties",
-        "Source": "https://gcaptain.com/hormuz-route-open-despite-iran-declaration-maritime-group-says/",
-        "Title": "Hormuz Route Open Despite Iran Declaration, Maritime Group Says",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "gcaptain.com"
-    },
-    {
-        "Date": "July 12, 2026",
-        "Actor": "Global markets, US, Iran",
-        "Action": "Oil prices climb by over 3% due to renewed fighting between the US and Iran, threatening global supply routes",
-        "Location": "Global",
-        "Risk": "Economic impact, energy security, market volatility",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/oil-prices-spike-renewed-us-iran-war-threatens-global-supply-route",
-        "Title": "Oil prices spike as renewed US-Iran war threatens global supply route",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "July 12, 2026",
-        "Actor": "Israel, Palestinians",
-        "Action": "Israeli attacks in Gaza wound four Palestinians and kill at least six people, including a 9-year-old girl",
-        "Location": "Gaza",
-        "Risk": "Civilian casualties, humanitarian crisis, regional conflict",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-attack-wounds-four-palestinians-central-gaza",
-        "Title": "Israeli attack wounds four Palestinians in central Gaza",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "July 11, 2026",
-        "Actor": "Germany's upper house of parliament",
-        "Action": "Backs a law to criminalize the public denial of Israel\u2019s right to exist",
-        "Location": "Germany",
-        "Risk": "Freedom of speech, international relations, political discourse",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/germany-moves-criminalise-denial-israels-existence-while-refusing",
-        "Title": "Germany moves to criminalise denial of Israel\u2019s existence while refusing to recognise Palestine",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "July 9, 2026",
-        "Actor": "US Congressman Ro Khanna, Israeli settlers",
-        "Action": "US Congressman Ro Khanna is detained by armed Israeli settlers in the occupied West Bank",
-        "Location": "Occupied West Bank",
-        "Risk": "Diplomatic incident, human rights, regional tensions",
-        "Source": "https://www.aljazeera.com/news/2026/7/12/detained-by-settlers-us-democrat-ro-khanna-now-faces-pro-israel-attacks?traffic_source=rss",
-        "Title": "Detained by settlers, US Democrat Ro Khanna now faces pro-Israel attacks",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "aljazeera.com"
-    },
-    {
-        "Date": "July 12, 2026",
-        "Actor": "Israeli military",
-        "Action": "Releases video showing huge explosions and detonations in villages in southern Lebanon",
-        "Location": "Southern Lebanon",
-        "Risk": "Regional conflict, military action, border security",
-        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/12/israel-releases-video-of-huge-detonations-in-lebanon?traffic_source=rss",
-        "Title": "Israel releases video of huge detonations in Lebanon",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "aljazeera.com"
-    },
-    {
-        "Date": "July 12, 2026",
-        "Actor": "Israel's parliament",
-        "Action": "Announces national elections will be held on October 27",
-        "Location": "Israel",
-        "Risk": "Political instability, government transition, electoral uncertainty",
-        "Source": "https://www.aljazeera.com/news/2026/7/12/israel-to-hold-national-elections-on-october-27-parliament-says?traffic_source=rss",
-        "Title": "Israel to hold national elections on October 27, parliament says",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "aljazeera.com"
     }
 ]
