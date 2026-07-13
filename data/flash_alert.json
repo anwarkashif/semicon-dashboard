@@ -1,9 +1,16 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Iran Launches Anti-Ship Missiles at US Navy in Gulf of Oman",
+        "Title": "Iran Shoots Down US Army Drone Over Strait of Hormuz",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
+        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "dw.com",
         "threat_level": "CRITICAL"
     },
     {
@@ -18,14 +25,7 @@
         "Title": "Russia Nears Final Decision on Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.dw.com/en/iran-millions-flock-to-ali-khamenei-s-funeral-procession/a-77846937?maca=en-rss-en-world-4025-xml-mrss",
-        "Title": "Iran: Millions flock to Ali Khamenei's funeral procession",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "dw.com",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
@@ -42,8 +42,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
-        "Title": "Labcenter Proteus 9",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-03",
+        "Title": "Hitachi Energy e-mesh EMS",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
