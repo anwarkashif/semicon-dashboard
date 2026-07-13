@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Bahrain Fires ATACMS Missiles at Iran",
+        "Title": "Iranian Cruise Missiles Hit Three UAE Oil Tankers in Gulf of Oman, Killing 1",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,10 +14,10 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
-        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
+        "Source": "https://t.me/nexta_live/119990",
+        "Title": "Russia Nears Final Decision on Ukraine",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
         "threat_level": "CRITICAL"
     },
     {
@@ -28,24 +28,24 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
+        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
         "Title": "OpenPLC v3",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
-        "Title": "Siemens SINEC OS",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-07",
+        "Title": "Digi International PortServer TS, Digi One SP IA",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119990",
-        "Title": "Russia Nears Final Decision on Ukraine",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
