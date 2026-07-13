@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US and Iran Trade Heavy Missile and Drone Attacks in Persian Gulf",
+        "Title": "Strait of Hormuz Traffic Plunges After IRGC Closure Threat",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -9,6 +9,13 @@
     {
         "Source": "https://t.me/southfronteng/61809",
         "Title": "Iranian Forces Strike Qatari and Saudi Tankers Near Hormuz",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "t.me",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://t.me/nexta_live/119990",
+        "Title": "Russia Nears Final Decision on Ukraine",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -28,31 +35,17 @@
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
+        "Title": "OpenPLC v3",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
-        "Title": "Labcenter Proteus 9",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
+        "Title": "Siemens SINEC OS",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-        "Title": "ST Engineering iDirect iQ-Series Terminals",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://t.me/nexta_live/119990",
-        "Title": "Russia Nears Final Decision on Ukraine",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
         "threat_level": "HIGH"
     },
     {
@@ -67,6 +60,13 @@
         "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
+        "threat_level": "WATCH"
+    },
+    {
+        "Source": "https://warmonitor.com/",
+        "Title": "'Restraining order needed': Trump escalates Meloni feud  ",
+        "Feed_Source": "WAR MONITOR",
+        "Publisher": "warmonitor.com",
         "threat_level": "WATCH"
     }
 ]
