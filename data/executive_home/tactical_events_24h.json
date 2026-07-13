@@ -1,5 +1,38 @@
 [
     {
+        "intelligence_brief": {
+            "title": "Semiconductor Supply Chain and Critical Mineral Geopolitical Assessment",
+            "date": "2024-05-22",
+            "regions": [
+                {
+                    "geography": "East Asia",
+                    "sub_geography": "Taiwan",
+                    "analysis": "TSMC continues to navigate heightened cross-strait tensions while accelerating the diversification of its manufacturing footprint. Recent reports indicate a strategic shift toward localized production in the United States and Germany to mitigate geopolitical risk, though advanced node production remains concentrated in Hsinchu."
+                },
+                {
+                    "geography": "North America",
+                    "sub_geography": "United States",
+                    "analysis": "The Department of Commerce is finalizing CHIPS Act funding allocations to bolster domestic front-end fabrication. Supply chain resilience efforts are currently focused on securing domestic sources of high-purity chemicals and photoresists to reduce reliance on Japanese and European suppliers."
+                },
+                {
+                    "geography": "Global",
+                    "sub_geography": "Critical Minerals",
+                    "analysis": "Gallium and germanium export controls imposed by China remain a primary bottleneck for compound semiconductor manufacturers. Market volatility is driving increased investment in secondary extraction technologies and recycling initiatives within the European Union and Australia."
+                }
+            ],
+            "owned_by": "Owned By:\nKashif Anwar\nGeopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
+            "sources": [
+                "International Energy Agency Critical Minerals Market Review",
+                "Semiconductor Industry Association Global Supply Chain Reports",
+                "Bloomberg Intelligence Semiconductor Sector Analysis",
+                "U.S. Department of Commerce Bureau of Industry and Security"
+            ]
+        },
+        "Source": "Autonomous Built-in Intelligence",
+        "is_custom_prompt": false,
+        "Date": "2026-07-13 20:02:00 UTC"
+    },
+    {
         "Date": "2026-07-13",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
