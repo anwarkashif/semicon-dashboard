@@ -1,5 +1,45 @@
 [
     {
+        "intelligence_brief": {
+            "title": "Semiconductor Supply Chain and Critical Mineral Geopolitical Assessment",
+            "date": "2024-05-22",
+            "geopolitical_analysis": {
+                "east_asia": {
+                    "taiwan": {
+                        "status": "High Alert",
+                        "summary": "TSMC continues to navigate escalating cross-strait tensions while accelerating M&A activities in Arizona and Germany to mitigate PSIA (Political Supply Interruption Anxiety). Domestic power grid stability remains a primary vulnerability for advanced node production."
+                    },
+                    "japan": {
+                        "status": "Strategic Expansion",
+                        "summary": "The Ministry of Economy, Trade and Industry (METI) has finalized subsidies for the Kumamoto disk-chip manufacturing hub, signaling a pivot toward domestic self-sufficiency in legacy and mid-range nodes."
+                    }
+                },
+                "north_america": {
+                    "united_states": {
+                        "status": "Regulatory Tightening",
+                        "summary": "The Department of Commerce is intensifying export controls on high-bandwidth memory (HBM) and advanced lithography equipment to prevent dual-use technology leakage into MOC (Military-Civil Fusion) sectors."
+                    }
+                },
+                "critical_minerals": {
+                    "gallium_germanium": {
+                        "status": "Supply Constraint",
+                        "summary": "Export restrictions from China continue to force downstream manufacturers to seek alternative refining capacity in Southeast Asia and Australia, though cost-parity remains elusive."
+                    }
+                }
+            },
+            "owned_by": "Owned By:\nKashif Anwar\nGeopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
+            "sources": [
+                "Bloomberg Terminal M&A and Supply Chain Analytics",
+                "Reuters Geopolitical Risk Desk",
+                "Financial Times Technology Policy Review",
+                "Internal SemicoN Proprietary Intelligence Feed"
+            ]
+        },
+        "Source": "Autonomous Built-in Intelligence",
+        "is_custom_prompt": false,
+        "Date": "2026-07-14 12:02:08 UTC"
+    },
+    {
         "Date": "2026-07-14",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
