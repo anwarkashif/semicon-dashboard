@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Attacks Cause Power Outages in Seven Ukrainian Regions",
+        "Title": "Ukraine Sinks Russian FSB Patrol Ship Izumrud Near Novorossiysk",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -16,13 +16,6 @@
     {
         "Source": "https://t.me/nexta_live/119982",
         "Title": "Ukrainian Drones Reach Novosibirsk Region",
-        "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://t.me/liveuamap/12207",
-        "Title": "Explosions Hit Damascus Near French President's Hotel",
         "Feed_Source": "WAR MONITOR",
         "Publisher": "t.me",
         "threat_level": "CRITICAL"
@@ -49,11 +42,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
-        "Title": "Siemens SINEC OS",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
+        "Title": "Labcenter Proteus 9",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-02",
+        "Title": "CubeSpace CW0057 Reaction Wheel",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://t.me/intelslava/89873",
@@ -63,10 +63,10 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://t.me/warmonitors/44848",
-        "Title": "US President Trump Arrives in Ankara to Meet Erdogan",
+        "Source": "https://news.sky.com/story/woman-suspected-of-carrying-out-monaco-bombing-of-ukrainian-tycoon-found-dead-13561246",
+        "Title": "Woman suspected of carrying out Monaco bombing of Ukrainian tycoon found dead",
         "Feed_Source": "WAR MONITOR",
-        "Publisher": "t.me",
+        "Publisher": "news.sky.com",
         "threat_level": "WATCH"
     }
 ]
