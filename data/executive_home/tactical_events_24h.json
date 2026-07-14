@@ -1,5 +1,49 @@
 [
     {
+        "intelligence_brief": {
+            "title": "Semiconductor Supply Chain and Critical Mineral Geopolitical Assessment",
+            "date": "2024-05-22",
+            "regions": {
+                "East_Asia": {
+                    "Taiwan": {
+                        "status": "High Alert",
+                        "developments": "TSMC continues to accelerate 2nm node production timelines amidst heightened cross-strait military posturing. Supply chain resilience remains the primary focus for global foundry partners.",
+                        "critical_minerals": "Stable supply of neon and photoresists despite regional logistical bottlenecks."
+                    },
+                    "Japan": {
+                        "status": "Strategic Expansion",
+                        "developments": "Government subsidies for Rapidus Corporation are being bolstered to secure domestic logic chip manufacturing capabilities by 2027.",
+                        "critical_minerals": "Increased investment in rare earth element recycling technologies to reduce dependency on external suppliers."
+                    }
+                },
+                "North_America": {
+                    "United_States": {
+                        "status": "Policy Implementation",
+                        "developments": "Department of Commerce CHIPS Act funding tranches are being finalized for major domestic fabrication projects to mitigate reliance on Asian manufacturing hubs.",
+                        "critical_minerals": "Expansion of domestic lithium and gallium extraction projects in the Western region to secure upstream supply chains."
+                    }
+                },
+                "Europe": {
+                    "European_Union": {
+                        "status": "Regulatory Integration",
+                        "developments": "The EU Chips Act is driving cross-border collaboration to establish a 2nm ecosystem, focusing on automotive and industrial grade semiconductors.",
+                        "critical_minerals": "Strategic partnerships with African nations for cobalt and copper sourcing are being renegotiated to align with ESG and supply security mandates."
+                    }
+                }
+            },
+            "owned_by": "Owned By:\nKashif Anwar\nGeopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
+            "sources": [
+                "International Energy Agency (IEA) Critical Minerals Market Review",
+                "Semiconductor Industry Association (SIA) Global Market Reports",
+                "U.S. Department of Commerce Bureau of Industry and Security",
+                "European Commission Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs"
+            ]
+        },
+        "Source": "Autonomous Built-in Intelligence",
+        "is_custom_prompt": false,
+        "Date": "2026-07-14 20:02:00 UTC"
+    },
+    {
         "Date": "2026-07-14",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
