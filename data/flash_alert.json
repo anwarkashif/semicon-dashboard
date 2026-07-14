@@ -1,16 +1,9 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Clashes Erupt in Strait of Hormuz Targeting US-Escorted Convoy",
+        "Title": "US Strikes Location in Iran's Dehloran County",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
-        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
@@ -35,11 +28,18 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
+        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
         "Title": "ABB Ability Edgenius",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01",
