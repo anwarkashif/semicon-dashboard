@@ -1,5 +1,41 @@
 [
     {
+        "intelligence_brief": {
+            "title": "Semiconductor Supply Chain and Critical Mineral Geopolitical Assessment",
+            "date": "2024-05-22",
+            "regions": [
+                {
+                    "geography": "East Asia",
+                    "sub_geography": "Taiwan",
+                    "analysis": "TSMC continues to navigate heightened cross-strait tensions while accelerating the diversification of its advanced packaging facilities. Strategic focus remains on maintaining the 2nm process node lead despite increasing pressure to localize production in the United States and Europe."
+                },
+                {
+                    "geography": "North America",
+                    "sub_geography": "United States",
+                    "analysis": "The Department of Commerce is intensifying oversight of CHIPS Act funding recipients. Emphasis is placed on preventing technology leakage to restricted entities while domestic fabs struggle with labor shortages and regulatory permitting delays."
+                },
+                {
+                    "geography": "Global",
+                    "sub_geography": "Critical Minerals",
+                    "analysis": "Gallium and germanium export controls from China continue to create price volatility. Western nations are accelerating efforts to establish independent refining capabilities for rare earth elements to decouple from Chinese-dominated supply chains."
+                }
+            ],
+            "ownership_block": {
+                "owned_by": "Kashif Anwar",
+                "title": "Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)"
+            },
+            "sources": [
+                "International Energy Agency Critical Minerals Market Review",
+                "Semiconductor Industry Association Global Market Reports",
+                "U.S. Department of Commerce Bureau of Industry and Security",
+                "Taiwan Ministry of Economic Affairs Industrial Development Bureau"
+            ]
+        },
+        "Source": "Autonomous Built-in Intelligence",
+        "is_custom_prompt": false,
+        "Date": "2026-07-14 00:01:58 UTC"
+    },
+    {
         "Date": "2026-07-13",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
