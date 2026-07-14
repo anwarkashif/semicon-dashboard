@@ -1,5 +1,49 @@
 [
     {
+        "intelligence_brief": {
+            "title": "Semiconductor Supply Chain and Critical Mineral Geopolitical Assessment",
+            "date": "2024-05-22",
+            "regions": {
+                "East_Asia": {
+                    "Taiwan": {
+                        "status": "High Alert",
+                        "developments": "TSMC continues to accelerate 2nm node production timelines amidst heightened cross-strait military posturing. Supply chain resilience protocols have been activated to mitigate potential maritime blockade risks.",
+                        "critical_minerals": "Stable supply of neon gas and photoresists, though stockpiling remains at 180-day capacity."
+                    },
+                    "Japan": {
+                        "status": "Strategic Expansion",
+                        "developments": "Rapid expansion of Rapidus Corporation facilities in Hokkaido. Government subsidies are prioritizing domestic logic chip manufacturing to reduce reliance on external foundries.",
+                        "critical_minerals": "Increased investment in rare earth element recycling technologies to decouple from Chinese export quotas."
+                    }
+                },
+                "North_America": {
+                    "United_States": {
+                        "status": "Policy Implementation",
+                        "developments": "CHIPS Act funding tranches are being deployed to Arizona and Ohio hubs. Focus remains on securing domestic packaging and assembly capabilities to close the backend manufacturing gap.",
+                        "critical_minerals": "Department of Energy initiatives are fast-tracking lithium and cobalt extraction projects in Nevada and Maine to secure EV and semiconductor battery supply chains."
+                    }
+                },
+                "Europe": {
+                    "European_Union": {
+                        "status": "Regulatory Integration",
+                        "developments": "The EU Chips Act is driving cross-border investment in German and French fabrication sites. Focus is on automotive-grade chips to support the transition to electric mobility.",
+                        "critical_minerals": "Critical Raw Materials Act implementation is underway, focusing on diversifying supply from Australia and Canada to mitigate dependency on non-aligned suppliers."
+                    }
+                }
+            },
+            "Owned_By": "Kashif Anwar\nGeopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
+            "Sources": [
+                "International Energy Agency (IEA) Critical Minerals Market Review",
+                "Semiconductor Industry Association (SIA) Global Supply Chain Report",
+                "U.S. Department of Commerce Bureau of Industry and Security (BIS) Intercepts",
+                "European Commission Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs"
+            ]
+        },
+        "Source": "Autonomous Built-in Intelligence",
+        "is_custom_prompt": false,
+        "Date": "2026-07-14 04:01:59 UTC"
+    },
+    {
         "Date": "2026-07-14",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
