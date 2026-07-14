@@ -1,47 +1,210 @@
 [
     {
-        "intelligence_brief": {
-            "title": "Semiconductor Supply Chain and Critical Mineral Geopolitical Assessment",
-            "date": "2024-05-22",
-            "regions": {
-                "East_Asia": {
-                    "Taiwan": {
-                        "status": "High Alert",
-                        "developments": "TSMC continues to accelerate 2nm node production timelines amidst heightened cross-strait military posturing. Supply chain resilience protocols have been activated to mitigate potential maritime blockade risks.",
-                        "critical_minerals": "Stable supply of neon gas and photoresists, though stockpiling remains at 180-day capacity."
-                    },
-                    "Japan": {
-                        "status": "Strategic Expansion",
-                        "developments": "Rapid expansion of Rapidus Corporation facilities in Hokkaido. Government subsidies are prioritizing domestic logic chip manufacturing to reduce reliance on external foundries.",
-                        "critical_minerals": "Increased investment in rare earth element recycling technologies to decouple from Chinese export quotas."
-                    }
-                },
-                "North_America": {
-                    "United_States": {
-                        "status": "Policy Implementation",
-                        "developments": "CHIPS Act funding tranches are being deployed to Arizona and Ohio hubs. Focus remains on securing domestic packaging and assembly capabilities to close the backend manufacturing gap.",
-                        "critical_minerals": "Department of Energy initiatives are fast-tracking lithium and cobalt extraction projects in Nevada and Maine to secure EV and semiconductor battery supply chains."
-                    }
-                },
-                "Europe": {
-                    "European_Union": {
-                        "status": "Regulatory Integration",
-                        "developments": "The EU Chips Act is driving cross-border investment in German and French fabrication sites. Focus is on automotive-grade chips to support the transition to electric mobility.",
-                        "critical_minerals": "Critical Raw Materials Act implementation is underway, focusing on diversifying supply from Australia and Canada to mitigate dependency on non-aligned suppliers."
-                    }
-                }
-            },
-            "Owned_By": "Kashif Anwar\nGeopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
-            "Sources": [
-                "International Energy Agency (IEA) Critical Minerals Market Review",
-                "Semiconductor Industry Association (SIA) Global Supply Chain Report",
-                "U.S. Department of Commerce Bureau of Industry and Security (BIS) Intercepts",
-                "European Commission Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs"
-            ]
-        },
-        "Source": "Autonomous Built-in Intelligence",
-        "is_custom_prompt": false,
-        "Date": "2026-07-14 04:01:59 UTC"
+        "Date": "2026-07-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "IRGC attacks target US Fifth Fleet in Bahrain",
+        "Headline": "IRGC attacks target US Fifth Fleet in Bahrain",
+        "Summary": "IRGC attacks target US Fifth Fleet in Bahrain",
+        "Risk": "HIGH",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/irgc-attacks-target-us-fifth-fleet-bahrain",
+        "Title": "IRGC attacks target US Fifth Fleet in Bahrain",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-07-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "'It might be the last opportunity we have': Thousands of Lebanese poured into Tyre\u2019s famous sandy beaches, swimming against a backdrop of smoke over the nearby village of Mansouri after an airstrike on it earlier that morning",
+        "Headline": "'It might be the last opportunity we have': Thousands of Lebanese poured into Tyre\u2019s famous sandy beaches, swimming against a backdrop of smoke over the nearby village of Mansouri after an airstrike on it earlier that morning",
+        "Summary": "'It might be the last opportunity we have': Thousands of Lebanese poured into Tyre\u2019s famous sandy beaches, swimming against a backdrop of smoke over the nearby village of Mansouri after an airstrike on it earlier that morning",
+        "Risk": "HIGH",
+        "Source": "https://x.com/TheNationalNews/status/2076882623130157376",
+        "Title": "'It might be the last opportunity we have': Thousands of Lebanese poured into Tyre\u2019s famous sandy beaches, swimming against a backdrop of smoke over the nearby village of Mansouri after an airstrike on it earlier that morning",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "x.com"
+    },
+    {
+        "Date": "2026-07-14",
+        "Actor": "Psyopoly/West Asia",
+        "Location": "Middle East",
+        "Event": "Strategic Update",
+        "Action": "Houthis: Saudi airport targeted in retaliation for strikes on Sanaa airport",
+        "Headline": "Houthis: Saudi airport targeted in retaliation for strikes on Sanaa airport",
+        "Summary": "Houthis: Saudi airport targeted in retaliation for strikes on Sanaa airport",
+        "Risk": "HIGH",
+        "Source": "https://www.aljazeera.com/video/newsfeed/2026/7/14/aje-onl-nf_houthis-target-saudi-for-strikes-on-sanaa-130726?traffic_source=rss",
+        "Title": "Houthis: Saudi airport targeted in retaliation for strikes on Sanaa airport",
+        "Feed_Source": "Psyopoly Supabase",
+        "Publisher": "aljazeera.com"
+    },
+    {
+        "Date": "2026-07-06",
+        "Actor": "China, Australia, Fiji",
+        "Action": "China fires a submarine-launched ballistic missile (SLBM) in the South China Sea, while Australia signs a defense treaty with Fiji.",
+        "Location": "South China Sea, Solomon Islands, Australia, Fiji",
+        "Risk": "Regional military buildup, geopolitical signaling, nuclear proliferation concerns, regional alliances",
+        "Source": "https://foreignpolicy.com/2026/07/13/china-nuclear-missile-test-launch-slbm/",
+        "Title": "Stop Overreacting to China\u2019s Missile Test",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "foreignpolicy.com"
+    },
+    {
+        "Date": "2026-07-01",
+        "Actor": "Iraqi Prime Minister Ali Zaidi, US President Donald Trump",
+        "Action": "Iraqi Prime Minister Ali Zaidi to visit Washington to discuss disarming Iran-backed militias and signing energy agreements with US companies.",
+        "Location": "Washington, Iraq",
+        "Risk": "Geopolitical alignment, regional stability, US-Iraq relations, Iran's influence",
+        "Source": "https://www.atlanticcouncil.org/dispatches/%d8%b9%d9%84%d9%89-%d8%b1%d8%a6%d9%8a%d8%b3-%d9%88%d8%b2%d8%b1%d8%a7%d8%a1-%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%a3%d9%86-%d9%8a%d9%82%d9%86%d8%b9-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%a7%d9%84/",
+        "Title": "\u0639\u0644\u0649 \u0631\u0626\u064a\u0633 \u0648\u0632\u0631\u0627\u0621 \u0627\u0644\u0639\u0631\u0627\u0642 \u0623\u0646 \u064a\u0642\u0646\u0639 \u0648\u0627\u0634\u0646\u0637\u0646 \u0627\u0644\u0645\u062a\u0634\u0643\u0643\u0629 \u0628\u062c\u062f\u0648\u0649 \u0627\u0644\u0634\u0631\u0627\u0643\u0629 \u0645\u0639 \u0628\u063a\u062f\u0627\u062f",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "2026-10-01",
+        "Actor": "Israel, Hamas, Hezbollah, Iran, Saudi Arabia",
+        "Action": "Israel's upcoming election is unfolding against a backdrop of the Gaza war, strained Abraham Accords, weakened regional adversaries, and military setbacks for Iran.",
+        "Location": "Israel, Gaza, Middle East, Syria",
+        "Risk": "Regional stability, diplomatic relations, conflict resolution, political future of Israel",
+        "Source": "https://www.atlanticcouncil.org/blogs/menasource/israels-next-government-must-prioritize-the-abraham-accords/",
+        "Title": "Israel\u2019s next government must prioritize the Abraham Accords",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "atlanticcouncil.org"
+    },
+    {
+        "Date": "2026-01-01",
+        "Actor": "Rapid Support Forces (RSF), Sudan Armed Forces (SAF)",
+        "Action": "The Rapid Support Forces (RSF) besiege El-Obeid, a critical city, threatening to sever the Sudan Armed Forces' (SAF) western supply corridor and potentially leading to Sudan's de facto partition.",
+        "Location": "El-Obeid, Kordofan region, Sudan",
+        "Risk": "Civil war, territorial control, national unity, humanitarian crisis",
+        "Source": "https://www.worldpoliticsreview.com/sudan-el-obeid-battle-kordofan-rsf-saf/",
+        "Title": "Sudan Could Be Headed for De Facto Partition",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "worldpoliticsreview.com"
+    },
+    {
+        "Date": "2026-06-01",
+        "Actor": "Canada, United States, Australia, NORAD",
+        "Action": "Canada signs agreements for an Australian Arctic Over-The-Horizon Radar (A-OTHR) system to address significant airspace radar coverage gaps for NORAD.",
+        "Location": "Canada, Arctic, Australia",
+        "Risk": "Arctic security, national defense, intelligence sharing, military technology",
+        "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/07/13/canada-to-plug-surveillance-gaps-with-aussie-over-the-horizon-radar/",
+        "Title": "Canada to plug surveillance gaps with Aussie over-the-horizon radar",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "c4isrnet.com"
+    },
+    {
+        "Date": "2026-07-01",
+        "Actor": "Ukraine, President Volodymyr Zelenskyy, US President Donald Trump, Denmark, France, Germany, Italy, Netherlands, Norway, Spain, Sweden, United Kingdom",
+        "Action": "Nine European nations join Ukraine in a nascent anti-ballistic coalition to accelerate the production of Ukraine's Freyja interceptor system, with support from US President Trump.",
+        "Location": "Kyiv, France, Europe",
+        "Risk": "Defense cooperation, arms production, regional security, missile defense",
+        "Source": "https://www.defensenews.com/global/europe/2026/07/14/9-nations-back-ukraines-patriot-alternative-freyja-and-want-it-flying-in-a-year/",
+        "Title": "9 nations back Ukraine\u2019s Patriot alternative, Freyja \u2014 and want it flying in a year",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
+    },
+    {
+        "Date": "2026-01-01",
+        "Actor": "United States, Center for Strategic and International Analysis (CSIS)",
+        "Action": "A study finds that the US defense industrial base is becoming stronger for wartime production, though significant challenges in ramping up and sustaining output persist.",
+        "Location": "United States",
+        "Risk": "Defense readiness, supply chain security, industrial capacity",
+        "Source": "https://www.defensenews.com/industry/techwatch/2026/07/13/us-industrial-base-is-becoming-stronger-for-wartime-production-study-finds/",
+        "Title": "US industrial base is becoming stronger for wartime production, study finds",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
+    },
+    {
+        "Date": "2026-07-14",
+        "Actor": "Russia, NASA, Anil Menon, Pyotr Dubrov, Anna Kikina",
+        "Action": "Russia launches NASA astronaut Anil Menon and two cosmonauts (Pyotr Dubrov, Anna Kikina) to the International Space Station.",
+        "Location": "Baikonur Cosmodrome, International Space Station",
+        "Risk": "International space cooperation, space travel",
+        "Source": "https://www.space.com/space-exploration/launches-spacecraft/soyuz-ms-29-astronaut-launch-international-space-station-anil-menon",
+        "Title": "Russia's launching a NASA astronaut and 2 cosmonauts to the International Space Station on July 14: Watch it live",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "space.com"
+    },
+    {
+        "Date": "2026-07-01",
+        "Actor": "L3Harris Technologies, Sierra Space, Space Development Agency (SDA)",
+        "Action": "L3Harris and Sierra Space receive $1.75 billion in contracts for the Space Development Agency's Tranche 3 Tracking Layer satellites, enhancing missile defense capabilities.",
+        "Location": "United States (space defense)",
+        "Risk": "Space security, missile defense, defense procurement",
+        "Source": "https://www.satellitetoday.com/government-military/2026/07/13/l3harris-and-sierra-space-receive-1-75b-for-sda-tranche-3-tracking-layer/",
+        "Title": "L3Harris and Sierra Space Receive $1.75B for SDA Tranche 3, Tracking Layer",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "satellitetoday.com"
+    },
+    {
+        "Date": "2026-07-13",
+        "Actor": "China\u2019s Ministry of Industry and Information Technology",
+        "Action": "China issues guidelines to upgrade its internet basic resources, targeting 'systematic breakthroughs' by 2030 and a more advanced national internet infrastructure by 2035.",
+        "Location": "China",
+        "Risk": "Technological competition, national infrastructure, digital sovereignty",
+        "Source": "https://technode.com/2026/07/13/china-sets-2030-target-for-next-generation-internet-infrastructure/",
+        "Title": "China sets 2030 target for next-generation internet infrastructure",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "technode.com"
+    },
+    {
+        "Date": "2026-01-01",
+        "Actor": "South Korea, Taiwan, US, China, North Korea",
+        "Action": "South Korea is urged to prepare for a potential conflict over Taiwan, taking into account a distracted US and the persistent threat from North Korea.",
+        "Location": "South Korea, Taiwan",
+        "Risk": "Regional conflict, national defense, geopolitical strategy",
+        "Source": "https://www.aspistrategist.org.au/south-korea-needs-to-plan-for-a-taiwan-conflict/",
+        "Title": "South Korea needs to plan for a Taiwan conflict",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "aspistrategist.org.au"
+    },
+    {
+        "Date": "2026-07-01",
+        "Actor": "Indian Prime Minister Narendra Modi, Australia, Japan, Indonesia, New Zealand",
+        "Action": "Indian Prime Minister Narendra Modi's visit to Australia delivers substantial outcomes in defense and security, fostering new minilateral coalitions with other Asian partners.",
+        "Location": "Australia, India, Japan, Indonesia, New Zealand",
+        "Risk": "Regional security, diplomatic relations, strategic partnerships",
+        "Source": "https://www.aspistrategist.org.au/modis-visit-australia-india-seek-to-gain-strength-from-each-other/",
+        "Title": "Modi\u2019s visit: Australia, India seek to gain strength from each other",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "aspistrategist.org.au"
+    },
+    {
+        "Date": "2026-01-01",
+        "Actor": "ASEAN, US, China, Iran",
+        "Action": "Intensifying US-China rivalry, economic coercion, and the energy crisis triggered by the US-Iran war are narrowing the space for ASEAN's collective agency in the Indo-Pacific.",
+        "Location": "Indo-Pacific, Southeast Asia, Strait of Hormuz",
+        "Risk": "Regional stability, economic vulnerability, geopolitical influence",
+        "Source": "https://fulcrum.sg/aseanfocus/small-states-big-stakes-aseans-narrowing-space-for-collective-agency/",
+        "Title": "Small States, Big Stakes: ASEAN\u2019s Narrowing Space for Collective Agency",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "fulcrum.sg"
+    },
+    {
+        "Date": "2026-07-13",
+        "Actor": "EU, UK, Russia",
+        "Action": "The EU and UK impose joint sanctions on a Russian agency, holding it responsible for recent cyber attacks.",
+        "Location": "Europe, UK, Russia",
+        "Risk": "Cybersecurity, international relations, sanctions",
+        "Source": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQN19YU1F5Y256dGFodjRqV0hXRWR3SW1pc0dxX1Q0OXNWOFdzTU5veWRZcUVHRDJmdlpRdFQ5SFM5ZThKTU52dkFoODRjV2prTVhFYjJxSWVVLVVzLTA5UzJBMWZ4X1FXNDdkZ1Y0ZFBHOHhtLXlKV3RMRG0tNWVmd2pSYXFTa3FIWEZPNVU0TERwTzJRLUxUREU4ZU1xNkFwX2JIVmlsQWRiOHFPS1NWdUFfR21hVzBSdlNQaGN6T0lEeDhRbndoamdTWmpWODFad2RVX1dEUW4?oc=5",
+        "Title": "EU, U.K. Impose Joint Sanctions on Russian Agency Blamed for Cyber Attacks (Jul 13, 2026) - VitalLaw.com",
+        "Feed_Source": "Google News when:1h",
+        "Publisher": "news.google.com"
+    },
+    {
+        "Date": "2026-07-01",
+        "Actor": "OpenAI CEO Sam Altman, US government, President Trump",
+        "Action": "OpenAI CEO Sam Altman is in talks with President Trump about giving the US government a 5% stake in OpenAI.",
+        "Location": "United States",
+        "Risk": "AI governance, economic policy, political influence, national security",
+        "Source": "https://www.technologyreview.com/2026/07/06/1140176/your-familys-300-stake-in-openai/",
+        "Title": "Your family\u2019s $300 stake in OpenAI",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "technologyreview.com"
     },
     {
         "Date": "2026-07-14",
@@ -348,212 +511,5 @@
         "Title": "9 nations back Ukraine\u2019s Patriot alternative, Freyja \u2014 and want it flying in a year",
         "Feed_Source": "Premium RSS",
         "Publisher": "defensenews.com"
-    },
-    {
-        "Date": "2026",
-        "Actor": "US Pentagon",
-        "Action": "Exploring cheaper MQ-9 Reaper replacements after dozens were lost during the Iran war.",
-        "Location": "United States (development), Iran (war context)",
-        "Risk": "Military Capability, Technological Development, Military Conflict Impact",
-        "Source": "https://www.c4isrnet.com/industry/techwatch/2026/07/08/pentagon-to-explore-cheaper-replacements-for-the-mq-9-reaper/",
-        "Title": "Pentagon to explore cheaper replacements for the MQ-9 Reaper",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "c4isrnet.com"
-    },
-    {
-        "Date": "2026",
-        "Actor": "Intel",
-        "Action": "To invest \u20ac5bn in an Irish plant as AI chip demand surges.",
-        "Location": "Ireland",
-        "Risk": "Economic Impact, Technological Advancement",
-        "Source": "https://www.ft.com/content/8bcc19e1-2101-444c-bd2e-3a4b113becec",
-        "Title": "Intel to invest \u20ac5bn in Irish plant as AI chip demand surges",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
-    },
-    {
-        "Date": "July 13, 2026",
-        "Actor": "China (Ministry of Industry and Information Technology and other agencies)",
-        "Action": "Issued guidelines to upgrade internet basic resources, targeting 'systematic breakthroughs' by 2030.",
-        "Location": "China",
-        "Risk": "Technological Advancement, National Strategy, Geopolitical Competition",
-        "Source": "https://technode.com/2026/07/13/china-sets-2030-target-for-next-generation-internet-infrastructure/",
-        "Title": "China sets 2030 target for next-generation internet infrastructure",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "technode.com"
-    },
-    {
-        "Date": "July 11, 2026",
-        "Actor": "Senator Lindsey Graham",
-        "Action": "Died, leaving his Senate seat vacant.",
-        "Location": "South Carolina, USA",
-        "Risk": "Political Impact (US Senate)",
-        "Source": "https://www.defenseone.com/policy/2026/07/sen-lindsey-graham-dies-leaving-senate-seat-vacant/414719/",
-        "Title": "Sen. Lindsey Graham dies, leaving Senate seat vacant",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "defenseone.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Hungarian Parliament",
-        "Action": "Approved a constitutional amendment to remove President Tamas Sulyok, a move against former Prime Minister Viktor Orban's influence.",
-        "Location": "Hungary",
-        "Risk": "Political Instability, Democratic Transition",
-        "Source": "https://www.worldpoliticsreview.com/hungary-peter-magyar-orban-state-trump/",
-        "Title": "Hungary\u2019s Magyar Starts to Clean House After Orban",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "worldpoliticsreview.com"
-    },
-    {
-        "Date": "2026-07-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Centcom says US launched attacks across Iran",
-        "Headline": "Centcom says US launched attacks across Iran",
-        "Summary": "Centcom says US launched attacks across Iran",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/centcom-says-us-launched-attacks-across-iran",
-        "Title": "Centcom says US launched attacks across Iran",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "2026-07-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "Iran war live: US launches new strikes on Iran, which attacks more tankers in Hormuz strait",
-        "Headline": "Iran war live: US launches new strikes on Iran, which attacks more tankers in Hormuz strait",
-        "Summary": "Iran war live: US launches new strikes on Iran, which attacks more tankers in Hormuz strait",
-        "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2076851705979781222",
-        "Title": "Iran war live: US launches new strikes on Iran, which attacks more tankers in Hormuz strait",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "x.com"
-    },
-    {
-        "Date": "2026-07-14",
-        "Actor": "Psyopoly/West Asia",
-        "Location": "Middle East",
-        "Event": "Strategic Update",
-        "Action": "IRGC claim attack on two vessels in Hormuz Strait",
-        "Headline": "IRGC claim attack on two vessels in Hormuz Strait",
-        "Summary": "IRGC claim attack on two vessels in Hormuz Strait",
-        "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/irgc-claim-attack-two-vessels-hormuz-strait",
-        "Title": "IRGC claim attack on two vessels in Hormuz Strait",
-        "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "middleeasteye.net"
-    },
-    {
-        "Date": "2026",
-        "Actor": "Intel",
-        "Action": "Invests \u20ac5bn in plant expansion",
-        "Location": "Ireland",
-        "Risk": "Economic development, AI chip supply chain strengthening",
-        "Source": "https://www.ft.com/content/8bcc19e1-2101-444c-bd2e-3a4b113becec",
-        "Title": "Intel to invest \u20ac5bn in Irish plant as AI chip demand surges",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
-    },
-    {
-        "Date": "N/A",
-        "Actor": "Ukraine",
-        "Action": "Conducts drone swarm attacks",
-        "Location": "Moscow, Russia",
-        "Risk": "Military escalation, urban warfare, air defense strain",
-        "Source": "https://www.ft.com/content/4194d23f-4cce-4aaa-bf22-9bf4c953e04e",
-        "Title": "Ukraine\u2019s drone swarms test Moscow air defences",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Iraqi Prime Minister Ali Al-Zaidi",
-        "Action": "Visits Washington to discuss partnership, disarming Iran-backed militias, energy deals",
-        "Location": "Washington, US / Iraq",
-        "Risk": "Geopolitical alignment, regional stability, energy security, Iran influence",
-        "Source": "https://www.atlanticcouncil.org/dispatches/%d8%b9%d9%84%d9%89-%d8%b1%d8%a6%d9%8a%d8%b3-%d9%88%d8%b2%d8%b1%d8%a7%d8%a1-%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%a3%d9%86-%d9%8a%d9%82%d9%86%d8%b9-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%a7%d9%84/",
-        "Title": "\u0639\u0644\u0649 \u0631\u0626\u064a\u0633 \u0648\u0632\u0631\u0627\u0621 \u0627\u0644\u0639\u0631\u0627\u0642 \u0623\u0646 \u064a\u0642\u0646\u0639 \u0648\u0627\u0634\u0646\u0637\u0646 \u0627\u0644\u0645\u062a\u0634\u0643\u0643\u0629 \u0628\u062c\u062f\u0648\u0649 \u0627\u0644\u0634\u0631\u0627\u0643\u0629 \u0645\u0639 \u0628\u063a\u062f\u0627\u062f",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "US President Donald Trump",
-        "Action": "Declared ceasefire with Tehran over, halted trade with Spain over defense spending",
-        "Location": "NATO Summit, Ankara, Turkey / Spain / Iran",
-        "Risk": "Transatlantic unity strain, trade war, military escalation",
-        "Source": "https://www.atlanticcouncil.org/dispatches/dispatch-from-ankara-turkey-is-establishing-its-own-role-in-nato-3-0/",
-        "Title": "Dispatch from Ankara: Turkey is establishing its own role in \u2018NATO 3.0\u2019",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "June 2026",
-        "Actor": "United States (Trump administration)",
-        "Action": "Plans to charge tolls on commercial ships passing through Strait of Hormuz",
-        "Location": "Strait of Hormuz",
-        "Risk": "International law violation, maritime trade disruption, US-Iran tensions",
-        "Source": "https://foreignpolicy.com/2026/07/13/trump-strait-hormuz-tolls-shipping-us-blockade-iran/",
-        "Title": "Trump Is Taking a Page Out of Iran\u2019s Playbook",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "foreignpolicy.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Ukraine",
-        "Action": "Conducts drone offensive against Russian oil facilities",
-        "Location": "Russia (Siberia, Omsk)",
-        "Risk": "Energy supply disruption, economic impact on Russia, military escalation",
-        "Source": "https://foreignpolicy.com/2026/07/13/ukraine-drone-strike-russia-energy-oil-refinery-putin/",
-        "Title": "Russian Energy Is Now at Ukraine\u2019s Mercy",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "foreignpolicy.com"
-    },
-    {
-        "Date": "July 6, 2026",
-        "Actor": "China",
-        "Action": "Fired a submarine-launched ballistic missile (SLBM)",
-        "Location": "South China Sea (splashed near Solomon Islands)",
-        "Risk": "Military posturing, regional tensions, nuclear proliferation concerns",
-        "Source": "https://foreignpolicy.com/2026/07/13/china-nuclear-missile-test-launch-slbm/",
-        "Title": "Stop Overreacting to China\u2019s Missile Test",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "foreignpolicy.com"
-    },
-    {
-        "Date": "2026",
-        "Actor": "Gulf sovereign wealth funds (SWFs), UAE",
-        "Action": "Record high investments ($53.9 billion); UAE exits OPEC",
-        "Location": "Gulf region, global investments",
-        "Risk": "Shifting economic power, energy market changes, reduced US security dependency",
-        "Source": "https://moderndiplomacy.eu/2026/07/14/the-increasing-influence-of-gulf-sovereign-wealth-funds/",
-        "Title": "The Increasing Influence of Gulf Sovereign Wealth Funds",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "moderndiplomacy.eu"
-    },
-    {
-        "Date": "July 14, 2026",
-        "Actor": "Ukraine (implied attacks), Russia (exports affected)",
-        "Action": "Imposed shipping restrictions due to Ukrainian attacks on commercial vessels",
-        "Location": "Sea of Azov, Kerch Strait",
-        "Risk": "Russian grain export disruption, economic warfare, maritime security",
-        "Source": "https://moderndiplomacy.eu/2026/07/13/sea-of-azov-shipping-restrictions-raise-concerns-for-russian-grain-exports/",
-        "Title": "Sea of Azov shipping restrictions raise concerns for Russian exports",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "moderndiplomacy.eu"
-    },
-    {
-        "Date": "July 14, 2026",
-        "Actor": "China (State Council)",
-        "Action": "Unveiled first dedicated five-year plan to boost domestic consumption",
-        "Location": "China",
-        "Risk": "Economic policy shift, reduced reliance on exports, global trade impact",
-        "Source": "https://moderndiplomacy.eu/2026/07/13/china-unveils-first-five-year-plan-to-boost-consumer-spending/",
-        "Title": "China unveils first five year plan to boost consumer spending",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "moderndiplomacy.eu"
     }
 ]
