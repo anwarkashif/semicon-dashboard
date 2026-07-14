@@ -1,12 +1,5 @@
 [
     {
-        "Source": "https://monitorthesituation.com/",
-        "Title": "US Strikes Power Plant on Iran's Kish Island, Causing Blackouts",
-        "Feed_Source": "MONITOR THE SITUATION",
-        "Publisher": "monitorthesituation.com",
-        "threat_level": "CRITICAL"
-    },
-    {
         "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
         "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
         "Feed_Source": "CISA",
@@ -14,8 +7,50 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/13/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04",
+        "Title": "Rockwell Automation 1715-AENTR EtherNet/IP Adapter",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-02",
+        "Title": "Schneider Electric PowerChute Serial Shutdown",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
+        "Title": "Siemens SINEC OS",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
+        "Title": "ABB Ability Edgenius",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
@@ -33,40 +68,5 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/13/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-03",
-        "Title": "Schneider Electric Easergy MiCOM Px40 Series",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-02",
-        "Title": "Schneider Electric PowerChute Serial Shutdown",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-02",
-        "Title": "Hitachi Energy PROMOD V",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
     }
 ]
