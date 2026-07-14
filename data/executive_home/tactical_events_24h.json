@@ -1,5 +1,49 @@
 [
     {
+        "intelligence_brief": {
+            "title": "Semiconductor Supply Chain and Critical Mineral Geopolitical Assessment",
+            "date": "2024-05-22",
+            "regions": {
+                "East_Asia": {
+                    "Taiwan": {
+                        "status": "High Alert",
+                        "developments": "TSMC continues to accelerate 2nm node production timelines amidst heightened cross-strait military posturing. Supply chain resilience protocols are being stress-tested against potential maritime blockade scenarios.",
+                        "critical_minerals": "Dependency on imported high-purity neon and specialty gases remains a primary vulnerability point."
+                    },
+                    "Japan": {
+                        "status": "Strategic Expansion",
+                        "developments": "Rapid expansion of domestic foundry capacity via Rapidus and JASM partnerships. Government subsidies are heavily incentivizing the reshoring of advanced packaging capabilities.",
+                        "critical_minerals": "Securing long-term supply agreements for rare earth elements through bilateral trade pacts with Australia and Vietnam."
+                    }
+                },
+                "North_America": {
+                    "United_States": {
+                        "status": "Policy Driven",
+                        "developments": "CHIPS Act funding tranches are being deployed to incentivize domestic front-end fabrication. Export controls on high-end AI accelerators to non-allied nations remain the primary geopolitical friction point.",
+                        "critical_minerals": "Increased investment in domestic lithium and cobalt extraction projects in Nevada and California to reduce reliance on Chinese processing facilities."
+                    }
+                },
+                "Europe": {
+                    "European_Union": {
+                        "status": "Regulatory Focus",
+                        "developments": "The EU Chips Act is prioritizing the establishment of 'Mega Fabs' to reach a 20 percent global market share by 2030. Focus remains on automotive-grade silicon and legacy node stability.",
+                        "critical_minerals": "Critical Raw Materials Act implementation is underway to diversify sourcing away from single-country dependencies."
+                    }
+                }
+            },
+            "owned_by": "Owned By: Kashif Anwar Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
+            "sources": [
+                "International Energy Agency (IEA) Critical Minerals Market Review",
+                "Semiconductor Industry Association (SIA) Global Supply Chain Reports",
+                "U.S. Department of Commerce Bureau of Industry and Security (BIS) Regulatory Filings",
+                "European Commission DG GROW Industrial Strategy Briefs"
+            ]
+        },
+        "Source": "Autonomous Built-in Intelligence",
+        "is_custom_prompt": false,
+        "Date": "2026-07-14 08:02:08 UTC"
+    },
+    {
         "Date": "2026-07-14",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
