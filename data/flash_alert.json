@@ -1,21 +1,14 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian FPV Drone Strikes Russian Mi-28N Helicopter in Belgorod",
+        "Title": "Indian Marine Engineer Found Dead After Iran Strike on Vessel",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
-        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04",
-        "Title": "Rockwell Automation 1715-AENTR EtherNet/IP Adapter",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -28,8 +21,15 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04",
+        "Title": "Rockwell Automation 1715-AENTR EtherNet/IP Adapter",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
+        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -39,7 +39,7 @@
         "Title": "Schneider Electric PowerChute Serial Shutdown",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
