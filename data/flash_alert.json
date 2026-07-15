@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Israeli Forces Demolish Structures and Open Fire on Civilians in Southern Lebanon",
+        "Title": "US Attacks on Iran Injure More Than 260, Tehran Says",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -14,8 +14,8 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
-        "Title": "ABB Ability Edgenius",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
+        "Title": "CISA Urges SharePoint Hardening After New Exploitations",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -35,6 +35,13 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
+        "Title": "ABB Ability Edgenius",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01",
         "Title": "ABB Advant Master Online Builder",
         "Feed_Source": "CISA",
@@ -44,13 +51,6 @@
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-03",
         "Title": "ABB T-MAC Plus",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
-        "Title": "CISA Urges SharePoint Hardening After New Exploitations",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"
