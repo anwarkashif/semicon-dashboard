@@ -124,7 +124,7 @@ def render_agentic_home():
         with chat_container:
             with st.chat_message("assistant", avatar="✨"):
                 greeting_container.empty()
-                with st.spinner("Typing..."):
+                with st.spinner("Typing...💬"):
                     try:
                         agent_app = build_agent_graph()
                         

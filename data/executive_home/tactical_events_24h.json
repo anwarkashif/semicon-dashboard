@@ -1,5 +1,13 @@
 [
     {
+        "is_custom_prompt": true,
+        "Title": "Conversational Dialogue Mode",
+        "Threat_Level": "CUSTOM",
+        "BLUF": "Hello! It is a pleasure to meet you. I am your SemicoN Agentic Engine co-pilot, and I am here to assist you with whatever you need today. Whether you are looking to dive into complex data analysis, need help navigating specific operational tasks, or just want to chat, consider me your dedicated partner. \n\nHow can I help you get started today?",
+        "Source": "https://en.wikipedia.org/wiki/HI, https://grokipedia.com/page/Human_intelligence, https://www.merriam-webster.com/dictionary/hi",
+        "Date": "2026-07-15 10:39:30 UTC"
+    },
+    {
         "Date": "2026-07-15",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
