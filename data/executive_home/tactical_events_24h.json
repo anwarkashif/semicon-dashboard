@@ -1,5 +1,45 @@
 [
     {
+        "intelligence_brief": {
+            "title": "Semiconductor Supply Chain and Critical Mineral Geopolitical Assessment",
+            "date": "2024-05-22",
+            "regions": {
+                "East_Asia": {
+                    "Taiwan": {
+                        "status": "High Alert",
+                        "summary": "TSMC continues to navigate complex export control environments while expanding 2nm production capacity in Hsinchu. Geopolitical tensions in the Taiwan Strait remain the primary risk factor for global logic chip supply stability."
+                    },
+                    "Japan": {
+                        "status": "Strategic Expansion",
+                        "summary": "Rapid development of the Rapidus facility in Hokkaido is accelerating. Japan is positioning itself as a critical hub for advanced packaging and high-end logic manufacturing to reduce reliance on regional neighbors."
+                    }
+                },
+                "North_America": {
+                    "United_States": {
+                        "status": "Policy Implementation",
+                        "summary": "The Department of Commerce is finalizing CHIPS Act funding tranches. Focus has shifted toward securing domestic assembly, testing, and packaging (ATP) capabilities to mitigate vulnerabilities in the backend supply chain."
+                    }
+                },
+                "Global_Critical_Minerals": {
+                    "Gallium_Germanium": {
+                        "status": "Supply Constraint",
+                        "summary": "Export restrictions from China continue to impact global substrate availability. Alternative sourcing strategies in Australia and Brazil are seeing increased capital investment but face long lead times for refinery commissioning."
+                    }
+                }
+            },
+            "owned_by": "Owned By:\nKashif Anwar\nGeopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
+            "sources": [
+                "Semiconductor Industry Association (SIA) Market Reports",
+                "International Energy Agency (IEA) Critical Minerals Outlook",
+                "BloombergNEF Supply Chain Analytics",
+                "Ministry of Economy, Trade and Industry (METI) Japan Policy Briefs"
+            ]
+        },
+        "Source": "Autonomous Built-in Intelligence",
+        "is_custom_prompt": false,
+        "Date": "2026-07-15 04:01:55 UTC"
+    },
+    {
         "Date": "2026-07-15",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
