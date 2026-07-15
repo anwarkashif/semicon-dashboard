@@ -5,7 +5,8 @@ Threat Level: HIGH
 Bottom Line Up Front (BLUF):
 Global semiconductor supply chains remain under significant strain due to escalating export controls, regional resource nationalism, and the intensification of the US-China technology decoupling. Critical mineral dependencies in Southeast Asia and Africa are becoming the primary theater for geopolitical leverage.
 
-Top News from the Globe:
+SITUATIONAL UPDATE: THE LOGISTICAL COLLAPSE
+As of July 2026, the Strait of Hormuz remains a contested faultline. Early March 2026 marked the initiation of a sustained maritime blockade, which saw Iraq’s oil production plummet from 4.42 mbd in February to approximately 1.4 mbd by mid-March. The destruction of LNG liquefaction facilities in Ras Laffan, Qatar, has removed roughly 20 percent of the world’s LNG supply from the market, causing the Dutch TTF gas benchmark to surge. Despite a temporary ceasefire in April, the fragility of the peace remains evident in the continued exchange of fire between the US and Iran. Refiners globally are scrambling to reconfigure facilities for alternative crude grades, as the loss of Middle Eastern light-sweet crude forces a shift toward heavier, more expensive alternatives.
 
 --- EAST_ASIA ---
 - Taiwan Semiconductor Manufacturing Company (TSMC) accelerates expansion of advanced packaging facilities in response to AI-driven demand surges.
@@ -30,9 +31,8 @@ The semiconductor landscape is transitioning from a model of globalized efficien
 Predictive Analysis:
 Over the next 18 months, expect a surge in 'friend-shoring' initiatives, with significant capital expenditure shifting toward India and Vietnam. We anticipate that China will intensify its focus on mature node (28nm and above) dominance to create a dependency trap for global automotive and industrial sectors. Owned By: Kashif Anwar Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)
 
-Owned By:
-Kashif Anwar
-Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)
+GPS COORDINATE AND REFERENCE MAP
+The Strait of Hormuz is located at the narrow entrance to the Persian Gulf.
 
 Sources:
 Agentic AI (www.semirare.in)

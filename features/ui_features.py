@@ -229,8 +229,8 @@ def render_login_screen():
         with center_col:
             # 🛑 FIX: Use standard container instead of form to completely kill the hot-reload parsing glitch
             with st.container():
-                email_input = st.text_input("Email", placeholder="enter your email ID")
-                password_input = st.text_input("Password", type="password", placeholder="Enter Secure Key")
+                email_input = st.text_input("Email", placeholder="Enter your Email ID")
+                password_input = st.text_input("Password", type="password", placeholder="Enter Your Password")
                 
                 # Align buttons horizontally on the x-axis
                 btn_col1, btn_col2 = st.columns(2)

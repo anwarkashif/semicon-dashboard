@@ -55,20 +55,33 @@ class AnalystNode:
         chat_history = state.get('chat_history', [])
         extracted_data: List[Dict[str, str]] = state.get('extracted_markdown_context', [])
         
-        # 🧠 DYNAMIC INTENT CLASSIFIER MATRIX
-        conversational_triggers = [
-            r"(?i)^(hi|hello|hey|greetings|good morning|good afternoon|whats up|how are you|how do you do|who are you|test|clear|reset|thanks|thank you|yes|no)",
-            r"(?i)(modify|change|rewrite|shorten|summarize|looks good|update|adjust|explain|help|can you|guidance|advise|advice|brainstorm|how should|what do you|proceed|not completely|however|because|i think|actually|i disagree|map of|where is|location of|coordinates of)"
-        ]
-        
-        report_markers = [r"(?i)(target development details|exact structural layout|rigorous geopolitical|your response must follow)"]
-        
+        api_keys = self.get_all_keys()
+        if not api_keys: return state
+
+        # 🧠 SEMANTIC INTENT ROUTER MATRIX (Replaces brittle regex gates)
         if mode == "CUSTOM_UI":
-            is_formal_report = any(re.search(marker, user_cmd) for marker in report_markers)
-            
-            if not is_formal_report and (any(re.search(trigger, user_cmd) for trigger in conversational_triggers) or len(user_cmd.split()) <= 450):
-                mode = "CONVERSATIONAL"
-                state["execution_mode"] = "CONVERSATIONAL"
+            try:
+                router_client = genai.Client(api_key=api_keys[0])
+                router_instruct = """
+                You are the Dynamic Intent Router for an advanced geopolitical intelligence node.
+                Analyze the entire length and structural context of the user input prompt.
+                Classify it into one of two output modes:
+                - Output 'CUSTOM_UI' if the prompt is a complex, long-form research request, formal briefing, academic/recruitment assignment, strategic task with headers/word counts, or deep risk assessment.
+                - Output 'CONVERSATIONAL' if the prompt is a short, direct conversational phrase, greeting, direct navigation query, or basic question.
+                Output ONLY the string 'CUSTOM_UI' or 'CONVERSATIONAL'. Do not add punctuation or meta-text.
+                """
+                router_res = router_client.models.generate_content(
+                    model=self.model_id,
+                    contents=f"PROMPT TO CLASSIFY:\n{user_cmd}",
+                    config=types.GenerateContentConfig(system_instruction=router_instruct, temperature=0.1)
+                )
+                classified_mode = router_res.text.strip()
+                if classified_mode in ["CUSTOM_UI", "CONVERSATIONAL"]:
+                    mode = classified_mode
+                    state["execution_mode"] = mode
+                    print(f"[Node 4] Semantic Intent Router assigned Engine Mode: {mode}")
+            except Exception as router_err:
+                print(f"[Node 4] Intent routing exception, falling back to safe defaults: {router_err}")
 
         print(f"[Node 4] Initializing Geopolitical Analysis (Engine Mode: {mode})...")
         
@@ -96,8 +109,6 @@ class AnalystNode:
         2. STRICT BAN ON COORDINATE HALLUCINATION: You MUST NOT guess, invent, or mathematically estimate numerical GPS coordinates anywhere in your text response.
         3. NATIVE SCRIPT TRANSLATION RULE: If the target is in a non-English speaking country, you MUST translate the venue/building name into its NATIVE LOCAL SCRIPT (e.g., Thai, Arabic, Cyrillic, Kanji) inside the mapping tag.
         4. You MUST append this exact tag at the very end of your response: [GEO_TARGET: Native Script Location Name, City]. 
-        (Example 1: [GEO_TARGET: โรงเบียร์ ณ ลาดพร้าว, Bangkok])
-        (Example 2: [GEO_TARGET: Miel Bakery, London])
         The backend Python interceptor will catch your tag, run an 8-tier Geospatial Consensus Array to extract the highest-precision exact coordinate footprint, and inject a live verifiable map below your text.
         """
 
@@ -115,37 +126,49 @@ class AnalystNode:
             4. ZERO SOURCES & NO ATTRIBUTION BLOCKS FOR CHAT/GUIDANCE: When engaging in dialogue, giving general guidance, or making small talk, DO NOT append "Owned By", "Sources", or citations. Keep it a clean, natural chat.
             5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia anywhere in your output.
             6. TEMPORAL ANCHORING: The current year is 2026. All intelligence must be grounded in the 2026 timeline.
-            7. CLEAN OUTPUT: Do not use block code fences (```) or JSON wrappers.
+            7. STRICT SOURCE ATTRIBUTION & OVER-DELIVERY: You must ONLY cite direct publisher URLs explicitly provided in the RAW OSINT INTERCEPTS block. The user may ask for 8-10 or 20-50 URLs. Extract and provide as many relevant URLs from your context as possible to meet this quota. If you have fewer valid URLs than requested, output ALL of the valid ones you have, and append: "*Note: Only [X] verifiable sources were successfully extracted in this cycle.*" NEVER fabricate or guess a link.
+            8. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. As long as you have AT LEAST ONE relevant piece of geopolitical data, you MUST generate the response. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block.
+            9. CLEAN OUTPUT: Do not use block code fences (```) or JSON wrappers.
             {map_directive}
             """
             contents_payload = f"{formatted_history}\nCURRENT OPERATOR INPUT: {user_cmd}\n\n{compiled_context}"
-            gen_config = types.GenerateContentConfig(system_instruction=sys_instruct, temperature=0.6)
+            gen_config = types.GenerateContentConfig(
+                system_instruction=sys_instruct, 
+                temperature=0.6,
+                max_output_tokens=8192
+            )
 
         # ==========================================
         # PATHWAY B: RIGID DYNAMIC BRIEF
         # ==========================================
         elif mode == "CUSTOM_UI":
             sys_instruct = f"""
-            You are an autonomous, elite Geopolitical Intelligence Analyst.
-            Your absolute directive is to read the provided context and fulfill the USER DIRECTIVE perfectly.
+            You are an autonomous, elite Geopolitical Intelligence Analyst. Your absolute directive is to read the provided context and fulfill the USER DIRECTIVE perfectly.
             
             CRITICAL FORMATTING RULES:
-            1. You MUST follow the exact structural layout, headers, bullet counts, and instructions requested in the USER DIRECTIVE.
-            2. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). Write all section headers in plain-text capital letters.
-            3. For global news sections, you must cover the entire globe and sub-categorize items cleanly based on precise geography and sub-geography.
-            4. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You must rely ONLY on verifiable, reputed, and well-known publishers. You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
-            5. Right before the Sources section, you MUST insert an 'Owned By' block matching this exact text:
+            1. MANDATORY LENGTH & STRUCTURAL EXPANSION (1500-2000+ WORDS): Large Language Models possess a strict conciseness bias. You MUST override this. To physically force the generation of 1500 to 2000 words, you CANNOT simply write basic paragraphs. Under EVERY SINGLE HEADER requested by the user, you MUST create at least 3 explicitly named sub-themes or sub-headings. 
+            2. ANALYTICAL DEPTH FRAMEWORK: For every sub-theme, you must employ "Chain of Expansion": detail the historical precedent, analyze the macroeconomic variables, project the second and third-order supply chain disruptions, and assess specific regional military/diplomatic responses. You must write no less than 350 words per requested header. Do not stop generating until the analysis is absolutely exhaustive.
+            3. You MUST follow the exact structural layout, headers, bullet counts, and instructions requested in the USER DIRECTIVE.
+            4. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). Write all section headers in plain-text capital letters.
+            5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You must rely ONLY on verifiable, reputed, and well-known publishers. You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
+            6. Right before the Sources section, you MUST insert an 'Owned By' block matching this exact text:
                Owned By:
-               Kashif Anwar
-               Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)
-            6. Under the Sources section, you MUST strictly use this exact format pattern (excluding Wikipedia):
+               Write your name
+               Write you designation
+            7. Under the Sources section, you MUST strictly use this exact format pattern (excluding Wikipedia):
                Sources:
-               Agentic AI (www.semirare.in)
+               Agentic AI
                [Verified publisher links]
+            8. STRICT SOURCE ATTRIBUTION & OVER-DELIVERY: You must ONLY cite direct publisher URLs explicitly provided in the RAW OSINT INTERCEPTS block. The user may ask for 8-10 or 20-50 URLs. Extract and provide as many relevant URLs from your context as possible to meet this quota. If you have fewer valid URLs than requested, output ALL of the valid ones you have, and append: "*Note: Only [X] verifiable sources were successfully extracted in this cycle.*" NEVER fabricate or guess a link.
+            9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. As long as you have AT LEAST ONE relevant piece of geopolitical data, you MUST generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block. Do not be overly sensitive; find the relevant data and write the report.
             {map_directive}
             """
             contents_payload = f"USER DIRECTIVE:\n{user_cmd}\n\n{compiled_context}"
-            gen_config = types.GenerateContentConfig(system_instruction=sys_instruct, temperature=0.2)
+            gen_config = types.GenerateContentConfig(
+                system_instruction=sys_instruct, 
+                temperature=0.6, # 🚀 INCREASED: This higher temperature breaks conciseness loops and unlocks massive textual generation.
+                max_output_tokens=8192
+            )
             
         # ==========================================
         # PATHWAY C: AUTONOMOUS DASHBOARD GENERATION
@@ -163,7 +186,9 @@ class AnalystNode:
                Owned By:
                Kashif Anwar
                Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)
-            5. Return your output strictly as a JSON object matching the exact schema below.
+            5. STRICT SOURCE ATTRIBUTION & OVER-DELIVERY: Cite ONLY direct publisher URLs explicitly provided in the RAW OSINT INTERCEPTS. Over-deliver all available relevant URLs if the user requests a smaller quota. NEVER invent a link.
+            6. ZERO-KNOWLEDGE OVERRIDE: Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. As long as you have AT LEAST ONE relevant piece of geopolitical data, you MUST generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block.
+            7. Return your output strictly as a JSON object matching the exact schema below.
             
             STRICT JSON SCHEMA REQUIRED:
             {
@@ -181,7 +206,12 @@ class AnalystNode:
             }
             """
             contents_payload = f"CONTEXT SWEEP DATA:\n{compiled_context}"
-            gen_config = types.GenerateContentConfig(system_instruction=legacy_instruction, temperature=0.2, response_mime_type="application/json")
+            gen_config = types.GenerateContentConfig(
+                system_instruction=legacy_instruction, 
+                temperature=0.2, 
+                response_mime_type="application/json",
+                max_output_tokens=8192
+            )
 
         api_keys = self.get_all_keys()
         if not api_keys: return state
@@ -200,6 +230,22 @@ class AnalystNode:
                 raw_text = response.text.strip()
                 map_coords = None
                 
+                # 🛑 PYTHON PHYSICAL KILL-SWITCH: Prevents Prompt Conflict Hallucinations 🛑
+                if "⚠️ Intelligence Constraint Triggered" in raw_text:
+                    print("[Node 4] ZERO-KNOWLEDGE OVERRIDE ENGAGED. Purging hallucinated report payload.")
+                    raw_text = "⚠️ **Intelligence Constraint:** The autonomous scraper intercepted irrelevant data (e.g., generic forms or unrelated recruitment topics). To adhere to strict Zero-Hallucination protocols, the analysis has been aborted rather than using generalized AI training data."
+                    
+                    state['ui_markdown'] = raw_text
+                    state['map_coords'] = None
+                    state['drafted_brief'] = {
+                        "is_custom_prompt": True,
+                        "Title": "Aborted Analysis Pass",
+                        "Threat_Level": "CUSTOM",
+                        "BLUF": raw_text,
+                        "Source": "System Failsafe"
+                    }
+                    return state
+
                 if mode in ["CUSTOM_UI", "CONVERSATIONAL"]:
                     if raw_text.startswith("```markdown"): raw_text = raw_text[11:-3].strip()
                     elif raw_text.startswith("```"): raw_text = raw_text[3:-3].strip()
@@ -223,7 +269,6 @@ class AnalystNode:
 
                         # 🛰️ TIER 0: Direct Context Extraction Engine (Scrapes prompt AND scraped data)
                         try:
-                            # Search both user prompt and scraped document text for absolute coverage
                             combined_search_space = f"{user_cmd} \n {compiled_context}"
                             text_matches = re.findall(r'(-?\d{1,2}\.\d+)\s*,\s*(-?\d{1,3}\.\d+)', combined_search_space)
                             for tm in text_matches:
@@ -234,7 +279,7 @@ class AnalystNode:
                                         "lon": lon_txt, 
                                         "address": f"{location_name} (Forced Operator GPS Input)", 
                                         "source": "Forced Coordinate Core", 
-                                        "weight": 200  # Dominates the cluster selection completely
+                                        "weight": 200
                                     })
                         except Exception as e:
                             print(f"[Node 4] Tier 0 parsing anomaly: {e}")

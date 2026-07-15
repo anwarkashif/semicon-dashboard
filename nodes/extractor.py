@@ -6,6 +6,8 @@ import warnings
 from bs4 import BeautifulSoup
 import trafilatura
 from typing import Dict, Any, List
+from google import genai
+from google.genai import types
 
 warnings.filterwarnings("ignore")
 
@@ -15,9 +17,27 @@ USER_AGENTS = [
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 ]
 
+try:
+    import streamlit as st
+except ImportError:
+    st = None
+
 class ExtractorNode:
     def __init__(self):
         self.session = requests.Session()
+        self.model_id = 'gemini-3.1-flash-lite'
+
+    def get_active_key(self) -> str:
+        """Extracts valid API key for internal semantic routing blocks"""
+        key_slots = ['GEMINI_API_KEY', 'GEMINI_API_KEY_RAGAI']
+        for slot in key_slots:
+            val = os.environ.get(slot)
+            if not val and st is not None:
+                try: val = st.secrets.get(slot)
+                except Exception: pass
+            if val and str(val).strip():
+                return str(val).strip()
+        return ""
 
     def _get_headers(self) -> Dict[str, str]:
         return {
@@ -38,21 +58,42 @@ class ExtractorNode:
                 cleaned_urls.append(cleaned)
         return cleaned_urls
 
-    def _extract_search_query(self, prompt: str) -> str:
-        title_match = re.search(r'(?:Title|TARGET DEVELOPMENT DETAILS):\s*\*?\s*\[?([^\]\n\r]+)\]?', prompt, re.IGNORECASE)
-        if title_match: return title_match.group(1).strip()
-        clean_text = re.sub(r'(?i)conduct a rigorous.*assessment|review the provided context.*synthesized|your response must follow.*words:', '', prompt)
-        clean_text = re.sub(r'[\[\]\(\)\-\*]', ' ', clean_text)
-        return " ".join(clean_text.split()[:12]).strip()
+    def _extract_search_query_semantic(self, prompt: str) -> str:
+        """🧠 GEMINI REASONING ENGINE: Synthesizes a clean query from any prompt configuration"""
+        active_key = self.get_active_key()
+        if not active_key:
+            # Mechanical Regex Fallback if API context drops
+            topic_match = re.search(r'(?:Topic|Title)[\s:]+(.*?)(?:\n\n|\n[A-Z]|\. )', prompt, re.IGNORECASE | re.DOTALL)
+            if topic_match: return " ".join(topic_match.group(1).split()[:12])
+            return " ".join(prompt.split()[:12]).strip()
+
+        try:
+            client = genai.Client(api_key=active_key)
+            instruct = """
+            You are the Search Query Synthesizer Node of an elite OSINT pipeline.
+            Your absolute directive is to read the entire user input and filter out structural noise, conversational stories, constraints, word count requests, or exam instructions.
+            Isolate the underlying raw geopolitical, technical, or intelligence research topic and output it as a brief, laser-focused search engine query (maximum 6-8 words).
+            Do not include punctuation, site commands, or conversational filler. Output ONLY the query tokens.
+            """
+            response = client.models.generate_content(
+                model=self.model_id,
+                contents=f"USER INPUT PROMPT TO PARSE:\n{prompt}",
+                config=types.GenerateContentConfig(system_instruction=instruct, temperature=0.1)
+            )
+            parsed_query = response.text.strip().replace('"', '').replace("'", "")
+            print(f"[Node 2] Semantic Query Optimization Complete: '{parsed_query}'")
+            return parsed_query
+        except Exception as e:
+            print(f"[Node 2] Semantic query parser anomaly, engaging algorithmic fallback: {e}")
+            return " ".join(prompt.split()[:12]).strip()
 
     def _fetch_live_search_urls(self, query: str) -> List[str]:
         print(f"[Node 2] Initiating Free Search Engine bypass for: '{query}'")
         found_urls = []
         try:
-            # Native DDGS direct call execution block
             from ddgs import DDGS
             with DDGS() as ddgs_client:
-                results = ddgs_client.text(query, max_results=3)
+                results = ddgs_client.text(query, max_results=25)
                 if results:
                     for r in results:
                         link = r.get('href') or r.get('link')
@@ -67,7 +108,7 @@ class ExtractorNode:
                 if res.status_code == 200:
                     soup = BeautifulSoup(res.text, "html.parser")
                     links = soup.find_all("a", class_="result__url")
-                    for link in links[:3]:
+                    for link in links[:25]:
                         href = link.get("href")
                         if href:
                             if "/l/?" in href:
@@ -101,7 +142,7 @@ class ExtractorNode:
             urls = self.clean_urls_from_text(user_cmd)
             
         if not urls and user_cmd:
-            search_query = self._extract_search_query(user_cmd)
+            search_query = self._extract_search_query_semantic(user_cmd)
             if search_query: urls = self._fetch_live_search_urls(search_query)
 
         state["current_target_urls"] = urls
