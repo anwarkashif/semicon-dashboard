@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Launches New Wave of Daytime Strikes Against Iran",
+        "Title": "US Launches Seven-Hour Wave of Strikes on Iranian Military Targets",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -12,13 +12,6 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
-        "Title": "ABB Ability Edgenius",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
@@ -40,6 +33,13 @@
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
+        "Title": "ABB Ability Edgenius",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "WATCH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01",
