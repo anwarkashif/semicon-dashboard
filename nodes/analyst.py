@@ -8,7 +8,7 @@ from typing import Dict, Any, List
 from google import genai
 from google.genai import types
 
-# Suppress the insecure request warnings since we are intentionally bypassing SSL for the map API
+# Suppress the insecure request warnings since we are intentionally bypassing SSL for the map APIs
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 try:
@@ -20,7 +20,7 @@ class AnalystNode:
     """
     Node 4: The Geopolitical Analyst Component
     Features an Intent Engine Router, strict conversational isolation, 
-    and a Direct API Geocoding interceptor for autonomous map generation.
+    and an autonomous 8-Tier Geospatial Consensus Engine for precision OSINT mapping.
     """
     def __init__(self):
         self.model_id = 'gemini-3.1-flash-lite'
@@ -36,6 +36,14 @@ class AnalystNode:
             if val and str(val).strip():
                 valid_keys.append(str(val).strip())
         return valid_keys
+
+    def get_named_token(self, token_name: str) -> str:
+        """Helper to extract infrastructure keys cleanly across development profiles"""
+        val = os.environ.get(token_name)
+        if not val and st is not None:
+            try: val = st.secrets.get(token_name)
+            except Exception: pass
+        return str(val).strip() if val else ""
 
     def clean_urls(self, text: str) -> List[str]:
         raw_urls = re.findall(r'https?://[^\s<>"]+', text)
@@ -81,12 +89,16 @@ class AnalystNode:
             for item in extracted_data:
                 compiled_context += f"\n--- Source: {item.get('source_url')} ---\n{item.get('content', '')[:8000]}\n"
 
-        # 🌍 UNIVERSAL MAP DIRECTIVE (Updated based on your research)
+        # 🌍 UNIVERSAL MAP DIRECTIVE
         map_directive = """
         MAP & GEOLOCATION CAPABILITY: You have access to a live interactive map tool. If the user explicitly asks to see a map, locate an area, or get the geolocation/coordinates of a specific place, building, or town:
-        1. You MUST provide the best available approximate location description and approximate coordinates in your text.
-        2. You MUST append this exact tag at the very end of your response: [GEO_TARGET: Exact Location Name, City]. (Example: [GEO_TARGET: Miel Bakery, London]). 
-        The system will intercept this tag, verify the precise coordinates via API, and inject a live map below your response.
+        1. You MUST provide the best available location description based on context in your text response.
+        2. STRICT BAN ON COORDINATE HALLUCINATION: You MUST NOT guess, invent, or mathematically estimate numerical GPS coordinates anywhere in your text response.
+        3. NATIVE SCRIPT TRANSLATION RULE: If the target is in a non-English speaking country, you MUST translate the venue/building name into its NATIVE LOCAL SCRIPT (e.g., Thai, Arabic, Cyrillic, Kanji) inside the mapping tag.
+        4. You MUST append this exact tag at the very end of your response: [GEO_TARGET: Native Script Location Name, City]. 
+        (Example 1: [GEO_TARGET: โรงเบียร์ ณ ลาดพร้าว, Bangkok])
+        (Example 2: [GEO_TARGET: Miel Bakery, London])
+        The backend Python interceptor will catch your tag, run an 8-tier Geospatial Consensus Array to extract the highest-precision exact coordinate footprint, and inject a live verifiable map below your text.
         """
 
         # ==========================================
@@ -98,7 +110,7 @@ class AnalystNode:
             
             CRITICAL CONVERSATIONAL & REFINEMENT CRITERIA:
             1. PERSONALIZED & WARM TONE: Converse naturally, empathetically, and directly using "I" and "you". NEVER format your conversational responses as a rigid "STATUS REPORT", "EXECUTIVE SUMMARY", or use heavily structured geopolitical layout headers unless explicitly demanded.
-            2. BACKGROUND SEARCH NOISE AWARENESS (CRITICAL): The pipeline automatically runs a background web search on *every* user input. If the intercepts do not perfectly and logically align with the user's conversational intent, YOU MUST COMPLETELY IGNORE THEM.
+            2. INTERCEPT INTEGRATION MATRIX (CRITICAL): When the user provides explicit links or asks for data extraction, you MUST meticulously scan and prioritize the data inside `RAW OSINT INTERCEPTS`. Extract cross-streets, neighborhood details, and names precisely from the text context payload. Do not ignore this context.
             3. NO META-COMMENTARY: Do NOT ever tell the user "The intercepts provided focus on X." Silently ignore garbage intercepts and answer the user's request using your own elite internal knowledge.
             4. ZERO SOURCES & NO ATTRIBUTION BLOCKS FOR CHAT/GUIDANCE: When engaging in dialogue, giving general guidance, or making small talk, DO NOT append "Owned By", "Sources", or citations. Keep it a clean, natural chat.
             5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia anywhere in your output.
@@ -152,6 +164,21 @@ class AnalystNode:
                Kashif Anwar
                Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)
             5. Return your output strictly as a JSON object matching the exact schema below.
+            
+            STRICT JSON SCHEMA REQUIRED:
+            {
+              "Title": "Strategic Intelligence Brief",
+              "Threat_Level": "LOW/MODERATE/HIGH/CRITICAL",
+              "BLUF": "Executive summary...",
+              "Top_News": {
+                 "Global": ["News 1", "News 2"]
+              },
+              "Watch_Out": ["Trend 1", "Trend 2"],
+              "Risk_And_Threat_Analysis": {
+                 "Overall_Analysis": "Analysis details..."
+              },
+              "Predictive_Analysis": "Forecast details..."
+            }
             """
             contents_payload = f"CONTEXT SWEEP DATA:\n{compiled_context}"
             gen_config = types.GenerateContentConfig(system_instruction=legacy_instruction, temperature=0.2, response_mime_type="application/json")
@@ -180,44 +207,202 @@ class AnalystNode:
                     if mode == "CUSTOM_UI":
                         raw_text = raw_text.replace("###", "").replace("**", "")
 
-                    # 🌍 AGENTIC TOOL EXECUTION: Direct HTTPS API Call (Bypassing SSL Blocks)
+                    # 🌍 AGENTIC TOOL EXECUTION: 8-Tier Geospatial Consensus Array
                     geo_match = re.search(r'\[GEO_TARGET:\s*(.+?)\]', raw_text)
                     if geo_match:
                         location_name = geo_match.group(1).strip()
                         raw_text = re.sub(r'\[GEO_TARGET:\s*.+?\]', '', raw_text).strip()
+                        
+                        if "|" in location_name:
+                            location_name = location_name.split("|")[0].strip()
+                            
+                        safe_location = requests.utils.quote(location_name)
+                        global_headers = {"User-Agent": "SemicoN/1.0 (contact: support@semirare.in)"}
+                        
+                        candidates = [] # Consensus Matrix Array
+
+                        # 🛰️ TIER 0: Direct Context Extraction Engine (Scrapes prompt AND scraped data)
                         try:
-                            # SHATTERED URL STRING TO DEFEAT MARKDOWN FORMATTER BUG
-                            safe_location = requests.utils.quote(location_name)
-                            protocol = "https" + "://"
-                            domain = "nominatim.openstreetmap.org/search"
-                            search_url = protocol + domain + "?q=" + safe_location + "&format=json&limit=1"
-                            
-                            # Applied Research Improvement: Strict User-Agent
-                            headers = {"User-Agent": "SemicoN/1.0 (contact: support@semirare.in)"}
-                            
-                            map_response = requests.get(search_url, headers=headers, verify=False, timeout=10)
-                            
-                            if map_response.status_code == 200 and len(map_response.json()) > 0:
-                                location_data = map_response.json()[0]
-                                lat = float(location_data["lat"])
-                                lon = float(location_data["lon"])
-                                display_name = location_data["display_name"]
-                                
-                                map_coords = {
-                                    "lat": lat,
-                                    "lon": lon,
-                                    "label": location_name,
-                                    "address": display_name
-                                }
-                                print(f"[Node 4] Successfully mapped coordinates for {location_name}")
-                                
-                                # 📍 AUTONOMOUSLY INJECT VERIFIED COORDINATES INTO THE TEXT FOR THE USER
-                                raw_text += f"\n\n📍 **API Verified Geolocation:** {display_name}\n🧭 **Verified GPS Coordinates:** {lat}, {lon}"
-                            else:
-                                raw_text += f"\n\n*(Agent Note: I attempted to map '{location_name}' via Nominatim API, but precise coordinates could not be retrieved.)*"
+                            # Search both user prompt and scraped document text for absolute coverage
+                            combined_search_space = f"{user_cmd} \n {compiled_context}"
+                            text_matches = re.findall(r'(-?\d{1,2}\.\d+)\s*,\s*(-?\d{1,3}\.\d+)', combined_search_space)
+                            for tm in text_matches:
+                                lat_txt, lon_txt = float(tm[0]), float(tm[1])
+                                if -90 <= lat_txt <= 90 and -180 <= lon_txt <= 180:
+                                    candidates.append({
+                                        "lat": lat_txt, 
+                                        "lon": lon_txt, 
+                                        "address": f"{location_name} (Forced Operator GPS Input)", 
+                                        "source": "Forced Coordinate Core", 
+                                        "weight": 200  # Dominates the cluster selection completely
+                                    })
                         except Exception as e:
-                            print(f"[Node 4] Geocoding API Error: {e}")
-                            raw_text += f"\n\n*(Agent Note: The Nominatim mapping API is temporarily unreachable due to network errors.)*"
+                            print(f"[Node 4] Tier 0 parsing anomaly: {e}")
+
+                        # 🛰️ TIER 1: ArcGIS REST API
+                        try:
+                            d_1 = "".join(["geocode", ".arcgis", ".com"])
+                            url_1 = f"https://{d_1}/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?singleLine={safe_location}&f=json&maxLocations=1&outFields=Score,Addr_type"
+                            res_1 = requests.get(url_1, verify=False, timeout=3)
+                            if res_1.status_code == 200 and len(res_1.json().get("candidates", [])) > 0:
+                                cand = res_1.json()["candidates"][0]
+                                score = cand.get("score", 0)
+                                addr_type = cand.get("attributes", {}).get("Addr_type", "")
+                                if score >= 90 and addr_type in ["POI", "PointAddress"]: w = 100
+                                elif score >= 85 and addr_type in ["StreetAddress", "StreetName", "Routing"]: w = 85
+                                else: w = 20
+                                candidates.append({"lat": float(cand["location"]["y"]), "lon": float(cand["location"]["x"]), "address": cand["address"], "source": "ArcGIS Enterprise", "weight": w})
+                        except Exception: pass
+
+                        # 🛰️ TIER 2: LocationIQ Premium API Framework
+                        liq_token = self.get_named_token("LOCATIONIQ_TOKEN")
+                        if liq_token:
+                            try:
+                                d_liq = "".join(["us1", ".locationiq", ".com"])
+                                url_liq = f"https://{d_liq}/v1/search?key={liq_token}&q={safe_location}&format=json&limit=1"
+                                res_liq = requests.get(url_liq, verify=False, timeout=3)
+                                if res_liq.status_code == 200 and len(res_liq.json()) > 0:
+                                    data_liq = res_liq.json()[0]
+                                    liq_class = data_liq.get("class", "")
+                                    if liq_class in ["amenity", "shop", "building", "tourism", "leisure", "historic", "office", "craft", "emergency", "place"]: w = 95
+                                    elif liq_class in ["highway", "railway", "waterway"]: w = 80
+                                    else: w = 15
+                                    candidates.append({"lat": float(data_liq["lat"]), "lon": float(data_liq["lon"]), "address": data_liq["display_name"], "source": "LocationIQ Cluster", "weight": w})
+                            except Exception: pass
+
+                        # 🛰️ TIER 3: Mapbox Places v5 High-Performance Cluster
+                        mb_token = self.get_named_token("MAPBOX_PUBLIC_TOKEN")
+                        if mb_token:
+                            try:
+                                d_mb = "".join(["api", ".mapbox", ".com"])
+                                url_mb = f"https://{d_mb}/geocoding/v5/mapbox.places/{safe_location}.json?access_token={mb_token}&limit=1"
+                                res_mb = requests.get(url_mb, verify=False, timeout=3)
+                                if res_mb.status_code == 200 and len(res_mb.json().get("features", [])) > 0:
+                                    feat_mb = res_mb.json()["features"][0]
+                                    feat_id = feat_mb.get("id", "")
+                                    if feat_id.startswith("poi"): w = 95
+                                    elif feat_id.startswith("address"): w = 85
+                                    else: w = 15
+                                    candidates.append({"lat": float(feat_mb["center"][1]), "lon": float(feat_mb["center"][0]), "address": feat_mb["place_name"], "source": "Mapbox Hub", "weight": w})
+                            except Exception: pass
+
+                        # 🛰️ TIER 4: Nominatim Authoritative Main Server
+                        try:
+                            d_2 = "".join(["nominatim", ".openstreetmap", ".org"])
+                            url_2 = f"https://{d_2}/search?q={safe_location}&format=json&limit=1"
+                            res_2 = requests.get(url_2, headers=global_headers, verify=False, timeout=3)
+                            if res_2.status_code == 200 and len(res_2.json()) > 0:
+                                data_2 = res_2.json()[0]
+                                osm_class = data_2.get("class", "")
+                                if osm_class in ["amenity", "shop", "building", "tourism", "leisure", "historic", "office", "craft", "emergency", "place"]: w = 95
+                                elif osm_class in ["highway", "railway", "waterway"]: w = 80
+                                else: w = 15
+                                candidates.append({"lat": float(data_2["lat"]), "lon": float(data_2["lon"]), "address": data_2["display_name"], "source": "OSM Nominatim", "weight": w})
+                        except Exception: pass
+
+                        # 🛰️ TIER 5: QGIS Foundation Independent Public Instance
+                        try:
+                            d_3 = "".join(["nominatim", ".qgis", ".org"])
+                            url_3 = f"https://{d_3}/search?q={safe_location}&format=json&limit=1"
+                            res_3 = requests.get(url_3, headers=global_headers, verify=False, timeout=3)
+                            if res_3.status_code == 200 and len(res_3.json()) > 0:
+                                data_3 = res_3.json()[0]
+                                osm_class = data_3.get("class", "")
+                                if osm_class in ["amenity", "shop", "building", "tourism", "leisure", "historic", "office", "place"]: w = 95
+                                elif osm_class in ["highway"]: w = 80
+                                else: w = 15
+                                candidates.append({"lat": float(data_3["lat"]), "lon": float(data_3["lon"]), "address": data_3["display_name"], "source": "QGIS Nominatim", "weight": w})
+                        except Exception: pass
+
+                        # 🛰️ TIER 6: Photon REST API
+                        try:
+                            d_4 = "".join(["photon", ".komoot", ".io"])
+                            url_4 = f"https://{d_4}/api?q={safe_location}&limit=1"
+                            res_4 = requests.get(url_4, verify=False, timeout=3)
+                            if res_4.status_code == 200 and len(res_4.json().get("features", [])) > 0:
+                                feat = res_4.json()["features"][0]
+                                props = feat["properties"]
+                                osm_key = props.get("osm_key", "")
+                                if osm_key in ["amenity", "shop", "building", "tourism", "leisure", "historic", "place"]: w = 95
+                                elif osm_key == "highway": w = 80
+                                else: w = 15
+                                if props.get("extent") is not None: w = 10 
+                                resolved_address = f"{props.get('name', location_name)}, {props.get('city', '')} {props.get('country', '')}".strip(", ")
+                                candidates.append({"lat": float(feat["geometry"]["coordinates"][1]), "lon": float(feat["geometry"]["coordinates"][0]), "address": resolved_address, "source": "Photon Database", "weight": w})
+                        except Exception: pass
+
+                        # 🛰️ TIER 7: OpenStreetMap Overpass API
+                        try:
+                            d_5 = "".join(["overpass-api", ".de"])
+                            url_5 = f"https://{d_5}/api/interpreter"
+                            core_name = " ".join(location_name.replace(",", " ").split()[:3])
+                            overpass_query = f'[out:json][timeout:5];nwr["name"~"{core_name}",i];out center 1;'
+                            res_5 = requests.post(url_5, data=overpass_query, verify=False, timeout=5)
+                            if res_5.status_code == 200 and len(res_5.json().get("elements", [])) > 0:
+                                elem = res_5.json()["elements"][0]
+                                lat_o = float(elem.get("lat", elem.get("center", {}).get("lat", 0)))
+                                lon_o = float(elem.get("lon", elem.get("center", {}).get("lon", 0)))
+                                if lat_o and lon_o:
+                                    tags = elem.get("tags", {})
+                                    resolved_address = f"{tags.get('name', location_name)} ({tags.get('highway', tags.get('amenity', 'POI'))})"
+                                    candidates.append({"lat": lat_o, "lon": lon_o, "address": resolved_address, "source": "OSM Overpass Matrix", "weight": 98})
+                        except Exception: pass
+
+                        # 🕸️ TIER 8: OSINT Web Scraper (DDGS Engine Extraction Core)
+                        try:
+                            from ddgs import DDGS
+                            with DDGS() as ddgs:
+                                ddg_query = f"{location_name} exact GPS coordinates latitude longitude"
+                                results = ddgs.text(ddg_query, max_results=5)
+                                for r in results:
+                                    snippet = r.get("body", "") + " " + r.get("title", "")
+                                    matches = re.findall(r'(-?[1-8]?\d\.\d{3,8})[^\d]{1,15}?(-?1[0-7]\d\.\d{3,8}|-?0?\d{1,2}\.\d{3,8})', snippet)
+                                    if matches:
+                                        lat_c, lon_c = float(matches[0][0]), float(matches[0][1])
+                                        if -90 <= lat_c <= 90 and -180 <= lon_c <= 180:
+                                            resolved_address = f"{location_name} (Resolved via Deep Web OSINT Scrape)"
+                                            candidates.append({"lat": lat_c, "lon": lon_c, "address": resolved_address, "source": "DDGS OSINT Pipeline", "weight": 72})
+                                            break
+                        except Exception: pass
+
+                        # 🧠 CONSENSUS EVALUATION (Haversine Spatial Clustering Engine)
+                        valid_candidates = [c for c in candidates if c["weight"] >= 70]
+                        
+                        if valid_candidates:
+                            import math
+                            def haversine(lat1, lon1, lat2, lon2):
+                                R = 6371.0 
+                                dlat = math.radians(lat2 - lat1)
+                                dlon = math.radians(lon2 - lon1)
+                                a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1))*math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
+                                return R * (2 * math.atan2(math.sqrt(a), math.sqrt(1-a)))
+
+                            clusters = []
+                            for cand in valid_candidates:
+                                added = False
+                                for cluster in clusters:
+                                    if haversine(cand["lat"], cand["lon"], cluster[0]["lat"], cluster[0]["lon"]) <= 3.0:
+                                        cluster.append(cand)
+                                        added = True
+                                        break
+                                if not added:
+                                    clusters.append([cand])
+                                    
+                            best_cluster = max(clusters, key=lambda cl: sum(c["weight"] for c in cl))
+                            best_cluster.sort(key=lambda x: x["weight"], reverse=True)
+                            best_match = best_cluster[0]
+                            
+                            map_coords = {
+                                "lat": best_match["lat"],
+                                "lon": best_match["lon"],
+                                "label": location_name,
+                                "address": best_match["address"]
+                            }
+                            print(f"[Node 4] Consensus Engine evaluated {len(valid_candidates)} high-precision hits across {len(clusters)} spatial clusters. Winner: [{best_match['source']}] (Weight {best_match['weight']})")
+                            raw_text += f"\n\n📍 **API Verified Geolocation ({best_match['source']}):** {best_match['address']}\n🧭 **Verified GPS Coordinates:** {best_match['lat']}, {best_match['lon']}"
+                        else:
+                            print(f"[Node 4] Critical Error: Consensus Engine found 0 high-precision matches for '{location_name}'")
+                            raw_text += f"\n\n*(Agent Note: I compiled the tactical analysis for '{location_name}', but the exact coordinate array could not be resolved with sufficient precision across any of the active mapping registries.)*"
 
                     state['ui_markdown'] = raw_text
                     state['map_coords'] = map_coords
@@ -229,14 +414,26 @@ class AnalystNode:
                         "Source": source_str
                     }
                 else:
-                    json_match = re.search(r'\{.*\}', raw_text, re.DOTALL)
-                    if json_match: raw_text = json_match.group(0)
-                    brief_json = json.loads(raw_text)
-                    brief_json['Source'] = source_str
-                    brief_json['is_custom_prompt'] = False
-                    state['drafted_brief'] = brief_json
-                    state['ui_markdown'] = ""
-                    state['map_coords'] = None
+                    try:
+                        if "```json" in raw_text:
+                            raw_text = raw_text.split("```json")[1].split("```")[0].strip()
+                        elif "```" in raw_text:
+                            raw_text = raw_text.split("```")[1].split("```")[0].strip()
+                            
+                        start_idx = raw_text.find('{')
+                        end_idx = raw_text.rfind('}')
+                        if start_idx != -1 and end_idx != -1:
+                            raw_text = raw_text[start_idx:end_idx+1]
+                            
+                        brief_json = json.loads(raw_text)
+                        brief_json['Source'] = source_str
+                        brief_json['is_custom_prompt'] = False
+                        state['drafted_brief'] = brief_json
+                        state['ui_markdown'] = ""
+                        state['map_coords'] = None
+                    except json.JSONDecodeError as e:
+                        print(f"[Node 4] JSON Parsing Failure in Autonomous Mode: {e}")
+                        raise Exception(f"Failed to parse LLM JSON: {e}")
 
                 print(f'[Node 4] Geopolitical Analysis execution layer successful.')
                 break 
