@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russia Attacks Ukraine with Ballistic Missiles and Drones",
+        "Title": "Ukraine Strikes 107 Russian Equipment Pieces Including North Korean Koksan Gun",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -9,13 +9,6 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
         "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
-        "Title": "ABB Ability Edgenius",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -42,6 +35,20 @@
         "threat_level": "CRITICAL"
     },
     {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01",
+        "Title": "OpenPLC v3",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
+        "Title": "ABB Ability Edgenius",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "WATCH"
+    },
+    {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01",
         "Title": "ABB Advant Master Online Builder",
         "Feed_Source": "CISA",
@@ -58,13 +65,6 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/13/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"
