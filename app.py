@@ -12,6 +12,10 @@ os.environ["STREAMLIT_SERVER_ENABLE_CORS"] = "false"
 os.environ["STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION"] = "false"
 os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
 
+# 📡 AGGRESSIVE WEBSOCKET KEEP-ALIVE CONFIGURATION
+os.environ["STREAMLIT_SERVER_WEBSOCKET_PING_INTERVAL"] = "10"
+os.environ["STREAMLIT_SERVER_WEBSOCKET_PING_TIMEOUT"] = "120"
+
 warnings.filterwarnings("ignore")
 
 from features.ui_features import inject_early_css, inject_global_theme, render_login_screen
@@ -42,7 +46,35 @@ if 'agent_daemon_started' not in st.session_state:
 st.html(
     """
     <script>
-        setInterval(() => { window.parent.postMessage('hf-stay-alive-ping', '*'); }, 30000);
+        // 1. PROXY TIMEOUT DEFEATER: Aggressive 10-second backend ping
+        const pingServer = () => {
+            window.parent.postMessage('hf-stay-alive-ping', '*');
+            fetch('/_stcore/health', { cache: 'no-store' }).catch(() => {});
+        };
+        setInterval(pingServer, 10000); 
+
+        // 2. MOBILE ANTI-FREEZE: WakeLock API prevents iOS/Android tab suspension
+        let wakeLock = null;
+        const requestWakeLock = async () => {
+            try {
+                if ('wakeLock' in navigator) {
+                    wakeLock = await navigator.wakeLock.request('screen');
+                }
+            } catch (err) {}
+        };
+        
+        requestWakeLock();
+        
+        // Re-acquire lock if user switches tabs and comes back
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                requestWakeLock();
+            }
+        });
+        
+        // Fallback trigger for strict mobile browsers requiring physical interaction
+        document.addEventListener('touchstart', requestWakeLock, {once: true});
+        document.addEventListener('click', requestWakeLock, {once: true});
     </script>
     <div id="top-of-page"></div>
     <style>
