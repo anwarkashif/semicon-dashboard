@@ -1,24 +1,17 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Strikes Location in Iran's Dehloran County",
+        "Title": "US Projectiles Hit Bottled Water Factory in Western Iran",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
-        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04",
-        "Title": "Rockwell Automation 1715-AENTR EtherNet/IP Adapter",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
@@ -28,11 +21,25 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04",
+        "Title": "Rockwell Automation 1715-AENTR EtherNet/IP Adapter",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
+        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06",
+        "Title": "Labcenter Proteus 9",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
@@ -58,13 +65,6 @@
     {
         "Source": "https://www.cisa.gov/news-events/alerts/2026/07/13/cisa-adds-one-known-exploited-vulnerability-catalog",
         "Title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "WATCH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"
