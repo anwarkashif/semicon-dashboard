@@ -1,5 +1,49 @@
 [
     {
+        "intelligence_brief": {
+            "title": "Semiconductor Supply Chain and Critical Mineral Geopolitical Assessment",
+            "date": "2024-05-22",
+            "regions": {
+                "East_Asia": {
+                    "Taiwan": {
+                        "status": "High Alert",
+                        "developments": "TSMC continues to accelerate 2nm process node development despite escalating cross-strait military posturing. Supply chain diversification remains the primary strategic objective for major clients.",
+                        "risk_assessment": "Critical infrastructure remains vulnerable to potential maritime blockade scenarios."
+                    },
+                    "Japan": {
+                        "status": "Strategic Expansion",
+                        "developments": "Rapid expansion of domestic foundry capacity via Rapidus and increased investment in advanced packaging facilities to secure regional supply chain resilience.",
+                        "risk_assessment": "Moderate; dependent on imported raw materials for photoresist and high-purity chemicals."
+                    }
+                },
+                "North_America": {
+                    "United_States": {
+                        "status": "Policy Driven",
+                        "developments": "CHIPS Act funding tranches are being finalized for major domestic fabrication projects. Export controls on high-end AI accelerators to China remain the primary geopolitical friction point.",
+                        "risk_assessment": "High; ongoing labor shortages in specialized engineering roles and environmental permitting delays."
+                    }
+                },
+                "Global_Critical_Minerals": {
+                    "Gallium_Germanium": {
+                        "status": "Supply Constraint",
+                        "developments": "Export permit requirements from China continue to create price volatility and supply uncertainty for compound semiconductor manufacturers.",
+                        "risk_assessment": "Critical; limited alternative sourcing options in the short term."
+                    }
+                }
+            },
+            "owned_by": "Owned By:\nKashif Anwar\nGeopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
+            "sources": [
+                "Semiconductor Industry Association (SIA) Market Reports",
+                "International Energy Agency (IEA) Critical Minerals Outlook",
+                "Department of Commerce Bureau of Industry and Security (BIS) Regulatory Filings",
+                "Proprietary Geopolitical Risk Modeling Data"
+            ]
+        },
+        "Source": "Autonomous Built-in Intelligence",
+        "is_custom_prompt": false,
+        "Date": "2026-07-15 08:01:56 UTC"
+    },
+    {
         "Date": "2026-07-15",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
