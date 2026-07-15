@@ -1,6 +1,7 @@
 import streamlit as st
 import random
 import re
+import time  # Added to control the typing speed
 from agent_graph import build_agent_graph
 import folium
 from streamlit_folium import st_folium
@@ -107,7 +108,6 @@ def render_agentic_home():
                         coords = msg["map_data"]
                         m = folium.Map(location=[coords["lat"], coords["lon"]], zoom_start=13)
                         folium.Marker([coords["lat"], coords["lon"]], popup=coords["label"], tooltip=coords.get("address", coords["label"])).add_to(m)
-                        # Replaced width=700 with use_container_width=True
                         st_folium(m, use_container_width=True, height=400, key=f"hist_map_{idx}")
             
     agent_query = st.chat_input("Ask the geopolitical and OSINT pipeline...")
@@ -124,7 +124,9 @@ def render_agentic_home():
         with chat_container:
             with st.chat_message("assistant", avatar="✨"):
                 greeting_container.empty()
-                with st.spinner("Typing...💬"):
+                
+                # Phase 1: Thinking / Processing (Running the Graph API Calls)
+                with st.spinner("Thinking... 💬"):
                     try:
                         agent_app = build_agent_graph()
                         
@@ -148,14 +150,22 @@ def render_agentic_home():
                         response_md = f"⚠️ Critical Graph Execution Failure: {e}"
                         map_data = None
 
-                    st.markdown(response_md)
-                    
-                    # 🌍 RENDER LIVE NEW MAP
-                    if map_data:
-                        m = folium.Map(location=[map_data["lat"], map_data["lon"]], zoom_start=13)
-                        folium.Marker([map_data["lat"], map_data["lon"]], popup=map_data["label"], tooltip=map_data.get("address", map_data["label"])).add_to(m)
-                        # Replaced width=700 with use_container_width=True
-                        st_folium(m, use_container_width=True, height=400, key=f"live_map_{len(st.session_state.agentic_messages)}")
+                # Phase 2: Typewriter Stream Generator (Outputs the text smoothly)
+                def stream_text_effect(text):
+                    # Regex split keeps spaces and newlines intact so markdown tables/lists don't break
+                    tokens = re.split(r'(\s+)', text)
+                    for token in tokens:
+                        yield token
+                        time.sleep(0.015) # Adjust this value (0.015) to make typing faster or slower
+
+                # Execute the live stream to the UI
+                st.write_stream(stream_text_effect(response_md))
+                
+                # 🌍 RENDER LIVE NEW MAP
+                if map_data:
+                    m = folium.Map(location=[map_data["lat"], map_data["lon"]], zoom_start=13)
+                    folium.Marker([map_data["lat"], map_data["lon"]], popup=map_data["label"], tooltip=map_data.get("address", map_data["label"])).add_to(m)
+                    st_folium(m, use_container_width=True, height=400, key=f"live_map_{len(st.session_state.agentic_messages)}")
                 
         # Append final response & map coordinates to history
         st.session_state.agentic_messages.append({
