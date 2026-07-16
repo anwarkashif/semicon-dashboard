@@ -104,8 +104,9 @@ def fetch_and_evaluate_flash_alerts():
 
     # --- 2. WAR MONITOR ---
     try:
-        url = "https://api.war-monitor.com/api/events"
-        res = requests.get(url, headers={'User-Agent': 'okhttp/4.9.3', 'Accept': 'application/json'}, params={"page": "1", "limit": "15", "fresh_hours": "168"}, timeout=10)
+        # Bypasses WAF/Cloudflare fingerprinting via transparent proxy routing
+        url = "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.war-monitor.com%2Fapi%2Fevents%3Fpage%3D1%26limit%3D15%26fresh_hours%3D168"
+        res = requests.get(url, timeout=15)
         if res.status_code == 200:
             add_to_payload(res.json().get('data', []), "WAR MONITOR")
     except Exception as e: print(f"⚠️ Failed War Monitor: {e}")
