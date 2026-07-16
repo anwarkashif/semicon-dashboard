@@ -1081,7 +1081,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
             display_df['Date'] = display_df['Date'].astype(str)
             display_df = display_df.drop(columns=['Parsed_Date'])
             
-        display_df = display_df.head(10)
+        display_df = display_df.head(20)
         display_df = display_df.fillna("")
         
         def color_risk(val):
@@ -1101,7 +1101,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         except AttributeError:
             styled_df = display_df.style.applymap(color_risk, subset=['Risk'])
             
-        st.dataframe(styled_df, use_container_width=True, hide_index=True, height=400)
+        st.dataframe(styled_df, use_container_width=True, hide_index=True, height=770)
     else:
         st.write("No tactical alerts logged in the current operational cycle.")
             
