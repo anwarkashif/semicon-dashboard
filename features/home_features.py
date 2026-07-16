@@ -1075,8 +1075,9 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         display_df = temp_df[target_cols].copy()
         display_df = display_df.drop_duplicates(subset=['Action'], keep='first')
         
-        # 🛑 THE FIX: Standardize Dates and Clean Risk Column
-        current_date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        # 🛑 THE FIX: Bypass UnboundLocalError with an isolated module alias
+        import datetime as dt_sys
+        current_date_str = dt_sys.datetime.now(dt_sys.timezone.utc).strftime("%Y-%m-%d")
         
         if 'Date' in display_df.columns:
             # Coerce to datetime; if it fails on weird formats like "2026", it becomes NaT
@@ -1091,7 +1092,7 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
             display_df = display_df.drop(columns=['Parsed_Date'])
             
         if 'Risk' in display_df.columns:
-            # 🛑 THE FIX: Clean up hallucinated long sentences in the Risk column
+            # 🛑 Clean up hallucinated long sentences in the Risk column
             def clean_risk(val):
                 val_str = str(val).upper()
                 if 'CRITICAL' in val_str: return 'CRITICAL'
