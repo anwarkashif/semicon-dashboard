@@ -1,14 +1,21 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "US Bombs Near Iran Cancer Hospital, Patients Flee",
+        "Title": "Ukrainian Forces Strike 10 Tankers and 4 Ferries in Sea of Azov",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
-        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
+        "Title": "CISA Urges SharePoint Hardening After New Exploitations",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -21,50 +28,43 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
-        "Title": "CISA Urges SharePoint Hardening After New Exploitations",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
-        "Title": "ABB Ability Edgenius",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "CRITICAL"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-05",
+        "Title": "Siemens SICAM 8",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "HIGH"
     },
     {
-        "Source": "https://www.cisa.gov/resources-tools/resources/establishing-coordinated-vulnerability-disclosure-program-work-security-researchers",
-        "Title": "Establishing a Coordinated Vulnerability Disclosure Program to Work With Security Researchers",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-03",
+        "Title": "NASA Core Flight System (cFS) Health & Safety (HS) Application",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-06",
+        "Title": "Rockwell Automation CompactLogix, ControlLogix, Compact GuardLogix and GuardLogix",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/15/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-08",
+        "Title": "Rockwell Automation Flex 5000 Adapter",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01",
-        "Title": "ABB Advant Master Online Builder",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-07",
+        "Title": "SALTO ProAccess Space",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-03",
-        "Title": "ABB T-MAC Plus",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-09",
+        "Title": "Rockwell Automation FactoryTalk DataMosaix",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"

@@ -1,230 +1,47 @@
 [
     {
-        "Title": "Strategic Intelligence Brief: Semiconductor Export Controls and Supply Chain Geopolitics",
-        "Threat_Level": "CRITICAL",
-        "BLUF": "The semiconductor supply chain is undergoing a structural transition from global integration to a fragmented, security-first model. U.S.-led export controls, specifically the 2026 MATCH Act and expanded BIS rules, have shifted from targeting finished AI chips to choking off the entire manufacturing equipment (SME) ecosystem. China is responding with aggressive domestic localization and retaliatory mineral export controls, creating a high-stakes 'small yard, high fence' environment that threatens to disrupt global production cycles through 2026 and beyond.",
+        "Title": "Strategic Intelligence Brief: Semiconductor and Critical Mineral Supply Chain",
+        "Threat_Level": "HIGH",
+        "BLUF": "Global semiconductor supply chains remain under significant pressure due to escalating export controls, the weaponization of critical mineral supply chains, and the ongoing bifurcation of the global technology ecosystem between the US-led coalition and China.",
         "Top_News": {
-            "United_States": [
-                "House Foreign Affairs Committee advanced the MATCH Act, mandating allied alignment on DUV lithography and cryogenic etch tool exports within 150 days.",
-                "BIS expanded export controls to include advanced packaging equipment and high-bandwidth memory (HBM) to impede China's AI military modernization.",
-                "U.S. government continues to leverage the Foreign Direct Product Rule (FDPR) to maintain jurisdiction over foreign-produced items containing U.S. technology."
+            "East_Asia": [
+                "Taiwan Semiconductor Manufacturing Company (TSMC) continues to navigate complex geopolitical pressures as it expands production capacity in the United States and Europe while maintaining its core manufacturing base in Taiwan.",
+                "Japan and the Netherlands are deepening alignment with US-led export restrictions on advanced lithography equipment, specifically targeting the capability of Chinese firms to produce sub-7nm logic chips."
             ],
-            "China": [
-                "Ministry of Commerce retaliated against export restrictions by targeting 40 Japanese companies, including defense and dual-use technology firms.",
-                "Beijing is accelerating the '2026-2030 Five-Year Plan' to indigenize lithography and EDA software, despite significant technical hurdles in EUV light source development.",
-                "Chinese firms are increasingly utilizing mature-node chiplet architectures to circumvent advanced-node performance restrictions."
+            "North_America": [
+                "The US Department of Commerce is intensifying oversight of the CHIPS Act funding, prioritizing domestic manufacturing resilience and supply chain security over short-term profitability.",
+                "Increased legislative focus on the security of the rare earth element supply chain, with new incentives for domestic processing and refining capabilities to reduce reliance on Chinese imports."
             ],
-            "Europe_and_Asia": [
-                "ASML remains the central geopolitical chokepoint; Dutch export controls on EUV and advanced DUV systems are now the primary constraint on China's sub-7nm ambitions.",
-                "Japan and the Netherlands face mounting pressure to align with U.S. unilateral controls or risk secondary enforcement actions under the MATCH Act.",
-                "TSMC continues to dominate sub-5nm production, with its Arizona expansion serving as a critical, albeit incomplete, hedge against Taiwan-centric supply chain risks."
+            "Europe": [
+                "The European Union is accelerating the implementation of the European Chips Act to bolster regional self-sufficiency and reduce dependency on Asian foundries for automotive and industrial-grade semiconductors."
             ]
         },
         "Watch_Out": [
-            "The 150-day ultimatum in the MATCH Act for allied alignment, which risks fracturing the U.S.-Netherlands-Japan export control coalition.",
-            "Potential for China to weaponize rare earth and specialty gas (gallium, germanium, antimony) supplies to disrupt Western fab operations.",
-            "The 'packaging bottleneck' where advanced packaging capacity (CoWoS, HBM) becomes as critical a constraint as wafer fabrication for AI accelerator output.",
-            "Increased transshipment of restricted equipment through Southeast Asian and Middle Eastern hubs, triggering tighter BIS compliance and customs scrutiny."
+            "Increased frequency of cyber-espionage targeting semiconductor intellectual property.",
+            "Potential for retaliatory export bans on gallium, germanium, and graphite from China.",
+            "Volatility in the pricing of high-purity neon and other specialty gases essential for lithography processes."
         ],
         "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The semiconductor landscape is defined by a 'Compute Control Hierarchy' where hardware chokepoints (EUV lithography, advanced packaging, and metrology) dictate the pace of AI development. The shift toward regulating back-end processes (packaging) and maintenance services represents a move from 'blocking sales' to 'degrading existing capacity.' This strategy forces China to pursue a high-cost, lower-yield path to self-sufficiency, but it also creates significant revenue risks for Western equipment suppliers and increases the likelihood of retaliatory supply chain shocks in critical minerals."
+            "Overall_Analysis": "The semiconductor sector is transitioning from a model of globalized efficiency to one of national security-driven regionalization. The primary risk is the fragmentation of the supply chain, which increases costs and creates bottlenecks. Geopolitical friction in the Taiwan Strait remains the single largest systemic risk to global chip production, while the 'mineral nationalism' displayed by major producers threatens the upstream supply of critical raw materials."
         },
-        "Predictive_Analysis": "Through 2026, expect a 'compliance-first' manufacturing environment where lead times for mature-node components lengthen due to export control audits. China will likely achieve incremental progress in domestic lithography, but commercial parity with Western EUV systems remains unlikely within the 2026-2030 window. The U.S. will likely continue to tighten the 'small yard, high fence' strategy, potentially forcing a bifurcation of the global semiconductor market into 'allied-trusted' and 'China-indigenous' ecosystems.",
-        "Source": "https://www.justsecurity.org/145562/effective-export-controls-semiconductor-equipment/, https://www.iaps.ai/research/semiconductor-manufacturing-equipment-export-controls, https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls, https://www.astutegroup.com/news/general/us-export-controls-redraw-semiconductor-supply-chains-as-china-accelerates-domestic-chip-output/, https://laweconcenter.org/resources/us-export-controls-on-ai-and-semiconductors-two-divergent-visions/, https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military, https://www.federalregister.gov/documents/2023/10/25/2023-23049/export-controls-on-semiconductor-manufacturing-items, https://unteachablecourses.com/semiconductor-supply-chain-2026/, https://juggerinsight.com/en/asml-euv-lithography-export-controls/, https://www.linkedin.com/posts/moses-zaree_semiconductor-technology-lithography-activity-7295576653949247488-qS3X, https://thenextweb.com/news/china-us-chip-export-controls-match-act, https://www.dqindia.com/esdm/new-technologies-and-familiar-challenges-could-make-semiconductor-supply-chains-more-fragile-11724447, https://systems.enpress-publisher.com/index.php/jipd/article/viewFile/2436/2894, https://www.freecodecamp.org/news/the-lithography-handbook-machines-markets-and-the-next-wave-of-semiconductor-startups/, https://beyondtmrw.org/article/semiconductor-export-controls-2026-chip-tooling-packaging-and-workarounds, https://semiconductorx.com/semiconductor-bottleneck-atlas.html, https://consumerelectronicsdaily.com/chip-supply/us-semiconductor-export-controls/, https://informedclearly.com/en/trade-war/52262/match-act-chip-export-controls-us-china-2026, https://250mm.co.kr/en/tech/asml-2026-export-control-analysis, https://aethercouncil.com/research/the-variable-nobodys-governing-why-tsmc-and-nvidia-control-which-ai-future-we-get",
-        "is_custom_prompt": false,
-        "Date": "2026-07-16 11:20:41 UTC"
-    },
-    {
-        "Title": "Strategic Intelligence Brief",
-        "Threat_Level": "CRITICAL",
-        "BLUF": "The global semiconductor supply chain is undergoing a structural, irreversible bifurcation. The proposed MATCH Act in the U.S. Congress represents a significant escalation, aiming to codify export restrictions on DUV lithography and servicing, effectively attempting to freeze China's near-frontier chip production. China is responding with aggressive industrial policy, rare earth export controls, and a push for domestic self-sufficiency, creating a high-stakes environment for global technology firms.",
-        "Top_News": {
-            "Global": [
-                "The U.S. House Foreign Affairs Committee advanced the MATCH Act, which would mandate allied alignment on DUV lithography restrictions and ban servicing of existing machines in China.",
-                "China has implemented a series of export controls on critical minerals including gallium, germanium, and rare earths, creating significant supply chain uncertainty for lithography and magnet production.",
-                "ASML faces severe revenue pressure as China's share of its business is projected to decline, while the company navigates intense U.S. and Dutch regulatory scrutiny regarding tool diversion.",
-                "Huawei is emerging as the central integrator of China's domestic semiconductor ecosystem, coordinating efforts across design, manufacturing, and lithography to bypass Western restrictions."
-            ]
-        },
-        "Watch_Out": [
-            "The 150-day negotiation window mandated by the potential MATCH Act for allied alignment with the Netherlands and Japan.",
-            "Potential for further Chinese retaliatory measures targeting Western semiconductor equipment manufacturers (e.g., Applied Materials, Lam Research).",
-            "The impact of the 'servicing ban' on the operational viability of the ~1,400 ASML machines currently installed in Chinese fabs.",
-            "The emergence of domestic Chinese alternatives in EDA software and lithography, which, while currently behind, are receiving massive state support."
-        ],
-        "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The semiconductor landscape has shifted from a globally integrated system to a stratified, geopolitically contested environment. The 'small yard, high fence' strategy is being tested by China's ability to utilize older DUV machines for multi-patterning to achieve near-frontier nodes. The U.S. is moving to close these loopholes via statutory mandates rather than administrative regulation, increasing the risk of supply chain fragmentation. The reliance on China for rare earth processing remains a critical vulnerability for Western equipment manufacturers, creating a tit-for-tat dynamic that threatens to disrupt the entire global tech ecosystem."
-        },
-        "Predictive_Analysis": "Expect a continued decline in China's access to advanced Western semiconductor equipment, forcing a permanent bifurcation in technology standards. China will likely accelerate its 'national team' model to achieve 7nm/5nm parity through non-EUV methods, while Western firms will face increased costs and regulatory compliance burdens. The next 12-18 months will likely see increased volatility in the rare earth market and potential 'black market' activity as Chinese firms seek to maintain their existing installed base of lithography tools.",
-        "Source": "https://www.iaps.ai/research/semiconductor-manufacturing-equipment-export-controls, https://laweconcenter.org/resources/us-export-controls-on-ai-and-semiconductors-two-divergent-visions/, https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls, https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military, https://www.justsecurity.org/145562/effective-export-controls-semiconductor-equipment/, https://forum.effectivealtruism.org/posts/C9fGQBGZmdTS3Gik6/explaining-all-the-us-semiconductor-export-controls, https://www.fpri.org/article/2024/09/breaking-the-circuit-us-china-semiconductor-controls/, https://unteachablecourses.com/semiconductor-supply-chain-2026/, https://juggerinsight.com/en/asml-euv-lithography-export-controls/, https://thenextweb.com/news/china-us-chip-export-controls-match-act, https://globalsecurityreview.com/cyber-deterrence-in-the-age-of-semiconductors/, https://www.dqindia.com/esdm/new-technologies-and-familiar-challenges-could-make-semiconductor-supply-chains-more-fragile-11724447, https://systems.enpress-publisher.com/index.php/jipd/article/viewFile/2436/2894, https://www.freecodecamp.org/news/the-lithography-handbook-machines-markets-and-the-next-wave-of-semiconductor-startups/, https://technologies.org/how-the-us-china-technology-war-reshaped-the-global-supply-chain/, https://merics.org/en/report/huawei-quietly-dominating-chinas-semiconductor-supply-chain, https://www.blog.baldengineering.com/2023/09/netherlands-chip-tool-export-controls.html, https://nextwavesinsight.com/match-act-semiconductor-export-controls-asml/, https://250mm.co.kr/en/tech/asml-2026-export-control-analysis, https://www.linkedin.com/top-content/supply-chain-management/raw-material-procurement-challenges/public-companies-impacted-by-rare-earths-shortages/, https://telecomobserver.com/us-commerce-department-pressures-asml-over-potential-chip-tool-export-to-china-telecom-observer-analysis/",
-        "is_custom_prompt": false,
-        "Date": "2026-07-16 11:19:34 UTC"
-    },
-    {
-        "Title": "Strategic Intelligence Brief: Semiconductor Supply Chain & Geopolitics",
-        "Threat_Level": "CRITICAL",
-        "BLUF": "The global semiconductor supply chain is undergoing a structural, irreversible fragmentation. U.S.-led export controls on advanced lithography (EUV/DUV) and AI-capable chips have forced China into a 'whole-of-nation' localization drive. While controls have successfully bottlenecked China's access to frontier nodes, they have simultaneously catalyzed a more aggressive, state-backed Chinese effort to achieve self-sufficiency, creating a bifurcated global technology ecosystem.",
-        "Top_News": {
-            "Global": [
-                "The U.S. House Foreign Affairs Committee advanced the MATCH Act, which would mandate that the Netherlands and Japan align DUV lithography export restrictions with U.S. rules or face unilateral enforcement.",
-                "China's Ministry of Commerce has established a unified legal framework (Order No. 834) to monitor and potentially retaliate against supply chain disruptions, signaling a shift toward active economic defense.",
-                "ASML continues to dominate the EUV lithography market, with its High-NA systems serving as the primary technological moat against Chinese domestic alternatives."
-            ],
-            "United_States": [
-                "The U.S. has expanded the Foreign Direct Product Rule (FDPR) to capture a broader range of semiconductor manufacturing equipment (SME) and software tools.",
-                "The CHIPS Act and the $25B Terafab project represent the U.S. effort to rebuild domestic fabrication capacity, though R&D funding remains under pressure."
-            ],
-            "China": [
-                "Huawei is emerging as the central integrator for China's semiconductor 'national team,' coordinating domestic efforts across lithography, EDA software, and advanced packaging.",
-                "Chinese firms are increasingly utilizing multi-patterning techniques on older DUV machines to circumvent EUV restrictions, despite lower yields and higher costs."
-            ]
-        },
-        "Watch_Out": [
-            "The potential for China to weaponize critical mineral exports (gallium, germanium, antimony) in retaliation for the MATCH Act.",
-            "The emergence of 'shadow' supply chains where Chinese firms utilize shell companies to bypass end-user restrictions on advanced AI hardware.",
-            "The long-term risk of 'technological decoupling' leading to two incompatible global standards for AI compute and semiconductor architecture."
-        ],
-        "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The current regime of export controls is a 'small yard, high fence' strategy that is increasingly difficult to maintain. While the U.S. and its allies (Netherlands, Japan) hold the high ground in lithography and EDA, the controls are creating a 'geopolitical discount' for Chinese firms to invest heavily in domestic alternatives. The primary risk is that these controls, while slowing China's short-term progress, are inadvertently creating a more resilient, self-sufficient Chinese semiconductor ecosystem that will eventually operate outside the reach of Western influence."
-        },
-        "Predictive_Analysis": "Expect a significant escalation in 'tit-for-tat' regulatory actions through 2026. China will likely prioritize the development of domestic lithography and EDA tools, even at the cost of economic efficiency. The U.S. will likely continue to tighten the 'Foreign Direct Product Rule' to capture more foreign-made equipment, further straining relations with European and Asian allies who fear the loss of Chinese market revenue. By 2027, the semiconductor market will likely be fully bifurcated into a Western-aligned high-performance node ecosystem and a Chinese-led mature/foundational node ecosystem.",
-        "Source": "https://unteachablecourses.com/semiconductor-supply-chain-2026/, https://juggerinsight.com/en/asml-euv-lithography-export-controls/, https://www.linkedin.com/posts/moses-zaree_semiconductor-technology-lithography-activity-7295576653949247488-qS3X, https://thenextweb.com/news/china-us-chip-export-controls-match-act, https://systems.enpress-publisher.com/index.php/jipd/article/viewFile/2436/2894, https://www.dqindia.com/esdm/new-technologies-and-familiar-challenges-could-make-semiconductor-supply-chains-more-fragile-11724447, https://www.freecodecamp.org/news/the-lithography-handbook-machines-markets-and-the-next-wave-of-semiconductor-startups/, https://globalsecurityreview.com/cyber-deterrence-in-the-age-of-semiconductors/, https://merics.org/en/report/huawei-quietly-dominating-chinas-semiconductor-supply-chain, https://www.blog.baldengineering.com/2023/09/netherlands-chip-tool-export-controls.html, https://www.justsecurity.org/145562/effective-export-controls-semiconductor-equipment/, https://www.iaps.ai/research/semiconductor-manufacturing-equipment-export-controls, https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls, https://www.astutegroup.com/news/general/us-export-controls-redraw-semiconductor-supply-chains-as-china-accelerates-domestic-chip-output/, https://laweconcenter.org/resources/us-export-controls-on-ai-and-semiconductors-two-divergent-visions/, https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military, https://www.federalregister.gov/documents/2023/10/25/2023-23049/export-controls-on-semiconductor-manufacturing-items, https://250mm.co.kr/en/tech/asml-2026-export-control-analysis, https://aethercouncil.com/research/the-variable-nobodys-governing-why-tsmc-and-nvidia-control-which-ai-future-we-get",
-        "is_custom_prompt": false,
-        "Date": "2026-07-16 11:16:34 UTC"
-    },
-    {
-        "Title": "Strategic Intelligence Brief: Semiconductor Supply Chain and Export Controls",
-        "Threat_Level": "CRITICAL",
-        "BLUF": "The semiconductor supply chain is undergoing a structural fragmentation driven by U.S.-led export controls on manufacturing equipment (SME) and AI hardware. While these measures have successfully created bottlenecks for China's advanced node production, they have simultaneously catalyzed Beijing's drive for indigenous self-sufficiency and prompted legislative efforts like the MATCH Act to further tighten allied alignment.",
-        "Top_News": {
-            "Global": [
-                "The U.S. House Foreign Affairs Committee advanced the MATCH Act, which mandates allied alignment on DUV lithography restrictions within 150 days or face unilateral U.S. enforcement.",
-                "China's Ministry of Commerce has warned that further U.S. export legislation will severely disrupt global semiconductor supply chains, while maintaining a regulatory framework for potential retaliatory measures.",
-                "ASML's revenue exposure to China is projected to decline to 20% in 2026 as export restrictions on DUV immersion lithography systems tighten.",
-                "Chinese firms, including SMIC and Huawei, are increasingly utilizing multi-patterning techniques and domestic equipment to bypass the lack of access to EUV lithography."
-            ]
-        },
-        "Watch_Out": [
-            "The potential for China to weaponize its dominance in critical minerals (gallium, germanium, antimony) as a countermeasure to further U.S. export restrictions.",
-            "The emergence of 'black market' smuggling networks for high-end AI servers and chips, complicating the enforcement of end-user controls.",
-            "The risk of 'technological decoupling' leading to a bifurcated global semiconductor ecosystem, raising costs and reducing R&D efficiency for all market participants.",
-            "The impact of the proposed MATCH Act on the maintenance and servicing of existing DUV equipment already installed in Chinese fabs."
-        ],
-        "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The U.S. strategy of 'small yard, high fence' is facing diminishing returns as China accelerates domestic alternatives. While export controls have successfully limited China's access to frontier EUV technology, the reliance on DUV multi-patterning and the potential for cloud-based compute access allow Chinese firms to maintain competitive AI development. The shift toward targeting servicing and maintenance of existing equipment represents a significant escalation that threatens to degrade China's current operational capacity but risks severe diplomatic friction with key allies like the Netherlands and Japan."
-        },
-        "Predictive_Analysis": "Expect continued escalation in export control legislation through 2026, with a focus on 'plugging loopholes' in cloud computing access and equipment servicing. China will likely intensify its 'Made in China 2025' and subsequent Five-Year Plan objectives, prioritizing domestic EDA software and lithography breakthroughs. The global semiconductor market will likely see increased price volatility as supply chains fragment and companies navigate a complex, multi-jurisdictional compliance landscape.",
-        "Source": "https://www.iaps.ai/research/semiconductor-manufacturing-equipment-export-controls, https://www.justsecurity.org/145562/effective-export-controls-semiconductor-equipment/, https://laweconcenter.org/resources/us-export-controls-on-ai-and-semiconductors-two-divergent-visions/, https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military, https://www.thefai.org/posts/export-control-loopholes-chipmaking-tools-and-their-subcomponents, https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls, https://www.federalregister.gov/documents/2023/10/25/2023-23049/export-controls-on-semiconductor-manufacturing-items, https://forum.effectivealtruism.org/posts/C9fGQBGZmdTS3Gik6/explaining-all-the-us-semiconductor-export-controls, https://unteachablecourses.com/semiconductor-supply-chain-2026/, https://juggerinsight.com/en/asml-euv-lithography-export-controls/, https://www.linkedin.com/posts/moses-zaree_semiconductor-technology-lithography-activity-7295576653949247488-qS3X, https://thenextweb.com/news/china-us-chip-export-controls-match-act, https://www.dqindia.com/esdm/new-technologies-and-familiar-challenges-could-make-semiconductor-supply-chains-more-fragile-11724447, https://systems.enpress-publisher.com/index.php/jipd/article/viewFile/2436/2894, https://globalsecurityreview.com/cyber-deterrence-in-the-age-of-semiconductors/, https://www.legal500.com/guides/hot-topic/the-overuse-of-unilateral-export-controls-a-double-edged-sword-that-sows-the-seeds-for-non-us-alternatives/, https://www.csis.org/analysis/true-impact-allied-export-controls-us-and-chinese-semiconductor-manufacturing-equipment, https://www.fpri.org/article/2024/09/breaking-the-circuit-us-china-semiconductor-controls/, https://www.electronicsforyou.biz/industry-buzz/chipmaking-equipment-faces-new-export-limits/, https://consumerelectronicsdaily.com/chip-supply/us-semiconductor-export-controls/, https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/new-supply-chain-tech.html, https://www.scmp.com/tech/tech-war/article/3239803/how-latest-us-chip-export-controls-exposed-chinas-weak-link-semiconductor-supply-chain, https://www.csis.org/analysis/understanding-us-allies-current-legal-authority-implement-ai-and-semiconductor-export",
-        "is_custom_prompt": false,
-        "Date": "2026-07-16 11:15:07 UTC"
-    },
-    {
-        "Title": "Strategic Intelligence Brief: Semiconductor Supply Chain & Geopolitical Risk",
-        "Threat_Level": "CRITICAL",
-        "BLUF": "The semiconductor supply chain is undergoing a structural, irreversible bifurcation driven by U.S.-led export controls and China's aggressive, state-subsidized pursuit of self-sufficiency. The introduction of the MATCH Act (2026) signals a shift from sectoral sanctions to a comprehensive supply chain blockade, forcing allied nations into a high-stakes alignment ultimatum. Advanced packaging and lithography equipment have emerged as the primary strategic chokepoints, rendering traditional AI governance frameworks largely ineffective against the physical realities of hardware production.",
-        "Top_News": {
-            "Global": [
-                "The U.S. Congress introduced the MATCH Act (H.R. 8170) in April 2026, mandating a 150-day ultimatum for allies to align DUV lithography and cryogenic etch tool export controls or face unilateral U.S. enforcement.",
-                "China retaliated in April 2026 by placing 40 Japanese entities, including defense and dual-use technology firms, on its export control and unreliable entity lists.",
-                "TSMC and NVIDIA remain the central nodes of the global AI hardware stack, with TSMC controlling over 90% of sub-5nm fabrication capacity, creating a single point of failure for global AI development.",
-                "China's SMIC and Huawei are accelerating domestic 5nm-class manufacturing using multi-patterning DUV techniques, bypassing EUV restrictions but facing significant yield and cost disadvantages."
-            ]
-        },
-        "Watch_Out": [
-            "The 150-day window for allied alignment under the MATCH Act, which risks fracturing the U.S.-Japan-Netherlands trilateral export control framework.",
-            "Potential for further Chinese retaliation targeting critical mineral supply chains (gallium, germanium, antimony) to disrupt Western fab operations.",
-            "The '50% Mandate' in China requiring domestic fabs to source half of their equipment locally, which threatens $18B in annual U.S. equipment sales.",
-            "The emergence of 'shadow' transshipment routes in Southeast Asia and the UAE, where hyperscalers and intermediaries attempt to bypass GPU export restrictions."
-        ],
-        "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The semiconductor industry has transitioned from a globally integrated system to a fragmented, geopolitically contested landscape. The U.S. strategy of 'chokepoint denial'\u2014targeting lithography (ASML), metrology (KLA), and advanced packaging\u2014is effectively slowing China's AI progress but is simultaneously incentivizing a 'breakout' innovation cycle in Beijing. The reliance on TSMC for 90%+ of advanced logic creates a massive geopolitical vulnerability. Furthermore, the 'Intangible Fallacy' in current AI governance\u2014focusing on software/models while ignoring the physical silicon substrate\u2014leaves policymakers blind to the reality that hardware control is the ultimate arbiter of AI capability."
-        },
-        "Predictive_Analysis": "Expect a permanent bifurcation of the semiconductor ecosystem by 2028, with China operating a parallel, albeit less efficient, domestic supply chain. The MATCH Act will likely force a temporary cooling of U.S.-allied trade relations as Japan and the Netherlands navigate the economic fallout of lost China revenue. By 2027, the focus will shift from front-end lithography to back-end advanced packaging (CoWoS/HBM stacking) as the primary gating resource for AI accelerator output, with China aggressively attempting to close this gap through state-directed OSAT investment.",
-        "Source": "https://beyondtmrw.org/article/semiconductor-export-controls-2026-chip-tooling-packaging-and-workarounds, https://semiconductorx.com/semiconductor-bottleneck-atlas.html, https://consumerelectronicsdaily.com/chip-supply/us-semiconductor-export-controls/, https://timewell.jp/en/columns/semiconductor-export-regulation-2026, https://theboard.world/articles/geopolitics/us-china-tech-war-semiconductor-restrictions/, https://oplexa.com/us-china-chip-war-2026-semiconductor/, https://informedclearly.com/en/trade-war/52262/match-act-chip-export-controls-us-china-2026, https://unteachablecourses.com/semiconductor-supply-chain-2026/, https://juggerinsight.com/en/asml-euv-lithography-export-controls/, https://www.linkedin.com/posts/moses-zaree_semiconductor-technology-lithography-activity-7295576653949247488-qS3X, https://thenextweb.com/news/china-us-chip-export-controls-match-act, https://systems.enpress-publisher.com/index.php/jipd/article/viewFile/2436/2894, https://www.dqindia.com/esdm/new-technologies-and-familiar-challenges-could-make-semiconductor-supply-chains-more-fragile-11724447, https://globalsecurityreview.com/cyber-deterrence-in-the-age-of-semiconductors/, https://250mm.co.kr/en/tech/asml-2026-export-control-analysis, https://aethercouncil.com/research/the-variable-nobodys-governing-why-tsmc-and-nvidia-control-which-ai-future-we-get",
-        "is_custom_prompt": false,
-        "Date": "2026-07-16 11:12:06 UTC"
-    },
-    {
-        "Title": "Strategic Intelligence Brief: Semiconductor Supply Chain and Geopolitics",
-        "Threat_Level": "CRITICAL",
-        "BLUF": "The global semiconductor supply chain is undergoing a structural, irreversible fragmentation. While U.S.-led export controls have successfully restricted China's access to frontier EUV lithography, they have simultaneously catalyzed China's 'whole-of-nation' drive toward self-sufficiency. The industry is shifting from a globally integrated model to a bifurcated system, where control over physical manufacturing chokepoints\u2014specifically lithography and advanced fabrication\u2014is now the primary determinant of geopolitical and AI-development power.",
-        "Top_News": {
-            "Global": [
-                "The U.S. House Foreign Affairs Committee advanced the MATCH Act, which would mandate that the Netherlands and Japan align DUV lithography export restrictions with U.S. rules within 150 days.",
-                "China\u2019s Ministry of Commerce has established a unified legal framework (Order No. 834) to monitor and protect industrial supply chains, signaling potential retaliatory measures against U.S. export controls.",
-                "ASML continues to dominate the EUV lithography market, with its High-NA platform serving as the primary technological moat against Chinese domestic alternatives.",
-                "Huawei is emerging as the central integrator of China's semiconductor 'national team,' effectively coordinating domestic supply chain efforts to circumvent U.S. sanctions."
-            ]
-        },
-        "Watch_Out": [
-            "The potential for China to weaponize critical mineral exports (gallium, germanium, antimony) as a direct countermeasure to the MATCH Act.",
-            "The emergence of 'multi-patterning' workarounds by Chinese firms (SMIC) using DUV equipment to simulate advanced node performance, potentially eroding the effectiveness of current export controls.",
-            "The risk of 'servicing bans' on existing lithography equipment in China, which would degrade the operational capacity of Chinese fabs over time.",
-            "The growing reliance of U.S. AI labs on TSMC, creating a single-point-of-failure vulnerability in the event of regional instability in Taiwan."
-        ],
-        "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The semiconductor sector is no longer a commercial market but a theater of national security. The 'Small Yard, High Fence' strategy has successfully slowed China's progress at the 3nm-5nm frontier, but it has created a 'stratified' ecosystem. China is now dominating the mature-node market (legacy chips), which are essential for global automotive and industrial sectors, while the U.S. and its allies maintain a tenuous lead in AI-critical advanced nodes. The primary risk is that export controls are forcing China to innovate faster than anticipated, while simultaneously raising costs and reducing R&D reinvestment for U.S. and allied firms."
-        },
-        "Predictive_Analysis": "Expect a period of 'supply chain decoupling' where China mandates 50%+ domestic procurement for its chipmakers by 2027, likely leading to a global oversupply of legacy chips and a potential price war. Simultaneously, the U.S. will likely expand the Foreign Direct Product Rule (FDPR) to capture more sub-component and software-level technology, further pressuring allies like the Netherlands and Japan to choose between U.S. security alignment and Chinese market revenue. The 2026-2030 window will be defined by China's attempt to achieve 'commercial parity' in lithography, which, while unlikely to succeed, will force a permanent, high-cost bifurcation of the global tech stack.",
-        "Sources": [
-            "https://unteachablecourses.com/semiconductor-supply-chain-2026/",
-            "https://juggerinsight.com/en/asml-euv-lithography-export-controls/",
-            "https://thenextweb.com/news/china-us-chip-export-controls-match-act",
-            "https://www.dqindia.com/esdm/new-technologies-and-familiar-challenges-could-make-semiconductor-supply-chains-more-fragile-11724447",
-            "https://globalsecurityreview.com/cyber-deterrence-in-the-age-of-semiconductors/",
-            "https://www.freecodecamp.org/news/the-lithography-handbook-machines-markets-and-the-next-wave-of-semiconductor-startups/",
-            "https://technologies.org/how-the-us-china-technology-war-reshaped-the-global-supply-chain/",
-            "https://merics.org/en/report/huawei-quietly-dominating-chinas-semiconductor-supply-chain",
-            "https://www.iaps.ai/research/semiconductor-manufacturing-equipment-export-controls",
-            "https://www.justsecurity.org/145562/effective-export-controls-semiconductor-equipment/",
-            "https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls",
-            "https://laweconcenter.org/resources/us-export-controls-on-ai-and-semiconductors-two-divergent-visions/",
-            "https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military",
-            "https://www.thefai.org/posts/export-control-loopholes-chipmaking-tools-and-their-subcomponents",
-            "https://aethercouncil.com/research/the-variable-nobodys-governing-why-tsmc-and-nvidia-control-which-ai-future-we-get"
-        ],
+        "Predictive_Analysis": "Expect a continued 'de-risking' phase where multinational corporations move toward 'China-plus-one' manufacturing strategies. Over the next 18-24 months, we anticipate further tightening of export controls on AI-capable hardware, likely triggering a surge in domestic Chinese investment in legacy node manufacturing and alternative chip architectures to circumvent current restrictions.",
         "Owned_By": "Kashif Anwar, Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
-        "Source": "https://unteachablecourses.com/semiconductor-supply-chain-2026/, https://juggerinsight.com/en/asml-euv-lithography-export-controls/, https://www.linkedin.com/posts/moses-zaree_semiconductor-technology-lithography-activity-7295576653949247488-qS3X, https://thenextweb.com/news/china-us-chip-export-controls-match-act, https://www.dqindia.com/esdm/new-technologies-and-familiar-challenges-could-make-semiconductor-supply-chains-more-fragile-11724447, https://systems.enpress-publisher.com/index.php/jipd/article/viewFile/2436/2894, https://globalsecurityreview.com/cyber-deterrence-in-the-age-of-semiconductors/, https://www.freecodecamp.org/news/the-lithography-handbook-machines-markets-and-the-next-wave-of-semiconductor-startups/, https://technologies.org/how-the-us-china-technology-war-reshaped-the-global-supply-chain/, https://merics.org/en/report/huawei-quietly-dominating-chinas-semiconductor-supply-chain, https://www.iaps.ai/research/semiconductor-manufacturing-equipment-export-controls, https://www.justsecurity.org/145562/effective-export-controls-semiconductor-equipment/, https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls, https://laweconcenter.org/resources/us-export-controls-on-ai-and-semiconductors-two-divergent-visions/, https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military, https://www.thefai.org/posts/export-control-loopholes-chipmaking-tools-and-their-subcomponents, https://www.federalregister.gov/documents/2023/10/25/2023-23049/export-controls-on-semiconductor-manufacturing-items, https://forum.effectivealtruism.org/posts/C9fGQBGZmdTS3Gik6/explaining-all-the-us-semiconductor-export-controls, https://250mm.co.kr/en/tech/asml-2026-export-control-analysis, https://aethercouncil.com/research/the-variable-nobodys-governing-why-tsmc-and-nvidia-control-which-ai-future-we-get",
+        "Sources": "Autonomous Built-in Intelligence",
+        "Source": "Autonomous Built-in Intelligence",
         "is_custom_prompt": false,
-        "Date": "2026-07-16 10:49:09 UTC"
-    },
-    {
-        "Title": "Strategic Intelligence Brief: Semiconductor Supply Chain and Export Controls",
-        "Threat_Level": "CRITICAL",
-        "BLUF": "The U.S.-China semiconductor conflict has escalated into a comprehensive supply chain blockade. The introduction of the MATCH Act (H.R. 8170) in April 2026 signals a shift from sectoral sanctions to a statutory, multi-layered restriction regime targeting lithography and etching equipment, forcing a rapid, forced decoupling of global tech ecosystems.",
-        "Top_News": {
-            "Global": [
-                "U.S. Congress advances the MATCH Act, mandating a 150-day ultimatum for allies to align DUV lithography export controls or face unilateral FDPR enforcement.",
-                "China retaliates against Japan by placing 40 companies, including defense and dual-use technology firms, on export control lists.",
-                "ASML faces significant revenue headwinds as China's share of sales is projected to drop from 33% in 2025 to 20% in 2026, exacerbated by potential servicing bans.",
-                "Deloitte reports that 2026 semiconductor supply chain chokepoints are expanding to include GAAFET design tools, advanced packaging, and metrology."
-            ]
-        },
-        "Watch_Out": [
-            "150-day compliance window for Dutch and Japanese firms under the MATCH Act.",
-            "Increased transshipment risks via Southeast Asia and the UAE as Chinese firms attempt to bypass equipment restrictions.",
-            "Potential for China to weaponize rare-earth and specialty gas supply chains in response to further U.S. equipment bans.",
-            "Impact of 'trusted packaging' labels in the EU on global OSAT trade flows."
-        ],
-        "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The semiconductor supply chain is fragmenting into two distinct, non-interoperable spheres. U.S. strategy has shifted from 'small yard, high fence' to a comprehensive blockade of manufacturing equipment (SME). While this has successfully limited China's access to EUV lithography, it has inadvertently catalyzed China's 'national team' approach, forcing domestic innovation in DUV multi-patterning and RISC-V architectures. The primary risk is that aggressive U.S. legislative action (MATCH Act) may fracture the allied coalition if the 150-day ultimatum is perceived as an overreach, while China's retaliatory measures against Japanese firms demonstrate a willingness to target the supply chain's weakest links."
-        },
-        "Predictive_Analysis": "Expect a period of extreme volatility in semiconductor capital expenditure (CapEx) through late 2026 as firms scramble to comply with overlapping regulatory regimes. China will likely accelerate its 'mature node' dominance to leverage economic coercion, while U.S. and allied fabs will face higher costs due to the loss of Chinese market scale. The 2026-2030 period will be defined by a race between China's domestic lithography workarounds and the U.S. effort to maintain a two-generation lead in AI-capable logic chips.",
-        "Source": "https://beyondtmrw.org/article/semiconductor-export-controls-2026-chip-tooling-packaging-and-workarounds, https://semiconductorx.com/semiconductor-bottleneck-atlas.html, https://consumerelectronicsdaily.com/chip-supply/us-semiconductor-export-controls/, https://informedclearly.com/en/trade-war/52262/match-act-chip-export-controls-us-china-2026, https://unteachablecourses.com/semiconductor-supply-chain-2026/, https://juggerinsight.com/en/asml-euv-lithography-export-controls/, https://www.linkedin.com/posts/moses-zaree_semiconductor-technology-lithography-activity-7295576653949247488-qS3X, https://thenextweb.com/news/china-us-chip-export-controls-match-act, https://www.dqindia.com/esdm/new-technologies-and-familiar-challenges-could-make-semiconductor-supply-chains-more-fragile-11724447, https://globalsecurityreview.com/cyber-deterrence-in-the-age-of-semiconductors/, https://systems.enpress-publisher.com/index.php/jipd/article/viewFile/2436/2894, https://www.freecodecamp.org/news/the-lithography-handbook-machines-markets-and-the-next-wave-of-semiconductor-startups/, https://technologies.org/how-the-us-china-technology-war-reshaped-the-global-supply-chain/, https://merics.org/en/report/huawei-quietly-dominating-chinas-semiconductor-supply-chain, https://www.iaps.ai/research/semiconductor-manufacturing-equipment-export-controls, https://www.justsecurity.org/145562/effective-export-controls-semiconductor-equipment/, https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls, https://laweconcenter.org/resources/us-export-controls-on-ai-and-semiconductors-two-divergent-visions/, https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military, https://www.thefai.org/posts/export-control-loopholes-chipmaking-tools-and-their-subcomponents, https://www.federalregister.gov/documents/2023/10/25/2023-23049/export-controls-on-semiconductor-manufacturing-items, https://forum.effectivealtruism.org/posts/C9fGQBGZmdTS3Gik6/explaining-all-the-us-semiconductor-export-controls",
-        "is_custom_prompt": false,
-        "Date": "2026-07-16 10:48:52 UTC"
+        "Date": "2026-07-16 16:01:52 UTC"
     },
     {
         "Date": "2026-07-16",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "India bars citizens from Strait of Hormuz voyages as fighting escalates",
-        "Headline": "India bars citizens from Strait of Hormuz voyages as fighting escalates",
-        "Summary": "India bars citizens from Strait of Hormuz voyages as fighting escalates",
+        "Action": "Crude oil prices have risen again this week after the ceasefire between the US and Iran seemed to have effectively collapsed. ING\u2019s economist James Knightley said that likely won't have much impact at the gas pump in the US",
+        "Headline": "Crude oil prices have risen again this week after the ceasefire between the US and Iran seemed to have effectively collapsed. ING\u2019s economist James Knightley said that likely won't have much impact at the gas pump in the US",
+        "Summary": "Crude oil prices have risen again this week after the ceasefire between the US and Iran seemed to have effectively collapsed. ING\u2019s economist James Knightley said that likely won't have much impact at the gas pump in the US",
         "Risk": "HIGH",
-        "Source": "https://x.com/TheNationalNews/status/2077700302413689324",
-        "Title": "India bars citizens from Strait of Hormuz voyages as fighting escalates",
+        "Source": "https://x.com/Reuters/status/2077775684274188307",
+        "Title": "Crude oil prices have risen again this week after the ceasefire between the US and Iran seemed to have effectively collapsed. ING\u2019s economist James Knightley said that likely won't have much impact at the gas pump in the US",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
     },
@@ -233,356 +50,356 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "Kyiv hit again as Ukraine reports two dead in Russian strike",
-        "Headline": "Kyiv hit again as Ukraine reports two dead in Russian strike",
-        "Summary": "Kyiv hit again as Ukraine reports two dead in Russian strike",
+        "Action": "Houthi leader: 'A full-scale escalation will be met with full-scale escalation'",
+        "Headline": "Houthi leader: 'A full-scale escalation will be met with full-scale escalation'",
+        "Summary": "Houthi leader: 'A full-scale escalation will be met with full-scale escalation'",
         "Risk": "HIGH",
-        "Source": "http://www.africanews.com/2026/07/16/kyiv-hit-again-as-ukraine-reports-two-dead-in-russian-strike/",
-        "Title": "Kyiv hit again as Ukraine reports two dead in Russian strike",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/houthi-leader-full-scale-escalation-will-be-met-full-scale-escalation",
+        "Title": "Houthi leader: 'A full-scale escalation will be met with full-scale escalation'",
         "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "africanews.com"
+        "Publisher": "middleeasteye.net"
     },
     {
         "Date": "2026-07-16",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "Russia in contact with Iranian officials after recent escalations",
-        "Headline": "Russia in contact with Iranian officials after recent escalations",
-        "Summary": "Russia in contact with Iranian officials after recent escalations",
+        "Action": "Yohei Kono, Who Apologized for Japan&#x2019;s Role in Sex Slavery During World War II, Dies at 89",
+        "Headline": "Yohei Kono, Who Apologized for Japan&#x2019;s Role in Sex Slavery During World War II, Dies at 89",
+        "Summary": "Yohei Kono, Who Apologized for Japan&#x2019;s Role in Sex Slavery During World War II, Dies at 89",
         "Risk": "HIGH",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/russia-contact-iranian-officials-after-recent-escalations",
-        "Title": "Russia in contact with Iranian officials after recent escalations",
+        "Source": "https://www.wsj.com/world/asia/japan-yohei-kono-dies-politician-b32fe623",
+        "Title": "Yohei Kono, Who Apologized for Japan&#x2019;s Role in Sex Slavery During World War II, Dies at 89",
         "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "middleeasteye.net"
+        "Publisher": "wsj.com"
     },
     {
-        "Date": "2026",
-        "Actor": "US lawmakers, Trump administration",
-        "Action": "Urge ban on Chinese memory chips",
+        "Date": "2026-07",
+        "Actor": "US lawmakers",
+        "Action": "Urge Trump administration to ban Chinese memory chips",
         "Location": "US, China",
-        "Risk": "Economic/Technological friction, supply chain disruption",
-        "Source": "https://www.ft.com/content/9e7cdf3c-2e52-492f-afeb-b63d86a53ce6",
+        "Risk": "Trade tensions, supply chain disruption",
+        "Source": "https://www.ft.com/content/9e7cdf3c-2e52-492f-afeb-b63d86a53ce6?syn-25a6b1a6=1",
         "Title": "US lawmakers urge Trump administration to ban Chinese memory chips",
         "Feed_Source": "Premium RSS",
         "Publisher": "ft.com"
     },
     {
-        "Date": "2026",
-        "Actor": "Chinese AI start-up Moonshot, Anthropic",
-        "Action": "To launch AI model challenging Anthropic\u2019s lead",
-        "Location": "China (global AI market)",
-        "Risk": "Technological competition, AI dominance shift",
-        "Source": "https://www.ft.com/content/c6ecd8ce-c441-4d7c-aea6-fae3e28fb6ff",
-        "Title": "Chinese AI start-up Moonshot to launch model challenging Anthropic\u2019s lead",
+        "Date": "Ongoing (since 2022)",
+        "Actor": "Ukraine, Russia",
+        "Action": "Defending and restoring energy infrastructure under sustained attack",
+        "Location": "Ukraine",
+        "Risk": "Energy infrastructure vulnerability, wartime resilience",
+        "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/innovation-under-fire-ukraines-energy-defense-is-a-blueprint-for-the-world/",
+        "Title": "Innovation under fire: Ukraine\u2019s energy defense is a blueprint for the world",
         "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
+        "Publisher": "atlanticcouncil.org"
     },
     {
-        "Date": "2026",
-        "Actor": "TSMC",
-        "Action": "To invest $100bn in US production",
-        "Location": "US",
-        "Risk": "Economic investment, supply chain strengthening",
-        "Source": "https://www.ft.com/content/491927e1-1532-486d-94ec-8d6ee2de7bcd",
-        "Title": "Chipmaker TSMC to invest another $100bn in US production",
+        "Date": "Ongoing",
+        "Actor": "African countries, US, China, UAE",
+        "Action": "Geopolitical competition for critical minerals, AI-powered mining tools",
+        "Location": "Africa",
+        "Risk": "Resource competition, supply chain control",
+        "Source": "https://www.atlanticcouncil.org/in-depth-research-reports/report/artificial-intelligence-and-the-future-of-african-mining/",
+        "Title": "Artificial intelligence and the future of African mining",
         "Feed_Source": "Premium RSS",
-        "Publisher": "ft.com"
+        "Publisher": "atlanticcouncil.org"
     },
     {
-        "Date": "2026",
-        "Actor": "Global (countries)",
-        "Action": "Decline in adherence to rule of law since 2020",
+        "Date": "Ongoing (since 2020)",
+        "Actor": "Global",
+        "Action": "Decline in adherence to the rule of law",
         "Location": "Global",
-        "Risk": "Democratic erosion, rule of law decline, increased global uncertainty",
+        "Risk": "Democratic erosion, increased instability",
         "Source": "https://www.atlanticcouncil.org/in-depth-research-reports/report/2026-freedom-and-prosperity-indexes-the-legal-foundations-that-enable-prosperity-are-rapidly-eroding/",
         "Title": "2026 Freedom and Prosperity Indexes: The legal foundations that enable prosperity are rapidly eroding",
         "Feed_Source": "Premium RSS",
         "Publisher": "atlanticcouncil.org"
     },
     {
-        "Date": "2026",
-        "Actor": "US, Iran",
-        "Action": "US-Iran war continues, ceasefire collapses, impacting oil markets",
-        "Location": "Middle East, Strait of Hormuz",
-        "Risk": "Geopolitical conflict, oil market volatility, energy crisis",
-        "Source": "https://www.atlanticcouncil.org/blogs/energysource/dire-straits-no-way-out-of-hormuz/",
-        "Title": "Dire straits: No way out of Hormuz",
+        "Date": "Ongoing",
+        "Actor": "North Korea, US, China, Russia",
+        "Action": "Exploiting geopolitical fragmentation to expand nuclear and missile programs",
+        "Location": "North Korea, Global",
+        "Risk": "Nuclear proliferation, regional instability",
+        "Source": "https://foreignpolicy.com/2026/07/16/north-korea-sanctions-nuclear-weapons-united-states-russia-china-united-nations-security-council/",
+        "Title": "A Divided World Is North Korea\u2019s Greatest Asset",
         "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
+        "Publisher": "foreignpolicy.com"
     },
     {
-        "Date": "July 1, 2026",
-        "Actor": "US government, Anthropic",
-        "Action": "Suspended and lifted access to AI models for foreign nationals",
-        "Location": "US (global AI access)",
-        "Risk": "AI export controls, national security concerns, technological access restrictions",
-        "Source": "https://www.atlanticcouncil.org/blogs/africasource/when-the-plug-gets-pulled-frontier-ai-export-controls-and-what-africa-must-do/",
-        "Title": "When the plug gets pulled: Frontier AI, export controls, and what Africa must do",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "July 14, 2026",
-        "Actor": "Ukraine, Russia",
-        "Action": "Ukraine transformed into leading military power, striking deep inside Russia",
-        "Location": "Ukraine, Russia, Europe",
-        "Risk": "Ongoing conflict, military innovation, European security shift",
-        "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/drone-superpower-ukraine-is-now-europes-first-line-of-defense/",
-        "Title": "Drone superpower Ukraine is now Europe\u2019s first line of defense",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "March 2026",
-        "Actor": "Iran, Amazon Web Services (AWS)",
-        "Action": "Struck AWS data centers",
+        "Date": "2026-03",
+        "Actor": "Iran",
+        "Action": "Struck Amazon Web Services (AWS) data centers",
         "Location": "United Arab Emirates, Bahrain",
-        "Risk": "Cyber warfare/infrastructure attacks, regional instability, AI infrastructure vulnerability",
+        "Risk": "Infrastructure vulnerability, strategic miscalculation",
         "Source": "https://foreignpolicy.com/2026/07/16/iranian-attacks-gulf-ai-ambitions/",
         "Title": "Iranian Attacks Need Not Change the Gulf\u2019s AI Ambitions",
         "Feed_Source": "Premium RSS",
         "Publisher": "foreignpolicy.com"
     },
     {
-        "Date": "July 2026",
+        "Date": "2026-07-14",
         "Actor": "Russia, Ukraine",
-        "Action": "Escalated Black Sea offensive, targeting trade routes and ports",
-        "Location": "Black Sea, Ukraine (Odesa oblast)",
-        "Risk": "Economic warfare, maritime security, energy supply disruption",
+        "Action": "Escalated Black Sea offensive, targeting major trade routes and deepwater ports",
+        "Location": "Black Sea, Ukraine",
+        "Risk": "Strain on Ukraine's economy, maritime security",
         "Source": "https://foreignpolicy.com/2026/07/15/russia-ukraine-war-strikes-black-sea-ports-odesa-zelensky-koretskyi-fedorov/",
         "Title": "Russia Shifts Its Focus to the Black Sea",
         "Feed_Source": "Premium RSS",
         "Publisher": "foreignpolicy.com"
     },
     {
-        "Date": "July 1, 2026",
-        "Actor": "China (Xi Jinping)",
-        "Action": "Enacted 'Law on Promoting Ethnic Unity and Progress'",
-        "Location": "China",
-        "Risk": "Human rights concerns, ethnic assimilation, internal control",
-        "Source": "https://foreignpolicy.com/2026/07/15/china-ethnic-laws-xinjiang-tibet-xi/",
-        "Title": "A New Law Heralds China\u2019s Fraught Ethnic Future",
+        "Date": "2026-07-15",
+        "Actor": "Russia, Ukraine, Turkey",
+        "Action": "Kremlin states no immediate prospect of resuming peace negotiations",
+        "Location": "Ukraine, Russia",
+        "Risk": "Prolonged conflict, stalled diplomatic efforts",
+        "Source": "https://moderndiplomacy.eu/2026/07/16/russia-sees-no-immediate-return-to-ukraine-peace-talks/",
+        "Title": "Russia Sees No Immediate Return to Ukraine Peace Talks",
         "Feed_Source": "Premium RSS",
-        "Publisher": "foreignpolicy.com"
+        "Publisher": "moderndiplomacy.eu"
     },
     {
-        "Date": "July 2026",
-        "Actor": "European Union, Sudan",
-        "Action": "Expanded sanctions regime on Sudan, banned gold trade",
-        "Location": "Sudan, European Union",
-        "Risk": "Civil war, humanitarian crisis, economic sanctions, regional instability",
-        "Source": "https://foreignpolicy.com/2026/07/15/sudan-civil-war-crimes-sanctions-un-report-genocide/",
-        "Title": "Sudan Faces New Sanctions as Evidence of Atrocities Mounts",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "foreignpolicy.com"
-    },
-    {
-        "Date": "July 16, 2026",
-        "Actor": "US Vice President JD Vance, Israeli officials",
-        "Action": "Accused Israeli officials of influencing US public opinion on Iran deal",
-        "Location": "US, Israel, Iran",
-        "Risk": "Diplomatic friction, US-Israel relations strain, Middle East policy disagreement",
+        "Date": "2026-07-14",
+        "Actor": "US Vice President JD Vance, Israeli government officials",
+        "Action": "Vance accuses Israeli officials of attempting to influence US policy on Iran deal",
+        "Location": "US, Israel",
+        "Risk": "Strained US-Israel relations, foreign influence concerns",
         "Source": "https://moderndiplomacy.eu/2026/07/16/vance-says-some-israeli-officials-tried-to-influence-us-on-iran-deal/",
         "Title": "Vance Says Some Israeli Officials Tried to Influence US on Iran Deal",
         "Feed_Source": "Premium RSS",
         "Publisher": "moderndiplomacy.eu"
     },
     {
-        "Date": "July 16, 2026",
-        "Actor": "Iran, US",
-        "Action": "Warned Strait of Hormuz is 'red line', threatened retaliation if US attacks infrastructure",
-        "Location": "Strait of Hormuz, Gulf region",
-        "Risk": "Escalating regional conflict, global energy supply disruption, maritime security",
-        "Source": "https://moderndiplomacy.eu/2026/07/16/iran-warns-strait-of-hormuz-is-a-red-line-as-us-iran-conflict-deepens/",
-        "Title": "Iran Warns Strait of Hormuz Is a \u2018Red Line\u2019 as US Iran Conflict Deepens",
+        "Date": "Ongoing (since 2026)",
+        "Actor": "US, Iran, Southeast Asian countries, Russia",
+        "Action": "US reimposes naval blockade on Iranian ports, Iran attacks shipping, Southeast Asia turns to Russian oil",
+        "Location": "Strait of Hormuz, Southeast Asia",
+        "Risk": "Oil price volatility, supply chain disruption, geopolitical realignment",
+        "Source": "https://www.worldpoliticsreview.com/southeast-asia-russia-energy-hormuz-asean/",
+        "Title": "Trump\u2019s War in Iran Prompts Southeast Asia to Turn to Russia",
         "Feed_Source": "Premium RSS",
-        "Publisher": "moderndiplomacy.eu"
+        "Publisher": "worldpoliticsreview.com"
     },
     {
-        "Date": "April 2026",
-        "Actor": "China, Taiwan, African nations",
-        "Action": "Pressure campaign against Taiwan, impacting African nations' diplomatic actions",
+        "Date": "2025-08",
+        "Actor": "US President Donald Trump, Armenia, Azerbaijan",
+        "Action": "Hosted signing of joint declaration to end conflict and establish diplomatic relations",
+        "Location": "South Caucasus",
+        "Risk": "Regional stability, Eurasian connectivity",
+        "Source": "https://www.worldpoliticsreview.com/tripp-south-caucasus-trump-azerbaijan-armenia/",
+        "Title": "Supporting Democracy in the South Caucasus Is a Strategic Imperative",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "worldpoliticsreview.com"
+    },
+    {
+        "Date": "2026-04",
+        "Actor": "China, Taiwan, African governments",
+        "Action": "African nations support China's 'One China' principle, impacting Taiwan's diplomatic activities",
         "Location": "Africa, Taiwan, China",
-        "Risk": "Diplomatic pressure, 'One China' policy enforcement, digital rights suppression",
+        "Risk": "Diplomatic pressure, freedom of assembly concerns",
         "Source": "https://www.worldpoliticsreview.com/china-taiwan-africa-pressure-campaign/",
         "Title": "China\u2019s Pressure Campaign Against Taiwan Puts African Nations in a Bind",
         "Feed_Source": "Premium RSS",
         "Publisher": "worldpoliticsreview.com"
     },
     {
-        "Date": "2026",
-        "Actor": "Chinese Communist Party, Ma Xingrui, Xi Jinping",
-        "Action": "Expelled senior official Ma Xingrui from Politburo for corruption",
-        "Location": "China",
-        "Risk": "Political purges, internal power struggles, governance stability",
-        "Source": "https://www.worldpoliticsreview.com/xi-purge-politburo-ma-xingrui-china/",
-        "Title": "China\u2019s Top Leadership Faces Another Purge",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "worldpoliticsreview.com"
-    },
-    {
-        "Date": "October 27, 2026",
-        "Actor": "Israel (Benjamin Netanyahu)",
-        "Action": "To hold national elections amid war in Gaza and Iran conflict",
-        "Location": "Israel, Gaza, Iran",
-        "Risk": "Political instability, ongoing conflict, leadership change",
-        "Source": "https://www.worldpoliticsreview.com/israel-election-october-2026-netanyahu/",
-        "Title": "Israel to Hold Elections in October",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "worldpoliticsreview.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Pentagon, US, Iran",
-        "Action": "Uses new AI tools and workflows in war on Iran",
-        "Location": "Pacific, US, Iran",
-        "Risk": "AI in warfare, military technology advancement, ongoing conflict",
-        "Source": "https://www.defenseone.com/technology/2026/07/how-former-marine-rewriting-future-battlefield-ai/414758/",
-        "Title": "How a former Marine is rewriting the future of battlefield AI",
+        "Date": "2026-07-15",
+        "Actor": "Space Development Agency (SDA), SpaceX, US military",
+        "Action": "Resumes launch of Tranche 1 satellites for military-communication constellation",
+        "Location": "Vandenberg Space Force Base, US",
+        "Risk": "Military space capabilities, space weaponization concerns",
+        "Source": "https://www.defenseone.com/policy/2026/07/space-development-agency-satellite-launches-criticisms/414781/",
+        "Title": "Space Development Agency resumes key satellite launches after delays, watchdog criticisms",
         "Feed_Source": "Premium RSS",
         "Publisher": "defenseone.com"
     },
     {
-        "Date": "July 14, 2026",
-        "Actor": "U.S. Navy",
-        "Action": "Issued RFI for family of carrier-based drones for various missions",
-        "Location": "US",
-        "Risk": "Naval technology development, drone warfare, defense capabilities",
-        "Source": "https://www.c4isrnet.com/news/your-navy/2026/07/14/the-us-navy-is-eyeing-next-gen-carrier-based-drones-heres-what-they-might-do/",
-        "Title": "The US Navy is eyeing next-gen carrier-based drones. Here\u2019s what they might do.",
+        "Date": "Ongoing (since 2020, with 2025 data)",
+        "Actor": "Islamist extremist groups, foreign terrorist fighters",
+        "Action": "Increased influx and presence of foreign fighters",
+        "Location": "Sub-Saharan Africa",
+        "Risk": "Increased terrorism, regional instability",
+        "Source": "https://warontherocks.com/one-size-doesnt-fit-all-the-many-faces-of-africas-foreign-fighters/",
+        "Title": "One Size Doesn\u2019t Fit All: The Many Faces of Africa\u2019s Foreign Fighters",
         "Feed_Source": "Premium RSS",
-        "Publisher": "c4isrnet.com"
+        "Publisher": "warontherocks.com"
     },
     {
-        "Date": "June 2026",
-        "Actor": "Canada, Australia, NORAD",
-        "Action": "To acquire Australian over-the-horizon radar system to plug surveillance gaps",
-        "Location": "Arctic, Canada, US, Australia",
-        "Risk": "Arctic security, airspace surveillance, defense cooperation",
+        "Date": "2026-06",
+        "Actor": "Canada, US (NORAD), Australia",
+        "Action": "Canada signs agreements for Arctic Over-The-Horizon Radar (A-OTHR)",
+        "Location": "Arctic, Canada, US",
+        "Risk": "Airspace surveillance gaps, Arctic security",
         "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/07/13/canada-to-plug-surveillance-gaps-with-aussie-over-the-horizon-radar/",
         "Title": "Canada to plug surveillance gaps with Aussie over-the-horizon radar",
         "Feed_Source": "Premium RSS",
         "Publisher": "c4isrnet.com"
     },
     {
-        "Date": "July 6, 2026",
-        "Actor": "China, Chinese Coast Guard, PLA Navy",
-        "Action": "Sends coast guard vessels and test-fired submarine-launched ballistic missile in Pacific",
-        "Location": "Pacific Ocean (east of Taiwan), South China Sea",
-        "Risk": "Regional tensions, territorial claims, military posturing, maritime security",
-        "Source": "https://www.defensenews.com/global/asia-pacific/2026/07/15/first-the-coast-guard-then-an-icbm-china-tests-new-long-term-ways-to-hold-off-rivals-in-asia/",
-        "Title": "First the coast guard, then an ICBM: China tests new, long-term ways to hold off rivals in Asia",
+        "Date": "2026-07-15",
+        "Actor": "France, Germany",
+        "Action": "Discussing defense cooperation amid strains over major armament programs",
+        "Location": "Europe",
+        "Risk": "Strained EU defense cooperation, industrial rivalries",
+        "Source": "https://www.defensenews.com/global/europe/2026/07/16/franco-german-defense-cooperation-under-strain-as-macron-merz-meet/",
+        "Title": "Franco-German defense cooperation under strain as Macron, Merz meet",
         "Feed_Source": "Premium RSS",
         "Publisher": "defensenews.com"
     },
     {
-        "Date": "July 2026",
-        "Actor": "President Donald Trump, US defense executives",
-        "Action": "Urges acceleration of weapons production and expansion of manufacturing capacity",
-        "Location": "Carlisle, Pennsylvania, US",
-        "Risk": "Defense industrial base, supply chain bottlenecks, ongoing wars",
-        "Source": "https://www.defensenews.com/news/your-military/2026/07/15/pressure-mounts-on-defense-executives-to-boost-weapons-production/",
-        "Title": "Pressure mounts on US defense executives to boost weapons production",
+        "Date": "2026-07-14",
+        "Actor": "Ukrainian President Volodymyr Zelenskyy, Mykhailo Fedorov",
+        "Action": "Dismissed Mykhailo Fedorov as Minister of Defense",
+        "Location": "Ukraine",
+        "Risk": "Government instability, leadership change during wartime",
+        "Source": "https://www.defensenews.com/global/europe/2026/07/15/fedorov-out-as-ukraines-defense-minister-in-major-government-shake-up/",
+        "Title": "Fedorov out as Ukraine\u2019s defense minister in major government shake-up",
         "Feed_Source": "Premium RSS",
         "Publisher": "defensenews.com"
     },
     {
-        "Date": "July 14, 2026",
-        "Actor": "Russia (Roscosmos), US (NASA)",
-        "Action": "New Russian-American crew (Soyuz MS-29) arrives at International Space Station",
-        "Location": "International Space Station",
-        "Risk": "International space cooperation, space exploration",
+        "Date": "2026-07-14",
+        "Actor": "US Air Force, Pentagon",
+        "Action": "Reaches framework agreements for thousands of affordable cruise missiles (FAMM program)",
+        "Location": "US",
+        "Risk": "Defense procurement strategy shift, cost-effective warfare",
+        "Source": "https://www.defensenews.com/industry/techwatch/2026/07/15/us-air-force-turns-to-cheaper-cruise-missiles-it-can-buy-by-the-thousand/",
+        "Title": "US Air Force turns to cheaper cruise missiles it can buy by the thousands",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "defensenews.com"
+    },
+    {
+        "Date": "2026-07-14",
+        "Actor": "Roscosmos (Russia), NASA (US)",
+        "Action": "Launched new crew (Soyuz MS-29) to International Space Station",
+        "Location": "Baikonur Cosmodrome (Kazakhstan), ISS",
+        "Risk": "International cooperation in space, space safety",
         "Source": "https://spacepolicyonline.com/news/new-russian-american-crew-arrives-at-iss/",
         "Title": "New Russian-American Crew Arrives at ISS",
         "Feed_Source": "Premium RSS",
         "Publisher": "spacepolicyonline.com"
     },
     {
-        "Date": "2026",
-        "Actor": "Airbus Defence and Space, Destinus, MBDA Deutschland, Safran, Thales (Bliksem EXO Consortium)",
-        "Action": "Formed consortium to develop sovereign exo-atmospheric missile interceptor",
+        "Date": "2026-07",
+        "Actor": "Airbus Defence and Space, Destinus, MBDA Deutschland, Safran, Thales",
+        "Action": "Form consortium to develop sovereign European exo-atmospheric missile interceptor",
         "Location": "Europe",
-        "Risk": "Missile defense, European defense autonomy, technological development",
+        "Risk": "European defense autonomy, missile defense capabilities",
         "Source": "https://spacewatch.global/2026/07/five-european-defense-companies-form-consortium-to-develop-sovereign-exo-atmospheric-missile-interceptor/",
         "Title": "Five European Defense Companies Form Consortium to Develop Sovereign Exo-Atmospheric Missile Interceptor",
         "Feed_Source": "Premium RSS",
         "Publisher": "spacewatch.global"
     },
     {
-        "Date": "July 16, 2026",
-        "Actor": "Space Development Agency (SDA), SpaceX",
-        "Action": "To launch 21 communications satellites for the Proliferated Warfighter Space Architecture",
-        "Location": "Vandenberg Space Force Base (California)",
-        "Risk": "Military communications, space-based defense, global security",
-        "Source": "https://spaceflightnow.com/2026/07/16/live-coverage-spacex-to-launch-21-communications-satellites-for-the-space-development-agency/",
-        "Title": "Live coverage: SpaceX to launch 21 communications satellites for the Space Development Agency",
+        "Date": "2026-07-14",
+        "Actor": "Myanmar military, rebel groups, Thailand",
+        "Action": "Myanmar military and rebel groups ready for dialogue, Thailand to facilitate",
+        "Location": "Thailand, Myanmar",
+        "Risk": "Conflict resolution, political stability",
+        "Source": "https://thediplomat.com/2026/07/myanmar-military-and-some-rebel-groups-ready-for-talks-thai-fm-says/",
+        "Title": "Myanmar Military and Some Rebel Groups Ready For Talks, Thai FM Says",
         "Feed_Source": "Premium RSS",
-        "Publisher": "spaceflightnow.com"
+        "Publisher": "thediplomat.com"
     },
     {
-        "Date": "July 2026",
-        "Actor": "TSMC",
-        "Action": "To raise mature-node foundry prices starting January 2027 due to rising AI demand and costs",
-        "Location": "Taiwan (global semiconductor market)",
-        "Risk": "Semiconductor supply chain, economic impact, inflation",
-        "Source": "https://technode.com/2026/07/15/tsmc-to-raise-mature-node-foundry-prices-starting-january-2027/",
-        "Title": "TSMC to raise mature-node foundry prices starting January 2027",
+        "Date": "2026-07-15",
+        "Actor": "Prime Minister Anthony Albanese (Australia), Australian government",
+        "Action": "Announces plans to manage AI, establish Office of AI, create national standards",
+        "Location": "Australia",
+        "Risk": "AI governance, economic impact, ethical AI development",
+        "Source": "https://thediplomat.com/2026/07/australia-wants-to-manage-ai-what-will-that-look-like/",
+        "Title": "Australia Wants to \u2018Manage\u2019 AI. What Will That Look Like?",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "thediplomat.com"
+    },
+    {
+        "Date": "2026-07 (announcement)",
+        "Actor": "Apple, Baidu, Alibaba",
+        "Action": "Partners for AI features in Apple Intelligence in China",
+        "Location": "China",
+        "Risk": "AI market competition, data privacy, tech regulation",
+        "Source": "https://technode.com/2026/07/16/baidu-to-power-ai-search-for-apples-apple-intelligence-in-china/",
+        "Title": "Baidu to power AI search for Apple\u2019s Apple Intelligence in China",
         "Feed_Source": "Premium RSS",
         "Publisher": "technode.com"
     },
     {
-        "Date": "July 2026",
-        "Actor": "Bank of Korea (Shin Hyun-song), US Federal Reserve",
-        "Action": "Ends rate freeze, lifting policy rate, challenging US Fed\u2019s AI inflation call",
+        "Date": "2026-07-15",
+        "Actor": "Bank of Korea, US Federal Reserve",
+        "Action": "Lifts policy rate, challenging Fed's view on AI investment and inflation",
         "Location": "South Korea, US",
-        "Risk": "Economic policy, inflation, AI investment impact",
+        "Risk": "Monetary policy divergence, inflation concerns",
         "Source": "https://asiatimes.com/2026/07/bank-of-korea-picks-a-fight-with-us-feds-ai-inflation-call/",
         "Title": "Bank of Korea picks a fight with US Fed\u2019s AI inflation call",
         "Feed_Source": "Premium RSS",
         "Publisher": "asiatimes.com"
     },
     {
-        "Date": "July 6, 2026",
+        "Date": "2026-07-06",
         "Actor": "China (People\u2019s Liberation Army Navy)",
-        "Action": "Successfully launched a submarine-launched strategic missile in the Pacific",
-        "Location": "South Pacific, South China Sea",
-        "Risk": "Military posturing, regional security, nuclear deterrence",
+        "Action": "Successfully launched a submarine-launched strategic missile",
+        "Location": "South Pacific",
+        "Risk": "Military power projection, regional security",
         "Source": "https://asiatimes.com/2026/07/what-chinas-sub-launched-missile-test-really-signaled/",
         "Title": "What China\u2019s sub-launched missile test really signaled",
         "Feed_Source": "Premium RSS",
         "Publisher": "asiatimes.com"
     },
     {
-        "Date": "June 5, 2026",
-        "Actor": "US Trade Representative (USTR), US, Thailand, China",
-        "Action": "Imposes new tariffs on Thailand and other countries, citing forced labor concerns",
-        "Location": "US, Thailand, China",
-        "Risk": "Trade war, economic coercion, supply chain ethics",
-        "Source": "https://fulcrum.sg/new-us-tariffs-on-thailand-the-need-for-market-diversification/",
-        "Title": "New US Tariffs on Thailand: The Need for Market Diversification",
+        "Date": "2026-07-09",
+        "Actor": "India, Australia",
+        "Action": "Unveiled Partnership on Cyber, Critical Technologies and Supply Chains (PACTS)",
+        "Location": "India, Australia",
+        "Risk": "Cybersecurity threats, supply chain security, regional cooperation",
+        "Source": "https://www.aspistrategist.org.au/how-pacts-will-upgrade-the-india-australia-cybersecurity-partnership/",
+        "Title": "How PACTS will upgrade the India\u2013Australia cybersecurity partnership",
         "Feed_Source": "Premium RSS",
-        "Publisher": "fulcrum.sg"
+        "Publisher": "aspistrategist.org.au"
     },
     {
-        "Date": "July 15, 2026",
-        "Actor": "Iran, US, Houthi allies",
-        "Action": "Warns of expanding campaign to Red Sea if US attacks continue, threatening Bab el-Mandeb strait",
-        "Location": "Red Sea, Strait of Hormuz, Bab el-Mandeb strait, Yemen",
-        "Risk": "Escalating regional conflict, global energy supply disruption, maritime security",
-        "Source": "https://gcaptain.com/after-hormuz-heres-why-the-red-sea-is-now-the-worlds-most-vulnerable-shipping-route/",
-        "Title": "After Hormuz, Here\u2019s Why the Red Sea Is Now the World\u2019s Most Vulnerable Shipping Route",
+        "Date": "2026-07-06 to 2026-07-16",
+        "Actor": "Ukraine (Unmanned Systems Forces), Russia",
+        "Action": "Drone campaign hits 147 Russian-linked vessels",
+        "Location": "Black Sea, Sea of Azov",
+        "Risk": "Maritime warfare, disruption of Russian logistics",
+        "Source": "https://gcaptain.com/ukraine-says-drone-campaign-has-hit-147-russian-linked-vessels-in-11-days/",
+        "Title": "Ukraine Says Drone Campaign Has Hit 147 Russian-Linked Vessels in 11 Days",
         "Feed_Source": "Premium RSS",
         "Publisher": "gcaptain.com"
     },
     {
-        "Date": "July 2026",
-        "Actor": "Iran (IRGC), US, Jordan, Kuwait, Bahrain",
-        "Action": "Strikes US base in Jordan in retaliation for US strikes; Iran threatens regional infrastructure",
-        "Location": "Jordan, Iran, Kuwait, Bahrain, Gulf region",
-        "Risk": "Escalating regional conflict, military retaliation, infrastructure damage",
-        "Source": "https://www.middleeasteye.net/news/iran-strikes-us-base-jordan-american-bombardment-continues",
-        "Title": "Iran strikes US base in Jordan as American bombardment continues",
+        "Date": "2026-07-16",
+        "Actor": "US, Iran, Kuwait, Jordan",
+        "Action": "US and Iran trade heavier strikes, ceasefire collapses, Strait of Hormuz remains closed",
+        "Location": "Middle East, Strait of Hormuz",
+        "Risk": "Conflict escalation, regional instability, oil supply disruption",
+        "Source": "https://gcaptain.com/iran-us-skirmishes-worsen-as-hormuz-shipping-traffic-dwindles/",
+        "Title": "Iran-US Skirmishes Worsen as Hormuz Shipping Traffic Dwindles",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "gcaptain.com"
+    },
+    {
+        "Date": "2026-07-16",
+        "Actor": "Houthis (Yemen), Saudi Arabia",
+        "Action": "Fire missiles at Saudi Arabia, breaking years of calm",
+        "Location": "Saudi Arabia, Yemen",
+        "Risk": "Regional conflict escalation, humanitarian crisis",
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/houthi-leader-full-scale-escalation-will-be-met-full-scale-escalation",
+        "Title": "Houthi leader: 'A full-scale escalation will be met with full-scale escalation'",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "middleeasteye.net"
+    },
+    {
+        "Date": "2026-02",
+        "Actor": "Ayatollah Ali Khamenei (Iran), Mojtaba Khamenei (Iran)",
+        "Action": "Assassination of Supreme Leader Khamenei, succession by son",
+        "Location": "Iran",
+        "Risk": "Political transition, regional power vacuum",
+        "Source": "https://www.middleeasteye.net/news/inside-khameneis-funeral-revealing-moments-week-mourning",
+        "Title": "Inside Khamenei's funeral: Revealing moments from a week of mourning",
         "Feed_Source": "Premium RSS",
         "Publisher": "middleeasteye.net"
     },
@@ -591,12 +408,12 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "#Security | Less than six months before the expiration of the mandate of the United Nations Interim Force in Lebanon (UNIFIL), the Security Council will examine on Thursday the latest report on the implementation of resolution 1701. By @sylze",
-        "Headline": "#Security | Less than six months before the expiration of the mandate of the United Nations Interim Force in Lebanon (UNIFIL), the Security Council will examine on Thursday the latest report on the implementation of resolution 1701. By @sylze",
-        "Summary": "#Security | Less than six months before the expiration of the mandate of the United Nations Interim Force in Lebanon (UNIFIL), the Security Council will examine on Thursday the latest report on the implementation of resolution 1701. By @sylze",
+        "Action": "India ask its seafarers not to take Hormuz voyages",
+        "Headline": "India ask its seafarers not to take Hormuz voyages",
+        "Summary": "India ask its seafarers not to take Hormuz voyages",
         "Risk": "HIGH",
-        "Source": "https://x.com/LOrientLeJour/status/2077686166963327437",
-        "Title": "#Security | Less than six months before the expiration of the mandate of the United Nations Interim Force in Lebanon (UNIFIL), the Security Council will examine on Thursday the latest report on the implementation of resolution 1701. By @sylze",
+        "Source": "https://x.com/Reuters/status/2077758956500361514",
+        "Title": "India ask its seafarers not to take Hormuz voyages",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
     },
@@ -605,126 +422,126 @@
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "Foreign Ministry Undersecretary - Stability in Sudan Is Key to Security in the Horn of Africa and the Red Sea",
-        "Headline": "Foreign Ministry Undersecretary - Stability in Sudan Is Key to Security in the Horn of Africa and the Red Sea",
-        "Summary": "Foreign Ministry Undersecretary - Stability in Sudan Is Key to Security in the Horn of Africa and the Red Sea",
+        "Action": "US or Iran \u2014 Who needs a new truce deal more?",
+        "Headline": "US or Iran \u2014 Who needs a new truce deal more?",
+        "Summary": "US or Iran \u2014 Who needs a new truce deal more?",
         "Risk": "HIGH",
-        "Source": "https://allafrica.com/stories/202607160251.html",
-        "Title": "Foreign Ministry Undersecretary - Stability in Sudan Is Key to Security in the Horn of Africa and the Red Sea",
+        "Source": "https://www.aljazeera.com/news/2026/7/16/us-or-iran-who-needs-a-new-truce-deal?traffic_source=rss",
+        "Title": "US or Iran \u2014 Who needs a new truce deal more?",
         "Feed_Source": "Psyopoly Supabase",
-        "Publisher": "allafrica.com"
+        "Publisher": "aljazeera.com"
     },
     {
         "Date": "2026-07-16",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
         "Event": "Strategic Update",
-        "Action": "The US reimposed a naval blockade on Iran and disabled an oil tanker as strikes targeted Iranian military sites; Iran responded by targeting US military sites in neighboring countries",
-        "Headline": "The US reimposed a naval blockade on Iran and disabled an oil tanker as strikes targeted Iranian military sites; Iran responded by targeting US military sites in neighboring countries",
-        "Summary": "The US reimposed a naval blockade on Iran and disabled an oil tanker as strikes targeted Iranian military sites; Iran responded by targeting US military sites in neighboring countries",
+        "Action": "On the first day of the war in Iran, a primary school in the remote town of Minab was bombed. 156 people died, including 120 pupils and 26 of their teachers Sky's @DominicWaghorn was the first journalist from a major western organisation to go there Watch the full documentary from 5pm on the Sky News YouTube channel and at 9pm on Sky News and Sky Documentaries",
+        "Headline": "On the first day of the war in Iran, a primary school in the remote town of Minab was bombed. 156 people died, including 120 pupils and 26 of their teachers Sky's @DominicWaghorn was the first journalist from a major western organisation to go there Watch the full documentary from 5pm on the Sky News YouTube channel and at 9pm on Sky News and Sky Documentaries",
+        "Summary": "On the first day of the war in Iran, a primary school in the remote town of Minab was bombed. 156 people died, including 120 pupils and 26 of their teachers Sky's @DominicWaghorn was the first journalist from a major western organisation to go there Watch the full documentary from 5pm on the Sky News YouTube channel and at 9pm on Sky News and Sky Documentaries",
         "Risk": "HIGH",
-        "Source": "https://x.com/Reuters/status/2077684664840384707",
-        "Title": "The US reimposed a naval blockade on Iran and disabled an oil tanker as strikes targeted Iranian military sites; Iran responded by targeting US military sites in neighboring countries",
+        "Source": "https://x.com/SkyNews/status/2077755756019937569",
+        "Title": "On the first day of the war in Iran, a primary school in the remote town of Minab was bombed. 156 people died, including 120 pupils and 26 of their teachers Sky's @DominicWaghorn was the first journalist from a major western organisation to go there Watch the full documentary from 5pm on the Sky News YouTube channel and at 9pm on Sky News and Sky Documentaries",
         "Feed_Source": "Psyopoly Supabase",
         "Publisher": "x.com"
     },
     {
-        "Date": "July 2026",
-        "Actor": "TSMC",
-        "Action": "Invests $100bn in production",
-        "Location": "US",
-        "Risk": "Supply chain concentration, geopolitical competition in semiconductors",
-        "Source": "https://www.ft.com/content/491927e1-1532-486d-94ec-8d6ee2de7bcd",
-        "Title": "Chipmaker TSMC to invest another $100bn in US production",
+        "Date": "N/A",
+        "Actor": "US lawmakers",
+        "Action": "Urged Trump administration to ban Chinese memory chips",
+        "Location": "US, China",
+        "Risk": "Economic/Trade conflict, supply chain disruption",
+        "Source": "https://www.ft.com/content/9e7cdf3c-2e52-492f-afeb-b63d86a53ce6?syn-25a6b1a6=1",
+        "Title": "US lawmakers urge Trump administration to ban Chinese memory chips",
         "Feed_Source": "Premium RSS",
         "Publisher": "ft.com"
     },
     {
-        "Date": "2026",
-        "Actor": "Global adherence to rule of law",
-        "Action": "Significant decline in rule of law since 2020",
-        "Location": "Global",
-        "Risk": "Democratic erosion, increased global uncertainty, conflict",
-        "Source": "https://www.atlanticcouncil.org/in-depth-research-reports/report/2026-freedom-and-prosperity-indexes-the-legal-foundations-that-enable-prosperity-are-rapidly-eroding/",
-        "Title": "2026 Freedom and Prosperity Indexes: The legal foundations that enable prosperity are rapidly eroding",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "July 2026",
+        "Date": "N/A",
         "Actor": "US, Iran",
-        "Action": "US-Iran war continues, ceasefire collapses",
-        "Location": "Strait of Hormuz, Middle East",
-        "Risk": "Oil market disruption, prolonged conflict, regional instability",
+        "Action": "US-Iran war ongoing; month-old ceasefire collapsed",
+        "Location": "Strait of Hormuz",
+        "Risk": "Geopolitical conflict, oil market disruption",
         "Source": "https://www.atlanticcouncil.org/blogs/energysource/dire-straits-no-way-out-of-hormuz/",
         "Title": "Dire straits: No way out of Hormuz",
         "Feed_Source": "Premium RSS",
         "Publisher": "atlanticcouncil.org"
     },
     {
-        "Date": "June-July 2026",
-        "Actor": "US government, Anthropic",
-        "Action": "Suspends then lifts access to advanced AI models for foreign nationals",
-        "Location": "US, Global",
-        "Risk": "National security concerns, AI export controls, technological sovereignty",
-        "Source": "https://www.atlanticcouncil.org/blogs/africasource/when-the-plug-gets-pulled-frontier-ai-export-controls-and-what-africa-must-do/",
-        "Title": "When the plug gets pulled: Frontier AI, export controls, and what Africa must do",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Ukraine, Russia",
-        "Action": "Transforms into a leading military power, pioneering drone warfare",
-        "Location": "Ukraine, Europe",
-        "Risk": "Escalation of Russia-Ukraine war, shift in European security architecture",
-        "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/drone-superpower-ukraine-is-now-europes-first-line-of-defense/",
-        "Title": "Drone superpower Ukraine is now Europe\u2019s first line of defense",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "atlanticcouncil.org"
-    },
-    {
-        "Date": "March 2026",
-        "Actor": "Iran, Amazon Web Services (AWS)",
-        "Action": "Strikes AWS data centers",
-        "Location": "UAE, Bahrain",
-        "Risk": "Regional instability, cyber/physical attacks on critical infrastructure",
-        "Source": "https://foreignpolicy.com/2026/07/16/iranian-attacks-gulf-ai-ambitions/",
-        "Title": "Iranian Attacks Need Not Change the Gulf\u2019s AI Ambitions",
-        "Feed_Source": "Premium RSS",
-        "Publisher": "foreignpolicy.com"
-    },
-    {
-        "Date": "July 2026",
-        "Actor": "Russia, Ukraine",
-        "Action": "Escalates Black Sea offensive, targeting trade routes and ports",
-        "Location": "Black Sea, Ukraine",
-        "Risk": "Disruption of Ukraine's economy, food security, regional maritime security",
+        "Date": "July 15, 2026",
+        "Actor": "Russia",
+        "Action": "Escalated Black Sea offensive, targeting trade routes and deepwater ports",
+        "Location": "Black Sea, Ukraine (Odesa oblast)",
+        "Risk": "Military conflict, economic disruption",
         "Source": "https://foreignpolicy.com/2026/07/15/russia-ukraine-war-strikes-black-sea-ports-odesa-zelensky-koretskyi-fedorov/",
         "Title": "Russia Shifts Its Focus to the Black Sea",
         "Feed_Source": "Premium RSS",
         "Publisher": "foreignpolicy.com"
     },
     {
-        "Date": "July 2026",
-        "Actor": "China (National People's Congress)",
-        "Action": "Passes 'Law on Promoting Ethnic Unity and Progress'",
+        "Date": "July 1, 2026",
+        "Actor": "China (National People's Congress, President Xi Jinping)",
+        "Action": "Enacted 'Law on Promoting Ethnic Unity and Progress'",
         "Location": "China",
-        "Risk": "Human rights concerns, internal social tensions, cultural erosion",
+        "Risk": "Human rights concerns, internal social unrest",
         "Source": "https://foreignpolicy.com/2026/07/15/china-ethnic-laws-xinjiang-tibet-xi/",
         "Title": "A New Law Heralds China\u2019s Fraught Ethnic Future",
         "Feed_Source": "Premium RSS",
         "Publisher": "foreignpolicy.com"
     },
     {
-        "Date": "July 2026",
-        "Actor": "Iran, US",
-        "Action": "Warns Strait of Hormuz is a 'red line', threatens retaliation",
-        "Location": "Strait of Hormuz, Gulf region",
-        "Risk": "Escalation of US-Iran conflict, global energy supply disruption",
-        "Source": "https://moderndiplomacy.eu/2026/07/16/iran-warns-strait-of-hormuz-is-a-red-line-as-us-iran-conflict-deepens/",
-        "Title": "Iran Warns Strait of Hormuz Is a \u2018Red Line\u2019 as US Iran Conflict Deepens",
+        "Date": "July 16, 2026",
+        "Actor": "Russia (Kremlin)",
+        "Action": "Stated no immediate prospect for resuming peace negotiations with Ukraine",
+        "Location": "Russia, Ukraine",
+        "Risk": "Prolonged conflict, diplomatic stalemate",
+        "Source": "https://moderndiplomacy.eu/2026/07/16/russia-sees-no-immediate-return-to-ukraine-peace-talks/",
+        "Title": "Russia Sees No Immediate Return to Ukraine Peace Talks",
         "Feed_Source": "Premium RSS",
         "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": "July 15, 2026",
+        "Actor": "US Vice President JD Vance, Israeli government officials",
+        "Action": "Vance accused Israeli officials of attempting to influence US public opinion on Iran deal",
+        "Location": "US, Israel, Iran",
+        "Risk": "Diplomatic tension, foreign interference",
+        "Source": "https://moderndiplomacy.eu/2026/07/16/vance-says-some-israeli-officials-tried-to-influence-us-on-iran-deal/",
+        "Title": "Vance Says Some Israeli Officials Tried to Influence US on Iran Deal",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "moderndiplomacy.eu"
+    },
+    {
+        "Date": "N/A",
+        "Actor": "US (President Donald Trump), Iran, Southeast Asian countries",
+        "Action": "US reimposed naval blockade on Iranian ports; Iran attacks shipping; Southeast Asia turns to Russia for oil",
+        "Location": "Strait of Hormuz, Southeast Asia",
+        "Risk": "Geopolitical conflict, energy supply disruption, shift in trade alliances",
+        "Source": "https://www.worldpoliticsreview.com/southeast-asia-russia-energy-hormuz-asean/",
+        "Title": "Trump\u2019s War in Iran Prompts Southeast Asia to Turn to Russia",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "worldpoliticsreview.com"
+    },
+    {
+        "Date": "April 2026",
+        "Actor": "China, African nations (Seychelles, Mauritius, Madagascar), Taiwan (President Lai Ching-te)",
+        "Action": "African nations revoked overflight permits for Taiwanese President due to China's 'One China' principle",
+        "Location": "Africa, Taiwan",
+        "Risk": "Diplomatic pressure, sovereignty disputes",
+        "Source": "https://www.worldpoliticsreview.com/china-taiwan-africa-pressure-campaign/",
+        "Title": "China\u2019s Pressure Campaign Against Taiwan Puts African Nations in a Bind",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "worldpoliticsreview.com"
+    },
+    {
+        "Date": "June 2026",
+        "Actor": "Canada, Australia, NORAD",
+        "Action": "Canada signed agreements for Australian Arctic Over-The-Horizon Radar system",
+        "Location": "Canada, Arctic, Australia",
+        "Risk": "Arctic security, defense cooperation",
+        "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/07/13/canada-to-plug-surveillance-gaps-with-aussie-over-the-horizon-radar/",
+        "Title": "Canada to plug surveillance gaps with Aussie over-the-horizon radar",
+        "Feed_Source": "Premium RSS",
+        "Publisher": "c4isrnet.com"
     }
 ]
