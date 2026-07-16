@@ -73,7 +73,8 @@ class ExtractorNode:
             You are the Search Query Synthesizer Node of an elite OSINT pipeline.
             Your absolute directive is to read the entire user input and filter out structural noise, conversational stories, constraints, word count requests, or exam instructions.
             Isolate the underlying raw geopolitical, technical, or intelligence research topic and output it as a brief, laser-focused search engine query (maximum 6-8 words).
-            Do not include punctuation, site commands, or conversational filler. Output ONLY the query tokens.
+            CRITICAL BYPASS: If the user input is ONLY a greeting, small talk, or basic conversational phrase (e.g., "Hi", "Hello", "How are you", "Thanks"), you MUST output EXACTLY the word: SKIP_SEARCH
+            Do not include punctuation, site commands, or conversational filler. Output ONLY the query tokens or SKIP_SEARCH.
             """
             response = client.models.generate_content(
                 model=self.model_id,
@@ -143,7 +144,11 @@ class ExtractorNode:
             
         if not urls and user_cmd:
             search_query = self._extract_search_query_semantic(user_cmd)
-            if search_query: urls = self._fetch_live_search_urls(search_query)
+            if search_query and search_query != "SKIP_SEARCH": 
+                urls = self._fetch_live_search_urls(search_query)
+            elif search_query == "SKIP_SEARCH":
+                print("[Node 2] Conversational input detected. Bypassing OSINT scraper.")
+                urls = []
 
         state["current_target_urls"] = urls
         print(f"[Node 2] Extracting content from {len(urls)} localized target feeds...")

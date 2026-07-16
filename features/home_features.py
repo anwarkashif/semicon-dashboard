@@ -1075,13 +1075,33 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
         display_df = temp_df[target_cols].copy()
         display_df = display_df.drop_duplicates(subset=['Action'], keep='first')
         
+        # 🛑 THE FIX: Standardize Dates and Clean Risk Column
+        current_date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        
         if 'Date' in display_df.columns:
-            display_df['Parsed_Date'] = pd.to_datetime(display_df['Date'], errors='coerce', utc=True)
+            # Coerce to datetime; if it fails on weird formats like "2026", it becomes NaT
+            parsed_dates = pd.to_datetime(display_df['Date'], errors='coerce', utc=True)
+            # Replace NaT with current date to prevent broken sorting
+            parsed_dates = parsed_dates.fillna(pd.to_datetime(current_date_str, utc=True))
+            
+            display_df['Parsed_Date'] = parsed_dates
             display_df = display_df.sort_values(by=['Parsed_Date'], ascending=[False])
-            display_df['Date'] = display_df['Date'].astype(str)
+            # Format cleanly back to strict YYYY-MM-DD for the UI
+            display_df['Date'] = display_df['Parsed_Date'].dt.strftime('%Y-%m-%d')
             display_df = display_df.drop(columns=['Parsed_Date'])
             
-        display_df = display_df.head(20)
+        if 'Risk' in display_df.columns:
+            # 🛑 THE FIX: Clean up hallucinated long sentences in the Risk column
+            def clean_risk(val):
+                val_str = str(val).upper()
+                if 'CRITICAL' in val_str: return 'CRITICAL'
+                if 'HIGH' in val_str: return 'HIGH'
+                if 'MODERATE' in val_str or 'ELEVATED' in val_str or 'MID' in val_str: return 'MODERATE'
+                if 'LOW' in val_str or 'NOMINAL' in val_str: return 'LOW'
+                return 'MODERATE' # Fallback for garbage text
+            display_df['Risk'] = display_df['Risk'].apply(clean_risk)
+            
+        display_df = display_df.head(20) # Safely locks UI to Top 20
         display_df = display_df.fillna("")
         
         def color_risk(val):
@@ -1090,9 +1110,9 @@ def render_executive_home(dashboard_data, df_actions, live_tactical_data, mapbox
                 return 'background-color: rgba(220, 38, 38, 0.35); color: #fca5a5; font-weight: 900; border: 1px solid #ef4444;'
             elif 'HIGH' in val_str:
                 return 'background-color: rgba(217, 119, 6, 0.2); color: #fcd34d; font-weight: bold;'
-            elif 'MODERATE' in val_str or 'MID' in val_str or 'ELEVATED' in val_str:
+            elif 'MODERATE' in val_str:
                 return 'color: #fbbf24;'
-            elif 'LOW' in val_str or 'NOMINAL' in val_str:
+            elif 'LOW' in val_str:
                 return 'color: #4ade80;'
             return ''
 

@@ -1,7 +1,7 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Ukrainian Forces Strike 10 Tankers and 4 Ferries in Sea of Azov",
+        "Title": "Russian Forces Set Fire to Kherson Maritime Academy Building",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
@@ -28,18 +28,18 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-05",
-        "Title": "Siemens SICAM 8",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
+        "Title": "ABB Ability Edgenius",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-03",
-        "Title": "NASA Core Flight System (cFS) Health & Safety (HS) Application",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-01",
+        "Title": "Rockwell Automation Arena",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
+        "threat_level": "CRITICAL"
     },
     {
         "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-06",
@@ -56,15 +56,15 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-07",
-        "Title": "SALTO ProAccess Space",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-05",
+        "Title": "Siemens SICAM 8",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-09",
-        "Title": "Rockwell Automation FactoryTalk DataMosaix",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-07",
+        "Title": "SALTO ProAccess Space",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"
