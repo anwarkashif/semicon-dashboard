@@ -1,21 +1,14 @@
 [
     {
         "Source": "https://monitorthesituation.com/",
-        "Title": "Russian Su-35 Fires Missile at Ukrainian Jet Near Putvyl, Sumy",
+        "Title": "US Bombs Near Iran Cancer Hospital, Patients Flee",
         "Feed_Source": "MONITOR THE SITUATION",
         "Publisher": "monitorthesituation.com",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-        "Feed_Source": "CISA",
-        "Publisher": "cisa.gov",
-        "threat_level": "HIGH"
-    },
-    {
-        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
-        "Title": "CISA Urges SharePoint Hardening After New Exploitations",
+        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
+        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
@@ -28,18 +21,25 @@
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
-        "Title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
+        "Title": "CISA Urges SharePoint Hardening After New Exploitations",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-02",
-        "Title": "Schneider Electric PowerChute Serial Shutdown",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
+        "Title": "ABB Ability Edgenius",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "CRITICAL"
+    },
+    {
+        "Source": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "Title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "Feed_Source": "CISA",
+        "Publisher": "cisa.gov",
+        "threat_level": "HIGH"
     },
     {
         "Source": "https://www.cisa.gov/resources-tools/resources/establishing-coordinated-vulnerability-disclosure-program-work-security-researchers",
@@ -56,15 +56,15 @@
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
-        "Title": "ABB Ability Edgenius",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01",
+        "Title": "ABB Advant Master Online Builder",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"
     },
     {
-        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01",
-        "Title": "ABB Advant Master Online Builder",
+        "Source": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-03",
+        "Title": "ABB T-MAC Plus",
         "Feed_Source": "CISA",
         "Publisher": "cisa.gov",
         "threat_level": "WATCH"

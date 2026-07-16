@@ -105,7 +105,7 @@ def fetch_and_evaluate_flash_alerts():
     # --- 2. WAR MONITOR ---
     try:
         url = "https://api.war-monitor.com/api/events"
-        res = requests.get(url, headers={'Origin': 'https://war-monitor.com', 'Referer': 'https://war-monitor.com/', **HEADERS}, params={"page": "1", "limit": "15", "fresh_hours": "168"}, timeout=10)
+        res = requests.get(url, headers={'User-Agent': 'okhttp/4.9.3', 'Accept': 'application/json'}, params={"page": "1", "limit": "15", "fresh_hours": "168"}, timeout=10)
         if res.status_code == 200:
             add_to_payload(res.json().get('data', []), "WAR MONITOR")
     except Exception as e: print(f"⚠️ Failed War Monitor: {e}")

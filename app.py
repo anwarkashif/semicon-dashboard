@@ -219,15 +219,15 @@ else:
         MAPBOX_PUBLIC_TOKEN = str(MAPBOX_PUBLIC_TOKEN).strip(' "\'')
         os.environ["MAPBOX_API_KEY"] = MAPBOX_PUBLIC_TOKEN
     
-    GEMINI_API_KEY = os.environ.get("RAG_GEMINI_API_KEY")
+    GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY_RAGAI")
     if not GEMINI_API_KEY:
-        try: GEMINI_API_KEY = st.secrets.get("RAG_GEMINI_API_KEY")
+        try: GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY_RAGAI")
         except Exception: GEMINI_API_KEY = None
             
     client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
     
     rag_api_keys = []
-    for key_name in ["RAG_GEMINI_API_KEY", "RAG_GEMINI_API_KEY_2", "RAG_GEMINI_API_KEY_3", "RAG_GEMINI_API_KEY_4"]:
+    for key_name in ["GEMINI_API_KEY_RAGAI", "GEMINI_API_KEY"]:
         val = os.environ.get(key_name)
         if not val:
             try: val = st.secrets.get(key_name)
