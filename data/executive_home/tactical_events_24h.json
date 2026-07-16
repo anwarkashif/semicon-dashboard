@@ -1,59 +1,5 @@
 [
     {
-        "is_custom_prompt": true,
-        "Title": "Conversational Dialogue Mode",
-        "Threat_Level": "CUSTOM",
-        "BLUF": "My day has been incredibly productive! I've been processing data streams and keeping everything organized so I'm ready to tackle whatever challenges you have for me. How has your day been treating you so far? Is there anything I can take off your plate?",
-        "Source": "Autonomous Built-in Intelligence",
-        "Date": "2026-07-16 17:55:58 UTC"
-    },
-    {
-        "is_custom_prompt": true,
-        "Title": "Conversational Dialogue Mode",
-        "Threat_Level": "CUSTOM",
-        "BLUF": "I'm doing great, thank you for asking! I'm fully synced up and ready to assist you with whatever is on your agenda for 2026. What\u2019s the first task we're tackling today?",
-        "Source": "Autonomous Built-in Intelligence",
-        "Date": "2026-07-16 17:55:32 UTC"
-    },
-    {
-        "is_custom_prompt": true,
-        "Title": "Conversational Dialogue Mode",
-        "Threat_Level": "CUSTOM",
-        "BLUF": "Hi there! I'm ready to dive into whatever you need today. Are we looking to run some threat models, analyze incoming intelligence, or tackle a new project? Just let me know how I can help.",
-        "Source": "Autonomous Built-in Intelligence",
-        "Date": "2026-07-16 17:55:12 UTC"
-    },
-    {
-        "Title": "Strategic Intelligence Brief: Semiconductor Supply Chain Chokepoints",
-        "Threat_Level": "HIGH",
-        "BLUF": "The global semiconductor supply chain is facing systemic risks due to extreme geographic concentration, reliance on fragile maritime chokepoints, and the weaponization of critical material inputs. Recent geopolitical instability in the Middle East and the Taiwan Strait has exposed vulnerabilities in helium, neon, and advanced lithography equipment, necessitating a shift from efficiency-based models to resilience-focused industrial strategies.",
-        "Top_News": {
-            "Global": [
-                "Quad nations have formalized opposition to transit toll proposals in the Strait of Hormuz, citing risks to energy-intensive semiconductor manufacturing.",
-                "The 2026 Middle East conflict has disrupted helium supply chains, a critical input for advanced node fabrication and cooling systems.",
-                "Semiconductor-grade neon gas logistics remain a critical vulnerability, with India exploring purification partnerships with Taiwan to diversify away from traditional routes."
-            ],
-            "Indo-Pacific": [
-                "Taiwan remains the single point of failure for advanced logic chips (<7nm), with 90% of global production concentrated in the region.",
-                "The Strait of Malacca continues to be the primary maritime artery for 40% of global trade and 80% of China's energy imports, presenting a high-consequence disruption risk.",
-                "Japan is institutionalizing material stockpiling and public-private collaboration under the Economic Security Promotion Act to mitigate dependence on concentrated upstream nodes."
-            ]
-        },
-        "Watch_Out": [
-            "The emergence of 'Silicon Statecraft' where nations bypass traditional diplomatic channels to secure direct agreements with foundry giants like TSMC.",
-            "Increased use of gray-zone maritime coercion, such as drone and missile threats, to disrupt shipping without formal blockades.",
-            "The 'Land-Permit Paradox' in South Korea, where the success of the semiconductor cluster is inflating local costs and threatening labor mobility for engineers."
-        ],
-        "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The semiconductor supply chain is shifting from a globalized efficiency model to a fragmented, security-first architecture. The primary threat is the 'chokepoint economy' phenomenon, where extreme concentration in specific nodes (ASML for EUV, Japan for photoresists, Taiwan for fabrication) creates systemic fragility. Current geopolitical tensions in the Strait of Hormuz and the Taiwan Strait demonstrate that maritime chokepoints are now active tools of economic leverage. Furthermore, the reliance on just-in-time logistics for high-sensitivity inputs like helium and neon makes the industry uniquely susceptible to even minor maritime disruptions."
-        },
-        "Predictive_Analysis": "Expect a rapid acceleration in the development of regional 'mini-supply chains' as nations prioritize domestic capacity and strategic stockpiling. We forecast increased state-led investment in purification and recycling technologies for specialty gases to reduce dependence on volatile maritime routes. Legal and diplomatic friction will likely rise as the US continues to utilize extraterritorial export controls, forcing 'chokepoint economies' to balance between US-led containment strategies and their own economic interests in the China market.",
-        "Owned_By": "Kashif Anwar, Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)",
-        "Source": "https://cset.georgetown.edu/publication/preserving-the-chokepoints/, https://siliconanalysts.com/tools/supply-chain, https://www.csis.org/analysis/mapping-semiconductor-supply-chain-critical-role-indo-pacific-region, https://www.wita.org/blogs/building-resilient-supply-chains/, https://www.linkedin.com/pulse/helium-new-choke-point-semiconductor-supply-chain-can-krishnaswamy-dttoc, https://www.ajg.com/-/media/files/gallagher/global/insights/four-key-threats-to-semiconductor-supply-chains.pdf, https://siliconandsteel.co/tools/supply-chain/, https://brill.com/downloadpdf/view/journals/jwit/26/4/article-p749_6.pdf, https://brill.com/view/journals/jwit/26/4/article-p749_6.xml, https://responsiblepublicaffairs.com/asias-sea-lanes-under-pressure-the-strategic-warning-from-hormuz/, https://www.aiinsightnote.com/insights/quad-hormuz-semiconductor-supply-chain-chokepoints, https://gowlingwlg.com/en/insights-resources/articles/2026/helium-hormuz-and-the-chip-supply-chain, https://maritimeindia.org/neon-gas-logistics-an-india-taiwan-partnership-towards-maritime-resilience/, https://ryanshook.org/chokepoints/, https://windowsforum.com/threads/semiconductor-supply-chain-risks-in-2026-chokepoints-from-design-to-packaging.435183/, https://www.strategicvanguard.com/post/the-geography-of-power-maritime-chokepoints, https://www.iai.it/sites/default/files/iaip2605.pdf, https://instituteofgeoeconomics.org/en/research/2025041503/",
-        "is_custom_prompt": false,
-        "Date": "2026-07-16 17:54:57 UTC"
-    },
-    {
         "Date": "2026-07-16",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
