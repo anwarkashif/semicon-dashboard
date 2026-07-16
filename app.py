@@ -25,13 +25,12 @@ from features.ui_features import inject_early_css, inject_global_theme, render_l
 # ==========================================
 st.set_page_config(
     page_title="SemicoN Dashboard", 
-    page_icon="website_logo.png",  # 🌐 Replaces the Browser Tab Icon
+    page_icon="website_logo.png",
     layout="wide", 
     initial_sidebar_state="collapsed"
 )
 
 # 🎨 Streamlit Native Logo Handler
-# 'logo.jpg' serves the open sidebar. 'website_logo.png' serves the top-left corner/collapsed view.
 st.logo("logo.jpg", icon_image="website_logo.png")
 
 # 🚀 IGNITE THE AGENTIC ENGINE THREAD
@@ -65,14 +64,12 @@ st.html(
         
         requestWakeLock();
         
-        // Re-acquire lock if user switches tabs and comes back
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'visible') {
                 requestWakeLock();
             }
         });
         
-        // Fallback trigger for strict mobile browsers requiring physical interaction
         document.addEventListener('touchstart', requestWakeLock, {once: true});
         document.addEventListener('click', requestWakeLock, {once: true});
     </script>
@@ -127,7 +124,7 @@ inject_global_theme()
 if st.session_state['role'] is None:
     st.markdown("""<style>.loading-pulse { display: none !important; }</style>""", unsafe_allow_html=True)
     
-    # 🌌 VERTICAL GEMINI LOGIN WAVE (DESKTOP LEFT-SIDE ONLY)
+    # 🌌 VERTICAL GEMINI LOGIN WAVE (Handled responsively via CSS Media Queries)
     st.markdown(
         """
         <div class="login-ambient-container">
@@ -139,7 +136,7 @@ if st.session_state['role'] is None:
         </div>
         <style>
         .login-ambient-container { position: fixed; top: 0; left: 0; width: 50vw; height: 100vh; z-index: 99999; pointer-events: none; overflow: hidden; mix-blend-mode: screen; mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); }
-        @media (max-width: 992px) { .login-ambient-container { display: none !important; } }
+        @media (max-width: 900px) { .login-ambient-container { display: none !important; } }
         .login-blob { position: absolute; filter: blur(100px); opacity: 0.8; border-radius: 50%; mix-blend-mode: screen; }
         .blob-a { top: -10vh; left: -10vw; width: 50vw; height: 75vh; background: #1b60d4; animation: waveA 4s infinite alternate ease-in-out; }
         .blob-b { top: 30vh; right: -5vw; width: 45vw; height: 80vh; background: #7f3ab7; animation: waveB 4s infinite alternate ease-in-out; }
@@ -167,11 +164,11 @@ else:
     # ==========================================
     if st.session_state.get('just_entered', False):
         st.markdown("""
-        <div id="instant-splash" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #0e1117; z-index: 9999999; display: flex; align-items: center; justify-content: center; flex-direction: column;">
-            <div style="color: #00bfff; font-family: 'Courier New', monospace; font-size: 26px; font-weight: bold; letter-spacing: 2px; margin-bottom: 25px;">
+        <div id="instant-splash" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #0e1117; z-index: 9999999; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+            <div style="color: #00bfff; font-family: 'Courier New', monospace; font-size: clamp(18px, 4vw, 26px); font-weight: bold; letter-spacing: 2px; margin-bottom: 25px; text-align: center; padding: 0 20px;">
                 Welcome to SemicoN Dashboard...
             </div>
-            <div style="width: 250px; height: 3px; background: #333; position: relative; overflow: hidden; border-radius: 2px;">
+            <div style="width: min(80vw, 250px); height: 3px; background: #333; position: relative; overflow: hidden; border-radius: 2px;">
                 <div style="position: absolute; top: 0; left: 0; height: 100%; width: 40%; background: #00bfff; animation: loadingLine 1s infinite linear;"></div>
             </div>
         </div>
@@ -179,17 +176,15 @@ else:
         @keyframes loadingLine { 0% { left: -40%; } 100% { left: 100%; } }
         #instant-splash { animation: hideInstantSplash 0.5s ease-in-out forwards; animation-delay: 2.5s; }
         @keyframes hideInstantSplash { to { opacity: 0; visibility: hidden; } }
-        /* PREVENT STREAMLIT FROM DIMMING THE PREVIOUS UI */
         [data-testid="stAppViewContainer"] { transition: none !important; opacity: 1 !important; filter: none !important; }
         </style>
         """, unsafe_allow_html=True)
         st.session_state['just_entered'] = False
 
-    # ⬛ INJECT SYNCING MASK ONLY IF THEY HAVEN'T ENTERED COMMAND CENTER YET
     if not st.session_state['dashboard_entered']:
         st.markdown("""
-            <div id="blackout-mask" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #0e1117; z-index: 9999999; display: flex; align-items: center; justify-content: center;">
-                <div style="color: #444; font-family: 'Courier New', monospace; letter-spacing: 3px; font-size: 14px; animation: pulse 2.5s infinite;">
+            <div id="blackout-mask" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #0e1117; z-index: 9999999; display: flex; align-items: center; justify-content: center;">
+                <div style="color: #444; font-family: 'Courier New', monospace; letter-spacing: 3px; font-size: clamp(12px, 3vw, 14px); animation: pulse 2.5s infinite; text-align: center; padding: 0 20px;">
                     SYNCING SECURE DATA STREAMS...
                 </div>
             </div>
@@ -457,14 +452,15 @@ else:
         all_items_html = "".join(ticker_items)
         dynamic_duration = max(20, len(ticker_items) * 10 + 15)
 
+        # 🛑 RESPONSIVE CSS MEDIA QUERIES APPLIED DIRECTLY
         ticker_code = f"""
         <style>
         .ticker-wrap {{ 
             position: fixed; 
-            top: 60px; 
             left: 0; 
-            width: 100vw; 
-            height: 42px; 
+            right: 0;
+            width: 100%; 
+            box-sizing: border-box;
             background-color: rgba(14, 17, 23, 0.35); 
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
@@ -476,12 +472,24 @@ else:
             display: flex; 
             align-items: center; 
         }}
-        .block-container {{ padding-top: 110px !important; }}
         .ticker-move {{ display: flex; width: fit-content; animation: ticker {dynamic_duration}s linear infinite; }}
         .ticker-track {{ display: flex; white-space: nowrap; }}
         .ticker-move:hover {{ animation-play-state: paused; }}
         @keyframes ticker {{ 0% {{ transform: translate3d(0, 0, 0); }} 100% {{ transform: translate3d(-50%, 0, 0); }} }}
-        .ticker-item {{ display: inline-block; margin-right: 60px; font-family: "Courier New", monospace; font-weight: bold; font-size: 14px; letter-spacing: 0.5px; }}
+        
+        /* Mobile Scaling */
+        @media (max-width: 900px) {{
+            .ticker-wrap {{ top: max(env(safe-area-inset-top), 40px); height: 35px; }}
+            .block-container {{ padding-top: 90px !important; }}
+            .ticker-item {{ display: inline-block; margin-right: 40px; font-family: "Courier New", monospace; font-weight: bold; font-size: 11px; letter-spacing: 0.5px; }}
+        }}
+        /* Desktop Scaling */
+        @media (min-width: 901px) {{
+            .ticker-wrap {{ top: 60px; height: 42px; }}
+            .block-container {{ padding-top: 110px !important; }}
+            .ticker-item {{ display: inline-block; margin-right: 60px; font-family: "Courier New", monospace; font-weight: bold; font-size: 14px; letter-spacing: 0.5px; }}
+        }}
+        
         .ticker-item a {{ text-decoration: none; color: #ffffff !important; text-shadow: 0 1px 4px rgba(0,0,0,0.8); }}
         .ticker-item a:hover {{ text-decoration: underline; opacity: 0.8; }}
         </style>
@@ -564,6 +572,7 @@ else:
             "Daily Archive", "Weekly Archive", "Monthly Archive"
         ]
         
+        # Handled responsive disabling entirely in CSS now
         if view_selection in target_glow_sections:
             st.markdown(
                 """
@@ -576,6 +585,7 @@ else:
                 </div>
                 <style>
                 .gemini-ambient-container { position: fixed; top: 0; left: 0; width: 100vw; height: 350px; z-index: 0; pointer-events: none; overflow: hidden; mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 100%); }
+                @media (max-width: 900px) { .gemini-ambient-container { display: none !important; } }
                 .gemini-blob { position: absolute; filter: blur(75px); opacity: 0.7; border-radius: 50%; animation: floatWave 5.5s infinite alternate ease-in-out; mix-blend-mode: screen; }
                 .blob-1 { top: -40px; left: -10vw; width: 60vw; height: 280px; background: #1b60d4; animation-delay: 0s; }
                 .blob-2 { top: -20px; right: -10vw; width: 55vw; height: 260px; background: #7f3ab7; animation-delay: -2s; }
