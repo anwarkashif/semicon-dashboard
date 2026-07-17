@@ -186,6 +186,85 @@ class ExtractorNode:
                             print(f"[Node 2] Successfully compiled and injected {len(alerts_list[:20])} Scalytics OSINT telemetry rows.")
                 except Exception as sc_err:
                     print(f"[Node 2] Scalytics feeder anomaly bypassed safely: {sc_err}")
+
+                # =========================================================
+                # 🌍 SPECIFIC FEEDER LAYER: WORLD MONITOR (worldmonitor.app)
+                # =========================================================
+                try:
+                    wm_url = "https://api.worldmonitor.app/api/news/v1/list-feed-digest?variant=full&lang=en&public=1"
+                    wm_headers = self._get_headers()
+                    wm_headers['Origin'] = 'https://www.worldmonitor.app'
+                    wm_headers['Referer'] = 'https://www.worldmonitor.app/'
+                    wm_headers['Accept'] = '*/*'
+                    
+                    wm_res = self.session.get(wm_url, headers=wm_headers, timeout=10)
+                    if wm_res.status_code == 200:
+                        wm_data = wm_res.json()
+                        compiled_wm_context = "### Live World Monitor Aggregated Intelligence Feed:\n"
+                        wm_items_added = 0
+                        
+                        categories = wm_data.get('categories', {})
+                        for cat_name, cat_data in categories.items():
+                            items = cat_data.get('items', [])
+                            for item in items[:5]: # Extract top 5 items per geopolitical category
+                                title = item.get('title', 'Unknown Event')
+                                source = item.get('source', 'Unknown Source')
+                                compiled_wm_context += f"- [{cat_name.upper()}] {title} (Source: {source})\n"
+                                wm_items_added += 1
+                                
+                        if wm_items_added > 0:
+                            extracted_payloads.append({
+                                "source_url": "https://www.worldmonitor.app",
+                                "content": compiled_wm_context.strip(),
+                                "method": "worldmonitor_feeder_intercept"
+                            })
+                            print(f"[Node 2] Successfully compiled and injected {wm_items_added} World Monitor telemetry rows.")
+                except Exception as wm_err:
+                    print(f"[Node 2] World Monitor feeder anomaly bypassed safely: {wm_err}")
+
+                # =========================================================
+                # 🍕 SPECIFIC FEEDER LAYER: PIZZINT (pizzint.watch)
+                # =========================================================
+                try:
+                    pz_breaking_url = "https://www.pizzint.watch/api/markets/breaking?window=6h"
+                    pz_doomsday_url = "https://www.pizzint.watch/api/neh-index/doomsday"
+                    
+                    pz_headers = self._get_headers()
+                    pz_headers['Origin'] = 'https://www.pizzint.watch'
+                    pz_headers['Referer'] = 'https://www.pizzint.watch/polyglobe/app'
+                    
+                    compiled_pz_context = "### Live PizzINT Operational Tempo & Anomaly Markets:\n"
+                    pz_items_added = 0
+                    
+                    # 1. Fetch Breaking Markets
+                    pz_break_res = self.session.get(pz_breaking_url, headers=pz_headers, timeout=10)
+                    if pz_break_res.status_code == 200:
+                        pz_break_data = pz_break_res.json()
+                        markets = pz_break_data.get('markets', [])
+                        if markets:
+                            compiled_pz_context += "**Active Breaking Anomalies (6-Hour Window):**\n"
+                            for mkt in markets[:10]: # Top 10 most volatile markers
+                                mkt_id = mkt.get('id', 'Unknown')
+                                move = mkt.get('price_movement', 0)
+                                compiled_pz_context += f"- Market ID {mkt_id}: Sharp activity anomaly detected (Index Movement: {move})\n"
+                                pz_items_added += 1
+                                
+                    # 2. Fetch Doomsday Status
+                    pz_doom_res = self.session.get(pz_doomsday_url, headers=pz_headers, timeout=10)
+                    if pz_doom_res.status_code == 200:
+                        pz_doom_data = pz_doom_res.json()
+                        compiled_pz_context += f"**Proprietary Threat Index Status:** {str(pz_doom_data)[:250]}\n"
+                        pz_items_added += 1
+                        
+                    if pz_items_added > 0:
+                        extracted_payloads.append({
+                            "source_url": "https://www.pizzint.watch",
+                            "content": compiled_pz_context.strip(),
+                            "method": "pizzint_feeder_intercept"
+                        })
+                        print(f"[Node 2] Successfully compiled and injected PizzINT operational telemetry.")
+                except Exception as pz_err:
+                    print(f"[Node 2] PizzINT feeder anomaly bypassed safely: {pz_err}")
                     
                 # =========================================================
                 # 📚 INTERNAL RAG ARCHIVE FEEDER (SemicoN Data Matrix)
