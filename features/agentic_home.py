@@ -160,7 +160,7 @@ def render_agentic_home():
                         folium.Marker([coords["lat"], coords["lon"]], popup=coords["label"], tooltip=coords.get("address", coords["label"])).add_to(m)
                         st_folium(m, use_container_width=True, height=400, key=f"hist_map_{idx}")
             
-    agent_query = st.chat_input("Ask the geopolitical and OSINT pipeline...")
+    agent_query = st.chat_input("Ask the Geopolitical and OSINT Agentic AI...")
     
     if agent_query:
         greeting_container.empty()
