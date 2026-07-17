@@ -3,6 +3,7 @@ import re
 import random
 import requests
 import warnings
+import time  # 🛑 Added time for millisecond timestamp tracking
 from bs4 import BeautifulSoup
 import trafilatura
 from typing import Dict, Any, List
@@ -146,6 +147,46 @@ class ExtractorNode:
             search_query = self._extract_search_query_semantic(user_cmd)
             if search_query and search_query != "SKIP_SEARCH": 
                 urls = self._fetch_live_search_urls(search_query)
+                
+                # =========================================================
+                # 📡 SPECIFIC FEEDER LAYER: OSINT.SCALYTICS.IO 
+                # =========================================================
+                try:
+                    timestamp = int(time.time() * 1000)
+                    scalytics_url = f"https://osint.scalytics.io/alerts.json?t={timestamp}"
+                    
+                    local_headers = self._get_headers()
+                    local_headers['Accept'] = '*/*'
+                    local_headers['Referer'] = 'https://osint.scalytics.io/m/'
+                    local_headers['DNT'] = '1'
+                    
+                    scalytics_res = self.session.get(scalytics_url, headers=local_headers, timeout=10)
+                    if scalytics_res.status_code == 200:
+                        alerts = scalytics_res.json()
+                        alerts_list = alerts if isinstance(alerts, list) else [alerts]
+                        
+                        compiled_context = "### Live Scalytics OSINT Feeder Telemetry Context:\n"
+                        # Limit processing payload to top 20 items to conserve token efficiency
+                        for idx, item in enumerate(alerts_list[:20]):
+                            if isinstance(item, dict):
+                                source_info = item.get('source', {})
+                                auth_name = source_info.get('authority_name', 'Unknown OSINT Registry')
+                                country = source_info.get('country', 'Global')
+                                desc = item.get('description', item.get('title', item.get('message', 'No text descriptor')))
+                                alert_id = item.get('alert_id', 'N/A')
+                                
+                                compiled_context += f"- Alert {idx+1} [ID: {alert_id} // Origin: {auth_name} ({country})]: {desc}\n"
+                        
+                        if alerts_list:
+                            extracted_payloads.append({
+                                "source_url": "https://osint.scalytics.io/m/",
+                                "content": compiled_context.strip(),
+                                "method": "scalytics_feeder_intercept"
+                            })
+                            print(f"[Node 2] Successfully compiled and injected {len(alerts_list[:20])} Scalytics OSINT telemetry rows.")
+                except Exception as sc_err:
+                    print(f"[Node 2] Scalytics feeder anomaly bypassed safely: {sc_err}")
+                    
             elif search_query == "SKIP_SEARCH":
                 print("[Node 2] Conversational input detected. Bypassing OSINT scraper.")
                 urls = []

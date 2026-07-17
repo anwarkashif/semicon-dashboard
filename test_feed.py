@@ -1,6 +1,7 @@
 import requests
+import time
 
-# Set up the exact headers required to bypass basic anti-bot systems
+# Exact headers required to spoof standard browser environments
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
     'Accept': 'application/json, text/plain, */*',
@@ -8,11 +9,37 @@ HEADERS = {
     'Connection': 'keep-alive'
 }
 
+def test_scalytics_osint():
+    print("📡 Targeting Backend: Scalytics OSINT Pipeline (osint.scalytics.io)")
+    # Generate millisecond timestamp dynamically to match real browser telemetry requests
+    timestamp = int(time.time() * 1000)
+    url = f"https://osint.scalytics.io/alerts.json?t={timestamp}"
+    
+    local_headers = HEADERS.copy()
+    local_headers['Accept'] = '*/*'
+    local_headers['Referer'] = 'https://osint.scalytics.io/m/'
+    local_headers['DNT'] = '1'
+
+    try:
+        response = requests.get(url, headers=local_headers, timeout=15)
+        if response.status_code == 200:
+            data = response.json()
+            print(f"✅ SUCCESS: Extracted a valid JSON payload from Scalytics OSINT.")
+            print(f"    Records found: {len(data) if isinstance(data, list) else 1}")
+            print(f"    Preview: {str(data)[:200]}...\n")
+            return data
+        else:
+            print(f"❌ FAILED: HTTP {response.status_code}")
+            print(f"    Response text: {response.text}\n")
+            
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE: {e}\n")
+    return []
+
 def test_psyopoly_supabase():
     print("📡 Targeting Backend: Psyopoly Supabase (api.psyopoly.pro / supabase)")
     url = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news"
     
-    # Passing parameters cleanly to avoid URL encoding breaks
     params = {
         "select": "id,headline,posted_at,url",
         "order": "posted_at.desc",
@@ -32,13 +59,13 @@ def test_psyopoly_supabase():
         if response.status_code == 200:
             data = response.json()
             print(f"✅ SUCCESS: Extracted a valid JSON payload from Psyopoly Supabase.")
-            print(f"   Records found: {len(data)}")
+            print(f"    Records found: {len(data)}")
             if len(data) > 0:
-                print(f"   Preview: {str(data[0])[:200]}...\n")
+                print(f"    Preview: {str(data[0])[:200]}...\n")
             return data
         else:
             print(f"❌ FAILED: HTTP {response.status_code}")
-            print(f"   Response text: {response.text}\n")
+            print(f"    Response text: {response.text}\n")
             
     except Exception as e:
         print(f"❌ CRITICAL FAILURE: {e}\n")
@@ -46,30 +73,20 @@ def test_psyopoly_supabase():
 
 def extract_war_monitor():
     print("📡 Targeting Backend: War Monitor (api.war-monitor.com)")
-    url = "https://api.war-monitor.com/api/events"
+    # Uses the upgraded proxy array pattern to avoid direct-connect firewalls
+    url = "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.war-monitor.com%2Fapi%2Fevents%3Fpage%3D1%26limit%3D15%26fresh_hours%3D168"
     
-    params = {
-        "page": "1",
-        "limit": "20",
-        "fresh_hours": "168"
-    }
-    
-    local_headers = HEADERS.copy()
-    local_headers['Origin'] = 'https://war-monitor.com'
-    local_headers['Referer'] = 'https://war-monitor.com/'
-
     try:
-        response = requests.get(url, headers=local_headers, params=params, timeout=15)
+        response = requests.get(url, timeout=15)
         if response.status_code == 200:
             data = response.json()
-            events = data.get('data', []) 
-            print(f"✅ SUCCESS: Extracted a valid JSON payload from War Monitor.")
-            print(f"   Preview: {str(data)[:200]}...\n")
+            events = data.get('data', data.get('events', [])) 
+            print(f"✅ SUCCESS: Extracted a valid JSON payload from War Monitor via Proxy Tunnel.")
+            print(f"    Records found: {len(events)}")
+            print(f"    Preview: {str(events)[:200]}...\n")
             return events
-        elif response.status_code == 403:
-            print("❌ FAILED: 403 Forbidden. Cloudflare block triggered.\n")
         else:
-            print(f"⚠️ UNEXPECTED RESULT: {response.status_code}\n")
+            print(f"❌ FAILED: HTTP {response.status_code} via proxy tunnel\n")
             
     except Exception as e:
         print(f"❌ CRITICAL FAILURE: {e}\n")
@@ -92,7 +109,8 @@ def extract_monitor_the_situation():
         if response.status_code == 200:
             data = response.json()
             print(f"✅ SUCCESS: Extracted a valid JSON payload from Monitor The Situation.")
-            print(f"   Preview: {str(data)[:200]}...\n")
+            print(f"    Records found: {len(data)}")
+            print(f"    Preview: {str(data)[:200]}...\n")
             return data
         else:
             print(f"⚠️ UNEXPECTED RESULT: {response.status_code}\n")
@@ -102,7 +120,11 @@ def extract_monitor_the_situation():
     return []
 
 if __name__ == "__main__":
-    print("🔍 INITIATING DIRECT API EXTRACTION...\n")
+    print("==================================================")
+    print("🔍 INITIATING LIVE DATA STREAM API TARGET DIAGNOSTICS")
+    print("==================================================\n")
+    
+    scalytics_data = test_scalytics_osint()
     psy_data = test_psyopoly_supabase()
     war_monitor_data = extract_war_monitor()
     mts_data = extract_monitor_the_situation()
