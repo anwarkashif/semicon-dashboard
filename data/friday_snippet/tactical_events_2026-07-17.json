@@ -1,8 +1,24 @@
 [
     {
         "Date": "2026-07-17",
-        "Actor": "Ukraine",
-        "Action": "Ousts tech-savvy Defense Minister Mykhailo Fedorov",
+        "Actor": "Iran war",
+        "Action": "Constrained global fertilizer trade via Hormuz",
+        "Location": "Strait of Hormuz, Global",
+        "Risk": "CRITICAL",
+        "Source": "https://www.atlanticcouncil.org/dispatches/how-to-secure-the-flow-of-fertilizers-lets-talk-about-potash/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Global fertilizer market",
+        "Action": "Prices of phosphate, potash fertilizers rise",
+        "Location": "Global",
+        "Risk": "HIGH",
+        "Source": "https://www.atlanticcouncil.org/dispatches/how-to-secure-the-flow-of-fertilizers-lets-talk-about-potash/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Ukraine (President Zelenskyy)",
+        "Action": "Ousted tech-savvy Defense Minister Mykhailo Fedorov",
         "Location": "Ukraine",
         "Risk": "HIGH",
         "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/ukraines-tech-savvy-defense-minister-ousted-in-clash-with-army-old-guard/"
@@ -10,361 +26,505 @@
     {
         "Date": "2026-07-17",
         "Actor": "United States",
-        "Action": "Aims to expedite African critical mineral discovery via AI",
+        "Action": "Proposes 'smart mining' partnerships in Africa",
         "Location": "Africa",
-        "Risk": "ELEVATED",
+        "Risk": "HIGH",
         "Source": "https://www.atlanticcouncil.org/in-depth-research-reports/report/artificial-intelligence-and-the-future-of-african-mining/"
     },
     {
         "Date": "2026-07-17",
+        "Actor": "United States (President Trump)",
+        "Action": "Intends to lift CAATSA sanctions on Turkey",
+        "Location": "Turkey, United States",
+        "Risk": "HIGH",
+        "Source": "https://foreignpolicy.com/2026/07/17/trump-russia-turkey-arms-sales-caatsa-sanctions-india-erdogan-f35/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Iran, Houthis",
+        "Action": "Iran war resumes, Houthi involvement possible",
+        "Location": "Middle East, Red Sea",
+        "Risk": "CRITICAL",
+        "Source": "https://foreignpolicy.com/2026/07/16/elbridge-colby-middle-powers-america-first-trump/"
+    },
+    {
+        "Date": "2026-07-17",
         "Actor": "Germany",
-        "Action": "Calls for strongest conventional army in Europe",
+        "Action": "Aims for strongest conventional army in Europe",
         "Location": "Europe",
-        "Risk": "ELEVATED",
+        "Risk": "HIGH",
         "Source": "https://foreignpolicy.com/2026/07/16/germany-military-power-bundeswehr-nato-europe-russia/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "North Korea",
-        "Action": "Exploits divided world to expand nuclear program",
-        "Location": "North Korea",
+        "Actor": "United States, Iran",
+        "Action": "Renewed US attacks cause Iranian economic hardship",
+        "Location": "Iran",
         "Risk": "CRITICAL",
-        "Source": "https://foreignpolicy.com/2026/07/16/north-korea-sanctions-nuclear-weapons-united-states-russia-china-united-nations-security-council/"
+        "Source": "https://moderndiplomacy.eu/2026/07/17/how-are-iranians-coping-as-us-attacks-deepen-the-crisis/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Southeast Asia",
-        "Action": "Turns to Russia for oil amid Iran war",
-        "Location": "Southeast Asia",
+        "Actor": "China (President Xi Jinping)",
+        "Action": "Unveils vision for new global AI order",
+        "Location": "Global",
         "Risk": "HIGH",
-        "Source": "https://www.worldpoliticsreview.com/southeast-asia-russia-energy-hormuz-asean/"
+        "Source": "https://moderndiplomacy.eu/2026/07/17/can-china-lead-a-new-global-ai-order-and-challenge-us-dominance/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Global defense industry",
-        "Action": "Gathers at Air Show amid Iran war tensions",
-        "Location": "England",
+        "Actor": "United States (President Trump)",
+        "Action": "Claims China interfered in 2020 election",
+        "Location": "United States",
         "Risk": "HIGH",
-        "Source": "https://www.defenseone.com/business/2026/07/allies-and-industry-will-gather-farnborough-air-show-amid-iran-war-spending-debates/414830/"
+        "Source": "https://moderndiplomacy.eu/2026/07/17/trump-makes-election-security-a-key-issue-ahead-of-us-midterms/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "China / US Space Force",
-        "Action": "China's military advancements justify US Space Force budget",
-        "Location": "Global (space)",
+        "Actor": "Global public opinion",
+        "Action": "China viewed more favorably than US",
+        "Location": "Global",
+        "Risk": "HIGH",
+        "Source": "https://www.worldpoliticsreview.com/trump-us-pew-global-survey-china-xi/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "United States military",
+        "Action": "Practices drone/3D printer logistics in Pacific",
+        "Location": "Pacific theater",
+        "Risk": "HIGH",
+        "Source": "https://www.defenseone.com/technology/2026/07/can-new-drones-3d-printers-defeat-distances-tyranny-rimpac-aims-find-out/414825/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "United States (Space Force)",
+        "Action": "Justifies $71B budget due to China/Russia",
+        "Location": "Global (Space)",
         "Risk": "HIGH",
         "Source": "https://www.defenseone.com/threats/2026/07/china-justifies-space-forces-budget-nominee-tells-lawmakers-smooth-confirmation-hearing/414823/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "United States",
-        "Action": "State Dept layoffs impact Iran, Ebola responses",
-        "Location": "Iran / Global",
+        "Actor": "United States (State Department)",
+        "Action": "Layoffs impact Iran/Ebola crises response",
+        "Location": "United States, Iran, Global",
         "Risk": "HIGH",
         "Source": "https://www.defenseone.com/threats/2026/07/state-department-layoffs-iran-ebola/414824/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "U.S. Navy",
-        "Action": "Faces challenges in overseas drone sustainment",
-        "Location": "Global (maritime)",
+        "Actor": "US Navy",
+        "Action": "Faces sustainment challenges for unmanned systems",
+        "Location": "Global (Maritime)",
         "Risk": "HIGH",
         "Source": "https://warontherocks.com/broken-drone-far-from-home-the-case-for-overseas-autonomous-system-sustainment/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "United States",
+        "Actor": "U.S. Army",
+        "Action": "Accelerates Electronic Warfare for Counter-UAS",
+        "Location": "Global (Defense capability)",
+        "Risk": "HIGH",
+        "Source": "https://www.realcleardefense.com/2026/07/16/us_army_accelerates_electronic_warfare_for_c-uas_1194776.html"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "U.S.",
         "Action": "Accelerates hypersonic system development",
-        "Location": "United States",
+        "Location": "Global (Defense capability)",
         "Risk": "HIGH",
         "Source": "https://www.realcleardefense.com/2026/07/16/us_accelerates_hypersonic_system_development_1194774.html"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Canada",
-        "Action": "Acquires Australian radar to plug Arctic surveillance gaps",
-        "Location": "Arctic / Canada",
+        "Actor": "Elbit Systems (Israel)",
+        "Action": "Proposes converting commercial ships to drone bases",
+        "Location": "Global (Maritime defense)",
+        "Risk": "HIGH",
+        "Source": "https://www.c4isrnet.com/global/mideast-africa/2026/07/15/israeli-firm-wants-to-convert-commercial-ships-into-floating-drone-bases/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Canada, Australia, NORAD",
+        "Action": "Canada acquires Australian radar for Arctic surveillance",
+        "Location": "Arctic, North America",
         "Risk": "HIGH",
         "Source": "https://www.c4isrnet.com/global/asia-pacific/2026/07/13/canada-to-plug-surveillance-gaps-with-aussie-over-the-horizon-radar/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Trinity Robotics (Ukraine)",
+        "Actor": "Germany (Rheinmetall, MBDA)",
+        "Action": "Develops high-energy laser weapon for Navy",
+        "Location": "Germany, Europe",
+        "Risk": "HIGH",
+        "Source": "https://www.c4isrnet.com/global/europe/2026/07/10/rheinmetall-mbda-to-develop-laser-weapon-for-german-navy/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Ukraine (Trinity Robotics)",
         "Action": "Doubles UGV production, seeks foreign partners",
-        "Location": "Ukraine / Europe",
+        "Location": "Ukraine, Europe",
         "Risk": "HIGH",
         "Source": "https://www.c4isrnet.com/global/europe/2026/07/09/ukrainian-ground-robot-maker-doubles-production-eyes-ventures-with-foreign-partners/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "CIA / Russia",
-        "Action": "Russian troops' short survival on Ukraine front",
+        "Actor": "Russia, Ukraine (CIA assessment)",
+        "Action": "High Russian casualty rates on Ukraine front",
         "Location": "Ukraine",
         "Risk": "CRITICAL",
         "Source": "https://www.defensenews.com/global/europe/2026/07/16/russian-troops-survive-just-20-30-minutes-on-ukraines-front-lines-cia-director-says/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "France / Germany",
-        "Action": "Defense cooperation strained over armament programs",
+        "Actor": "France, Germany",
+        "Action": "FCAS fighter jet program scrapped, cooperation strained",
         "Location": "Europe",
         "Risk": "HIGH",
         "Source": "https://www.defensenews.com/global/europe/2026/07/16/franco-german-defense-cooperation-under-strain-as-macron-merz-meet/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Global infrastructure",
-        "Action": "Extreme solar storms pose greater threat to global tech",
-        "Location": "Global",
-        "Risk": "CRITICAL",
+        "Actor": "Solar storms",
+        "Action": "Extreme solar storms pose greater tech threat",
+        "Location": "Global (Space weather)",
+        "Risk": "HIGH",
         "Source": "https://www.space.com/astronomy/sun/are-we-underestimating-the-threat-of-solar-storms-a-once-in-a-thousand-year-disaster-is-worth-considering-scientists-say"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Slingshot Aerospace / U.S. Space Force",
-        "Action": "Wins contract for AI-powered space defense readiness",
-        "Location": "United States (space)",
-        "Risk": "ELEVATED",
+        "Actor": "Germany (Bundeswehr)",
+        "Action": "Plans to move signals intelligence to LEO",
+        "Location": "Global (Space)",
+        "Risk": "HIGH",
+        "Source": "https://spacewatch.global/2026/07/mission-vigilant-owl-viceadmiral-dr-thomas-daum-on-electronic-warfare-isr-and-collective-defense/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Slingshot Aerospace (US), US Space Force",
+        "Action": "Wins AI-powered space defense contract",
+        "Location": "United States (Space)",
+        "Risk": "HIGH",
         "Source": "https://spacewatch.global/2026/07/slingshot-aerospace-wins-69-2-million-u-s-space-force-contract-to-advance-ai-powered-mission-readiness-for-space-defense/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "SpaceX / Space Development Agency (US)",
-        "Action": "Launches 21 communications satellites for SDA",
-        "Location": "Global (space)",
+        "Actor": "Space Development Agency (US), SpaceX",
+        "Action": "Launches 21 satellites for secure military comms",
+        "Location": "Global (Space)",
         "Risk": "HIGH",
         "Source": "https://spaceflightnow.com/2026/07/16/live-coverage-spacex-to-launch-21-communications-satellites-for-the-space-development-agency/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Pentagon",
-        "Action": "Suspends CMMC Phase II due to compliance burdens",
-        "Location": "United States",
+        "Actor": "TSMC",
+        "Action": "Largest expansion in Taiwan (12 fabs)",
+        "Location": "Taiwan",
         "Risk": "HIGH",
-        "Source": "https://www.satellitetoday.com/cybersecurity/2026/07/16/pentagon-suspends-cmmc-phase-ii-plans-cites-concerns-with-compliance-burdens/"
+        "Source": "https://semiwiki.com/eda/agentrys/370924-agentrys-a-new-paradigm-for-semiconductor-engineering-at-2026-dac/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Tower Semiconductor",
-        "Action": "Invests $3B in Japan for optical chips",
-        "Location": "Japan",
-        "Risk": "ELEVATED",
+        "Actor": "Intel Foundry",
+        "Action": "Invests \u20ac5B in Ireland capacity expansion",
+        "Location": "Leixlip, Ireland",
+        "Risk": "HIGH",
         "Source": "https://semiengineering.com/chip-industry-week-in-review-147/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "TSMC",
-        "Action": "Adds $100B US investment, boosts expansion budget",
-        "Location": "United States",
+        "Actor": "UMC, SILITH",
+        "Action": "Delivers first silicon photonics production wafers",
+        "Location": "Singapore",
         "Risk": "HIGH",
+        "Source": "https://semiengineering.com/chip-industry-week-in-review-147/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "TSMC, United States",
+        "Action": "Adds $100B to US investment, total $265B",
+        "Location": "United States",
+        "Risk": "CRITICAL",
         "Source": "https://www.eetimes.com/tsmc-boosts-2026-expansion-budget-adds-100b-to-u-s-investment/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "United States",
-        "Action": "Imposes 25% tariff on Brazil imports, Brazil condemns",
-        "Location": "United States / Brazil",
+        "Actor": "AI Data Centers",
+        "Action": "Drive silicon photonics to 300-mm scale",
+        "Location": "Global (Semiconductor industry)",
         "Risk": "HIGH",
-        "Source": "https://www.supplychaindive.com/news/us-tags-brazil-imports-with-25-tariff/825397/"
+        "Source": "https://www.eetimes.com/ai-data-centers-push-silicon-photonics-toward-300-mm-scale/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Philippines / China",
-        "Action": "Protests China's 'dehumanizing' state media video",
-        "Location": "South China Sea / Philippines",
+        "Actor": "India",
+        "Action": "Strengthens electronics supply chain",
+        "Location": "India",
+        "Risk": "HIGH",
+        "Source": "https://www.eetimes.com/india-adds-pieces-to-strengthen-its-electronics-supply-chain-puzzle/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "US, Iran, Global markets",
+        "Action": "Tariffs and Iran conflict impact commodity markets",
+        "Location": "Global",
+        "Risk": "HIGH",
+        "Source": "https://www.supplychaindive.com/news/4-ways-tariffs-and-geopolitics-are-impacting-commodity-markets/825482/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "United States",
+        "Action": "Increased Section 232 tariffs on aluminum/steel",
+        "Location": "United States, Global",
+        "Risk": "HIGH",
+        "Source": "https://www.supplychaindive.com/news/4-ways-tariffs-and-geopolitics-are-impacting-commodity-markets/825482/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Philippines, China",
+        "Action": "Philippines protests China's 'racist' AI video",
+        "Location": "South China Sea, Philippines, China",
         "Risk": "HIGH",
         "Source": "https://thediplomat.com/2026/07/philippines-issues-formal-protest-to-china-over-dehumanizing-state-media-video/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Rohingya refugees",
+        "Actor": "Human trafficking/migration",
         "Action": "Over 500 feared dead in Myanmar shipwrecks",
-        "Location": "Myanmar / Andaman Sea",
+        "Location": "Myanmar coast, Andaman Sea",
         "Risk": "CRITICAL",
         "Source": "https://thediplomat.com/2026/07/more-than-500-feared-dead-after-reported-shipwrecks-off-myanmars-coast-un-says/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "United States / Iran",
-        "Action": "Trump lacks escalation options in Iran standoff",
-        "Location": "Strait of Hormuz",
+        "Actor": "Apple, Baidu, Alibaba (China)",
+        "Action": "Baidu/Alibaba AI integrated into Apple Intelligence",
+        "Location": "China",
+        "Risk": "HIGH",
+        "Source": "https://technode.com/2026/07/16/baidu-to-power-ai-search-for-apples-apple-intelligence-in-china/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Iran, United States",
+        "Action": "Iran leverages Strait of Hormuz, Trump lacks options",
+        "Location": "Strait of Hormuz, Middle East",
         "Risk": "CRITICAL",
         "Source": "https://asiatimes.com/2026/07/trump-has-no-good-escalation-options-left-against-iran/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "EU / Ukraine / China",
+        "Actor": "ASEAN countries",
+        "Action": "Investing heavily in AI data centers",
+        "Location": "Southeast Asia",
+        "Risk": "HIGH",
+        "Source": "https://asiatimes.com/2026/07/aseans-ai-race-is-officially-underway/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "EU, Ukraine, China",
         "Action": "EU funds Ukraine to buy Chinese drone parts",
-        "Location": "Ukraine / China / Europe",
-        "Risk": "CRITICAL",
+        "Location": "Ukraine, China, Europe",
+        "Risk": "HIGH",
         "Source": "https://asiatimes.com/2026/07/eu-plans-to-pay-china-to-help-ukraine-kill-russians/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "China (PLA)",
-        "Action": "Rehearses US warship destruction with desert mock-up",
-        "Location": "Taklamakan Desert, China",
-        "Risk": "CRITICAL",
-        "Source": "https://asiatimes.com/2026/07/chinas-desert-mock-up-rehearses-a-us-warships-death-at-sea/"
+        "Actor": "Australia",
+        "Action": "Plans for sovereign AI capability, invests in frontier AI",
+        "Location": "Australia",
+        "Risk": "HIGH",
+        "Source": "https://www.aspistrategist.org.au/as-australia-prepares-for-the-ai-future-its-plan-for-sovereign-capability-is-unclear/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "China (Xi Jinping)",
-        "Action": "Xi prioritizes internal control in military promotions",
+        "Actor": "Japan, Australia",
+        "Action": "Japan intelligence restructure deepens Australia cooperation",
+        "Location": "Japan, Australia, Indo-Pacific",
+        "Risk": "HIGH",
+        "Source": "https://www.aspistrategist.org.au/australia-should-welcome-japans-intelligence-restructure/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "China (PLA, President Xi Jinping)",
+        "Action": "Prioritizes internal military control, promotes generals",
         "Location": "China",
         "Risk": "HIGH",
         "Source": "https://www.aspistrategist.org.au/with-the-promotion-of-new-generals-xi-prioritises-internal-control/"
     },
     {
         "Date": "2026-07-17",
+        "Actor": "Australia, India",
+        "Action": "Launch PACTS for cyber, tech, supply chains",
+        "Location": "Australia, India",
+        "Risk": "HIGH",
+        "Source": "https://www.aspistrategist.org.au/how-pacts-will-upgrade-the-india-australia-cybersecurity-partnership/"
+    },
+    {
+        "Date": "2026-07-17",
         "Actor": "ASEAN",
-        "Action": "Discusses oil stockpile amid energy crisis",
+        "Action": "Discusses developing regional oil stockpile",
         "Location": "Southeast Asia",
         "Risk": "HIGH",
         "Source": "https://fulcrum.sg/asean-oil-stockpile-ambition-destined-for-the-same-old-fate/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "United States / Thailand",
-        "Action": "Imposes tariffs on Thailand over forced labor",
-        "Location": "United States / Thailand",
+        "Actor": "United States, Thailand",
+        "Action": "US imposes tariffs on Thailand over forced labor",
+        "Location": "Thailand, United States",
         "Risk": "HIGH",
         "Source": "https://fulcrum.sg/new-us-tariffs-on-thailand-the-need-for-market-diversification/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "EU Lawmakers / Denmark",
-        "Action": "Urge Denmark to halt servicing Russian LNG fleet",
-        "Location": "Denmark / Arctic / Europe",
-        "Risk": "CRITICAL",
+        "Actor": "US-China rivalry, ASEAN",
+        "Action": "Geopolitical rivalry narrows ASEAN's collective agency",
+        "Location": "Indo-Pacific, Southeast Asia",
+        "Risk": "HIGH",
+        "Source": "https://fulcrum.sg/aseanfocus/small-states-big-stakes-aseans-narrowing-space-for-collective-agency/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "EU lawmakers, Denmark (Fayard), Russia",
+        "Action": "Urge Fayard to halt Russian LNG fleet servicing",
+        "Location": "Denmark, Europe, Arctic",
+        "Risk": "HIGH",
         "Source": "https://gcaptain.com/eu-lawmakers-urge-denmarks-fayard-to-halt-servicing-of-russian-arctic-lng-fleet/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "United States / Iran",
-        "Action": "US enforces blockade on Iran-linked tankers in Gulf",
-        "Location": "Gulf of Oman / Arabian Sea",
+        "Actor": "United States",
+        "Action": "Enforces new blockade against Iranian shipping",
+        "Location": "Gulf of Oman, Arabian Sea, Persian Gulf",
         "Risk": "CRITICAL",
         "Source": "https://gcaptain.com/iran-linked-tankers-u-turn-zig-zag-as-us-enforces-blockade/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Trump administration",
+        "Actor": "United States (Trump administration)",
         "Action": "Advances first offshore critical minerals lease sale",
-        "Location": "American Samoa / United States",
+        "Location": "US waters (American Samoa)",
         "Risk": "HIGH",
         "Source": "https://gcaptain.com/trump-administration-advances-first-offshore-critical-minerals-lease-sale-under-new-marine-minerals-agency/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Ukraine / Russia",
-        "Action": "Hits two Russia-linked oil tankers in Black Sea",
+        "Actor": "Ukraine",
+        "Action": "Naval drones hit Russia-linked oil tankers",
         "Location": "Black Sea",
         "Risk": "CRITICAL",
         "Source": "https://gcaptain.com/ukraine-hit-two-large-russia-linked-oil-tankers-in-black-sea/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Iran / Houthis (Yemen)",
-        "Action": "Tells Houthis to close Red Sea if US attacks",
-        "Location": "Red Sea / Yemen",
+        "Actor": "Iran, Houthis",
+        "Action": "Iran asks Houthis to close Red Sea",
+        "Location": "Red Sea (Bab el-Mandeb Strait)",
         "Risk": "CRITICAL",
         "Source": "https://gcaptain.com/iran-tells-houthis-to-close-red-sea-gateway-if-u-s-hits-power-network/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Israeli forces / settlers",
-        "Action": "Storm Palestinian villages, use gas bombs",
-        "Location": "Occupied West Bank, Palestine",
+        "Actor": "Iran (IRGC), United States",
+        "Action": "IRGC claims attack on US unit in Syria",
+        "Location": "Syria (al-Tanf)",
         "Risk": "CRITICAL",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-and-settlers-storm-palestinian-villages-occupied-west"
+        "Source": "https://www.middleeasteye.net/news/irgc-says-it-struck-american-base-syria-us-bombs-iran-sixth-night"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Iran (IRGC)",
-        "Action": "Claims striking US jets in Jordan",
-        "Location": "Jordan",
+        "Actor": "UKMTO, Merchant vessel",
+        "Action": "Investigates incident on merchant vessel near Oman",
+        "Location": "East of Duqm, Oman (Gulf of Oman)",
         "Risk": "CRITICAL",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-says-it-struck-us-jets-jordan"
+        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/uk-investigating-incident-ship-near-oman"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Unknown / Maritime shipping",
-        "Action": "Tanker hit by projectile off Oman, maritime body reports",
-        "Location": "Gulf of Oman",
+        "Actor": "United States, Iran",
+        "Action": "US and Iran trade attacks, US blockades ports",
+        "Location": "Middle East, Iranian ports",
         "Risk": "CRITICAL",
-        "Source": "https://www.middleeasteye.net/live-blog/live-blog-update/vessel-hit-19-nautical-miles-away-oman-maritime-body-says"
+        "Source": "https://www.al-monitor.com/originals/2026/07/us-iran-trade-attacks-return-full-blown-war"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "China",
-        "Action": "Economy slows, revealing growth model vulnerabilities",
-        "Location": "China",
+        "Actor": "Iran, United States",
+        "Action": "Hormuz crisis worsens, Iran declares strait closed",
+        "Location": "Strait of Hormuz",
+        "Risk": "CRITICAL",
+        "Source": "https://splash247.com/splash-wrap-chokepoints-under-siege/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Ukraine, Russia",
+        "Action": "Ukraine drone campaign transforms Sea of Azov",
+        "Location": "Sea of Azov",
+        "Risk": "CRITICAL",
+        "Source": "https://splash247.com/splash-wrap-chokepoints-under-siege/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Quantum Source, Israel (DDR&D)",
+        "Action": "Demonstrates single-atom source for quantum communication",
+        "Location": "Israel",
         "Risk": "HIGH",
-        "Source": "https://www.aljazeera.com/economy/2026/7/17/as-chinese-economy-slows-experts-say-there-will-be-problems-for-beijing?traffic_source=rss"
+        "Source": "https://thequantuminsider.com/2026/07/16/quantum-source-robust-entangled-photon-source-quantum-networks/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Iran / United States",
-        "Action": "Launches fresh attacks after sixth day of US strikes",
-        "Location": "Middle East / Syria",
-        "Risk": "CRITICAL",
-        "Source": "https://www.al-monitor.com/originals/2026/07/iran-launches-fresh-attacks-after-sixth-day-us-strikes"
-    },
-    {
-        "Date": "2026-07-17",
-        "Actor": "Researchers / LLMs",
-        "Action": "Discovered systemic vulnerabilities in LLM safety",
-        "Location": "Global (cybersecurity)",
-        "Risk": "CRITICAL",
+        "Actor": "Researcher (Dave Kuszmar)",
+        "Action": "Discovers systemic vulnerabilities in LLMs, bypassing safety",
+        "Location": "Global (AI security)",
+        "Risk": "HIGH",
         "Source": "https://spectrum.ieee.org/jailbreaking-llms"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Enterprises / AI agents",
-        "Action": "54% of enterprises had AI agent security incidents",
-        "Location": "Global (cybersecurity)",
-        "Risk": "CRITICAL",
+        "Actor": "AI forecasting, prediction markets",
+        "Action": "Risk of weather data sabotage rising",
+        "Location": "Global",
+        "Risk": "HIGH",
+        "Source": "https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Enterprises",
+        "Action": "High AI agent incidents, poor credential management",
+        "Location": "Global (Corporate IT)",
+        "Risk": "HIGH",
         "Source": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "United States / Russia",
-        "Action": "Concerns grow about tariffs in US sanctions bill",
-        "Location": "United States / Russia",
+        "Actor": "United States, Russia",
+        "Action": "Concerns grow about tariffs in US sanctions",
+        "Location": "United States, Russia",
         "Risk": "HIGH",
         "Source": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMGVWRHZZZXMtVkF1OEVlSjZVSFQ1ZnlRSHREeFBPT3RXbUlPOUJoejA0UnRJcWN6M25RS2NvX1ppSnN0ejBNUXpvSXd1NXRUbTJqeUtDTkozaVpadVBVUTJHR3ZwNW5LRWlFa29ZeElTcVRvQ3lGTVdwRU5ORy1FS3gtMDhqMUxWWnlIby14NHpLNWJRWExsY3pMTFJTSzF6Zll3Uk91UFU?oc=5"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Brazil / United States",
-        "Action": "Condemns US 25% tariffs, vows retaliation",
-        "Location": "Brazil / United States",
+        "Actor": "Brazil, United States",
+        "Action": "Brazil condemns US tariffs, vows retaliation",
+        "Location": "Brazil, United States",
         "Risk": "HIGH",
         "Source": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYTN3NVF1OVFrajdsVFdrcHB0T1doZFU1Ui0wY05MdnNmS0UyS0VDbmtzdVhkcEJuSHFWRjc5aHVTS25yYm5lcDFtUExfc0NPcXNIOTZvTmRUcWRRNnBSOGF5bTBQLUJoTXIzNk92Y1V4ZnJkN3EzX0dpWUxnNVUtYVhoYlVmUW8?oc=5"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "EU / Russia",
-        "Action": "Sanctions nine individuals, four entities for cyberattacks",
-        "Location": "Europe / Russia",
-        "Risk": "CRITICAL",
+        "Actor": "European Union, Russia",
+        "Action": "EU sanctions Russia over cyber-attacks",
+        "Location": "Europe, Russia",
+        "Risk": "HIGH",
         "Source": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOSkNDWnlYS1NTWUJmUUszenFDSEpZZS1ZZXVZNmRmRWtQN2w3T0E0ODh3bG1GVFgzdno1UUY3Yk5fUHBxbHRCbkdnWW5ROG5vTVcwZUIyWnVqaVpvYUlKNGduSUd4VG1VUURIVXNuenBST0M5Wk9tVXVncnI3Zm9Yb2VvVWRxR3V6ZG1Ed0pVcjc0b1d1WlFnWE0yLXdSR0dod216Y2hVb3luekdHX0ZHVHR0UFpxcUhuRTBGa0FTcDZNbjVfOG9oLVJiUWtkRGxDVWc1S2VvVGNmYmVXVUwwaUcybTVOb1VHdzhaQk9PbXJFdjItaktoT2dkUjNnWThL?oc=5"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "United States / Russia",
-        "Action": "Graham's bill broadens Russia sanctions scope",
-        "Location": "United States / Russia",
-        "Risk": "HIGH",
-        "Source": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1kVVJHYndKSlZaNVhxbW1VZDJXSzZEUW5VeHlSdXlORlNlaG1CT1J1dWVLOHRVRUFKMWZFd0ZBT0JyVGdpQXJpSl9BWWNlekQ5LUdfc3lrOVdFdVQzanZ5LTUzcmZBcEkycjFnRVdDb0dlTmZKMURJSGJERDdqUQ?oc=5"
-    },
-    {
-        "Date": "2026-07-17",
-        "Actor": "Trump administration",
-        "Action": "Announces $10B investment in defense industry",
+        "Actor": "United States (Trump administration)",
+        "Action": "Announces $10B defense industry investment",
         "Location": "United States",
-        "Risk": "ELEVATED",
+        "Risk": "HIGH",
         "Source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNU14X3lQeTJuMWFVdHIydzcwcl96VXR6MmFhNTFqSkpKT3A3VG4wanVncjNnb0ZYNjNNRkNpN1JSa056UWhKYXQ0NS1BeEhVUHRRblgxTlY5NTMtODRaTTJpSHgtSEtEaC1DOFdDb3QyaUotcGUxREFla2wyMW5abFlMMUJ1NHRJMnVvZk1FU1pRZXEwS0phQXZIY0tHNlpEOUxmbDhJVk5vMWtPQ24zYklHUQ?oc=5"
     },
     {
@@ -377,9 +537,9 @@
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Ukraine / European allies",
-        "Action": "Taps allies to build cheaper Patriot alternative",
-        "Location": "Ukraine / Europe",
+        "Actor": "Ukraine, European allies",
+        "Action": "Zelenskyy seeks European help for Patriot-alternative",
+        "Location": "Ukraine, Europe",
         "Risk": "HIGH",
         "Source": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPVlotdGJEckpXT3l5R3BZV1I2TGpQN1phc0ZLQTcxSzdfR1NSLWpEQnJScTA4RXJxVWNnSEl0SW9xQm10WE1sSXRPSk95R3dHMVBkcGhSQmR5bm91eTZjM0pNTHVwbGhvRFNnWVdZYUh4MG8wLXVPaVYyS0lvcGtHWXJBLTVsRXlKWFd2Tll2ZTg2dHEtSmFSOC1tUWE0N3lkSDA5MTBCdjhFM2hJeDNoSF9qeUFqbkpDeUVIOERwQWZpVUV4U1d1UE02WWtuWExwRUpXMmxPMkx2dWJsUjBfbTVnanNpZ1Z3em9XY1hJdkVZek5Vc2pn?oc=5"
     },
@@ -387,120 +547,88 @@
         "Date": "2026-07-17",
         "Actor": "Space Development Agency (US)",
         "Action": "Awards contracts for 36 missile defense satellites",
-        "Location": "Global (space)",
+        "Location": "Global (Space)",
         "Risk": "HIGH",
         "Source": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOT2ZCeEMxSXF4T2NORHpVRmNQNEhRWmFOeGhjb1N4dU0xRWZWUHc5b1h2TTMwNVFRc2xGOGdBcWhrWm9rbVpTYlpZZ3hDcjZHZ1VjWGY1aFlpaEM3b1M4Z2dpUEdRTldEcU5MRTJoOGxBTldVb0VCUU45MDZmazZsVXA2bU9wXzMtWEJYV1ZzSzM1NEVJY2tMU1VtTThVNGtTOXduOVNMRlBjenBJZy1OeDg2LTBlcG5nd01DSmVKZVBIQkQzMnJ2ekhhaE5DUGhsa28tMUE2ZnM2VElZazNpY2toUWlqQXRBMjNUX2xydnFuWlBNazdGZS00LTl0eUdJV3hCOEx2ajE?oc=5"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Oregon State University / NSF",
-        "Action": "Awarded $160M to grow semiconductor industry",
+        "Actor": "Oregon State University, NSF (US)",
+        "Action": "Awarded $160M grant for semiconductor industry",
         "Location": "Oregon, United States",
-        "Risk": "ELEVATED",
+        "Risk": "HIGH",
         "Source": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQY2dVRnJRU1BWNXFWcFh5MmxOZUpUTnZudmhZZ0tjdG4tNTBYM3lzLVZVRmZocGZmODUybWF3ZGx6cDhoR3BjV0pvS2hHQzZMYVZxQ0hDZHBhbGVPZ1JyWl94SFlqcWFKbnVRYmxsN2FWYkxvLWxTU3lrZ1BMNTdLNFpMU3Q3SWE4SmM5Yzhib2x4dkdNMGJsczl1ZE15bHJTT1VIQ1lvVVJRYnlEck9BUUV6Y3g0ejlRUWl4WVlwdzQ2aUJx?oc=5"
     },
     {
         "Date": "2026-07-17",
         "Actor": "India",
-        "Action": "Approves $13.3B for fresh semiconductor push",
+        "Action": "Approves $13.3B for semiconductor push",
         "Location": "India",
         "Risk": "HIGH",
         "Source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQek53STVHMDBLT0Q2dXNVejgyUW9ndDRDNEl3RWI1RUpXNGE4US1udzFIaGpDNU9VMXNIRGlvXzBPOFlFQ1ROR1kzMkU0WWMtOURPa2FpRXpUQ3NRTGxBZ1ZyRXFNbjI0SHJWSkJnLXVOUjdiTzhlcGNyMERnQ0gwX3dPNnhtUXNxcGZrQ3BUYTJlNWdMS1k2aTZ4M2lmN1FE?oc=5"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Trump Administration / TSMC",
-        "Action": "Secures $100B additional TSMC US investment",
-        "Location": "United States",
-        "Risk": "HIGH",
-        "Source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQTGg4MHdoV0pibW1wRkdyOG90WnZkUnlENWIxdlRSMHEwNkRoQVVIUU5OaDhZNHhZNWFNc1hnLUxtRUptLVNGUV9DTV95a0toblZMakdZQVR2OFRUZUdtTkJjQmZweFROamItXy1YSHFZV2ZZMWh1b2pjS0x4QzRWT0lUcl9RajJUcUJFZkxwQ2RRbDF6d0QtX1lqN0JwVXRVQkpna2ZGa1FIM1NsQmJlYTNyN28?oc=5"
-    },
-    {
-        "Date": "2026-07-17",
         "Actor": "China",
-        "Action": "Tests new ways to hold off rivals in Asia",
+        "Action": "Tests new ways to deter rivals in Asia",
         "Location": "Asia",
         "Risk": "CRITICAL",
         "Source": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOa2dhVkU4OElLM0doRjdOX29HTFdPV3FCcVkyV3RPRzI2SUQyeHV3YVdyVHpaZlhLd093MS1YTTZMY1M2RmQ1VElxeWRjS2ZDcFZBOWlqNWZ0c19QejdiYlk0b2F4SFVwTVZHQ1h0WXZYWnFyQkk1SnlUSkJXdTk1RWNJQmQ0VjlhbDR1eldPM1kyOXZJanVKUXE3UEs5V1k2aGQ2cDdiUmRKa0w0OTY4cUhsVjFEUTFDb2RPYzNLMTJPSHdlUW9wemNyUnp2UExibm9HaEh1dzVfSnFLQkE4cUFXcGJsWGs?oc=5"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Nvidia / United States / China",
-        "Action": "Ships powerful H200 AI chips to China",
-        "Location": "China",
+        "Actor": "NVIDIA, Japan",
+        "Action": "NVIDIA and Japan partner on AI/robotics",
+        "Location": "Japan",
+        "Risk": "HIGH",
+        "Source": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0xNjhTZDM1ajhCSnliWTA4aXM4bkQ3dzhZMnFNUzkxS3NxU3dDdWpRQlh0N1BPUHRURVZFU1BtQU04T3QzQnVLR3lOaE9WZnhwMUUwcmVTRGtmUlFGQ1hoYw?oc=5"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Nvidia, United States, China",
+        "Action": "Nvidia ships H200 AI chips to China",
+        "Location": "China, United States",
         "Risk": "HIGH",
         "Source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaDItR0c4WHhNYk9SeEpucGtPSmk3ZnBnS1lPUll3QkNSLWx3LWpWTk92MldIc3RlWGJUVTQ5ZFQtT3pBSkhfN3B4ZDB4VFpvVEZTVThMMXFVS1hhTGZBSFI2OXRncjFTVndGTUwyRHpXb0I3UXFRZWhBOUpFRm15MURsUnRXMFJfak5sOWNDZlJFWDdJT3Y3NVRleW5iZFZzM2hwUQ?oc=5"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Unknown / Maritime shipping",
-        "Action": "Reports maritime security incident",
-        "Location": "Strait of Hormuz",
-        "Risk": "CRITICAL",
-        "Source": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQWMtMEpIT251MkhWOXNJbU1DZkxSMmUyWnNVTXJwckF4S2xWN2ZrT0V1NjFCZHhwaGF3LWVvU2t0M1ZPaDJ4dGlhUnBJZkRxdk9EcjYtZ09Cc2JZX0xTblBiVVpXcGtkYWVwMlljOUhFelFMV1YxaWNqMzNwMTM3MExFMTNTVzhucDlEQg?oc=5"
-    },
-    {
-        "Date": "2026-07-17",
-        "Actor": "Unknown / Maritime shipping",
-        "Action": "Reports incident near Aden, raising concerns",
-        "Location": "Gulf of Aden",
-        "Risk": "CRITICAL",
-        "Source": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTEs3V29GZXhzQzliNjJ3UmJfMGdYanZ5b2hnQ1d1YVZjaFZPNVFtVGtCYmRPY1JBdU9jMWx5Z1dxeFBjMnhwdmRreEFnVTd0MV9CVmhpd19TbWQ2UmN5eW9XTTNLU0x5MlMxLU9JSFppdUNlTEota09zc05FbUpMUjFsOUdfNHNFS09ESmd1Sl9ES2YxRVRpN0dXUQ?oc=5"
-    },
-    {
-        "Date": "2026-07-17",
-        "Actor": "Unauthorized personnel / Vessel",
-        "Action": "Vessel boarded by unauthorized personnel",
-        "Location": "Gulf of Aden",
-        "Risk": "CRITICAL",
-        "Source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPYzNYQ2xoSjl4OURfa1JBbm1ZZFRXVmhpSllWWUE2ekhpWDRXaDY4eWxHNzdUaHZZX3kzWXZtUlptS3V5TXZxREFuT3pSaFhvSDBlcG9xUDJ2aW1HNS02ZTlwdGgxMUVUTFlha2JaSVlPVWotUWlDQjU4UEhwZ08xbE5fZEdKWmVkUUFLMmt0Z1Z1bDRWSndaMWFwMl9kdWFpS0xDWmxUYUhKQWM?oc=5"
-    },
-    {
-        "Date": "2026-07-17",
-        "Actor": "Unknown / Tanker",
-        "Action": "Tanker hit by missile near Oman",
-        "Location": "Limah, Oman",
-        "Risk": "CRITICAL",
-        "Source": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5fVzRCUU1qc2VtVHMxMVNpdk5SOWw0b21JY1VEWVotQ1B3VnlGSVpPbkt3amY5RW9mR21vVV9VeC00ckNvSnNPTy1lOXBjUFdmckxCTDVqb1dFWXJFMkJBeDV4b3FzdWk3bU9obUtXVXJSUzQ?oc=5"
-    },
-    {
-        "Date": "2026-07-17",
-        "Actor": "Unknown / King Faisal Air Base",
-        "Action": "Satellite imagery shows damage at air base",
-        "Location": "Jordan",
+        "Actor": "Unspecified",
+        "Action": "Over 700 acres of coral reef destroyed",
+        "Location": "South China Sea",
         "Risk": "CRITICAL",
         "Source": "https://monitorthesituation.com/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Ukraine / Russia",
-        "Action": "Expands operations against Russian mercenaries in Africa",
-        "Location": "Africa",
+        "Actor": "Ukraine, Russia",
+        "Action": "Ukraine repels Russian infiltration near Kozacha Lopan",
+        "Location": "Kozacha Lopan, Ukraine",
+        "Risk": "CRITICAL",
+        "Source": "https://monitorthesituation.com/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "Russia (Putin)",
+        "Action": "Orders intensified drone attacks on Ukrainian infrastructure",
+        "Location": "Ukraine",
+        "Risk": "CRITICAL",
+        "Source": "https://monitorthesituation.com/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "European Union, Russia",
+        "Action": "EU sanctions Russian drone component producers",
+        "Location": "Europe, Russia",
         "Risk": "HIGH",
         "Source": "https://monitorthesituation.com/"
     },
     {
         "Date": "2026-07-17",
-        "Actor": "Military Forces / Merchant Tanker",
-        "Action": "Merchant tanker incident with military forces",
-        "Location": "Persian Gulf near Kuwait",
-        "Risk": "CRITICAL",
-        "Source": "https://monitorthesituation.com/"
-    },
-    {
-        "Date": "2026-07-17",
-        "Actor": "Unknown / HIMARS Launcher",
-        "Action": "Drone strike destroys HIMARS launcher",
-        "Location": "Kuwait-Iraq Border",
-        "Risk": "CRITICAL",
-        "Source": "https://monitorthesituation.com/"
-    },
-    {
-        "Date": "2026-07-17",
-        "Actor": "Armed Assailants / Oil Tanker Asana",
-        "Action": "Hijack oil tanker Asana off Yemen coast",
-        "Location": "Off Yemen Coast",
-        "Risk": "CRITICAL",
+        "Actor": "Ukraine",
+        "Action": "Denies plans to dismiss Commander Syrskyi",
+        "Location": "Ukraine",
+        "Risk": "HIGH",
         "Source": "https://monitorthesituation.com/"
     }
 ]
