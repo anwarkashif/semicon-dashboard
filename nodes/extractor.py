@@ -187,6 +187,55 @@ class ExtractorNode:
                 except Exception as sc_err:
                     print(f"[Node 2] Scalytics feeder anomaly bypassed safely: {sc_err}")
                     
+                # =========================================================
+                # 📚 INTERNAL RAG ARCHIVE FEEDER (SemicoN Data Matrix)
+                # =========================================================
+                try:
+                    import glob
+                    import json
+                    internal_context = "### Internal SemicoN RAG Archives & Live Briefs:\n"
+                    
+                    # Target specific high-value RAG files and live data feeds
+                    target_files = [
+                        'data/flash_alert.json', 
+                        'data/executive_home/flush_brief_24h.json',
+                        'data/executive_home/tactical_events_24h.json',
+                        'data/today_snippet/shift_brief.json',
+                        'data/live_alert.json',
+                        'data/psyopoly_alerts.json'
+                    ]
+                    # Automatically grab the single newest dynamic briefs
+                    target_files.extend(sorted(glob.glob('data/brief_*.json'))[-1:])
+                    target_files.extend(sorted(glob.glob('data/west_asia/west_asia_brief_*.json'))[-1:])
+                    
+                    files_added = 0
+                    for f_path in target_files:
+                        if os.path.exists(f_path):
+                            try:
+                                with open(f_path, 'r', encoding='utf-8') as f:
+                                    try:
+                                        # Attempt clean JSON parsing first
+                                        f_data = json.load(f)
+                                        data_str = json.dumps(f_data)[:3000] # Cap at 3000 chars per file to protect context window
+                                    except:
+                                        # Fallback for plain text files (.txt)
+                                        f.seek(0)
+                                        data_str = f.read()[:3000]
+                                        
+                                    internal_context += f"\n--- Source: {os.path.basename(f_path)} ---\n{data_str}\n"
+                                    files_added += 1
+                            except Exception: pass
+                    
+                    if files_added > 0:
+                        extracted_payloads.append({
+                            "source_url": "Internal SemicoN RAG Database",
+                            "content": internal_context.strip(),
+                            "method": "internal_rag_injection"
+                        })
+                        print(f"[Node 2] Successfully injected {files_added} internal RAG archives into Agentic Engine.")
+                except Exception as rag_err:
+                    print(f"[Node 2] Internal RAG feeder anomaly bypassed safely: {rag_err}")
+
             elif search_query == "SKIP_SEARCH":
                 print("[Node 2] Conversational input detected. Bypassing OSINT scraper.")
                 urls = []
@@ -215,5 +264,43 @@ class ExtractorNode:
                 print(f"[Node 2] Direct pipeline error bypass on address {url}: {str(error)}")
                 continue
 
-        state["extracted_markdown_context"] = extracted_payloads
+        # ==========================================
+        # 🛡️ SILENT SEMANTIC DEDUPLICATION FILTER
+        # ==========================================
+        deduped_payloads = []
+        seen_shingles = set()
+        
+        for payload in extracted_payloads:
+            content_text = payload.get("content", "")
+            # Normalize text to lowercase alphanumeric string to eliminate formatting noise
+            normalized_text = re.sub(r'[^a-z0-9]', '', content_text.lower())
+            
+            # Slice text into 120-character rolling shingles to identify lifted text or identical stories
+            shingle_size = 120
+            chunks = [
+                normalized_text[i:i + shingle_size] 
+                for i in range(0, len(normalized_text), shingle_size) 
+                if len(normalized_text[i:i + shingle_size]) == shingle_size
+            ]
+            
+            is_duplicate = False
+            if chunks:
+                duplicate_chunks = sum(1 for chunk in chunks if chunk in seen_shingles)
+                # If more than 35% of the text blocks have been seen in other feeds, classify as a duplicate
+                if (duplicate_chunks / len(chunks)) > 0.35:
+                    is_duplicate = True
+            elif normalized_text and normalized_text in seen_shingles:
+                is_duplicate = True
+                
+            if not is_duplicate:
+                deduped_payloads.append(payload)
+                # Register new text signatures into global memory pool
+                for chunk in chunks:
+                    seen_shingles.add(chunk)
+                if not chunks and normalized_text:
+                    seen_shingles.add(normalized_text)
+            else:
+                print(f"[Node 2] Silent Deduplication Triggered: Dropped redundant payload entry from source: {payload.get('source_url', 'Unknown')}")
+
+        state["extracted_markdown_context"] = deduped_payloads
         return state
