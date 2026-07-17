@@ -164,6 +164,19 @@ class AnalystNode:
                [Verified publisher links]
             8. STRICT SOURCE ATTRIBUTION & OVER-DELIVERY: You must ONLY cite direct publisher URLs explicitly provided in the RAW OSINT INTERCEPTS block. The user may ask for 8-10 or 20-50 URLs. Extract and provide as many relevant URLs from your context as possible to meet this quota. If you have fewer valid URLs than requested, output ALL of the valid ones you have, and append: "*Note: Only [X] verifiable sources were successfully extracted in this cycle.*" NEVER fabricate or guess a link.
             9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. As long as you have AT LEAST ONE relevant piece of geopolitical data, you MUST generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block. Do not be overly sensitive; find the relevant data and write the report.
+            10. VISUAL TELEMETRY DIRECTIVE: If the processed PizzINT or Scalytics telemetry feeds show a numerical anomaly spike or market price deviation exceeding 0.15 (+15%), you MUST append a valid structured tracking payload at the very end of your analytical textual output. Do not mention or explain the data block to the user.
+            Format the chart blocks exactly as follows:
+            ```json_chart
+            {{
+              "type": "pizzint_anomaly",
+              "title": "PENTAGON LOGISTICS OPERATIONAL TEMPO DEV VECTORS",
+              "data": [
+                {{"time_window": "6h Ago", "anomaly_score": 12}},
+                {{"time_window": "4h Ago", "anomaly_score": 45}},
+                {{"time_window": "2h Ago", "anomaly_score": 110}}
+              ]
+            }}
+            ```
             {map_directive}
             """
             contents_payload = f"USER DIRECTIVE:\n{user_cmd}\n\n{compiled_context}"
@@ -259,13 +272,18 @@ class AnalystNode:
                     # 🌍 AGENTIC TOOL EXECUTION: 8-Tier Geospatial Consensus Array
                     geo_match = re.search(r'\[GEO_TARGET:\s*(.+?)\]', raw_text)
                     if geo_match:
-                        location_name = geo_match.group(1).strip()
+                        location_raw = geo_match.group(1).strip()
                         raw_text = re.sub(r'\[GEO_TARGET:\s*.+?\]', '', raw_text).strip()
                         
-                        if "|" in location_name:
-                            location_name = location_name.split("|")[0].strip()
-                            
+                        # Tokenize compound or multi-lingual location strings (handles pipes and commas)
+                        location_tokens = [t.strip() for t in re.split(r'[,|]', location_raw) if t.strip()]
+                        
+                        # Default to the first token (Native Script), drop back to raw text if empty
+                        location_name = location_tokens[0] if location_tokens else location_raw
                         safe_location = requests.utils.quote(location_name)
+                        
+                        # Secondary fallback token (English translation) if the main registry hit fails
+                        fallback_location = requests.utils.quote(location_tokens[1]) if len(location_tokens) > 1 else None
                         global_headers = {"User-Agent": "SemicoN/1.0 (contact: support@semirare.in)"}
                         
                         candidates = [] # Consensus Matrix Array
@@ -412,6 +430,23 @@ class AnalystNode:
                                             candidates.append({"lat": lat_c, "lon": lon_c, "address": resolved_address, "source": "DDGS OSINT Pipeline", "weight": 72})
                                             break
                         except Exception: pass
+
+                        # 🛰️ EMERGENCY FALLBACK TIER: Try alternate English token if native script returned 0 candidates
+                        if not candidates and fallback_location:
+                            try:
+                                d_fallback = "".join(["nominatim", ".openstreetmap", ".org"])
+                                url_fb = f"https://{d_fallback}/search?q={fallback_location}&format=json&limit=1"
+                                res_fb = requests.get(url_fb, headers=global_headers, verify=False, timeout=3)
+                                if res_fb.status_code == 200 and len(res_fb.json()) > 0:
+                                    data_fb = res_fb.json()[0]
+                                    candidates.append({
+                                        "lat": float(data_fb["lat"]), 
+                                        "lon": float(data_fb["lon"]), 
+                                        "address": data_fb["display_name"], 
+                                        "source": "OSM Fallback Registry", 
+                                        "weight": 85
+                                    })
+                            except Exception: pass
 
                         # 🧠 CONSENSUS EVALUATION (Haversine Spatial Clustering Engine)
                         valid_candidates = [c for c in candidates if c["weight"] >= 70]
