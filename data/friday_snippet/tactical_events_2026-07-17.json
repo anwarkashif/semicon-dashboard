@@ -140,7 +140,7 @@
         "Actor": "United States, China",
         "Action": "Declassified intel fails to back Trump's election claims.",
         "Location": "United States",
-        "Risk": "ELEVATED",
+        "Risk": "HIGH",
         "Source": "https://www.defenseone.com/threats/2026/07/trump-stretches-declassified-china-intelligence-broader-2020-election-claims/414852/"
     },
     {
@@ -381,6 +381,14 @@
         "Action": "Raises 2026 CAPEX to $64 billion for leading-edge capacity.",
         "Location": "Global (semiconductor industry)",
         "Risk": "HIGH",
+        "Source": "https://www.satellitetoday.com/technology/2026/07/17/bqp-secures-spacewerx-funding-for-quantum-assisted-ai-for-space-domain-awareness/"
+    },
+    {
+        "Date": "2026-07-17",
+        "Actor": "TSMC",
+        "Action": "Raises 2026 CAPEX to $64 billion, targets 2nm",
+        "Location": "Global",
+        "Risk": "CRITICAL",
         "Source": "https://semiwiki.com/semiconductor-manufacturers/tsmc/371192-tsmcs-raises-the-bar-on-capex/"
     },
     {
@@ -916,7 +924,7 @@
         "Actor": "Nvidia, United States, China",
         "Action": "Nvidia ships powerful H200 AI chips to China.",
         "Location": "China",
-        "Risk": "HIGH",
+        "Risk": "CRITICAL",
         "Source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaDItR0c4WHhNYk9SeEpucGtPSmk3ZnBnS1lPUll3QkNSLWx3LWpWTk92MldIc3RlWGJUVTQ5ZFQtT3pBSkhfN3B4ZDB4VFpvVEZTVThMMXFVS1hhTGZBSFI2OXRncjFTVndGTUwyRHpXb0I3UXFRZWhBOUpFRm15MURsUnRXMFJfak5sOWNDZlJFWDdJT3Y3NVRleW5iZFZzM2hwUQ?oc=5"
     },
     {
