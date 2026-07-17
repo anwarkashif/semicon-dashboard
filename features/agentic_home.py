@@ -1,10 +1,56 @@
 import streamlit as st
 import random
 import re
-import time  # Added to control the typing speed
+import time
+import json
+import pandas as pd
+import plotly.graph_objects as go
 from agent_graph import build_agent_graph
 import folium
 from streamlit_folium import st_folium
+
+def process_agent_response(raw_text):
+    """Strips the hidden JSON chart block from the text before streaming."""
+    chart_pattern = r"```json_chart\s*(.*?)\s*```"
+    match = re.search(chart_pattern, raw_text, re.DOTALL)
+    clean_text = re.sub(chart_pattern, "", raw_text, flags=re.DOTALL).strip()
+    chart_data = None
+    if match:
+        try:
+            chart_data = json.loads(match.group(1))
+        except Exception:
+            pass
+    return clean_text, chart_data
+
+def draw_agentic_chart(chart_data, key_suffix):
+    """Renders the Plotly anomaly chart natively in the UI."""
+    if chart_data and chart_data.get("type") == "pizzint_anomaly":
+        try:
+            df = pd.DataFrame(chart_data["data"])
+            fig = go.Figure()
+            fig.add_trace(go.Scatter(
+                x=df["time_window"], 
+                y=df["anomaly_score"],
+                mode='lines+markers',
+                name='Oph Tempo Velocity',
+                line=dict(color='#ff4b4b', width=3),
+                marker=dict(size=8, color='#ef4444'),
+                fill='tozeroy',
+                fillcolor='rgba(239, 68, 68, 0.15)'
+            ))
+            fig.update_layout(
+                title=dict(text=chart_data.get("title", "Telemetry Anomaly Tracking"), font=dict(color="#f8fafc", size=14)),
+                template="plotly_dark",
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
+                margin=dict(l=20, r=20, t=40, b=20),
+                height=240,
+                xaxis=dict(showgrid=True, gridcolor='#1e293b', tickfont=dict(color='#94a3b8')),
+                yaxis=dict(showgrid=True, gridcolor='#1e293b', title="Deviation Score %", tickfont=dict(color='#94a3b8'))
+            )
+            st.plotly_chart(fig, use_container_width=True, key=f"chat_chart_{key_suffix}")
+        except Exception as e:
+            st.caption(f"*Chart Error: {e}*")
 
 def render_agentic_home():
     # 1. INITIALIZE CHAT STATE
@@ -95,7 +141,7 @@ def render_agentic_home():
         """
         greeting_container.markdown(center_css + f'<div class="agent-wrapper"><div class="agent-greeting">{st.session_state.agentic_greeting}</div></div>', unsafe_allow_html=True)
 
-    # 🌍 RENDER HISTORICAL CHAT WITH INJECTED MAPS
+    # 🌍 RENDER HISTORICAL CHAT WITH INJECTED MAPS & CHARTS
     if not is_empty:
         with chat_container:
             for idx, msg in enumerate(st.session_state.agentic_messages):
@@ -103,7 +149,11 @@ def render_agentic_home():
                 with st.chat_message(msg["role"], avatar=avatar_icon):
                     st.markdown(msg["content"])
                     
-                    # If this specific chat bubble contains map data, draw the interactive map!
+                    # Draw Historical Chart
+                    if msg.get("chart_data"):
+                        draw_agentic_chart(msg["chart_data"], idx)
+                    
+                    # Draw Historical Map (ONLY ONCE)
                     if msg.get("map_data"):
                         coords = msg["map_data"]
                         m = folium.Map(location=[coords["lat"], coords["lon"]], zoom_start=13)
@@ -150,16 +200,22 @@ def render_agentic_home():
                         response_md = f"⚠️ Critical Graph Execution Failure: {e}"
                         map_data = None
 
-                # Phase 2: Typewriter Stream Generator (Outputs the text smoothly)
+# Phase 2: Typewriter Stream Generator
                 def stream_text_effect(text):
-                    # Regex split keeps spaces and newlines intact so markdown tables/lists don't break
                     tokens = re.split(r'(\s+)', text)
                     for token in tokens:
                         yield token
-                        time.sleep(0.015) # Adjust this value (0.015) to make typing faster or slower
+                        time.sleep(0.015)
+
+                # Extract chart data before streaming to keep the text clean
+                clean_response_md, chart_payload = process_agent_response(response_md)
 
                 # Execute the live stream to the UI
-                st.write_stream(stream_text_effect(response_md))
+                st.write_stream(stream_text_effect(clean_response_md))
+                
+                # 📈 RENDER LIVE NEW CHART
+                if chart_payload:
+                    draw_agentic_chart(chart_payload, len(st.session_state.agentic_messages))
                 
                 # 🌍 RENDER LIVE NEW MAP
                 if map_data:
@@ -167,9 +223,10 @@ def render_agentic_home():
                     folium.Marker([map_data["lat"], map_data["lon"]], popup=map_data["label"], tooltip=map_data.get("address", map_data["label"])).add_to(m)
                     st_folium(m, use_container_width=True, height=400, key=f"live_map_{len(st.session_state.agentic_messages)}")
                 
-        # Append final response & map coordinates to history
+        # Append clean response, chart, and map coordinates to history
         st.session_state.agentic_messages.append({
             "role": "assistant", 
-            "content": response_md,
+            "content": clean_response_md,
+            "chart_data": chart_payload,
             "map_data": map_data
         })
