@@ -1,34 +1,5 @@
 [
     {
-        "Title": "Strategic Intelligence Brief: Semiconductor Maritime Chokepoint Crisis",
-        "Threat_Level": "CRITICAL",
-        "BLUF": "The simultaneous closure of the Strait of Hormuz and ongoing Red Sea disruptions have created a systemic failure in the global semiconductor supply chain. The crisis has moved beyond simple shipping delays to a critical shortage of semiconductor-grade helium and specialty gases, threatening fabrication continuity for advanced logic and AI-compute nodes.",
-        "Top_News": {
-            "Middle_East": [
-                "Strait of Hormuz effectively closed following US-Israel strikes on Iran (Feb 28, 2026); over 1,000 commercial vessels stranded.",
-                "Qatar's helium supply, critical for semiconductor lithography and cooling, is offline due to Gulf logistics paralysis.",
-                "Insurance premiums for Gulf transit have surged to 3% of asset value, rendering the route commercially unviable for most high-value tech cargo."
-            ],
-            "Indo_Pacific": [
-                "Quad foreign ministers issued a joint statement opposing transit toll proposals in the Strait of Hormuz, signaling a shift to treat maritime freedom as a semiconductor national security priority.",
-                "Taiwan's semiconductor fabrication remains at risk due to extreme reliance on seaborne inputs and only 11 days of LNG reserves.",
-                "India is positioning itself as a strategic node for neon gas purification to bypass European supply dependencies, though infrastructure gaps remain."
-            ]
-        },
-        "Watch_Out": [
-            "Hardening of temporary contingency measures into permanent operating assumptions as disruption persists across multiple reporting periods.",
-            "The 'Double Chokepoint' effect: Simultaneous closure of Suez and Hormuz eliminates the Cape of Good Hope as a viable shock absorber due to port capacity constraints.",
-            "Emergence of 'uninsurable' AI-related catastrophic risk as Lloyd's syndicates withdraw coverage for critical tech-linked maritime assets."
-        ],
-        "Risk_And_Threat_Analysis": {
-            "Overall_Analysis": "The semiconductor supply chain is experiencing a transition from 'just-in-time' to 'just-in-case' logistics. The primary threat is no longer just wafer capacity, but the physical movement of ultra-high purity gases (neon, helium) and specialized cryogenic ISO tanks. The concentration of these inputs in the Gulf, combined with the lack of maritime bypasses, creates a single-point failure for global AI infrastructure. The reliance on the Cape of Good Hope route is failing due to insufficient bunkering and berth infrastructure, leading to a structural squeeze on throughput."
-        },
-        "Predictive_Analysis": "Expect a rapid acceleration in 'Silicon Statecraft' where nations prioritize domestic strategic stockpiling of specialty gases over pure fabrication capacity. We forecast a Q4 2026 shift in data center build-out timelines as procurement teams move from physical hardware ownership to cloud-based hedges to mitigate supply chain volatility. Expect further fragmentation of maritime insurance markets, with state-backed naval escorts becoming the only viable mechanism for moving critical semiconductor-grade inputs through contested zones.",
-        "Source": "https://osint.scalytics.io/m/, https://maritimeindia.org/neon-gas-logistics-an-india-taiwan-partnership-towards-maritime-resilience/, https://siliconanalysts.com/tools/supply-chain, https://www.linkedin.com/pulse/double-chokepoint-crisis-semiconductor-supply-chain-ksaff, https://www.linkedin.com/posts/getsuperintel_how-the-war-in-iran-threatens-the-global-activity-7444061486827704320-KB13, https://abhs.in/blog/hormuz-red-sea-dual-chokepoint-hardware-supply-chain-developers-2026, https://pakistantv.com/article/beyond-hormuz-10-maritime-chokepoints-that-could-shake-global-economy, https://discoveryalert.com.au/hormuz-suez-trade-shock-2026-maritime-chokepoints/, https://www.csis.org/blogs/perspectives-innovation/geotech-wars-semiconductors-most-complex-device-history-syed-alam, https://siliconandsteel.co/tools/supply-chain/, https://www.aiinsightnote.com/insights/quad-hormuz-semiconductor-supply-chain-chokepoints, https://brill.com/view/journals/jwit/26/4/article-p749_6.xml, https://semiconductorx.com/semiconductor-bottleneck-atlas.html, https://www.nature.com/articles/s41467-025-65403-w, https://gowlingwlg.com/en/insights-resources/articles/2026/helium-hormuz-and-the-chip-supply-chain, https://ryanshook.org/chokepoints/, https://windowsforum.com/threads/semiconductor-supply-chain-risks-in-2026-chokepoints-from-design-to-packaging.435183/, https://www.strategicvanguard.com/post/the-geography-of-power-maritime-chokepoints, https://www.iai.it/sites/default/files/iaip2605.pdf, https://instituteofgeoeconomics.org/en/research/2025041503/, https://cset.georgetown.edu/publication/preserving-the-chokepoints/",
-        "is_custom_prompt": false,
-        "Date": "2026-07-17 14:16:14 UTC"
-    },
-    {
         "Date": "2026-07-17",
         "Actor": "Psyopoly/West Asia",
         "Location": "Middle East",
