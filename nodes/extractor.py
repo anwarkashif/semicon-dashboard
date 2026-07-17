@@ -3,6 +3,7 @@ import re
 import random
 import requests
 import warnings
+import time  # 🛑 Added time for millisecond timestamp tracking
 from bs4 import BeautifulSoup
 import trafilatura
 from typing import Dict, Any, List
@@ -146,6 +147,174 @@ class ExtractorNode:
             search_query = self._extract_search_query_semantic(user_cmd)
             if search_query and search_query != "SKIP_SEARCH": 
                 urls = self._fetch_live_search_urls(search_query)
+                
+                # =========================================================
+                # 📡 SPECIFIC FEEDER LAYER: OSINT.SCALYTICS.IO 
+                # =========================================================
+                try:
+                    timestamp = int(time.time() * 1000)
+                    scalytics_url = f"https://osint.scalytics.io/alerts.json?t={timestamp}"
+                    
+                    local_headers = self._get_headers()
+                    local_headers['Accept'] = '*/*'
+                    local_headers['Referer'] = 'https://osint.scalytics.io/m/'
+                    local_headers['DNT'] = '1'
+                    
+                    scalytics_res = self.session.get(scalytics_url, headers=local_headers, timeout=10)
+                    if scalytics_res.status_code == 200:
+                        alerts = scalytics_res.json()
+                        alerts_list = alerts if isinstance(alerts, list) else [alerts]
+                        
+                        compiled_context = "### Live Scalytics OSINT Feeder Telemetry Context:\n"
+                        # Limit processing payload to top 20 items to conserve token efficiency
+                        for idx, item in enumerate(alerts_list[:20]):
+                            if isinstance(item, dict):
+                                source_info = item.get('source', {})
+                                auth_name = source_info.get('authority_name', 'Unknown OSINT Registry')
+                                country = source_info.get('country', 'Global')
+                                desc = item.get('description', item.get('title', item.get('message', 'No text descriptor')))
+                                alert_id = item.get('alert_id', 'N/A')
+                                
+                                compiled_context += f"- Alert {idx+1} [ID: {alert_id} // Origin: {auth_name} ({country})]: {desc}\n"
+                        
+                        if alerts_list:
+                            extracted_payloads.append({
+                                "source_url": "https://osint.scalytics.io/m/",
+                                "content": compiled_context.strip(),
+                                "method": "scalytics_feeder_intercept"
+                            })
+                            print(f"[Node 2] Successfully compiled and injected {len(alerts_list[:20])} Scalytics OSINT telemetry rows.")
+                except Exception as sc_err:
+                    print(f"[Node 2] Scalytics feeder anomaly bypassed safely: {sc_err}")
+
+                # =========================================================
+                # 🌍 SPECIFIC FEEDER LAYER: WORLD MONITOR (worldmonitor.app)
+                # =========================================================
+                try:
+                    wm_url = "https://api.worldmonitor.app/api/news/v1/list-feed-digest?variant=full&lang=en&public=1"
+                    wm_headers = self._get_headers()
+                    wm_headers['Origin'] = 'https://www.worldmonitor.app'
+                    wm_headers['Referer'] = 'https://www.worldmonitor.app/'
+                    wm_headers['Accept'] = '*/*'
+                    
+                    wm_res = self.session.get(wm_url, headers=wm_headers, timeout=10)
+                    if wm_res.status_code == 200:
+                        wm_data = wm_res.json()
+                        compiled_wm_context = "### Live World Monitor Aggregated Intelligence Feed:\n"
+                        wm_items_added = 0
+                        
+                        categories = wm_data.get('categories', {})
+                        for cat_name, cat_data in categories.items():
+                            items = cat_data.get('items', [])
+                            for item in items[:5]: # Extract top 5 items per geopolitical category
+                                title = item.get('title', 'Unknown Event')
+                                source = item.get('source', 'Unknown Source')
+                                compiled_wm_context += f"- [{cat_name.upper()}] {title} (Source: {source})\n"
+                                wm_items_added += 1
+                                
+                        if wm_items_added > 0:
+                            extracted_payloads.append({
+                                "source_url": "https://www.worldmonitor.app",
+                                "content": compiled_wm_context.strip(),
+                                "method": "worldmonitor_feeder_intercept"
+                            })
+                            print(f"[Node 2] Successfully compiled and injected {wm_items_added} World Monitor telemetry rows.")
+                except Exception as wm_err:
+                    print(f"[Node 2] World Monitor feeder anomaly bypassed safely: {wm_err}")
+
+                # =========================================================
+                # 🍕 SPECIFIC FEEDER LAYER: PIZZINT (pizzint.watch)
+                # =========================================================
+                try:
+                    pz_breaking_url = "https://www.pizzint.watch/api/markets/breaking?window=6h"
+                    pz_doomsday_url = "https://www.pizzint.watch/api/neh-index/doomsday"
+                    
+                    pz_headers = self._get_headers()
+                    pz_headers['Origin'] = 'https://www.pizzint.watch'
+                    pz_headers['Referer'] = 'https://www.pizzint.watch/polyglobe/app'
+                    
+                    compiled_pz_context = "### Live PizzINT Operational Tempo & Anomaly Markets:\n"
+                    pz_items_added = 0
+                    
+                    # 1. Fetch Breaking Markets
+                    pz_break_res = self.session.get(pz_breaking_url, headers=pz_headers, timeout=10)
+                    if pz_break_res.status_code == 200:
+                        pz_break_data = pz_break_res.json()
+                        markets = pz_break_data.get('markets', [])
+                        if markets:
+                            compiled_pz_context += "**Active Breaking Anomalies (6-Hour Window):**\n"
+                            for mkt in markets[:10]: # Top 10 most volatile markers
+                                mkt_id = mkt.get('id', 'Unknown')
+                                move = mkt.get('price_movement', 0)
+                                compiled_pz_context += f"- Market ID {mkt_id}: Sharp activity anomaly detected (Index Movement: {move})\n"
+                                pz_items_added += 1
+                                
+                    # 2. Fetch Doomsday Status
+                    pz_doom_res = self.session.get(pz_doomsday_url, headers=pz_headers, timeout=10)
+                    if pz_doom_res.status_code == 200:
+                        pz_doom_data = pz_doom_res.json()
+                        compiled_pz_context += f"**Proprietary Threat Index Status:** {str(pz_doom_data)[:250]}\n"
+                        pz_items_added += 1
+                        
+                    if pz_items_added > 0:
+                        extracted_payloads.append({
+                            "source_url": "https://www.pizzint.watch",
+                            "content": compiled_pz_context.strip(),
+                            "method": "pizzint_feeder_intercept"
+                        })
+                        print(f"[Node 2] Successfully compiled and injected PizzINT operational telemetry.")
+                except Exception as pz_err:
+                    print(f"[Node 2] PizzINT feeder anomaly bypassed safely: {pz_err}")
+                    
+                # =========================================================
+                # 📚 INTERNAL RAG ARCHIVE FEEDER (SemicoN Data Matrix)
+                # =========================================================
+                try:
+                    import glob
+                    import json
+                    internal_context = "### Internal SemicoN RAG Archives & Live Briefs:\n"
+                    
+                    # Target specific high-value RAG files and live data feeds
+                    target_files = [
+                        'data/flash_alert.json', 
+                        'data/executive_home/flush_brief_24h.json',
+                        'data/executive_home/tactical_events_24h.json',
+                        'data/today_snippet/shift_brief.json',
+                        'data/live_alert.json',
+                        'data/psyopoly_alerts.json'
+                    ]
+                    # Automatically grab the single newest dynamic briefs
+                    target_files.extend(sorted(glob.glob('data/brief_*.json'))[-1:])
+                    target_files.extend(sorted(glob.glob('data/west_asia/west_asia_brief_*.json'))[-1:])
+                    
+                    files_added = 0
+                    for f_path in target_files:
+                        if os.path.exists(f_path):
+                            try:
+                                with open(f_path, 'r', encoding='utf-8') as f:
+                                    try:
+                                        # Attempt clean JSON parsing first
+                                        f_data = json.load(f)
+                                        data_str = json.dumps(f_data)[:3000] # Cap at 3000 chars per file to protect context window
+                                    except:
+                                        # Fallback for plain text files (.txt)
+                                        f.seek(0)
+                                        data_str = f.read()[:3000]
+                                        
+                                    internal_context += f"\n--- Source: {os.path.basename(f_path)} ---\n{data_str}\n"
+                                    files_added += 1
+                            except Exception: pass
+                    
+                    if files_added > 0:
+                        extracted_payloads.append({
+                            "source_url": "Internal SemicoN RAG Database",
+                            "content": internal_context.strip(),
+                            "method": "internal_rag_injection"
+                        })
+                        print(f"[Node 2] Successfully injected {files_added} internal RAG archives into Agentic Engine.")
+                except Exception as rag_err:
+                    print(f"[Node 2] Internal RAG feeder anomaly bypassed safely: {rag_err}")
+
             elif search_query == "SKIP_SEARCH":
                 print("[Node 2] Conversational input detected. Bypassing OSINT scraper.")
                 urls = []
@@ -174,5 +343,43 @@ class ExtractorNode:
                 print(f"[Node 2] Direct pipeline error bypass on address {url}: {str(error)}")
                 continue
 
-        state["extracted_markdown_context"] = extracted_payloads
+        # ==========================================
+        # 🛡️ SILENT SEMANTIC DEDUPLICATION FILTER
+        # ==========================================
+        deduped_payloads = []
+        seen_shingles = set()
+        
+        for payload in extracted_payloads:
+            content_text = payload.get("content", "")
+            # Normalize text to lowercase alphanumeric string to eliminate formatting noise
+            normalized_text = re.sub(r'[^a-z0-9]', '', content_text.lower())
+            
+            # Slice text into 120-character rolling shingles to identify lifted text or identical stories
+            shingle_size = 120
+            chunks = [
+                normalized_text[i:i + shingle_size] 
+                for i in range(0, len(normalized_text), shingle_size) 
+                if len(normalized_text[i:i + shingle_size]) == shingle_size
+            ]
+            
+            is_duplicate = False
+            if chunks:
+                duplicate_chunks = sum(1 for chunk in chunks if chunk in seen_shingles)
+                # If more than 35% of the text blocks have been seen in other feeds, classify as a duplicate
+                if (duplicate_chunks / len(chunks)) > 0.35:
+                    is_duplicate = True
+            elif normalized_text and normalized_text in seen_shingles:
+                is_duplicate = True
+                
+            if not is_duplicate:
+                deduped_payloads.append(payload)
+                # Register new text signatures into global memory pool
+                for chunk in chunks:
+                    seen_shingles.add(chunk)
+                if not chunks and normalized_text:
+                    seen_shingles.add(normalized_text)
+            else:
+                print(f"[Node 2] Silent Deduplication Triggered: Dropped redundant payload entry from source: {payload.get('source_url', 'Unknown')}")
+
+        state["extracted_markdown_context"] = deduped_payloads
         return state
