@@ -225,10 +225,12 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git fetch origin main
+        git checkout main
         git add data/
         git commit -m "📋 Auto-Update: Today's Snippet 12H Brief" || true
-        git pull origin main --rebase || true
-        git push
+        git pull origin main --no-rebase -X ours || true
+        git push origin main
 
     - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_shift_brief'
@@ -277,10 +279,12 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git fetch origin main
+        git checkout main
         git add data/
         git commit -m "🚨 Auto-Update: West Asia Psyopoly Intel" || true
-        git pull origin main --rebase || true
-        git push
+        git pull origin main --no-rebase -X ours || true
+        git push origin main
 
     - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_psyopoly_siphon'
@@ -334,10 +338,12 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git fetch origin main
+        git checkout main
         git add data/
         git commit -m "⚡ Auto-Update: Global OSINT Flash Alerts" || true
-        git pull origin main --rebase || true
-        git push
+        git pull origin main --no-rebase -X ours || true
+        git push origin main
 
     - name: Sync Data to Hugging Face API
       if: github.event.action == 'trigger_flash_alert'
