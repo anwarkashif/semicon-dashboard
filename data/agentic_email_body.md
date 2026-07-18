@@ -3,32 +3,28 @@
 Threat Level: CRITICAL
 
 Bottom Line Up Front (BLUF):
-The global geopolitical landscape is currently defined by a high-intensity escalation in the Middle East, involving direct kinetic engagements between US and Iranian forces, which threatens critical maritime chokepoints and energy infrastructure. Simultaneously, domestic US opposition to AI data center expansion poses a strategic risk to long-term semiconductor and AI leadership, while ongoing cyber-vulnerabilities in industrial control systems (ICS) threaten the integrity of global manufacturing supply chains.
+The geopolitical landscape is currently defined by a severe escalation in the US-Iran conflict, transitioning from proxy engagements to direct infrastructure strikes. This volatility is severely impacting regional energy security, evidenced by production suspensions at the Khor Mor gas field and subsequent price spikes, while simultaneously creating significant cybersecurity risks for critical industrial control systems (ICS) globally.
 
 Top News from the Globe:
 
---- MIDDLE EAST ---
-- US-Iran conflict escalates with direct strikes on infrastructure; Iranian retaliation impacts Kuwaiti and Bahraini facilities.
-- Strait of Hormuz security compromised by naval boarding actions and the first combat deployment of drone boats.
-- Kuwaiti airport operations suspended following regional security deterioration.
+--- MIDDLE_EAST ---
+- Household gas prices in the Kurdistan Region have doubled following production suspension at the Khor Mor gas field due to security threats linked to US-Iran tensions (https://x.com/ForeignPolicy/status/2078495270447304710)
+- Israeli air strikes in Gaza continue to escalate regional kinetic activity (https://www.middleeasteye.net/live-blog/live-blog-update/israeli-strike-kills-six-people-gaza)
 
---- UNITED STATES ---
-- Grassroots backlash against AI data centers in Montana, Wyoming, Missouri, and New York threatens domestic AI infrastructure expansion.
-- CISA issues critical alerts regarding vulnerabilities in Rockwell Automation and ABB industrial control systems, impacting manufacturing reliability.
-
---- EASTERN EUROPE ---
-- Ukrainian drone strikes on Russian territory result in significant casualties, further destabilizing the regional security environment.
+--- CYBERSECURITY_AND_INDUSTRIAL_INFRASTRUCTURE ---
+- CISA has issued urgent advisories regarding new exploitations of SharePoint and the addition of two known exploited vulnerabilities to their catalog (https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations)
+- Critical ICS vulnerabilities identified in Rockwell Automation, ABB Ability Edgenius, and Siemens SICAM 8 systems, posing risks to manufacturing and energy supply chains (https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04, https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02, https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-05)
 
 What to Watch Out For:
-- Disruption of semiconductor supply chain logistics due to potential closure or restricted access to the Strait of Hormuz.
-- Increased cyber-espionage and sabotage targeting industrial control systems (ICS) in the semiconductor manufacturing sector.
-- Legislative and regulatory moratoriums on data center energy consumption hindering US AI and high-performance computing growth.
+- Potential for further disruption to maritime chokepoints including the Strait of Hormuz and Bab el-Mandeb due to Iranian-backed Houthi activity.
+- Increased targeting of energy infrastructure (power and desalination plants) across Gulf states.
+- Heightened cyber-threat landscape targeting industrial control systems in the semiconductor and energy sectors.
 
 Risk and Threat Analysis:
-The convergence of kinetic warfare in the Middle East and domestic infrastructure resistance in the US creates a dual-threat environment. The Middle East conflict risks immediate supply chain shocks, particularly for energy-intensive semiconductor fabrication processes. Domestically, the 'Ratepayer Protection Pledge' and state-level moratoriums on data centers represent a significant bottleneck for the AI-driven semiconductor demand cycle. Furthermore, the CISA alerts regarding Rockwell and ABB systems indicate that the operational technology (OT) layer of the semiconductor supply chain is currently under active exploitation, necessitating immediate hardening of industrial networks.
+The convergence of kinetic conflict in the Middle East and a surge in critical infrastructure cyber-vulnerabilities creates a high-risk environment for global supply chains. The direct targeting of energy infrastructure in the Middle East threatens to destabilize energy-intensive semiconductor manufacturing processes. Simultaneously, the CISA alerts regarding Rockwell and Siemens hardware indicate that threat actors are actively probing the operational technology (OT) layer of global industrial networks, necessitating immediate hardening of ICS environments.
 
 Predictive Analysis:
-Expect increased volatility in global shipping insurance rates and potential rerouting of cargo as the Strait of Hormuz remains a flashpoint. In the US, the conflict between local energy interests and AI infrastructure requirements will likely intensify, potentially forcing federal intervention to secure AI-critical power grids. Cyber-threat actors will likely continue to exploit identified ICS vulnerabilities to disrupt manufacturing output, necessitating a shift toward zero-trust architecture in semiconductor fabrication facilities.
+Expect continued volatility in energy markets as security threats persist in the Kurdistan Region and the broader Gulf. Semiconductor supply chains should prepare for potential logistics delays and increased shipping costs as maritime chokepoints remain under threat. Cybersecurity posture for manufacturing facilities must be elevated to address the specific vulnerabilities identified in recent CISA advisories to prevent operational downtime.
 
 Owned By:
 Kashif Anwar
