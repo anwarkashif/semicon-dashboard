@@ -2,6 +2,36 @@ import streamlit as st
 import streamlit.components.v1 as components
 import os
 import warnings
+import shutil
+
+# ==========================================
+# 🛑 CORE STREAMLIT HACK: Cloud-Proof Favicon & Title Overwrite
+# ==========================================
+def hack_streamlit_core():
+    try:
+        # Find the absolute path to the Streamlit core installation in the cloud
+        st_dir = os.path.dirname(st.__file__)
+        index_path = os.path.join(st_dir, "static", "index.html")
+        favicon_path = os.path.join(st_dir, "static", "favicon.png")
+        
+        # 1. Overwrite the default red airplane with the SemicoN logo
+        if os.path.exists("static/website_logo.png"):
+            shutil.copyfile("static/website_logo.png", favicon_path)
+        
+        # 2. Overwrite the default Streamlit title in the HTML head
+        if os.path.exists(index_path):
+            with open(index_path, "r", encoding="utf-8") as f:
+                html_content = f.read()
+            
+            if "<title>Streamlit</title>" in html_content:
+                html_content = html_content.replace("<title>Streamlit</title>", "<title>SemicoN Dashboard</title>")
+                with open(index_path, "w", encoding="utf-8") as f:
+                    f.write(html_content)
+    except Exception:
+        pass # Fail silently so the app never crashes if cloud permissions are strict
+
+# Execute the hack the millisecond the app boots
+hack_streamlit_core()
 
 # 🔇 AGGRESSIVE SYSTEM-LEVEL WARNING SUPPRESSION & STABILITY FLAGS
 os.environ["PYTHONWARNINGS"] = "ignore"
@@ -40,19 +70,37 @@ if 'agent_daemon_started' not in st.session_state:
     st.session_state['agent_daemon_started'] = True
 
 # ==========================================
-# 🫀 SILENT JS HEARTBEAT & SAFE UI RESET
+# 🫀 SILENT JS HEARTBEAT, ANTI-FREEZE & HEAD INJECTION
 # ==========================================
 st.html(
     """
     <script>
-        // 1. PROXY TIMEOUT DEFEATER: Aggressive 10-second backend ping
+        // 1. PWA & FAVICON HEAD INJECTION (Overrides Streamlit Default Icon Flash)
+        const head = document.head || document.getElementsByTagName('head')[0];
+        
+        if (!document.querySelector('link[rel="manifest"]')) {
+            const manifest = document.createElement('link');
+            manifest.rel = 'manifest';
+            manifest.href = '/app/static/manifest.webmanifest';
+            head.appendChild(manifest);
+        }
+        
+        let icon = document.querySelector('link[rel="shortcut icon"]') || document.querySelector('link[rel="icon"]');
+        if (!icon) {
+            icon = document.createElement('link');
+            icon.rel = 'icon';
+            head.appendChild(icon);
+        }
+        icon.href = '/app/static/favicon.ico';
+
+        // 2. PROXY TIMEOUT DEFEATER: Aggressive 10-second backend ping
         const pingServer = () => {
             window.parent.postMessage('hf-stay-alive-ping', '*');
             fetch('/_stcore/health', { cache: 'no-store' }).catch(() => {});
         };
         setInterval(pingServer, 10000); 
 
-        // 2. MOBILE ANTI-FREEZE: WakeLock API prevents iOS/Android tab suspension
+        // 3. MOBILE ANTI-FREEZE: WakeLock API prevents iOS/Android tab suspension
         let wakeLock = null;
         const requestWakeLock = async () => {
             try {
