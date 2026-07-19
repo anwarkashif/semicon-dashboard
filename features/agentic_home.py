@@ -153,12 +153,12 @@ def render_agentic_home():
                     if msg.get("chart_data"):
                         draw_agentic_chart(msg["chart_data"], idx)
                     
-                    # Draw Historical Map (ONLY ONCE)
-                    if msg.get("map_data"):
-                        coords = msg["map_data"]
-                        m = folium.Map(location=[coords["lat"], coords["lon"]], zoom_start=13)
-                        folium.Marker([coords["lat"], coords["lon"]], popup=coords["label"], tooltip=coords.get("address", coords["label"])).add_to(m)
-                        st_folium(m, use_container_width=True, height=400, key=f"hist_map_{idx}")
+                    # Draw Historical Maps (Multi-Theater Array)
+                    if msg.get("map_data") and isinstance(msg["map_data"], list):
+                        for m_idx, coords in enumerate(msg["map_data"]):
+                            m = folium.Map(location=[coords["lat"], coords["lon"]], zoom_start=13)
+                            folium.Marker([coords["lat"], coords["lon"]], popup=coords["label"], tooltip=coords.get("address", coords["label"])).add_to(m)
+                            st_folium(m, use_container_width=True, height=400, key=f"hist_map_{idx}_{m_idx}")
             
     agent_query = st.chat_input("Ask the Geopolitical and OSINT Agentic AI...")
     
@@ -188,7 +188,7 @@ def render_agentic_home():
                             "extracted_markdown_context": [],
                             "drafted_brief": {},
                             "ui_markdown": "",
-                            "map_coords": None, 
+                            "map_coords": [], 
                             "publish_status": "Pending"
                         }
                         
@@ -217,11 +217,12 @@ def render_agentic_home():
                 if chart_payload:
                     draw_agentic_chart(chart_payload, len(st.session_state.agentic_messages))
                 
-                # 🌍 RENDER LIVE NEW MAP
-                if map_data:
-                    m = folium.Map(location=[map_data["lat"], map_data["lon"]], zoom_start=13)
-                    folium.Marker([map_data["lat"], map_data["lon"]], popup=map_data["label"], tooltip=map_data.get("address", map_data["label"])).add_to(m)
-                    st_folium(m, use_container_width=True, height=400, key=f"live_map_{len(st.session_state.agentic_messages)}")
+                # 🌍 RENDER LIVE NEW MAPS (Multi-Theater Array)
+                if map_data and isinstance(map_data, list):
+                    for m_idx, coords in enumerate(map_data):
+                        m = folium.Map(location=[coords["lat"], coords["lon"]], zoom_start=13)
+                        folium.Marker([coords["lat"], coords["lon"]], popup=coords["label"], tooltip=coords.get("address", coords["label"])).add_to(m)
+                        st_folium(m, use_container_width=True, height=400, key=f"live_map_{len(st.session_state.agentic_messages)}_{m_idx}")
                 
         # Append clean response, chart, and map coordinates to history
         st.session_state.agentic_messages.append({
