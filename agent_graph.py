@@ -17,7 +17,7 @@ class AgentState(TypedDict):
     extracted_markdown_context: List[Dict[str, str]]
     drafted_brief: Dict[str, Any]    # Legacy storage for dashboard updates
     ui_markdown: str                 # Dedicated channel for unconstrained output
-    map_coords: Dict[str, Any]       # 🌍 Live Geolocation coordinates for Map Rendering
+    map_coords: List[Dict[str, Any]] # 🌍 Live Geolocation coordinates for Map Rendering (Multi-Theater)
     publish_status: str
 
 # ==========================================
@@ -74,7 +74,7 @@ def autonomous_agent_loop():
                 "extracted_markdown_context": [],
                 "drafted_brief": {},
                 "ui_markdown": "",
-                "map_coords": None,
+                "map_coords": [],
                 "publish_status": "Pending"
             }
             final_state = agent_app.invoke(initial_state)
@@ -103,7 +103,7 @@ if __name__ == "__main__":
             "extracted_markdown_context": [],
             "drafted_brief": {},
             "ui_markdown": "",
-            "map_coords": None,
+            "map_coords": [],
             "publish_status": "Pending"
         }
         agent_app.invoke(initial_state)

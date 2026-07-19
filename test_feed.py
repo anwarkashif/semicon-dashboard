@@ -1,3 +1,11 @@
+import os
+import ssl
+import certifi
+
+# 🛠️ Fix for Mac local SSL Certificate errors
+os.environ['SSL_CERT_FILE'] = certifi.where()
+ssl._create_default_https_context = ssl._create_unverified_context
+
 import requests
 import time
 
@@ -157,6 +165,39 @@ def extract_monitor_the_situation():
         print(f"❌ CRITICAL FAILURE: {e}\n")
     return []
 
+def test_earth_engine_sar():
+    print("📡 Targeting Backend: Google Earth Engine (Sentinel-1 SAR Maritime Radar)")
+    try:
+        import ee
+        try:
+            # Attempt to connect to Google's servers using saved credentials
+            ee.Initialize(project='PASTE-YOUR-PROJECT-ID-HERE')
+        except Exception:
+            # If no credentials exist on this Mac, trigger the browser login flow
+            print("⚠️ Earth Engine not authenticated on this machine. Triggering auth flow...")
+            ee.Authenticate()
+            ee.Initialize(project='smiling-foundry-487519-b1')
+            
+        # Define a spatial bounding box for the Strait of Hormuz
+        region = ee.Geometry.Rectangle([55.5, 26.0, 56.5, 27.0])
+        
+        # Pull Sentinel-1 SAR imagery collection for the last week (July 2026)
+        collection = ee.ImageCollection('COPERNICUS/S1_GRD') \
+            .filterBounds(region) \
+            .filterDate('2026-07-11', '2026-07-18') \
+            .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VV')) \
+            .filter(ee.Filter.eq('instrumentMode', 'IW'))
+            
+        image_count = collection.size().getInfo()
+        
+        print(f"✅ SUCCESS: Authenticated and communicated with Earth Engine.")
+        print(f"    SAR Images retrieved for Hormuz geometry: {image_count}\n")
+        return {"status": "success", "images_found": image_count}
+        
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE [Earth Engine]: {e}\n")
+        return []
+
 if __name__ == "__main__":
     print("==================================================")
     print("🔍 INITIATING AGENTIC 2.5 LIVE API DIAGNOSTICS")
@@ -168,3 +209,4 @@ if __name__ == "__main__":
     psy_data = test_psyopoly_supabase()
     war_monitor_data = extract_war_monitor()
     mts_data = extract_monitor_the_situation()
+    ee_data = test_earth_engine_sar() # <--- ADD THIS LINE
