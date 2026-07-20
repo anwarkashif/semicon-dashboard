@@ -390,101 +390,57 @@
             "Publisher": "rt.com"
         },
         {
-            "Date": "2026",
-            "Actor": "UK businesses",
-            "Action": "Not deepening use of AI, suggesting economic stagnation",
-            "Location": "United Kingdom",
-            "Risk": "Economic Stagnation, Technological Disadvantage",
-            "Source": "https://www.ft.com/content/1ab00e18-995a-4cda-b76b-00ba6c043863?syn-25a6b1a6=1",
-            "Title": "UK businesses are not deepening their use of AI, suggests ONS data",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "ft.com"
-        },
-        {
-            "Date": "2026",
-            "Actor": "EU",
-            "Action": "Fines AliExpress \u20ac550mn for failing to prevent sale of illegal goods",
-            "Location": "European Union",
-            "Risk": "Regulatory Enforcement, Economic Impact",
-            "Source": "https://www.ft.com/content/13c385e7-600f-471a-858e-6f1970802a10?syn-25a6b1a6=1",
-            "Title": "EU fines AliExpress \u20ac550mn for failing to prevent sale of illegal goods",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "ft.com"
-        },
-        {
-            "Date": "2026",
-            "Actor": "US politicians, Communities",
-            "Action": "Grassroots backlash against data centers, leading to moratoriums and jeopardizing US AI leadership",
-            "Location": "United States",
-            "Risk": "Technological Disadvantage, Infrastructure Strain",
-            "Source": "https://www.atlanticcouncil.org/blogs/energysource/backlash-against-data-centers-could-cost-the-us-its-ai-edge/",
-            "Title": "Backlash against data centers could cost the US its AI edge",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "atlanticcouncil.org"
-        },
-        {
-            "Date": "2026",
-            "Actor": "Iran (war), Global fertilizer market",
-            "Action": "Iran war constrains global fertilizer trade, driving up prices and affecting crop yields",
+            "Date": "2026-01-01",
+            "Actor": "Iran war",
+            "Action": "Constrains global fertilizer trade, affecting nitrogen, phosphate, and potassium prices",
             "Location": "Global, Strait of Hormuz",
-            "Risk": "Food Security, Economic Impact, Supply Chain Disruption",
+            "Risk": "Economic, Geopolitical",
             "Source": "https://www.atlanticcouncil.org/dispatches/how-to-secure-the-flow-of-fertilizers-lets-talk-about-potash/",
             "Title": "How to secure the flow of fertilizers? Let\u2019s talk about potash.",
             "Feed_Source": "Premium RSS",
             "Publisher": "atlanticcouncil.org"
         },
         {
-            "Date": "July 16, 2026",
+            "Date": "2026-07-16",
             "Actor": "Ukrainian President Volodymyr Zelenskyy",
-            "Action": "Ousts Defense Minister Mykhailo Fedorov amid protests and internal rifts",
-            "Location": "Ukraine (Kyiv)",
-            "Risk": "Political Instability, Military Strategy Shift",
+            "Action": "Ousts Defense Minister Mykhailo Fedorov, sparking protests",
+            "Location": "Ukraine",
+            "Risk": "Political, Military",
             "Source": "https://www.atlanticcouncil.org/blogs/ukrainealert/ukraines-tech-savvy-defense-minister-ousted-in-clash-with-army-old-guard/",
             "Title": "Ukraine\u2019s tech-savvy defense minister ousted in clash with army old guard",
             "Feed_Source": "Premium RSS",
             "Publisher": "atlanticcouncil.org"
         },
         {
-            "Date": "June 2026",
+            "Date": "2026-04-01",
+            "Actor": "Gen Z-led protest movement",
+            "Action": "Protests against corruption and luxury resort project (Sazan resort)",
+            "Location": "Albania (Zvernec, Narta Lagoon, Sazan Island)",
+            "Risk": "Political, Social",
+            "Source": "https://foreignpolicy.com/2026/07/20/albania-flamingo-revolution-jared-kushner-sazan-island-resort/",
+            "Title": "Flamingos Against Autocrats",
+            "Feed_Source": "Premium RSS",
+            "Publisher": "foreignpolicy.com"
+        },
+        {
+            "Date": "",
             "Actor": "United States",
-            "Action": "Bans international access to Anthropic\u2019s latest AI model, risking technological fragmentation",
+            "Action": "Bans international access to Anthropic\u2019s latest AI model",
             "Location": "Global",
-            "Risk": "Technological Fragmentation, Geopolitical Competition",
+            "Risk": "Technological, Geopolitical",
             "Source": "https://foreignpolicy.com/2026/07/20/anthropic-ban-ai-united-states/",
             "Title": "Banning AI Models Doesn\u2019t Add Up to a Policy",
             "Feed_Source": "Premium RSS",
             "Publisher": "foreignpolicy.com"
         },
         {
-            "Date": "July 2026",
-            "Actor": "United States, Iran",
-            "Action": "Exchange fresh military strikes, raising fears of broader regional crisis and Strait of Hormuz disruption",
-            "Location": "Middle East, Strait of Hormuz",
-            "Risk": "Regional War, Global Energy Supply Disruption",
-            "Source": "https://moderndiplomacy.eu/2026/07/20/us-iran-conflict-escalates-as-hormuz-risks-grow/",
-            "Title": "US Iran Conflict Escalates as Hormuz Risks Grow",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "moderndiplomacy.eu"
-        },
-        {
-            "Date": "July 2026",
-            "Actor": "Chinese Coast Guard, Philippine Navy",
-            "Action": "Clash at Second Thomas Shoal, heightening South China Sea tensions",
-            "Location": "South China Sea (Second Thomas Shoal)",
-            "Risk": "Regional Conflict, Maritime Dispute",
-            "Source": "https://moderndiplomacy.eu/2026/07/20/chinese-coast-guard-clash-with-philippine-navy-raises-south-china-sea-tensions/",
-            "Title": "Chinese Coast Guard Clash With Philippine Navy Raises South China Sea Tensions",
-            "Feed_Source": "Premium RSS",
-            "Publisher": "moderndiplomacy.eu"
-        },
-        {
-            "Date": "2025",
-            "Actor": "EU, US (Trump administration)",
-            "Action": "Implements drastic cuts to foreign development assistance (ODA budgets)",
-            "Location": "European Union, United States",
-            "Risk": "Humanitarian Crisis, Geopolitical Influence Reduction",
-            "Source": "https://www.worldpoliticsreview.com/eu-foreign-aid-development-cuts-defense/",
-            "Title": "The EU Is Taking a DOGE-Like Axe to Foreign Aid",
+            "Date": "2026-06-18",
+            "Actor": "Lawyers",
+            "Action": "Strike for judicial independence and release of colleagues",
+            "Location": "Tunis, Tunisia",
+            "Risk": "Political, Social",
+            "Source": "https://www.worldpoliticsreview.com/tunisia-lawyers-judicial-independence-saied/",
+            "Title": "Amid Attacks on Tunisia\u2019s Civil Society, Lawyers Are Both Shields and Targets",
             "Feed_Source": "Premium RSS",
             "Publisher": "worldpoliticsreview.com"
         },
@@ -649,24 +605,16 @@
             "url": "https://www.rt.com/news/643255-eu-members-resist-russia-sanctions/?utm_source=rss&utm_medium=rss&utm_campaign=RSS"
         },
         {
-            "title": "UK businesses are not deepening their use of AI, suggests ONS data",
-            "url": "https://www.ft.com/content/1ab00e18-995a-4cda-b76b-00ba6c043863?syn-25a6b1a6=1"
-        },
-        {
-            "title": "EU fines AliExpress \u20ac550mn for failing to prevent sale of illegal goods",
-            "url": "https://www.ft.com/content/13c385e7-600f-471a-858e-6f1970802a10?syn-25a6b1a6=1"
-        },
-        {
-            "title": "Backlash against data centers could cost the US its AI edge",
-            "url": "https://www.atlanticcouncil.org/blogs/energysource/backlash-against-data-centers-could-cost-the-us-its-ai-edge/"
-        },
-        {
             "title": "How to secure the flow of fertilizers? Let\u2019s talk about potash.",
             "url": "https://www.atlanticcouncil.org/dispatches/how-to-secure-the-flow-of-fertilizers-lets-talk-about-potash/"
         },
         {
             "title": "Ukraine\u2019s tech-savvy defense minister ousted in clash with army old guard",
             "url": "https://www.atlanticcouncil.org/blogs/ukrainealert/ukraines-tech-savvy-defense-minister-ousted-in-clash-with-army-old-guard/"
+        },
+        {
+            "title": "Flamingos Against Autocrats",
+            "url": "https://foreignpolicy.com/2026/07/20/albania-flamingo-revolution-jared-kushner-sazan-island-resort/"
         },
         {
             "title": "Banning AI Models Doesn\u2019t Add Up to a Policy",
