@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+data/# -*- coding: utf-8 -*-
 import os
 import json
 import time
@@ -14,7 +14,7 @@ import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 # ==========================================
 # 1. CONFIGURATION & SETUP (WEEKLY TACTICAL BRIEF)
 # ==========================================
-os.makedirs('/data/friday_snippet', exist_ok=True)
+os.makedirs('data/friday_snippet', exist_ok=True)
 
 RSS_FEEDS = [
     "https://www.ft.com/technology?format=rss",
@@ -349,7 +349,7 @@ if __name__ == "__main__":
                 print(f"⚠️ Warning: Gemini returned an unmapped ID ({target_id}). Dropping event to maintain integrity.")
         
         dynamic_date_str = datetime.now().strftime("%Y-%m-%d")
-        output_file = f'/data/friday_snippet/tactical_events_{dynamic_date_str}.json'
+        output_file = f'data/friday_snippet/tactical_events_{dynamic_date_str}.json'
         
         with open(output_file, 'w') as f:
             json.dump(validated_tactical_events, f, indent=4)

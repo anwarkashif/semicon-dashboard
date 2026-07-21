@@ -1,4 +1,4 @@
-import requests
+data/import requests
 import json
 import os
 from datetime import datetime
@@ -7,8 +7,8 @@ from urllib.parse import urlparse
 import trafilatura  # 🚨 INJECTED: Deep extraction engine
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-UNIVERSAL_POOL_PATH = '/data/tactical_events_24h.json'
-STANDALONE_PSYOPOLY_PATH = '/data/psyopoly_alerts.json'
+UNIVERSAL_POOL_PATH = 'data/tactical_events_24h.json'
+STANDALONE_PSYOPOLY_PATH = 'data/psyopoly_alerts.json'
 
 SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news"
 ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxvamlyb2x6a3Nob3FnY2Nyd3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODQyNjQsImV4cCI6MjA4OTY2MDI2NH0.DzdBr_d69SSlRxtnxH8DRqc0hLNQfb4wL5t1Qe96UMo"
@@ -150,8 +150,8 @@ def merge_and_sync(new_events):
     # if HF_TOKEN and REPO_ID:
     #     try:
     #         api = HfApi()
-    #         api.upload_file(path_or_fileobj=UNIVERSAL_POOL_PATH, path_in_repo='/data/tactical_events_24h.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Auto-sync Universal Pool with Trafilatura-enhanced Psyopoly metadata")
-    #         api.upload_file(path_or_fileobj=STANDALONE_PSYOPOLY_PATH, path_in_repo='/data/psyopoly_alerts.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
+    #         api.upload_file(path_or_fileobj=UNIVERSAL_POOL_PATH, path_in_repo='data/tactical_events_24h.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Auto-sync Universal Pool with Trafilatura-enhanced Psyopoly metadata")
+    #         api.upload_file(path_or_fileobj=STANDALONE_PSYOPOLY_PATH, path_in_repo='data/psyopoly_alerts.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
     #         print("✅ Successfully locked Psyopoly payloads into permanent Hugging Face storage!")
     #     except Exception as e: print(f"❌ Failed to sync to Hub: {e}")
 

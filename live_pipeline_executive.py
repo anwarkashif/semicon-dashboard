@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+data/# -*- coding: utf-8 -*-
 import os
 import json
 import time
@@ -14,10 +14,10 @@ import re
 import logging
 import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 
-os.makedirs('/data/executive_home', exist_ok=True)
+os.makedirs('data/executive_home', exist_ok=True)
 
 logging.basicConfig(
-    filename='/data/pipeline_log.txt',
+    filename='data/pipeline_log.txt',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
@@ -358,7 +358,7 @@ if __name__ == "__main__":
         if psy_events:
             validated_tactical_events = psy_events[:3] + validated_tactical_events
             
-        output_file_tactical = '/data/executive_home/tactical_events_24h.json'
+        output_file_tactical = 'data/executive_home/tactical_events_24h.json'
         master_events = []
         if os.path.exists(output_file_tactical):
             try: master_events = json.load(open(output_file_tactical, 'r'))
@@ -386,7 +386,7 @@ if __name__ == "__main__":
             brief_input = unique_master[:30]
         
         flush_brief_data = generate_flush_to_brief(brief_input)
-        json.dump(flush_brief_data, archive_filename = f"/data/flash_archive_{date_str}.json", indent=4)
+        json.dump(flush_brief_data, archive_filename = f"data/flash_archive_{date_str}.json", indent=4)
         
         date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         
@@ -426,7 +426,7 @@ if __name__ == "__main__":
         # if HF_TOKEN and REPO_ID:
         #     api = HfApi()
         #     api.upload_file(path_or_fileobj=output_file_tactical, path_in_repo=output_file_tactical, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Executive Home Tactical")
-        #     api.upload_file(path_or_fileobj='/data/executive_home/flush_brief_24h.json', path_in_repo='data/executive_home/flush_brief_24h.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
+        #     api.upload_file(path_or_fileobj='data/executive_home/flush_brief_24h.json', path_in_repo='data/executive_home/flush_brief_24h.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
         #     api.upload_file(path_or_fileobj=archive_filename, path_in_repo=archive_filename, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
         #     print("✅ Executive Flash Archive Synced securely with Source URLs!")
             

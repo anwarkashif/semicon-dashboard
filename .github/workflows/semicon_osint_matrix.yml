@@ -66,23 +66,13 @@ jobs:
         body: "The 5-Node Cyclical Execution Graph has completed processing for Task 1: Executive Home Live Radar. The intelligence payload has been securely synced to your workspace environment."
         convert_markdown: true
 
-    - name: Commit and Push (Executive Radar)
-      if: github.event.action == 'trigger_executive_radar'
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git checkout main
-        git add data/
-        git commit -m "🚨 Auto-Update: Executive Home Live Radar" || true
-        git pull origin main --no-rebase -X ours || true
-        git push origin main
-
-    - name: Sync Data to Hugging Face API
+    - name: Sync Data Directly to 8.8 TB Bucket
       if: github.event.action == 'trigger_executive_radar'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
+        curl -LsSf https://hf.co/cli/install.sh | bash
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 2: GENERATE SEMICON WEEKLY BRIEF
@@ -119,24 +109,13 @@ jobs:
         python generate_weekly_tactical.py
         python generate_outlook.py || echo "Strategic Outlook generator not found, skipping gracefully."
 
-    - name: Commit and Push (Weekly Brief)
-      if: github.event.action == 'trigger_weekly_brief'
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git fetch origin main
-        git checkout main
-        git add data/
-        git commit -m "🤖 Auto-Update: SemicoN Data updated" || true
-        git pull origin main -X ours --no-rebase || true
-        git push origin main
-        
-    - name: Sync Data to Hugging Face API
+    - name: Sync Data Directly to 8.8 TB Bucket
       if: github.event.action == 'trigger_weekly_brief'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
+        curl -LsSf https://hf.co/cli/install.sh | bash
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 3: GEOPOLITICAL MEMORY LAYER
@@ -163,22 +142,13 @@ jobs:
           echo "Not the 2nd or 4th Friday. Gracefully skipping generation pass."
         fi
 
-    - name: Commit Updated Memory File
-      if: github.event.action == 'trigger_memory_layer'
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "actions@github.com"
-        git add data/
-        git commit -m "Update Geopolitical Memory Layer" || true
-        git pull origin main --rebase || true
-        git push
-
-    - name: Sync Data to Hugging Face API
+    - name: Sync Data Directly to 8.8 TB Bucket
       if: github.event.action == 'trigger_memory_layer'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
+        curl -LsSf https://hf.co/cli/install.sh | bash
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 4: TODAY'S SNIPPET - SHIFT BRIEF (12H)
@@ -220,24 +190,13 @@ jobs:
         body: "The 12-hour cyclical execution pass has successfully completed. Your contextual strategic briefing updates have been dispatched to your primary monitoring profile."
         convert_markdown: true
 
-    - name: Commit and Push (Shift Brief)
-      if: github.event.action == 'trigger_shift_brief'
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git fetch origin main
-        git checkout main
-        git add data/
-        git commit -m "📋 Auto-Update: Today's Snippet 12H Brief" || true
-        git pull origin main --no-rebase -X ours || true
-        git push origin main
-
-    - name: Sync Data to Hugging Face API
+    - name: Sync Data Directly to 8.8 TB Bucket
       if: github.event.action == 'trigger_shift_brief'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
+        curl -LsSf https://hf.co/cli/install.sh | bash
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 5: WEST ASIA STRATEGIC INTEL - PSYOPOLY SIPHON (HOURLY)
@@ -274,24 +233,13 @@ jobs:
         body: "Hourly extraction runs for West Asia OSINT target streams completed smoothly. Data structures updated cleanly inside the central repository."
         convert_markdown: true
 
-    - name: Commit and Push (Psyopoly Siphon)
-      if: github.event.action == 'trigger_psyopoly_siphon'
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git fetch origin main
-        git checkout main
-        git add data/
-        git commit -m "🚨 Auto-Update: West Asia Psyopoly Intel" || true
-        git pull origin main --no-rebase -X ours || true
-        git push origin main
-
-    - name: Sync Data to Hugging Face API
+    - name: Sync Data Directly to 8.8 TB Bucket
       if: github.event.action == 'trigger_psyopoly_siphon'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
+        curl -LsSf https://hf.co/cli/install.sh | bash
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 6: FLASH ALERT INTEGRATION PIPELINE
@@ -333,24 +281,13 @@ jobs:
         body: "CRITICAL: The Flash Alert Integration Engine detected high-priority metrics breaking baseline thresholds. Review your active dashboard platform immediately."
         convert_markdown: true
 
-    - name: Commit and Push (Flash Alert)
-      if: github.event.action == 'trigger_flash_alert'
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git fetch origin main
-        git checkout main
-        git add data/
-        git commit -m "⚡ Auto-Update: Global OSINT Flash Alerts" || true
-        git pull origin main --no-rebase -X ours || true
-        git push origin main
-
-    - name: Sync Data to Hugging Face API
+    - name: Sync Data Directly to 8.8 TB Bucket
       if: github.event.action == 'trigger_flash_alert'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
+        curl -LsSf https://hf.co/cli/install.sh | bash
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 7: WEEKLY WEST ASIA BRIEF (PSYOPOLY)
@@ -378,16 +315,13 @@ jobs:
         RAG_GEMINI_API_KEY_5: ${{ secrets.RAG_GEMINI_API_KEY_5 }}
       run: python live_pipeline_west_asia_weekly.py
 
-    - name: Commit and Push (West Asia Weekly)
+    - name: Sync Data Directly to 8.8 TB Bucket
       if: github.event.action == 'trigger_west_asia_weekly'
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git checkout main
-        git add data/
-        git commit -m "🌍 Auto-Update: West Asia Weekly OSINT Brief" || true
-        git pull origin main --no-rebase -X ours || true
-        git push origin main
+        curl -LsSf https://hf.co/cli/install.sh | bash
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 8: AUTONOMOUS AGENTIC AI LOOP (25M)
@@ -425,20 +359,10 @@ jobs:
         body: file://data/agentic_email_body.md
         convert_markdown: true
 
-    - name: Commit and Push (Agentic AI)
-      if: github.event.action == 'trigger_agentic_ai'
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git checkout main
-        git add data/
-        git commit -m "🤖 Auto-Update: Agentic AI Autonomous Brief" || true
-        git pull origin main --no-rebase -X ours || true
-        git push origin main
-
-    - name: Sync Data to Hugging Face API
+    - name: Sync Data Directly to 8.8 TB Bucket
       if: github.event.action == 'trigger_agentic_ai'
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        python -c "from huggingface_hub import HfApi; HfApi().upload_folder(folder_path='data', repo_id='kashifanwar/semicon-dashboard', repo_type='space', path_in_repo='data', token='$HF_TOKEN')"
+        curl -LsSf https://hf.co/cli/install.sh | bash
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage

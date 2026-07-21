@@ -154,7 +154,7 @@ if __name__ == "__main__":
                 
         if psy_events: validated_events = psy_events + validated_events
         
-        output_file = '/data/tactical_events_24h.json'
+        output_file = 'data/tactical_events_24h.json'
         json.dump(validated_events, open(output_file, 'w'), indent=4)
         
         # HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"

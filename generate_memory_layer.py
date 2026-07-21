@@ -4,7 +4,7 @@ from collections import Counter
 from datetime import datetime, timedelta
 from huggingface_hub import HfApi
 
-DATA_DIR = "/data"
+DATA_DIR = "data"
 
 now = datetime.utcnow()
 

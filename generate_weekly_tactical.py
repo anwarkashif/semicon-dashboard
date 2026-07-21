@@ -16,7 +16,7 @@ def update_fallback_title(target_title):
     FAILSAFE: If the AI API crashes or times out, this forcefully updates 
     the date on the existing dashboard file so the UI never displays the wrong week.
     """
-    file_path = '/data/weekly_tactical_live.json'
+    file_path = 'data/weekly_tactical_live.json'
     if os.path.exists(file_path):
         try:
             with open(file_path, 'r') as f:
@@ -81,8 +81,8 @@ def main():
         
     client = genai.Client(api_key=api_key)
 
-    latest_brief_path = get_latest_file('/data/brief_*.json')
-    tactical_path = '/data/weekly_tactical/tactical_events_24h.json'
+    latest_brief_path = get_latest_file('data/brief_*.json')
+    tactical_path = 'data/weekly_tactical/tactical_events_24h.json'
     
     weekly_context = ""
     if latest_brief_path:
@@ -137,7 +137,7 @@ def main():
         snippet_data.pop('classification', None)
 
         os.makedirs('/data', exist_ok=True)
-        output_file = '/data/weekly_tactical_live.json'
+        output_file = 'data/weekly_tactical_live.json'
         with open(output_file, 'w') as f:
             json.dump(snippet_data, f, indent=4)
         print(f"✅ Successfully generated and saved {output_file} for {date_string}")
