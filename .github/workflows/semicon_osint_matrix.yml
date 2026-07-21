@@ -72,18 +72,7 @@ jobs:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         curl -LsSf https://hf.co/cli/install.sh | bash
-        /home/runner/.local/bin/hf sync .Fix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-data hf://buckets/kashifanwar/semicon-dashboard-storage
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 2: GENERATE SEMICON WEEKLY BRIEF
@@ -98,22 +87,12 @@ data hf://buckets/kashifanwar/semicon-dashboard-storage
       if: github.event.action == 'trigger_weekly_brief'
       run: |
         python -m pip install --upgrade pip
-        pip install requests goFix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
+        pip install requests google-genai plotly feedparser beautifulsoup4 huggingface-hub trafilatura langgraph
 
     - name: Run Core Datasets and Weekly Pipelines
       if: github.event.action == 'trigger_weekly_brief'
       env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-dataogle-genai plotly feedparser beautifulsoup4 huggingface-hub trafilatura langgraph
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
         RAG_GEMINI_API_KEY: ${{ secrets.RAG_GEMINI_API_KEY }}
         RAG_GEMINI_API_KEY_2: ${{ secrets.RAG_GEMINI_API_KEY_2 }}
@@ -137,18 +116,7 @@ dataogle-genai plotly feedparser beautifulsoup4 huggingface-hub trafilatura lang
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         curl -LsSf https://hf.co/cli/install.sh | bash
-        /home/runner/.local/bin/hf sync .Fix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-data hf://buckets/kashifanwar/semicon-dashboard-storage
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 3: GEOPOLITICAL MEMORY LAYER
@@ -181,18 +149,7 @@ data hf://buckets/kashifanwar/semicon-dashboard-storage
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         curl -LsSf https://hf.co/cli/install.sh | bash
-        /home/runner/.local/bin/hf sync .Fix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-data hf://buckets/kashifanwar/semicon-dashboard-storage
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 4: TODAY'S SNIPPET - SHIFT BRIEF (12H)
@@ -240,18 +197,7 @@ data hf://buckets/kashifanwar/semicon-dashboard-storage
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         curl -LsSf https://hf.co/cli/install.sh | bash
-        /home/runner/.local/bin/hf sync .Fix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-data hf://buckets/kashifanwar/semicon-dashboard-storage
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 5: WEST ASIA STRATEGIC INTEL - PSYOPOLY SIPHON (HOURLY)
@@ -294,18 +240,7 @@ data hf://buckets/kashifanwar/semicon-dashboard-storage
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         curl -LsSf https://hf.co/cli/install.sh | bash
-        /home/runner/.local/bin/hf sync .Fix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-data hf://buckets/kashifanwar/semicon-dashboard-storage
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 6: FLASH ALERT INTEGRATION PIPELINE
@@ -353,18 +288,7 @@ data hf://buckets/kashifanwar/semicon-dashboard-storage
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         curl -LsSf https://hf.co/cli/install.sh | bash
-        /home/runner/.local/bin/hf sync .Fix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-data hf://buckets/kashifanwar/semicon-dashboard-storage
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 7: WEEKLY WEST ASIA BRIEF (PSYOPOLY)
@@ -398,18 +322,7 @@ data hf://buckets/kashifanwar/semicon-dashboard-storage
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         curl -LsSf https://hf.co/cli/install.sh | bash
-        /home/runner/.local/bin/hf sync .Fix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-data hf://buckets/kashifanwar/semicon-dashboard-storage
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
 
     # ==========================================
     # TASK 8: AUTONOMOUS AGENTIC AI LOOP (25M)
@@ -444,18 +357,7 @@ data hf://buckets/kashifanwar/semicon-dashboard-storage
         subject: "🤖 [SemicoN Agentic AI] Autonomous Intelligence Brief"
         to: anwarkashif@outlook.com
         from: "SemicoN Switchboard Engine <${{ secrets.SMTP_USERNAME }}>"
-        body: file:/Fix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-data/agentic_email_body.md
+        body: file://data/agentic_email_body.md
         convert_markdown: true
 
     - name: Sync Data Directly to 8.8 TB Bucket
@@ -464,15 +366,4 @@ data/agentic_email_body.md
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         curl -LsSf https://hf.co/cli/install.sh | bash
-        /home/runner/.local/bin/hf sync .Fix 1: The YAML API Key
-Open your .github/workflows/semicon_osint_matrix.yml file. Scroll down to TASK 2: GENERATE SEMICON WEEKLY BRIEF, find the env: block, and add the missing GEMINI_API_KEY right at the top so it looks exactly like this:
-
-YAML
-
-
-    - name: Run Core Datasets and Weekly Pipelines
-      if: github.event.action == 'trigger_weekly_brief'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # <--- ADD THIS LINE
-        GEMINI_API_KEY_SECONDARY: ${{ secrets.GEMINI_API_KEY_SECONDARY }}
-data hf://buckets/kashifanwar/semicon-dashboard-storage
+        /home/runner/.local/bin/hf sync ./data hf://buckets/kashifanwar/semicon-dashboard-storage
