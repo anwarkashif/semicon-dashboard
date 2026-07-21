@@ -12,7 +12,7 @@ from google import genai
 from huggingface_hub import HfApi
 import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 
-os.makedirs('data', exist_ok=True)
+os.makedirs('/data', exist_ok=True)
 
 RSS_FEEDS = [
     "https://www.ft.com/technology?format=rss", "https://www.defenseone.com/rss/all/", "https://spacepolicyonline.com/feed/",
@@ -154,11 +154,11 @@ if __name__ == "__main__":
                 
         if psy_events: validated_events = psy_events + validated_events
         
-        output_file = 'data/tactical_events_24h.json'
+        output_file = '/data/tactical_events_24h.json'
         json.dump(validated_events, open(output_file, 'w'), indent=4)
         
-        HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
-        if HF_TOKEN:
-            HfApi().upload_file(path_or_fileobj=output_file, path_in_repo=output_file, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Master Tactical Pool (Full Provenance JSON)")
-            print("✅ Master Pool Synced with Precise URLs!")
+        # HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
+        # if HF_TOKEN:
+        #     HfApi().upload_file(path_or_fileobj=output_file, path_in_repo=output_file, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Master Tactical Pool (Full Provenance JSON)")
+        #     print("✅ Master Pool Synced with Precise URLs!")
     except Exception as e: print(f"❌ Error: {e}")

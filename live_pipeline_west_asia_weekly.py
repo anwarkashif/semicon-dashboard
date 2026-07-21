@@ -9,10 +9,10 @@ from google import genai
 from huggingface_hub import HfApi
 import logging
 
-os.makedirs('data/west_asia', exist_ok=True)
+os.makedirs('/data/west_asia', exist_ok=True)
 
 logging.basicConfig(
-    filename='data/pipeline_wa_weekly_log.txt',
+    filename='/data/pipeline_wa_weekly_log.txt',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
@@ -88,7 +88,7 @@ def get_sunday_to_sunday_range():
         return f"{previous_sunday.strftime('%B %d')} - {recent_sunday.strftime('%B %d')}, {recent_sunday.year}"
 
 def fetch_weekly_psyopoly_pool():
-    standalone_path = 'data/psyopoly_alerts.json'
+    standalone_path = '/data/psyopoly_alerts.json'
     if not os.path.exists(standalone_path): return []
     
     try:
@@ -170,17 +170,17 @@ if __name__ == "__main__":
         brief_data = generate_west_asia_brief(events_pool, date_range_str)
         brief_data.update({'date_range': date_range_str, 'generation_date': date_stamp, 'event_volume': len(events_pool)})
         
-        output_file = f'data/west_asia/west_asia_brief_{date_stamp}.json'
+        output_file = f'/data/west_asia/west_asia_brief_{date_stamp}.json'
         
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(brief_data, f, indent=4)
             
-        HF_TOKEN = os.environ.get("HF_TOKEN")
-        REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard" 
-        
-        if HF_TOKEN and REPO_ID:
-            HfApi().upload_file(path_or_fileobj=output_file, path_in_repo=output_file, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message=f"Auto-sync West Asia Brief: {date_range_str}")
-            print("✅ Upload complete.")
+        # HF_TOKEN = os.environ.get("HF_TOKEN")
+        # REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard" 
+        # 
+        # if HF_TOKEN and REPO_ID:
+        #     HfApi().upload_file(path_or_fileobj=output_file, path_in_repo=output_file, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message=f"Auto-sync West Asia Brief: {date_range_str}")
+        #     print("✅ Upload complete.")
             
     except Exception as e:
         print(f"❌ Pipeline Failed: {e}")

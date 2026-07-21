@@ -22,7 +22,7 @@ def inject_to_local_db(live_threat_scan):
     logger.info("Connecting to Local Secure Database...")
     
     # Connects to a local file on your Mac instead of the cloud!
-    con = duckdb.connect('local_intel.duckdb')
+    con = duckdb.connect('/data/local_intel.duckdb')
     
     # Create the table if it doesn't exist yet
     con.execute("""

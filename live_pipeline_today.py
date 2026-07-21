@@ -14,10 +14,10 @@ import logging
 import re
 import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 
-os.makedirs('data/today_snippet', exist_ok=True)
+os.makedirs('/data/today_snippet', exist_ok=True)
 
 logging.basicConfig(
-    filename='data/pipeline_today_log.txt',
+    filename='/data/pipeline_today_log.txt',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
@@ -320,7 +320,7 @@ if __name__ == "__main__":
                 
         if psy_events: validated_events = psy_events[:3] + validated_events
         
-        output_file_tactical = 'data/today_snippet/tactical_events_24h.json'
+        output_file_tactical = '/data/today_snippet/tactical_events_24h.json'
         master_events = json.load(open(output_file_tactical, 'r')) if os.path.exists(output_file_tactical) else []
         master_events = validated_events + master_events
         
@@ -332,13 +332,13 @@ if __name__ == "__main__":
         json.dump(unique[:40], open(output_file_tactical, 'w'), indent=4)
 
         print("⏳ Pooling data before Shift Brief generation...")
-        json.dump(generate_shift_brief(unique[:40]), open('data/today_snippet/shift_brief.json', 'w'), indent=4)
+        json.dump(generate_shift_brief(unique[:40]), open('/data/today_snippet/shift_brief.json', 'w'), indent=4)
         
-        HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
-        if HF_TOKEN:
-            HfApi().upload_file(path_or_fileobj=output_file_tactical, path_in_repo=output_file_tactical, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Today Snippet Provenance Data")
-            HfApi().upload_file(path_or_fileobj='data/today_snippet/shift_brief.json', path_in_repo='data/today_snippet/shift_brief.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
-            print("✅ Today Snippet Synced with Precise URLs!")
+# HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
+        # if HF_TOKEN:
+        #     HfApi().upload_file(path_or_fileobj=output_file_tactical, path_in_repo=output_file_tactical, repo_id=REPO_ID, repo_type="space", token=HF_TOKEN, commit_message="Sync Today Snippet Provenance Data")
+        #     HfApi().upload_file(path_or_fileobj='/data/today_snippet/shift_brief.json', path_in_repo='data/today_snippet/shift_brief.json', repo_id=REPO_ID, repo_type="space", token=HF_TOKEN)
+        #     print("✅ Today Snippet Synced with Precise URLs!")
             
     except Exception as e: 
         print(f"❌ Error: {e}")

@@ -354,16 +354,16 @@ class ExtractorNode:
                     
                     # Target specific high-value RAG files and live data feeds
                     target_files = [
-                        'data/flash_alert.json', 
-                        'data/executive_home/flush_brief_24h.json',
-                        'data/executive_home/tactical_events_24h.json',
-                        'data/today_snippet/shift_brief.json',
-                        'data/live_alert.json',
-                        'data/psyopoly_alerts.json'
+                        '/data/flash_alert.json', 
+                        '/data/executive_home/flush_brief_24h.json',
+                        '/data/executive_home/tactical_events_24h.json',
+                        '/data/today_snippet/shift_brief.json',
+                        '/data/live_alert.json',
+                        '/data/psyopoly_alerts.json'
                     ]
                     # Automatically grab the single newest dynamic briefs
-                    target_files.extend(sorted(glob.glob('data/brief_*.json'))[-1:])
-                    target_files.extend(sorted(glob.glob('data/west_asia/west_asia_brief_*.json'))[-1:])
+                    target_files.extend(sorted(glob.glob('/data/brief_*.json'))[-1:])
+                    target_files.extend(sorted(glob.glob('/data/west_asia/west_asia_brief_*.json'))[-1:])
                     
                     files_added = 0
                     for f_path in target_files:

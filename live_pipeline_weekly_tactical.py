@@ -14,7 +14,7 @@ import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 # ==========================================
 # 1. CONFIGURATION & SETUP (WEEKLY TACTICAL BRIEF)
 # ==========================================
-os.makedirs('data/friday_snippet', exist_ok=True)
+os.makedirs('/data/friday_snippet', exist_ok=True)
 
 RSS_FEEDS = [
     "https://www.ft.com/technology?format=rss",
@@ -349,7 +349,7 @@ if __name__ == "__main__":
                 print(f"⚠️ Warning: Gemini returned an unmapped ID ({target_id}). Dropping event to maintain integrity.")
         
         dynamic_date_str = datetime.now().strftime("%Y-%m-%d")
-        output_file = f'data/friday_snippet/tactical_events_{dynamic_date_str}.json'
+        output_file = f'/data/friday_snippet/tactical_events_{dynamic_date_str}.json'
         
         with open(output_file, 'w') as f:
             json.dump(validated_tactical_events, f, indent=4)
@@ -359,26 +359,26 @@ if __name__ == "__main__":
         # ==========================================
         # ☁️ HUGGING FACE PERMANENT RETENTION SYNC
         # ==========================================
-        HF_TOKEN = os.environ.get("HF_TOKEN")
-        REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard" 
-        
-        if HF_TOKEN and REPO_ID:
-            try:
-                api = HfApi()
-                print(f"☁️ Uploading {output_file} to permanent storage on {REPO_ID}...")
-                api.upload_file(
-                    path_or_fileobj=output_file,
-                    path_in_repo=output_file,
-                    repo_id=REPO_ID,
-                    repo_type="space",
-                    token=HF_TOKEN,
-                    commit_message=f"Auto-sync Tactical Events (Resolved Publisher URLs): {dynamic_date_str}"
-                )
-                print("✅ Successfully locked tactical events into permanent Hugging Face storage!")
-            except Exception as e:
-                print(f"❌ Failed to sync to Hub. File is only in temporary memory! Error: {e}")
-        else:
-            print("⚠️ HF_TOKEN or REPO_ID missing. File saved locally but will be lost on container restart.")
+        # HF_TOKEN = os.environ.get("HF_TOKEN")
+        # REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard" 
+        # 
+        # if HF_TOKEN and REPO_ID:
+        #     try:
+        #         api = HfApi()
+        #         print(f"☁️ Uploading {output_file} to permanent storage on {REPO_ID}...")
+        #         api.upload_file(
+        #             path_or_fileobj=output_file,
+        #             path_in_repo=output_file,
+        #             repo_id=REPO_ID,
+        #             repo_type="space",
+        #             token=HF_TOKEN,
+        #             commit_message=f"Auto-sync Tactical Events (Resolved Publisher URLs): {dynamic_date_str}"
+        #         )
+        #         print("✅ Successfully locked tactical events into permanent Hugging Face storage!")
+        #     except Exception as e:
+        #         print(f"❌ Failed to sync to Hub. File is only in temporary memory! Error: {e}")
+        # else:
+        #     print("⚠️ HF_TOKEN or REPO_ID missing. File saved locally but will be lost on container restart.")
             
     except Exception as e:
         print(f"❌ Pipeline Failed: {e}")

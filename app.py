@@ -46,6 +46,12 @@ os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
 os.environ["STREAMLIT_SERVER_WEBSOCKET_PING_INTERVAL"] = "10"
 os.environ["STREAMLIT_SERVER_WEBSOCKET_PING_TIMEOUT"] = "120"
 
+# 🗄️ HUGGING FACE CACHE REDIRECTION (8.8 TB BUCKET)
+os.environ["HF_HOME"] = "/data/.huggingface"
+os.environ["TORCH_HOME"] = "/data/torch_cache"
+os.environ["HF_DATASETS_CACHE"] = "/data/datasets_cache"
+os.environ["XDG_CACHE_HOME"] = "/data/.cache"
+
 warnings.filterwarnings("ignore")
 
 from features.ui_features import inject_early_css, inject_global_theme, render_login_screen
@@ -162,8 +168,8 @@ if MAINTENANCE_MODE:
     st.stop()
 
 SNIPPET_TEST_MODE = False
-os.makedirs('data', exist_ok=True)
-os.makedirs('trash', exist_ok=True)
+os.makedirs('/data', exist_ok=True)
+os.makedirs('/data/trash', exist_ok=True)
 inject_global_theme()
 
 # ==========================================
@@ -302,7 +308,7 @@ else:
         ]
         
         for filename in files_to_sync:
-            local_path = f"data/{filename}"
+            local_path = f"/data/{filename}" # 🛑 FIXED: Absolute Bucket Path
             url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/data/{filename}"
             try:
                 resp = requests.get(url, headers=auth_headers, timeout=1.5)
@@ -322,8 +328,8 @@ else:
             try:
                 wa_resp = requests.get(wa_url, headers=auth_headers, timeout=1.5)
                 if wa_resp.status_code == 200 and len(wa_resp.text) > 25:
-                    os.makedirs('data/west_asia', exist_ok=True)
-                    with open(f"data/west_asia/{wa_filename}", 'w', encoding='utf-8') as f:
+                    os.makedirs('/data/west_asia', exist_ok=True) # 🛑 FIXED
+                    with open(f"/data/west_asia/{wa_filename}", 'w', encoding='utf-8') as f: # 🛑 FIXED
                         f.write(wa_resp.text)
                     break 
             except Exception: pass
@@ -339,12 +345,12 @@ else:
                     latest_brief = brief_files[-1]
                     b_resp = requests.get(latest_brief['download_url'], headers=auth_headers, timeout=2.0)
                     if b_resp.status_code == 200:
-                        with open(f"data/{latest_brief['name']}", 'w', encoding='utf-8') as f:
+                        with open(f"/data/{latest_brief['name']}", 'w', encoding='utf-8') as f: # 🛑 FIXED
                             f.write(b_resp.text)
-                        return f"data/{latest_brief['name']}"
+                        return f"/data/{latest_brief['name']}" # 🛑 FIXED
         except Exception: pass
 
-        local_files = glob.glob('data/brief_*.json')
+        local_files = glob.glob('/data/brief_*.json') # 🛑 FIXED
         if local_files:
             local_files.sort()
             return local_files[-1]
@@ -364,7 +370,7 @@ else:
         import datetime
         current_date = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         
-        flash_path = 'data/flash_alert.json'
+        flash_path = '/data/flash_alert.json' # 🛑 FIXED: Absolute Bucket Path
         if os.path.exists(flash_path):
             try:
                 with open(flash_path, 'r', encoding='utf-8') as f:
@@ -383,7 +389,7 @@ else:
                             })
             except Exception: pass
 
-        exec_path = 'data/executive_home/tactical_events_24h.json'
+        exec_path = '/data/executive_home/tactical_events_24h.json' # 🛑 FIXED
         if os.path.exists(exec_path):
             try:
                 with open(exec_path, 'r', encoding='utf-8') as f:
@@ -391,7 +397,7 @@ else:
                     if isinstance(data, list): combined_data.extend(data)
             except Exception: pass
             
-        std_path = 'data/tactical_events_24h.json'
+        std_path = '/data/tactical_events_24h.json' # 🛑 FIXED
         if os.path.exists(std_path):
             try:
                 with open(std_path, 'r', encoding='utf-8') as f:
@@ -429,7 +435,7 @@ else:
     def parse_rss_txt_file():
         import urllib.parse
         rss_dict = {}
-        filepath = 'data/rss_accumulator.txt'
+        filepath = '/data/rss_accumulator.txt' # 🛑 FIXED: Absolute Bucket Path
         if not os.path.exists(filepath): return rss_dict
 
         current_reg = None

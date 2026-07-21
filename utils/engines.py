@@ -11,7 +11,7 @@ import streamlit as st
 @st.cache_data(ttl=900) # Caches data for 15 minutes to vastly improve render speed
 def parse_rss_txt_file():
     rss_dict = {}
-    filepath = 'data/rss_accumulator.txt'
+    filepath = '/data/rss_accumulator.txt'
     if not os.path.exists(filepath): return rss_dict
 
     # --- CRITICAL FIX: FREEZE 24-HOUR WINDOW TO 00:15 AM IST ROLLOVER ---
@@ -112,10 +112,10 @@ def calculate_domain_threat(domain_name, text_content, dash_data):
 
 # --- NEW CENTRALIZED LIVE ALERT FETCH FUNCTION ---
 def get_active_live_alert():
-    if not os.path.exists('data/live_alert.json'): 
+    if not os.path.exists('/data/live_alert.json'): 
         return None
     try:
-        with open('data/live_alert.json', 'r') as f:
+        with open('/data/live_alert.json', 'r') as f:
             alert = json.load(f)
         alert_time = datetime.fromisoformat(alert['timestamp'].replace("Z", "+00:00"))
         time_diff = datetime.now(timezone.utc) - alert_time
@@ -129,8 +129,8 @@ def get_active_live_alert():
 # --- NEW ROCK-SOLID CLOCK CACHE (FIX FOR ISSUE 2) ---
 def get_deployment_timestamp():
     """Anchors the clock to a persistent file so it survives all refreshes and log-ins."""
-    os.makedirs('data', exist_ok=True)
-    file_path = 'data/nominal_timer.txt'
+    os.makedirs('/data', exist_ok=True)
+    file_path = '/data/nominal_timer.txt'
     
     # Read the saved timestamp if it exists
     if os.path.exists(file_path):

@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, timezone
 import feedparser
 from email.utils import parsedate_to_datetime
 
-SITREP_HISTORY_FILE = "data/sitrep_history.json"
+SITREP_HISTORY_FILE = "/data/sitrep_history.json"
 MAX_SITREP_HISTORY = 12
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -394,16 +394,16 @@ if __name__ == "__main__":
         json.dump(sitrep_history, f)
 
     if alert_data:
-        with open("data/live_alert.json", "w", encoding="utf-8") as f:
+        with open("/data/live_alert.json", "w", encoding="utf-8") as f:
             json.dump(alert_data, f)
         print(f"🔴 ELEVATED SITREP DETECTED AND SAVED: {alert_data['headline']}")
     else:
-        if os.path.exists("data/live_alert.json"):
-            os.remove("data/live_alert.json")
+        if os.path.exists("/data/live_alert.json"):
+            os.remove("/data/live_alert.json")
         print("🟢 No major SITREP developments detected in the last 2 hours. Cleared.")
     
     # 2. CACHE APPEND (Accumulate data via the 2-hour cron job)
-    cache_file = "data/rss_accumulator.txt"
+    cache_file = "/data/rss_accumulator.txt"
     with open(cache_file, "a", encoding="utf-8") as f:
         f.write(daily_rss_text)
     print("✅ Daily RSS Accumulator Updated.")
@@ -415,7 +415,7 @@ if __name__ == "__main__":
     print("✅ Live Telemetry grabbed. Weekly JSON remains fully static/frozen.")
 
     # 4. FRIDAY ONLY AI GENERATION (RESTORED CALENDAR GATE)
-    filename = f"data/brief_{datetime.now(timezone.utc).strftime('%Y-%m-%d')}.json"
+    filename = f"/data/brief_{datetime.now(timezone.utc).strftime('%Y-%m-%d')}.json"
     
     # Calculate if today is Friday (Monday = 0, Friday = 4)
     is_friday = datetime.now(timezone.utc).weekday() == 4
@@ -470,28 +470,28 @@ if __name__ == "__main__":
             # ==========================================
             # ☁️ HUGGING FACE PERMANENT RETENTION SYNC
             # ==========================================
-            HF_TOKEN = os.environ.get("HF_TOKEN")
-            # If running inside a HF Space, SPACE_ID is automatically available in the environment.
-            # If running via GitHub Actions, explicitly define your repo ID: "username/space-name"
-            REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
-            
-            if HF_TOKEN and REPO_ID:
-                try:
-                    api = HfApi()
-                    print(f"☁️ Uploading {filename} to permanent storage on {REPO_ID}...")
-                    api.upload_file(
-                        path_or_fileobj=filename,
-                        path_in_repo=filename,
-                        repo_id=REPO_ID,
-                        repo_type="space",
-                        token=HF_TOKEN,
-                        commit_message=f"Auto-sync Friday Brief: {current_weekly_range}"
-                    )
-                    print("✅ Successfully locked into permanent Hugging Face storage!")
-                except Exception as e:
-                    print(f"❌ Failed to sync to Hub. File is only in temporary memory! Error: {e}")
-            else:
-                print("⚠️ HF_TOKEN or REPO_ID missing. File saved locally but will be lost on container restart.")
+            # HF_TOKEN = os.environ.get("HF_TOKEN")
+            # # If running inside a HF Space, SPACE_ID is automatically available in the environment.
+            # # If running via GitHub Actions, explicitly define your repo ID: "username/space-name"
+            # REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
+            # 
+            # if HF_TOKEN and REPO_ID:
+            #     try:
+            #         api = HfApi()
+            #         print(f"☁️ Uploading {filename} to permanent storage on {REPO_ID}...")
+            #         api.upload_file(
+            #             path_or_fileobj=filename,
+            #             path_in_repo=filename,
+            #             repo_id=REPO_ID,
+            #             repo_type="space",
+            #             token=HF_TOKEN,
+            #             commit_message=f"Auto-sync Friday Brief: {current_weekly_range}"
+            #         )
+            #         print("✅ Successfully locked into permanent Hugging Face storage!")
+            #     except Exception as e:
+            #         print(f"❌ Failed to sync to Hub. File is only in temporary memory! Error: {e}")
+            # else:
+            #     print("⚠️ HF_TOKEN or REPO_ID missing. File saved locally but will be lost on container restart.")
             
             print("📡 Re-seeding Think Tank Radar for the new week...")
             fresh_rss, fresh_text = fetch_live_rss_feed()
@@ -499,7 +499,7 @@ if __name__ == "__main__":
                 f.write(fresh_text)
                 
             cutoff_date = datetime.now() - timedelta(days=180)
-            for file_path in glob.glob("data/brief_*.json"):
+            for file_path in glob.glob("/data/brief_*.json"):
                 try:
                     date_str = file_path.split('_')[1].split('.json')[0]
                     if datetime.strptime(date_str, '%Y-%m-%d') < cutoff_date: os.remove(file_path)

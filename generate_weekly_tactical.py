@@ -16,7 +16,7 @@ def update_fallback_title(target_title):
     FAILSAFE: If the AI API crashes or times out, this forcefully updates 
     the date on the existing dashboard file so the UI never displays the wrong week.
     """
-    file_path = 'data/weekly_tactical_live.json'
+    file_path = '/data/weekly_tactical_live.json'
     if os.path.exists(file_path):
         try:
             with open(file_path, 'r') as f:
@@ -27,22 +27,22 @@ def update_fallback_title(target_title):
             print(f"⚠️ AI generation failed, but successfully force-updated title to: {target_title}")
             
             # --- Sync the fallback to Hugging Face so the updated title persists ---
-            HF_TOKEN = os.environ.get("HF_TOKEN")
-            REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
-            if HF_TOKEN and REPO_ID:
-                try:
-                    api = HfApi()
-                    api.upload_file(
-                        path_or_fileobj=file_path,
-                        path_in_repo=file_path,
-                        repo_id=REPO_ID,
-                        repo_type="space",
-                        token=HF_TOKEN,
-                        commit_message=f"Auto-sync Fallback Tactical Title: {target_title}"
-                    )
-                    print("✅ Locked fallback title into permanent storage.")
-                except Exception as e:
-                    print(f"❌ Failed to sync fallback to Hub: {e}")
+            # HF_TOKEN = os.environ.get("HF_TOKEN")
+            # REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
+            # if HF_TOKEN and REPO_ID:
+            #     try:
+            #         api = HfApi()
+            #         api.upload_file(
+            #             path_or_fileobj=file_path,
+            #             path_in_repo=file_path,
+            #             repo_id=REPO_ID,
+            #             repo_type="space",
+            #             token=HF_TOKEN,
+            #             commit_message=f"Auto-sync Fallback Tactical Title: {target_title}"
+            #         )
+            #         print("✅ Locked fallback title into permanent storage.")
+            #     except Exception as e:
+            #         print(f"❌ Failed to sync fallback to Hub: {e}")
         except Exception as e:
             print(f"Fallback title update failed: {e}")
 
@@ -81,8 +81,8 @@ def main():
         
     client = genai.Client(api_key=api_key)
 
-    latest_brief_path = get_latest_file('data/brief_*.json')
-    tactical_path = 'data/weekly_tactical/tactical_events_24h.json'
+    latest_brief_path = get_latest_file('/data/brief_*.json')
+    tactical_path = '/data/weekly_tactical/tactical_events_24h.json'
     
     weekly_context = ""
     if latest_brief_path:
@@ -136,8 +136,8 @@ def main():
         snippet_data.pop('date', None)
         snippet_data.pop('classification', None)
 
-        os.makedirs('data', exist_ok=True)
-        output_file = 'data/weekly_tactical_live.json'
+        os.makedirs('/data', exist_ok=True)
+        output_file = '/data/weekly_tactical_live.json'
         with open(output_file, 'w') as f:
             json.dump(snippet_data, f, indent=4)
         print(f"✅ Successfully generated and saved {output_file} for {date_string}")
@@ -145,26 +145,26 @@ def main():
         # ==========================================
         # ☁️ HUGGING FACE PERMANENT RETENTION SYNC
         # ==========================================
-        HF_TOKEN = os.environ.get("HF_TOKEN")
-        REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
-        
-        if HF_TOKEN and REPO_ID:
-            try:
-                api = HfApi()
-                print(f"☁️ Uploading {output_file} to permanent storage on {REPO_ID}...")
-                api.upload_file(
-                    path_or_fileobj=output_file,
-                    path_in_repo=output_file,
-                    repo_id=REPO_ID,
-                    repo_type="space",
-                    token=HF_TOKEN,
-                    commit_message=f"Auto-sync Weekly Tactical Brief: {date_string}"
-                )
-                print("✅ Successfully locked weekly tactical brief into permanent Hugging Face storage!")
-            except Exception as e:
-                print(f"❌ Failed to sync to Hub. File is only in temporary memory! Error: {e}")
-        else:
-            print("⚠️ HF_TOKEN or REPO_ID missing. File saved locally but will be lost on container restart.")
+        # HF_TOKEN = os.environ.get("HF_TOKEN")
+        # REPO_ID = os.environ.get("SPACE_ID") or "YOUR_HF_USERNAME/YOUR_SPACE_NAME" 
+        # 
+        # if HF_TOKEN and REPO_ID:
+        #     try:
+        #         api = HfApi()
+        #         print(f"☁️ Uploading {output_file} to permanent storage on {REPO_ID}...")
+        #         api.upload_file(
+        #             path_or_fileobj=output_file,
+        #             path_in_repo=output_file,
+        #             repo_id=REPO_ID,
+        #             repo_type="space",
+        #             token=HF_TOKEN,
+        #             commit_message=f"Auto-sync Weekly Tactical Brief: {date_string}"
+        #         )
+        #         print("✅ Successfully locked weekly tactical brief into permanent Hugging Face storage!")
+        #     except Exception as e:
+        #         print(f"❌ Failed to sync to Hub. File is only in temporary memory! Error: {e}")
+        # else:
+        #     print("⚠️ HF_TOKEN or REPO_ID missing. File saved locally but will be lost on container restart.")
         # ==========================================
 
     except Exception as e:
