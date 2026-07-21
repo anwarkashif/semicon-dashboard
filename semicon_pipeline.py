@@ -1,4 +1,4 @@
-data/from dagster import asset, Definitions, get_dagster_logger
+from dagster import asset, Definitions, get_dagster_logger
 import duckdb
 from datetime import datetime
 
