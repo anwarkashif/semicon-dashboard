@@ -12,7 +12,7 @@ from google import genai
 from huggingface_hub import HfApi
 import trafilatura  # 🛑 THE FIX: Added Trafilatura for deep text extraction
 
-os.makedirs('/data', exist_ok=True)
+os.makedirs('data', exist_ok=True)
 
 RSS_FEEDS = [
     "https://www.ft.com/technology?format=rss", "https://www.defenseone.com/rss/all/", "https://spacepolicyonline.com/feed/",

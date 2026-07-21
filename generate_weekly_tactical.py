@@ -136,7 +136,7 @@ def main():
         snippet_data.pop('date', None)
         snippet_data.pop('classification', None)
 
-        os.makedirs('/data', exist_ok=True)
+        os.makedirs('data', exist_ok=True)
         output_file = 'data/weekly_tactical_live.json'
         with open(output_file, 'w') as f:
             json.dump(snippet_data, f, indent=4)

@@ -6,15 +6,13 @@ import time
 import re
 import urllib.parse
 from google import genai
-from huggingface_hub import HfApi
+from google.genai import types
 from datetime import datetime, timedelta, timezone
 import feedparser
 from email.utils import parsedate_to_datetime
 
 SITREP_HISTORY_FILE = "data/sitrep_history.json"
 MAX_SITREP_HISTORY = 12
-
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 # Gather all potential News API keys from the environment
 ALL_NEWS_KEYS = [
@@ -23,19 +21,81 @@ ALL_NEWS_KEYS = [
     os.environ.get("NEWS_API_KEY_3"),
     os.environ.get("NEWS_API_KEY_4")
 ]
-
-# Filter out empty keys
 VALID_NEWS_KEYS = [key for key in ALL_NEWS_KEYS if key]
 
-if not VALID_NEWS_KEYS or not GEMINI_API_KEY:
+# 🚨 THE ARSENAL: API Key Rotation List for Gemini
+AVAILABLE_KEYS = [
+    os.environ.get("GEMINI_API_KEY_SECONDARY"),
+    os.environ.get("RAG_GEMINI_API_KEY"),
+    os.environ.get("RAG_GEMINI_API_KEY_2"),
+    os.environ.get("RAG_GEMINI_API_KEY_3"),
+    os.environ.get("RAG_GEMINI_API_KEY_4"),
+    os.environ.get("RAG_GEMINI_API_KEY_5")
+]
+VALID_KEYS = [k for k in AVAILABLE_KEYS if k and k.strip()]
+
+if not VALID_NEWS_KEYS or not VALID_KEYS:
     print("❌ ERROR: Missing API Keys. Please run with variables set.")
     exit()
 
-client = genai.Client(api_key=GEMINI_API_KEY)
-# Using trusted 2.5-flash model
-model_name = 'gemini-2.5-flash'
-
 BANNED_SOURCES = ['variety.com', 'hollywoodlife.com', 'tmz.com', 'people.com', 'entertainment', 'amazon', 'searates', 'goodreads', 'researchgate', 'benzinga', 'yahoo']
+
+# 🚨 THE ENGINE: Seamless Failover Generation
+def generate_with_rotation(prompt, temperature=0.1):
+    current_idx = 0
+    failures = 0
+    global_cycles = 0
+    MAX_GLOBAL_CYCLES = 4  
+    
+    while global_cycles < MAX_GLOBAL_CYCLES:
+        current_key = VALID_KEYS[current_idx]
+        client = genai.Client(api_key=current_key)
+        
+        try:
+            response = client.models.generate_content(
+                model='gemini-2.5-flash', 
+                contents=prompt,
+                config={
+                    "temperature": temperature,
+                    "safety_settings": [
+                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+                    ]
+                }
+            )
+            raw_txt = getattr(response, 'text', '').strip()
+            if not raw_txt: raise ValueError("Empty response blocked by unknown filter")
+            return raw_txt
+            
+        except Exception as e:
+            failures += 1
+            err_msg = str(e)
+            log_msg = f"API Key {current_idx + 1} Attempt {failures} Failed: {type(e).__name__} - {err_msg[:100]}"
+            print(f"⚠️ {log_msg}")
+            
+            # 🛑 CRITICAL FIX: Instantly pause for 65 seconds if a 429 Quota limit is hit to prevent burning keys
+            if "429" in err_msg or "quota" in err_msg.lower() or "RESOURCE_EXHAUSTED" in err_msg:
+                print("🛑 429 Quota Limit Hit! Forcing strict 65-second API cooldown...")
+                time.sleep(65)
+            else:
+                time.sleep(10)
+            
+            if failures >= 2:
+                current_idx += 1
+                failures = 0
+                
+                if current_idx >= len(VALID_KEYS):
+                    print("⏳ All keys exhausted in this cycle. Sleeping an additional 60 seconds...")
+                    time.sleep(60)
+                    current_idx = 0
+                    global_cycles += 1
+                else:
+                    print(f"🔄 Rotating to API Key {current_idx + 1}...")
+                    time.sleep(5)
+                
+    raise Exception("CRITICAL: All API keys exhausted across multiple recovery cycles. Manual intervention required.")
 
 def get_weekly_daterange():
     """Calculates the date range anchored strictly to the most recent Friday."""
@@ -168,8 +228,9 @@ def evaluate_daily_threat(daily_text):
     {daily_text}
     """
     try:
-        response = client.models.generate_content(model=model_name, contents=prompt)
-        text = response.text.strip().replace('```json', '').replace('```', '')
+        # Utilizing the new rotation engine
+        text = generate_with_rotation(prompt, temperature=0.1)
+        text = text.strip().replace('```json', '').replace('```', '')
         if text == "NONE":
             return None
         
@@ -344,22 +405,12 @@ def generate_geopolitical_brief(news_text, timeframe_str):
     {news_text}
     """
     
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            response = client.models.generate_content(model=model_name, contents=prompt)
-            if not response.text: return ""
-            return response.text.replace('`', '') 
-        except Exception as e:
-            error_msg = str(e)
-            print(f"⚠️ Attempt {attempt + 1} failed: {error_msg}")
-            
-            if attempt < max_retries - 1:
-                print("⏳ Waiting 30 seconds before retrying...")
-                time.sleep(30)  
-            else:
-                print("❌ Gemini API Error: Max retries reached. Aborting AI generation.")
-                return ""
+    try:
+        raw_brief = generate_with_rotation(prompt, temperature=0.2)
+        return raw_brief.replace('`', '') 
+    except Exception as e:
+        print(f"❌ Gemini API Error: Aborting AI generation. Reason: {e}")
+        return ""
 
 if __name__ == "__main__":
     os.makedirs('data', exist_ok=True)
