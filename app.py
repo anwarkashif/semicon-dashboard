@@ -219,14 +219,14 @@ if st.session_state['role'] is None:
         # Load backend processors
         import sys
         import os
-        sys.path.append(os.path.dirname(os.path.abspath(__file__)))
         
-        try:
-            from extractor import ExtractorNode
-            from analyst import AnalystNode
-        except ModuleNotFoundError:
-            from features.extractor import ExtractorNode
-            from features.analyst import AnalystNode
+        # 🛑 Fix: Direct root import without the masking try/except block
+        root_path = os.path.dirname(os.path.abspath(__file__))
+        if root_path not in sys.path:
+            sys.path.insert(0, root_path)
+            
+        from extractor import ExtractorNode
+        from analyst import AnalystNode
         
         extractor = ExtractorNode()
         analyst = AnalystNode()
