@@ -255,11 +255,29 @@ def render_sd_bot():
         content_safe = msg["content"].replace('\n', '<br>').replace('`', '&#96;')
         chat_html += f'<div class="msg {css_class}">{content_safe}</div>'
 
+    is_open = "true" if len(st.session_state['sdbot_chat_history']) > 1 else "false"
+
     bot_html = f"""
     <div id="SD_BOT_IDENTIFIER"></div>
     <style>
         body {{ margin: 0; overflow: hidden; background: transparent; color: white; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }}
-        #bot-box {{ display: flex; flex-direction: column; height: 100vh; background: rgba(15, 23, 42, 0.95); border: 1px solid #333; border-radius: 12px; box-shadow: 0px 10px 40px rgba(0,0,0,0.9); backdrop-filter: blur(10px); }}
+        #bot-container {{ display: flex; justify-content: flex-end; align-items: flex-end; height: 100vh; width: 100vw; }}
+        
+        /* Floating Icon State */
+        #bot-icon {{
+            width: 60px; height: 60px; background: linear-gradient(135deg, #facc15, #eab308);
+            border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; cursor: pointer; transition: transform 0.2s; pointer-events: auto;
+        }}
+        #bot-icon:hover {{ transform: scale(1.1); }}
+        
+        /* Expanded Chat State */
+        #bot-box {{ 
+            display: none; flex-direction: column; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.95); border: 1px solid #333; border-radius: 12px; 
+            box-shadow: 0px 10px 40px rgba(0,0,0,0.9); backdrop-filter: blur(10px); pointer-events: auto;
+        }}
         #header {{ background: #facc15; color: black; padding: 12px; font-weight: bold; cursor: grab; display: flex; justify-content: space-between; align-items: center; border-radius: 12px 12px 0 0; font-size: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 10; user-select: none; }}
         #chat-history {{ flex: 1; padding: 15px; overflow-y: auto; font-size: 13.5px; line-height: 1.6; display: flex; flex-direction: column; gap: 12px; }}
         .msg {{ padding: 10px 14px; border-radius: 8px; max-width: 85%; word-wrap: break-word; }}
@@ -278,25 +296,33 @@ def render_sd_bot():
         ::-webkit-scrollbar {{ width: 6px; }}
         ::-webkit-scrollbar-track {{ background: transparent; }}
         ::-webkit-scrollbar-thumb {{ background: #334155; border-radius: 10px; }}
-        ::-webkit-scrollbar-thumb:hover {{ background: #475569; }}
+        
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 900px) {{
+            .msg {{ font-size: 14.5px; max-width: 95%; }}
+            input {{ font-size: 16px; }} /* Prevents iOS auto-zoom */
+        }}
     </style>
-    <div id="bot-box">
-        <div id="header">
-            <span style="display: flex; align-items: center; gap: 8px;">🤖 SD Bot</span>
-            <span id="close-btn" style="cursor:pointer; font-size:16px; padding: 0 5px;" title="Minimize">✖</span>
-        </div>
-        <div id="chat-history">
-            {chat_html}
-        </div>
-        <div id="input-bar">
-            <button id="mic-btn" title="Voice Input">🎤</button>
-            <input type="text" id="user-input" placeholder="Type or speak a prompt..." autocomplete="off"/>
-            <button id="send-btn" title="Send">➤</button>
+    
+    <div id="bot-container">
+        <div id="bot-icon">🤖</div>
+        <div id="bot-box">
+            <div id="header">
+                <span style="display: flex; align-items: center; gap: 8px;">🤖 SD Bot</span>
+                <span id="close-btn" style="cursor:pointer; font-size:16px; padding: 0 5px;" title="Minimize">✖</span>
+            </div>
+            <div id="chat-history">
+                {chat_html}
+            </div>
+            <div id="input-bar">
+                <button id="mic-btn" title="Voice Input">🎤</button>
+                <input type="text" id="user-input" placeholder="Type or speak a prompt..." autocomplete="off"/>
+                <button id="send-btn" title="Send">➤</button>
+            </div>
         </div>
     </div>
 
     <script>
-        // 1. DOM Hack: Escapes the iframe limitations to render as a floating overlay
         const iframes = window.parent.document.querySelectorAll('iframe');
         let myIframe = null;
         iframes.forEach(f => {{
@@ -306,61 +332,111 @@ def render_sd_bot():
         if (myIframe) {{
             const parentDiv = myIframe.parentNode;
             parentDiv.style.position = 'fixed';
-            parentDiv.style.bottom = '20px';
-            parentDiv.style.right = '20px';
-            parentDiv.style.width = '360px';
-            parentDiv.style.height = '520px';
             parentDiv.style.zIndex = '9999999';
-            parentDiv.style.borderRadius = '12px';
-            parentDiv.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-
-            // Draggable Logic
-            let isDragging = false;
-            let offsetX = 0, offsetY = 0;
+            parentDiv.style.transition = 'width 0.3s, height 0.3s';
+            
+            // Screen boundaries & Mobile Setup
+            const isMobile = window.parent.innerWidth <= 900;
+            const expandedWidth = isMobile ? '90vw' : '360px';
+            const expandedHeight = isMobile ? '70vh' : '520px';
+            
+            // Elements
+            const botIcon = document.getElementById('bot-icon');
+            const botBox = document.getElementById('bot-box');
             const header = document.getElementById('header');
+            const chatHistory = document.getElementById('chat-history');
+            
+            // Initial State Logic (Maintains state after processing message)
+            const shouldBeOpen = {is_open};
+            if (shouldBeOpen) {{
+                parentDiv.style.width = expandedWidth;
+                parentDiv.style.height = expandedHeight;
+                parentDiv.style.bottom = isMobile ? '10px' : '20px';
+                parentDiv.style.right = isMobile ? '5vw' : '20px';
+                parentDiv.style.borderRadius = '12px';
+                botIcon.style.display = 'none';
+                botBox.style.display = 'flex';
+                setTimeout(() => {{ chatHistory.scrollTop = chatHistory.scrollHeight; }}, 100);
+            }} else {{
+                parentDiv.style.width = '60px';
+                parentDiv.style.height = '60px';
+                parentDiv.style.bottom = '30px';
+                parentDiv.style.right = '30px';
+                parentDiv.style.borderRadius = '30px';
+                botIcon.style.display = 'flex';
+                botBox.style.display = 'none';
+            }}
 
-            header.addEventListener('mousedown', (e) => {{
+            // Open Action
+            botIcon.addEventListener('click', () => {{
+                parentDiv.style.width = expandedWidth;
+                parentDiv.style.height = expandedHeight;
+                parentDiv.style.borderRadius = '12px';
+                botIcon.style.display = 'none';
+                botBox.style.display = 'flex';
+                setTimeout(() => {{ chatHistory.scrollTop = chatHistory.scrollHeight; }}, 50);
+            }});
+
+            // Minimize Action (Returns to Icon)
+            document.getElementById('close-btn').addEventListener('click', (e) => {{
+                e.stopPropagation();
+                parentDiv.style.width = '60px';
+                parentDiv.style.height = '60px';
+                parentDiv.style.borderRadius = '30px';
+                botIcon.style.display = 'flex';
+                botBox.style.display = 'none';
+            }});
+
+            // Smooth Draggable Logic via requestAnimationFrame
+            let isDragging = false;
+            let startX, startY, initialLeft, initialTop;
+
+            const dragStart = (e) => {{
+                if (e.target.id === 'close-btn') return;
                 isDragging = true;
                 const rect = parentDiv.getBoundingClientRect();
-                offsetX = e.clientX - rect.left;
-                offsetY = e.clientY - rect.top;
+                startX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
+                startY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
+                initialLeft = rect.left;
+                initialTop = rect.top;
+                
                 parentDiv.style.right = 'auto'; 
                 parentDiv.style.bottom = 'auto';
-            }});
+                parentDiv.style.transition = 'none'; 
+                myIframe.style.pointerEvents = 'none'; // Prevents iframe from swallowing mouse tracking
+            }};
 
-            window.parent.addEventListener('mousemove', (e) => {{
-                if(isDragging) {{
-                    parentDiv.style.left = (e.clientX - offsetX) + 'px';
-                    parentDiv.style.top = (e.clientY - offsetY) + 'px';
-                }}
-            }});
+            const dragMove = (e) => {{
+                if(!isDragging) return;
+                e.preventDefault();
+                const clientX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
+                const clientY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
+                const dx = clientX - startX;
+                const dy = clientY - startY;
+                
+                requestAnimationFrame(() => {{
+                    parentDiv.style.left = `${{initialLeft + dx}}px`;
+                    parentDiv.style.top = `${{initialTop + dy}}px`;
+                }});
+            }};
 
-            window.parent.addEventListener('mouseup', () => {{ isDragging = false; }});
-            header.addEventListener('mouseup', () => {{ isDragging = false; }});
+            const dragEnd = () => {{
+                if(!isDragging) return;
+                isDragging = false;
+                parentDiv.style.transition = 'width 0.3s, height 0.3s';
+                myIframe.style.pointerEvents = 'auto';
+            }};
 
-            // Minimize Logic
-            let isMinimized = false;
-            document.getElementById('close-btn').addEventListener('click', () => {{
-                if (isMinimized) {{
-                    parentDiv.style.height = '520px';
-                    parentDiv.style.width = '360px';
-                    document.getElementById('chat-history').style.display = 'flex';
-                    document.getElementById('input-bar').style.display = 'flex';
-                }} else {{
-                    parentDiv.style.height = '42px';
-                    parentDiv.style.width = '120px';
-                    document.getElementById('chat-history').style.display = 'none';
-                    document.getElementById('input-bar').style.display = 'none';
-                }}
-                isMinimized = !isMinimized;
-            }});
+            header.addEventListener('mousedown', dragStart);
+            header.addEventListener('touchstart', dragStart, {{passive: false}});
+            window.parent.addEventListener('mousemove', dragMove);
+            window.parent.addEventListener('touchmove', dragMove, {{passive: false}});
+            window.parent.addEventListener('mouseup', dragEnd);
+            window.parent.addEventListener('touchend', dragEnd);
         }}
 
-        // Auto-scroll chat
+        // Voice & Input Handlers
         const chatHistory = document.getElementById('chat-history');
-        chatHistory.scrollTop = chatHistory.scrollHeight;
-
-        // 2. Web Speech API Logic (Native Voice Input)
         const micBtn = document.getElementById('mic-btn');
         const inputField = document.getElementById('user-input');
         const sendBtn = document.getElementById('send-btn');
@@ -371,7 +447,6 @@ def render_sd_bot():
             recognition.continuous = false;
             recognition.interimResults = false;
             recognition.lang = 'en-US';
-
             let isRecording = false;
 
             micBtn.addEventListener('click', () => {{
@@ -397,7 +472,6 @@ def render_sd_bot():
             micBtn.style.display = 'none'; 
         }}
 
-        // 3. React Synthetic Event Spoofing (Pass data to Python safely)
         function sendMessage() {{
             const text = inputField.value.trim();
             if (!text) return;
@@ -430,4 +504,5 @@ def render_sd_bot():
         }});
     </script>
     """
-    components.html(bot_html, height=520)
+    
+    components.html(bot_html, height=550)

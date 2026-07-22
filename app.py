@@ -217,8 +217,16 @@ if st.session_state['role'] is None:
         st.session_state['sdbot_chat_history'].append({"role": "user", "content": sdbot_query})
         
         # Load backend processors
-        from extractor import ExtractorNode
-        from analyst import AnalystNode
+        import sys
+        import os
+        sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+        
+        try:
+            from extractor import ExtractorNode
+            from analyst import AnalystNode
+        except ModuleNotFoundError:
+            from features.extractor import ExtractorNode
+            from features.analyst import AnalystNode
         
         extractor = ExtractorNode()
         analyst = AnalystNode()
