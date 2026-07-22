@@ -232,7 +232,7 @@ def render_sd_bot():
     """Renders a dynamic, draggable, voice-enabled SD Bot on the login screen."""
     if 'sdbot_chat_history' not in st.session_state:
         st.session_state['sdbot_chat_history'] = [
-            {"role": "bot", "content": "Hi! I'm SD Bot. Ask me about the dashboard or global intelligence. Click the 🎤 to speak!"}
+            {"role": "bot", "content": "Hi! I'm SD Bot. Ask me about the dashboard or global intelligence or click the 🎤 to speak!"}
         ]
 
     # Hidden input to act as a secure bridge between injected JS and Python
@@ -477,7 +477,7 @@ def render_sd_bot():
             if (!text) return;
 
             chatHistory.innerHTML += `<div class="msg user">${{text}}</div>`;
-            chatHistory.innerHTML += `<div class="msg bot">Analyzing Secure Data...</div>`;
+            chatHistory.innerHTML += `<div class="msg bot">Thinking...💬</div>`;
             chatHistory.scrollTop = chatHistory.scrollHeight;
             inputField.value = '';
 
