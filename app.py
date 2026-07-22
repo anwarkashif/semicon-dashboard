@@ -225,8 +225,8 @@ if st.session_state['role'] is None:
         if root_dir not in sys.path:
             sys.path.insert(0, root_dir)
             
-        from extractor import ExtractorNode
-        from analyst import AnalystNode
+        from Nodes.extractor import ExtractorNode
+        from Nodes.analyst import AnalystNode
         
         extractor = ExtractorNode()
         analyst = AnalystNode()
