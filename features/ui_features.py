@@ -256,34 +256,38 @@ def render_sd_bot():
         chat_html += f'<div class="msg {css_class}">{content_safe}</div>'
 
     is_open = "true" if len(st.session_state['sdbot_chat_history']) > 1 else "false"
+    box_display = "flex" if is_open == "true" else "none"
+    icon_display = "none" if is_open == "true" else "flex"
 
     bot_html = f"""
     <div id="SD_BOT_IDENTIFIER"></div>
     <style>
-        body {{ margin: 0; overflow: hidden; background: transparent; color: white; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }}
+        * {{ box-sizing: border-box; }}
+        body {{ margin: 0; overflow: hidden; background: transparent; color: white; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; height: 100vh; width: 100vw; }}
         #bot-container {{ display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; }}
         
         /* Floating Icon State */
         #bot-icon {{
+            display: {icon_display};
             width: 60px; height: 60px; background: linear-gradient(135deg, #facc15, #eab308);
             border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            display: flex; align-items: center; justify-content: center;
+            align-items: center; justify-content: center;
             font-size: 30px; cursor: pointer; transition: transform 0.2s; pointer-events: auto;
         }}
         #bot-icon:hover {{ transform: scale(1.1); }}
         
         /* Expanded Chat State */
         #bot-box {{ 
-            display: none; flex-direction: column; width: 100%; height: 100%;
+            display: {box_display}; flex-direction: column; width: 100%; height: 100%; max-height: 100vh;
             background: rgba(15, 23, 42, 0.95); border: 1px solid #333; border-radius: 12px; 
             box-shadow: 0px 10px 40px rgba(0,0,0,0.9); backdrop-filter: blur(10px); pointer-events: auto;
         }}
-        #header {{ background: #facc15; color: black; padding: 12px; font-weight: bold; cursor: grab; display: flex; justify-content: space-between; align-items: center; border-radius: 12px 12px 0 0; font-size: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 10; user-select: none; }}
-        #chat-history {{ flex: 1; padding: 15px; overflow-y: auto; font-size: 13.5px; line-height: 1.6; display: flex; flex-direction: column; gap: 12px; }}
+        #header {{ flex: 0 0 auto; background: #facc15; color: black; padding: 12px; font-weight: bold; cursor: grab; display: flex; justify-content: space-between; align-items: center; border-radius: 12px 12px 0 0; font-size: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 10; user-select: none; }}
+        #chat-history {{ flex: 1 1 auto; padding: 15px; overflow-y: auto; font-size: 13.5px; line-height: 1.6; display: flex; flex-direction: column; gap: 12px; min-height: 0; }}
         .msg {{ padding: 10px 14px; border-radius: 8px; max-width: 85%; word-wrap: break-word; }}
         .msg.bot {{ background: #1e293b; align-self: flex-start; border-left: 3px solid #facc15; color: #f8fafc; }}
         .msg.user {{ background: #2563eb; align-self: flex-end; color: white; border-bottom-right-radius: 2px; }}
-        #input-bar {{ display: flex; padding: 12px; background: #020617; border-top: 1px solid #333; border-radius: 0 0 12px 12px; align-items: center; }}
+        #input-bar {{ flex: 0 0 auto; display: flex; padding: 12px; background: #020617; border-top: 1px solid #333; border-radius: 0 0 12px 12px; align-items: center; }}
         input {{ flex: 1; padding: 10px 12px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: white; outline: none; font-size: 13px; transition: border 0.3s; }}
         input:focus {{ border-color: #facc15; }}
         button {{ border: none; padding: 10px; margin-left: 8px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: all 0.2s; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; }}
@@ -333,7 +337,6 @@ def render_sd_bot():
             const parentDiv = myIframe.parentNode;
             parentDiv.style.position = 'fixed';
             parentDiv.style.zIndex = '9999999';
-            parentDiv.style.transition = 'width 0.3s, height 0.3s';
             
             // Fix iframe internals
             myIframe.style.width = '100%';
@@ -348,11 +351,26 @@ def render_sd_bot():
             const header = document.getElementById('header');
             const chatHistory = document.getElementById('chat-history');
             
+            // Set dimensions immediately before transition to stop flickering
+            const shouldBeOpen = {is_open};
+            if (shouldBeOpen) {{
+                parentDiv.style.width = expandedWidth;
+                parentDiv.style.height = expandedHeight;
+                parentDiv.style.borderRadius = '12px';
+            }} else {{
+                parentDiv.style.width = '60px';
+                parentDiv.style.height = '60px';
+                parentDiv.style.borderRadius = '30px';
+            }}
+
             // Initial positioning ONLY if not already dragged
             if (!parentDiv.style.left && !parentDiv.style.top) {{
                 parentDiv.style.bottom = isMobile ? '10px' : '20px';
                 parentDiv.style.right = isMobile ? '5vw' : '20px';
             }}
+
+            // Add transition AFTER setting the initial static size to stop load flash
+            setTimeout(() => {{ parentDiv.style.transition = 'width 0.3s, height 0.3s'; }}, 50);
 
             const setOpenState = () => {{
                 parentDiv.style.width = expandedWidth;
@@ -371,8 +389,8 @@ def render_sd_bot():
                 botBox.style.display = 'none';
             }};
 
-            const shouldBeOpen = {is_open};
-            if (shouldBeOpen) {{ setOpenState(); }} else {{ setClosedState(); }}
+            // Auto scroll on load
+            setTimeout(() => {{ chatHistory.scrollTop = chatHistory.scrollHeight; }}, 50);
 
             let dragged = false;
             botIcon.addEventListener('click', (e) => {{
