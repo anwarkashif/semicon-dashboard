@@ -344,6 +344,9 @@ jobs:
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GEMINI_API_KEY_RAGAI: ${{ secrets.GEMINI_API_KEY_RAGAI }}
+        CURRENTS_API_KEY: ${{ secrets.CURRENTS_API_KEY }}
+        GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
+        GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
       run: python agent_graph.py
 
     - name: Push Agentic AI News via Email

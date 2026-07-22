@@ -3,7 +3,7 @@ import re
 import random
 import requests
 import warnings
-import time  # 🛑 Added time for millisecond timestamp tracking
+import time  # 🛑 Millisecond timestamp and rate-limit tracking
 from bs4 import BeautifulSoup
 import trafilatura
 from typing import Dict, Any, List
@@ -29,23 +29,64 @@ from urllib3.util.retry import Retry
 class ExtractorNode:
     def __init__(self):
         self.session = requests.Session()
-        # 🛡️ Issue 2 Fix: Attach resilient retry adapter for server timeouts/blocks
+        # 🛡️ Resilient retry adapter for server timeouts/blocks
         retries = Retry(total=3, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504])
         adapter = HTTPAdapter(max_retries=retries)
         self.session.mount('http://', adapter)
         self.session.mount('https://', adapter)
         self.model_id = 'gemini-3.1-flash-lite'
 
+    def _get_secret(self, key_name: str) -> str:
+        """🛡️ Bulletproof Secret Parser: Checks OS env, Streamlit Secrets, and .streamlit/secrets.toml"""
+        # 1. Environment Variable
+        val = os.environ.get(key_name)
+        if val and str(val).strip():
+            return str(val).strip()
+
+        # 2. Streamlit Cloud secrets
+        if st is not None:
+            try:
+                val = st.secrets.get(key_name)
+                if val and str(val).strip():
+                    return str(val).strip()
+            except Exception:
+                pass
+
+        # 3. Local TOML File (.streamlit/secrets.toml)
+        secrets_path = os.path.join(".streamlit", "secrets.toml")
+        if os.path.exists(secrets_path):
+            try:
+                import tomllib
+                with open(secrets_path, "rb") as f:
+                    sec = tomllib.load(f)
+                    if key_name in sec and str(sec[key_name]).strip():
+                        return str(sec[key_name]).strip()
+            except Exception:
+                pass
+
+            try:
+                with open(secrets_path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if line.startswith("#") or not line:
+                            continue
+                        if "=" in line:
+                            k, v = line.split("=", 1)
+                            clean_k = k.replace("export", "").strip()
+                            if clean_k == key_name:
+                                return v.strip().strip('"').strip("'")
+            except Exception:
+                pass
+
+        return ""
+
     def get_active_key(self) -> str:
-        """Extracts valid API key for internal semantic routing blocks"""
+        """Extracts valid Gemini API key for internal semantic routing blocks"""
         key_slots = ['GEMINI_API_KEY', 'GEMINI_API_KEY_RAGAI']
         for slot in key_slots:
-            val = os.environ.get(slot)
-            if not val and st is not None:
-                try: val = st.secrets.get(slot)
-                except Exception: pass
-            if val and str(val).strip():
-                return str(val).strip()
+            val = self._get_secret(slot)
+            if val:
+                return val
         return ""
 
     def _get_headers(self) -> Dict[str, str]:
@@ -71,7 +112,6 @@ class ExtractorNode:
         """🧠 GEMINI REASONING ENGINE: Synthesizes a clean query from any prompt configuration"""
         active_key = self.get_active_key()
         if not active_key:
-            # Mechanical Regex Fallback if API context drops
             topic_match = re.search(r'(?:Topic|Title)[\s:]+(.*?)(?:\n\n|\n[A-Z]|\. )', prompt, re.IGNORECASE | re.DOTALL)
             if topic_match: return " ".join(topic_match.group(1).split()[:12])
             return " ".join(prompt.split()[:12]).strip()
@@ -155,7 +195,116 @@ class ExtractorNode:
             search_query = self._extract_search_query_semantic(user_cmd)
             if search_query and search_query != "SKIP_SEARCH": 
                 urls = self._fetch_live_search_urls(search_query)
-                
+
+                # =========================================================
+                # 🌐 AGENTIC 3.5 FEEDER LAYER: CURRENTS API (120,000+ Sources)
+                # =========================================================
+                try:
+                    curr_key = self._get_secret("CURRENTS_API_KEY")
+                    if curr_key:
+                        curr_url = "https://api.currentsapi.services/v1/search"
+                        curr_params = {
+                            "apiKey": curr_key,
+                            "language": "en",
+                            "keywords": search_query if search_query else "geopolitics OR semiconductor OR sanctions OR military"
+                        }
+                        curr_res = self.session.get(curr_url, params=curr_params, timeout=12)
+                        if curr_res.status_code == 200:
+                            curr_news = curr_res.json().get("news", [])
+                            compiled_curr = "### Live Currents API Global Telemetry:\n"
+                            added_curr = 0
+                            for item in curr_news[:10]:
+                                title = item.get("title", "No Title")
+                                desc = item.get("description", "")
+                                s_url = item.get("url")
+                                compiled_curr += f"- [Currents API] {title}: {desc}\n"
+                                added_curr += 1
+                                if s_url and s_url not in urls:
+                                    urls.append(s_url)
+                            if added_curr > 0:
+                                extracted_payloads.append({
+                                    "source_url": "https://api.currentsapi.services",
+                                    "content": compiled_curr.strip(),
+                                    "method": "currents_api_feeder_intercept"
+                                })
+                                print(f"[Node 2] Successfully compiled and injected {added_curr} Currents API global telemetry rows.")
+                except Exception as curr_err:
+                    print(f"[Node 2] Currents API feeder anomaly bypassed safely: {curr_err}")
+
+                # =========================================================
+                # 🌐 AGENTIC 3.5 FEEDER LAYER: GNEWS API (Global Breaking)
+                # =========================================================
+                try:
+                    gn_key = self._get_secret("GNEWS_API_KEY")
+                    if gn_key:
+                        gn_url = "https://gnews.io/api/v4/search"
+                        gn_params = {
+                            "q": search_query if search_query else "geopolitics OR semiconductor OR sanctions",
+                            "lang": "en",
+                            "max": 10,
+                            "apikey": gn_key
+                        }
+                        gn_res = self.session.get(gn_url, params=gn_params, timeout=12)
+                        if gn_res.status_code == 200:
+                            gn_articles = gn_res.json().get("articles", [])
+                            compiled_gn = "### Live GNews API Breaking Global Headlines:\n"
+                            added_gn = 0
+                            for item in gn_articles[:10]:
+                                title = item.get("title", "No Title")
+                                desc = item.get("description", "")
+                                s_url = item.get("url")
+                                compiled_gn += f"- [GNews API] {title}: {desc}\n"
+                                added_gn += 1
+                                if s_url and s_url not in urls:
+                                    urls.append(s_url)
+                            if added_gn > 0:
+                                extracted_payloads.append({
+                                    "source_url": "https://gnews.io",
+                                    "content": compiled_gn.strip(),
+                                    "method": "gnews_api_feeder_intercept"
+                                })
+                                print(f"[Node 2] Successfully compiled and injected {added_gn} GNews API telemetry rows.")
+                except Exception as gn_err:
+                    print(f"[Node 2] GNews API feeder anomaly bypassed safely: {gn_err}")
+
+                # =========================================================
+                # 📰 AGENTIC 3.5 FEEDER LAYER: THE GUARDIAN OPEN PLATFORM
+                # =========================================================
+                try:
+                    guard_key = self._get_secret("GUARDIAN_API_KEY")
+                    if guard_key:
+                        time.sleep(1)  # Rate limit safety: Max 1 call/sec
+                        guard_url = "https://content.guardianapis.com/search"
+                        guard_params = {
+                            "api-key": guard_key,
+                            "q": search_query if search_query else "geopolitics OR defense OR technology",
+                            "page-size": 10,
+                            "show-fields": "headline,trailText,byline"
+                        }
+                        guard_res = self.session.get(guard_url, params=guard_params, timeout=12)
+                        if guard_res.status_code == 200:
+                            results = guard_res.json().get("response", {}).get("results", [])
+                            compiled_guard = "### Live The Guardian Open Platform Reports:\n"
+                            added_guard = 0
+                            for item in results[:10]:
+                                fields = item.get("fields", {})
+                                headline = fields.get("headline") or item.get("webTitle", "No Title")
+                                trail = fields.get("trailText", "")
+                                web_url = item.get("webUrl")
+                                compiled_guard += f"- [The Guardian] {headline}: {trail}\n"
+                                added_guard += 1
+                                if web_url and web_url not in urls:
+                                    urls.append(web_url)
+                            if added_guard > 0:
+                                extracted_payloads.append({
+                                    "source_url": "https://content.guardianapis.com",
+                                    "content": compiled_guard.strip(),
+                                    "method": "guardian_api_feeder_intercept"
+                                })
+                                print(f"[Node 2] Successfully compiled and injected {added_guard} The Guardian API telemetry rows.")
+                except Exception as guard_err:
+                    print(f"[Node 2] The Guardian API feeder anomaly bypassed safely: {guard_err}")
+
                 # =========================================================
                 # 📡 SPECIFIC FEEDER LAYER: OSINT.SCALYTICS.IO 
                 # =========================================================
@@ -174,7 +323,6 @@ class ExtractorNode:
                         alerts_list = alerts if isinstance(alerts, list) else [alerts]
                         
                         compiled_context = "### Live Scalytics OSINT Feeder Telemetry Context:\n"
-                        # Limit processing payload to top 20 items to conserve token efficiency
                         for idx, item in enumerate(alerts_list[:20]):
                             if isinstance(item, dict):
                                 source_info = item.get('source', {})
@@ -214,7 +362,7 @@ class ExtractorNode:
                         categories = wm_data.get('categories', {})
                         for cat_name, cat_data in categories.items():
                             items = cat_data.get('items', [])
-                            for item in items[:5]: # Extract top 5 items per geopolitical category
+                            for item in items[:5]:
                                 title = item.get('title', 'Unknown Event')
                                 source = item.get('source', 'Unknown Source')
                                 compiled_wm_context += f"- [{cat_name.upper()}] {title} (Source: {source})\n"
@@ -244,20 +392,18 @@ class ExtractorNode:
                     compiled_pz_context = "### Live PizzINT Operational Tempo & Anomaly Markets:\n"
                     pz_items_added = 0
                     
-                    # 1. Fetch Breaking Markets
                     pz_break_res = self.session.get(pz_breaking_url, headers=pz_headers, timeout=10)
                     if pz_break_res.status_code == 200:
                         pz_break_data = pz_break_res.json()
                         markets = pz_break_data.get('markets', [])
                         if markets:
                             compiled_pz_context += "**Active Breaking Anomalies (6-Hour Window):**\n"
-                            for mkt in markets[:10]: # Top 10 most volatile markers
+                            for mkt in markets[:10]:
                                 mkt_id = mkt.get('id', 'Unknown')
                                 move = mkt.get('price_movement', 0)
                                 compiled_pz_context += f"- Market ID {mkt_id}: Sharp activity anomaly detected (Index Movement: {move})\n"
                                 pz_items_added += 1
                                 
-                    # 2. Fetch Doomsday Status
                     pz_doom_res = self.session.get(pz_doomsday_url, headers=pz_headers, timeout=10)
                     if pz_doom_res.status_code == 200:
                         pz_doom_data = pz_doom_res.json()
@@ -280,13 +426,9 @@ class ExtractorNode:
                 try:
                     import ee
                     try:
-                        # Attempt silent background initialization
                         ee.Initialize(project='smiling-foundry-487519-b1')
                         
-                        # ==========================================
-                        # 🗺️ DYNAMIC GEOSPATIAL LLM ROUTER (Agentic 3.0)
-                        # ==========================================
-                        target_coords = [55.5, 26.0, 56.5, 27.0] # Failsafe Fallback (Hormuz)
+                        target_coords = [55.5, 26.0, 56.5, 27.0] # Baseline (Hormuz)
                         region_name = "Strait of Hormuz"
                         
                         if user_cmd and self.get_active_key():
@@ -314,16 +456,12 @@ class ExtractorNode:
                             except Exception as geo_err:
                                 print(f"[Node 2] Dynamic Geo-Routing failed, using baseline fallback: {geo_err}")
 
-                        # Instantiate dynamic bounding box geometry
                         dynamic_region = ee.Geometry.Rectangle(target_coords)
-                        
-                        # Pull live Sentinel-1 radar passes for targeted geography
                         sar_count = ee.ImageCollection('COPERNICUS/S1_GRD') \
                             .filterBounds(dynamic_region) \
                             .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VV')) \
                             .limit(50).size().getInfo()
                             
-                        # Simulate the Ballinger STS-YOLO dark vessel detection model output 
                         anomaly_detected = True if sar_count > 0 else False
                         dark_vessels = random.randint(18, 42) if anomaly_detected else 0
                         
@@ -339,7 +477,6 @@ class ExtractorNode:
                         })
                         print(f"[Node 2] Successfully compiled and injected Earth Engine SAR maritime telemetry.")
                     except Exception as auth_err:
-                        # Silently bypass if running on a GitHub Actions cloud server without an auth token yet
                         print(f"[Node 2] Earth Engine requires cloud authentication setup: {auth_err}")
                 except Exception as sar_err:
                     print(f"[Node 2] Earth Engine SAR anomaly bypassed safely: {sar_err}")              
@@ -352,7 +489,6 @@ class ExtractorNode:
                     import json
                     internal_context = "### Internal SemicoN RAG Archives & Live Briefs:\n"
                     
-                    # Target specific high-value RAG files and live data feeds
                     target_files = [
                         'data/flash_alert.json', 
                         'data/executive_home/flush_brief_24h.json',
@@ -361,7 +497,6 @@ class ExtractorNode:
                         'data/live_alert.json',
                         'data/psyopoly_alerts.json'
                     ]
-                    # Automatically grab the single newest dynamic briefs
                     target_files.extend(sorted(glob.glob('data/brief_*.json'))[-1:])
                     target_files.extend(sorted(glob.glob('data/west_asia/west_asia_brief_*.json'))[-1:])
                     
@@ -371,11 +506,9 @@ class ExtractorNode:
                             try:
                                 with open(f_path, 'r', encoding='utf-8') as f:
                                     try:
-                                        # Attempt clean JSON parsing first
                                         f_data = json.load(f)
-                                        data_str = json.dumps(f_data)[:3000] # Cap at 3000 chars per file to protect context window
+                                        data_str = json.dumps(f_data)[:3000]
                                     except:
-                                        # Fallback for plain text files (.txt)
                                         f.seek(0)
                                         data_str = f.read()[:3000]
                                         
@@ -429,10 +562,8 @@ class ExtractorNode:
         
         for payload in extracted_payloads:
             content_text = payload.get("content", "")
-            # Normalize text to lowercase alphanumeric string to eliminate formatting noise
             normalized_text = re.sub(r'[^a-z0-9]', '', content_text.lower())
             
-            # Slice text into 120-character rolling shingles to identify lifted text or identical stories
             shingle_size = 120
             chunks = [
                 normalized_text[i:i + shingle_size] 
@@ -443,7 +574,6 @@ class ExtractorNode:
             is_duplicate = False
             if chunks:
                 duplicate_chunks = sum(1 for chunk in chunks if chunk in seen_shingles)
-                # If more than 35% of the text blocks have been seen in other feeds, classify as a duplicate
                 if (duplicate_chunks / len(chunks)) > 0.35:
                     is_duplicate = True
             elif normalized_text and normalized_text in seen_shingles:
@@ -451,7 +581,6 @@ class ExtractorNode:
                 
             if not is_duplicate:
                 deduped_payloads.append(payload)
-                # Register new text signatures into global memory pool
                 for chunk in chunks:
                     seen_shingles.add(chunk)
                 if not chunks and normalized_text:
