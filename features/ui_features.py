@@ -261,7 +261,7 @@ def render_sd_bot():
     <div id="SD_BOT_IDENTIFIER"></div>
     <style>
         body {{ margin: 0; overflow: hidden; background: transparent; color: white; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }}
-        #bot-container { display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; }
+        #bot-container {{ display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; }}
         
         /* Floating Icon State */
         #bot-icon {{
@@ -325,11 +325,11 @@ def render_sd_bot():
     <script>
         const iframes = window.parent.document.querySelectorAll('iframe');
         let myIframe = null;
-        iframes.forEach(f => {
-            try { if(f.contentDocument && f.contentDocument.getElementById('SD_BOT_IDENTIFIER')) { myIframe = f; } } catch(e) {}
-        });
+        iframes.forEach(f => {{
+            try {{ if(f.contentDocument && f.contentDocument.getElementById('SD_BOT_IDENTIFIER')) {{ myIframe = f; }} }} catch(e) {{}}
+        }});
 
-        if (myIframe) {
+        if (myIframe) {{
             const parentDiv = myIframe.parentNode;
             parentDiv.style.position = 'fixed';
             parentDiv.style.zIndex = '9999999';
@@ -343,49 +343,49 @@ def render_sd_bot():
             const header = document.getElementById('header');
             const chatHistory = document.getElementById('chat-history');
             
-            const setOpenState = () => {
+            const setOpenState = () => {{
+                parentDiv.style.left = ''; // FIX FOR POSITIONING AFTER DRAG
+                parentDiv.style.top = '';  // FIX FOR POSITIONING AFTER DRAG
                 parentDiv.style.width = expandedWidth;
                 parentDiv.style.height = expandedHeight;
-                if(!parentDiv.style.left && !parentDiv.style.top) {
-                    parentDiv.style.bottom = isMobile ? '10px' : '20px';
-                    parentDiv.style.right = isMobile ? '5vw' : '20px';
-                }
+                parentDiv.style.bottom = isMobile ? '10px' : '20px';
+                parentDiv.style.right = isMobile ? '5vw' : '20px';
                 parentDiv.style.borderRadius = '12px';
                 botIcon.style.display = 'none';
                 botBox.style.display = 'flex';
-                setTimeout(() => { chatHistory.scrollTop = chatHistory.scrollHeight; }, 100);
-            };
+                setTimeout(() => {{ chatHistory.scrollTop = chatHistory.scrollHeight; }}, 100);
+            }};
 
-            const setClosedState = () => {
+            const setClosedState = () => {{
+                parentDiv.style.left = ''; // FIX FOR DISAPPEARING ICON AFTER DRAG
+                parentDiv.style.top = '';  // FIX FOR DISAPPEARING ICON AFTER DRAG
                 parentDiv.style.width = '60px';
                 parentDiv.style.height = '60px';
-                if(!parentDiv.style.left && !parentDiv.style.top) {
-                    parentDiv.style.bottom = '30px';
-                    parentDiv.style.right = '30px';
-                }
+                parentDiv.style.bottom = '30px';
+                parentDiv.style.right = '30px';
                 parentDiv.style.borderRadius = '30px';
                 botIcon.style.display = 'flex';
                 botBox.style.display = 'none';
-            };
+            }};
 
             const shouldBeOpen = {is_open};
-            if (shouldBeOpen) { setOpenState(); } else { setClosedState(); }
+            if (shouldBeOpen) {{ setOpenState(); }} else {{ setClosedState(); }}
 
             let dragged = false;
-            botIcon.addEventListener('click', (e) => {
-                if(dragged) { e.preventDefault(); dragged = false; return; }
+            botIcon.addEventListener('click', (e) => {{
+                if(dragged) {{ e.preventDefault(); dragged = false; return; }}
                 setOpenState();
-            });
+            }});
             
-            document.getElementById('close-btn').addEventListener('click', (e) => {
+            document.getElementById('close-btn').addEventListener('click', (e) => {{
                 e.stopPropagation();
                 setClosedState();
-            });
+            }});
 
             let isDragging = false;
             let startX, startY, initialLeft, initialTop;
 
-            const dragStart = (e) => {
+            const dragStart = (e) => {{
                 if (e.target.id === 'close-btn' || e.target.tagName.toLowerCase() === 'button') return;
                 isDragging = true;
                 dragged = false;
@@ -397,10 +397,11 @@ def render_sd_bot():
                 
                 parentDiv.style.right = 'auto'; 
                 parentDiv.style.bottom = 'auto';
+                parentDiv.style.transition = 'none'; 
                 myIframe.style.pointerEvents = 'none'; 
-            };
+            }};
 
-            const dragMove = (e) => {
+            const dragMove = (e) => {{
                 if(!isDragging) return;
                 e.preventDefault();
                 dragged = true;
@@ -409,26 +410,28 @@ def render_sd_bot():
                 const dx = clientX - startX;
                 const dy = clientY - startY;
                 
-                parentDiv.style.left = `${initialLeft + dx}px`;
-                parentDiv.style.top = `${initialTop + dy}px`;
-            };
+                requestAnimationFrame(() => {{
+                    parentDiv.style.left = `${{initialLeft + dx}}px`;
+                    parentDiv.style.top = `${{initialTop + dy}}px`;
+                }});
+            }};
 
-            const dragEnd = () => {
+            const dragEnd = () => {{
                 if(!isDragging) return;
                 isDragging = false;
                 myIframe.style.pointerEvents = 'auto';
-            };
+            }};
 
             header.addEventListener('mousedown', dragStart);
-            header.addEventListener('touchstart', dragStart, {passive: false});
+            header.addEventListener('touchstart', dragStart, {{passive: false}});
             botIcon.addEventListener('mousedown', dragStart);
-            botIcon.addEventListener('touchstart', dragStart, {passive: false});
+            botIcon.addEventListener('touchstart', dragStart, {{passive: false}});
             
             window.parent.addEventListener('mousemove', dragMove);
-            window.parent.addEventListener('touchmove', dragMove, {passive: false});
+            window.parent.addEventListener('touchmove', dragMove, {{passive: false}});
             window.parent.addEventListener('mouseup', dragEnd);
             window.parent.addEventListener('touchend', dragEnd);
-        }
+        }}
 
         // Voice & Input Handlers
         const chatHistory = document.getElementById('chat-history');
@@ -437,66 +440,66 @@ def render_sd_bot():
         const sendBtn = document.getElementById('send-btn');
 
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-        if (SpeechRecognition) {
+        if (SpeechRecognition) {{
             const recognition = new SpeechRecognition();
             recognition.continuous = false;
             recognition.interimResults = false;
             recognition.lang = 'en-US';
             let isRecording = false;
 
-            micBtn.addEventListener('click', () => {
-                if (isRecording) { recognition.stop(); } else { recognition.start(); }
-            });
+            micBtn.addEventListener('click', () => {{
+                if (isRecording) {{ recognition.stop(); }} else {{ recognition.start(); }}
+            }});
 
-            recognition.onstart = () => {
+            recognition.onstart = () => {{
                 isRecording = true;
                 micBtn.classList.add('recording');
                 inputField.placeholder = "Listening...";
-            };
+            }};
 
-            recognition.onresult = (event) => {
+            recognition.onresult = (event) => {{
                 inputField.value = event.results[0][0].transcript;
-            };
+            }};
 
-            recognition.onend = () => {
+            recognition.onend = () => {{
                 isRecording = false;
                 micBtn.classList.remove('recording');
                 inputField.placeholder = "Type or speak a prompt...";
-            };
-        } else {
+            }};
+        }} else {{
             micBtn.style.display = 'none'; 
-        }
+        }}
 
-        function sendMessage() {
+        function sendMessage() {{
             const text = inputField.value.trim();
             if (!text) return;
 
-            chatHistory.innerHTML += `<div class="msg user">${text}</div>`;
+            chatHistory.innerHTML += `<div class="msg user">${{text}}</div>`;
             chatHistory.innerHTML += `<div class="msg bot">Thinking...💬</div>`;
             chatHistory.scrollTop = chatHistory.scrollHeight;
             inputField.value = '';
 
             const stInputs = window.parent.document.querySelectorAll('input[aria-label="Hidden SD Bot Input"]');
-            if (stInputs.length > 0) {
+            if (stInputs.length > 0) {{
                 const stInput = stInputs[0];
                 let lastValue = stInput.value;
                 stInput.value = text;
-                let event = new Event('input', { bubbles: true });
+                let event = new Event('input', {{ bubbles: true }});
                 event.simulated = true;
                 let tracker = stInput._valueTracker;
-                if (tracker) { tracker.setValue(lastValue); }
+                if (tracker) {{ tracker.setValue(lastValue); }}
                 stInput.dispatchEvent(event);
 
-                setTimeout(() => {
-                    stInput.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', code: 'Enter', keyCode: 13, bubbles: true }));
-                }, 100);
-            }
-        }
+                setTimeout(() => {{
+                    stInput.dispatchEvent(new KeyboardEvent('keydown', {{ key: 'Enter', code: 'Enter', keyCode: 13, bubbles: true }}));
+                }}, 100);
+            }}
+        }}
 
         sendBtn.addEventListener('click', sendMessage);
-        inputField.addEventListener('keypress', (e) => {
+        inputField.addEventListener('keypress', (e) => {{
             if (e.key === 'Enter') sendMessage();
-        });
+        }});
     </script>
     """
     
