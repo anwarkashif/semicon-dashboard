@@ -220,10 +220,10 @@ if st.session_state['role'] is None:
         import sys
         import os
         
-        # 🛑 Fix: Direct root import without the masking try/except block
-        root_path = os.path.dirname(os.path.abspath(__file__))
-        if root_path not in sys.path:
-            sys.path.insert(0, root_path)
+        # Absolute root injection to bypass Streamlit Cloud pathing conflicts
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        if root_dir not in sys.path:
+            sys.path.insert(0, root_dir)
             
         from extractor import ExtractorNode
         from analyst import AnalystNode
