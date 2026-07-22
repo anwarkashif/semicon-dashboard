@@ -225,3 +225,209 @@ def render_splash_screen():
             <div class="splash-text">Welcome to my SemicoN Dashboard<span class="loading-dots">...</span></div>
         </div>
         """, unsafe_allow_html=True)
+
+import streamlit.components.v1 as components
+
+def render_sd_bot():
+    """Renders a dynamic, draggable, voice-enabled SD Bot on the login screen."""
+    if 'sdbot_chat_history' not in st.session_state:
+        st.session_state['sdbot_chat_history'] = [
+            {"role": "bot", "content": "Hi! I'm SD Bot. Ask me about the dashboard or global intelligence. Click the 🎤 to speak!"}
+        ]
+
+    # Hidden input to act as a secure bridge between injected JS and Python
+    st.text_input("Hidden SD Bot Input", key="sdbot_query_input", label_visibility="hidden")
+    st.markdown("""
+    <style>
+    div[data-testid="stTextInput"]:has(input[aria-label="Hidden SD Bot Input"]) {
+        display: none !important;
+        height: 0px !important;
+        overflow: hidden !important;
+        position: absolute;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Compile Chat History
+    chat_html = ""
+    for msg in st.session_state['sdbot_chat_history']:
+        css_class = "bot" if msg["role"] == "bot" else "user"
+        content_safe = msg["content"].replace('\n', '<br>').replace('`', '&#96;')
+        chat_html += f'<div class="msg {css_class}">{content_safe}</div>'
+
+    bot_html = f"""
+    <div id="SD_BOT_IDENTIFIER"></div>
+    <style>
+        body {{ margin: 0; overflow: hidden; background: transparent; color: white; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }}
+        #bot-box {{ display: flex; flex-direction: column; height: 100vh; background: rgba(15, 23, 42, 0.95); border: 1px solid #333; border-radius: 12px; box-shadow: 0px 10px 40px rgba(0,0,0,0.9); backdrop-filter: blur(10px); }}
+        #header {{ background: #facc15; color: black; padding: 12px; font-weight: bold; cursor: grab; display: flex; justify-content: space-between; align-items: center; border-radius: 12px 12px 0 0; font-size: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 10; user-select: none; }}
+        #chat-history {{ flex: 1; padding: 15px; overflow-y: auto; font-size: 13.5px; line-height: 1.6; display: flex; flex-direction: column; gap: 12px; }}
+        .msg {{ padding: 10px 14px; border-radius: 8px; max-width: 85%; word-wrap: break-word; }}
+        .msg.bot {{ background: #1e293b; align-self: flex-start; border-left: 3px solid #facc15; color: #f8fafc; }}
+        .msg.user {{ background: #2563eb; align-self: flex-end; color: white; border-bottom-right-radius: 2px; }}
+        #input-bar {{ display: flex; padding: 12px; background: #020617; border-top: 1px solid #333; border-radius: 0 0 12px 12px; align-items: center; }}
+        input {{ flex: 1; padding: 10px 12px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: white; outline: none; font-size: 13px; transition: border 0.3s; }}
+        input:focus {{ border-color: #facc15; }}
+        button {{ border: none; padding: 10px; margin-left: 8px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: all 0.2s; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; }}
+        #mic-btn {{ background: #ef4444; color: white; }}
+        #mic-btn.recording {{ background: #22c55e; animation: pulse 1s infinite; }}
+        #send-btn {{ background: #facc15; color: black; }}
+        #send-btn:hover {{ background: #eab308; transform: scale(1.05); }}
+        @keyframes pulse {{ 0% {{ opacity: 1; transform: scale(1); }} 50% {{ opacity: 0.6; transform: scale(1.1); }} 100% {{ opacity: 1; transform: scale(1); }} }}
+        
+        ::-webkit-scrollbar {{ width: 6px; }}
+        ::-webkit-scrollbar-track {{ background: transparent; }}
+        ::-webkit-scrollbar-thumb {{ background: #334155; border-radius: 10px; }}
+        ::-webkit-scrollbar-thumb:hover {{ background: #475569; }}
+    </style>
+    <div id="bot-box">
+        <div id="header">
+            <span style="display: flex; align-items: center; gap: 8px;">🤖 SD Bot</span>
+            <span id="close-btn" style="cursor:pointer; font-size:16px; padding: 0 5px;" title="Minimize">✖</span>
+        </div>
+        <div id="chat-history">
+            {chat_html}
+        </div>
+        <div id="input-bar">
+            <button id="mic-btn" title="Voice Input">🎤</button>
+            <input type="text" id="user-input" placeholder="Type or speak a prompt..." autocomplete="off"/>
+            <button id="send-btn" title="Send">➤</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. DOM Hack: Escapes the iframe limitations to render as a floating overlay
+        const iframes = window.parent.document.querySelectorAll('iframe');
+        let myIframe = null;
+        iframes.forEach(f => {{
+            try {{ if(f.contentDocument && f.contentDocument.getElementById('SD_BOT_IDENTIFIER')) {{ myIframe = f; }} }} catch(e) {{}}
+        }});
+
+        if (myIframe) {{
+            const parentDiv = myIframe.parentNode;
+            parentDiv.style.position = 'fixed';
+            parentDiv.style.bottom = '20px';
+            parentDiv.style.right = '20px';
+            parentDiv.style.width = '360px';
+            parentDiv.style.height = '520px';
+            parentDiv.style.zIndex = '9999999';
+            parentDiv.style.borderRadius = '12px';
+            parentDiv.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+
+            // Draggable Logic
+            let isDragging = false;
+            let offsetX = 0, offsetY = 0;
+            const header = document.getElementById('header');
+
+            header.addEventListener('mousedown', (e) => {{
+                isDragging = true;
+                const rect = parentDiv.getBoundingClientRect();
+                offsetX = e.clientX - rect.left;
+                offsetY = e.clientY - rect.top;
+                parentDiv.style.right = 'auto'; 
+                parentDiv.style.bottom = 'auto';
+            }});
+
+            window.parent.addEventListener('mousemove', (e) => {{
+                if(isDragging) {{
+                    parentDiv.style.left = (e.clientX - offsetX) + 'px';
+                    parentDiv.style.top = (e.clientY - offsetY) + 'px';
+                }}
+            }});
+
+            window.parent.addEventListener('mouseup', () => {{ isDragging = false; }});
+            header.addEventListener('mouseup', () => {{ isDragging = false; }});
+
+            // Minimize Logic
+            let isMinimized = false;
+            document.getElementById('close-btn').addEventListener('click', () => {{
+                if (isMinimized) {{
+                    parentDiv.style.height = '520px';
+                    parentDiv.style.width = '360px';
+                    document.getElementById('chat-history').style.display = 'flex';
+                    document.getElementById('input-bar').style.display = 'flex';
+                }} else {{
+                    parentDiv.style.height = '42px';
+                    parentDiv.style.width = '120px';
+                    document.getElementById('chat-history').style.display = 'none';
+                    document.getElementById('input-bar').style.display = 'none';
+                }}
+                isMinimized = !isMinimized;
+            }});
+        }}
+
+        // Auto-scroll chat
+        const chatHistory = document.getElementById('chat-history');
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+
+        // 2. Web Speech API Logic (Native Voice Input)
+        const micBtn = document.getElementById('mic-btn');
+        const inputField = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (SpeechRecognition) {{
+            const recognition = new SpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+
+            let isRecording = false;
+
+            micBtn.addEventListener('click', () => {{
+                if (isRecording) {{ recognition.stop(); }} else {{ recognition.start(); }}
+            }});
+
+            recognition.onstart = () => {{
+                isRecording = true;
+                micBtn.classList.add('recording');
+                inputField.placeholder = "Listening...";
+            }};
+
+            recognition.onresult = (event) => {{
+                inputField.value = event.results[0][0].transcript;
+            }};
+
+            recognition.onend = () => {{
+                isRecording = false;
+                micBtn.classList.remove('recording');
+                inputField.placeholder = "Type or speak a prompt...";
+            }};
+        }} else {{
+            micBtn.style.display = 'none'; 
+        }}
+
+        // 3. React Synthetic Event Spoofing (Pass data to Python safely)
+        function sendMessage() {{
+            const text = inputField.value.trim();
+            if (!text) return;
+
+            chatHistory.innerHTML += `<div class="msg user">${{text}}</div>`;
+            chatHistory.innerHTML += `<div class="msg bot">Analyzing Secure Data...</div>`;
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+            inputField.value = '';
+
+            const stInputs = window.parent.document.querySelectorAll('input[aria-label="Hidden SD Bot Input"]');
+            if (stInputs.length > 0) {{
+                const stInput = stInputs[0];
+                let lastValue = stInput.value;
+                stInput.value = text;
+                let event = new Event('input', {{ bubbles: true }});
+                event.simulated = true;
+                let tracker = stInput._valueTracker;
+                if (tracker) {{ tracker.setValue(lastValue); }}
+                stInput.dispatchEvent(event);
+
+                setTimeout(() => {{
+                    stInput.dispatchEvent(new KeyboardEvent('keydown', {{ key: 'Enter', code: 'Enter', keyCode: 13, bubbles: true }}));
+                }}, 100);
+            }}
+        }}
+
+        sendBtn.addEventListener('click', sendMessage);
+        inputField.addEventListener('keypress', (e) => {{
+            if (e.key === 'Enter') sendMessage();
+        }});
+    </script>
+    """
+    components.html(bot_html, height=520)

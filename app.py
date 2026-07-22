@@ -178,7 +178,7 @@ inject_global_theme()
 if st.session_state['role'] is None:
     st.markdown("""<style>.loading-pulse { display: none !important; }</style>""", unsafe_allow_html=True)
     
-    # 🌌 VERTICAL GEMINI LOGIN WAVE (Handled responsively via CSS Media Queries)
+    # 🌌 VERTICAL GEMINI LOGIN WAVE
     st.markdown(
         """
         <div class="login-ambient-container">
@@ -205,6 +205,42 @@ if st.session_state['role'] is None:
     )
     
     render_login_screen()
+
+    # 🤖 INJECT SD BOT ON LOGIN SCREEN ONLY
+    from features.ui_features import render_sd_bot
+    render_sd_bot()
+
+    # Intercept SD Bot Queries
+    sdbot_query = st.session_state.get('sdbot_query_input', "")
+    if sdbot_query and sdbot_query != st.session_state.get('last_sdbot_query', ""):
+        st.session_state['last_sdbot_query'] = sdbot_query
+        st.session_state['sdbot_chat_history'].append({"role": "user", "content": sdbot_query})
+        
+        # Load backend processors
+        from extractor import ExtractorNode
+        from analyst import AnalystNode
+        
+        extractor = ExtractorNode()
+        analyst = AnalystNode()
+        
+        state = {
+            "user_prompt": sdbot_query,
+            "execution_mode": "SDBOT", # Special trigger mode for AnalystNode
+            "current_target_urls": [],
+            "chat_history": st.session_state['sdbot_chat_history']
+        }
+        
+        try:
+            state = extractor.execute(state)
+            state = analyst.execute(state)
+            bot_response = state.get('ui_markdown', '')
+            if not bot_response and 'drafted_brief' in state:
+                bot_response = state['drafted_brief'].get('BLUF', "Analysis completed, but response formatting failed.")
+        except Exception as e:
+            bot_response = f"⚠️ Secure Connection Interrupted: {e}\n\nProvided By: SD Bot (semirare.in)"
+
+        st.session_state['sdbot_chat_history'].append({"role": "bot", "content": bot_response})
+        st.rerun()
 
 else:
     # --- STAGE 2: LOGGED IN ---
