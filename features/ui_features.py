@@ -305,7 +305,7 @@ def render_sd_bot():
     </style>
     
     <div id="bot-container">
-        <div id="bot-icon">🤖</div>
+        <div id="bot-icon">📟</div>
         <div id="bot-box">
             <div id="header">
                 <span style="display: flex; align-items: center; gap: 8px;">📟 SD Bot</span>
@@ -395,14 +395,16 @@ def render_sd_bot():
                 isDragging = true;
                 dragged = false;
                 
-                const clientX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
-                const clientY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
+                // Capture mouse offset relative to the interior of the widget
+                const innerX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
+                const innerY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
+                
+                dragOffsetX = innerX;
+                dragOffsetY = innerY;
                 
                 const rect = parentDiv.getBoundingClientRect();
-                dragOffsetX = clientX - rect.left;
-                dragOffsetY = clientY - rect.top;
                 
-                // Convert from right/bottom anchoring to left/top anchoring safely
+                // Lock current absolute position before switching anchoring
                 parentDiv.style.left = rect.left + 'px';
                 parentDiv.style.top = rect.top + 'px';
                 parentDiv.style.right = 'auto'; 
@@ -417,12 +419,20 @@ def render_sd_bot():
                 e.preventDefault();
                 dragged = true;
                 
-                const clientX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
-                const clientY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
+                // Track mouse movement relative to the parent window
+                const parentX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
+                const parentY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
                 
                 requestAnimationFrame(() => {{
-                    parentDiv.style.left = `${{clientX - dragOffsetX}}px`;
-                    parentDiv.style.top = `${{clientY - dragOffsetY}}px`;
+                    let newLeft = parentX - dragOffsetX;
+                    let newTop = parentY - dragOffsetY;
+                    
+                    // Prevent dragging completely off the top or left of screen
+                    if (newTop < 0) newTop = 0;
+                    if (newLeft < -300) newLeft = -300;
+                    
+                    parentDiv.style.left = `${{newLeft}}px`;
+                    parentDiv.style.top = `${{newTop}}px`;
                 }});
             }};
 
