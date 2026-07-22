@@ -308,7 +308,7 @@ def render_sd_bot():
         <div id="bot-icon">🤖</div>
         <div id="bot-box">
             <div id="header">
-                <span style="display: flex; align-items: center; gap: 8px;">🤖 SD Bot</span>
+                <span style="display: flex; align-items: center; gap: 8px;">📟 SD Bot</span>
                 <span id="close-btn" style="cursor:pointer; font-size:16px; padding: 0 5px;" title="Minimize">✖</span>
             </div>
             <div id="chat-history">
@@ -333,6 +333,11 @@ def render_sd_bot():
             const parentDiv = myIframe.parentNode;
             parentDiv.style.position = 'fixed';
             parentDiv.style.zIndex = '9999999';
+            parentDiv.style.transition = 'width 0.3s, height 0.3s';
+            
+            // Fix iframe internals
+            myIframe.style.width = '100%';
+            myIframe.style.height = '100%';
             
             const isMobile = window.parent.innerWidth <= 900;
             const expandedWidth = isMobile ? '90vw' : '360px';
@@ -343,13 +348,15 @@ def render_sd_bot():
             const header = document.getElementById('header');
             const chatHistory = document.getElementById('chat-history');
             
-            const setOpenState = () => {{
-                parentDiv.style.left = ''; // FIX FOR POSITIONING AFTER DRAG
-                parentDiv.style.top = '';  // FIX FOR POSITIONING AFTER DRAG
-                parentDiv.style.width = expandedWidth;
-                parentDiv.style.height = expandedHeight;
+            // Initial positioning ONLY if not already dragged
+            if (!parentDiv.style.left && !parentDiv.style.top) {{
                 parentDiv.style.bottom = isMobile ? '10px' : '20px';
                 parentDiv.style.right = isMobile ? '5vw' : '20px';
+            }}
+
+            const setOpenState = () => {{
+                parentDiv.style.width = expandedWidth;
+                parentDiv.style.height = expandedHeight;
                 parentDiv.style.borderRadius = '12px';
                 botIcon.style.display = 'none';
                 botBox.style.display = 'flex';
@@ -357,12 +364,8 @@ def render_sd_bot():
             }};
 
             const setClosedState = () => {{
-                parentDiv.style.left = ''; // FIX FOR DISAPPEARING ICON AFTER DRAG
-                parentDiv.style.top = '';  // FIX FOR DISAPPEARING ICON AFTER DRAG
                 parentDiv.style.width = '60px';
                 parentDiv.style.height = '60px';
-                parentDiv.style.bottom = '30px';
-                parentDiv.style.right = '30px';
                 parentDiv.style.borderRadius = '30px';
                 botIcon.style.display = 'flex';
                 botBox.style.display = 'none';
@@ -382,22 +385,30 @@ def render_sd_bot():
                 setClosedState();
             }});
 
+            // Reliable Dragging Logic
             let isDragging = false;
-            let startX, startY, initialLeft, initialTop;
+            let dragOffsetX = 0;
+            let dragOffsetY = 0;
 
             const dragStart = (e) => {{
                 if (e.target.id === 'close-btn' || e.target.tagName.toLowerCase() === 'button') return;
                 isDragging = true;
                 dragged = false;
-                const rect = parentDiv.getBoundingClientRect();
-                startX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
-                startY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
-                initialLeft = rect.left;
-                initialTop = rect.top;
                 
+                const clientX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
+                const clientY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
+                
+                const rect = parentDiv.getBoundingClientRect();
+                dragOffsetX = clientX - rect.left;
+                dragOffsetY = clientY - rect.top;
+                
+                // Convert from right/bottom anchoring to left/top anchoring safely
+                parentDiv.style.left = rect.left + 'px';
+                parentDiv.style.top = rect.top + 'px';
                 parentDiv.style.right = 'auto'; 
                 parentDiv.style.bottom = 'auto';
                 parentDiv.style.transition = 'none'; 
+                
                 myIframe.style.pointerEvents = 'none'; 
             }};
 
@@ -405,20 +416,20 @@ def render_sd_bot():
                 if(!isDragging) return;
                 e.preventDefault();
                 dragged = true;
+                
                 const clientX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
                 const clientY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
-                const dx = clientX - startX;
-                const dy = clientY - startY;
                 
                 requestAnimationFrame(() => {{
-                    parentDiv.style.left = `${{initialLeft + dx}}px`;
-                    parentDiv.style.top = `${{initialTop + dy}}px`;
+                    parentDiv.style.left = `${{clientX - dragOffsetX}}px`;
+                    parentDiv.style.top = `${{clientY - dragOffsetY}}px`;
                 }});
             }};
 
             const dragEnd = () => {{
                 if(!isDragging) return;
                 isDragging = false;
+                parentDiv.style.transition = 'width 0.3s, height 0.3s';
                 myIframe.style.pointerEvents = 'auto';
             }};
 
