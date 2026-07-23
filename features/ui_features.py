@@ -258,6 +258,9 @@ def render_sd_bot():
     is_open = "true" if len(st.session_state['sdbot_chat_history']) > 1 else "false"
     box_display = "flex" if is_open == "true" else "none"
     icon_display = "none" if is_open == "true" else "flex"
+    
+    # 🛑 Fix: Dynamic height prevents Streamlit from collapsing the element completely and vanishing the widget
+    initial_height = 550 if is_open == "true" else 85
 
     bot_html = f"""
     <div id="SD_BOT_IDENTIFIER"></div>
@@ -266,13 +269,13 @@ def render_sd_bot():
         body {{ margin: 0; overflow: hidden; background: transparent; color: white; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; height: 100vh; width: 100vw; }}
         #bot-container {{ display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; }}
         
-        /* Floating Icon State - Updated Size and Color */
+        /* Floating Icon State - 80px Size and White Background */
         #bot-icon {{
             display: {icon_display};
-            width: 75px; height: 75px; background: #ffffff;
+            width: 80px; height: 80px; background: #ffffff;
             border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             align-items: center; justify-content: center;
-            font-size: 40px; cursor: pointer; transition: transform 0.2s; pointer-events: auto; color: black;
+            font-size: 45px; cursor: pointer; transition: transform 0.2s; pointer-events: auto; color: black;
         }}
         #bot-icon:hover {{ transform: scale(1.1); }}
         
@@ -351,16 +354,16 @@ def render_sd_bot():
             const header = document.getElementById('header');
             const chatHistory = document.getElementById('chat-history');
             
-            // Set dimensions immediately before transition to stop flickering
+            // Set dimensions immediately before transition
             const shouldBeOpen = {is_open};
             if (shouldBeOpen) {{
                 parentDiv.style.width = expandedWidth;
                 parentDiv.style.height = expandedHeight;
                 parentDiv.style.borderRadius = '12px';
             }} else {{
-                parentDiv.style.width = '60px';
-                parentDiv.style.height = '60px';
-                parentDiv.style.borderRadius = '30px';
+                parentDiv.style.width = '80px';
+                parentDiv.style.height = '80px';
+                parentDiv.style.borderRadius = '40px';
             }}
 
             // Initial positioning ONLY if not already dragged
@@ -369,7 +372,7 @@ def render_sd_bot():
                 parentDiv.style.right = isMobile ? '5vw' : '20px';
             }}
 
-            // Add transition AFTER setting the initial static size to stop load flash
+            // Add transition AFTER setting the initial static size
             setTimeout(() => {{ parentDiv.style.transition = 'width 0.3s, height 0.3s'; }}, 50);
 
             const setOpenState = () => {{
@@ -382,23 +385,12 @@ def render_sd_bot():
             }};
 
             const setClosedState = () => {{
-                parentDiv.style.width = '75px';
-                parentDiv.style.height = '75px';
-                parentDiv.style.borderRadius = '50%';
+                parentDiv.style.width = '80px';
+                parentDiv.style.height = '80px';
+                parentDiv.style.borderRadius = '40px';
                 botIcon.style.display = 'flex';
                 botBox.style.display = 'none';
             }};
-
-            const shouldBeOpen = {is_open};
-            if (shouldBeOpen) {{
-                parentDiv.style.width = expandedWidth;
-                parentDiv.style.height = expandedHeight;
-                parentDiv.style.borderRadius = '12px';
-            }} else {{
-                parentDiv.style.width = '75px';
-                parentDiv.style.height = '75px';
-                parentDiv.style.borderRadius = '50%';
-            }}
 
             // Auto scroll on load
             setTimeout(() => {{ chatHistory.scrollTop = chatHistory.scrollHeight; }}, 50);
@@ -553,5 +545,5 @@ def render_sd_bot():
     </script>
     """
     
-    # 🛑 FIX: Setting height=0 kills the Streamlit DOM allocation flicker permanently!
-    components.html(bot_html, height=0)
+    # Render with proper iframe bounding height 
+    components.html(bot_html, height=initial_height)

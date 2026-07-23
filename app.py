@@ -206,11 +206,7 @@ if st.session_state['role'] is None:
     
     render_login_screen()
 
-    # 🤖 INJECT SD BOT ON LOGIN SCREEN ONLY
-    from features.ui_features import render_sd_bot
-    render_sd_bot()
-
-    # Intercept SD Bot Queries
+    # Intercept SD Bot Queries BEFORE rendering to prevent double-rerun UI flicker
     sdbot_query = st.session_state.get('sdbot_query_input', "")
     if sdbot_query and sdbot_query != st.session_state.get('last_sdbot_query', ""):
         st.session_state['last_sdbot_query'] = sdbot_query
@@ -225,8 +221,8 @@ if st.session_state['role'] is None:
         if root_dir not in sys.path:
             sys.path.insert(0, root_dir)
             
-        from nodes.extractor import ExtractorNode
-        from nodes.analyst import AnalystNode
+        from extractor import ExtractorNode
+        from analyst import AnalystNode
         
         extractor = ExtractorNode()
         analyst = AnalystNode()
@@ -248,7 +244,10 @@ if st.session_state['role'] is None:
             bot_response = f"⚠️ Secure Connection Interrupted: {e}\n\nProvided By: SD Bot (semirare.in)"
 
         st.session_state['sdbot_chat_history'].append({"role": "bot", "content": bot_response})
-        st.rerun()
+
+    # 🤖 INJECT SD BOT ON LOGIN SCREEN ONLY
+    from features.ui_features import render_sd_bot
+    render_sd_bot()
 
 else:
     # --- STAGE 2: LOGGED IN ---
