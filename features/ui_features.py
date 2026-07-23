@@ -266,13 +266,13 @@ def render_sd_bot():
         body {{ margin: 0; overflow: hidden; background: transparent; color: white; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; height: 100vh; width: 100vw; }}
         #bot-container {{ display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; }}
         
-        /* Floating Icon State */
+        /* Floating Icon State - Updated Size and Color */
         #bot-icon {{
             display: {icon_display};
-            width: 60px; height: 60px; background: linear-gradient(135deg, #facc15, #eab308);
+            width: 75px; height: 75px; background: #ffffff;
             border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             align-items: center; justify-content: center;
-            font-size: 30px; cursor: pointer; transition: transform 0.2s; pointer-events: auto;
+            font-size: 40px; cursor: pointer; transition: transform 0.2s; pointer-events: auto; color: black;
         }}
         #bot-icon:hover {{ transform: scale(1.1); }}
         
@@ -382,12 +382,23 @@ def render_sd_bot():
             }};
 
             const setClosedState = () => {{
-                parentDiv.style.width = '60px';
-                parentDiv.style.height = '60px';
-                parentDiv.style.borderRadius = '30px';
+                parentDiv.style.width = '75px';
+                parentDiv.style.height = '75px';
+                parentDiv.style.borderRadius = '50%';
                 botIcon.style.display = 'flex';
                 botBox.style.display = 'none';
             }};
+
+            const shouldBeOpen = {is_open};
+            if (shouldBeOpen) {{
+                parentDiv.style.width = expandedWidth;
+                parentDiv.style.height = expandedHeight;
+                parentDiv.style.borderRadius = '12px';
+            }} else {{
+                parentDiv.style.width = '75px';
+                parentDiv.style.height = '75px';
+                parentDiv.style.borderRadius = '50%';
+            }}
 
             // Auto scroll on load
             setTimeout(() => {{ chatHistory.scrollTop = chatHistory.scrollHeight; }}, 50);
@@ -542,4 +553,5 @@ def render_sd_bot():
     </script>
     """
     
-    components.html(bot_html, height=550)
+    # 🛑 FIX: Setting height=0 kills the Streamlit DOM allocation flicker permanently!
+    components.html(bot_html, height=0)
