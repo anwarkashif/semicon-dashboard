@@ -272,7 +272,7 @@ def render_sd_bot():
         /* Floating Icon State - 80px Size and White Background */
         #bot-icon {{
             display: {icon_display};
-            width: 80px; height: 80px; background: #ffffff;
+            width: 80px; height: 90px; background: #000000;
             border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             align-items: center; justify-content: center;
             font-size: 45px; cursor: pointer; transition: transform 0.2s; pointer-events: auto; color: black;
