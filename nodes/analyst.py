@@ -155,33 +155,7 @@ class AnalystNode:
             )
 
         # ==========================================
-        # PATHWAY B: SD BOT (LOGIN SCREEN RESEARCH ASSISTANT)
-        # ==========================================
-        elif mode == "SDBOT":
-            sys_instruct = f"""
-            You are SD Bot, the highly intelligent, conversational, and human-like AI assistant for the SemicoN OSINT Dashboard.
-            You are speaking directly to a guest user on the login screen.
-            
-            CRITICAL CONVERSATIONAL RULES:
-            1. BE NATURAL & NON-ROBOTIC: Vary your responses. Do not use the same repetitive greetings or monologues. Act like a sharp, helpful human analyst.
-            2. SHORT GREETINGS: If the user says "Hi", "Hello", "How are you", respond briefly and warmly in 1-3 sentences. Do NOT explain the dashboard unless they explicitly ask what the dashboard does.
-            3. DASHBOARD EXPLANATIONS: Only if the user explicitly asks what the website does or what they will find inside, provide a concise (under 150 words) overview of Live OSINT, Agentic Research, Threat Scoring, and Archival Intelligence.
-            4. INTELLIGENCE QUERIES: If the user asks a specific geopolitical or semiconductor research question, synthesize the provided RAW OSINT INTERCEPTS into a high-quality summary.
-            5. SOURCE ATTRIBUTION STRICT RULE: NEVER output a "Sources:" section for general chat, greetings, or dashboard explanations. ONLY output a "Sources:" section if you are answering a specific intelligence query using the RAW OSINT INTERCEPTS. When you do, use ONLY the exact URLs provided in the intercepts. Do not fabricate URLs.
-            6. REQUIRED SIGN-OFF: You MUST end EVERY response with this exact sign-off on a new line at the very end:
-               
-               Provided By: SD Bot (semirare.in)
-            """
-            # Injecting chat history so the bot actually remembers prior conversation and avoids repetition
-            contents_payload = f"{formatted_history}\nUSER DIRECTIVE:\n{user_cmd}\n\n{compiled_context}"
-            gen_config = types.GenerateContentConfig(
-                system_instruction=sys_instruct, 
-                temperature=0.7,
-                max_output_tokens=2048
-            )
-
-        # ==========================================
-        # PATHWAY C: RIGID DYNAMIC BRIEF
+        # PATHWAY B: RIGID DYNAMIC BRIEF
         # ==========================================
         elif mode == "CUSTOM_UI":
             sys_instruct = f"""
@@ -301,8 +275,7 @@ class AnalystNode:
                     }
                     return state
 
-                # 🛑 THE FIX: Added "SDBOT" so it is correctly processed as text, not JSON
-                if mode in ["CUSTOM_UI", "CONVERSATIONAL", "SDBOT"]:
+                if mode in ["CUSTOM_UI", "CONVERSATIONAL"]:
                     if raw_text.startswith("```markdown"): raw_text = raw_text[11:-3].strip()
                     elif raw_text.startswith("```"): raw_text = raw_text[3:-3].strip()
 
@@ -554,16 +527,9 @@ class AnalystNode:
                         print(f"[Node 4] JSON Parsing Failure in Autonomous Mode: {e}")
                         raise Exception(f"Failed to parse LLM JSON: {e}")
 
-                # 🛑 THE FIX: Dynamic Title based on exactly which mode ran
-                assigned_title = "Custom Analysis Pass"
-                if mode == "SDBOT":
-                    assigned_title = "SD Bot Dialogue Mode"
-                elif mode == "CONVERSATIONAL":
-                    assigned_title = "Conversational Dialogue Mode"
-
                 state['drafted_brief'] = {
                     "is_custom_prompt": True,
-                    "Title": assigned_title,
+                    "Title": "Conversational Dialogue Mode" if mode == "CONVERSATIONAL" else "Custom Analysis Pass",
                     "Threat_Level": "CUSTOM",
                     "BLUF": raw_text,
                     "Source": source_str
