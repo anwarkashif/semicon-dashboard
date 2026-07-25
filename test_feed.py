@@ -277,6 +277,147 @@ def test_earth_engine_sar():
         return []
 
 # =========================================================
+# 🌍 6-HOUR COMBINED OSINT AGGREGATORS
+# =========================================================
+
+def test_gdelt_project():
+    print("📡 Targeting API: GDELT Project (Direct JSON API)")
+    url = "https://api.gdeltproject.org/api/v2/doc/doc"
+    
+    # 🛑 FIX: The exact query list remains strictly untouched.
+    params = {
+        "query": "(geopolitics OR military OR conflict OR war OR accident OR closure OR attack OR disaster)",
+        "mode": "artlist",
+        "maxrecords": "15",
+        "format": "json"
+    }
+    
+    # 🛑 FIX: Removed IP spoofing. Reverted to the clean bot header that successfully passed the WAF.
+    gdelt_headers = {
+        'User-Agent': 'SemicoN-Dashboard-OSINT-Bot/1.0',
+        'Accept': 'application/json'
+    }
+    
+    try:
+        # 🛑 FIX: Restored the proven exponential backoff loop
+        for attempt in range(5):
+            try:
+                response = requests.get(url, headers=gdelt_headers, params=params, timeout=45)
+                
+                if response.status_code == 200:
+                    raw_text = response.text.strip()
+                    if not raw_text:
+                        print("⚠️ QUEUED [GDELT]: API returned 200 OK but data is buffering. Retrying...")
+                        time.sleep(10)
+                        continue
+                    
+                    try:
+                        data = response.json()
+                        articles = data.get("articles", [])
+                        print("✅ SUCCESS: Extracted structured JSON data from GDELT Project.")
+                        print(f"    Articles retrieved: {len(articles)}")
+                        print(f"    Preview: {str(articles[:1])[:200]}...\n")
+                        return articles
+                    except Exception as json_err:
+                        print(f"❌ JSON ERROR [GDELT]: API returned HTML instead of JSON. Preview: {raw_text[:100]}\n")
+                        break
+                        
+                elif response.status_code == 429:
+                    wait_time = 15 * (attempt + 1)
+                    print(f"⏳ QUEUED [GDELT]: Server is busy (HTTP 429). Waiting {wait_time} seconds in queue (Attempt {attempt+1}/5)...")
+                    time.sleep(wait_time)
+                else:
+                    print(f"❌ FAILED [GDELT]: HTTP {response.status_code} - {response.text[:100]}\n")
+                    break
+                    
+            except requests.exceptions.Timeout:
+                print(f"⏳ TIMEOUT [GDELT]: Heavy query processing. Retrying (Attempt {attempt+1}/5)...")
+                time.sleep(5)
+            except Exception as req_err:
+                print(f"❌ CONNECTION ERROR [GDELT]: {req_err}\n")
+                break
+                
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE [GDELT]: {e}\n")
+        
+    return []
+
+def test_rsoe_edis():
+    print("📡 Targeting API: RSOE EDIS (F12 Intercept)")
+    url = "https://rsoe-edis.org/gateway/webapi/events/cluster?zoom=3"
+    
+    # Injected from F12 cURL trace
+    headers = {
+        'accept': '*/*',
+        'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+        'cookie': 'session_edis_web=lrths6n27igus6flhbotfthfng4gtdea; ARRAffinity=082262f63d566190c8292be0e01a47e0423c8e43dfe0db885debc5faf41649b3; ARRAffinitySameSite=082262f63d566190c8292be0e01a47e0423c8e43dfe0db885debc5faf41649b3; _ga=GA1.1.1674139529.1784980473; __gads=ID=1acf79d5e126bad6:T=1784980474:RT=1784980474:S=ALNI_MZO6iQHGZRROs84mqcO_Zc3Rhqqeg; __eoi=ID=d566a874bd03a8e6:T=1784980475:RT=1784980475:S=AA-AfjbRiTHIB8hJglihjmsT4zSj; _ga_KHD7YP5VHW=GS2.1.s1784980473$o1$g1$t1784980618$j58$l0$h0',
+        'dnt': '1',
+        'referer': 'https://rsoe-edis.org/eventMap',
+        'sec-ch-ua': '"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+    }
+
+    try:
+        response = requests.get(url, headers=headers, timeout=15)
+        if response.status_code == 200:
+            data = response.json()
+            print("✅ SUCCESS: Extracted live map cluster JSON from RSOE EDIS.")
+            print(f"    Preview: {str(data)[:200]}...\n")
+            return data
+        else:
+            print(f"❌ FAILED [RSOE EDIS]: HTTP {response.status_code}\n")
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE [RSOE EDIS]: {e}\n")
+    return []
+
+def test_liveuamap():
+    print("📡 Targeting Web Feed: Liveuamap (F12 HTML Scraper Intercept)")
+    url = "https://liveuamap.com/"
+    
+    # Injected from F12 cURL trace to bypass anti-bot mechanisms
+    headers = {
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+        'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+        'dnt': '1',
+        'sec-ch-ua': '"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-fetch-dest': 'document',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-site': 'none',
+        'sec-fetch-user': '?1',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+    }
+
+    try:
+        response = requests.get(url, headers=headers, timeout=15)
+        if response.status_code == 200:
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(response.text, 'html.parser')
+            events = []
+            
+            # Target the specific div classes Liveuamap uses to render event text
+            for item in soup.select('.title'):
+                text = item.get_text(strip=True)
+                if text:
+                    events.append(text)
+            
+            print(f"✅ SUCCESS: Extracted {len(events)} live geopolitical events from Liveuamap.")
+            print(f"    Preview: {str(events[:2])}...\n")
+            return events
+        else:
+            print(f"❌ FAILED [Liveuamap]: HTTP {response.status_code}\n")
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE [Liveuamap]: {e}\n")
+    return []
+
+# =========================================================
 # 🚀 MAIN DIAGNOSTIC SUITE
 # =========================================================
 if __name__ == "__main__":
@@ -297,6 +438,12 @@ if __name__ == "__main__":
     war_monitor_data = extract_war_monitor()
     mts_data = extract_monitor_the_situation()
     ee_data = test_earth_engine_sar()
+
+    # 3. 6-Hour Loop OSINT Targets
+    print("--- 6-HOUR LOOP OSINT TARGETS ---")
+    gdelt_data = test_gdelt_project()
+    rsoe_data = test_rsoe_edis()
+    liveuamap_data = test_liveuamap()
 
     print("==================================================")
     print("📊 DIAGNOSTIC COMPLETED")

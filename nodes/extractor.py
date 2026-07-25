@@ -482,6 +482,111 @@ class ExtractorNode:
                     print(f"[Node 2] Earth Engine SAR anomaly bypassed safely: {sar_err}")              
 
                 # =========================================================
+                # 🌐 AGENTIC 3.5 FEEDER LAYER: GDELT PROJECT (MACRO GEOPOLITICS)
+                # =========================================================
+                try:
+                    gdelt_url = "https://api.gdeltproject.org/api/v2/doc/doc"
+                    gdelt_params = {
+                        "query": "(geopolitics OR military OR conflict OR war OR accident OR closure OR attack OR disaster)",
+                        "mode": "artlist",
+                        "maxrecords": "15",
+                        "format": "json"
+                    }
+                    gdelt_headers = {
+                        'User-Agent': 'SemicoN-Dashboard-OSINT-Bot/1.0',
+                        'Accept': 'application/json'
+                    }
+                    for attempt in range(5):
+                        try:
+                            gdelt_res = requests.get(gdelt_url, headers=gdelt_headers, params=gdelt_params, timeout=45)
+                            if gdelt_res.status_code == 200:
+                                raw_text = gdelt_res.text.strip()
+                                if not raw_text:
+                                    time.sleep(10)
+                                    continue
+                                try:
+                                    gdelt_articles = gdelt_res.json().get("articles", [])
+                                    compiled_gdelt = "### Live GDELT Project Macro Geopolitics:\n"
+                                    for item in gdelt_articles:
+                                        compiled_gdelt += f"- [GDELT] {item.get('title', 'Unknown')}: {item.get('url', '')}\n"
+                                    if gdelt_articles:
+                                        extracted_payloads.append({
+                                            "source_url": "https://api.gdeltproject.org",
+                                            "content": compiled_gdelt.strip(),
+                                            "method": "gdelt_api_feeder"
+                                        })
+                                        print(f"[Node 2] Successfully injected {len(gdelt_articles)} GDELT Project global events.")
+                                    break
+                                except Exception:
+                                    break
+                            elif gdelt_res.status_code == 429:
+                                time.sleep(15 * (attempt + 1))
+                            else:
+                                break
+                        except Exception:
+                            time.sleep(5)
+                except Exception as gdelt_err:
+                    print(f"[Node 2] GDELT feeder anomaly bypassed safely: {gdelt_err}")
+
+                # =========================================================
+                # ⚠️ AGENTIC 3.5 FEEDER LAYER: RSOE EDIS (HAZARD CLUSTERS)
+                # =========================================================
+                try:
+                    rsoe_url = "https://rsoe-edis.org/gateway/webapi/events/cluster?zoom=3"
+                    rsoe_headers = {
+                        'accept': '*/*',
+                        'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+                        'cookie': 'session_edis_web=lrths6n27igus6flhbotfthfng4gtdea; ARRAffinity=082262f63d566190c8292be0e01a47e0423c8e43dfe0db885debc5faf41649b3; ARRAffinitySameSite=082262f63d566190c8292be0e01a47e0423c8e43dfe0db885debc5faf41649b3; _ga=GA1.1.1674139529.1784980473; __gads=ID=1acf79d5e126bad6:T=1784980474:RT=1784980474:S=ALNI_MZO6iQHGZRROs84mqcO_Zc3Rhqqeg; __eoi=ID=d566a874bd03a8e6:T=1784980475:RT=1784980475:S=AA-AfjbRiTHIB8hJglihjmsT4zSj; _ga_KHD7YP5VHW=GS2.1.s1784980473$o1$g1$t1784980618$j58$l0$h0',
+                        'dnt': '1',
+                        'referer': 'https://rsoe-edis.org/eventMap',
+                        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+                    }
+                    rsoe_res = self.session.get(rsoe_url, headers=rsoe_headers, timeout=15)
+                    if rsoe_res.status_code == 200:
+                        rsoe_features = rsoe_res.json().get('features', [])
+                        compiled_rsoe = "### Live RSOE EDIS Hazards & Emergency Clusters:\n"
+                        for feature in rsoe_features[:10]:
+                            props = feature.get('properties', {})
+                            compiled_rsoe += f"- [RSOE] {props.get('location', 'Global')}: {props.get('name', 'Unknown Hazard')}\n"
+                        if rsoe_features:
+                            extracted_payloads.append({
+                                "source_url": "https://rsoe-edis.org",
+                                "content": compiled_rsoe.strip(),
+                                "method": "rsoe_edis_feeder"
+                            })
+                            print(f"[Node 2] Successfully injected {len(rsoe_features[:10])} RSOE EDIS hazard clusters.")
+                except Exception as rsoe_err:
+                    print(f"[Node 2] RSOE EDIS feeder anomaly bypassed safely: {rsoe_err}")
+
+                # =========================================================
+                # 🔴 AGENTIC 3.5 FEEDER LAYER: LIVEUAMAP (FRONTLINE KINETICS)
+                # =========================================================
+                try:
+                    lua_url = "https://liveuamap.com/"
+                    lua_headers = {
+                        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                        'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+                        'dnt': '1',
+                        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+                    }
+                    lua_res = self.session.get(lua_url, headers=lua_headers, timeout=15)
+                    if lua_res.status_code == 200:
+                        soup = BeautifulSoup(lua_res.text, 'html.parser')
+                        lua_events = [item.get_text(strip=True) for item in soup.select('.title') if item.get_text(strip=True)]
+                        compiled_lua = "### Liveuamap Frontline Kinetic Events:\n"
+                        for evt in lua_events[:10]:
+                            compiled_lua += f"- [Liveuamap] {evt}\n"
+                        if lua_events:
+                            extracted_payloads.append({
+                                "source_url": "https://liveuamap.com",
+                                "content": compiled_lua.strip(),
+                                "method": "liveuamap_scraper"
+                            })
+                            print(f"[Node 2] Successfully injected {len(lua_events[:10])} Liveuamap kinetic events.")
+                except Exception as lua_err:
+                    print(f"[Node 2] Liveuamap feeder anomaly bypassed safely: {lua_err}")
+
+                # =========================================================
                 # 📚 INTERNAL RAG ARCHIVE FEEDER (SemicoN Data Matrix)
                 # =========================================================
                 try:

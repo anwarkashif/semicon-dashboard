@@ -222,12 +222,19 @@ class AnalystNode:
             STRICT JSON SCHEMA REQUIRED:
             {
               "Title": "Strategic Intelligence Brief",
-              "Threat_Level": "LOW/MODERATE/HIGH/CRITICAL",
-              "BLUF": "Executive summary...",
+              "Threat_Level": "LOW/MODERATE/HIGH/CRITICAL/EXTREME",
+              "BLUF": "BLUF summary...",
+              "Executive_Summary": "Executive summary...",
               "Top_News": {
-                 "Global": ["News 1", "News 2"]
+                 "Global": ["News 1", "News 2", "News 3", "News 4", "News 5", "News 6", "News 7", "News 8", "News 9", "News 10"]
               },
-              "Watch_Out": ["Trend 1", "Trend 2"],
+              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10"],
+              "Situational_Update_And_Threat_Telemetry": {
+                 "Overall_Analysis": "Analysis details..."
+              },
+              "Operational_Impacts": {
+                 "Overall_Analysis": "Analysis details..."              
+              },
               "Risk_And_Threat_Analysis": {
                  "Overall_Analysis": "Analysis details..."
               },

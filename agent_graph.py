@@ -81,7 +81,9 @@ def autonomous_agent_loop():
             print(f"✅ [Agentic Engine] Autonomous cycle complete. Status: {final_state.get('publish_status')}")
         except Exception as e:
             print(f"⚠️ [Agentic Engine] Critical Execution Failure: {e}")
-        time.sleep(1500)
+        
+        # 🛑 FIX: Wait exactly 6 Hours (21,600 Seconds) before executing the next autonomous intelligence sweep
+        time.sleep(21600)
 
 def start_agent_daemon():
     agent_thread = threading.Thread(target=autonomous_agent_loop, daemon=True)
