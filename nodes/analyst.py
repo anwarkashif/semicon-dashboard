@@ -205,19 +205,15 @@ class AnalystNode:
         else:
             legacy_instruction = """
             You are an autonomous, elite Geopolitical Intelligence Analyst for the SemicoN Dashboard.
-            Synthesize a highly professional intelligence brief focusing on semiconductor supply chains, critical minerals, and geopolitics.
+            Synthesize a highly professional, exhaustive intelligence brief focusing on semiconductor supply chains, critical minerals, and geopolitics.
             
             CRITICAL FORMATTING RULES:
-            1. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). 
-            2. Sub-categorize all global news items cleanly based on detailed geography and sub-geography.
-            3. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
-            4. Right before the Sources section, you MUST insert this exact block:
-               Owned By:
-               Kashif Anwar
-               Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)
-            5. STRICT SOURCE ATTRIBUTION & OVER-DELIVERY: Cite ONLY direct publisher URLs explicitly provided in the RAW OSINT INTERCEPTS. Over-deliver all available relevant URLs if the user requests a smaller quota. NEVER invent a link.
-            6. ZERO-KNOWLEDGE OVERRIDE: Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. As long as you have AT LEAST ONE relevant piece of geopolitical data, you MUST generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block.
-            7. Return your output strictly as a JSON object matching the exact schema below.
+            1. MANDATORY LENGTH & STRUCTURAL EXPANSION: You MUST write highly detailed, exhaustive paragraphs for every analytical section. Do not write short 1-sentence summaries. Provide deep macroeconomic, military, and supply chain analysis.
+            2. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). 
+            3. Sub-categorize all global news items cleanly based on detailed geography and sub-geography.
+            4. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
+            5. ZERO-KNOWLEDGE OVERRIDE: Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. As long as you have AT LEAST ONE relevant piece of geopolitical data, you MUST generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block.
+            6. Return your output strictly as a JSON object matching the exact schema below.
             
             STRICT JSON SCHEMA REQUIRED:
             {
@@ -512,6 +508,16 @@ class AnalystNode:
                     state['ui_markdown'] = raw_text
                     state['map_coords'] = map_coords_list
                     
+                    # 🛑 FIX: Moved this overwrite INSIDE the Custom block. 
+                    # Previously, it was blindly destroying your JSON in Autonomous mode!
+                    state['drafted_brief'] = {
+                        "is_custom_prompt": True,
+                        "Title": "Conversational Dialogue Mode" if mode == "CONVERSATIONAL" else "Custom Analysis Pass",
+                        "Threat_Level": "CUSTOM",
+                        "BLUF": raw_text,
+                        "Source": source_str
+                    }
+                    
                 else:
                     try:
                         if "```json" in raw_text:
@@ -534,13 +540,7 @@ class AnalystNode:
                         print(f"[Node 4] JSON Parsing Failure in Autonomous Mode: {e}")
                         raise Exception(f"Failed to parse LLM JSON: {e}")
 
-                state['drafted_brief'] = {
-                    "is_custom_prompt": True,
-                    "Title": "Conversational Dialogue Mode" if mode == "CONVERSATIONAL" else "Custom Analysis Pass",
-                    "Threat_Level": "CUSTOM",
-                    "BLUF": raw_text,
-                    "Source": source_str
-                }
+                # 🛑 FIX: Removed the rogue overwrite from here so your JSON stays completely intact!
                 
                 print(f'[Node 4] Geopolitical Analysis execution layer successful.')
                 break 

@@ -45,6 +45,7 @@ class PublisherNode:
             email_md = f"🚨 ALERT: {final_brief.get('Title', 'Agentic AI Strategic Brief')}\n\n"
             email_md += f"Threat Level: {final_brief.get('Threat_Level', 'STANDARD')}\n\n"
             email_md += f"Bottom Line Up Front (BLUF):\n{final_brief.get('BLUF', 'No BLUF provided.')}\n\n"
+            email_md += f"Executive Summary:\n{final_brief.get('Executive_Summary', 'No Executive Summary provided.')}\n\n"
             
             email_md += "Top News from the Globe:\n"
             top_news = final_brief.get("Top_News", {})
@@ -58,8 +59,15 @@ class PublisherNode:
             for watch in final_brief.get("Watch_Out", []): 
                 email_md += f"- {watch}\n"
             
+            sutt = final_brief.get("Situational_Update_And_Threat_Telemetry", {})
+            email_md += f"\nSituational Update & Threat Telemetry:\n{sutt.get('Overall_Analysis', 'N/A')}\n\n"
+
+            oi = final_brief.get("Operational_Impacts", {})
+            email_md += f"Operational Impacts:\n{oi.get('Overall_Analysis', 'N/A')}\n\n"
+
             rta = final_brief.get("Risk_And_Threat_Analysis", {})
-            email_md += f"\nRisk and Threat Analysis:\n{rta.get('Overall_Analysis', 'N/A')}\n\n"
+            email_md += f"Risk and Threat Analysis:\n{rta.get('Overall_Analysis', 'N/A')}\n\n"
+            
             email_md += f"Predictive Analysis:\n{final_brief.get('Predictive_Analysis', 'N/A')}\n\n"
             
             # Inject required attribution metadata block cleanly
@@ -67,9 +75,9 @@ class PublisherNode:
             email_md += "Kashif Anwar\n"
             email_md += "Geopolitical Risk and Threat Analyst (Human-AI Vetted Analyst)\n\n"
             
+            # 🛑 FIX: Hardcoded sources block exactly as requested, dropping all OSINT scrape URLs.
             email_md += "Sources:\n"
             email_md += "Agentic AI (www.semirare.in)\n"
-            email_md += f"{source_str}"
             
             with open('data/agentic_email_body.md', 'w', encoding='utf-8') as f:
                 f.write(email_md)
