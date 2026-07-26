@@ -206,7 +206,7 @@ class ExtractorNode:
                         curr_params = {
                             "apiKey": curr_key,
                             "language": "en",
-                            "keywords": search_query if search_query else "geopolitics OR semiconductor OR sanctions OR military"
+                            "keywords": search_query if search_query else "geopolitics OR semiconductor OR sanctions OR military OR disaster OR terrorist attack OR blockade OR crisis"
                         }
                         curr_res = self.session.get(curr_url, params=curr_params, timeout=12)
                         if curr_res.status_code == 200:
@@ -239,7 +239,7 @@ class ExtractorNode:
                     if gn_key:
                         gn_url = "https://gnews.io/api/v4/search"
                         gn_params = {
-                            "q": search_query if search_query else "geopolitics OR semiconductor OR sanctions",
+                            "q": search_query if search_query else "geopolitics OR semiconductor OR sanctions OR military OR disaster OR terrorist attack OR blockade OR crisis",
                             "lang": "en",
                             "max": 10,
                             "apikey": gn_key
@@ -277,7 +277,7 @@ class ExtractorNode:
                         guard_url = "https://content.guardianapis.com/search"
                         guard_params = {
                             "api-key": guard_key,
-                            "q": search_query if search_query else "geopolitics OR defense OR technology",
+                            "q": search_query if search_query else "geopolitics OR defense OR technology OR military OR disaster OR terrorist attack OR blockade OR crisis",
                             "page-size": 10,
                             "show-fields": "headline,trailText,byline"
                         }
@@ -487,7 +487,7 @@ class ExtractorNode:
                 try:
                     gdelt_url = "https://api.gdeltproject.org/api/v2/doc/doc"
                     gdelt_params = {
-                        "query": "(geopolitics OR military OR conflict OR war OR accident OR closure OR attack OR disaster)",
+                        "query": "(geopolitics OR military OR conflict OR war OR accident OR closure OR attack OR disaster OR terrorism OR blockade OR strike OR incursion)",
                         "mode": "artlist",
                         "maxrecords": "15",
                         "format": "json"
