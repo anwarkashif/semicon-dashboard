@@ -21,16 +21,18 @@ def get_brief_mappings(directory, archive_category="Weekly Archive"):
     mapping = {}
     ordered_keys = []
     
+    # 🛑 FIX: Added the temporary flush brief and unfinished shift brief to the blacklist
     exclude_files = [
         'live_alert.json', 'flash_alert.json', 'psyopoly_alerts.json', 
-        'sitrep_history.json', 'geopolitical_memory.json'
+        'sitrep_history.json', 'geopolitical_memory.json',
+        'flush_brief_24h.json', 'shift_brief.json'
     ]
     
     for f in files:
         filename = os.path.basename(f)
         
-        # 🛑 THE FIX: Actively block the "bug briefs" (brief_weekly_tactical_) from cluttering the dropdown
-        if filename in exclude_files or filename.startswith('tactical_events') or filename.startswith('brief_weekly_tactical'):
+        # 🛑 THE FIX: Actively block the "bug briefs", temporary files, and unfinished features from cluttering the dropdown
+        if filename in exclude_files or filename.startswith('tactical_events') or filename.startswith('brief_weekly_tactical') or 'flush_brief' in filename or 'shift_brief' in filename:
             continue
             
         try:
