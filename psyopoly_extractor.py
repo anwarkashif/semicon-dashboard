@@ -115,7 +115,7 @@ def merge_and_sync(new_events):
             existing_standalone_events.insert(0, event)
             standalone_signatures.add(signature)
 
-    # Cap standalone file size to a generous historical limit (e.g., 4500) to preserve history
+    # Cap standalone file size to a generous historical limit (e.g., 9000) to preserve history
     existing_standalone_events = existing_standalone_events[:4500]
 
     with open(STANDALONE_PSYOPOLY_PATH, 'w', encoding='utf-8') as f:
