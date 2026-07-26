@@ -10,7 +10,8 @@ def render_trend_timelines():
     st.title("Macro Trends & Timelines")
     st.markdown("Tracking the volume of Geopolitical Actions and Supply Chain Risks across historical briefs.")
     
-    archive_mapping, _ = get_brief_mappings('data', archive_category="Weekly Archive")
+    # 🛑 FIX: Point to the 8.8 TB storage mount root
+    archive_mapping, _ = get_brief_mappings('/data', archive_category="Weekly Archive")
     if archive_mapping:
         sorted_brief_paths = list(archive_mapping.values())
         sorted_brief_paths.reverse() 
@@ -169,7 +170,8 @@ def render_daily_archives():
     st.title("Daily Archive")
     st.caption("Access historical Executive Flash Briefs, Today's Snippets, and West Asia Intelligence.")
     
-    archive_mapping, ordered_keys = get_brief_mappings('data', archive_category="Daily Archive")
+    # 🛑 FIX: Point to the 8.8 TB storage mount root
+    archive_mapping, ordered_keys = get_brief_mappings('/data', archive_category="Daily Archive")
     
     if archive_mapping and ordered_keys:
         selected_brief = st.selectbox("Select Daily Brief:", ordered_keys)
@@ -186,7 +188,8 @@ def render_weekly_archives():
     st.title("Weekly Archive")
     st.caption("Access historical Weekly Intelligence Briefs and Weekly Tactical Briefs.")
     
-    archive_mapping, ordered_keys = get_brief_mappings('data', archive_category="Weekly Archive")
+    # 🛑 FIX: Point to the 8.8 TB storage mount root
+    archive_mapping, ordered_keys = get_brief_mappings('/data', archive_category="Weekly Archive")
     
     if archive_mapping and ordered_keys:
         selected_brief = st.selectbox("Select Weekly Brief:", ordered_keys)
@@ -255,7 +258,8 @@ def render_monthly_archives():
     st.title("Monthly Archive")
     st.caption("Access historical Monthly SemicoN Reports.")
     
-    archive_mapping, ordered_keys = get_brief_mappings('data', archive_category="Monthly Archive")
+    # 🛑 FIX: Point to the 8.8 TB storage mount root
+    archive_mapping, ordered_keys = get_brief_mappings('/data', archive_category="Monthly Archive")
     
     if archive_mapping and ordered_keys:
         selected_brief = st.selectbox("Select Monthly Report:", ordered_keys)
@@ -282,17 +286,19 @@ def render_clean_archives():
     </style>
     """, unsafe_allow_html=True)
     
-    archive_mapping, ordered_keys = get_brief_mappings('data', "All")
+    # 🛑 FIX: Point to the 8.8 TB storage mount root
+    archive_mapping, ordered_keys = get_brief_mappings('/data', "All")
     
     if archive_mapping and ordered_keys:
         archive_to_clean = st.selectbox("Select Brief to Clean:", ordered_keys)
         if st.button("🗑️ Move to Trash", type="primary"):
             old_path = archive_mapping[archive_to_clean]
             filename = os.path.basename(old_path)
-            new_path = os.path.join('trash', filename)
+            # 🛑 FIX: Ensure trash is also handled on the absolute mount
+            new_path = os.path.join('/data/trash', filename)
+            os.makedirs('/data/trash', exist_ok=True)
             os.rename(old_path, new_path)
             
-            # 🛑 THE FIX: Force Streamlit to clear its RAM cache so ghost files vanish instantly
             st.cache_data.clear() 
             
             st.success(f"Successfully moved to Trash: {archive_to_clean}")
@@ -313,11 +319,13 @@ def render_trash():
     </style>
     """, unsafe_allow_html=True)
     
-    trash_mapping, trash_keys = get_brief_mappings('trash', "All")
+    # 🛑 FIX: Point to the 8.8 TB storage mount root
+    trash_mapping, trash_keys = get_brief_mappings('/data/trash', "All")
     
     if not trash_mapping:
         import glob
-        files = glob.glob('trash/*.json')
+        # 🛑 FIX: Point to the 8.8 TB storage mount root
+        files = glob.glob('/data/trash/*.json')
         trash_mapping = {os.path.basename(f): f for f in files}
         trash_keys = list(trash_mapping.keys())
     
@@ -329,7 +337,8 @@ def render_trash():
         col_rev, col_del = st.columns(2)
         with col_rev:
             if st.button("♻️ Revert to Archives"):
-                new_path = os.path.join('data', filename)
+                # 🛑 FIX: Point to the 8.8 TB storage mount root
+                new_path = os.path.join('/data', filename)
                 os.rename(old_path, new_path)
                 st.cache_data.clear() # Clear cache on revert
                 st.success(f"Completely restored: {archive_to_manage}")

@@ -386,7 +386,10 @@ if __name__ == "__main__":
             brief_input = unique_master[:30]
         
         flush_brief_data = generate_flush_to_brief(brief_input)
-        json.dump(flush_brief_data, archive_filename = f"data/flash_archive_{date_str}.json", indent=4)
+        
+        # 🛑 FIX: Corrected fatal Python syntax error. Restored the save path to 'flush_brief_24h.json' 
+        # so it doesn't crash the script before the daily archive can be generated.
+        json.dump(flush_brief_data, open('data/executive_home/flush_brief_24h.json', 'w'), indent=4)
         
         date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         
