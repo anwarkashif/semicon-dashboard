@@ -332,7 +332,24 @@ if __name__ == "__main__":
         json.dump(unique[:40], open(output_file_tactical, 'w'), indent=4)
 
         print("⏳ Pooling data before Shift Brief generation...")
-        json.dump(generate_shift_brief(unique[:40]), open('data/today_snippet/shift_brief.json', 'w'), indent=4)
+        
+        # 🛑 FIX: Time-Aware Morning/Evening Router (IST UTC+5:30)
+        from datetime import timezone, timedelta
+        ist_now = datetime.now(timezone.utc) + timedelta(hours=5, minutes=30)
+        current_hour = ist_now.hour
+        date_str = ist_now.strftime("%Y-%m-%d")
+        
+        # If run between midnight and 12:00 PM IST, it's Morning. Otherwise, Evening.
+        session_tag = "morning" if current_hour < 12 else "evening"
+        
+        shift_data = generate_shift_brief(unique[:40])
+        shift_data['session'] = session_tag.capitalize()
+        shift_data['date'] = f"{date_str} ({session_tag.capitalize()})"
+        
+        # Save both a dynamic permanent archive file and a static pointer for the live page view
+        archive_filename = f'data/today_snippet/shift_brief_{session_tag}_{date_str}.json'
+        json.dump(shift_data, open(archive_filename, 'w', encoding='utf-8'), indent=4)
+        json.dump(shift_data, open('data/today_snippet/shift_brief.json', 'w', encoding='utf-8'), indent=4)
         
         # HF_TOKEN = os.environ.get("HF_TOKEN"); REPO_ID = os.environ.get("SPACE_ID") or "anwarkashif/semicon-dashboard"
         # if HF_TOKEN:

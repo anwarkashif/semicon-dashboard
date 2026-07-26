@@ -36,13 +36,16 @@ def render_daily_snippet(df_actions, client=None, model_name=None, dashboard_dat
     <hr style='border: 1px solid #333;'>
     """, unsafe_allow_html=True)
 
-    # --- NEW: LOAD THE DYNAMIC AI SHIFT BRIEF ---
-    brief_data_path = 'data/today_snippet/shift_brief.json'
+    # --- NEW: LOAD THE DYNAMIC AI SHIFT BRIEF FROM ABSOLUTE STORAGE MOUNT ---
+    brief_data_path = '/data/today_snippet/shift_brief.json'
+    if not os.path.exists(brief_data_path):
+        brief_data_path = 'data/today_snippet/shift_brief.json'
+        
     intel_data = get_fallback_snippet() # Defaults to fallback if no live data exists yet
     
     if os.path.exists(brief_data_path):
         try:
-            with open(brief_data_path, 'r') as f:
+            with open(brief_data_path, 'r', encoding='utf-8') as f:
                 intel_data = json.load(f)
         except Exception:
             pass

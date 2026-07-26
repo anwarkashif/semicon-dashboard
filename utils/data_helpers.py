@@ -21,7 +21,7 @@ def get_brief_mappings(directory, archive_category="Weekly Archive"):
     mapping = {}
     ordered_keys = []
     
-    # 🛑 FIX: Added the temporary flush brief and unfinished shift brief to the blacklist
+    # 🛑 FIX: Allow shift briefs to pass through for archiving, blacklist only live template pointers
     exclude_files = [
         'live_alert.json', 'flash_alert.json', 'psyopoly_alerts.json', 
         'sitrep_history.json', 'geopolitical_memory.json',
@@ -31,8 +31,8 @@ def get_brief_mappings(directory, archive_category="Weekly Archive"):
     for f in files:
         filename = os.path.basename(f)
         
-        # 🛑 THE FIX: Actively block the "bug briefs", temporary files, and unfinished features from cluttering the dropdown
-        if filename in exclude_files or filename.startswith('tactical_events') or filename.startswith('brief_weekly_tactical') or 'flush_brief' in filename or 'shift_brief' in filename:
+        # 🛑 THE FIX: Block only technical raw events and temporary pointers, keeping morning/evening shifts
+        if filename in exclude_files or filename.startswith('tactical_events') or filename.startswith('brief_weekly_tactical') or 'flush_brief' in filename:
             continue
             
         try:
@@ -78,7 +78,12 @@ def get_brief_mappings(directory, archive_category="Weekly Archive"):
                     display_name = f"Executive Flash Brief (Live Temporary) - {b_date}"
                     belongs_to = "Daily Archive"
                 elif 'shift_brief' in filename:
-                    display_name = f"Today's Shift Snippet - {b_date}"
+                    if 'morning' in filename:
+                        display_name = f"Today's Snippet: Morning - {b_date}"
+                    elif 'evening' in filename:
+                        display_name = f"Today's Snippet: Evening - {b_date}"
+                    else:
+                        display_name = f"Today's Snippet - {b_date}"
                     belongs_to = "Daily Archive"
                 elif 'monthly_report' in filename or 'monthly' in filename:
                     display_name = f"Monthly SemicoN Report - {b_date}"
