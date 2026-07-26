@@ -9,9 +9,12 @@ import datetime
 def get_brief_mappings(directory, archive_category="Weekly Archive"):
     files = glob.glob(f'{directory}/*.json')
     
-    # 🛑 FIX: Explicitly command the scanner to also pull JSONs from the west_asia subfolder
-    if os.path.exists(f'{directory}/west_asia'):
-        files.extend(glob.glob(f'{directory}/west_asia/*.json'))
+    # 🛑 FIX: Explicitly command the scanner to pull JSONs from ALL operational sub-folders
+    # This ensures the UI can finally "see" the Weekly Tactical Brief and Daily Archives
+    sub_folders = ['west_asia', 'executive_home', 'today_snippet', 'friday_snippet']
+    for folder in sub_folders:
+        if os.path.exists(f'{directory}/{folder}'):
+            files.extend(glob.glob(f'{directory}/{folder}/*.json'))
         
     files.sort(key=os.path.getmtime, reverse=True)
     
