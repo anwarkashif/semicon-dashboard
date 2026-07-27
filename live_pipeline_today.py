@@ -346,6 +346,16 @@ if __name__ == "__main__":
         shift_data['session'] = session_tag.capitalize()
         shift_data['date'] = f"{date_str} ({session_tag.capitalize()})"
         
+        # 🛑 FIX: Extract the publisher URLs and inject them into the JSON payload 
+        # so the Daily Archive can render the Sources section natively.
+        daily_sources = []
+        for event in unique[:40]:
+            if "Source" in event and "Title" in event:
+                daily_sources.append({"title": event["Title"], "url": event["Source"]})
+                
+        shift_data['sources'] = daily_sources
+        shift_data['recent_actions'] = unique[:40]
+        
         # Save both a dynamic permanent archive file and a static pointer for the live page view
         archive_filename = f'data/today_snippet/shift_brief_{session_tag}_{date_str}.json'
         json.dump(shift_data, open(archive_filename, 'w', encoding='utf-8'), indent=4)
