@@ -180,6 +180,20 @@ def render_daily_archives():
         with open(archive_mapping[selected_brief], 'r', encoding='utf-8') as f:
             archived_data = json.load(f)
             
+        # 🛑 FIX: Intercept Today's Snippet and auto-stitch the JSON keys into a raw text block so it isn't blank
+        if "Today's Snippet" in selected_brief or "Shift Snippet" in selected_brief:
+            parts = []
+            if archived_data.get('bluf'): parts.append(f"**🎯 BLUF:**\n{archived_data.get('bluf')}")
+            if archived_data.get('executive_summary'): parts.append(f"**📋 EXECUTIVE SUMMARY:**\n{archived_data.get('executive_summary')}")
+            
+            esc = archived_data.get('escalation_indicators', '')
+            if isinstance(esc, list): esc = "\n".join([f"- {i}" for i in esc])
+            if esc: parts.append(f"**🚩 ESCALATION INDICATORS:**\n{esc}")
+            
+            if archived_data.get('strategic_outlook'): parts.append(f"**🔭 STRATEGIC OUTLOOK:**\n{archived_data.get('strategic_outlook')}")
+            
+            archived_data['brief_raw'] = "\n\n---\n\n".join(parts)
+            
         render_archived_flash_brief(archived_data, brief_title=selected_brief)
     else:
         st.warning("No Daily Archives found.")
