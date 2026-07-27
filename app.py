@@ -303,9 +303,10 @@ else:
         files_to_sync = [
             'tactical_events_24h.json', 'rss_accumulator.txt', 'live_alert.json', 'sitrep_history.json',
             'weekly_tactical_live.json', 'executive_home/tactical_events_24h.json', 'executive_home/flush_brief_24h.json',
-            'today_snippet/tactical_events_24h.json', 'today_snippet/shift_brief.json', 'friday_snippet/tactical_events_24h.json',
+            'today_snippet/tactical_events_24h.json', 'friday_snippet/tactical_events_24h.json',
             'flash_alert.json', 'psyopoly_alerts.json' 
         ]
+        # 🛑 FIX: Removed the deprecated static 'today_snippet/shift_brief.json' from the GitHub Sync Array.
         
         for filename in files_to_sync:
             local_path = f"/data/{filename}" # 🛑 FIXED: Absolute Bucket Path

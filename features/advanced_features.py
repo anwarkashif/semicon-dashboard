@@ -110,13 +110,19 @@ def render_rag_interrogation(api_keys, model_name, text_summary="", text_section
             # ==========================================
             # 2. INGEST LIVE AUTONOMOUS JSON DATA
             # ==========================================
+            import glob
+
             live_files = [
-                ('data/executive_home/tactical_events_24h.json', 'EXECUTIVE HOME TACTICAL'),
-                ('data/executive_home/flush_brief_24h.json', 'EXECUTIVE HOME BRIEF'),
-                ('data/today_snippet/tactical_events_24h.json', 'TODAY SNIPPET TACTICAL'),
-                ('data/today_snippet/shift_brief.json', 'TODAY SNIPPET BRIEF'),
-                ('data/weekly_tactical/tactical_events_24h.json', 'WEEKLY TACTICAL EVENTS')
+                ('/data/executive_home/tactical_events_24h.json', 'EXECUTIVE HOME TACTICAL'),
+                ('/data/executive_home/flush_brief_24h.json', 'EXECUTIVE HOME BRIEF'),
+                ('/data/today_snippet/tactical_events_24h.json', 'TODAY SNIPPET TACTICAL'),
+                ('/data/weekly_tactical/tactical_events_24h.json', 'WEEKLY TACTICAL EVENTS')
             ]
+            
+            # 🛑 FIX: Dynamically grab the absolute latest Morning or Evening Snippet for RAG Context
+            latest_snippet = sorted(glob.glob('/data/today_snippet/shift_brief_*.json'))
+            if latest_snippet:
+                live_files.append((latest_snippet[-1], 'TODAY SNIPPET BRIEF'))
             context_data += "\n\n=== LIVE AUTONOMOUS JSON FEEDS ===\n"
             for file_path, label in live_files:
                 if os.path.exists(file_path):
