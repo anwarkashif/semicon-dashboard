@@ -754,4 +754,4 @@ else:
         
         # 🛑 HIK VOICE ASSISTANT INITIATION
         from features.hik_assistant import render_hik_voice_assistant
-        render_hik_voice_assistant(client)
+        render_hik_voice_assistant()
