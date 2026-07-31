@@ -5,7 +5,7 @@ from google import genai
 def render_hik_voice_assistant():
     """
     Core engine for the 'Hey Hik' voice assistant.
-    Features: Floating AI Orb UI, native browser mic bypass, and seamless Streamlit JS bridging.
+    Features: Floating AI Orb UI, native browser mic bypass, and Safari TTS Unlocking.
     """
     
     # 1. HARD-ROUTE THE SPECIFIC API KEY
@@ -29,7 +29,8 @@ def render_hik_voice_assistant():
     4. If the user asks a complex research question, give a brief 1-2 sentence overview, and then explicitly guide them by saying: "For a deeper analysis of this topic, I recommend using the Intelligence Interrogation RAG or the Agentic AI module located in your left sidebar."
     """
 
-    # 3. BULLETPROOF CSS HIDING, GLOW ANIMATION, AND FLOATING AI ORB
+    # 3. HTML & CSS FOR THE FLOATING AI ORB AND GLOW
+    # (Rendered via markdown to ensure global styling applies to the main app body)
     st.markdown("""
     <style>
         /* 🛑 STRICT HIDE: Completely obliterate the bridge input box */
@@ -64,18 +65,32 @@ def render_hik_voice_assistant():
         .hik-fab.listening { animation: fab-pulse 1.5s infinite; background: linear-gradient(135deg, #d44c5c 0%, #FF272A 100%); }
         @keyframes fab-pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 39, 42, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(255, 39, 42, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 39, 42, 0); } }
     </style>
+    <div id="hik-fab-btn" class="hik-fab" title="Initialize Hik Voice Engine">🎙️</div>
     """, unsafe_allow_html=True)
 
-    # 4. NATIVE JAVASCRIPT & DOM INJECTION
-    # We inject the physical button and the JS listener directly into the DOM to bypass iframe security blocks
-    st.markdown("""
-        <div id="hik-fab-btn" class="hik-fab" title="Initialize Hik Voice Engine">🎙️</div>
-        
-        <script>
-            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-            const fabBtn = document.getElementById('hik-fab-btn');
-            
-            if (SpeechRecognition && fabBtn) {
+    # 4. EXECUTABLE JAVASCRIPT LOGIC
+    # (Must be injected using st.html() to bypass React script-stripping)
+    st.html("""
+    <script>
+        (function() {
+            // Use a polling loop to ensure the button exists in the DOM before attaching the click event
+            function bindHikLogic() {
+                const fabBtn = document.getElementById('hik-fab-btn');
+                if (!fabBtn) {
+                    setTimeout(bindHikLogic, 500);
+                    return;
+                }
+                
+                // Prevent duplicate listeners on re-renders
+                if (fabBtn.dataset.bound === 'true') return;
+                fabBtn.dataset.bound = 'true';
+                
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                if (!SpeechRecognition) {
+                    fabBtn.addEventListener('click', () => alert("Voice assistant is not supported in this browser. Please use Chrome, Edge, or Safari."));
+                    return;
+                }
+                
                 const recognition = new SpeechRecognition();
                 recognition.continuous = true;
                 recognition.interimResults = false;
@@ -83,10 +98,11 @@ def render_hik_voice_assistant():
                 
                 let isListening = false;
                 let isAwake = false;
-                const beep = new Audio('data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU'); 
                 
-                // Toggle Button Logic (Forces Native Browser Mic Permission)
                 fabBtn.addEventListener('click', () => {
+                    // 🛑 SAFARI HACK: Speak an empty string instantly on click to permanently unlock TTS context for the session
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance(''));
+                    
                     if (!isListening) {
                         try { 
                             recognition.start(); 
@@ -101,24 +117,22 @@ def render_hik_voice_assistant():
                     }
                 });
                 
-                // Auto-Restart Loop to maintain background listening
                 recognition.onend = function() {
                     if (isListening) {
                         setTimeout(() => { try { recognition.start(); } catch(e){} }, 1000);
                     }
                 };
 
-                // Streamlit Payload Sender
                 function sendToStreamlit(text) {
                     document.body.classList.remove("hik-awake");
-                    const targetInput = window.parent.document.querySelector('input[aria-label="hik_bridge_input"]') || document.querySelector('input[aria-label="hik_bridge_input"]');
+                    const targetInput = document.querySelector('input[aria-label="hik_bridge_input"]');
                     if (targetInput) {
                         const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
                         nativeInputValueSetter.call(targetInput, text);
                         targetInput.dispatchEvent(new Event('input', { bubbles: true }));
                         setTimeout(() => {
                             targetInput.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', keyCode: 13, which: 13, bubbles: true }));
-                        }, 150);
+                        }, 200);
                     }
                 }
 
@@ -126,43 +140,38 @@ def render_hik_voice_assistant():
                     const last = event.results.length - 1;
                     const transcript = event.results[last][0].transcript.trim().toLowerCase();
                     
-                    // Regex to catch wake words
                     const wakeRegex = /(hey hik|hey hick|hey heek|hey hake)/i;
                     const hasWakeWord = wakeRegex.test(transcript);
                     
                     if (hasWakeWord) {
-                        // Extract query if they asked it in one fluid sentence
                         const query = transcript.replace(wakeRegex, '').trim();
-                        
                         if (query.length > 3) {
-                            // User said: "Hey Hik, what is the latest news"
                             sendToStreamlit(query);
                             isAwake = false;
                         } else {
-                            // User just said: "Hey Hik"
                             isAwake = true;
                             document.body.classList.add("hik-awake");
-                            try { beep.play(); } catch(e) {}
                         }
                     } 
                     else if (isAwake && transcript.length > 2) {
-                        // User waited for the glow, then asked their question
                         sendToStreamlit(transcript);
                         isAwake = false;
                     }
                 };
-            } else if (fabBtn) {
-                fabBtn.addEventListener('click', () => alert("Your browser does not support the Web Speech API."));
             }
-        </script>
-    """, unsafe_allow_html=True)
+            
+            // Start the DOM polling loop immediately
+            setTimeout(bindHikLogic, 500);
+        })();
+    </script>
+    """)
 
     # 5. INVISIBLE PYTHON RECEIVER
     vocal_query = st.text_input("hik_bridge_input", key="hik_vocal_query", label_visibility="hidden")
 
     if vocal_query:
         if not client:
-            st.html("""<script>document.body.classList.remove("hik-awake"); window.speechSynthesis.speak(new SpeechSynthesisUtterance("I am offline. No Gemini API Key was detected in the environment variables."));</script>""")
+            st.html("""<script>document.body.classList.remove("hik-awake"); window.speechSynthesis.speak(new SpeechSynthesisUtterance("I am offline. No Gemini API Key was detected."));</script>""")
             st.session_state['hik_vocal_query'] = ""
             return
             
@@ -173,6 +182,7 @@ def render_hik_voice_assistant():
             )
             answer = response.text.replace('"', "'").replace('\n', ' ')
             
+            # Send TTS command back to browser
             st.html(f"""
             <script>
                 document.body.classList.remove("hik-awake");
