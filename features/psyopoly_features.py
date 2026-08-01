@@ -293,8 +293,14 @@ def render_psyopoly_viewer(df_actions):
         unsafe_allow_html=True
     )
     
-    # Isolate Psyopoly variables
-    df_psy = df_actions[df_actions['Actor'] == 'Psyopoly/West Asia'].copy()
+    # 🛑 THE FIX: Isolate Psyopoly variables directly from the persistent standalone archive
+    import os
+    archive_path = '/data/psyopoly_alerts.json' if os.path.exists('/data/psyopoly_alerts.json') else 'data/psyopoly_alerts.json'
+    try:
+        df_psy = pd.read_json(archive_path)
+    except Exception:
+        # Fallback to the live 24h pool if the archive file hasn't downloaded yet
+        df_psy = df_actions[df_actions['Actor'] == 'Psyopoly/West Asia'].copy()
     
     if not df_psy.empty:
         # Pre-process time matrix safely
