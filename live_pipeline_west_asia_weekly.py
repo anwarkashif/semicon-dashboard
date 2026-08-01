@@ -38,7 +38,7 @@ def generate_with_rotation(prompt, temperature=0.2):
         client = genai.Client(api_key=current_key)
         try:
             response = client.models.generate_content(
-                model='gemini-2.5-flash', 
+                model='gemini-2.0-flash', # 🛑 THE FIX: Changed from gemini-2.5-flash
                 contents=prompt,
                 config={
                     "response_mime_type": "application/json",
