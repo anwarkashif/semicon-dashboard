@@ -751,7 +751,3 @@ else:
             text_section_2=text_section_2, text_section_3=text_section_3, text_section_4=text_section_4, 
             text_military=text_military, text_india=text_india, text_wa=text_wa, text_ews=text_ews
         )
-        
-        # 🛑 HIK VOICE ASSISTANT INITIATION
-        from features.hik_assistant import render_hik_voice_assistant
-        render_hik_voice_assistant()
