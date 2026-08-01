@@ -25,7 +25,7 @@ headers = {
 params = {
     "select": "id,headline,posted_at,url",
     "order": "posted_at.desc",
-    "limit": "1000" # 🛑 TEMPORARY CHANGE: Pull the last 1,000 records
+    "limit": "40" # 🛑 REVERTED: Back to standard daily operational load
 }
 
 def valid_url(url):
