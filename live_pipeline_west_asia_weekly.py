@@ -137,8 +137,8 @@ def fetch_weekly_psyopoly_pool():
                                 if downloaded:
                                     text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
                                     if text:
-                                        # 🛑 FIX 1: Reduced from 1200 to 900 characters to prevent Token Quota Exhaustion
-                                        deep_context = text[:900].replace('\n', ' ').strip() + "..."
+                                        # 🛑 FIX 1: Reduced from 1200 to 500 characters to prevent Token Quota Exhaustion
+                                        deep_context = text[:500].replace('\n', ' ').strip() + "..."
                             except Exception as scrape_err:
                                 print(f"⚠️ Trafilatura failed on {url}: {scrape_err}", flush=True)
                         
@@ -153,8 +153,8 @@ def fetch_weekly_psyopoly_pool():
                 except Exception as loop_err:
                     print(f"⚠️ Date/Parse error on item: {loop_err}", flush=True)
                 
-            # 🛑 FIX 2: Cap the total payload to the 100 most recent events to survive Google's free tier limits
-            capped_events = filtered_events[:100]
+            # 🛑 FIX 2: Cap the total payload to the 80 most recent events to survive Google's free tier limits
+            capped_events = filtered_events[:80]
             print(f"✅ Secured {len(filtered_events)} recent events. Capping at {len(capped_events)} to protect AI token limits.", flush=True)
             return capped_events
         else:
