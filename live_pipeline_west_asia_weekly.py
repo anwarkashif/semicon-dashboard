@@ -105,10 +105,10 @@ def fetch_weekly_psyopoly_pool():
     params = {
         "select": "id,headline,posted_at,url",
         "order": "posted_at.desc",
-        "limit": "250" # Generous pull to ensure we capture the entire 7-day window
+        "limit": "250" 
     }
     
-    print("🔍 Fetching live 7-day intelligence directly from Supabase...")
+    print("🔍 Fetching live 7-day intelligence directly from Supabase...", flush=True)
     filtered_events = []
     
     try:
@@ -123,13 +123,13 @@ def fetch_weekly_psyopoly_pool():
                     posted_str = item.get("posted_at", "")
                     if not posted_str: continue
                     
-                    # Parse timestamp and compare against the 7-day window
-                    e_date = datetime.strptime(posted_str.split("T")[0], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                    clean_date = str(posted_str).strip()[:10]
+                    e_date = datetime.strptime(clean_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                    
                     if e_date >= seven_days_ago:
                         headline = item.get("headline", "").strip()
                         url = item.get("url", "")
                         
-                        # 🛑 THE REAL FIX: Re-scrape the deep text on the fly so the AI doesn't lose context!
                         deep_context = headline
                         if url and "psyopoly.pro" not in url:
                             try:
@@ -137,23 +137,30 @@ def fetch_weekly_psyopoly_pool():
                                 if downloaded:
                                     text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
                                     if text:
-                                        deep_context = text[:1200].replace('\n', ' ').strip() + "..."
-                            except Exception: pass
+                                        # 🛑 FIX 1: Reduced from 1200 to 900 characters to prevent Token Quota Exhaustion
+                                        deep_context = text[:900].replace('\n', ' ').strip() + "..."
+                            except Exception as scrape_err:
+                                print(f"⚠️ Trafilatura failed on {url}: {scrape_err}", flush=True)
                         
                         filtered_events.append({
-                            "Date": posted_str.split("T")[0],
+                            "Date": clean_date,
                             "Actor": "Psyopoly/West Asia",
                             "Location": "Middle East",
                             "Headline": headline,
-                            "Summary": deep_context, # Now it contains the rich, deep-scraped text!
+                            "Summary": deep_context, 
                             "Source": url
                         })
-                except Exception: pass
+                except Exception as loop_err:
+                    print(f"⚠️ Date/Parse error on item: {loop_err}", flush=True)
                 
-            print(f"✅ Secured {len(filtered_events)} recent events (with deep intelligence context) directly from database.")
-            return filtered_events
+            # 🛑 FIX 2: Cap the total payload to the 100 most recent events to survive Google's free tier limits
+            capped_events = filtered_events[:100]
+            print(f"✅ Secured {len(filtered_events)} recent events. Capping at {len(capped_events)} to protect AI token limits.", flush=True)
+            return capped_events
+        else:
+            print(f"❌ API Request Failed: {response.status_code} - {response.text}", flush=True)
     except Exception as e:
-        print(f"❌ Supabase fetch failed: {e}")
+        print(f"❌ Supabase fetch failed: {e}", flush=True)
         
     return filtered_events
 
