@@ -88,31 +88,74 @@ def get_sunday_to_sunday_range():
         return f"{previous_sunday.strftime('%B %d')} - {recent_sunday.strftime('%B %d')}, {recent_sunday.year}"
 
 def fetch_weekly_psyopoly_pool():
-    standalone_path = 'data/psyopoly_alerts.json'
-    if not os.path.exists(standalone_path): return []
+    import requests
+    import trafilatura
+    
+    SUPABASE_URL = "https://lojirolzkshoqgccrwyh.supabase.co/rest/v1/breaking_news"
+    ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxvamlyb2x6a3Nob3FnY2Nyd3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODQyNjQsImV4cCI6MjA4OTY2MDI2NH0.DzdBr_d69SSlRxtnxH8DRqc0hLNQfb4wL5t1Qe96UMo"
+    
+    headers = {
+        "apikey": ANON_KEY,
+        "authorization": f"Bearer {ANON_KEY}",
+        "accept": "application/json",
+        "origin": "https://www.psyopoly.pro",
+        "referer": "https://www.psyopoly.pro/"
+    }
+    
+    params = {
+        "select": "id,headline,posted_at,url",
+        "order": "posted_at.desc",
+        "limit": "250" # Generous pull to ensure we capture the entire 7-day window
+    }
+    
+    print("🔍 Fetching live 7-day intelligence directly from Supabase...")
+    filtered_events = []
     
     try:
-        with open(standalone_path, 'r', encoding='utf-8') as f:
-            all_events = json.load(f)
+        response = requests.get(SUPABASE_URL, headers=headers, params=params, timeout=15)
+        if response.status_code == 200:
+            raw_data = response.json()
+            today = datetime.now(timezone.utc)
+            seven_days_ago = today - timedelta(days=7)
             
-        today = datetime.now(timezone.utc)
-        seven_days_ago = today - timedelta(days=7)
-        
-        # Filter for West Asia/Middle East and recent dates
-        filtered_events = []
-        for e in all_events:
-            try:
-                e_date = datetime.strptime(e.get('Date', ''), "%Y-%m-%d").replace(tzinfo=timezone.utc)
-                # Keep only West Asia/Middle East entries
-                if e_date >= seven_days_ago and ("Middle East" in e.get('Location', '') or "West Asia" in e.get('Actor', '')):
-                    filtered_events.append(e)
-            except: pass
-            
-        # Limit to 250 for depth
-        return filtered_events[:250]
+            for item in raw_data:
+                try:
+                    posted_str = item.get("posted_at", "")
+                    if not posted_str: continue
+                    
+                    # Parse timestamp and compare against the 7-day window
+                    e_date = datetime.strptime(posted_str.split("T")[0], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                    if e_date >= seven_days_ago:
+                        headline = item.get("headline", "").strip()
+                        url = item.get("url", "")
+                        
+                        # 🛑 THE REAL FIX: Re-scrape the deep text on the fly so the AI doesn't lose context!
+                        deep_context = headline
+                        if url and "psyopoly.pro" not in url:
+                            try:
+                                downloaded = trafilatura.fetch_url(url)
+                                if downloaded:
+                                    text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
+                                    if text:
+                                        deep_context = text[:1200].replace('\n', ' ').strip() + "..."
+                            except Exception: pass
+                        
+                        filtered_events.append({
+                            "Date": posted_str.split("T")[0],
+                            "Actor": "Psyopoly/West Asia",
+                            "Location": "Middle East",
+                            "Headline": headline,
+                            "Summary": deep_context, # Now it contains the rich, deep-scraped text!
+                            "Source": url
+                        })
+                except Exception: pass
+                
+            print(f"✅ Secured {len(filtered_events)} recent events (with deep intelligence context) directly from database.")
+            return filtered_events
     except Exception as e:
-        print(f"❌ Error loading Psyopoly pool: {e}")
-        return []
+        print(f"❌ Supabase fetch failed: {e}")
+        
+    return filtered_events
 
 def generate_west_asia_brief(events, date_range):
     print(f"🧠 Synthesizing {len(events)} events for Weekly West Asia Brief...")
