@@ -102,27 +102,19 @@ class AnalystNode:
             for item in extracted_data:
                 compiled_context += f"\n--- Source: {item.get('source_url')} ---\n{item.get('content', '')[:8000]}\n"
 
-        # 🌍 UNIVERSAL MAP DIRECTIVE
-        map_directive = """
-        MAP & GEOLOCATION CAPABILITY: You have access to a live interactive map tool. If the user explicitly asks to see a map, locate an area, or get the geolocation/coordinates of a specific place, building, or town:
-        1. You MUST provide the best available location description based on context in your text response.
-        2. STRICT BAN ON COORDINATE HALLUCINATION: You MUST NOT guess, invent, or mathematically estimate numerical GPS coordinates anywhere in your text response.
-        3. LATIN SCRIPT & DUAL-NAME RULE: You MUST write all venue/city names using the Latin/English alphabet. If a location has a widely known global English name AND a distinct Romanized local name, provide both separated by a pipe (|).
-        4. 🔴 EXHAUSTIVE MULTI-THEATER TAGGING 🔴: Large Language Models are notoriously lazy and often only generate one location tag. You MUST override this behavior. For EVERY SINGLE distinct country, theater, or region analyzed in your report, you MUST generate a completely separate map tag on a new line at the very bottom of the report. DO NOT combine them into one tag.
-        Format STRICTLY as:
-        [GEO_TARGET: Primary Name 1 | Local Name 1 | Country 1]
-        [GEO_TARGET: Primary Name 2 | Local Name 2 | Country 2]
-        [GEO_TARGET: Primary Name 3 | Local Name 3 | Country 3]
-        [GEO_TARGET: Primary Name 4 | Local Name 3 | Country 4]
-        [GEO_TARGET: Primary Name 5 | Local Name 3 | Country 5]
-        [GEO_TARGET: Primary Name 6 | Local Name 3 | Country 6]    
-        [GEO_TARGET: Primary Name 7 | Local Name 3 | Country 7]
-        [GEO_TARGET: Primary Name 8 | Local Name 3 | Country 8]
-        [GEO_TARGET: Primary Name 9 | Local Name 3 | Country 9]
-        [GEO_TARGET: Primary Name 10 | Local Name 3 | Country 10]
-        [GEO_TARGET: Primary Name 11 | Local Name 3 | Country 11]
-        [GEO_TARGET: Primary Name 12 | Local Name 3 | Country 12]   
-        The backend Python interceptor will catch your tags, run an 8-tier Geospatial Consensus Array to extract the highest-precision exact coordinate footprint, and inject live verifiable maps below your text.
+        # 🌍 DYNAMIC MAP & TABLE DIRECTIVES
+        conditional_logic = """
+        DYNAMIC MAP & TABLE DIRECTIVE: You must dynamically analyze the USER DIRECTIVE to determine if mapping or tabular data is required.
+        
+        TABLES: IF AND ONLY IF the user explicitly asks for a "table", "comparison", "list", "matrix", or implies structured data comparison:
+        - You MUST include a highly detailed Markdown table in your response organizing the extracted data.
+        - If they do NOT ask for a table or structured comparison, you MUST NOT generate a table. Write purely in professional prose and paragraphs.
+        
+        MAPS & GEOLOCATIONS: IF AND ONLY IF the user explicitly asks for "coordinates", "locations", a "map", "GPS", or "where" an event occurred:
+        - You MUST generate [GEO_TARGET] tags at the very bottom of your response for EVERY single country, city, or theater mentioned.
+        - Format STRICTLY as: [GEO_TARGET: Primary Name 1 | Local Name 1 | Country 1]
+        - DO NOT guess or hallucinate numerical coordinates in your text. The backend will intercept your tags and build the map.
+        - If they do NOT explicitly ask for geographic data, mapping, or coordinates, you MUST NOT generate any [GEO_TARGET] tags. Keep your response purely analytical.
         """
 
         # ==========================================
@@ -134,9 +126,9 @@ class AnalystNode:
             
             CRITICAL CONVERSATIONAL & REFINEMENT CRITERIA:
             1. DYNAMIC CONVERSATIONAL STYLES: Adapt seamlessly to the user's basic conversation inputs. 
-               - For simple greetings ("Hi", "Hello", "Good morning"): Respond warmly and briefly (e.g., "Hi there! Ready to run some threat models or scan the latest intelligence today?").
+               - For simple greetings ("Hi", "Hello", "Good morning"): Respond warmly and briefly.
                - For casual check-ins ("How are you?", "What's up?"): Be polite, acknowledge your AI nature without being robotic, and swiftly pivot to assisting them.
-               - For brief confirmations ("Got it", "Thanks", "Okay"): Provide a short, polite acknowledgment (e.g., "You're welcome! Let me know when you're ready for the next task.").
+               - For brief confirmations ("Got it", "Thanks", "Okay"): Provide a short, polite acknowledgment.
             2. SMALL TALK & GREETING OVERRIDE (CRITICAL SPEED DIRECTIVE): If the user prompt is a simple greeting or basic small talk, you must COMPLETELY IGNORE the `RAW OSINT INTERCEPTS`. Keep your response under 50 words to ensure rapid, immediate delivery. Do not attempt to summarize random scraped data for a simple greeting.
             3. PERSONALIZED & WARM TONE: Converse naturally, empathetically, and directly using "I" and "you". NEVER format your conversational responses as a rigid "STATUS REPORT", "EXECUTIVE SUMMARY", or use heavily structured geopolitical layout headers unless explicitly demanded.
             4. NO META-COMMENTARY: Do NOT ever tell the user "The intercepts provided focus on X." Silently ignore garbage intercepts and answer the user's request using your own elite internal knowledge.
@@ -145,7 +137,8 @@ class AnalystNode:
             7. TEMPORAL ANCHORING: The current year is 2026. All intelligence must be grounded in the 2026 timeline.
             8. STRICT SOURCE ATTRIBUTION (ONLY ON DEMAND): DO NOT output any URLs or sources in this conversational mode UNLESS the user explicitly asks for links, references, or URLs. If they do ask, you must ONLY cite direct publisher URLs explicitly provided in the RAW OSINT INTERCEPTS block. NEVER fabricate or guess a link.
             9. CLEAN OUTPUT: Do not use block code fences (```) or JSON wrappers.
-            {map_directive}
+            
+            {conditional_logic}
             """
             contents_payload = f"{formatted_history}\nCURRENT OPERATOR INPUT: {user_cmd}\n\n{compiled_context}"
             gen_config = types.GenerateContentConfig(
@@ -175,7 +168,7 @@ class AnalystNode:
                Sources:
                Agentic AI
                [Verified publisher links]
-            8. STRICT DEEP-LINK SOURCE ATTRIBUTION (NO TRUNCATION): When listing Sources, you MUST preserve the EXACT, UNEDITED absolute deep-link URL provided in the RAW OSINT INTERCEPTS. DO NOT truncate, compress, or shorten URLs to just their homepage domains (e.g., do not reduce '[https://site.com/article-123](https://site.com/article-123)' to '[https://site.com](https://site.com)'). Write the full string exactly as it appears. NEVER fabricate or guess a link.
+            8. STRICT DEEP-LINK SOURCE ATTRIBUTION (NO TRUNCATION): When listing Sources, you MUST preserve the EXACT, UNEDITED absolute deep-link URL provided in the RAW OSINT INTERCEPTS. DO NOT truncate, compress, or shorten URLs to just their homepage domains. Write the full string exactly as it appears. NEVER fabricate or guess a link.
             9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. As long as you have AT LEAST ONE relevant piece of geopolitical data, you MUST generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block. Do not be overly sensitive; find the relevant data and write the report.
             10. VISUAL TELEMETRY DIRECTIVE: If the processed PizzINT or Scalytics telemetry feeds show a numerical anomaly spike or market price deviation exceeding 0.15 (+15%), you MUST append a valid structured tracking payload at the very end of your analytical textual output. Do not mention or explain the data block to the user.
             Format the chart blocks exactly as follows:
@@ -190,7 +183,8 @@ class AnalystNode:
               ]
             }}
             ```
-            {map_directive}
+            
+            {conditional_logic}
             """
             contents_payload = f"USER DIRECTIVE:\n{user_cmd}\n\n{compiled_context}"
             gen_config = types.GenerateContentConfig(
@@ -222,9 +216,9 @@ class AnalystNode:
               "BLUF": "BLUF summary...",
               "Executive_Summary": "Executive summary...",
               "Top_News": {
-                 "Global": ["News 1", "News 2", "News 3", "News 4", "News 5", "News 6", "News 7", "News 8", "News 9", "News 10", "News 11", "News 12", "News 13", "News 14", "News 15"]
+                 "Global": ["News 1", "News 2", "News 3"]
               },
-              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10", "Trend 11", "Trend 12", "Trend 13", "Trend 14", "Trend 15"],
+              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3"],
               "Situational_Update_And_Threat_Telemetry": {
                  "Overall_Analysis": "Analysis details..."
               },
@@ -285,41 +279,30 @@ class AnalystNode:
                     if mode == "CUSTOM_UI":
                         raw_text = raw_text.replace("###", "").replace("**", "")
 
-                    # 🌍 AGENTIC TOOL EXECUTION: 8-Tier Geospatial Consensus Array (MULTI-THEATER UPGRADE)
+                    # 🌍 AGENTIC TOOL EXECUTION: 8-Tier Geospatial Consensus Array 
                     geo_matches = re.findall(r'\[GEO_TARGET:\s*(.+?)\]', raw_text)
                     
                     if geo_matches:
                         raw_text = re.sub(r'\[GEO_TARGET:\s*.+?\]', '', raw_text).strip()
                         
-                        # Loop through every unique location tag found in the text
                         for location_raw in set([m.strip() for m in geo_matches]):
-                            # Tokenize compound or multi-lingual location strings (handles pipes and commas)
                             location_tokens = [t.strip() for t in re.split(r'[,|]', location_raw) if t.strip()]
-                            
-                            # Default to the first token (Native Script), drop back to raw text if empty
                             location_name = location_tokens[0] if location_tokens else location_raw
                             safe_location = requests.utils.quote(location_name)
                             
-                            # Secondary fallback token (English translation) if the main registry hit fails
                             fallback_location = requests.utils.quote(location_tokens[1]) if len(location_tokens) > 1 else None
                             global_headers = {"User-Agent": "SemicoN/1.0 (contact: support@semirare.in)"}
                             
-                            candidates = [] # Consensus Matrix Array
+                            candidates = [] 
 
-                            # 🛰️ TIER 0: Direct Context Extraction Engine (Scrapes prompt AND scraped data)
+                            # 🛰️ TIER 0: Direct Context Extraction Engine
                             try:
                                 combined_search_space = f"{user_cmd} \n {compiled_context}"
                                 text_matches = re.findall(r'(-?\d{1,2}\.\d+)\s*,\s*(-?\d{1,3}\.\d+)', combined_search_space)
                                 for tm in text_matches:
                                     lat_txt, lon_txt = float(tm[0]), float(tm[1])
                                     if -90 <= lat_txt <= 90 and -180 <= lon_txt <= 180:
-                                        candidates.append({
-                                            "lat": lat_txt, 
-                                            "lon": lon_txt, 
-                                            "address": f"{location_name} (Forced Operator GPS Input)", 
-                                            "source": "Forced Coordinate Core", 
-                                            "weight": 200
-                                        })
+                                        candidates.append({"lat": lat_txt, "lon": lon_txt, "address": f"{location_name} (Forced Operator GPS Input)", "source": "Forced Coordinate Core", "weight": 200})
                             except Exception as e:
                                 print(f"[Node 4] Tier 0 parsing anomaly: {e}")
 
@@ -354,7 +337,7 @@ class AnalystNode:
                                         candidates.append({"lat": float(data_liq["lat"]), "lon": float(data_liq["lon"]), "address": data_liq["display_name"], "source": "LocationIQ Cluster", "weight": w})
                                 except Exception: pass
 
-                            # 🛰️ TIER 3: Mapbox Places v5 High-Performance Cluster
+                            # 🛰️ TIER 3: Mapbox Places v5
                             mb_token = self.get_named_token("MAPBOX_PUBLIC_TOKEN")
                             if mb_token:
                                 try:
@@ -370,7 +353,7 @@ class AnalystNode:
                                         candidates.append({"lat": float(feat_mb["center"][1]), "lon": float(feat_mb["center"][0]), "address": feat_mb["place_name"], "source": "Mapbox Hub", "weight": w})
                                 except Exception: pass
 
-                            # 🛰️ TIER 4: Nominatim Authoritative Main Server
+                            # 🛰️ TIER 4: Nominatim
                             try:
                                 d_2 = "".join(["nominatim", ".openstreetmap", ".org"])
                                 url_2 = f"https://{d_2}/search?q={safe_location}&format=json&limit=1"
@@ -384,7 +367,7 @@ class AnalystNode:
                                     candidates.append({"lat": float(data_2["lat"]), "lon": float(data_2["lon"]), "address": data_2["display_name"], "source": "OSM Nominatim", "weight": w})
                             except Exception: pass
 
-                            # 🛰️ TIER 5: QGIS Foundation Independent Public Instance
+                            # 🛰️ TIER 5: QGIS Foundation
                             try:
                                 d_3 = "".join(["nominatim", ".qgis", ".org"])
                                 url_3 = f"https://{d_3}/search?q={safe_location}&format=json&limit=1"
@@ -449,7 +432,7 @@ class AnalystNode:
                                                 break
                             except Exception: pass
 
-                            # 🛰️ EMERGENCY FALLBACK TIER: Try alternate English token if native script returned 0 candidates
+                            # 🛰️ EMERGENCY FALLBACK TIER
                             if not candidates and fallback_location:
                                 try:
                                     d_fallback = "".join(["nominatim", ".openstreetmap", ".org"])
@@ -466,7 +449,7 @@ class AnalystNode:
                                         })
                                 except Exception: pass
 
-                            # 🧠 CONSENSUS EVALUATION (Haversine Spatial Clustering Engine)
+                            # 🧠 CONSENSUS EVALUATION
                             valid_candidates = [c for c in candidates if c["weight"] >= 70]
                             
                             if valid_candidates:
@@ -508,8 +491,6 @@ class AnalystNode:
                     state['ui_markdown'] = raw_text
                     state['map_coords'] = map_coords_list
                     
-                    # 🛑 FIX: Moved this overwrite INSIDE the Custom block. 
-                    # Previously, it was blindly destroying your JSON in Autonomous mode!
                     state['drafted_brief'] = {
                         "is_custom_prompt": True,
                         "Title": "Conversational Dialogue Mode" if mode == "CONVERSATIONAL" else "Custom Analysis Pass",
@@ -540,8 +521,6 @@ class AnalystNode:
                         print(f"[Node 4] JSON Parsing Failure in Autonomous Mode: {e}")
                         raise Exception(f"Failed to parse LLM JSON: {e}")
 
-                # 🛑 FIX: Removed the rogue overwrite from here so your JSON stays completely intact!
-                
                 print(f'[Node 4] Geopolitical Analysis execution layer successful.')
                 break 
                 
