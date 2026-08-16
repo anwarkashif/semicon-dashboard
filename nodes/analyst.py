@@ -58,28 +58,40 @@ class AnalystNode:
         api_keys = self.get_all_keys()
         if not api_keys: return state
 
-        # 🧠 SEMANTIC INTENT ROUTER MATRIX
+        # 🧠 SEMANTIC TOOL ROUTER MATRIX (BULLETPROOF FIX)
+        use_tables = False
+        use_maps = False
+        
         if mode == "CUSTOM_UI":
             try:
                 router_client = genai.Client(api_key=api_keys[0])
                 router_instruct = """
-                You are the Dynamic Intent Router for an advanced geopolitical intelligence node.
-                Analyze the entire length and structural context of the user input prompt.
-                Classify it into one of two output modes:
-                - Output 'CUSTOM_UI' if the prompt is a complex, long-form research request, formal briefing, academic/recruitment assignment, strategic task with headers/word counts, or deep risk assessment.
-                - Output 'CONVERSATIONAL' if the prompt is a short, direct conversational phrase, greeting, direct navigation query, or basic question.
-                Output ONLY the string 'CUSTOM_UI' or 'CONVERSATIONAL'. Do not add punctuation or meta-text.
+                You are the Dynamic Tool Router for an advanced intelligence node. Analyze the user's prompt.
+                Classify it into a strict JSON object with exactly three keys: "mode", "use_tables", and "use_maps".
+                
+                RULES:
+                - "mode": 'CUSTOM_UI' if the prompt is a complex research request/briefing. 'CONVERSATIONAL' if it's a short greeting/chat.
+                - "use_tables": true ONLY if the prompt asks for metrics, anomalies, costs, delays, numbers, comparisons, or structured data. Otherwise false.
+                - "use_maps": true ONLY if the prompt focuses heavily on physical conflict zones, kinetic strikes, geography, specific theaters, military bases, or frontline locations. Otherwise false.
+                
+                Output ONLY valid JSON.
                 """
                 router_res = router_client.models.generate_content(
                     model=self.model_id,
-                    contents=f"PROMPT TO CLASSIFY:\n{user_cmd}",
-                    config=types.GenerateContentConfig(system_instruction=router_instruct, temperature=0.1)
+                    contents=f"USER PROMPT:\n{user_cmd}",
+                    config=types.GenerateContentConfig(system_instruction=router_instruct, temperature=0.1, response_mime_type="application/json")
                 )
-                classified_mode = router_res.text.strip()
-                if classified_mode in ["CUSTOM_UI", "CONVERSATIONAL"]:
-                    mode = classified_mode
+                
+                try:
+                    routing_data = json.loads(router_res.text.strip())
+                    mode = routing_data.get("mode", mode)
+                    use_tables = routing_data.get("use_tables", False)
+                    use_maps = routing_data.get("use_maps", False)
                     state["execution_mode"] = mode
-                    print(f"[Node 4] Semantic Intent Router assigned Engine Mode: {mode}")
+                    print(f"[Node 4] Router engaged. Mode: {mode} | Tables: {use_tables} | Maps: {use_maps}")
+                except Exception as json_err:
+                    print(f"[Node 4] Router JSON parse failed, falling back to false tools: {json_err}")
+                    
             except Exception as router_err:
                 print(f"[Node 4] Intent routing exception, falling back to safe defaults: {router_err}")
 
@@ -102,30 +114,26 @@ class AnalystNode:
             for item in extracted_data:
                 compiled_context += f"\n--- Source: {item.get('source_url')} ---\n{item.get('content', '')[:8000]}\n"
 
-        # 🌍 DYNAMIC MAP & TABLE COMMAND ENGINE (FULLY AUTONOMOUS UPGRADE)
-        dynamic_engine_directive = """
-        ===========================================================================
-        CRITICAL: AUTONOMOUS FORMATTING & GEOSPATIAL TAGGING ENGINE
-        ===========================================================================
-        You are a fully autonomous agent. You MUST decide whether to deploy tables or map tags purely based on the nature, density, and geography of the intelligence you process. DO NOT wait for the user to ask for them.
-
-        [AUTONOMOUS TOOL 1: DYNAMIC MARKDOWN TABLES]
-        - TRIGGER CONDITION: If the scraped data contains dense numerical metrics, anomaly scores (e.g., PizzINT/Scalytics), comparative financial impacts, or multiple logistical bottlenecks.
-        - ACTION: You MUST automatically structure that specific section as a detailed Markdown table to organize the intelligence.
-        - NEGATIVE CONDITION: If the data is purely narrative or qualitative, DO NOT force a table.
-
-        [AUTONOMOUS TOOL 2: GEOSPATIAL MAP RENDERING]
-        - TRIGGER CONDITION: If the intelligence reveals specific kinetic strikes, troop movements, military bases, maritime chokepoints, or geographic flashpoints.
-        - ACTION: You MUST automatically generate mapping coordinates to visualize the threat. Append a list of exact location tags at the absolute bottom of your response.
-        - TAG FORMAT: [GEO_TARGET: Primary Name | Local Name | Country]
-        - RULE: Create one tag for EVERY specific geographic flashpoint explicitly mentioned.
-        - EXAMPLES:
-          [GEO_TARGET: Sudzha | Суджа | Russia]
-          [GEO_TARGET: Pokrovsk | Покровськ | Ukraine]
-          [GEO_TARGET: Strait of Hormuz | تنگه هرمز | Iran]
-        - NEGATIVE CONDITION: If the intelligence lacks specific geographic locations or physical flashpoints, DO NOT output any tags.
-        ===========================================================================
-        """
+        # 🌍 DYNAMIC INSTRUCTION BUILDER
+        table_directive = ""
+        if use_tables:
+            table_directive = """
+            [DYNAMIC MARKDOWN TABLES TRIGGERED]
+            You MUST generate a detailed, highly professional Markdown table organizing the complex metrics, delays, anomaly scores, or financial impacts derived from your analysis. Place this table near the end of your report.
+            """
+            
+        map_directive = ""
+        if use_maps:
+            map_directive = """
+            [GEOSPATIAL MAP RENDERING TRIGGERED]
+            You MUST generate mapping coordinates to visualize the geographic threat. Append a list of exact location tags at the absolute bottom of your response.
+            TAG FORMAT: [GEO_TARGET: Primary Name | Local Name | Country]
+            RULE: Create one tag for EVERY specific city, town, base, or chokepoint explicitly mentioned in your analysis.
+            EXAMPLES:
+              [GEO_TARGET: Sudzha | Суджа | Russia]
+              [GEO_TARGET: Pokrovsk | Покровськ | Ukraine]
+              [GEO_TARGET: Strait of Hormuz | تنگه هرمز | Iran]
+            """
 
         # ==========================================
         # PATHWAY A: FLUID CHAT ENVIRONMENT
@@ -145,7 +153,8 @@ class AnalystNode:
             8. STRICT SOURCE ATTRIBUTION (ONLY ON DEMAND): DO NOT output any URLs or sources in this conversational mode UNLESS the user explicitly asks for links.
             9. CLEAN OUTPUT: Do not use block code fences (```) or JSON wrappers.
             
-            {dynamic_engine_directive}
+            {table_directive}
+            {map_directive}
             """
             contents_payload = f"{formatted_history}\nCURRENT OPERATOR INPUT: {user_cmd}\n\n{compiled_context}"
             gen_config = types.GenerateContentConfig(
@@ -175,23 +184,11 @@ class AnalystNode:
                Sources:
                Agentic AI
                [List the exact deep-link URLs found inside the text of the OSINT Intercepts]
-            8. STRICT DEEP-LINK SOURCE ATTRIBUTION: Do not cite generic homepages (e.g., [https://redroom.live](https://redroom.live)). You MUST extract and print the exact article/tweet URLs (e.g., [URL: https://...]) provided inside the text of the RAW OSINT INTERCEPTS. Do not truncate the URLs.
+            8. STRICT DEEP-LINK SOURCE ATTRIBUTION: Do not cite generic homepages. You MUST extract and print the exact article/tweet URLs (e.g., [URL: https://...]) provided inside the text of the RAW OSINT INTERCEPTS. Do not truncate the URLs.
             9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Silently ignore irrelevant text. As long as you have AT LEAST ONE relevant piece of geopolitical data, generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
-            10. VISUAL TELEMETRY DIRECTIVE: If the processed PizzINT or Scalytics telemetry feeds show a numerical anomaly spike exceeding 0.15 (+15%), you MUST append a valid structured tracking payload at the very end of your analytical textual output.
-            Format the chart blocks exactly as follows:
-            ```json_chart
-            {{
-              "type": "pizzint_anomaly",
-              "title": "PENTAGON LOGISTICS OPERATIONAL TEMPO DEV VECTORS",
-              "data": [
-                {{"time_window": "6h Ago", "anomaly_score": 12}},
-                {{"time_window": "4h Ago", "anomaly_score": 45}},
-                {{"time_window": "2h Ago", "anomaly_score": 110}}
-              ]
-            }}
-            ```
             
-            {dynamic_engine_directive}
+            {table_directive}
+            {map_directive}
             """
             contents_payload = f"USER DIRECTIVE:\n{user_cmd}\n\n{compiled_context}"
             gen_config = types.GenerateContentConfig(
