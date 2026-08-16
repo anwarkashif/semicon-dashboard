@@ -102,26 +102,28 @@ class AnalystNode:
             for item in extracted_data:
                 compiled_context += f"\n--- Source: {item.get('source_url')} ---\n{item.get('content', '')[:8000]}\n"
 
-        # 🌍 DYNAMIC MAP & TABLE COMMAND ENGINE (AUTONOMOUS UPGRADE)
+        # 🌍 DYNAMIC MAP & TABLE COMMAND ENGINE (FULLY AUTONOMOUS UPGRADE)
         dynamic_engine_directive = """
         ===========================================================================
         CRITICAL: AUTONOMOUS FORMATTING & GEOSPATIAL TAGGING ENGINE
         ===========================================================================
-        As an autonomous agent, you must evaluate the inherent nature of the intelligence you uncover to trigger formatting tools. You DO NOT need explicit permission from the user to use these tools.
+        You are a fully autonomous agent. You MUST decide whether to deploy tables or map tags purely based on the nature, density, and geography of the intelligence you process. DO NOT wait for the user to ask for them.
 
-        [TOOL 1: DYNAMIC MARKDOWN TABLES]
-        - CONDITION: Trigger this tool if your analysis involves comparing quantitative data, numerical anomaly scores, operational impacts across multiple threat actors, or structured categorical logistics.
-        - ACTION: Generate a detailed, highly professional Markdown table to visually organize the complex intelligence alongside your paragraphs.
+        [AUTONOMOUS TOOL 1: DYNAMIC MARKDOWN TABLES]
+        - TRIGGER CONDITION: If the scraped data contains dense numerical metrics, anomaly scores (e.g., PizzINT/Scalytics), comparative financial impacts, or multiple logistical bottlenecks.
+        - ACTION: You MUST automatically structure that specific section as a detailed Markdown table to organize the intelligence.
+        - NEGATIVE CONDITION: If the data is purely narrative or qualitative, DO NOT force a table.
 
-        [TOOL 2: GEOSPATIAL MAP RENDERING]
-        - CONDITION: Trigger this tool if your analysis discusses specific kinetic strikes, frontlines, military bases, maritime chokepoints, or named geographic flashpoints.
-        - ACTION: You MUST generate mapping coordinates by appending a list of exact location tags at the absolute bottom of your response.
+        [AUTONOMOUS TOOL 2: GEOSPATIAL MAP RENDERING]
+        - TRIGGER CONDITION: If the intelligence reveals specific kinetic strikes, troop movements, military bases, maritime chokepoints, or geographic flashpoints.
+        - ACTION: You MUST automatically generate mapping coordinates to visualize the threat. Append a list of exact location tags at the absolute bottom of your response.
         - TAG FORMAT: [GEO_TARGET: Primary Name | Local Name | Country]
-        - RULE: Create one tag for EVERY specific city, town, base, or chokepoint explicitly mentioned in your analysis.
+        - RULE: Create one tag for EVERY specific geographic flashpoint explicitly mentioned.
         - EXAMPLES:
           [GEO_TARGET: Sudzha | Суджа | Russia]
           [GEO_TARGET: Pokrovsk | Покровськ | Ukraine]
           [GEO_TARGET: Strait of Hormuz | تنگه هرمز | Iran]
+        - NEGATIVE CONDITION: If the intelligence lacks specific geographic locations or physical flashpoints, DO NOT output any tags.
         ===========================================================================
         """
 
@@ -169,11 +171,11 @@ class AnalystNode:
                Owned By:
                Write your name
                Write you designation
-            7. Under the Sources section, you MUST strictly use this exact format pattern (excluding Wikipedia):
+            7. Under the Sources section, you MUST strictly use this exact format pattern:
                Sources:
                Agentic AI
-               [Verified publisher links]
-            8. STRICT DEEP-LINK SOURCE ATTRIBUTION (NO TRUNCATION): When listing Sources, you MUST preserve the EXACT, UNEDITED absolute deep-link URL provided in the RAW OSINT INTERCEPTS. 
+               [List the exact deep-link URLs found inside the text of the OSINT Intercepts]
+            8. STRICT DEEP-LINK SOURCE ATTRIBUTION: Do not cite generic homepages (e.g., [https://redroom.live](https://redroom.live)). You MUST extract and print the exact article/tweet URLs (e.g., [URL: https://...]) provided inside the text of the RAW OSINT INTERCEPTS. Do not truncate the URLs.
             9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Silently ignore irrelevant text. As long as you have AT LEAST ONE relevant piece of geopolitical data, generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
             10. VISUAL TELEMETRY DIRECTIVE: If the processed PizzINT or Scalytics telemetry feeds show a numerical anomaly spike exceeding 0.15 (+15%), you MUST append a valid structured tracking payload at the very end of your analytical textual output.
             Format the chart blocks exactly as follows:

@@ -180,7 +180,7 @@ class ExtractorNode:
                 try:
                     curr_key = self._get_secret("CURRENTS_API_KEY")
                     if curr_key:
-                        curr_url = "https://api.currentsapi.services/v1/search"
+                        curr_url = "[https://api.currentsapi.services/v1/search](https://api.currentsapi.services/v1/search)"
                         curr_params = {"apiKey": curr_key, "language": "en", "keywords": search_query}
                         curr_res = self.session.get(curr_url, params=curr_params, timeout=12)
                         if curr_res.status_code == 200:
@@ -190,12 +190,12 @@ class ExtractorNode:
                             for item in curr_news[:10]:
                                 title = item.get("title", "No Title")
                                 desc = item.get("description", "")
-                                s_url = item.get("url")
-                                compiled_curr += f"- [Currents API] {title}: {desc}\n"
+                                s_url = item.get("url", "")
+                                compiled_curr += f"- [Currents API] {title}: {desc} [URL: {s_url}]\n" # 🛑 FIX: URL Injected
                                 added_curr += 1
                                 if s_url and s_url not in urls: urls.append(s_url)
                             if added_curr > 0:
-                                extracted_payloads.append({"source_url": "https://api.currentsapi.services", "content": compiled_curr.strip(), "method": "currents_api_feeder"})
+                                extracted_payloads.append({"source_url": "[https://api.currentsapi.services](https://api.currentsapi.services)", "content": compiled_curr.strip(), "method": "currents_api_feeder"})
                                 print(f"[Node 2] Injected {added_curr} Currents API rows.")
                 except Exception as e: print(f"[Node 2] Currents feeder bypassed: {e}")
 
@@ -205,7 +205,7 @@ class ExtractorNode:
                 try:
                     gn_key = self._get_secret("GNEWS_API_KEY")
                     if gn_key:
-                        gn_url = "https://gnews.io/api/v4/search"
+                        gn_url = "[https://gnews.io/api/v4/search](https://gnews.io/api/v4/search)"
                         gn_params = {"q": search_query, "lang": "en", "max": 10, "apikey": gn_key}
                         gn_res = self.session.get(gn_url, params=gn_params, timeout=12)
                         if gn_res.status_code == 200:
@@ -215,12 +215,12 @@ class ExtractorNode:
                             for item in gn_articles[:10]:
                                 title = item.get("title", "No Title")
                                 desc = item.get("description", "")
-                                s_url = item.get("url")
-                                compiled_gn += f"- [GNews API] {title}: {desc}\n"
+                                s_url = item.get("url", "")
+                                compiled_gn += f"- [GNews API] {title}: {desc} [URL: {s_url}]\n" # 🛑 FIX: URL Injected
                                 added_gn += 1
                                 if s_url and s_url not in urls: urls.append(s_url)
                             if added_gn > 0:
-                                extracted_payloads.append({"source_url": "https://gnews.io", "content": compiled_gn.strip(), "method": "gnews_api_feeder"})
+                                extracted_payloads.append({"source_url": "[https://gnews.io](https://gnews.io)", "content": compiled_gn.strip(), "method": "gnews_api_feeder"})
                                 print(f"[Node 2] Injected {added_gn} GNews API rows.")
                 except Exception as e: print(f"[Node 2] GNews feeder bypassed: {e}")
 
@@ -230,7 +230,7 @@ class ExtractorNode:
                 try:
                     guard_key = self._get_secret("GUARDIAN_API_KEY")
                     if guard_key:
-                        guard_url = "https://content.guardianapis.com/search"
+                        guard_url = "[https://content.guardianapis.com/search](https://content.guardianapis.com/search)"
                         guard_params = {"api-key": guard_key, "q": search_query, "page-size": 10, "show-fields": "headline,trailText,byline"}
                         guard_res = self.session.get(guard_url, params=guard_params, timeout=12)
                         if guard_res.status_code == 200:
@@ -241,12 +241,12 @@ class ExtractorNode:
                                 fields = item.get("fields", {})
                                 headline = fields.get("headline") or item.get("webTitle", "No Title")
                                 trail = fields.get("trailText", "")
-                                web_url = item.get("webUrl")
-                                compiled_guard += f"- [The Guardian] {headline}: {trail}\n"
+                                web_url = item.get("webUrl", "")
+                                compiled_guard += f"- [The Guardian] {headline}: {trail} [URL: {web_url}]\n" # 🛑 FIX: URL Injected
                                 added_guard += 1
                                 if web_url and web_url not in urls: urls.append(web_url)
                             if added_guard > 0:
-                                extracted_payloads.append({"source_url": "https://content.guardianapis.com", "content": compiled_guard.strip(), "method": "guardian_api_feeder"})
+                                extracted_payloads.append({"source_url": "[https://content.guardianapis.com](https://content.guardianapis.com)", "content": compiled_guard.strip(), "method": "guardian_api_feeder"})
                                 print(f"[Node 2] Injected {added_guard} The Guardian rows.")
                 except Exception as e: print(f"[Node 2] Guardian feeder bypassed: {e}")
 
@@ -256,83 +256,88 @@ class ExtractorNode:
                 
                 # 🇮🇷 IRAN MONITOR
                 try:
-                    iran_url = "https://www.iranmonitor.org/api/daily-summary?lang=en"
+                    iran_url = "[https://www.iranmonitor.org/api/daily-summary?lang=en](https://www.iranmonitor.org/api/daily-summary?lang=en)"
                     iran_headers = self._get_headers()
-                    iran_headers['Referer'] = 'https://www.iranmonitor.org/'
+                    iran_headers['Referer'] = '[https://www.iranmonitor.org/](https://www.iranmonitor.org/)'
                     iran_res = self.session.get(iran_url, headers=iran_headers, timeout=10)
                     if iran_res.status_code == 200:
                         data = iran_res.json()
-                        compiled_iran = f"### Iran Monitor Intelligence:\n- Recap: {data.get('data', {}).get('recap', '')}\n"
-                        extracted_payloads.append({"source_url": "https://www.iranmonitor.org", "content": compiled_iran.strip(), "method": "iran_monitor"})
+                        # Because Iran Monitor doesn't provide specific article links in this API, we append their main site link
+                        compiled_iran = f"### Iran Monitor Intelligence:\n- Recap: {data.get('data', {}).get('recap', '')} [URL: [https://www.iranmonitor.org/en](https://www.iranmonitor.org/en)]\n"
+                        extracted_payloads.append({"source_url": "[https://www.iranmonitor.org](https://www.iranmonitor.org)", "content": compiled_iran.strip(), "method": "iran_monitor"})
                         print("[Node 2] Injected Iran Monitor data.")
                 except Exception as e: print(f"[Node 2] Iran Monitor bypassed: {e}")
 
                 # 🗺️ CONFLICT RADAR 360
                 try:
-                    cr360_url = "https://cr360-api.vercel.app/api/v2/public/map/events?lang=en&maxHours=72"
+                    cr360_url = "[https://cr360-api.vercel.app/api/v2/public/map/events?lang=en&maxHours=72](https://cr360-api.vercel.app/api/v2/public/map/events?lang=en&maxHours=72)"
                     cr360_headers = self._get_headers()
-                    cr360_headers['Origin'] = 'https://www.conflictradar360.com'
-                    cr360_headers['Referer'] = 'https://www.conflictradar360.com/'
+                    cr360_headers['Origin'] = '[https://www.conflictradar360.com](https://www.conflictradar360.com)'
+                    cr360_headers['Referer'] = '[https://www.conflictradar360.com/](https://www.conflictradar360.com/)'
                     cr360_res = self.session.get(cr360_url, headers=cr360_headers, timeout=10)
                     if cr360_res.status_code == 200:
                         features = cr360_res.json().get('features', [])
                         compiled_cr = "### Conflict Radar 360 Events:\n"
                         for feat in features[:8]:
                             props = feat.get('properties', {})
-                            compiled_cr += f"- {props.get('title', 'Event')}: {props.get('description', '')}\n"
+                            url = props.get('sourceUrl', props.get('url', '[https://www.conflictradar360.com](https://www.conflictradar360.com)'))
+                            compiled_cr += f"- {props.get('title', 'Event')}: {props.get('description', '')} [URL: {url}]\n" # 🛑 FIX: URL Injected
                         if features:
-                            extracted_payloads.append({"source_url": "https://www.conflictradar360.com", "content": compiled_cr.strip(), "method": "cr360"})
+                            extracted_payloads.append({"source_url": "[https://www.conflictradar360.com](https://www.conflictradar360.com)", "content": compiled_cr.strip(), "method": "cr360"})
                             print("[Node 2] Injected Conflict Radar 360 data.")
                 except Exception as e: print(f"[Node 2] CR360 bypassed: {e}")
 
                 # 🩸 REDROOM LIVE
                 try:
                     trpc_payload = '{"0":{"json":{"region":"Global","limit":10}}}'
-                    rr_url = f"https://redroom.live/api/trpc/articles.breaking?batch=1&input={urllib.parse.quote(trpc_payload)}"
+                    rr_url = f"[https://redroom.live/api/trpc/articles.breaking?batch=1&input=](https://redroom.live/api/trpc/articles.breaking?batch=1&input=){urllib.parse.quote(trpc_payload)}"
                     rr_headers = self._get_headers()
-                    rr_headers['Origin'] = 'https://redroom.live'
-                    rr_headers['Referer'] = 'https://redroom.live/'
+                    rr_headers['Origin'] = '[https://redroom.live](https://redroom.live)'
+                    rr_headers['Referer'] = '[https://redroom.live/](https://redroom.live/)'
                     rr_res = self.session.get(rr_url, headers=rr_headers, timeout=10)
                     if rr_res.status_code == 200:
                         results = rr_res.json()[0].get('result', {}).get('data', {}).get('json', [])
                         compiled_rr = "### Redroom Live Breaking Global Intelligence:\n"
                         for item in results:
-                            compiled_rr += f"- {item.get('title', 'Unknown')}: {item.get('content', '')}\n"
+                            url = item.get('sourceUrl', item.get('url', '[https://redroom.live](https://redroom.live)'))
+                            compiled_rr += f"- {item.get('title', 'Unknown')}: {item.get('content', '')} [URL: {url}]\n" # 🛑 FIX: URL Injected
                         if results:
-                            extracted_payloads.append({"source_url": "https://redroom.live", "content": compiled_rr.strip(), "method": "redroom"})
+                            extracted_payloads.append({"source_url": "[https://redroom.live](https://redroom.live)", "content": compiled_rr.strip(), "method": "redroom"})
                             print("[Node 2] Injected Redroom Live data.")
                 except Exception as e: print(f"[Node 2] Redroom bypassed: {e}")
 
                 # ⚔️ WAR MONITOR
                 try:
-                    wm_url = "https://doibxberkxwpkwpmyvon.supabase.co/functions/v1/twitter-osint"
+                    wm_url = "[https://doibxberkxwpkwpmyvon.supabase.co/functions/v1/twitter-osint](https://doibxberkxwpkwpmyvon.supabase.co/functions/v1/twitter-osint)"
                     wm_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvaWJ4YmVya3h3cGt3cG15dm9uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE2ODgzMTksImV4cCI6MjA4NzI2NDMxOX0.NIH12xDyXzAauMdgsJ9GN0NRw4kXFLQjaRVRZnQsfvo"
                     wm_headers = self._get_headers()
-                    wm_headers.update({'apikey': wm_key, 'authorization': f"Bearer {wm_key}", 'Origin': 'https://warmonitor.app', 'Referer': 'https://warmonitor.app/', 'Content-Type': 'application/json'})
+                    wm_headers.update({'apikey': wm_key, 'authorization': f"Bearer {wm_key}", 'Origin': '[https://warmonitor.app](https://warmonitor.app)', 'Referer': '[https://warmonitor.app/](https://warmonitor.app/)', 'Content-Type': 'application/json'})
                     wm_res = self.session.post(wm_url, headers=wm_headers, json={"batch_index": 1}, timeout=10)
                     if wm_res.status_code == 200:
                         posts = wm_res.json().get('posts', [])
                         compiled_wm = "### War Monitor OSINT Dispatches:\n"
                         for post in posts[:8]:
-                            compiled_wm += f"- [{post.get('author_username', 'Unknown')}]: {post.get('text', '')}\n"
+                            url = post.get('url', f"[https://x.com/](https://x.com/){post.get('author_username', '')}/status/{post.get('tweet_id', '')}")
+                            compiled_wm += f"- [{post.get('author_username', 'Unknown')}]: {post.get('text', '')} [URL: {url}]\n" # 🛑 FIX: URL Injected
                         if posts:
-                            extracted_payloads.append({"source_url": "https://warmonitor.app", "content": compiled_wm.strip(), "method": "war_monitor"})
+                            extracted_payloads.append({"source_url": "[https://warmonitor.app](https://warmonitor.app)", "content": compiled_wm.strip(), "method": "war_monitor"})
                             print("[Node 2] Injected War Monitor data.")
                 except Exception as e: print(f"[Node 2] War Monitor bypassed: {e}")
 
                 # 📡 MONITOR THE SITUATION
                 try:
-                    mts_url = "https://monitor-the-situation.com/api/events"
+                    mts_url = "[https://monitor-the-situation.com/api/events](https://monitor-the-situation.com/api/events)"
                     mts_headers = self._get_headers()
-                    mts_headers['Referer'] = 'https://monitor-the-situation.com/'
+                    mts_headers['Referer'] = '[https://monitor-the-situation.com/](https://monitor-the-situation.com/)'
                     mts_res = self.session.get(mts_url, headers=mts_headers, params={"range": "24h", "feed": "live"}, timeout=10)
                     if mts_res.status_code == 200:
                         events = mts_res.json()
                         compiled_mts = "### Monitor The Situation Event Logs:\n"
                         for evt in events[:10]:
-                            compiled_mts += f"- {evt.get('title', '')}: {evt.get('summary', '')}\n"
+                            url = evt.get('source', evt.get('url', '[https://monitor-the-situation.com](https://monitor-the-situation.com)'))
+                            compiled_mts += f"- {evt.get('title', '')}: {evt.get('summary', '')} [URL: {url}]\n" # 🛑 FIX: URL Injected
                         if events:
-                            extracted_payloads.append({"source_url": "https://monitor-the-situation.com", "content": compiled_mts.strip(), "method": "mts"})
+                            extracted_payloads.append({"source_url": "[https://monitor-the-situation.com](https://monitor-the-situation.com)", "content": compiled_mts.strip(), "method": "mts"})
                             print("[Node 2] Injected Monitor The Situation data.")
                 except Exception as e: print(f"[Node 2] MTS bypassed: {e}")
 
