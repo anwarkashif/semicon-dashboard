@@ -225,9 +225,9 @@ class AnalystNode:
               "BLUF": "BLUF summary...",
               "Executive_Summary": "Executive summary...",
               "Top_News": {{
-                 "Global": ["Specific News 1", "Specific News 2", "Specific News 3", "Specific News 4", "Specific News 5"]
+                 "Global": ["Specific News 1", "Specific News 2", "Specific News 3", "Specific News 4", "Specific News 5", "Specific News 6", "Specific News 7", "Specific News 8", "Specific News 9", "Specific News 10"]
               }},
-              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7"],
+              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10"],
               "Situational_Update_And_Threat_Telemetry": {{
                  "Overall_Analysis": "Analysis details..."
               }},
