@@ -227,7 +227,7 @@ class AnalystNode:
               "Top_News": {{
                  "Global": ["Specific News 1", "Specific News 2", "Specific News 3", "Specific News 4", "Specific News 5"]
               }},
-              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3"],
+              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7"],
               "Situational_Update_And_Threat_Telemetry": {{
                  "Overall_Analysis": "Analysis details..."
               }},
