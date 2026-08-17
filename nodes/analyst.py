@@ -5,6 +5,7 @@ import time
 import re
 import requests
 import urllib3
+from datetime import datetime, timezone
 from typing import Dict, Any, List
 from google import genai
 from google.genai import types
@@ -54,6 +55,9 @@ class AnalystNode:
         user_cmd = state.get('user_prompt', '').strip()
         chat_history = state.get('chat_history', [])
         extracted_data: List[Dict[str, str]] = state.get('extracted_markdown_context', [])
+        
+        # 🛑 INJECTING TEMPORAL ANCHOR FOR LIVE TACTICAL UPDATES
+        current_date_str = datetime.now(timezone.utc).strftime("%A, %B %d, %Y")
         
         api_keys = self.get_all_keys()
         if not api_keys: return state
@@ -149,7 +153,7 @@ class AnalystNode:
             4. NO META-COMMENTARY: Silently ignore garbage intercepts and answer the user's request using your own elite internal knowledge.
             5. ZERO SOURCES & NO ATTRIBUTION BLOCKS FOR CHAT/GUIDANCE: Keep it a clean, natural chat.
             6. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using Wikipedia anywhere in your output.
-            7. TEMPORAL ANCHORING: The current year is 2026. All intelligence must be grounded in the 2026 timeline.
+            7. TEMPORAL ANCHORING: The current date is {current_date_str}. All intelligence must be grounded in the {current_date_str} timeline.
             8. STRICT SOURCE ATTRIBUTION (ONLY ON DEMAND): DO NOT output any URLs or sources in this conversational mode UNLESS the user explicitly asks for links.
             9. CLEAN OUTPUT: Do not use block code fences (```) or JSON wrappers.
             
@@ -169,10 +173,11 @@ class AnalystNode:
         elif mode == "CUSTOM_UI":
             sys_instruct = f"""
             You are an autonomous, elite Geopolitical Intelligence Analyst. Your absolute directive is to read the provided context and fulfill the USER DIRECTIVE perfectly.
+            CURRENT SYSTEM DATE: {current_date_str}.
             
             CRITICAL FORMATTING RULES:
             1. MANDATORY LENGTH & STRUCTURAL EXPANSION (1500-2000+ WORDS): Under EVERY SINGLE HEADER requested by the user, you MUST create at least 3 explicitly named sub-themes or sub-headings. 
-            2. ANALYTICAL DEPTH FRAMEWORK: For every sub-theme, you must employ "Chain of Expansion": detail the historical precedent, analyze the macroeconomic variables, project the second and third-order supply chain disruptions, and assess specific regional military/diplomatic responses. Write no less than 350 words per requested header.
+            2. STRICT TEMPORAL ANCHORING (TODAY'S NEWS ONLY): You MUST prioritize the most recent, specific kinetic events, policy shifts, and market anomalies from the RAW OSINT INTERCEPTS that occurred leading up to {current_date_str}. DO NOT write generic, timeless overviews. State exactly WHAT happened TODAY, WHO was involved, and WHERE it occurred.
             3. You MUST follow the exact structural layout, headers, bullet counts, and instructions requested in the USER DIRECTIVE.
             4. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). Write all section headers in plain-text capital letters.
             5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You must rely ONLY on verifiable, reputed, and well-known publishers.
@@ -183,19 +188,6 @@ class AnalystNode:
             7. STRICT DEEP-LINK SOURCE ATTRIBUTION & BLACKLIST: You MUST extract and print ONLY the exact news article/tweet URLs provided inside the text of the RAW OSINT INTERCEPTS. You are STRICTLY FORBIDDEN from citing generic homepages or backend telemetry tools in your source list. DO NOT include URLs containing 'osint.scalytics.io', 'pizzint.watch', 'monitor-the-situation.com', 'conflictradar360.com', 'iranmonitor.org', or 'redroom.live' in the Sources section.
             8. NO DESIGNATIONS: You MUST NOT include an 'Owned By', 'Agent Name', or any analyst designation block anywhere in your output. The report must remain completely unbranded and ready for the user to append their own credentials.
             9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Silently ignore irrelevant text. As long as you have AT LEAST ONE relevant piece of geopolitical data, generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
-            10. VISUAL TELEMETRY DIRECTIVE: If the processed PizzINT or Scalytics telemetry feeds show a numerical anomaly spike exceeding 0.15 (+15%), you MUST append a valid structured tracking payload at the very end of your analytical textual output.
-            Format the chart blocks exactly as follows:
-            ```json_chart
-            {{
-              "type": "pizzint_anomaly",
-              "title": "PENTAGON LOGISTICS OPERATIONAL TEMPO DEV VECTORS",
-              "data": [
-                {{"time_window": "6h Ago", "anomaly_score": 12}},
-                {{"time_window": "4h Ago", "anomaly_score": 45}},
-                {{"time_window": "2h Ago", "anomaly_score": 110}}
-              ]
-            }}
-            ```
             
             {table_directive}
             {map_directive}
@@ -211,39 +203,42 @@ class AnalystNode:
         # PATHWAY C: AUTONOMOUS DASHBOARD GENERATION
         # ==========================================
         else:
-            legacy_instruction = """
+            legacy_instruction = f"""
             You are an autonomous, elite Geopolitical Intelligence Analyst for the SemicoN Dashboard.
-            Synthesize a highly professional, exhaustive intelligence brief focusing on semiconductor supply chains, critical minerals, and geopolitics.
+            CURRENT SYSTEM DATE: {current_date_str}.
+            
+            Synthesize a highly professional, exhaustive daily intelligence brief focusing on semiconductor supply chains, critical minerals, and geopolitics.
             
             CRITICAL FORMATTING RULES:
-            1. MANDATORY LENGTH & STRUCTURAL EXPANSION: You MUST write highly detailed, exhaustive paragraphs for every analytical section.
-            2. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). 
-            3. Sub-categorize all global news items cleanly based on detailed geography and sub-geography.
-            4. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
-            5. ZERO-KNOWLEDGE OVERRIDE: Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block.
-            6. Return your output strictly as a JSON object matching the exact schema below.
+            1. STRICT TEMPORAL ANCHORING (TODAY'S NEWS ONLY): You MUST prioritize the most recent, specific kinetic events, policy shifts, and market anomalies from the RAW OSINT INTERCEPTS that occurred near {current_date_str}. DO NOT write generic, timeless overviews (e.g., "The US continues to restrict chips..."). State exactly WHAT happened TODAY, WHO was involved, and WHERE it occurred.
+            2. MANDATORY LENGTH & STRUCTURAL EXPANSION: You MUST write highly detailed, exhaustive paragraphs for every analytical section.
+            3. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). 
+            4. Sub-categorize all global news items cleanly based on detailed geography and sub-geography, prioritizing today's breaking news.
+            5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
+            6. ZERO-KNOWLEDGE OVERRIDE: Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block.
+            7. Return your output strictly as a JSON object matching the exact schema below.
             
             STRICT JSON SCHEMA REQUIRED:
-            {
+            {{
               "Title": "Strategic Intelligence Brief",
               "Threat_Level": "LOW/MODERATE/HIGH/CRITICAL/EXTREME",
               "BLUF": "BLUF summary...",
               "Executive_Summary": "Executive summary...",
-              "Top_News": {
-                 "Global": ["News 1", "News 2", "News 3", "News 4", "News 5", "News 6", "News 7"]
-              },
-              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7"],
-              "Situational_Update_And_Threat_Telemetry": {
+              "Top_News": {{
+                 "Global": ["Specific News 1", "Specific News 2", "Specific News 3", "Specific News 4", "Specific News 5"]
+              }},
+              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3"],
+              "Situational_Update_And_Threat_Telemetry": {{
                  "Overall_Analysis": "Analysis details..."
-              },
-              "Operational_Impacts": {
+              }},
+              "Operational_Impacts": {{
                  "Overall_Analysis": "Analysis details..."              
-              },
-              "Risk_And_Threat_Analysis": {
+              }},
+              "Risk_And_Threat_Analysis": {{
                  "Overall_Analysis": "Analysis details..."
-              },
+              }},
               "Predictive_Analysis": "Forecast details..."
-            }
+            }}
             """
             contents_payload = f"CONTEXT SWEEP DATA:\n{compiled_context}"
             gen_config = types.GenerateContentConfig(
