@@ -58,7 +58,7 @@ class AnalystNode:
         api_keys = self.get_all_keys()
         if not api_keys: return state
 
-        # 🧠 SEMANTIC TOOL ROUTER MATRIX (BULLETPROOF FIX)
+        # 🧠 SEMANTIC TOOL ROUTER MATRIX
         use_tables = False
         use_maps = False
         
@@ -176,16 +176,26 @@ class AnalystNode:
             3. You MUST follow the exact structural layout, headers, bullet counts, and instructions requested in the USER DIRECTIVE.
             4. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). Write all section headers in plain-text capital letters.
             5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You must rely ONLY on verifiable, reputed, and well-known publishers.
-            6. Right before the Sources section, you MUST insert an 'Owned By' block matching this exact text:
-               Owned By:
-               Write your name
-               Write you designation
-            7. Under the Sources section, you MUST strictly use this exact format pattern:
+            6. Under the Sources section, you MUST strictly use this exact format pattern:
                Sources:
                Agentic AI
                [List the exact deep-link URLs found inside the text of the OSINT Intercepts]
-            8. STRICT DEEP-LINK SOURCE ATTRIBUTION: Do not cite generic homepages. You MUST extract and print the exact article/tweet URLs (e.g., [URL: https://...]) provided inside the text of the RAW OSINT INTERCEPTS. Do not truncate the URLs.
+            7. STRICT DEEP-LINK SOURCE ATTRIBUTION & BLACKLIST: You MUST extract and print ONLY the exact news article/tweet URLs provided inside the text of the RAW OSINT INTERCEPTS. You are STRICTLY FORBIDDEN from citing generic homepages or backend telemetry tools in your source list. DO NOT include URLs containing 'osint.scalytics.io', 'pizzint.watch', 'monitor-the-situation.com', 'conflictradar360.com', 'iranmonitor.org', or 'redroom.live' in the Sources section.
+            8. NO DESIGNATIONS: You MUST NOT include an 'Owned By', 'Agent Name', or any analyst designation block anywhere in your output. The report must remain completely unbranded and ready for the user to append their own credentials.
             9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Silently ignore irrelevant text. As long as you have AT LEAST ONE relevant piece of geopolitical data, generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
+            10. VISUAL TELEMETRY DIRECTIVE: If the processed PizzINT or Scalytics telemetry feeds show a numerical anomaly spike exceeding 0.15 (+15%), you MUST append a valid structured tracking payload at the very end of your analytical textual output.
+            Format the chart blocks exactly as follows:
+            ```json_chart
+            {{
+              "type": "pizzint_anomaly",
+              "title": "PENTAGON LOGISTICS OPERATIONAL TEMPO DEV VECTORS",
+              "data": [
+                {{"time_window": "6h Ago", "anomaly_score": 12}},
+                {{"time_window": "4h Ago", "anomaly_score": 45}},
+                {{"time_window": "2h Ago", "anomaly_score": 110}}
+              ]
+            }}
+            ```
             
             {table_directive}
             {map_directive}
@@ -220,9 +230,9 @@ class AnalystNode:
               "BLUF": "BLUF summary...",
               "Executive_Summary": "Executive summary...",
               "Top_News": {
-                 "Global": ["News 1", "News 2", "News 3"]
+                 "Global": ["News 1", "News 2", "News 3", "News 4", "News 5", "News 6", "News 7"]
               },
-              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3"],
+              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7"],
               "Situational_Update_And_Threat_Telemetry": {
                  "Overall_Analysis": "Analysis details..."
               },
