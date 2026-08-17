@@ -104,40 +104,39 @@ def fetch_and_evaluate_flash_alerts():
 
     # --- 2. WAR MONITOR ---
     try:
-        # 🛑 PROXY CASCADE & DYNAMIC SCHEMA PARSER
-        proxies = [
-            "https://corsproxy.io/?https://api.war-monitor.com/api/events?page=1&limit=15&fresh_hours=168",
-            "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.war-monitor.com%2Fapi%2Fevents%3Fpage%3D1%26limit%3D15%26fresh_hours%3D168"
-        ]
+        url = "https://doibxberkxwpkwpmyvon.supabase.co/functions/v1/twitter-osint"
+        anon_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvaWJ4YmVya3h3cGt3cG15dm9uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE2ODgzMTksImV4cCI6MjA4NzI2NDMxOX0.NIH12xDyXzAauMdgsJ9GN0NRw4kXFLQjaRVRZnQsfvo"
         
-        valid_res = None
-        for p_url in proxies:
-            try:
-                res = requests.get(p_url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}, timeout=12)
-                # Ensure the response actually looks like JSON before accepting it
-                if res.status_code == 200 and ("{" in res.text or "[" in res.text):
-                    valid_res = res
-                    break
-            except: continue
+        wm_headers = HEADERS.copy()
+        wm_headers.update({
+            'apikey': anon_key,
+            'authorization': f"Bearer {anon_key}",
+            'Origin': 'https://warmonitor.app',
+            'Referer': 'https://warmonitor.app/',
+            'Content-Type': 'application/json'
+        })
+
+        res = requests.post(url, headers=wm_headers, json={"batch_index": 1}, timeout=15)
+        if res.status_code == 200:
+            posts = res.json().get('posts', [])
             
-        if valid_res:
-            try:
-                data = valid_res.json()
-                # Dynamically hunt for the array in case War Monitor changed their JSON keys
-                if isinstance(data, list): events = data
-                elif isinstance(data, dict): events = data.get('data', data.get('events', data.get('results', [])))
-                else: events = []
+            # Map 'text' to 'title' so the add_to_payload helper function can read it
+            mapped_events = []
+            for post in posts:
+                post_url = post.get('url', f"https://x.com/{post.get('author_username', '')}/status/{post.get('tweet_id', '')}")
+                mapped_events.append({
+                    "title": post.get('text', 'No Title Provided'),
+                    "url": post_url
+                })
                 
-                if events: 
-                    add_to_payload(events, "WAR MONITOR")
-                else: 
-                    print(f"⚠️ War Monitor empty. Keys found: {list(data.keys()) if isinstance(data, dict) else type(data)}")
-            except Exception as e:
-                # Triggers if the proxy returned an HTML block/Captcha page instead of JSON
-                print(f"⚠️ War Monitor JSON Parse Error: {e} | Raw Response Preview: {valid_res.text[:250]}")
+            if mapped_events: 
+                add_to_payload(mapped_events, "WAR MONITOR")
+            else: 
+                print("⚠️ War Monitor returned an empty posts array.")
         else:
-            print("⚠️ War Monitor APIs blocked or returned non-200 status across all proxies.")
-    except Exception as e: print(f"⚠️ Failed War Monitor Block: {e}")
+            print(f"⚠️ War Monitor API returned status {res.status_code}")
+    except Exception as e: 
+        print(f"⚠️ Failed War Monitor Block: {e}")
 
     # --- 3. CISA ---
     try:
