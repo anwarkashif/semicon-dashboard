@@ -185,7 +185,7 @@ class AnalystNode:
                Sources:
                Agentic AI
                [List the exact deep-link URLs found inside the text of the OSINT Intercepts]
-            7. STRICT DEEP-LINK SOURCE ATTRIBUTION & BLACKLIST: You MUST extract and print ONLY the exact news article/tweet URLs provided inside the text of the RAW OSINT INTERCEPTS. You are STRICTLY FORBIDDEN from citing generic homepages or backend telemetry tools in your source list. DO NOT include URLs containing 'osint.scalytics.io', 'pizzint.watch', 'monitor-the-situation.com', 'conflictradar360.com', 'iranmonitor.org', or 'redroom.live' in the Sources section.
+            7. STRICT DEEP-LINK SOURCE ATTRIBUTION & BLACKLIST: You MUST extract and print ONLY the exact news article/tweet URLs provided inside the text of the RAW OSINT INTERCEPTS. You are STRICTLY FORBIDDEN from citing generic homepages or backend telemetry tools in your source list. DO NOT include URLs containing 'osint.scalytics.io', 'pizzint.watch', 'monitor-the-situation.com', 'conflictradar360.com', 'iranmonitor.org', 'redroom.live', or 'track-wanted.live' in the Sources section.
             8. NO DESIGNATIONS: You MUST NOT include an 'Owned By', 'Agent Name', or any analyst designation block anywhere in your output. The report must remain completely unbranded and ready for the user to append their own credentials.
             9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Silently ignore irrelevant text. As long as you have AT LEAST ONE relevant piece of geopolitical data, generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
             
@@ -225,9 +225,9 @@ class AnalystNode:
               "BLUF": "BLUF summary...",
               "Executive_Summary": "Executive summary...",
               "Top_News": {{
-                 "Global": ["Specific News 1", "Specific News 2", "Specific News 3", "Specific News 4", "Specific News 5", "Specific News 6", "Specific News 7", "Specific News 8", "Specific News 9", "Specific News 10"]
+                 "Global": ["Specific News 1", "Specific News 2", "Specific News 3", "Specific News 4", "Specific News 5"]
               }},
-              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10"],
+              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3"],
               "Situational_Update_And_Threat_Telemetry": {{
                  "Overall_Analysis": "Analysis details..."
               }},

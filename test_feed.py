@@ -158,7 +158,6 @@ def test_conflict_radar_360():
 
 def test_redroom_live():
     print("📡 Targeting Backend: Redroom TRPC Architecture")
-    # Decoded tRPC payload asking for global breaking news limit 20
     trpc_payload = '{"0":{"json":{"region":"Global","limit":20}}}'
     url = f"https://redroom.live/api/trpc/articles.breaking?batch=1&input={urllib.parse.quote(trpc_payload)}"
     
@@ -179,6 +178,33 @@ def test_redroom_live():
         print(f"❌ CRITICAL FAILURE [Redroom]: {e}\n")
     return []
 
+def test_track_wanted():
+    print("📡 Targeting Backend: Track-Wanted Live (_serverFn Intercept)")
+    # Decoded Next.js server function intercept from the F12 trace
+    url = "https://track-wanted.live/_serverFn/e312619f033799b2df61c988154089f01bbe3def1e5bb7238b88b2d49c27d4e0"
+    
+    local_headers = HEADERS.copy()
+    local_headers['Origin'] = 'https://track-wanted.live'
+    local_headers['Referer'] = 'https://track-wanted.live/globe?m=wanted'
+    local_headers['Content-Type'] = 'application/json'
+    local_headers['x-tsr-serverfn'] = 'true'
+    
+    # Extracted SuperJSON payload tracking a specific target dossier
+    payload = {"t":{"t":10,"i":0,"p":{"k":["data"],"v":[{"t":10,"i":1,"p":{"k":["query","size"],"v":[{"t":1,"s":"Klaus-Michael Kühne"},{"t":0,"s":320}]},"o":0}]},"o":0},"f":63,"m":[]}
+    
+    try:
+        response = requests.post(url, headers=local_headers, json=payload, timeout=15)
+        if response.status_code == 200:
+            data = response.json()
+            print("✅ SUCCESS: Extracted ServerFn JSON payload from Track-Wanted.")
+            print(f"    Preview: {str(data)[:200]}...\n")
+            return data
+        else:
+            print(f"❌ FAILED [Track-Wanted]: HTTP {response.status_code}. (Note: Next.js hashes rotate on site updates)\n")
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE [Track-Wanted]: {e}\n")
+    return []
+
 def extract_war_monitor():
     print("📡 Targeting Backend: War Monitor (Supabase Edge Functions)")
     url = "https://doibxberkxwpkwpmyvon.supabase.co/functions/v1/twitter-osint"
@@ -192,7 +218,6 @@ def extract_war_monitor():
     local_headers['Content-Type'] = 'application/json'
 
     try:
-        # Pinging their twitter OSINT function batch index 1 based on F12 trace
         response = requests.post(url, headers=local_headers, json={"batch_index": 1}, timeout=15)
         if response.status_code == 200:
             data = response.json()
@@ -292,7 +317,7 @@ def test_liveuamap():
 # =========================================================
 if __name__ == "__main__":
     print("==================================================")
-    print("🔍 INITIATING AGENTIC 3.5 LIVE API DIAGNOSTICS")
+    print("🔍 INITIATING AGENTIC 5.5 LIVE API DIAGNOSTICS")
     print("==================================================\n")
     
     # 1. Global Aggregators
@@ -304,6 +329,7 @@ if __name__ == "__main__":
     iran_data = test_iran_monitor()
     cr360_data = test_conflict_radar_360()
     redroom_data = test_redroom_live()
+    tw_data = test_track_wanted()
     war_monitor_data = extract_war_monitor()
     mts_data = extract_monitor_the_situation()
 

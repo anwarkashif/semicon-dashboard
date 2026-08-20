@@ -261,7 +261,7 @@ class ExtractorNode:
             except Exception as e: print(f"[Node 2] Guardian feeder bypassed: {e}")
 
             # =========================================================
-            # 🚀 AGENTIC 5.0: NEW TARGET EXTRACTIONS
+            # 🚀 AGENTIC 5.5: NEW TARGET EXTRACTIONS
             # =========================================================
             
             # 🇮🇷 IRAN MONITOR
@@ -314,6 +314,26 @@ class ExtractorNode:
                         extracted_payloads.append({"source_url": "https://redroom.live", "content": compiled_rr.strip(), "method": "redroom"})
                         print("[Node 2] Injected Redroom Live data.")
             except Exception as e: print(f"[Node 2] Redroom bypassed: {e}")
+
+            # 🎯 TRACK-WANTED LIVE (Agentic 5.5 Integration)
+            try:
+                tw_url = "https://track-wanted.live/_serverFn/e312619f033799b2df61c988154089f01bbe3def1e5bb7238b88b2d49c27d4e0"
+                tw_headers = self._get_headers()
+                tw_headers['Origin'] = 'https://track-wanted.live'
+                tw_headers['Referer'] = 'https://track-wanted.live/globe?m=wanted'
+                tw_headers['Content-Type'] = 'application/json'
+                tw_headers['x-tsr-serverfn'] = 'true'
+                
+                # Using the exact _serverFn payload mapped from the network trace
+                tw_payload = {"t":{"t":10,"i":0,"p":{"k":["data"],"v":[{"t":10,"i":1,"p":{"k":["query","size"],"v":[{"t":1,"s":"Klaus-Michael Kühne"},{"t":0,"s":320}]},"o":0}]},"o":0},"f":63,"m":[]}
+                
+                tw_res = self.session.post(tw_url, headers=tw_headers, json=tw_payload, timeout=10)
+                if tw_res.status_code == 200:
+                    data = tw_res.json()
+                    compiled_tw = f"### Track-Wanted Live Target Telemetry:\n- Tracking Dossier Output: {str(data)[:1000]} [URL: https://track-wanted.live/globe?m=wanted]\n"
+                    extracted_payloads.append({"source_url": "https://track-wanted.live", "content": compiled_tw.strip(), "method": "track_wanted"})
+                    print("[Node 2] Injected Track-Wanted Live data.")
+            except Exception as e: print(f"[Node 2] Track-Wanted bypassed: {e}")
 
             # ⚔️ WAR MONITOR
             try:
