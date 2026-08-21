@@ -10,7 +10,7 @@ from typing import Dict, Any, List
 from google import genai
 from google.genai import types
 
-# Suppress the insecure request warnings since we are intentionally bypassing SSL for the map APIs
+# Suppress insecure request warnings for mapping APIs
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 try:
@@ -22,10 +22,34 @@ class AnalystNode:
     """
     Node 4: The Geopolitical Analyst Component
     Features an Intent Engine Router, strict conversational isolation, 
-    and an autonomous 8-Tier Geospatial Consensus Engine for precision OSINT mapping.
+    an automated Source Sanitizer, and an 8-Tier Geospatial Consensus Engine.
     """
     def __init__(self):
         self.model_id = 'gemini-3.1-flash-lite'
+        self.source_blacklist = [
+            "wikipedia.org",
+            "wikimedia.org",
+            "conflictradar360.com",
+            "cr360-api.vercel.app",
+            "scalytics.io",
+            "pizzint.watch",
+            "monitor-the-situation.com",
+            "monitorthesituation.com",
+            "iranmonitor.org",
+            "redroom.live",
+            "track-wanted.live",
+            "earthengine.google.com",
+            "liveuamap.com",
+            "warmonitor.app",
+            "war-monitor.com",
+            "psyopoly.pro",
+            "worldmonitor.app",
+            "cartocdn.com",
+            "api.currentsapi.services",
+            "gnews.io",
+            "google.com/ccm",
+            "adtrafficquality.google"
+        ]
 
     def get_all_keys(self) -> List[str]:
         key_slots = ['GEMINI_API_KEY', 'GEMINI_API_KEY_RAGAI']
@@ -50,13 +74,49 @@ class AnalystNode:
         raw_urls = re.findall(r'https?://[^\s<>"]+', text)
         return [url.rstrip(')\]}.,;') for url in raw_urls]
 
+    def sanitize_sources_and_text(self, text: str) -> str:
+        """
+        Deterministic Python filter that strips blacklisted sources,
+        Wikipedia links, and backend aggregators from the entire output text.
+        """
+        # 1. Strip blacklisted URLs from the text
+        for domain in self.source_blacklist:
+            pattern = rf'https?://[^\s<>"]*{re.escape(domain)}[^\s<>"]*'
+            text = re.sub(pattern, '', text, flags=re.IGNORECASE)
+            # Also remove markdown bracketed forms: [URL: ...] or [https://...]
+            bracket_pattern = rf'\[(?:URL:\s*)?https?://[^\s<>"]*{re.escape(domain)}[^\s<>"]*\]'
+            text = re.sub(bracket_pattern, '', text, flags=re.IGNORECASE)
+
+        # 2. Clean up multiple empty lines or dangling spaces in Sources section
+        sources_match = re.search(r'(SOURCES?:\s*(?:Agentic AI)?\s*\n?)([\s\S]*?)(?=\n\n📍|\n\n🧭|\n\n\(Agent Note:|$)', text, re.IGNORECASE)
+        if sources_match:
+            header = sources_match.group(1).strip()
+            body = sources_match.group(2)
+            
+            raw_urls = re.findall(r'https?://[^\s<>"]+', body)
+            valid_urls = []
+            for u in raw_urls:
+                u_clean = u.rstrip(')\]}.,;')
+                if not any(b in u_clean.lower() for b in self.source_blacklist) and u_clean not in valid_urls:
+                    valid_urls.append(u_clean)
+            
+            if valid_urls:
+                cleaned_sources_block = f"SOURCES: Agentic AI\n" + "\n".join(valid_urls)
+            else:
+                cleaned_sources_block = "SOURCES: Agentic AI (Direct Real-time OSINT Feeds)"
+                
+            text = text[:sources_match.start()] + cleaned_sources_block + text[sources_match.end():]
+
+        # 3. Clean up extra blank lines
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        return text.strip()
+
     def execute(self, state: Dict[str, Any]) -> Dict[str, Any]:
         mode = state.get("execution_mode", "AUTONOMOUS")
         user_cmd = state.get('user_prompt', '').strip()
         chat_history = state.get('chat_history', [])
         extracted_data: List[Dict[str, str]] = state.get('extracted_markdown_context', [])
         
-        # 🛑 INJECTING TEMPORAL ANCHOR FOR LIVE TACTICAL UPDATES
         current_date_str = datetime.now(timezone.utc).strftime("%A, %B %d, %Y")
         
         api_keys = self.get_all_keys()
@@ -182,14 +242,13 @@ class AnalystNode:
             2. STRICT TEMPORAL ANCHORING (TODAY'S NEWS ONLY): You MUST prioritize the most recent, specific kinetic events, policy shifts, and market anomalies from the RAW OSINT INTERCEPTS that occurred leading up to {current_date_str}. DO NOT write generic, timeless overviews. State exactly WHAT happened TODAY, WHO was involved, and WHERE it occurred.
             3. You MUST follow the exact structural layout, headers, bullet counts, and instructions requested in the USER DIRECTIVE.
             4. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). Write all section headers in plain-text capital letters.
-            5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You must rely ONLY on verifiable, reputed, and well-known publishers.
+            5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You must rely ONLY on verifiable, reputed, and well-known publishers. NEVER cite Wikipedia.
             6. Under the Sources section, you MUST strictly use this exact format pattern:
-               Sources:
-               Agentic AI
-               [List the exact deep-link URLs found inside the text of the OSINT Intercepts]
-            7. STRICT DEEP-LINK SOURCE ATTRIBUTION & BLACKLIST: You MUST extract and print ONLY the exact news article/tweet URLs provided inside the text of the RAW OSINT INTERCEPTS. You are STRICTLY FORBIDDEN from citing generic homepages or backend telemetry tools in your source list. DO NOT include URLs containing 'osint.scalytics.io', 'pizzint.watch', 'monitor-the-situation.com', 'conflictradar360.com', 'iranmonitor.org', 'redroom.live', or 'track-wanted.live' in the Sources section.
+               SOURCES: Agentic AI
+               [List exact news article URLs found inside the text of the OSINT Intercepts]
+            7. STRICT DEEP-LINK SOURCE ATTRIBUTION: Extract and print ONLY verified article URLs. Do not cite generic homepages, Wikipedia, or backend aggregators.
             8. NO DESIGNATIONS: You MUST NOT include an 'Owned By', 'Agent Name', or any analyst designation block anywhere in your output. The report must remain completely unbranded and ready for the user to append their own credentials.
-            9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Silently ignore irrelevant text. As long as you have AT LEAST ONE relevant piece of geopolitical data, generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
+            9. ZERO-KNOWLEDGE OVERRIDE: Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Silently ignore irrelevant text. As long as you have AT LEAST ONE relevant piece of geopolitical data, generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
             
             {table_directive}
             {map_directive}
@@ -212,12 +271,12 @@ class AnalystNode:
             Synthesize a highly professional, exhaustive daily intelligence brief focusing on semiconductor supply chains, critical minerals, and geopolitics.
             
             CRITICAL FORMATTING RULES:
-            1. STRICT TEMPORAL ANCHORING (TODAY'S NEWS ONLY): You MUST prioritize the most recent, specific kinetic events, policy shifts, and market anomalies from the RAW OSINT INTERCEPTS that occurred near {current_date_str}. DO NOT write generic, timeless overviews (e.g., "The US continues to restrict chips..."). State exactly WHAT happened TODAY, WHO was involved, and WHERE it occurred.
-            2. MANDATORY LENGTH & STRUCTURAL EXPANSION: You MUST write highly detailed, exhaustive paragraphs for every analytical section.
+            1. STRICT TEMPORAL ANCHORING (TODAY'S NEWS ONLY): Prioritize recent specific kinetic events, policy shifts, and market anomalies near {current_date_str}.
+            2. MANDATORY LENGTH & STRUCTURAL EXPANSION: Write highly detailed, exhaustive paragraphs for every analytical section.
             3. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). 
-            4. Sub-categorize all global news items cleanly based on detailed geography and sub-geography, prioritizing today's breaking news.
+            4. Sub-categorize all global news items cleanly based on detailed geography and sub-geography.
             5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
-            6. ZERO-KNOWLEDGE OVERRIDE: Because this is a live web scrape, your context will contain a mix of highly relevant articles, irrelevant noise, and paywall/bot-blocked text. You must SILENTLY IGNORE the irrelevant or blocked text. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists in the entire context block.
+            6. ZERO-KNOWLEDGE OVERRIDE: Silently ignore irrelevant or blocked text. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
             7. Return your output strictly as a JSON object matching the exact schema below.
             
             STRICT JSON SCHEMA REQUIRED:
@@ -267,10 +326,10 @@ class AnalystNode:
                 raw_text = response.text.strip()
                 map_coords_list = []
                 
-                # 🛑 PYTHON PHYSICAL KILL-SWITCH: Prevents Prompt Conflict Hallucinations 🛑
+                # 🛑 ZERO-KNOWLEDGE OVERRIDE
                 if "⚠️ Intelligence Constraint Triggered" in raw_text:
-                    print("[Node 4] ZERO-KNOWLEDGE OVERRIDE ENGAGED. Purging hallucinated report payload.")
-                    raw_text = "⚠️ **Intelligence Constraint:** The autonomous scraper intercepted irrelevant data (e.g., generic forms or unrelated recruitment topics). To adhere to strict Zero-Hallucination protocols, the analysis has been aborted rather than using generalized AI training data."
+                    print("[Node 4] ZERO-KNOWLEDGE OVERRIDE ENGAGED. Purging payload.")
+                    raw_text = "⚠️ **Intelligence Constraint:** The autonomous scraper intercepted irrelevant data. To adhere to strict Zero-Hallucination protocols, the analysis has been aborted."
                     
                     state['ui_markdown'] = raw_text
                     state['map_coords'] = []
@@ -290,7 +349,10 @@ class AnalystNode:
                     if mode == "CUSTOM_UI":
                         raw_text = raw_text.replace("###", "").replace("**", "")
 
-                    # 🌍 AGENTIC TOOL EXECUTION: 8-Tier Geospatial Consensus Array 
+                    # 🛡️ DETERMINISTIC PYTHON SOURCE SANITIZATION (Bans Wikipedia & Aggregators)
+                    raw_text = self.sanitize_sources_and_text(raw_text)
+
+                    # 🌍 AGENTIC TOOL EXECUTION: 8-Tier Geospatial Consensus Array
                     geo_matches = re.findall(r'\[GEO_TARGET:\s*(.+?)\]', raw_text)
                     
                     if geo_matches:
@@ -496,7 +558,7 @@ class AnalystNode:
                                 print(f"[Node 4] 🛰️ Target '{location_name}': Consensus Engine evaluated {len(valid_candidates)} hits. Winner: [{best_match['source']}]")
                                 raw_text += f"\n\n📍 **API Verified Geolocation ({best_match['source']}):** {best_match['address']}\n🧭 **Verified GPS Coordinates:** {best_match['lat']}, {best_match['lon']}"
                             else:
-                                print(f"[Node 4] ⚠️ Critical Error: Consensus Engine found 0 matches for '{location_name}'")
+                                print(f"[Node 4] ⚠️ Target '{location_name}' could not be resolved across mapping registries.")
                                 raw_text += f"\n\n*(Agent Note: Target '{location_name}' could not be resolved with sufficient precision across mapping registries.)*"
 
                     state['ui_markdown'] = raw_text
