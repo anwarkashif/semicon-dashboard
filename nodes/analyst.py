@@ -136,7 +136,7 @@ class AnalystNode:
                 RULES:
                 - "mode": 'CUSTOM_UI' if the prompt is a complex research request/briefing. 'CONVERSATIONAL' if it's a short greeting/chat.
                 - "use_tables": true ONLY if the prompt asks for metrics, anomalies, costs, delays, numbers, comparisons, or structured data. Otherwise false.
-                - "use_maps": true ONLY if the prompt focuses heavily on physical conflict zones, kinetic strikes, geography, specific theaters, military bases, or frontline locations. Otherwise false.
+                - "use_maps": true ONLY if the prompt explicitly asks for a map, locations, or coordinates, OR if it focuses heavily on physical conflict zones, kinetic strikes, and frontline geography. Otherwise false.
                 
                 Output ONLY valid JSON.
                 """
