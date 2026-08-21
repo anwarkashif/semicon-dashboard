@@ -131,13 +131,14 @@ class AnalystNode:
             map_directive = """
             [GEOSPATIAL MAP RENDERING TRIGGERED]
             You MUST generate mapping coordinates to visualize the geographic threat. Append a list of exact location tags at the absolute bottom of your response (strictly AFTER the Sources section).
-            TAG FORMAT: [GEO_TARGET: Primary Name | Local Name | Country]
-            RULE: Create one tag for EVERY specific city, town, base, or chokepoint explicitly mentioned in your analysis.
-            CRITICAL ANTI-FILLER RULE: DO NOT create a heading, title, or intro sentence (e.g., "Here are the geographic locations:" or "GEOSPATIAL THREAT VISUALIZATION"). Output ONLY the raw [GEO_TARGET] bracketed tags on their own lines. They are invisible machine triggers, not readable text for the user.
-            EXAMPLES:
-              [GEO_TARGET: Sudzha | Суджа | Russia]
-              [GEO_TARGET: Pokrovsk | Покровськ | Ukraine]
-              [GEO_TARGET: Strait of Hormuz | تنگه هرمز | Iran]
+
+            TAG SYNTAX FORMAT:
+            [GEO_TARGET: Location Name | Romanized Local Name | Country Name]
+
+            STRICT GEOSPATIAL EXTRACTION RULES:
+            1. STRICT CONTEXT-ONLY RULE: You MUST ONLY generate [GEO_TARGET] tags for specific cities, ports, military bases, straits, or towns that are EXPLICITLY discussed in your analytical text above.
+            2. ZERO PROMPT CONTAMINATION: NEVER output sample names or locations that are not part of the active intelligence report.
+            3. NO SECTION HEADERS OR INTRODUCTORY PROSE: Do NOT write any headings, bullet titles, or intro sentences (e.g., do NOT write "GEOSPATIAL THREAT VISUALIZATION:", "Identified flashpoints:", or "Here are the coordinates:"). Output ONLY the raw bracketed [GEO_TARGET: ...] tags on their own lines at the very end.
             """
 
         # ==========================================
