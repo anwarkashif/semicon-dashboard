@@ -169,7 +169,6 @@ class ExtractorNode:
         if not urls and user_cmd:
             urls = self.clean_urls_from_text(user_cmd)
             
-        # 🛑 CRITICAL FIX: Establish a default high-value query if the cron job runs with an empty prompt
         search_query = "geopolitics OR semiconductor OR sanctions OR military OR supply chain"
         skip_heavy_osint = False
 
@@ -261,9 +260,51 @@ class ExtractorNode:
             except Exception as e: print(f"[Node 2] Guardian feeder bypassed: {e}")
 
             # =========================================================
-            # 🚀 AGENTIC 5.5: NEW TARGET EXTRACTIONS
+            # 🚀 AGENTIC 6.0: NEW TARGET EXTRACTIONS
             # =========================================================
             
+            # 🎯 US STRIKE RADAR
+            try:
+                usr_url = "https://usstrikeradar.com/events.json"
+                usr_headers = self._get_headers()
+                usr_headers['Origin'] = 'https://usstrikeradar.com'
+                usr_headers['Referer'] = 'https://usstrikeradar.com/'
+                usr_res = self.session.get(usr_url, headers=usr_headers, timeout=10)
+                if usr_res.status_code == 200:
+                    data = usr_res.json()
+                    compiled_usr = f"### US Strike Radar Telemetry:\n- Events: {str(data)[:1500]} [URL: https://usstrikeradar.com/]\n"
+                    extracted_payloads.append({"source_url": "https://usstrikeradar.com", "content": compiled_usr.strip(), "method": "us_strike_radar"})
+                    print("[Node 2] Injected US Strike Radar data.")
+            except Exception as e: print(f"[Node 2] US Strike Radar bypassed: {e}")
+
+            # 🗺️ GEOCONFIRMED
+            try:
+                geo_url = "https://geoconfirmed.org/api/placemark/World/geojson"
+                geo_headers = self._get_headers()
+                geo_headers['Origin'] = 'https://geoconfirmed.org'
+                geo_headers['Referer'] = 'https://geoconfirmed.org/map/world'
+                geo_res = self.session.get(geo_url, headers=geo_headers, timeout=10)
+                if geo_res.status_code == 200:
+                    data = geo_res.json()
+                    compiled_geo = f"### GeoConfirmed Global Geodata:\n- Features: {str(data.get('features', []))[:1500]} [URL: https://geoconfirmed.org/map/world]\n"
+                    extracted_payloads.append({"source_url": "https://geoconfirmed.org", "content": compiled_geo.strip(), "method": "geoconfirmed"})
+                    print("[Node 2] Injected GeoConfirmed data.")
+            except Exception as e: print(f"[Node 2] GeoConfirmed bypassed: {e}")
+
+            # ✈️ SKYOSINT
+            try:
+                sky_url = "https://skyosint.io/data/locations.json"
+                sky_headers = self._get_headers()
+                sky_headers['Origin'] = 'https://skyosint.io'
+                sky_headers['Referer'] = 'https://skyosint.io/app'
+                sky_res = self.session.get(sky_url, headers=sky_headers, timeout=10)
+                if sky_res.status_code == 200:
+                    data = sky_res.json()
+                    compiled_sky = f"### SkyOSINT Aviation & Satellite Tracking:\n- Locations: {str(data)[:1500]} [URL: https://skyosint.io/app]\n"
+                    extracted_payloads.append({"source_url": "https://skyosint.io", "content": compiled_sky.strip(), "method": "skyosint"})
+                    print("[Node 2] Injected SkyOSINT data.")
+            except Exception as e: print(f"[Node 2] SkyOSINT bypassed: {e}")
+
             # 🇮🇷 IRAN MONITOR
             try:
                 iran_url = "https://www.iranmonitor.org/api/daily-summary?lang=en"
@@ -315,7 +356,7 @@ class ExtractorNode:
                         print("[Node 2] Injected Redroom Live data.")
             except Exception as e: print(f"[Node 2] Redroom bypassed: {e}")
 
-            # 🎯 TRACK-WANTED LIVE (Agentic 5.5 Integration)
+            # 🎯 TRACK-WANTED LIVE 
             try:
                 tw_url = "https://track-wanted.live/_serverFn/e312619f033799b2df61c988154089f01bbe3def1e5bb7238b88b2d49c27d4e0"
                 tw_headers = self._get_headers()
@@ -323,10 +364,7 @@ class ExtractorNode:
                 tw_headers['Referer'] = 'https://track-wanted.live/globe?m=wanted'
                 tw_headers['Content-Type'] = 'application/json'
                 tw_headers['x-tsr-serverfn'] = 'true'
-                
-                # Using the exact _serverFn payload mapped from the network trace
                 tw_payload = {"t":{"t":10,"i":0,"p":{"k":["data"],"v":[{"t":10,"i":1,"p":{"k":["query","size"],"v":[{"t":1,"s":"Klaus-Michael Kühne"},{"t":0,"s":320}]},"o":0}]},"o":0},"f":63,"m":[]}
-                
                 tw_res = self.session.post(tw_url, headers=tw_headers, json=tw_payload, timeout=10)
                 if tw_res.status_code == 200:
                     data = tw_res.json()

@@ -112,8 +112,68 @@ def test_guardian_api():
     return []
 
 # =========================================================
-# 🚀 NEW OSINT TARGET EXTRACTIONS (F12 Traces)
+# 🚀 NEW OSINT TARGET EXTRACTIONS (Agentic 6)
 # =========================================================
+
+def test_us_strike_radar():
+    print("📡 Targeting Backend: US Strike Radar (/events.json)")
+    url = "https://usstrikeradar.com/events.json"
+    local_headers = HEADERS.copy()
+    local_headers['Origin'] = 'https://usstrikeradar.com'
+    local_headers['Referer'] = 'https://usstrikeradar.com/'
+
+    try:
+        response = requests.get(url, headers=local_headers, timeout=15)
+        if response.status_code == 200:
+            data = response.json()
+            print("✅ SUCCESS: Extracted Events JSON payload from US Strike Radar.")
+            print(f"    Preview: {str(data)[:200]}...\n")
+            return data
+        else:
+            print(f"❌ FAILED [US Strike Radar]: HTTP {response.status_code}\n")
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE [US Strike Radar]: {e}\n")
+    return []
+
+def test_geoconfirmed():
+    print("📡 Targeting Backend: GeoConfirmed (/api/placemark/World/geojson)")
+    url = "https://geoconfirmed.org/api/placemark/World/geojson"
+    local_headers = HEADERS.copy()
+    local_headers['Origin'] = 'https://geoconfirmed.org'
+    local_headers['Referer'] = 'https://geoconfirmed.org/map/world'
+
+    try:
+        response = requests.get(url, headers=local_headers, timeout=15)
+        if response.status_code == 200:
+            data = response.json()
+            print("✅ SUCCESS: Extracted World GeoJSON payload from GeoConfirmed.")
+            print(f"    Preview: {str(data)[:200]}...\n")
+            return data
+        else:
+            print(f"❌ FAILED [GeoConfirmed]: HTTP {response.status_code}\n")
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE [GeoConfirmed]: {e}\n")
+    return []
+
+def test_skyosint():
+    print("📡 Targeting Backend: SkyOSINT (/data/locations.json)")
+    url = "https://skyosint.io/data/locations.json"
+    local_headers = HEADERS.copy()
+    local_headers['Origin'] = 'https://skyosint.io'
+    local_headers['Referer'] = 'https://skyosint.io/app'
+
+    try:
+        response = requests.get(url, headers=local_headers, timeout=15)
+        if response.status_code == 200:
+            data = response.json()
+            print("✅ SUCCESS: Extracted Locations JSON payload from SkyOSINT.")
+            print(f"    Preview: {str(data)[:200]}...\n")
+            return data
+        else:
+            print(f"❌ FAILED [SkyOSINT]: HTTP {response.status_code}\n")
+    except Exception as e:
+        print(f"❌ CRITICAL FAILURE [SkyOSINT]: {e}\n")
+    return []
 
 def test_iran_monitor():
     print("📡 Targeting Backend: Iran Monitor (/api/daily-summary)")
@@ -180,7 +240,6 @@ def test_redroom_live():
 
 def test_track_wanted():
     print("📡 Targeting Backend: Track-Wanted Live (_serverFn Intercept)")
-    # Decoded Next.js server function intercept from the F12 trace
     url = "https://track-wanted.live/_serverFn/e312619f033799b2df61c988154089f01bbe3def1e5bb7238b88b2d49c27d4e0"
     
     local_headers = HEADERS.copy()
@@ -189,7 +248,6 @@ def test_track_wanted():
     local_headers['Content-Type'] = 'application/json'
     local_headers['x-tsr-serverfn'] = 'true'
     
-    # Extracted SuperJSON payload tracking a specific target dossier
     payload = {"t":{"t":10,"i":0,"p":{"k":["data"],"v":[{"t":10,"i":1,"p":{"k":["query","size"],"v":[{"t":1,"s":"Klaus-Michael Kühne"},{"t":0,"s":320}]},"o":0}]},"o":0},"f":63,"m":[]}
     
     try:
@@ -317,7 +375,7 @@ def test_liveuamap():
 # =========================================================
 if __name__ == "__main__":
     print("==================================================")
-    print("🔍 INITIATING AGENTIC 5.5 LIVE API DIAGNOSTICS")
+    print("🔍 INITIATING AGENTIC 6 LIVE API DIAGNOSTICS")
     print("==================================================\n")
     
     # 1. Global Aggregators
@@ -325,7 +383,12 @@ if __name__ == "__main__":
     gnews_data = test_gnews_api()
     guardian_data = test_guardian_api()
 
-    print("--- NEW OSINT TARGET EXTRACTIONS ---")
+    print("--- NEW OSINT TARGET EXTRACTIONS (Agentic 6) ---")
+    us_strike_data = test_us_strike_radar()
+    geoconfirmed_data = test_geoconfirmed()
+    skyosint_data = test_skyosint()
+
+    print("--- EXISTING OSINT TARGET EXTRACTIONS ---")
     iran_data = test_iran_monitor()
     cr360_data = test_conflict_radar_360()
     redroom_data = test_redroom_live()
@@ -333,7 +396,7 @@ if __name__ == "__main__":
     war_monitor_data = extract_war_monitor()
     mts_data = extract_monitor_the_situation()
 
-    print("--- EXISTING OSINT FEEDS ---")
+    print("--- LEGACY KINETIC FEEDS ---")
     wm_data = test_world_monitor()
     pz_data = test_pizzint_watch()
     psy_data = test_psyopoly_supabase()

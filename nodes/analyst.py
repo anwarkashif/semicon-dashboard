@@ -38,6 +38,9 @@ class AnalystNode:
             "iranmonitor.org",
             "redroom.live",
             "track-wanted.live",
+            "usstrikeradar.com",
+            "geoconfirmed.org",
+            "skyosint.io",
             "earthengine.google.com",
             "liveuamap.com",
             "warmonitor.app",
@@ -198,7 +201,7 @@ class AnalystNode:
             STRICT GEOSPATIAL EXTRACTION RULES:
             1. STRICT CONTEXT-ONLY RULE: You MUST ONLY generate [GEO_TARGET] tags for specific cities, ports, military bases, straits, or towns that are EXPLICITLY discussed in your analytical text above.
             2. ZERO PROMPT CONTAMINATION: NEVER output sample names or locations that are not part of the active intelligence report.
-            3. NO SECTION HEADERS OR INTRODUCTORY PROSE: Do NOT write any headings, bullet titles, or intro sentences (e.g., do NOT write "GEOSPATIAL THREAT VISUALIZATION:", "Identified flashpoints:", or "Here are the coordinates:"). Output ONLY the raw bracketed [GEO_TARGET: ...] tags on their own lines at the very end.
+            3. NO SECTION HEADERS OR INTRODUCTORY PROSE: Do NOT write any headings, bullet titles, or intro sentences. Output ONLY the raw bracketed [GEO_TARGET: ...] tags on their own lines at the very end.
             """
 
         # ==========================================
@@ -246,9 +249,9 @@ class AnalystNode:
             6. Under the Sources section, you MUST strictly use this exact format pattern:
                SOURCES: Agentic AI
                [List exact news article URLs found inside the text of the OSINT Intercepts]
-            7. STRICT DEEP-LINK SOURCE ATTRIBUTION: Extract and print ONLY verified article URLs. Do not cite generic homepages, Wikipedia, or backend aggregators.
+            7. STRICT DEEP-LINK SOURCE ATTRIBUTION & BLACKLIST: Extract and print ONLY verified article URLs. Do not cite generic homepages, Wikipedia, or backend aggregators. DO NOT include URLs containing 'osint.scalytics.io', 'pizzint.watch', 'monitor-the-situation.com', 'conflictradar360.com', 'iranmonitor.org', 'redroom.live', 'track-wanted.live', 'usstrikeradar.com', 'geoconfirmed.org', or 'skyosint.io' in the Sources section.
             8. NO DESIGNATIONS: You MUST NOT include an 'Owned By', 'Agent Name', or any analyst designation block anywhere in your output. The report must remain completely unbranded and ready for the user to append their own credentials.
-            9. ZERO-KNOWLEDGE OVERRIDE: Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Silently ignore irrelevant text. As long as you have AT LEAST ONE relevant piece of geopolitical data, generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
+            9. ZERO-KNOWLEDGE OVERRIDE (ANTI-REPORT HALLUCINATION): Your analysis MUST be grounded in the RAW OSINT INTERCEPTS. Silently ignore irrelevant text. As long as you have AT LEAST ONE relevant piece of geopolitical data, generate the full report. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
             
             {table_directive}
             {map_directive}
@@ -274,7 +277,7 @@ class AnalystNode:
             1. STRICT TEMPORAL ANCHORING (TODAY'S NEWS ONLY): Prioritize recent specific kinetic events, policy shifts, and market anomalies near {current_date_str}.
             2. MANDATORY LENGTH & STRUCTURAL EXPANSION: Write highly detailed, exhaustive paragraphs for every analytical section.
             3. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). 
-            4. Sub-categorize all global news items cleanly based on detailed geography and sub-geography.
+            4. Sub-categorize all global news items cleanly based on detailed geography and sub-geography, prioritizing today's breaking news.
             5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
             6. ZERO-KNOWLEDGE OVERRIDE: Silently ignore irrelevant or blocked text. ONLY abort and output exactly "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
             7. Return your output strictly as a JSON object matching the exact schema below.
@@ -558,7 +561,7 @@ class AnalystNode:
                                 print(f"[Node 4] 🛰️ Target '{location_name}': Consensus Engine evaluated {len(valid_candidates)} hits. Winner: [{best_match['source']}]")
                                 raw_text += f"\n\n📍 **API Verified Geolocation ({best_match['source']}):** {best_match['address']}\n🧭 **Verified GPS Coordinates:** {best_match['lat']}, {best_match['lon']}"
                             else:
-                                print(f"[Node 4] ⚠️ Target '{location_name}' could not be resolved across mapping registries.")
+                                print(f"[Node 4] ⚠️ Critical Error: Consensus Engine found 0 matches for '{location_name}'")
                                 raw_text += f"\n\n*(Agent Note: Target '{location_name}' could not be resolved with sufficient precision across mapping registries.)*"
 
                     state['ui_markdown'] = raw_text
