@@ -130,9 +130,10 @@ class AnalystNode:
         if use_maps:
             map_directive = """
             [GEOSPATIAL MAP RENDERING TRIGGERED]
-            You MUST generate mapping coordinates to visualize the geographic threat. Append a list of exact location tags at the absolute bottom of your response.
+            You MUST generate mapping coordinates to visualize the geographic threat. Append a list of exact location tags at the absolute bottom of your response (strictly AFTER the Sources section).
             TAG FORMAT: [GEO_TARGET: Primary Name | Local Name | Country]
             RULE: Create one tag for EVERY specific city, town, base, or chokepoint explicitly mentioned in your analysis.
+            CRITICAL ANTI-FILLER RULE: DO NOT create a heading, title, or intro sentence (e.g., "Here are the geographic locations:" or "GEOSPATIAL THREAT VISUALIZATION"). Output ONLY the raw [GEO_TARGET] bracketed tags on their own lines. They are invisible machine triggers, not readable text for the user.
             EXAMPLES:
               [GEO_TARGET: Sudzha | Суджа | Russia]
               [GEO_TARGET: Pokrovsk | Покровськ | Ukraine]
