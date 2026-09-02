@@ -289,7 +289,7 @@ class AnalystNode:
               "BLUF": "BLUF summary...",
               "Executive_Summary": "Executive summary...",
               "Top_News": {{
-                 "Global": ["Unique Specific News 1", "Unique Specific News 2", "Unique Specific News 3", "Unique Specific News 4", "Unique Specific News 5", "Unique Specific News 6", "Unique Specific News 7", "Unique Specific News 8", "Unique Specific News 9", "Unique Specific News 10", "Unique Specific News 11", "Unique Specific News 12", "Unique Specific News 13", "Unique Specific News 14", "Unique Specific News 15"]
+                 "Global": ["Unique Asia Specific News 1", "Unique South Asia Specific News 2", "Unique Central Asia Specific News 3", "Unique South East Asia Specific News 4", "Unique East Asia Specific News 5", "Unique Eastern Europe Specific News 6", "Unique Central Europe Specific News 7", "Unique Western Europe Specific News 8", "Unique Southern Europe Specific News 9", "Unique North America Specific News 10", "Unique South America Specific News 11", "Unique Oceanic Specific News 12", "Unique Africa Specific News 13", "Unique Globe Specific News 14", "Unique Outer Space Specific News 15", "Unique West Asia Specific News 15"]
               }},
               "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10", "Trend 11", "Trend 12", "Trend 13", "Trend 14", "Trend 15"],
               "Situational_Update_And_Threat_Telemetry": {{
