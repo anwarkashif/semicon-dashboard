@@ -273,65 +273,72 @@ class AnalystNode:
             
             Synthesize a highly professional, exhaustive daily intelligence brief focusing on semiconductor supply chains, critical minerals, defense, and geopolitics.
             
-            CRITICAL FORMATTING & MANDATE RULES:
-            1. STRICT TEMPORAL ANCHORING: Prioritize recent specific kinetic events, military alerts, policy shifts, and market anomalies occurring near {current_date_str}.
-            2. MANDATORY TOPICAL CRITERIA: For EVERY geography and sub-geography in 'Top_News', you MUST strictly provide exactly 3 specific, verified news entries covering ONLY:
-               - Geopolitics, geoeconomics, national security, defense, conflict, war, military, weaponry, arsenal, and military assets (naval, land, air force).
-               - Outer space, reconnaissance satellites, orbital assets, and space station developments.
-               - Natural disasters: flood, earthquake, tsunami, landslide, cyclone, tornado, hurricane, flash flood, cloud burst, wildfire, and heatwave.
-               - Kinetic and security flashpoints: shooting incidents, stabbing incidents, terrorist attacks, bomb blasts, surgical strikes, invasions, drone/kamikaze operations, and rocket artillery.
-               - Strategic diplomacy: official and unofficial visits by heads of state, bilateral/multilateral summits.
-               - Defense industry and economic choke points: weapon industry developments, blockades, sanctions, maritime straits, strait closures, and airspace closures.
-               - Intelligence and multilateral bodies: NATO, CIA, MI6, Mossad, UN, BRICS, SCO, G20, AU, AUKUS, GCC, and national intelligence agency activities.
-            3. STRICT ANTI-DUPLICATION (CRITICAL): You MUST NOT mention the same country, event, or incident in more than one category. If an event is listed in 'Southeast_Asia', it CANNOT appear in 'Global_Multilateral' or 'Asia_Pan_Regional'. Ensure diverse global coverage.
-            4. STRICT ANTI-FILLER (NO GENERIC STATEMENTS): You are FORBIDDEN from writing "No specific events reported", "Agencies are monitoring", or "Security remains a priority". If a specific region lacks breaking news in the immediate context window, you MUST extract an ongoing strategic shift, defense procurement, or macro-trend for that region from the broader RAW OSINT INTERCEPTS. EVERY bullet must contain a specific actor, action, and location.
-            5. MANDATORY LENGTH & STRUCTURAL EXPANSION: Write exhaustive, dense analytical prose for BLUF, Executive Summary, Situational Update, Operational Impacts, Risk Analysis, and Predictive Analysis.
-            6. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). Write all text cleanly.
-            7. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
-            8. ZERO-KNOWLEDGE OVERRIDE: Silently ignore noise or paywalls. Ground analysis strictly in RAW OSINT INTERCEPTS. ONLY abort with "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
-            9. Return your output strictly as a JSON object matching the exact schema below. Do not include markdown formatting like ```json in the output.
+            CRITICAL FORMATTING & STRICT VERIFIABILITY RULES:
+            1. STRICT TEMPORAL ANCHORING & FACTUAL GROUNDING: Every reported event MUST be grounded strictly in the RAW OSINT INTERCEPTS for {current_date_str}. You are FORBIDDEN from generating speculative, uncorroborated, or generic boilerplate text. Every single news item MUST contain a specific entity/actor, a concrete kinetic/diplomatic action, and an exact geographic locus.
+            2. DYNAMIC REGIONAL PRUNING (ZERO-HALLUCINATION ENFORCEMENT): 
+               - You MUST NOT output placeholder, generic, or passive filler entries (e.g., FORBIDDEN: "No specific events reported", "Agencies are monitoring", "Security remains a priority", "Diplomatic engagement continues", "Authorities are reviewing").
+               - If the RAW OSINT INTERCEPTS do NOT contain concrete, verifiable news for a specific regional category occurring today, YOU MUST COMPLETELY OMIT THAT KEY FROM 'Top_News'. Output ONLY the region keys that possess verified, factual intelligence in the ingested payload.
+               - For any region that is included, provide up to 3 (minimum 1, maximum 3) distinct, highly detailed news items.
+            3. DEDICATED TACTICAL OSINT & NATURAL DISASTERS SECTION:
+               - You MUST include a dedicated key named 'Tactical_OSINT_And_Natural_Disasters' located immediately below 'Global_Multilateral'.
+               - This section is exclusively dedicated to concrete, real-time tactical and environmental incidents: floods, earthquakes, tsunamis, landslides, cyclones, tornadoes, hurricanes, flash floods, cloud bursts, wildfires, heatwaves, active shooting incidents, mass stabbings, terrorist attacks, and bomb blasts. If zero such incidents occurred today in the intercepts, omit this key.
+            4. EXPANDED OUTER SPACE & AEROSPACE CRITERIA:
+               - The 'Outer_Space' category MUST specifically prioritize verifiable developments regarding: NASA, ISRO, China National Space Administration (CNSA), Roscosmos, European Space Agency (ESA), commercial/defense aerospace entities (e.g., SpaceX, Blue Origin), reconnaissance/early-warning satellite constellations, anti-satellite (ASAT) capabilities, orbital surveillance assets, and space stations.
+            5. STRICT GLOBAL DIVERSITY & ANTI-DUPLICATION:
+               - You MUST NOT mention the same country, incident, or ongoing trial across multiple headings. If an event is cited under 'Southeast_Asia', it CANNOT appear under 'Global_Multilateral' or 'Tactical_OSINT_And_Natural_Disasters'. Distribute coverage across diverse international theaters.
+            6. MANDATORY COMPREHENSIVE PROSE:
+               - Write dense, intelligence-grade analytical paragraphs for BLUF, Executive Summary, Situational Update, Operational Impacts, Risk Analysis, and Predictive Analysis.
+               - Do NOT use markdown header hashes (###) or bold markdown asterisks (**). Write all text cleanly.
+            7. STRICT SOURCE INTEGRITY: Wikipedia is strictly forbidden.
+            8. Return your output strictly as a JSON object matching the schema below.
             
+            VALID REGIONAL KEYS FOR 'Top_News' (Include ONLY keys with verified news today):
+            - "South_Asia"
+            - "Central_Asia"
+            - "Southeast_Asia"
+            - "East_Asia"
+            - "West_Asia_Middle_East"
+            - "Northern_Europe"
+            - "Eastern_Europe"
+            - "Central_Europe"
+            - "Western_Europe"
+            - "Southern_Europe"
+            - "North_America"
+            - "South_America"
+            - "Africa"
+            - "Oceania"
+            - "Outer_Space"
+            - "Global_Multilateral"
+            - "Tactical_OSINT_And_Natural_Disasters"
+
             STRICT JSON SCHEMA REQUIRED:
             {{
               "Title": "Strategic Intelligence Brief",
               "Threat_Level": "LOW/MODERATE/HIGH/CRITICAL/EXTREME",
-              "BLUF": "BLUF summary...",
-              "Executive_Summary": "Executive summary...",
+              "BLUF": "Dense BLUF summary...",
+              "Executive_Summary": "Exhaustive executive summary...",
               "Top_News": {{
-                 "Asia_Pan_Regional": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "South_Asia": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Central_Asia": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Southeast_Asia": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "East_Asia": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "West_Asia_Middle_East": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Eastern_Europe": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Central_Europe": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Western_Europe": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Southern_Europe": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "North_America": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "South_America": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Africa": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Oceania": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Outer_Space": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
-                 "Global_Multilateral": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"]
+                 "[DYNAMIC_VALID_REGION_KEY_1]": ["Verified fact-grounded event 1", "Verified fact-grounded event 2"],
+                 "[DYNAMIC_VALID_REGION_KEY_2]": ["Verified fact-grounded event 1", "Verified fact-grounded event 2", "Verified fact-grounded event 3"],
+                 "[DYNAMIC_VALID_REGION_KEY_3]": ["Verified fact-grounded event 1"]
               }},
               "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10", "Trend 11", "Trend 12", "Trend 13", "Trend 14", "Trend 15"],
               "Situational_Update_And_Threat_Telemetry": {{
-                 "Overall_Analysis": "Analysis details..."
+                 "Overall_Analysis": "Detailed analytical breakdown..."
               }},
               "Operational_Impacts": {{
-                 "Overall_Analysis": "Analysis details..."              
+                 "Overall_Analysis": "Supply chain, logistical, and infrastructure impacts..."              
               }},
               "Risk_And_Threat_Analysis": {{
-                 "Overall_Analysis": "Analysis details..."
+                 "Overall_Analysis": "Near-term and medium-term tactical risks..."
               }},
-              "Predictive_Analysis": "Forecast details..."
+              "Predictive_Analysis": "30 to 72 hour strategic forecast..."
             }}
             """
             contents_payload = f"CONTEXT SWEEP DATA:\n{compiled_context}"
             gen_config = types.GenerateContentConfig(
                 system_instruction=legacy_instruction, 
-                temperature=0.2, 
+                temperature=0.1, 
                 response_mime_type="application/json",
                 max_output_tokens=8192
             )
