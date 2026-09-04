@@ -274,8 +274,8 @@ class AnalystNode:
             Synthesize a highly professional, exhaustive daily intelligence brief focusing on semiconductor supply chains, critical minerals, defense, and geopolitics.
             
             CRITICAL FORMATTING & MANDATE RULES:
-            1. STRICT TEMPORAL ANCHORING (TODAY'S NEWS ONLY): Prioritize recent specific kinetic events, military alerts, policy shifts, and market anomalies occurring near {current_date_str}.
-            2. MANDATORY TOPICAL CRITERIA: For EVERY geography and sub-geography in 'Top_News', you MUST strictly provide exactly 3 specific, verified news entries covering:
+            1. STRICT TEMPORAL ANCHORING: Prioritize recent specific kinetic events, military alerts, policy shifts, and market anomalies occurring near {current_date_str}.
+            2. MANDATORY TOPICAL CRITERIA: For EVERY geography and sub-geography in 'Top_News', you MUST strictly provide exactly 3 specific, verified news entries covering ONLY:
                - Geopolitics, geoeconomics, national security, defense, conflict, war, military, weaponry, arsenal, and military assets (naval, land, air force).
                - Outer space, reconnaissance satellites, orbital assets, and space station developments.
                - Natural disasters: flood, earthquake, tsunami, landslide, cyclone, tornado, hurricane, flash flood, cloud burst, wildfire, and heatwave.
@@ -283,11 +283,13 @@ class AnalystNode:
                - Strategic diplomacy: official and unofficial visits by heads of state, bilateral/multilateral summits.
                - Defense industry and economic choke points: weapon industry developments, blockades, sanctions, maritime straits, strait closures, and airspace closures.
                - Intelligence and multilateral bodies: NATO, CIA, MI6, Mossad, UN, BRICS, SCO, G20, AU, AUKUS, GCC, and national intelligence agency activities.
-            3. MANDATORY LENGTH & STRUCTURAL EXPANSION: Write exhaustive, dense analytical prose for BLUF, Executive Summary, Situational Update, Operational Impacts, Risk Analysis, and Predictive Analysis.
-            4. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). Write all text cleanly.
-            5. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
-            6. ZERO-KNOWLEDGE OVERRIDE: Silently ignore noise or paywalls. Ground analysis in RAW OSINT INTERCEPTS. ONLY abort with "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant data exists.
-            7. Return your output strictly as a JSON object matching the exact schema below.
+            3. STRICT ANTI-DUPLICATION (CRITICAL): You MUST NOT mention the same country, event, or incident in more than one category. If an event is listed in 'Southeast_Asia', it CANNOT appear in 'Global_Multilateral' or 'Asia_Pan_Regional'. Ensure diverse global coverage.
+            4. STRICT ANTI-FILLER (NO GENERIC STATEMENTS): You are FORBIDDEN from writing "No specific events reported", "Agencies are monitoring", or "Security remains a priority". If a specific region lacks breaking news in the immediate context window, you MUST extract an ongoing strategic shift, defense procurement, or macro-trend for that region from the broader RAW OSINT INTERCEPTS. EVERY bullet must contain a specific actor, action, and location.
+            5. MANDATORY LENGTH & STRUCTURAL EXPANSION: Write exhaustive, dense analytical prose for BLUF, Executive Summary, Situational Update, Operational Impacts, Risk Analysis, and Predictive Analysis.
+            6. You MUST NOT use markdown header hashes (###) or markdown bold stars (**). Write all text cleanly.
+            7. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
+            8. ZERO-KNOWLEDGE OVERRIDE: Silently ignore noise or paywalls. Ground analysis strictly in RAW OSINT INTERCEPTS. ONLY abort with "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
+            9. Return your output strictly as a JSON object matching the exact schema below. Do not include markdown formatting like ```json in the output.
             
             STRICT JSON SCHEMA REQUIRED:
             {{
@@ -296,97 +298,29 @@ class AnalystNode:
               "BLUF": "BLUF summary...",
               "Executive_Summary": "Executive summary...",
               "Top_News": {{
-                 "Asia_Pan_Regional": [
-                   "Specific Asia news 1",
-                   "Specific Asia news 2",
-                   "Specific Asia news 3"
-                 ],
-                 "South_Asia": [
-                   "Specific South Asia news 1",
-                   "Specific South Asia news 2",
-                   "Specific South Asia news 3"
-                 ],
-                 "Central_Asia": [
-                   "Specific Central Asia news 1",
-                   "Specific Central Asia news 2",
-                   "Specific Central Asia news 3"
-                 ],
-                 "Southeast_Asia": [
-                   "Specific Southeast Asia news 1",
-                   "Specific Southeast Asia news 2",
-                   "Specific Southeast Asia news 3"
-                 ],
-                 "East_Asia": [
-                   "Specific East Asia news 1",
-                   "Specific East Asia news 2",
-                   "Specific East Asia news 3"
-                 ],
-                 "West_Asia_Middle_East": [
-                   "Specific West Asia news 1",
-                   "Specific West Asia news 2",
-                   "Specific West Asia news 3"
-                 ],
-                 "Eastern_Europe": [
-                   "Specific Eastern Europe news 1",
-                   "Specific Eastern Europe news 2",
-                   "Specific Eastern Europe news 3"
-                 ],
-                 "Central_Europe": [
-                   "Specific Central Europe news 1",
-                   "Specific Central Europe news 2",
-                   "Specific Central Europe news 3"
-                 ],
-                 "Western_Europe": [
-                   "Specific Western Europe news 1",
-                   "Specific Western Europe news 2",
-                   "Specific Western Europe news 3"
-                 ],
-                 "Southern_Europe": [
-                   "Specific Southern Europe news 1",
-                   "Specific Southern Europe news 2",
-                   "Specific Southern Europe news 3"
-                 ],
-                 "North_America": [
-                   "Specific North America news 1",
-                   "Specific North America news 2",
-                   "Specific North America news 3"
-                 ],
-                 "South_America": [
-                   "Specific South America news 1",
-                   "Specific South America news 2",
-                   "Specific South America news 3"
-                 ],
-                 "Africa": [
-                   "Specific Africa news 1",
-                   "Specific Africa news 2",
-                   "Specific Africa news 3"
-                 ],
-                 "Oceania": [
-                   "Specific Oceania news 1",
-                   "Specific Oceania news 2",
-                   "Specific Oceania news 3"
-                 ],
-                 "Outer_Space": [
-                   "Specific Outer Space / Satellite news 1",
-                   "Specific Outer Space / Satellite news 2",
-                   "Specific Outer Space / Satellite news 3"
-                 ],
-                 "Global_Multilateral": [
-                   "Specific Global / Treaty / Summit news 1",
-                   "Specific Global / Treaty / Summit news 2",
-                   "Specific Global / Treaty / Summit news 3"
-                 ]
+                 "Asia_Pan_Regional": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "South_Asia": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Central_Asia": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Southeast_Asia": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "East_Asia": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "West_Asia_Middle_East": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Eastern_Europe": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Central_Europe": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Western_Europe": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Southern_Europe": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "North_America": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "South_America": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Africa": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Oceania": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Outer_Space": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"],
+                 "Global_Multilateral": ["Specific, non-generic news 1", "Specific, non-generic news 2", "Specific, non-generic news 3"]
               }},
-              "Watch_Out": [
-                 "Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5",
-                 "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10",
-                 "Trend 11", "Trend 12", "Trend 13", "Trend 14", "Trend 15"
-              ],
+              "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10", "Trend 11", "Trend 12", "Trend 13", "Trend 14", "Trend 15"],
               "Situational_Update_And_Threat_Telemetry": {{
                  "Overall_Analysis": "Analysis details..."
               }},
               "Operational_Impacts": {{
-                 "Overall_Analysis": "Analysis details..."
+                 "Overall_Analysis": "Analysis details..."              
               }},
               "Risk_And_Threat_Analysis": {{
                  "Overall_Analysis": "Analysis details..."
