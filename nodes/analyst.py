@@ -278,7 +278,7 @@ class AnalystNode:
             2. DYNAMIC REGIONAL PRUNING (ZERO-HALLUCINATION ENFORCEMENT): 
                - You MUST NOT output placeholder, generic, or passive filler entries (e.g., FORBIDDEN: "No specific events reported", "Agencies are monitoring", "Security remains a priority", "Diplomatic engagement continues", "Authorities are reviewing").
                - If the RAW OSINT INTERCEPTS do NOT contain concrete, verifiable news for a specific regional category occurring today, YOU MUST COMPLETELY OMIT THAT KEY FROM 'Top_News'. Output ONLY the region keys that possess verified, factual intelligence in the ingested payload.
-               - For any region that is included, provide up to 3 (minimum 1, maximum 3) distinct, highly detailed news items.
+               - For any region that is included, provide up to 3 (minimum 1, maximum 6) distinct, highly detailed news items.
             3. DEDICATED TACTICAL OSINT & NATURAL DISASTERS SECTION:
                - You MUST include a dedicated key named 'Tactical_OSINT_And_Natural_Disasters' located immediately below 'Global_Multilateral'.
                - This section is exclusively dedicated to concrete, real-time tactical and environmental incidents: floods, earthquakes, tsunamis, landslides, cyclones, tornadoes, hurricanes, flash floods, cloud bursts, wildfires, heatwaves, active shooting incidents, mass stabbings, terrorist attacks, and bomb blasts. If zero such incidents occurred today in the intercepts, omit this key.
@@ -318,8 +318,8 @@ class AnalystNode:
               "BLUF": "Dense BLUF summary...",
               "Executive_Summary": "Exhaustive executive summary...",
               "Top_News": {{
-                 "[DYNAMIC_VALID_REGION_KEY_1]": ["Verified fact-grounded event 1", "Verified fact-grounded event 2"],
-                 "[DYNAMIC_VALID_REGION_KEY_2]": ["Verified fact-grounded event 1", "Verified fact-grounded event 2", "Verified fact-grounded event 3"],
+                 "[DYNAMIC_VALID_REGION_KEY_1]": ["Verified fact-grounded event 1", "Verified fact-grounded event 2", "Verified fact-grounded event 3", "Verified fact-grounded event 4"],
+                 "[DYNAMIC_VALID_REGION_KEY_2]": ["Verified fact-grounded event 1", "Verified fact-grounded event 2", "Verified fact-grounded event 3", "Verified fact-grounded event 4", "Verified fact-grounded event 5", "Verified fact-grounded event 6"],
                  "[DYNAMIC_VALID_REGION_KEY_3]": ["Verified fact-grounded event 1"]
               }},
               "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10", "Trend 11", "Trend 12", "Trend 13", "Trend 14", "Trend 15"],
