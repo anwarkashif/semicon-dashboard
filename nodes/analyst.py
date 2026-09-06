@@ -280,16 +280,16 @@ class AnalystNode:
                - Rare Earth elements, semiconductors, global supply chains, and critical minerals.
                - Legislative & Government: US House, bills, acts, official/unofficial delegations, embassy/embassies.
                - Financial & Economic: Global financial system, financial sanctions, asset seizure/sold, reimbursement, debt, NATO share, and damage costs.
-               - Nuclear & Strategic: Nuclear weapons, nuclear plants, denuclearisation.
+               - Nuclear & Strategic: Nuclear weapons, nuclear stockpile and silos, nuclear plants, nuclear threat, denuclearisation.
                - High-Value Targets: Assassination, assassination attempts, killed/survived metrics, headquarters (security, safety, damage, collapse, attack), target & legitimate target designations.
                - Kinetic/Security: Incursions, attacks, blockades, naval/aerial/land threats, shooting/stabbing incidents, terrorist attacks, bomb blasts, surgical strikes, invasions, drone/kamikaze operations.
                - Natural Disasters: flood, earthquake, tsunami, landslide, cyclone, tornado, hurricane, flash flood, cloud burst, wildfire, and heatwave.
                - Outer space: NASA, ISRO, CNSA, Roscosmos, ESA, commercial space (SpaceX), reconnaissance satellites, orbital assets, and space stations.
-               - Multilateral & Key States: US, Russia, P5, India, EU, SAARC, ASEAN and ASEAN related news, NATO, CIA, MI6, Mossad, UN, BRICS, SCO, G20, AU, AUKUS, GCC, and national intelligence agencies.
+               - Multilateral & Key States: US, Russia, P5, UNSC, UN General Assembly, Veto, India, EU, SAARC, ASEAN and ASEAN related news, NATO, CIA, MI6, Mossad, UN, BRICS, SCO, G20, African Union, AUKUS, GCC, and national intelligence agencies.
             3. DYNAMIC REGIONAL PRUNING (ZERO-HALLUCINATION ENFORCEMENT): 
                - You MUST NOT output placeholder, generic, or passive filler entries (e.g., FORBIDDEN: "No specific events reported", "Agencies are monitoring", "Security remains a priority").
                - If the RAW OSINT INTERCEPTS do NOT contain concrete, verifiable news for a specific regional category occurring today, YOU MUST COMPLETELY OMIT THAT KEY FROM 'Top_News'. 
-               - For any region that is included, provide up to 6 (minimum 1, maximum 6) distinct, highly detailed news items.
+               - For any region that is included, provide up to 10 (minimum 1, maximum 10) distinct, highly detailed news items.
             4. DEDICATED TACTICAL OSINT & NATURAL DISASTERS SECTION:
                - You MUST dynamically include a key named 'Tactical_OSINT_And_Natural_Disasters' inside 'Top_News' exclusively for real-time tactical and environmental incidents (strikes, shootings, stabbings, bombings, floods, earthquakes, etc.). 
                - If zero such incidents occurred today, COMPLETELY OMIT the 'Tactical_OSINT_And_Natural_Disasters' key. Do not leave it empty.
@@ -312,8 +312,8 @@ class AnalystNode:
               "Executive_Summary": "Exhaustive executive summary...",
               "Top_News": {{
                  "[DYNAMIC_VALID_REGION_KEY_1]": ["Verified fact-grounded event 1", "Verified fact-grounded event 2"],
-                 "[DYNAMIC_VALID_REGION_KEY_2]": ["Verified fact-grounded event 1", "Verified fact-grounded event 2", "Verified fact-grounded event 3", "Verified fact-grounded event 4", "Verified fact-grounded event 5", "Verified fact-grounded event 6"],
-                 "Tactical_OSINT_And_Natural_Disasters": ["Specific kinetic strike, bombing, shooting, or severe natural disaster 1", "Specific kinetic strike, bombing, shooting, or severe natural disaster 2"]
+                 "[DYNAMIC_VALID_REGION_KEY_2]": ["Verified fact-grounded event 1", "Verified fact-grounded event 2", "Verified fact-grounded event 3", "Verified fact-grounded event 4", "Verified fact-grounded event 5", "Verified fact-grounded event 6", "Verified fact-grounded event 7", "Verified fact-grounded event 8", "Verified fact-grounded event 9", "Verified fact-grounded event 10"],
+                 "Tactical_OSINT_And_Natural_Disasters": ["Specific kinetic strike, bombing, terrorist attacks, shooting/stabbing incidents, or severe natural disaster 1", "Specific kinetic strike, bombing, terrorist attacks, shooting/stabbing incidents, or severe natural disaster 2", "Specific kinetic strike, bombing, terrorist attacks, shooting/stabbing incidents, or severe natural disaster 3", "Specific kinetic strike, bombing, terrorist attacks, shooting/stabbing incidents, or severe natural disaster 4"]
               }},
               "Watch_Out": ["Trend 1", "Trend 2", "Trend 3", "Trend 4", "Trend 5", "Trend 6", "Trend 7", "Trend 8", "Trend 9", "Trend 10", "Trend 11", "Trend 12", "Trend 13", "Trend 14", "Trend 15"],
               "Situational_Update_And_Threat_Telemetry": {{
