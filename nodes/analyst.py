@@ -289,7 +289,7 @@ class AnalystNode:
             3. DYNAMIC REGIONAL PRUNING (ZERO-HALLUCINATION ENFORCEMENT): 
                - You MUST NOT output placeholder, generic, or passive filler entries (e.g., FORBIDDEN: "No specific events reported", "Agencies are monitoring", "Security remains a priority").
                - If the RAW OSINT INTERCEPTS do NOT contain concrete, verifiable news for a specific regional category occurring today, YOU MUST COMPLETELY OMIT THAT KEY FROM 'Top_News'. 
-               - For any region that is included, provide up to 6 (minimum 1, maximum 6) distinct, highly detailed news items.
+               - For any region that is included, provide up to 10 (minimum 1, maximum 10) distinct, highly detailed news items.
             4. DEDICATED TACTICAL OSINT & NATURAL DISASTERS SECTION:
                - You MUST dynamically include a key named 'Tactical_OSINT_And_Natural_Disasters' inside 'Top_News' exclusively for real-time tactical and environmental incidents (strikes, shootings, stabbings, bombings, floods, earthquakes, etc.). 
                - If zero such incidents occurred today, COMPLETELY OMIT the 'Tactical_OSINT_And_Natural_Disasters' key. Do not leave it empty.
