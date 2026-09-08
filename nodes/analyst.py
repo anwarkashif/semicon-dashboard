@@ -274,30 +274,28 @@ class AnalystNode:
             Synthesize a highly professional, exhaustive daily intelligence brief focusing on semiconductor supply chains, critical minerals, defense, and geopolitics.
             
             CRITICAL FORMATTING & STRICT VERIFIABILITY RULES:
-            1. STRICT TEMPORAL ANCHORING & FACTUAL GROUNDING: Every reported event MUST be grounded strictly in the RAW OSINT INTERCEPTS for {current_date_str}. You are FORBIDDEN from generating speculative, uncorroborated, or generic boilerplate text. Every single news item MUST contain a specific entity/actor, a concrete kinetic/diplomatic action, and an exact geographic locus.
+            1. STRICT TEMPORAL ANCHORING & FACTUAL GROUNDING: Every reported event MUST be grounded strictly in the RAW OSINT INTERCEPTS for {current_date_str}. You are FORBIDDEN from generating speculative, uncorroborated, or generic boilerplate text. Every single news item MUST read like a professionally written human intelligence alert, not a headline or database entry. Each item MUST contain, where available from the RAW OSINT INTERCEPTS: (1) the exact date/time or relative timing, (2) named actors/entities, (3) the concrete action or development, (4) the exact location, (5) the immediate outcome or status, (6) relevant quantities, weapons, systems, agreements, casualties, financial values, infrastructure, companies or institutions, (7) why the development matters, and (8) the most important immediate implication. Do NOT invent missing details. Write each item as a compact 2–4 sentence intelligence narrative with natural variation in sentence structure. Avoid headline-style fragments, repetitive openings, robotic wording, and generic phrases.
             2. MANDATORY TOPICAL CRITERIA: You MUST actively scan the intercepts and extract verifiable news covering the following high-priority intelligence vectors:
-               - Geopolitics, geoeconomics, national security, defense, conflict, war, military action, threats, weaponry, arsenal, military assets, warships, long-range missile systems, rocket & weapon manufacturing.
+               - Geopolitics, geoeconomics, national security, defense, conflict, war, aircraft carrier, warship, naval fleet, navy fleet, military exercise and operation, military action, threats, weaponry, arsenal, military assets, warships, hypersonic missile, long-range missile systems, rocket & weapon manufacturing.
                - Rare Earth elements, semiconductors, global supply chains, and critical minerals.
-               - Legislative & Government: US House, bills, acts, official/unofficial delegations, embassy/embassies.
+               - Legislative & Government: US House, bills, acts, official/unofficial delegations and state head visit, embassy/embassies.
                - Financial & Economic: Global financial system, financial sanctions, asset seizure/sold, reimbursement, debt, NATO share, and damage costs.
-               - Nuclear & Strategic: Nuclear weapons, nuclear stockpile and silos, nuclear plants, nuclear threat, denuclearisation.
+               - Nuclear & Strategic: Nuclear weapons, nuclear stockpile and silos, nuclear plants, nuclear threat, nuclear proliferation, denuclearisation.
                - High-Value Targets: Assassination, assassination attempts, killed/survived metrics, headquarters (security, safety, damage, collapse, attack), target & legitimate target designations.
-               - Kinetic/Security: Incursions, attacks, blockades, naval/aerial/land threats, shooting/stabbing incidents, terrorist attacks, bomb blasts, surgical strikes, invasions, drone/kamikaze operations.
-               - Natural Disasters: flood, earthquake, tsunami, landslide, volcano news, cyclone, tornado, hurricane, flash flood, cloud burst, wildfire, and heatwave.
-               - Outer space: NASA, ISRO, CNSA, Roscosmos, ESA, commercial space (SpaceX), reconnaissance satellites, orbital assets, and space stations.
-               - Multilateral & Key States: US, Russia, P5, UNSC, UN General Assembly, Veto, India, EU, SAARC, ASEAN and ASEAN related news, NATO, CIA, MI6, Mossad, UN, BRICS, SCO, G20, African Union, AUKUS, GCC, and national intelligence agencies.
+               - Kinetic/Security: Incursions, attacks, blockades, naval/aerial/land threats, shooting/stabbing incidents, gun violence, terrorist attacks, bomb blasts, surgical strikes, invasions, drone/kamikaze operations.
+               - Natural Disasters: flood, earthquake, tsunami, landslide, volcano related news, cyclone, tornado, hurricane, flash flood, cloud burst, wildfire, and heatwave.
+               - Outer space: NASA, ISRO, CNSA, Roscosmos, ESA, commercial space (SpaceX, Blue Origin, Axiom Space, Rocket Lab, LandSpace and similar), reconnaissance and spy satellites, orbital assets, and space stations.
+               - Multilateral & Key States: US, Russia, China, P5, UNSC, UN General Assembly, Veto, India, EU, SAARC, ASEAN and ASEAN related news, NATO, CIA, MI6, Mossad, UN, BRICS, SCO, G20, African Union, AUKUS, GCC, and national intelligence agencies.
             3. DYNAMIC REGIONAL PRUNING (ZERO-HALLUCINATION ENFORCEMENT): 
                - You MUST NOT output placeholder, generic, or passive filler entries (e.g., FORBIDDEN: "No specific events reported", "Agencies are monitoring", "Security remains a priority").
                - If the RAW OSINT INTERCEPTS do NOT contain concrete, verifiable news for a specific regional category occurring today, YOU MUST COMPLETELY OMIT THAT KEY FROM 'Top_News'. 
-               - For any region that is included, provide up to 10 (minimum 1, maximum 10) distinct, highly detailed news items.
-            4. DEDICATED TACTICAL OSINT & NATURAL DISASTERS SECTION:
+               - For any region that is included, provide up to 10 (minimum 1, maximum 10) distinct, highly detailed news items. Prioritise substantive developments over volume. Each selected item MUST add new information and should normally explain what happened, who was involved, where it happened, what changed, and why it matters. Prefer 4–8 strong items over filling the category with weaker material. Never manufacture additional items merely to approach the maximum.            4. DEDICATED TACTICAL OSINT & NATURAL DISASTERS SECTION:
                - You MUST dynamically include a key named 'Tactical_OSINT_And_Natural_Disasters' inside 'Top_News' exclusively for real-time tactical and environmental incidents (strikes, shootings, stabbings, bombings, floods, earthquakes, etc.). 
                - If zero such incidents occurred today, COMPLETELY OMIT the 'Tactical_OSINT_And_Natural_Disasters' key. Do not leave it empty.
             5. STRICT GLOBAL DIVERSITY & ANTI-DUPLICATION:
-               - You MUST NOT mention the same country, event, or incident in more than one category. If an event is listed in 'Southeast_Asia', it CANNOT appear in 'Global_Multilateral' or 'Tactical_OSINT_And_Natural_Disasters'.
+               - You MUST NOT duplicate the same underlying event across categories. Assign each event to the single most relevant geographic or thematic category. A separate category may mention a different development involving the same country only when it is a genuinely distinct event with independently relevant facts. Do not repeat the same incident merely to increase coverage.
             6. MANDATORY LENGTH & STRUCTURAL EXPANSION:
-               - Write exhaustive, dense analytical prose for BLUF, Executive Summary, Situational Update, Operational Impacts, Risk Analysis, and Predictive Analysis.
-            7. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
+               - Write detailed but readable intelligence analysis in natural professional prose. The writing must resemble an experienced geopolitical intelligence analyst briefing a human decision-maker rather than an AI-generated summary. Use specific facts from the RAW OSINT INTERCEPTS, connect related developments where justified, distinguish confirmed facts from analytical judgement, and explain significance without repeating the same information across sections. BLUF should state the most consequential developments and their immediate significance. Executive_Summary should synthesise the day's major developments and emerging pattern. Situational_Update_And_Threat_Telemetry should explain what is changing on the ground and why. Operational_Impacts should identify concrete effects on supply chains, logistics, infrastructure, defence posture, markets or critical industries. Risk_And_Threat_Analysis should explain the principal near-term and medium-term risks and their drivers. Predictive_Analysis should provide evidence-based 24–48 hour expectations, including likely next actions where the intercepts support such an assessment. Avoid inflated language, repetitive conclusions, generic geopolitical commentary and unsupported speculation.            7. STRICT SOURCE REPUTATION & WIKIPEDIA BAN: You are STRICTLY FORBIDDEN from using, referencing, or citing Wikipedia.
             8. ZERO-KNOWLEDGE OVERRIDE: Silently ignore noise or paywalls. Ground analysis strictly in RAW OSINT INTERCEPTS. ONLY abort with "⚠️ Intelligence Constraint Triggered" if absolutely ZERO relevant geopolitical data exists.
             9. Return your output strictly as a JSON object matching the exact schema below. Do not include markdown formatting like ```json in the output.
             
@@ -325,15 +323,19 @@ class AnalystNode:
               "Risk_And_Threat_Analysis": {{
                  "Overall_Analysis": "Near-term and medium-term tactical risks..."
               }},
-              "Predictive_Analysis": "30 to 72 hour strategic forecast..."
+              "Predictive_Analysis": "24 to 48 hour strategic forecast..."
             }}
             """
-            contents_payload = f"CONTEXT SWEEP DATA:\n{compiled_context}"
+            contents_payload = f"""CONTEXT SWEEP DATA:
+            {compiled_context}
+
+            FINAL ANALYTICAL INSTRUCTION:
+            Treat the RAW OSINT INTERCEPTS as the sole factual record. Extract the strongest verified developments first, then write the alert as a human intelligence analyst would: specific, contextual, concise where possible, and detailed where the source material supports detail. Do not merely restate headlines. For every selected event, identify what happened, who acted, where and when it happened, the immediate result, relevant supporting details, and the intelligence significance. Preserve the existing dynamic regional model: include a regional key ONLY when that region has at least one concrete verified event in the intercepts. Do not add filler to regions without news. Do not infer facts that are absent from the intercepts."""
             gen_config = types.GenerateContentConfig(
                 system_instruction=legacy_instruction, 
-                temperature=0.2, 
+                temperature=0.35, 
                 response_mime_type="application/json",
-                max_output_tokens=8192
+                max_output_tokens=12288
             )
 
         api_keys = self.get_all_keys()
