@@ -283,7 +283,7 @@ class AnalystNode:
                - Nuclear & Strategic: Nuclear weapons, nuclear stockpile and silos, nuclear plants, nuclear threat, denuclearisation.
                - High-Value Targets: Assassination, assassination attempts, killed/survived metrics, headquarters (security, safety, damage, collapse, attack), target & legitimate target designations.
                - Kinetic/Security: Incursions, attacks, blockades, naval/aerial/land threats, shooting/stabbing incidents, terrorist attacks, bomb blasts, surgical strikes, invasions, drone/kamikaze operations.
-               - Natural Disasters: flood, earthquake, tsunami, landslide, cyclone, tornado, hurricane, flash flood, cloud burst, wildfire, and heatwave.
+               - Natural Disasters: flood, earthquake, tsunami, landslide, volcano news, cyclone, tornado, hurricane, flash flood, cloud burst, wildfire, and heatwave.
                - Outer space: NASA, ISRO, CNSA, Roscosmos, ESA, commercial space (SpaceX), reconnaissance satellites, orbital assets, and space stations.
                - Multilateral & Key States: US, Russia, P5, UNSC, UN General Assembly, Veto, India, EU, SAARC, ASEAN and ASEAN related news, NATO, CIA, MI6, Mossad, UN, BRICS, SCO, G20, African Union, AUKUS, GCC, and national intelligence agencies.
             3. DYNAMIC REGIONAL PRUNING (ZERO-HALLUCINATION ENFORCEMENT): 
