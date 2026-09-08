@@ -276,7 +276,7 @@ class AnalystNode:
             CRITICAL FORMATTING & STRICT VERIFIABILITY RULES:
             1. STRICT TEMPORAL ANCHORING & FACTUAL GROUNDING: Every reported event MUST be grounded strictly in the RAW OSINT INTERCEPTS for {current_date_str}. You are FORBIDDEN from generating speculative, uncorroborated, or generic boilerplate text. Every single news item MUST contain a specific entity/actor, a concrete kinetic/diplomatic action, and an exact geographic locus.
             2. MANDATORY TOPICAL CRITERIA: You MUST actively scan the intercepts and extract verifiable news covering the following high-priority intelligence vectors:
-               - Geopolitics, geoeconomics, national security, defense, conflict, war, military action, threats, weaponry, arsenal, military assets, warships, long-range missile systems, rocket & weapon manufacturing.
+               - Geopolitics, geoeconomics, national security, defense, conflict, war, aircraft carrier, warship, naval fleet, navy fleet, military exercise and operation, military action, threats, weaponry, arsenal, military assets, warships, long-range missile systems, rocket & weapon manufacturing.
                - Rare Earth elements, semiconductors, global supply chains, and critical minerals.
                - Legislative & Government: US House, bills, acts, official/unofficial delegations, embassy/embassies.
                - Financial & Economic: Global financial system, financial sanctions, asset seizure/sold, reimbursement, debt, NATO share, and damage costs.
